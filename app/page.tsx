@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ToneCard } from "@/components/ToneCard";
 import { DEVICES, PARTS, PICKUP_CONFIGS, findDevice, type DeviceCategory, type UserRig } from "@/lib/gear";
-import type { ToneResult } from "@/lib/schema";
+import type { ToneEvent, ToneResult } from "@/lib/schema";
 import { loadRig, loadSaved, saveRig, storeSaved, type SavedTone } from "@/lib/storage";
 
 const CATEGORY_LABELS: Record<DeviceCategory, string> = {
@@ -20,6 +20,29 @@ function deviceLabel(rig: UserRig) {
   return rig.deviceId === "custom" ? rig.customDevice || "Diğer" : (findDevice(rig.deviceId)?.name ?? rig.deviceId);
 }
 
+async function* readEvents(body: ReadableStream<Uint8Array>): AsyncGenerator<ToneEvent> {
+  const reader = body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n");
+    buffer = lines.pop() ?? "";
+    for (const line of lines) if (line.trim()) yield JSON.parse(line) as ToneEvent;
+  }
+  if (buffer.trim()) yield JSON.parse(buffer) as ToneEvent;
+}
+
+function hostOf(url: string) {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
 export default function Home() {
   const [rig, setRig] = useState<UserRig | null>(null);
   const [song, setSong] = useState("");
@@ -27,6 +50,7 @@ export default function Home() {
   const [part, setPart] = useState("full");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [log, setLog] = useState<ToneEvent[]>([]);
   const [current, setCurrent] = useState<SavedTone | null>(null);
   const [saved, setSaved] = useState<SavedTone[]>([]);
 
@@ -48,20 +72,32 @@ export default function Home() {
     if (!rig || !song.trim()) return;
     setLoading(true);
     setError(null);
+    setLog([]);
     try {
       const res = await fetch("/api/tone", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ song, artist, part, rig }),
       });
-      const data = (await res.json()) as { result?: ToneResult; error?: string };
-      if (!res.ok || !data.result) throw new Error(data.error ?? "Bir şeyler ters gitti.");
+      if (!res.ok || !res.body) {
+        const data = (await res.json().catch(() => ({}))) as { error?: string };
+        throw new Error(data.error ?? "Bir şeyler ters gitti.");
+      }
+
+      let result: ToneResult | null = null;
+      for await (const event of readEvents(res.body)) {
+        if (event.type === "result") result = event.result;
+        else if (event.type === "error") throw new Error(event.error);
+        else setLog((prev) => [...prev, event]);
+      }
+      if (!result) throw new Error("Bağlantı yarıda kesildi, lütfen tekrar dene.");
+
       setCurrent({
         id: crypto.randomUUID(),
         savedAt: Date.now(),
         deviceLabel: deviceLabel(rig),
         part: PARTS.find((p) => p.id === part)?.label ?? part,
-        result: data.result,
+        result,
       });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Bir şeyler ters gitti.");
@@ -225,8 +261,19 @@ export default function Home() {
           )}
 
           {loading && (
-            <div className="animate-pulse rounded-xl border border-neutral-800 bg-neutral-900/60 p-6 text-neutral-400">
-              🎸 Orijinal ekipman araştırılıyor ve {rig && deviceLabel(rig)} için ayarlar hesaplanıyor…
+            <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4">
+              <p className="mb-3 animate-pulse text-neutral-300">
+                🎸 Araştırılıyor… ({rig && deviceLabel(rig)}) — bu işlem 1–3 dakika sürebilir.
+              </p>
+              <ul className="max-h-72 space-y-1 overflow-y-auto text-sm">
+                {log.map((e, i) => (
+                  <li key={i} className="truncate text-neutral-400">
+                    {e.type === "status" && <span className="text-neutral-200">{e.message}</span>}
+                    {e.type === "search" && <>🔎 {e.query}</>}
+                    {e.type === "fetch" && <>📄 {hostOf(e.url)} okunuyor</>}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
 

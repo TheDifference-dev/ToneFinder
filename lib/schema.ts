@@ -23,10 +23,14 @@ export type ToneRequest = z.infer<typeof ToneRequestSchema>;
 
 // Claude'un döndürdüğü yapılandırılmış ton tarifi
 const Setting = z.object({
-  name: z.string().describe("Cihaz üzerindeki düğme/parametre adı, cihazda yazdığı gibi (ör. Gain, Bass, Mix, Time)"),
-  value: z.string().describe("Ayar değeri; 0–10 ölçekli düğmeler için sayı (ör. 6.5), diğerleri için birimiyle (ör. 380 ms, %25, On)"),
+  name: z.string().describe("Düğme/parametre adı, cihazda yazdığı gibi (ör. Gain, Bass, Mic, Distance, Time)"),
+  value: z.string().describe("Ayar değeri; 0–10 ölçekli düğmeler için yalnızca sayı (ör. 6.5), diğerleri birimiyle (ör. 380 ms, 2 in, %25, On, SM57)"),
   note: z.string().describe("Kısa açıklama; gerekmiyorsa boş string"),
 });
+
+const Certainty = z.enum(["confirmed", "likely", "guess"]).describe(
+  "confirmed: kaynakta açıkça geçiyor; likely: güçlü dolaylı kanıt; guess: tahmin",
+);
 
 export const ToneResultSchema = z.object({
   song: z.object({
@@ -34,24 +38,38 @@ export const ToneResultSchema = z.object({
     artist: z.string(),
     album_or_year: z.string(),
     tone_character: z.string().describe("Orijinal tonun 1–2 cümlelik Türkçe tarifi"),
-    original_gear: z.array(z.string()).describe("Orijinal kayıtta kullanıldığı bilinen/tahmin edilen ekipman"),
   }),
-  amp: z.object({
-    model: z.string().describe("Kullanıcının cihazında seçilecek amfi modeli / kanal / tip"),
-    why: z.string(),
-    settings: z.array(Setting),
-  }),
-  effects: z.array(
-    z.object({
-      position: z.enum(["pre-amp", "loop", "post-amp"]),
-      type: z.string().describe("Efekt türü (Overdrive, Delay, Reverb, Chorus, Wah, Compressor, Noise Gate...)"),
-      model: z.string().describe("Kullanıcının cihazındaki karşılığı ya da önerilen pedal"),
-      settings: z.array(Setting),
-      note: z.string(),
+  original_rig: z.object({
+    guitar: z.object({ model: z.string(), pickup: z.string(), certainty: Certainty }),
+    amps: z.array(
+      z.object({ model: z.string(), channel: z.string(), settings: z.array(Setting), certainty: Certainty, notes: z.string() }),
+    ),
+    cab: z.object({
+      model: z.string(),
+      speakers: z.string(),
+      mics: z.array(z.object({ model: z.string(), position: z.string(), distance: z.string() })),
+      certainty: Certainty,
+      notes: z.string(),
     }),
-  ),
+    pedals: z.array(
+      z.object({ model: z.string(), purpose: z.string(), settings: z.array(Setting), certainty: Certainty }),
+    ),
+    tuning: z.string(),
+    recording_notes: z.string().describe("Stüdyo, prodüktör, double-tracking, post-prodüksiyon efektleri vb."),
+  }),
+  chain: z
+    .array(
+      z.object({
+        block: z.string().describe("Blok türü: Noise Gate, Compressor, Drive, Fuzz, Amp, Cab, Mic, EQ, Modulation, Delay, Reverb..."),
+        device_model: z.string().describe("Kullanıcının cihazında seçilecek modelin cihazdaki tam adı"),
+        emulates: z.string().describe("Bu modelin taklit ettiği gerçek ekipman ve orijinal rig'de neyin yerine geçtiği"),
+        settings: z.array(Setting),
+        note: z.string(),
+      }),
+    )
+    .describe("Kullanıcının cihazındaki sinyal zinciri, giriş→çıkış sırasıyla. Cab bloğunda mikrofon modeli, pozisyon ve mesafe ayar olarak yer almalı."),
   guitar: z.object({
-    pickup: z.string().describe("Seçilecek manyetik pozisyonu"),
+    pickup: z.string().describe("Kullanıcının gitarında seçilecek manyetik pozisyonu"),
     volume: z.string(),
     tone: z.string(),
     tuning: z.string(),
@@ -60,6 +78,15 @@ export const ToneResultSchema = z.object({
   playing_tips: z.array(z.string()),
   adaptation_notes: z.string().describe("Kullanıcının ekipmanına uyarlarken yapılan ödünler ve nasıl telafi edildiği"),
   confidence: z.enum(["high", "medium", "low"]),
+  sources: z.array(z.object({ title: z.string(), url: z.string() })).describe("Araştırmada dayanılan kaynaklar"),
 });
 
 export type ToneResult = z.infer<typeof ToneResultSchema>;
+
+// API'nin istemciye NDJSON olarak akıttığı olaylar
+export type ToneEvent =
+  | { type: "status"; message: string }
+  | { type: "search"; query: string }
+  | { type: "fetch"; url: string }
+  | { type: "result"; result: ToneResult }
+  | { type: "error"; error: string };

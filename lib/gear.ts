@@ -26,7 +26,8 @@ export const DEVICES: Device[] = [
   { id: "quad-cortex", name: "Neural DSP Quad Cortex", category: "modeler", controls: "Amp captures/models (Gain, Bass, Mid, Treble, Presence, Master), Cab/IR, effect blocks" },
   { id: "fractal-fm3", name: "Fractal Audio Axe-Fx III / FM3 / FM9", category: "modeler", controls: "Amp block (Input Drive, Bass, Mid, Treble, Master, Presence, Depth), Cab block, effects" },
   { id: "kemper", name: "Kemper Profiler", category: "modeler", controls: "Profile, Gain, Bass, Middle, Treble, Presence, Definition, Clarity, Stomps A–D, X, Mod, Delay, Reverb" },
-  { id: "headrush", name: "HeadRush Pedalboard / MX5 / Prime", category: "modeler", controls: "Amp model, Gain, Bass, Mid, Treble, Presence, Master, Cab/IR, effect blocks" },
+  { id: "headrush-core", name: "HeadRush Core", category: "modeler", controls: "HeadRush's own amp model names (each emulates a real amp), amp block params (Gain, Bass, Mid, Treble, Presence, Master...), cab blocks with selectable mic models and mic position/distance, IR loader, FX blocks (drive, mod, delay, reverb...), captures/clones" },
+  { id: "headrush", name: "HeadRush Pedalboard / Gigboard / MX5 / Prime", category: "modeler", controls: "HeadRush amp models, Gain, Bass, Mid, Treble, Presence, Master, cab blocks with mic selection and distance, IR loader, effect blocks" },
   { id: "boss-gx", name: "Boss GX-100 / GT-1000 / GT-1", category: "multi-fx", controls: "Preamp type, Gain, Bass, Middle, Treble, Presence, Level, FX1/FX2, Delay, Reverb" },
   { id: "zoom", name: "Zoom G1X Four / G3n / G5n / G6", category: "multi-fx", controls: "Amp model (Gain, Tube, Bass, Middle, Treble, Presence, Level), effect chain" },
   { id: "mooer-ge", name: "Mooer GE150 / GE200 / GE300", category: "multi-fx", controls: "Amp model (Gain, Bass, Mid, Treble, Presence, Master), Cab, FX/DS/Mod/Delay/Reverb" },
@@ -64,7 +65,7 @@ export interface UserRig {
 }
 
 export const DEFAULT_RIG: UserRig = {
-  deviceId: "boss-katana-gen3",
+  deviceId: "headrush-core",
   customDevice: "",
   guitar: "",
   pickups: "HSS",

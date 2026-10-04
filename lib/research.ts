@@ -1,0 +1,149 @@
+import "server-only";
+import Anthropic from "@anthropic-ai/sdk";
+import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
+import { findDevice, PARTS, PICKUP_CONFIGS } from "./gear";
+import { ToneResultSchema, type ToneEvent, type ToneRequest, type ToneResult } from "./schema";
+import { PREFERRED_SOURCES } from "./sources";
+
+const MODEL = "claude-opus-5-5";
+const BETAS: Anthropic.Beta.AnthropicBeta[] = ["server-side-fallback-2026-07-01"];
+const MAX_CONTINUATIONS = 5;
+
+export class ToneError extends Error {}
+
+type Emit = (event: ToneEvent) => void;
+
+const RESEARCH_PROMPT = `You are a meticulous guitar tone researcher and studio engineer. You research a song's guitar tone on the web, then work out how to recreate it on the user's own gear. Your output is an internal research report that another step will turn into the final answer, so be thorough and concrete rather than polished.
+
+Work in two phases.
+
+PHASE 1 - The original rig for this exact song and part. Find, with sources:
+- Guitar model and pickup used, tuning.
+- Amp(s): exact model, channel, and any known settings.
+- Cabinet and speakers.
+- Microphones on the cab, their position (cap/edge/off-axis) and distance; room mics if relevant.
+- Pedals and rack effects in signal order, with any known settings.
+- Recording context: studio, producer/engineer, double-tracking, notable post-production.
+Search in English. Check these preferred sites first (fetch their pages directly where useful), then widen to interviews, rig rundowns, magazine articles and forums:
+${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
+For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. When sources disagree, say so.
+
+PHASE 2 - Map that rig onto the user's device. Research the device itself: find its official model list, manual or a reliable forum list stating which real amp, pedal, cab and microphone each of the device's models is based on. Then pick the closest model on the user's device for every element of the original rig, using the exact model names as they appear on the device. Include the cab block's mic model, position and distance options as the device exposes them. If the device lacks a needed effect, say what the user's extra pedals or a workaround can cover.
+
+Finish with concrete starting settings for every block on the user's device (0-10 knob values as plain numbers; times, distances and the like with units), guitar settings for the user's guitar, playing tips, and notes on any compromises. List every source URL you relied on.`;
+
+const STRUCTURE_PROMPT = `You turn a guitar tone research report into the final structured answer for the user. Use only what the report supports; keep the report's confirmed/likely/guess labels and don't invent model names that aren't in it. Write all prose fields in Turkish. Keep gear model names, knob and parameter names exactly as they appear on the device (usually English).`;
+
+function describeRequest(req: ToneRequest): string {
+  const device = req.rig.deviceId === "custom" ? undefined : findDevice(req.rig.deviceId);
+  const deviceLine = device
+    ? `${device.name} (category: ${device.category}; known controls: ${device.controls})`
+    : req.rig.customDevice || "Unspecified amp";
+  const part = PARTS.find((p) => p.id === req.part)?.label ?? req.part;
+  const pickups = PICKUP_CONFIGS.find((p) => p.id === req.rig.pickups)?.label ?? req.rig.pickups;
+
+  return [
+    `Song: ${req.song}`,
+    `Artist: ${req.artist || "not given"}`,
+    `Part (user's wording, Turkish): ${part}`,
+    "",
+    "User's gear:",
+    `- Amp / modeler / processor: ${deviceLine}`,
+    `- Guitar: ${req.rig.guitar || "not given"}`,
+    `- Pickup configuration: ${pickups}`,
+    `- Extra pedals: ${req.rig.pedals || "none"}`,
+  ].join("\n");
+}
+
+function collectSources(content: Anthropic.Beta.BetaContentBlock[], into: Map<string, string>) {
+  for (const block of content) {
+    if (block.type === "text") {
+      for (const c of block.citations ?? []) {
+        if (c.type === "web_search_result_location") into.set(c.url, c.title ?? c.url);
+      }
+    } else if (block.type === "web_fetch_tool_result" && block.content.type === "web_fetch_result") {
+      into.set(block.content.url, block.content.content.title ?? block.content.url);
+    }
+  }
+}
+
+async function research(client: Anthropic, req: ToneRequest, emit: Emit) {
+  const userMessage: Anthropic.Beta.BetaMessageParam = { role: "user", content: describeRequest(req) };
+  const assistantContent: Anthropic.Beta.BetaContentBlock[] = [];
+  const sources = new Map<string, string>();
+
+  for (let i = 0; i <= MAX_CONTINUATIONS; i++) {
+    const messages: Anthropic.Beta.BetaMessageParam[] = [userMessage];
+    if (assistantContent.length > 0) {
+      // pause_turn: aynı asistan turunu geri gönderince sunucu kaldığı yerden devam eder
+      messages.push({ role: "assistant", content: assistantContent as Anthropic.Beta.BetaContentBlockParam[] });
+    }
+
+    const stream = client.beta.messages.stream({
+      model: MODEL,
+      max_tokens: 64000,
+      betas: BETAS,
+      fallbacks: "default",
+      output_config: { effort: "medium" },
+      system: RESEARCH_PROMPT,
+      tools: [
+        { type: "web_search_20260209", name: "web_search", max_uses: 12 },
+        { type: "web_fetch_20260209", name: "web_fetch", max_uses: 8 },
+      ],
+      messages,
+    });
+
+    stream.on("contentBlock", (block) => {
+      if (block.type !== "server_tool_use") return;
+      const input = block.input as { query?: unknown; url?: unknown };
+      if (block.name === "web_search" && typeof input.query === "string") emit({ type: "search", query: input.query });
+      if (block.name === "web_fetch" && typeof input.url === "string") emit({ type: "fetch", url: input.url });
+    });
+
+    const message = await stream.finalMessage();
+    if (message.stop_reason === "refusal") throw new ToneError("Bu istek için ton araştırması yapılamadı.");
+
+    assistantContent.push(...message.content);
+    collectSources(message.content, sources);
+    if (message.stop_reason !== "pause_turn") break;
+  }
+
+  const report = assistantContent
+    .filter((b): b is Anthropic.Beta.BetaTextBlock => b.type === "text")
+    .map((b) => b.text)
+    .join("");
+  if (!report.trim()) throw new ToneError("Araştırma sonuç üretmedi, lütfen tekrar dene.");
+
+  return { report, sources };
+}
+
+async function structure(client: Anthropic, req: ToneRequest, report: string, sources: Map<string, string>) {
+  const sourceList = [...sources].map(([url, title]) => `- ${title}: ${url}`).join("\n");
+  const response = await client.beta.messages.parse({
+    model: MODEL,
+    max_tokens: 16000,
+    betas: BETAS,
+    fallbacks: "default",
+    output_config: { effort: "low", format: betaZodOutputFormat(ToneResultSchema) },
+    system: STRUCTURE_PROMPT,
+    messages: [
+      {
+        role: "user",
+        content: `${describeRequest(req)}\n\n<research_report>\n${report}\n</research_report>\n\n<sources_consulted>\n${sourceList || "(none recorded)"}\n</sources_consulted>`,
+      },
+    ],
+  });
+
+  if (response.stop_reason === "refusal") throw new ToneError("Bu istek için ton önerisi üretilemedi.");
+  if (response.stop_reason === "max_tokens" || !response.parsed_output) {
+    throw new ToneError("Yanıt eksik geldi, lütfen tekrar dene.");
+  }
+  return response.parsed_output;
+}
+
+export async function findTone(client: Anthropic, req: ToneRequest, emit: Emit): Promise<ToneResult> {
+  emit({ type: "status", message: "Orijinal ekipman ve cihaz modelleri araştırılıyor…" });
+  const { report, sources } = await research(client, req, emit);
+  emit({ type: "status", message: "Ayarlar senin cihazına göre düzenleniyor…" });
+  return structure(client, req, report, sources);
+}

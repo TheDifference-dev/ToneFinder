@@ -35,5 +35,7 @@ function write(key: string, value: unknown) {
 export const loadRig = (): UserRig => ({ ...DEFAULT_RIG, ...read<Partial<UserRig>>(RIG_KEY, {}) });
 export const saveRig = (rig: UserRig) => write(RIG_KEY, rig);
 
-export const loadSaved = (): SavedTone[] => read<SavedTone[]>(SAVED_KEY, []);
+// Eski sürümde kaydedilen tonların yapısı farklı; onları atla.
+export const loadSaved = (): SavedTone[] =>
+  read<SavedTone[]>(SAVED_KEY, []).filter((t) => Array.isArray(t?.result?.chain) && t.result.original_rig);
 export const storeSaved = (tones: SavedTone[]) => write(SAVED_KEY, tones);

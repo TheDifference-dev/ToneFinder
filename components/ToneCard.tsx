@@ -7,7 +7,14 @@ const CONFIDENCE = {
   low: { label: "Düşük güven", cls: "bg-rose-500/15 text-rose-300" },
 } as const;
 
-const POSITION = { "pre-amp": "Amfi öncesi", loop: "Efekt döngüsü", "post-amp": "Amfi sonrası" } as const;
+const CERTAINTY = {
+  confirmed: { label: "kaynaklı", cls: "text-emerald-300 border-emerald-500/40" },
+  likely: { label: "muhtemel", cls: "text-amber-300 border-amber-500/40" },
+  guess: { label: "tahmin", cls: "text-rose-300 border-rose-500/40" },
+} as const;
+
+type Certainty = keyof typeof CERTAINTY;
+type Setting = { name: string; value: string; note: string };
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -18,8 +25,34 @@ function Section({ title, children }: { title: string; children: React.ReactNode
   );
 }
 
+function Badge({ certainty }: { certainty: Certainty }) {
+  const c = CERTAINTY[certainty];
+  return <span className={`rounded border px-1.5 py-0.5 text-[10px] uppercase ${c.cls}`}>{c.label}</span>;
+}
+
+function InlineSettings({ settings }: { settings: Setting[] }) {
+  if (settings.length === 0) return null;
+  return (
+    <p className="mt-1 text-xs text-neutral-400">
+      {settings.map((s) => `${s.name} ${s.value}`).join(" · ")}
+    </p>
+  );
+}
+
+function Row({ label, certainty, children }: { label: string; certainty?: Certainty; children: React.ReactNode }) {
+  return (
+    <div className="grid grid-cols-[88px_1fr] gap-3 border-b border-neutral-800/70 py-2 text-sm last:border-0">
+      <div className="text-neutral-500">{label}</div>
+      <div>
+        <div className="flex flex-wrap items-center gap-2">{children}{certainty && <Badge certainty={certainty} />}</div>
+      </div>
+    </div>
+  );
+}
+
 export function ToneCard({ result }: { result: ToneResult }) {
   const conf = CONFIDENCE[result.confidence];
+  const rig = result.original_rig;
 
   return (
     <div className="space-y-4">
@@ -35,51 +68,73 @@ export function ToneCard({ result }: { result: ToneResult }) {
           <span className={`rounded-full px-3 py-1 text-xs font-medium ${conf.cls}`}>{conf.label}</span>
         </div>
         <p className="mt-3 text-neutral-200">{result.song.tone_character}</p>
-        {result.song.original_gear.length > 0 && (
-          <div className="mt-3 flex flex-wrap gap-2">
-            {result.song.original_gear.map((g) => (
-              <span key={g} className="rounded-md bg-neutral-800 px-2 py-1 text-xs text-neutral-300">
-                {g}
-              </span>
-            ))}
-          </div>
-        )}
       </header>
 
-      <Section title="Amfi">
-        <p className="font-semibold text-amber-300">{result.amp.model}</p>
-        <p className="mb-4 text-sm text-neutral-400">{result.amp.why}</p>
-        <div className="flex flex-wrap gap-3">
-          {result.amp.settings.map((s) => (
-            <Knob key={s.name} {...s} />
-          ))}
-        </div>
+      <Section title="Orijinal ekipman">
+        <Row label="Gitar" certainty={rig.guitar.certainty}>
+          <span className="font-medium">{rig.guitar.model}</span>
+          <span className="text-neutral-400">· {rig.guitar.pickup}</span>
+        </Row>
+        {rig.amps.map((a, i) => (
+          <Row key={`amp-${i}`} label="Amfi" certainty={a.certainty}>
+            <div className="w-full">
+              <span className="font-medium">{a.model}</span>
+              {a.channel && <span className="text-neutral-400"> · {a.channel}</span>}
+              <InlineSettings settings={a.settings} />
+              {a.notes && <p className="mt-1 text-xs text-neutral-500">{a.notes}</p>}
+            </div>
+          </Row>
+        ))}
+        <Row label="Kabin" certainty={rig.cab.certainty}>
+          <div className="w-full">
+            <span className="font-medium">{rig.cab.model}</span>
+            {rig.cab.speakers && <span className="text-neutral-400"> · {rig.cab.speakers}</span>}
+            {rig.cab.notes && <p className="mt-1 text-xs text-neutral-500">{rig.cab.notes}</p>}
+          </div>
+        </Row>
+        {rig.cab.mics.map((m, i) => (
+          <Row key={`mic-${i}`} label="Mikrofon">
+            <span className="font-medium">{m.model}</span>
+            <span className="text-neutral-400">
+              · {m.position} · {m.distance}
+            </span>
+          </Row>
+        ))}
+        {rig.pedals.map((p, i) => (
+          <Row key={`pedal-${i}`} label="Pedal" certainty={p.certainty}>
+            <div className="w-full">
+              <span className="font-medium">{p.model}</span>
+              <span className="text-neutral-400"> · {p.purpose}</span>
+              <InlineSettings settings={p.settings} />
+            </div>
+          </Row>
+        ))}
+        <Row label="Akort">{rig.tuning}</Row>
+        {rig.recording_notes && <p className="mt-3 text-sm text-neutral-400">{rig.recording_notes}</p>}
       </Section>
 
-      {result.effects.length > 0 && (
-        <Section title="Efekt zinciri">
-          <ol className="space-y-4">
-            {result.effects.map((fx, i) => (
-              <li key={`${fx.type}-${i}`} className="rounded-lg border border-neutral-800 p-3">
-                <div className="mb-1 flex flex-wrap items-center gap-2">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-neutral-950">
-                    {i + 1}
-                  </span>
-                  <span className="font-semibold">{fx.type}</span>
-                  <span className="text-neutral-400">· {fx.model}</span>
-                  <span className="ml-auto text-xs text-neutral-500">{POSITION[fx.position]}</span>
-                </div>
-                {fx.note && <p className="mb-3 text-sm text-neutral-400">{fx.note}</p>}
-                <div className="flex flex-wrap gap-3">
-                  {fx.settings.map((s) => (
-                    <Knob key={s.name} {...s} />
-                  ))}
-                </div>
-              </li>
-            ))}
-          </ol>
-        </Section>
-      )}
+      <Section title="Senin cihazında sinyal zinciri">
+        <ol className="space-y-4">
+          {result.chain.map((b, i) => (
+            <li key={`${b.block}-${i}`} className="rounded-lg border border-neutral-800 p-3">
+              <div className="mb-1 flex flex-wrap items-center gap-2">
+                <span className="flex h-6 w-6 items-center justify-center rounded-full bg-amber-500 text-xs font-bold text-neutral-950">
+                  {i + 1}
+                </span>
+                <span className="text-xs uppercase tracking-wide text-neutral-500">{b.block}</span>
+                <span className="font-semibold text-amber-300">{b.device_model}</span>
+              </div>
+              <p className="mb-3 text-sm text-neutral-400">≈ {b.emulates}</p>
+              <div className="flex flex-wrap gap-3">
+                {b.settings.map((s) => (
+                  <Knob key={s.name} {...s} />
+                ))}
+              </div>
+              {b.note && <p className="mt-3 text-sm text-neutral-400">{b.note}</p>}
+            </li>
+          ))}
+        </ol>
+      </Section>
 
       <Section title="Gitar">
         <dl className="grid grid-cols-2 gap-3 text-sm sm:grid-cols-4">
@@ -109,6 +164,20 @@ export function ToneCard({ result }: { result: ToneResult }) {
           <ul className="list-disc space-y-1 pl-5 text-sm text-neutral-300">
             {result.playing_tips.map((t) => (
               <li key={t}>{t}</li>
+            ))}
+          </ul>
+        </Section>
+      )}
+
+      {result.sources.length > 0 && (
+        <Section title="Kaynaklar">
+          <ul className="space-y-1 text-sm">
+            {result.sources.map((s) => (
+              <li key={s.url} className="truncate">
+                <a href={s.url} target="_blank" rel="noopener noreferrer" className="text-amber-300 hover:underline">
+                  {s.title || s.url}
+                </a>
+              </li>
             ))}
           </ul>
         </Section>
