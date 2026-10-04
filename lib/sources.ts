@@ -14,4 +14,7 @@ export const PREFERRED_SOURCES: PreferredSource[] = [
   { name: "The Gear Page", url: "https://www.thegearpage.net", use: "ton ve ekipman forumu" },
   { name: "Ultimate Guitar", url: "https://www.ultimate-guitar.com", use: "şarkı bazlı ton tartışmaları" },
   { name: "Reddit r/guitarpedals, r/Guitar", url: "https://www.reddit.com/r/guitarpedals", use: "forum tartışmaları" },
+  { name: "Premier Guitar Rig Rundown", url: "https://www.premierguitar.com/gear/rig-rundown", use: "sanatçıların sahne/stüdyo rig videoları ve dökümleri" },
+  { name: "Guitar World", url: "https://www.guitarworld.com", use: "röportajlar, kayıt hikâyeleri" },
+  { name: "Tunebat", url: "https://tunebat.com", use: "şarkının BPM ve tonalitesi (delay senkronu için)" },
 ];

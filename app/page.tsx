@@ -48,6 +48,7 @@ export default function Home() {
   const [song, setSong] = useState("");
   const [artist, setArtist] = useState("");
   const [part, setPart] = useState("full");
+  const [partDetail, setPartDetail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [log, setLog] = useState<ToneEvent[]>([]);
@@ -77,7 +78,7 @@ export default function Home() {
       const res = await fetch("/api/tone", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ song, artist, part, rig }),
+        body: JSON.stringify({ song, artist, part, partDetail, rig }),
       });
       if (!res.ok || !res.body) {
         const data = (await res.json().catch(() => ({}))) as { error?: string };
@@ -96,7 +97,7 @@ export default function Home() {
         id: crypto.randomUUID(),
         savedAt: Date.now(),
         deviceLabel: deviceLabel(rig),
-        part: PARTS.find((p) => p.id === part)?.label ?? part,
+        part: [PARTS.find((p) => p.id === part)?.label ?? part, partDetail.trim()].filter(Boolean).join(" · "),
         result,
       });
     } catch (err) {
@@ -254,6 +255,12 @@ export default function Home() {
                 {loading ? "Ton aranıyor…" : "Tonu bul"}
               </button>
             </div>
+            <input
+              className={`${input} mt-3`}
+              placeholder="Bölüm detayı (isteğe bağlı) — ör. 2. solo, giriş riffi, nakarat ritmi"
+              value={partDetail}
+              onChange={(e) => setPartDetail(e.target.value)}
+            />
           </form>
 
           {error && (

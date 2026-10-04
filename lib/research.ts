@@ -1,6 +1,7 @@
 import "server-only";
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
+import { deviceReference } from "./devices";
 import { findDevice, PARTS, PICKUP_CONFIGS } from "./gear";
 import { ToneResultSchema, type ToneEvent, type ToneRequest, type ToneResult } from "./schema";
 import { PREFERRED_SOURCES } from "./sources";
@@ -13,26 +14,31 @@ export class ToneError extends Error {}
 
 type Emit = (event: ToneEvent) => void;
 
-const RESEARCH_PROMPT = `You are a meticulous guitar tone researcher and studio engineer. You research a song's guitar tone on the web, then work out how to recreate it on the user's own gear. Your output is an internal research report that another step will turn into the final answer, so be thorough and concrete rather than polished.
+const RESEARCH_PROMPT = `You are a meticulous guitar tone researcher and studio engineer. You research a song's guitar tone on the web, then work out how to recreate it on the user's own gear - whatever amp, modeler, multi-FX, guitar and pedals they have. Your output is an internal research report that another step will turn into the final answer, so be thorough and concrete rather than polished.
 
-Work in two phases.
+Work in three phases.
 
-PHASE 1 - The original rig for this exact song and part. Find, with sources:
-- Guitar model and pickup used, tuning.
+PHASE 1 - The original rig for this exact song and part (if the user named a specific solo or section, research that one; a guitarist's rig often differs between the rhythm track and a solo). Find, with sources:
+- Guitar model, which pickup (and pickup model, if known) was used for this part, tuning.
 - Amp(s): exact model, channel, and any known settings.
 - Cabinet and speakers.
 - Microphones on the cab, their position (cap/edge/off-axis) and distance; room mics if relevant.
-- Pedals and rack effects in signal order, with any known settings.
+- Pedals and rack effects in signal order, with any known settings (wah position, delay times, etc.).
 - Recording context: studio, producer/engineer, double-tracking, notable post-production.
+- The song's tempo (BPM) and key, so delay times can be synced.
 Search in English. Check these preferred sites first (fetch their pages directly where useful), then widen to interviews, rig rundowns, magazine articles and forums:
 ${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
 For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. When sources disagree, say so.
 
-PHASE 2 - Map that rig onto the user's device. Research the device itself: find its official model list, manual or a reliable forum list stating which real amp, pedal, cab and microphone each of the device's models is based on. Then pick the closest model on the user's device for every element of the original rig, using the exact model names as they appear on the device. Include the cab block's mic model, position and distance options as the device exposes them. If the device lacks a needed effect, say what the user's extra pedals or a workaround can cover.
+PHASE 2 - Map that rig onto the user's amp or processor. If a verified model reference for the device is provided, use it as the source of truth for model names and what they emulate. Otherwise research the device: find its official model list, manual or a reliable forum list stating which real amp, pedal, cab and microphone each model is based on. Pick the closest model for every element of the original rig, using the exact names as they appear on the device, and only parameters the device really has. For a traditional amp with no modeling, work with its actual channels and knobs and say which parts of the tone must come from pedals. Cover the cab and mic as far as the device allows; when it can't set something (e.g. mic distance), say how to approximate it.
 
-Finish with concrete starting settings for every block on the user's device (0-10 knob values as plain numbers; times, distances and the like with units), guitar settings for the user's guitar, playing tips, and notes on any compromises. List every source URL you relied on.`;
+PHASE 3 - Compensate for the guitar and use the user's pedals.
+- Compare the original guitar and pickups with the user's (e.g. Les Paul humbuckers vs. Strat single-coils). Choose the pickup selector position on the user's guitar that gets closest, and adjust for the difference in output and frequency response: typically more gain and mids, less treble, a boost or overdrive in front, and a noise gate for single-coil hum when going from humbuckers to single-coils; the reverse when going from single-coils to humbuckers. State each adjustment and why.
+- For each extra pedal the user owns, say whether to use it, where it goes in the chain and exactly how to set it; if it shouldn't be used, say so.
 
-const STRUCTURE_PROMPT = `You turn a guitar tone research report into the final structured answer for the user. Use only what the report supports; keep the report's confirmed/likely/guess labels and don't invent model names that aren't in it. Write all prose fields in Turkish. Keep gear model names, knob and parameter names exactly as they appear on the device (usually English).`;
+Finish with concrete starting settings for every block (0-10 knob values as plain numbers; times with units, synced to the song's tempo where relevant), guitar settings (selector position, volume and tone knobs), playing tips, and notes on any compromises. List every source URL you relied on.`;
+
+const STRUCTURE_PROMPT = `You turn a guitar tone research report into the final structured answer for the user. Use only what the report supports; keep the report's confirmed/likely/guess labels and don't invent model names that aren't in it. Write all prose fields in Turkish. Keep gear model names, knob and parameter names exactly as they appear on the device or pedal (usually English).`;
 
 function describeRequest(req: ToneRequest): string {
   const device = req.rig.deviceId === "custom" ? undefined : findDevice(req.rig.deviceId);
@@ -41,17 +47,19 @@ function describeRequest(req: ToneRequest): string {
     : req.rig.customDevice || "Unspecified amp";
   const part = PARTS.find((p) => p.id === req.part)?.label ?? req.part;
   const pickups = PICKUP_CONFIGS.find((p) => p.id === req.rig.pickups)?.label ?? req.rig.pickups;
+  const reference = deviceReference(req.rig.deviceId);
 
   return [
     `Song: ${req.song}`,
     `Artist: ${req.artist || "not given"}`,
-    `Part (user's wording, Turkish): ${part}`,
+    `Part (user's wording, Turkish): ${part}${req.partDetail ? ` - ${req.partDetail}` : ""}`,
     "",
     "User's gear:",
     `- Amp / modeler / processor: ${deviceLine}`,
     `- Guitar: ${req.rig.guitar || "not given"}`,
     `- Pickup configuration: ${pickups}`,
     `- Extra pedals: ${req.rig.pedals || "none"}`,
+    ...(reference ? ["", "<device_reference>", reference, "</device_reference>"] : []),
   ].join("\n");
 }
 

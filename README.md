@@ -8,7 +8,14 @@ Bir şarkı ve bölüm (ritim, solo, giriş…) seçersin; uygulama iki adımda 
    orijinal kayıttaki gitar, amfi, kabin/hoparlör, mikrofon ve mesafesi, pedallar ve
    ayarlarını kaynaklarıyla bulur. Ardından senin cihazının (ör. HeadRush Core) model
    listesini araştırıp her orijinal ekipmanın cihazındaki karşılığını eşleştirir.
+   Gitar farkını da telafi eder (ör. orijinalde Les Paul humbucker, sende Strat single-coil:
+   hangi manyetik konumu, ne kadar fazla gain/mid, boost ve noise gate gerekir) ve sahip
+   olduğun her pedalın ayarını verir.
 2. **Düzenleme** — araştırma raporunu ekrandaki yapılandırılmış sonuca çevirir.
+
+Her amfi, modelleyici, multi-efekt ve gitar türüyle çalışır. Listede olmayan cihazlar için
+"Diğer" seçilip adı yazılır; yapay zekâ cihazın model listesini araştırır. HeadRush için
+doğrulanmış bir model referansı (`lib/devices/headrush.ts`) hazır gelir.
 
 Sonuçta:
 
@@ -37,6 +44,7 @@ npm run dev                  # http://localhost:3000
 | `app/api/tone/route.ts` | API rotası; araştırma ilerlemesini NDJSON olarak akıtır |
 | `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
 | `lib/sources.ts` | Araştırmada öncelik verilecek siteler |
+| `lib/devices/` | Cihaz bazlı doğrulanmış model referansları (model adı → taklit ettiği gerçek ekipman) |
 | `lib/schema.ts` | İstek doğrulama ve yapay zekâ çıktısının Zod şeması |
 | `lib/gear.ts` | Desteklenen amfi/modelleyici kataloğu ve kontrol adları |
 | `components/ToneCard.tsx`, `components/Knob.tsx` | Sonuç kartı ve düğme görselleri |

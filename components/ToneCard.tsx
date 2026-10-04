@@ -68,6 +68,12 @@ export function ToneCard({ result }: { result: ToneResult }) {
           <span className={`rounded-full px-3 py-1 text-xs font-medium ${conf.cls}`}>{conf.label}</span>
         </div>
         <p className="mt-3 text-neutral-200">{result.song.tone_character}</p>
+        {(result.song.bpm || result.song.key) && (
+          <div className="mt-3 flex gap-2 text-xs">
+            {result.song.bpm && <span className="rounded-md bg-neutral-800 px-2 py-1">⏱ {result.song.bpm}</span>}
+            {result.song.key && <span className="rounded-md bg-neutral-800 px-2 py-1">🎼 {result.song.key}</span>}
+          </div>
+        )}
       </header>
 
       <Section title="Orijinal ekipman">
@@ -123,6 +129,11 @@ export function ToneCard({ result }: { result: ToneResult }) {
                 </span>
                 <span className="text-xs uppercase tracking-wide text-neutral-500">{b.block}</span>
                 <span className="font-semibold text-amber-300">{b.device_model}</span>
+                {b.source === "user_pedal" && (
+                  <span className="rounded border border-sky-500/40 px-1.5 py-0.5 text-[10px] uppercase text-sky-300">
+                    senin pedalın
+                  </span>
+                )}
               </div>
               <p className="mb-3 text-sm text-neutral-400">≈ {b.emulates}</p>
               <div className="flex flex-wrap gap-3">
@@ -151,6 +162,16 @@ export function ToneCard({ result }: { result: ToneResult }) {
           ))}
         </dl>
         {result.guitar.notes && <p className="mt-3 text-sm text-neutral-400">{result.guitar.notes}</p>}
+        {result.guitar.compensation.length > 0 && (
+          <div className="mt-4 rounded-lg bg-neutral-800/50 p-3">
+            <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-neutral-400">Gitar farkı telafisi</p>
+            <ul className="list-disc space-y-1 pl-5 text-sm text-neutral-300">
+              {result.guitar.compensation.map((c) => (
+                <li key={c}>{c}</li>
+              ))}
+            </ul>
+          </div>
+        )}
       </Section>
 
       {result.adaptation_notes && (

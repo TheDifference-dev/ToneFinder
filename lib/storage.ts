@@ -37,5 +37,5 @@ export const saveRig = (rig: UserRig) => write(RIG_KEY, rig);
 
 // Eski sürümde kaydedilen tonların yapısı farklı; onları atla.
 export const loadSaved = (): SavedTone[] =>
-  read<SavedTone[]>(SAVED_KEY, []).filter((t) => Array.isArray(t?.result?.chain) && t.result.original_rig);
+  read<SavedTone[]>(SAVED_KEY, []).filter((t) => Array.isArray(t?.result?.guitar?.compensation));
 export const storeSaved = (tones: SavedTone[]) => write(SAVED_KEY, tones);

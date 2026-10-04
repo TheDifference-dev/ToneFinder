@@ -10,6 +10,7 @@ export const ToneRequestSchema = z.object({
   song: z.string().trim().min(1).max(120),
   artist: z.string().trim().max(120).default(""),
   part: z.string().refine((v) => partIds.includes(v)),
+  partDetail: z.string().trim().max(120).default(""),
   rig: z.object({
     deviceId: z.string().refine((v) => v === "custom" || deviceIds.includes(v)),
     customDevice: z.string().max(120).default(""),
@@ -38,6 +39,8 @@ export const ToneResultSchema = z.object({
     artist: z.string(),
     album_or_year: z.string(),
     tone_character: z.string().describe("Orijinal tonun 1–2 cümlelik Türkçe tarifi"),
+    bpm: z.string().describe("Şarkının temposu (ör. 117 BPM); bilinmiyorsa boş string"),
+    key: z.string().describe("Şarkının tonalitesi (ör. E minör); bilinmiyorsa boş string"),
   }),
   original_rig: z.object({
     guitar: z.object({ model: z.string(), pickup: z.string(), certainty: Certainty }),
@@ -61,7 +64,8 @@ export const ToneResultSchema = z.object({
     .array(
       z.object({
         block: z.string().describe("Blok türü: Noise Gate, Compressor, Drive, Fuzz, Amp, Cab, Mic, EQ, Modulation, Delay, Reverb..."),
-        device_model: z.string().describe("Kullanıcının cihazında seçilecek modelin cihazdaki tam adı"),
+        device_model: z.string().describe("Kullanıcının cihazında seçilecek modelin ya da kullanıcının kendi pedalının tam adı"),
+        source: z.enum(["device", "user_pedal"]).describe("device: amfi/prosesör içindeki blok; user_pedal: kullanıcının sahip olduğu fiziksel pedal"),
         emulates: z.string().describe("Bu modelin taklit ettiği gerçek ekipman ve orijinal rig'de neyin yerine geçtiği"),
         settings: z.array(Setting),
         note: z.string(),
@@ -74,6 +78,9 @@ export const ToneResultSchema = z.object({
     tone: z.string(),
     tuning: z.string(),
     notes: z.string(),
+    compensation: z
+      .array(z.string())
+      .describe("Orijinal gitar/manyetik ile kullanıcınınki arasındaki farkı kapatmak için yapılan her ayar ve nedeni"),
   }),
   playing_tips: z.array(z.string()),
   adaptation_notes: z.string().describe("Kullanıcının ekipmanına uyarlarken yapılan ödünler ve nasıl telafi edildiği"),
