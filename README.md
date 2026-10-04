@@ -28,13 +28,33 @@ Sonuçta:
 - Araştırma sırasında yapılan aramalar ve okunan sayfalar canlı gösterilir
 - Ekipman profili ve kaydedilen tonlar tarayıcıda saklanır
 
-## Kurulum
+## İki kullanım yolu
+
+### 1) Ücretsiz sürüm — API anahtarı gerekmez
+`artifact/tonefinder.html`, claude.ai üzerinde bir Artifact olarak çalışır ve yapay zekâ
+isteklerini **kendi Claude aboneliğinden** karşılar (ayrı ödeme yok). İnternette arama yapmaz;
+Claude'un kendi bilgisini ve uygulamadaki doğrulanmış model listelerini kullanır.
+Sayfayı güncellemek için: `npm run build:artifact` (veriyi `lib/` dosyalarından alır).
+
+### 2) Tam sürüm — web araştırmalı, bilgisayarında çalışır
+İnternette arama yapıp kaynak gösterir. Bunun için bir **Anthropic API anahtarı** gerekir:
+
+1. https://console.anthropic.com adresinde hesap aç.
+2. *Billing* bölümünden kredi yükle (API, Claude aboneliğinden ayrı ücretlendirilir).
+3. *API Keys* bölümünden yeni anahtar oluştur ve kopyala.
+4. [Node.js](https://nodejs.org) (LTS) kur.
+5. Windows'ta `baslat.bat`, Mac'te `baslat.command` dosyasına çift tıkla. İlk açılışta anahtarı
+   sorar ve `.env.local` dosyasına kaydeder; tarayıcıda http://localhost:3000 açılır.
+
+Elle kurulum:
 
 ```bash
 npm install
 cp .env.example .env.local   # ANTHROPIC_API_KEY değerini gir
 npm run dev                  # http://localhost:3000
 ```
+
+Bir şarkı araştırması tahminen 0,3–1 $ arası tutar (web aramaları + model kullanımı).
 
 ## Mimari
 
@@ -44,7 +64,9 @@ npm run dev                  # http://localhost:3000
 | `app/api/tone/route.ts` | API rotası; araştırma ilerlemesini NDJSON olarak akıtır |
 | `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
 | `lib/sources.ts` | Araştırmada öncelik verilecek siteler |
-| `lib/devices/` | Cihaz bazlı doğrulanmış model referansları (model adı → taklit ettiği gerçek ekipman) |
+| `lib/devices/` | Doğrulanmış model listeleri: HeadRush (resmî Core listesi), Line 6 Helix/HX/POD Go (resmî), Boss Katana Gen 3 (resmî parametre kılavuzu) |
+| `artifact/` | Ücretsiz Artifact sürümü (`template.html` → `npm run build:artifact` → `tonefinder.html`) |
+| `baslat.bat`, `baslat.command` | Masaüstünde çift tıklamayla başlatma |
 | `lib/schema.ts` | İstek doğrulama ve yapay zekâ çıktısının Zod şeması |
 | `lib/gear.ts` | Desteklenen amfi/modelleyici kataloğu ve kontrol adları |
 | `components/ToneCard.tsx`, `components/Knob.tsx` | Sonuç kartı ve düğme görselleri |

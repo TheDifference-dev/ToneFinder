@@ -1,0 +1,567 @@
+<title>ToneFinder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: HUD instrument panel. Header strip, rig column on the left, song + result column on the right; stacks on phones. */
+:root {
+  color-scheme: light;
+  --paper: #f4f6fb;
+  --panel: #ffffff;
+  --ink: #0f2557;
+  --ink-soft: #3a4f7a;
+  --ink-mute: #6f81a3;
+  --line: #d6deec;
+  --line-strong: #a8b7d3;
+  --accent: #1d4ed8;
+  --accent-soft: #e7eefd;
+  --signal: #f59e0b;
+  --signal-soft: #fff4de;
+  --ok: #0f8a5f;
+  --warn: #a8660f;
+  --bad: #b93a12;
+  --grid: rgba(15, 37, 87, 0.045);
+  --font-display: "Chakra Petch", "Segoe UI", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body {
+  background-color: var(--paper);
+  background-image: linear-gradient(var(--grid) 1px, transparent 1px), linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 16px; padding-block: 20px 40px; display: grid; gap: 20px; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent-soft); outline-offset: 1px; }
+
+.panel {
+  position: relative; background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 1px 2px rgba(15, 37, 87, .06), 0 10px 26px -18px rgba(15, 37, 87, .3);
+  padding: 18px 20px; min-width: 0;
+}
+.panel::before, .panel::after { content: ""; position: absolute; width: 14px; height: 14px; border: 0 solid var(--accent); pointer-events: none; }
+.panel::before { top: -1px; left: -1px; border-top-width: 2px; border-left-width: 2px; border-top-left-radius: 10px; }
+.panel::after { bottom: -1px; right: -1px; border-bottom-width: 2px; border-right-width: 2px; border-bottom-right-radius: 10px; }
+
+.label { font-family: var(--font-mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-mute); }
+.head { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.head .code { color: var(--accent); }
+.head h2, .head h3 { margin: 0; font-family: var(--font-display); font-size: 15px; letter-spacing: .06em; text-transform: uppercase; }
+.head .rule { flex: 1; height: 1px; background: var(--line); }
+
+/* top bar */
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand-mark { width: 40px; height: 40px; border-radius: 8px; background: var(--ink); display: grid; place-items: center; }
+.brand h1 { margin: 0; font-family: var(--font-display); font-size: 22px; letter-spacing: .04em; line-height: 1; }
+.brand h1 b { color: var(--accent); }
+.bar p { margin: 0; color: var(--ink-soft); max-width: 46ch; font-size: 14px; }
+.chips { margin-left: auto; display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { font-family: var(--font-mono); font-size: 11px; border: 1px solid var(--line); background: var(--paper); border-radius: 6px; padding: 4px 9px; display: inline-flex; align-items: center; gap: 6px; }
+.chip b { color: var(--accent); font-weight: 600; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); }
+.dot.busy { background: var(--signal); animation: blink 1s ease-in-out infinite; }
+@keyframes blink { 50% { opacity: .3; } }
+
+.layout { display: grid; gap: 20px; grid-template-columns: 330px minmax(0, 1fr); align-items: start; }
+@media (max-width: 900px) { .layout { grid-template-columns: minmax(0, 1fr); } .chips { margin-left: 0; } }
+.col { display: grid; gap: 20px; min-width: 0; }
+
+/* form */
+.field { display: grid; gap: 6px; }
+.stack { display: grid; gap: 14px; }
+.input {
+  width: 100%; border: 1px solid var(--line); background: #fbfcfe; border-radius: 8px; padding: 9px 12px; font-size: 14px;
+  transition: border-color .15s, box-shadow .15s;
+}
+.input::placeholder { color: var(--ink-mute); }
+.input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+textarea.input { min-height: 64px; resize: vertical; }
+.hint { font-size: 12px; color: var(--ink-mute); }
+.hint.ok { color: var(--ok); }
+.row2 { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+.parts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.part { border: 1px solid var(--line); background: #fff; border-radius: 7px; padding: 6px 12px; font-size: 14px; font-weight: 500; color: var(--ink-soft); }
+.part:hover { border-color: var(--line-strong); color: var(--ink); }
+.part[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: #fff; }
+.go { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.go .input { flex: 1 1 260px; }
+.btn { border: 0; border-radius: 8px; padding: 10px 22px; background: var(--accent); color: #fff; font-family: var(--font-display); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 14px; }
+.btn:hover { background: var(--ink); }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
+.btn.ghost:hover { border-color: var(--bad); color: var(--bad); }
+.btn.save { background: #fff; color: var(--ink); border: 1px solid var(--line); padding: 8px 16px; }
+.btn.save:hover, .btn.save.on { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+/* notices */
+.notice { display: flex; gap: 10px; align-items: flex-start; font-size: 14px; }
+.notice.err { border-color: rgba(185, 58, 18, .4); color: var(--bad); }
+.scan {
+  background-image: linear-gradient(90deg, transparent, rgba(29, 78, 216, .1), transparent);
+  background-size: 30% 100%; background-repeat: no-repeat; animation: scan 1.8s linear infinite;
+}
+@keyframes scan { from { background-position: -40% 0; } to { background-position: 140% 0; } }
+.steps { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; font-family: var(--font-mono); font-size: 12px; color: var(--ink-soft); }
+.steps li::before { content: "» "; color: var(--accent); }
+.empty { text-align: center; padding: 36px 20px; }
+.empty ol { text-align: left; max-width: 46ch; margin: 14px auto 0; display: grid; gap: 8px; color: var(--ink-soft); padding-left: 22px; }
+
+/* saved list */
+.saved { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.saved button { width: 100%; text-align: left; background: none; border: 1px solid transparent; border-radius: 8px; padding: 8px 10px; }
+.saved button:hover { background: var(--paper); border-color: var(--line); }
+.saved button.on { background: var(--accent-soft); border-color: var(--accent); }
+.saved .t { font-weight: 600; display: block; }
+.saved .s { font-size: 12px; color: var(--ink-mute); display: block; }
+
+/* result */
+.result { display: grid; gap: 20px; }
+.result-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 10px; }
+.hero h2 { margin: 2px 0 0; font-family: var(--font-display); font-size: clamp(26px, 4vw, 34px); line-height: 1.1; text-wrap: balance; }
+.hero .by { color: var(--ink-soft); margin: 4px 0 0; }
+.hero .desc { margin: 14px 0 0; max-width: 65ch; }
+.hero .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+.conf { border: 1px solid; border-radius: 999px; padding: 3px 12px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; }
+.c-high { color: var(--ok); background: rgba(15, 138, 95, .08); }
+.c-medium { color: var(--warn); background: rgba(168, 102, 15, .08); }
+.c-low { color: var(--bad); background: rgba(185, 58, 18, .08); }
+.badge { border: 1px solid; border-radius: 4px; padding: 1px 6px; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; white-space: nowrap; }
+.b-confirmed { color: var(--ok); } .b-likely { color: var(--warn); } .b-guess { color: var(--bad); }
+.b-pedal { color: var(--ink); border-color: var(--signal); background: var(--signal-soft); }
+
+.strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; border: 1px dashed var(--line-strong); background: var(--paper); border-radius: 8px; padding: 10px 12px; margin-bottom: 16px; }
+.strip .arrow { color: var(--ink-mute); }
+.strip .blk { border: 1px solid rgba(29, 78, 216, .3); background: var(--accent-soft); border-radius: 6px; padding: 3px 8px; font-size: 13px; font-weight: 600; }
+.strip .blk.pedal { border-color: var(--signal); background: var(--signal-soft); }
+
+.blocks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.block { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; background: #fff; }
+.block-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.num { width: 24px; height: 24px; border-radius: 5px; background: var(--ink); color: #fff; display: grid; place-items: center; font-family: var(--font-mono); font-size: 12px; font-weight: 600; }
+.model { font-weight: 700; font-size: 16px; }
+.emu { color: var(--ink-soft); font-size: 14px; margin: 4px 0 12px; }
+.knobs { display: flex; flex-wrap: wrap; gap: 12px; }
+.knob { width: 78px; display: grid; justify-items: center; gap: 2px; text-align: center; }
+.knob svg { width: 56px; height: 56px; }
+.knob .readout { width: 56px; height: 56px; border-radius: 6px; background: var(--ink); color: #fff; display: grid; place-items: center; padding: 2px; font-family: var(--font-mono); font-size: 10px; font-weight: 600; line-height: 1.2; overflow-wrap: anywhere; }
+.knob .n { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); overflow-wrap: anywhere; }
+.knob .v { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--accent); }
+.note { border-top: 1px solid var(--line); margin-top: 12px; padding-top: 8px; font-size: 14px; color: var(--ink-soft); }
+
+.cells { display: grid; gap: 10px; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+.cell { border: 1px solid var(--line); background: var(--paper); border-radius: 8px; padding: 10px 12px; }
+.cell .val { font-weight: 600; margin-top: 2px; }
+.comp { margin-top: 14px; border: 1px solid rgba(29, 78, 216, .3); background: var(--accent-soft); border-radius: 8px; padding: 12px 14px; }
+.ticks { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; font-size: 14px; }
+.ticks li { display: flex; gap: 8px; }
+.ticks li::before { content: "▸"; color: var(--accent); }
+
+.rows { display: grid; }
+.r { display: grid; grid-template-columns: 92px minmax(0, 1fr) auto; gap: 10px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 14px; align-items: start; }
+.r:last-child { border-bottom: 0; }
+.r .sub { color: var(--ink-soft); }
+.r .mono { font-family: var(--font-mono); font-size: 12px; color: var(--ink-mute); margin-top: 2px; }
+.muted { color: var(--ink-soft); font-size: 14px; }
+.foot { text-align: center; font-size: 12px; color: var(--ink-mute); }
+
+@media (prefers-reduced-motion: reduce) { .scan, .dot.busy { animation: none; } }
+</style>
+
+<div class="wrap">
+  <header class="panel bar">
+    <div class="brand">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 22 22"><circle cx="11" cy="11" r="9" fill="none" stroke="#fff" stroke-width="2"/><line x1="11" y1="11" x2="16" y2="6" stroke="#f59e0b" stroke-width="2.5" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <h1>TONE<b>FINDER</b></h1>
+        <span class="label">Yapay zekâ ton motoru</span>
+      </div>
+    </div>
+    <p>Bir şarkı yaz; Claude orijinal ekipmanı çıkarsın ve o tonu senin amfine, prosesörüne, gitarına ve pedallarına göre ayarlara çevirsin.</p>
+    <div class="chips">
+      <span class="chip">RİG <b id="chipRig">—</b></span>
+      <span class="chip">MANYETİK <b id="chipPu">—</b></span>
+      <span class="chip"><span class="dot" id="dot"></span><span id="state">HAZIR</span></span>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="col">
+      <section class="panel" aria-labelledby="rigTitle">
+        <div class="head"><span class="label code">RIG</span><h2 id="rigTitle">Ekipmanım</h2><span class="rule"></span></div>
+        <div class="stack">
+          <label class="field"><span class="label">Amfi / prosesör</span>
+            <select class="input" id="device"></select>
+            <span class="hint" id="deviceHint"></span>
+          </label>
+          <label class="field" id="customWrap" hidden><span class="label">Cihazın adı</span>
+            <input class="input" id="customDevice" placeholder="ör. Laney Cub-Super12, Fractal FM3">
+          </label>
+          <label class="field"><span class="label">Gitar</span>
+            <input class="input" id="guitar" placeholder="ör. Fender Player Stratocaster">
+          </label>
+          <label class="field"><span class="label">Manyetikler</span>
+            <select class="input" id="pickups"></select>
+          </label>
+          <label class="field"><span class="label">Pedallarım (isteğe bağlı)</span>
+            <textarea class="input" id="pedals" placeholder="ör. Ibanez TS9, Boss DD-8"></textarea>
+          </label>
+          <span class="hint">Ekipmanın bu tarayıcıda hatırlanır.</span>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="memTitle">
+        <div class="head"><span class="label code">MEM</span><h2 id="memTitle">Kayıtlı tonlar</h2><span class="rule"></span></div>
+        <p class="muted" id="savedEmpty">Henüz kayıtlı ton yok. Bir sonucu "Kaydet" ile buraya ekleyebilirsin.</p>
+        <ul class="saved" id="savedList"></ul>
+      </section>
+    </aside>
+
+    <main class="col">
+      <form class="panel" id="form" aria-labelledby="songTitle">
+        <div class="head"><span class="label code">SRC</span><h2 id="songTitle">Şarkı</h2><span class="rule"></span></div>
+        <div class="row2">
+          <input class="input" id="song" placeholder="Şarkı" value="Enter Sandman" required aria-label="Şarkı">
+          <input class="input" id="artist" placeholder="Sanatçı" value="Metallica" aria-label="Sanatçı">
+        </div>
+        <div class="parts" id="parts" role="group" aria-label="Bölüm"></div>
+        <div class="go">
+          <input class="input" id="detail" placeholder="Bölüm detayı (isteğe bağlı) — ör. 2. solo, giriş riffi" value="gitar solosu" aria-label="Bölüm detayı">
+          <button class="btn" id="goBtn" type="submit">Tonu bul</button>
+          <button class="btn ghost" id="stopBtn" type="button" hidden>Durdur</button>
+        </div>
+      </form>
+
+      <div class="panel notice err" id="error" role="alert" hidden></div>
+
+      <section class="panel scan" id="working" hidden aria-live="polite">
+        <strong>Ton hesaplanıyor…</strong> <span class="muted" id="workingSub"></span>
+        <ul class="steps">
+          <li>Orijinal kayıttaki gitar, amfi, kabin, mikrofon ve pedallar çıkarılıyor</li>
+          <li>Cihazındaki karşılık gelen modeller seçiliyor</li>
+          <li>Gitar farkı ve pedalların için ayarlar hesaplanıyor</li>
+        </ul>
+        <p class="hint" id="progress">Claude düşünüyor… (genelde 30–90 saniye)</p>
+      </section>
+
+      <section class="panel empty" id="idle">
+        <span class="label">Bekleniyor</span>
+        <ol>
+          <li>Soldan amfini ya da prosesörünü, gitarını ve pedallarını seç.</li>
+          <li>Şarkıyı, sanatçıyı ve bölümü yaz (ör. "2. solo").</li>
+          <li><b>Tonu bul</b>'a bas. İlk seferde Claude senden izin ister; hesap kendi Claude planından düşer.</li>
+        </ol>
+      </section>
+
+      <div class="result" id="result" hidden></div>
+    </main>
+  </div>
+
+  <p class="foot">Bu sürüm internette arama yapmaz: bilgiler Claude'un kendi bilgisinden ve uygulamadaki doğrulanmış model listelerinden gelir; emin olunmayan yerler "tahmin" diye işaretlenir.</p>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const $ = (id) => document.getElementById(id);
+function h(tag, attrs, ...kids) {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs || {})) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const kid of kids.flat(Infinity)) if (kid != null && kid !== false) el.append(kid instanceof Node ? kid : String(kid));
+  return el;
+}
+const store = {
+  get(k, fb) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fb; } catch { return fb; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} },
+};
+
+/* ---------- rig form ---------- */
+const CATS = { "modeling-amp": "Modelleme amfileri", modeler: "Modelleyiciler", "multi-fx": "Multi-efekt", "tube-amp": "Lambalı amfiler" };
+const rig = Object.assign({ deviceId: "headrush-core", customDevice: "", guitar: "", pickups: "SSS", pedals: "" }, store.get("tf.rig", {}));
+let part = "lead";
+
+function fillSelects() {
+  for (const [cat, label] of Object.entries(CATS)) {
+    const g = h("optgroup", { label });
+    for (const d of DATA.devices.filter((x) => x.category === cat)) g.append(h("option", { value: d.id }, d.name));
+    $("device").append(g);
+  }
+  $("device").append(h("option", { value: "custom" }, "Diğer (kendim yazacağım)"));
+  for (const p of DATA.pickups) $("pickups").append(h("option", { value: p.id }, p.label));
+  for (const p of DATA.parts) {
+    $("parts").append(h("button", { type: "button", class: "part", "data-id": p.id, "aria-pressed": String(p.id === part), onclick: () => setPart(p.id) }, p.label));
+  }
+}
+function setPart(id) {
+  part = id;
+  for (const b of $("parts").children) b.setAttribute("aria-pressed", String(b.dataset.id === id));
+}
+function deviceOf(id) { return DATA.devices.find((d) => d.id === id); }
+function deviceLabel() { return rig.deviceId === "custom" ? rig.customDevice || "Diğer" : deviceOf(rig.deviceId)?.name || rig.deviceId; }
+function syncRig() {
+  $("device").value = rig.deviceId;
+  $("customDevice").value = rig.customDevice;
+  $("guitar").value = rig.guitar;
+  $("pickups").value = rig.pickups;
+  $("pedals").value = rig.pedals;
+  $("customWrap").hidden = rig.deviceId !== "custom";
+  const verified = Boolean(DATA.references[rig.deviceId]);
+  $("deviceHint").textContent = verified ? "✓ Doğrulanmış model listesi hazır" : "Model adları Claude'un bilgisinden gelir";
+  $("deviceHint").className = "hint" + (verified ? " ok" : "");
+  $("chipRig").textContent = deviceLabel();
+  $("chipPu").textContent = rig.pickups;
+}
+for (const [id, key] of [["device", "deviceId"], ["customDevice", "customDevice"], ["guitar", "guitar"], ["pickups", "pickups"], ["pedals", "pedals"]]) {
+  $(id).addEventListener("input", () => { rig[key] = $(id).value; store.set("tf.rig", rig); syncRig(); });
+}
+
+/* ---------- prompt ---------- */
+const SHAPE = `{
+  "song": { "title": "", "artist": "", "album_or_year": "", "tone_character": "1-2 sentences, Turkish", "bpm": "e.g. 123 BPM or empty", "key": "e.g. E minör or empty" },
+  "original_rig": {
+    "guitar": { "model": "", "pickup": "", "certainty": "confirmed|likely|guess" },
+    "amps": [ { "model": "", "channel": "", "settings": [ { "name": "", "value": "", "note": "" } ], "certainty": "confirmed|likely|guess", "notes": "" } ],
+    "cab": { "model": "", "speakers": "", "mics": [ { "model": "", "position": "", "distance": "" } ], "certainty": "confirmed|likely|guess", "notes": "" },
+    "pedals": [ { "model": "", "purpose": "", "settings": [ { "name": "", "value": "", "note": "" } ], "certainty": "confirmed|likely|guess" } ],
+    "tuning": "",
+    "recording_notes": "studio, producer, double-tracking, post-production; Turkish"
+  },
+  "chain": [ { "block": "Noise Gate|Compressor|Drive|Fuzz|Wah|Amp|Cab|EQ|Modulation|Delay|Reverb|...", "device_model": "exact name on the user's device, or the user's own pedal", "source": "device|user_pedal", "emulates": "real gear it emulates and what it replaces in the original rig; Turkish", "settings": [ { "name": "knob/parameter name as on the device", "value": "0-10 knobs as a plain number like 6.5; others with units like 380 ms, On, Dyn 57", "note": "" } ], "note": "" } ],
+  "guitar": { "pickup": "selector position on the user's guitar", "volume": "", "tone": "", "tuning": "", "notes": "", "compensation": [ "each adjustment made for the guitar/pickup difference and why; Turkish" ] },
+  "playing_tips": [ "" ],
+  "adaptation_notes": "compromises and how they are compensated; Turkish",
+  "confidence": "high|medium|low"
+}`;
+
+function buildPrompt(req) {
+  const d = deviceOf(req.rig.deviceId);
+  const ref = DATA.references[req.rig.deviceId];
+  const pu = DATA.pickups.find((p) => p.id === req.rig.pickups)?.label || req.rig.pickups;
+  const partLabel = DATA.parts.find((p) => p.id === req.part)?.label || req.part;
+  return [
+    "You are a meticulous guitar tone expert and studio engineer. Recreate a song's guitar tone on the user's own gear, whatever amp, modeler, multi-FX, guitar and pedals they have. You have no web access: work from what you know, and be honest about certainty.",
+    "",
+    "1) Original rig for this exact song and part (if a specific solo or section is named, that one): guitar and the pickup used, amp(s) with channel and known settings, cabinet and speakers, cab mics with position and distance, pedals in order with known settings, tuning, recording context, tempo (BPM) and key. Label every gear claim confirmed (well documented), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. Never present a guess as fact.",
+    "2) Map it onto the user's amp or processor. If a <device_reference> is given, it is the source of truth: use only those exact model names and the parameters it lists. Without a reference, use model names you are sure exist on that device; when unsure, name the closest type generically and say so in the note. For a traditional amp, use its real channels and knobs and say which parts of the tone must come from pedals. Cover cab and mic as far as the device allows and say how to approximate what it can't set (e.g. mic distance).",
+    "3) Compensate for the guitar: compare the original guitar/pickups with the user's (e.g. Les Paul humbuckers vs Strat single-coils), choose the selector position, and adjust gain, mids, treble, boost and noise gate accordingly; list each adjustment with its reason. For each pedal the user owns, say whether and where to use it and exactly how to set it.",
+    "Give concrete starting values for every block; sync delay times to the tempo.",
+    "",
+    "Write every prose field in Turkish; keep gear model names and knob/parameter names exactly as they appear on the device (usually English).",
+    "Reply with only one JSON object in exactly this shape (no other text):",
+    SHAPE,
+    "",
+    "<request>",
+    `Song: ${req.song}`,
+    `Artist: ${req.artist || "not given"}`,
+    `Part: ${partLabel}${req.detail ? " - " + req.detail : ""}`,
+    `User's amp / processor: ${d ? `${d.name} (${d.category}; controls: ${d.controls})` : req.rig.customDevice || "unspecified"}`,
+    `User's guitar: ${req.rig.guitar || "not given"}`,
+    `Pickup configuration: ${pu}`,
+    `User's pedals: ${req.rig.pedals || "none"}`,
+    "</request>",
+    ref ? `\n<device_reference>\n${ref}\n</device_reference>` : "",
+  ].join("\n");
+}
+
+/* ---------- normalize model output ---------- */
+const S = (v) => (v == null ? "" : String(v));
+const A = (v) => (Array.isArray(v) ? v : []);
+const CERT = (v) => (["confirmed", "likely", "guess"].includes(v) ? v : "guess");
+const settings = (v) => A(v).map((s) => ({ name: S(s?.name), value: S(s?.value), note: S(s?.note) })).filter((s) => s.name || s.value);
+function normalize(r) {
+  if (!r || typeof r !== "object" || !Array.isArray(r.chain)) throw Object.assign(new Error("shape"), { code: "invalid_json" });
+  const o = r.original_rig || {};
+  return {
+    song: { title: S(r.song?.title), artist: S(r.song?.artist), album_or_year: S(r.song?.album_or_year), tone_character: S(r.song?.tone_character), bpm: S(r.song?.bpm), key: S(r.song?.key) },
+    original_rig: {
+      guitar: { model: S(o.guitar?.model), pickup: S(o.guitar?.pickup), certainty: CERT(o.guitar?.certainty) },
+      amps: A(o.amps).map((a) => ({ model: S(a?.model), channel: S(a?.channel), settings: settings(a?.settings), certainty: CERT(a?.certainty), notes: S(a?.notes) })),
+      cab: { model: S(o.cab?.model), speakers: S(o.cab?.speakers), mics: A(o.cab?.mics).map((m) => ({ model: S(m?.model), position: S(m?.position), distance: S(m?.distance) })), certainty: CERT(o.cab?.certainty), notes: S(o.cab?.notes) },
+      pedals: A(o.pedals).map((p) => ({ model: S(p?.model), purpose: S(p?.purpose), settings: settings(p?.settings), certainty: CERT(p?.certainty) })),
+      tuning: S(o.tuning),
+      recording_notes: S(o.recording_notes),
+    },
+    chain: A(r.chain).map((b) => ({ block: S(b?.block), device_model: S(b?.device_model), source: b?.source === "user_pedal" ? "user_pedal" : "device", emulates: S(b?.emulates), settings: settings(b?.settings), note: S(b?.note) })),
+    guitar: { pickup: S(r.guitar?.pickup), volume: S(r.guitar?.volume), tone: S(r.guitar?.tone), tuning: S(r.guitar?.tuning), notes: S(r.guitar?.notes), compensation: A(r.guitar?.compensation).map(S).filter(Boolean) },
+    playing_tips: A(r.playing_tips).map(S).filter(Boolean),
+    adaptation_notes: S(r.adaptation_notes),
+    confidence: ["high", "medium", "low"].includes(r.confidence) ? r.confidence : "low",
+  };
+}
+
+/* ---------- render ---------- */
+const NS = "http://www.w3.org/2000/svg";
+function svg(tag, attrs) { const el = document.createElementNS(NS, tag); for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v); return el; }
+function knobValue(v) { const m = v.trim().match(/^(\d+(?:[.,]\d+)?)(?:\s*\/\s*10)?$/); if (!m) return null; const n = Number(m[1].replace(",", ".")); return n >= 0 && n <= 10 ? n : null; }
+function arcPath(f) {
+  const r = 27, xy = (deg) => { const a = ((deg - 90) * Math.PI) / 180; return [32 + Math.cos(a) * r, 32 + Math.sin(a) * r]; };
+  const [x1, y1] = xy(-135), [x2, y2] = xy(-135 + 270 * f);
+  return `M ${x1} ${y1} A ${r} ${r} 0 ${270 * f > 180 ? 1 : 0} 1 ${x2} ${y2}`;
+}
+function Knob(s) {
+  const n = knobValue(s.value);
+  const wrap = h("div", { class: "knob", title: s.note || null });
+  if (n === null) {
+    wrap.append(h("div", { class: "readout" }, s.value || "—"));
+  } else {
+    const el = svg("svg", { viewBox: "0 0 64 64", "aria-hidden": "true" });
+    el.append(svg("path", { d: arcPath(1), fill: "none", stroke: "var(--line)", "stroke-width": "3", "stroke-linecap": "round" }));
+    if (n > 0) el.append(svg("path", { d: arcPath(n / 10), fill: "none", stroke: "var(--accent)", "stroke-width": "3", "stroke-linecap": "round" }));
+    el.append(svg("circle", { cx: "32", cy: "32", r: "19", fill: "#fff", stroke: "var(--line-strong)", "stroke-width": "1.5" }));
+    el.append(svg("circle", { cx: "32", cy: "32", r: "15", fill: "var(--ink)" }));
+    const g = svg("g", { transform: `rotate(${-135 + 27 * n} 32 32)` });
+    g.append(svg("line", { x1: "32", y1: "31", x2: "32", y2: "19", stroke: "var(--signal)", "stroke-width": "2.5", "stroke-linecap": "round" }));
+    el.append(g);
+    wrap.append(el);
+  }
+  wrap.append(h("span", { class: "n" }, s.name));
+  if (n !== null) wrap.append(h("span", { class: "v" }, s.value));
+  return wrap;
+}
+const CONF = { high: ["Yüksek güven", "c-high"], medium: ["Orta güven", "c-medium"], low: ["Düşük güven", "c-low"] };
+const CERTL = { confirmed: "kaynaklı", likely: "muhtemel", guess: "tahmin" };
+const badge = (c) => h("span", { class: `badge b-${c}` }, CERTL[c]);
+const panel = (code, title, ...kids) => h("section", { class: "panel" }, h("div", { class: "head" }, h("span", { class: "label code" }, code), h("h3", {}, title), h("span", { class: "rule" })), ...kids);
+const row = (label, cert, ...kids) => h("div", { class: "r" }, h("span", { class: "label" }, label), h("div", {}, ...kids), cert ? badge(cert) : h("span"));
+const inline = (ss) => (ss.length ? h("div", { class: "mono" }, ss.map((s) => `${s.name} ${s.value}`).join(" · ")) : null);
+const ticks = (items) => h("ul", { class: "ticks" }, items.map((t) => h("li", {}, t)));
+
+function render(entry) {
+  const r = entry.result, o = r.original_rig;
+  const isSaved = saved.some((s) => s.id === entry.id);
+  const box = $("result");
+  box.replaceChildren(
+    h("div", { class: "result-top" },
+      h("span", { class: "label" }, `${entry.part} · ${entry.device}`),
+      h("button", { class: "btn save" + (isSaved ? " on" : ""), type: "button", onclick: () => toggleSave(entry) }, isSaved ? "★ Kaydedildi" : "☆ Kaydet")),
+    h("section", { class: "panel hero" },
+      h("div", { class: "result-top" }, h("span", { class: "label" }, "Hedef ton"), h("span", { class: `conf ${CONF[r.confidence][1]}` }, CONF[r.confidence][0])),
+      h("h2", {}, r.song.title || entry.song),
+      h("p", { class: "by" }, [r.song.artist, r.song.album_or_year].filter(Boolean).join(" · ")),
+      r.song.tone_character && h("p", { class: "desc" }, r.song.tone_character),
+      (r.song.bpm || r.song.key) && h("div", { class: "tags" },
+        r.song.bpm && h("span", { class: "chip" }, "TEMPO ", h("b", {}, r.song.bpm)),
+        r.song.key && h("span", { class: "chip" }, "TON ", h("b", {}, r.song.key)))),
+    panel("01", "Senin cihazında sinyal zinciri",
+      h("div", { class: "strip" }, h("span", { class: "label" }, "Gitar"),
+        r.chain.map((b) => [h("span", { class: "arrow" }, "→"), h("span", { class: "blk" + (b.source === "user_pedal" ? " pedal" : "") }, b.device_model || b.block)]),
+        h("span", { class: "arrow" }, "→"), h("span", { class: "label" }, "Çıkış")),
+      h("ol", { class: "blocks" }, r.chain.map((b, i) => h("li", { class: "block" },
+        h("div", { class: "block-head" }, h("span", { class: "num" }, i + 1), h("span", { class: "label" }, b.block), h("span", { class: "model" }, b.device_model),
+          b.source === "user_pedal" && h("span", { class: "badge b-pedal" }, "senin pedalın")),
+        b.emulates && h("p", { class: "emu" }, "≈ " + b.emulates),
+        h("div", { class: "knobs" }, b.settings.map(Knob)),
+        b.note && h("p", { class: "note" }, b.note))))),
+    panel("02", "Gitar",
+      h("div", { class: "cells" }, [["Manyetik", r.guitar.pickup], ["Volume", r.guitar.volume], ["Tone", r.guitar.tone], ["Akort", r.guitar.tuning]].map(([k, v]) =>
+        h("div", { class: "cell" }, h("span", { class: "label" }, k), h("div", { class: "val" }, v || "—")))),
+      r.guitar.notes && h("p", { class: "muted" }, r.guitar.notes),
+      r.guitar.compensation.length > 0 && h("div", { class: "comp" }, h("span", { class: "label code" }, "Gitar farkı telafisi"), ticks(r.guitar.compensation))),
+    panel("03", "Orijinal ekipman",
+      h("div", { class: "rows" },
+        row("Gitar", o.guitar.certainty, h("b", {}, o.guitar.model), h("span", { class: "sub" }, " · " + o.guitar.pickup)),
+        o.amps.map((a) => row("Amfi", a.certainty, h("b", {}, a.model), a.channel && h("span", { class: "sub" }, " · " + a.channel), inline(a.settings), a.notes && h("div", { class: "mono" }, a.notes))),
+        row("Kabin", o.cab.certainty, h("b", {}, o.cab.model), o.cab.speakers && h("span", { class: "sub" }, " · " + o.cab.speakers), o.cab.notes && h("div", { class: "mono" }, o.cab.notes)),
+        o.cab.mics.map((m) => row("Mikrofon", null, h("b", {}, m.model), h("span", { class: "sub" }, [" ", m.position, m.distance].filter(Boolean).join(" · ")))),
+        o.pedals.map((p) => row("Pedal", p.certainty, h("b", {}, p.model), p.purpose && h("span", { class: "sub" }, " · " + p.purpose), inline(p.settings))),
+        o.tuning && row("Akort", null, o.tuning)),
+      o.recording_notes && h("p", { class: "muted" }, o.recording_notes)),
+    (r.adaptation_notes || r.playing_tips.length > 0) && panel("04", "Uyarlama ve çalım",
+      r.adaptation_notes && h("p", { class: "muted" }, r.adaptation_notes),
+      r.playing_tips.length > 0 && ticks(r.playing_tips)),
+  );
+  box.hidden = false;
+  $("idle").hidden = true;
+  renderSaved(entry.id);
+}
+
+/* ---------- saved tones ---------- */
+let saved = store.get("tf.saved", []).filter((s) => s && s.result && Array.isArray(s.result.chain));
+let current = null;
+function toggleSave(entry) {
+  saved = saved.some((s) => s.id === entry.id) ? saved.filter((s) => s.id !== entry.id) : [entry, ...saved];
+  store.set("tf.saved", saved);
+  render(entry);
+}
+function renderSaved(activeId) {
+  $("savedEmpty").hidden = saved.length > 0;
+  $("savedList").replaceChildren(...saved.map((s) => h("li", {}, h("button", { type: "button", class: s.id === activeId ? "on" : "", onclick: () => { current = s; render(s); } },
+    h("span", { class: "t" }, s.result.song.title || s.song), h("span", { class: "s" }, `${s.result.song.artist} · ${s.part} · ${s.device}`)))));
+}
+
+/* ---------- run ---------- */
+const ERRORS = {
+  not_granted: "Claude'a erişim izni verilmedi. Sayfayı yenileyip izin penceresinde onaylayabilirsin.",
+  rate_limited: "Şu an çok fazla istek var. Bir dakika bekleyip tekrar dene.",
+  invalid_json: "Yanıt beklenen biçimde gelmedi. Tekrar denemek genelde çözer; olmazsa bölüm detayını kısalt.",
+  session_expired: "Claude oturumun sona ermiş. Sayfayı yenileyip tekrar giriş yap.",
+  sampling_disabled: "Bu hesapta sayfaların Claude'a soru sorması kapalı.",
+  capability_disabled: "Bu hesapta sayfaların Claude'a soru sorması kapalı.",
+  refused: "Claude bu isteği yanıtlamadı. Şarkı ya da bölüm adını değiştirip tekrar dene.",
+  empty_completion: "Boş yanıt geldi. Tekrar dene.",
+  upstream_error: "Claude'a şu an ulaşılamıyor. Biraz sonra tekrar dene.",
+  queue_overflow: "Aynı anda çok fazla istek var. Öncekinin bitmesini bekle.",
+};
+let sample = null;
+let ctl = null;
+function setBusy(on) {
+  $("goBtn").disabled = on;
+  $("stopBtn").hidden = !on;
+  $("working").hidden = !on;
+  $("dot").className = "dot" + (on ? " busy" : "");
+  $("state").textContent = on ? "HESAPLIYOR" : "HAZIR";
+}
+function showError(msg) { $("error").textContent = msg; $("error").hidden = !msg; }
+
+$("stopBtn").addEventListener("click", () => ctl?.abort());
+$("form").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const req = { song: $("song").value.trim(), artist: $("artist").value.trim(), part, detail: $("detail").value.trim(), rig: { ...rig } };
+  if (!req.song) return;
+  if (!sample) { showError("Bu sayfa yapay zekâyı yalnızca claude.ai içinde açıldığında kullanabilir."); return; }
+  showError("");
+  setBusy(true);
+  $("workingSub").textContent = `(${deviceLabel()})`;
+  $("progress").textContent = "Claude düşünüyor… (genelde 30–90 saniye)";
+  ctl = new AbortController();
+  try {
+    const raw = await sample.json(buildPrompt(req), {
+      modelTier: "complex",
+      signal: ctl.signal,
+      onText: ({ text }) => { $("progress").textContent = `Ayarlar yazılıyor… ${text.length.toLocaleString("tr-TR")} karakter`; },
+    });
+    const partLabel = DATA.parts.find((p) => p.id === part)?.label || part;
+    current = { id: String(Date.now()), song: req.song, part: [partLabel, req.detail].filter(Boolean).join(" · "), device: deviceLabel(), result: normalize(raw) };
+    render(current);
+  } catch (err) {
+    if (err?.code !== "cancelled") showError(ERRORS[err?.code] || "Bir sorun oluştu: " + (err?.message || "bilinmeyen hata") + ". Tekrar dene.");
+  } finally {
+    setBusy(false);
+  }
+});
+
+/* ---------- boot ---------- */
+fillSelects();
+syncRig();
+renderSaved(null);
+(async () => {
+  try { sample = window.claude ? await window.claude.use("sample") : null; } catch { sample = null; }
+  if (!sample) {
+    $("goBtn").disabled = true;
+    showError("Yapay zekâ bu görünümde kullanılamıyor. Sayfayı claude.ai üzerinde, giriş yapmış olarak aç.");
+  }
+})();
+</script>

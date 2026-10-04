@@ -1,80 +1,416 @@
-// HeadRush model adları ve taklit ettikleri gerçek ekipmanlar.
-// Kaynaklar:
-// - RobyRocks "HeadRush Models List" (firmware 2.1.1, 12.10.2019)
-// - HeadRush Pedalboard firmware release notes v2.3.1–v2.7 (inMusic)
-// - HeadRush Core User Guide v1.0 (cab block parametreleri)
-// - headrushfx.com ürün sayfaları ve firmware duyuruları (2.4, 2.5 eklemeleri)
-// HeadRush Core, Prime, Flex Prime, Pedalboard, Gigboard ve MX5 aynı HeadRush
-// model kütüphanesini paylaşır; Core/Prime ayrıca ReValver modellerini içerir.
+// HeadRush Core model kütüphanesi: cihazdaki model adı = esinlendiği gerçek ekipman.
+// Kaynak: https://www.headrushfx.com/products/core/index.html ("Full List" bölümü,
+// Core firmware 5.1 dönemi) ve HeadRush Core User Guide v5.1.0 (cab bloğu parametreleri).
+// HeadRush Prime / Flex Prime / Pedalboard / Gigboard / MX5 "HEADRUSH" modellerini paylaşır;
+// "REVALVER" modelleri yalnızca Core (ve ReValver destekli cihazlar) içindir.
+// Liste scripts ile sayfadan otomatik çıkarıldı; güncellemek için sayfayı yeniden işle.
 
-export const HEADRUSH_REFERENCE = `HEADRUSH MODEL REFERENCE (model name on device = real gear it is based on; entries marked (likely) are inferred from the model name, the rest come from published lists)
+export const HEADRUSH_REFERENCE = `HEADRUSH CORE MODEL LIST (official; "model name = inspired by")
 
-AMPS
-59 TWEED BASS = Fender '59 Bassman | 59 TWEED DELUXE = Fender Tweed Deluxe | 59 DELUXE GAIN MOD = Fender Tweed Deluxe (gain mod) | 59 TWEED PRINCE = Fender '59 Princeton
-64 BLACK LUX NORM = Fender Deluxe Reverb (Normal) | 64 BLACK LUX VIB = Fender Deluxe Reverb (Vibrato) | 64 BLACK VIB = Fender Vibroverb
-65 BLACK MINI = Fender Champ | 65 BLACK PRINCE = Fender Princeton | 65 BLACK PRINCE REV = Fender Princeton Reverb | 65 BLACK SR = Fender Super Reverb (blackface)
-67 BLACK DUO = Fender Twin Reverb (blackface) | 67 BLACK SHIMMER = Fender Dual Showman
-66 AC HI BOOST = Vox AC30 Top Boost | 66 AC HI BOOST MOD = Vox AC30 Top Boost (mod)
-66 FLIP BASS = Ampeg Portaflex B-15N | BLUE LINE BASS = Ampeg SVT | 69 BLUE LINE SCOOP = Ampeg SVT (scooped)
-65 J45 = Marshall JTM45 | 67 PLEXIGLAS VARI = Marshall Super Lead Plexi (variac mod) | 68 PLEXI EL84 MOD = Marshall Super Lead Plexi (tube mod)
-68 PLEXIGLAS 100W = Marshall Super Lead Plexi 100W | 68 PLEXIGLAS 50W = Marshall Super Lead Plexi 50W
-82 LEAD 800 100W = Marshall JCM800 100W | 82 LEAD 800 50W = Marshall JCM800 50W | 82 LEAD 800 BASS MOD = Marshall JCM800 (bass mod) | 82 LEAD 800 BRIGHT = Marshall JCM800 (bright) | 82 LEAD 800 TS MOD = Marshall JCM800 with Tube Screamer mod
-M-2 LEAD = Mesa/Boogie Mark IIC+ (drive) | 85 M-2 LEAD CAP MOD = Mesa/Boogie Mark IIC+ (coupling cap mod)
-92 TREADPLATE MODERN / RAW / VINTAGE = Mesa/Boogie Dual Rectifier (Modern / Raw / Vintage)
-93 MS30 = Matchless 30W (source lists "Matchless MS30"; DC-30 style, likely)
-99 PV51 II CLEAN / CRUNCH / LEAD = Peavey 5150 II (clean / crunch / lead)
-RB-01B GREEN / BLUE / RED = Bogner Ecstasy 101B (green / blue / red channel)
-SL-100 CLEAN / CRUNCH / DRIVE = Soldano SLO-100 | 89 SL-100 EXT RANGE = Soldano SLO-100 (extended)
-'05 TANGERINE 30 CH1 / CH2 = Orange 30-watt two-channel head (likely), channel 1 / 2
-11 EPB II CLEAN / CRUNCH / LO-LEAD / HI-LEAD = ENGL Powerball II (2011), its four channels
-84 J-120H = Roland JC-120 (head) | 83 400R = Gallien-Krueger 800RB (bass) | 17 TRACE ELLIOT ELF = Trace Elliot ELF (bass)
+HEADRUSH AMP MODELS (53)
+59 DELUXE GAIN MOD = Fender Tweed Deluxe (Gain Mod)
+59 TWEED BASS = Fender ’59 Bassman
+59 TWEED DELUXE = Fender Tweed Deluxe
+59 TWEED PRINCE = Fender ’59 Princeton
+64 BLACK LUX NORM = Fender Deluxe Reverb (Normal)
+64 BLACK LUX VIB = Fender Deluxe Reverb (Vibrato)
+64 BLACK VIB = Fender Vibroverb
+65 BLACK MINI = Fender Champ 6w
+65 BLACK PRINCE = Fender Princeton
+65 BLACK PRINCE REV = Fender Princeton Reverb
+65 BLACK SR = Fender Super Reverb "Blackface"
+65 J45 = Marshall JTM45
+66 AC Hi BOOST = Vox AC30 Top Boost
+66 AC HI BOOST MOD = Vox AC30 Top Boost (Mod)
+66 FLIP BASS = Ampeg Portaflex B15-N
+67 BLACK DUO = Fender Twin Reverb "Blackface"
+67 BLACK SHIMMER = Fender Dual Showman
+67 PLEXIGLAS VARI = Marshall Super Lead Plexi (Variac Mod)
+68 PLEXI EL84 MOD = Marshall Super Lead Plexi (EL34 tubes mod)
+68 PLEXIGLAS 50W = Marshall Super Lead Plexi 50W
+69 BLUE LINE BASS = Ampeg SVT 300w
+69 BLUE LINE SCOOP = Ampeg SVT 300w (Scooped)
+69 PLEXIGLAS 100W = Marshall Super Lead Plexi 100W
+82 LEAD 800 100W = Marshall JCM800 (Normal)
+82 LEAD 800 50W = Marshall JCM800 50w
+82 LEAD 800 BASS MOD = Marshall JCM800 (Bass Mod)
+82 LEAD 800 BRIGHT = Marshall JCM800 (Bright)
+82 LEAD 800 TS MOD = Marshall JCM800 (TS Mod)
+83 400R = Gallien-Krueger 800RB
+84 J-120H = Roland Jazz Chorus 120 (Head)
+85 M-2 LEAD = Mesa/Boogie Mark IIc+ (Drive)
+85 M-2 LEAD CAP MOD = Mesa/Boogie Mark IIc+ (Coupling Cap Mod)
+89 SL-100 CLEAN = Soldano SLO-100 (Clean)
+89 SL-100 CRUNCH = Soldano SLO-100 (Crunch)
+89 SL-100 DRIVE = Soldano SLO-100 (Drive)
+89 SL-100 EXT RANGE = Soldano SLO-100 (Extreme)
+92 TREADPLATE MODERN = Mesa/Boogie Dual Rectifier (Modern)
+92 TREADPLATE RAW = Mesa/Boogie Dual Rectifier (Raw)
+92 TREADPLATE VINTAGE = Mesa/Boogie Dual Rectifier (Vintage)
+93 MS30 = Matchless DC30
+97 RB-01B BLUE = Bogner Ecstasy 101B (Blue Channel)
+97 RB-01B GREEN = Bogner Ecstasy 101B (Green Channel)
+97 RB-01B RED = Bogner Ecstasy 101B (Red Channel)
+99 PV51 II CLEAN = Peavey 5150 II (Clean)
+99 PV51 II CRUNCH = Peavey 5150 II (Crunch)
+99 PV51 II LEAD = Peavey 5150 II (Lead)
+05 Tangerine 30 Channel 1 = Orange AD30HTC Clean Channel
+05 Tangerine 30 Channel 2 = Orange AD30HTC Dirty Channel
+11 EPB II CLEAN = 2011 ENGL Powerball II
+11 EPB II CRUNCH = 2011 ENGL Powerball II
+11 EPB II HI-LEAD = 2011 ENGL Powerball II
+11 EPB II LO-LEAD = 2011 ENGL Powerball II
+17 Trace Elliot ELF = Trace Elliot ELF
+REVALVER AMP MODELS (44)
+25 ON-1 Clean = HeadRush Original
+25 ON-1 Crunch = HeadRush Original
+25 ON-1 Lead = HeadRush Original
+62 BluesMaker = Marshall BluesBreaker
+64 Fox AC30 = Vox AC30
+72 Basic 100 Bass = FenderBassman 100 (Bass Channel)
+72 Basic 100 Both BG = Fender Bassman 100 (Bass and Normal Channel)
+72 Basic 100 Guitar = Fender Bassman 100 (Normal Channel)
+92 Flathill Dual Ch1 Clean = Mesa Boogie Dual Rectifier (Channel 1 - Clean)
+92 Flathill Dual Ch1 Modern = Mesa Boogie Dual Rectifier (Channel 1 - Modern)
+92 Flathill Dual Ch1 Normal = Mesa Boogie Dual Rectifier (Channel 1 - Normal)
+92 Flathill Dual Ch2 Normal = Mesa Boogie Dual Rectifier (Channel 2 - Normal)
+92 Flathill Dual Ch2 Vintage = Mesa Boogie Dual Rectifier (Channel 2 - Vintage)
+99 Peavey Classic 30 Ch1 = Peavey Classic 30 (Channel 1)
+99 Peavey Classic 30 Ch2 = Peavey Classic 30 (Channel 2)
+03 Herr Demon Ch1 = Diezel Herbert (Channel 1)
+03 Herr Demon Ch2 = Diezel Herbert (Channel 2)
+03 Herr Demon Ch3 = Diezel Herbert (Channel 3)
+04 Hangar 18 LH1000 = Hartke LH1000
+05 Peavey 6505 Clean = Peavey 6505 (Clean Channel)
+05 Peavey 6505 Crunch = Peavey 6505 (Crunch Channel)
+05 Peavey 6505 Lead = Peavey 6505 (Lead Channel)
+05 Peavey 6505+ Clean = Peavey 6505+ (Clean Channel)
+05 Peavey 6505+ Crunch = Peavey 6505+ (Crunch Channel)
+05 Peavey 6505+ Lead = Peavey 6505+ (Lead Channel)
+05 Redhot AD30TC Ch1 = Orange AD30HTC (Clean Channel)
+05 Redhot AD30TC Ch2 = Orange AD30HTC (Dirty Channel)
+09 Budda SD II Drive = Budda Superdrive II (Drive Channel)
+09 Budda SD II Rhythm = Budda Superdrive II (Rhythm Channel)
+09 Peavey 3120 Clean = Peavey 3120 (Clean Channel)
+09 Peavey 3120 Lead = Peavey 3120 (Lead Channel)
+09 Peavey 3120 Rhythm = Peavey 3120 (Rhythm Channel)
+09 Peavey Masterpiece 50 Clean = Peavey Masterpiece 50 (Clean Channel)
+09 Peavey Masterpiece 50 Lead = Peavey Masterpiece 50 (Lead Channel)
+09 Peavey Sensation 20 = Peavey Sensation 20
+10 Budda V20 Drive = Budda Superdrive V20 (Drive Channel)
+10 Budda V20 Rhythm = Budda Superdrive V20 (Rhythm Channel)
+11 Angel PB II Clean = Engl Powerball II (Clean Channel)
+11 Angel PB II Crunch = Engl Powerball II (Crunch Channel)
+11 Angel PB II Hi-Lead = Engl Powerball II (Hi-Lead Channel)
+11 Angel PB II Lo-Lead = Engl Powerball II (Lo-Lead Channel)
+11 Peavey Triple XXX II Clean = Peavey Triple XXX II (Clean Channel)
+11 Peavey Triple XXX II Lead = Peavey Triple XXX II (Lead Channel)
+11 Peavey Triple XXX II Rhythm = Peavey Triple XXX II (Rhythm Channel)
+13 Peavey ValveKing II Clean = Peavey ValveKing II (Clean Channel)
+13 Peavey ValveKing II Lead = Peavey ValveKing II (Lead Channel)
+14 Peavey Custom Lite 20 = Peavey Custom Lite 20
+HEADRUSH CAB MODELS (15)
+1X8 CUSTOM = Fender Champ
+1X12 BLACK PANEL LUX = Fender Deluxe Reverb “Blackface” (Jensen P12N)
+1X12 TWEED LUX = Fender Tweed Deluxe (Jensen P12Q)
+1X15 OPEN BACK = Ampeg Reverberocket (Jensen C15N)
+2X12 AC BLUE = Vox AC30 (Celestion Alnico Blue)
+2X12 B30 = Bogner (Celestion V30)
+2X12 BLACK PANEL DUO = Fender Twin Reverb “Blackface” (Jensen C12N)
+2X12 SILVER CONE = Roland JC-120
+4X10 BLACK SR = Fender Super Reverb “Blackface” (CTS Alnico)
+4X10 TWEED BASS = Fender ’59 Bassman (Jensen P10Q)
+4X12 65W = Marshall (Celestion G12-65)
+4X12 CLASSIC 30W = Marshall 1960AV (Celestion V30)
+4X12 GREEN 25W = Marshall 1960A (Celestion G12-H “Greenback”)
+4X12 GREEN 20W = Marshall (Celestion G12- M)
+8X10 BLUE LINE = Ampeg SVT “Blueline” (Towel Bar)
+HEADRUSH CAB MICS (10)
+DYN 7 = Shure SM7
+DYN 57 = Shure SM57
+DYN 409 = Sennheiser MD409
+DYN 421 = Sennheiser MD421
+COND 67 = Neumann U67
+COND 87 = Neumann U87
+COND 414 = AKG C414 XLS
+RIBBON 121 = Royer 121
+DYN 20 = Electro-Voice RE20
+DYN 12 = AKG D112
+REVALVER CABS (67)
+Angel 412 Slant = Engl 4x12 (Slant)
+Angel Classic 210 Combo = Engl Classic 2x10 (Combo)
+Angel Retro 412 Straight = Engl Retro 4x12 (Straight)
+Angel Standard 412 Straight = Engl Standard 4x12 (Straight)
+Budda 112 Closed Back = Budda 1x12 (Closed Back)
+Budda 112 Open Back = Budda 1x12 (Open Back)
+Budda 212 Closed Back = Budda 2x12 (Closed Back)
+Budda 212 Open Back = Budda 2x12 (Open Back)
+Budda 212 Open Back Combo = Budda 2x12 (Open Back Combo)
+Budda 412 = Budda 4x12
+Budda V20 112 Open Back = Budda V20 1x12 (Open Back)
+Cali Basic 215 (B) = Fender Bass 2x15 (Bottom Speaker)
+Cali Basic 215 (T) = Fender Bass 2x15 (Top Speaker)
+Cali Basic 410 = Fender Bass 4x10
+California Twin 212 Combo = Fender Twin 2x12 Combo
+Doc's Best 212 (B) = Thiel Ported 2x12 (Bottom Speaker)
+Doc's Best 212 (Room) = Thiel Ported 2x12 (Room)
+Doc's Best 212 (T) = Thiel Ported 2x12 (Top Speaker)
+Flathill 412 = Mesa Boogie 4x12
+Flathill 412 Angled (BR) = Mesa Boogie 4x12 Angled (Bottom-Right Speaker)
+Flathill 412 Angled (TL) = Mesa Boogie 4x12 Angled (Top-Left Speaker)
+Flathill Studio 412 (BR) = Mesa Boogie Studio 4x12 (Bottom-Right Speaker)
+Flathill Studio 412 (TL) = Mesa Boogie Studio 4x12 (Top-Left Speaker)
+Flathill Texas 212 Combo = Mesa Boogie Texas 2x12 (Combo)
+Flathill V Mark 112 Combo = Mesa Boogie V Mark 1x12 (Combo)
+Fox AC30 212 Open Back = Vox AC30 2x12 (Open Back)
+Hangar18 Drive 410 (BR) = Hartke 4x10 (Bottom-Right Speaker)
+Hangar18 Drive 410 (TL) = Hartke 4x10 (Top-Left Speaker)
+Hangar18 XL 4.5 = Hartke XL 4.5
+Jarnmalm 412 (BL) = Revalver Custom 4x12 (Bottom-Left Speaker)
+Jarnmalm 412 (BR) = Revalver Custom 4x12 (Bottom-Right Speaker)
+Jarnmalm 412 (TL) = Revalver Custom 4x12 (Top-Left Speaker)
+Jarnmalm 412 (TR) = Revalver Custom 4x12 (Top-Right Speaker)
+JIM Vintage 112 = Revalver Custom 1x12 (Vintage)
+Michael 1960A 412 = Marshall 1960A 4x12
+Michael ACM800 212 Combo (L) = Marshall JCM800 2x12 (Combo, Left Speaker)
+Michael ACM800 212 Combo (R) = Marshall JCM800 2x12 (Combo, Right Speaker)
+Michael Bluesmaker 212 Open Back = Marshall Bluesbreaker 2x12 Open Back
+Peavey 430A 412 = Peavey 430A 4x12
+Peavey 6505 112 Combo = Peavey 6505 1x12 (Combo)
+Peavey 6505 212 Combo = Peavey 6505 2x12 (Combo)
+Peavey 6505 412 = Peavey 6505 4x12
+Peavey 6505 412 Prototype = Peavey 6505 4x12 (Prototype)
+Peavey Classic 112 Combo = Peavey Classic 1x12 (Combo)
+Peavey Classic 412 = Peavey Classic 4x12
+Peavey Classic 50 212 Combo (L) = Peavey Classic 50 2x12 (Combo, Left Speaker)
+Peavey Classic 50 212 Combo (R) = Peavey Classic 50 2x12 (Combo, Right Speaker)
+Peavey Delta Blues 115 = Peavey Delta Blues 1x15
+Peavey Delta Blues 210 = Peavey Delta Blues 2x10
+Peavey Pro 410 = Peavey Pro 4x10
+Peavey Sensation 20 112 Combo = Peavey Sensation 20 1x12 (Combo)
+Peavey TVX 410 = Peavey TVX 410
+Peavey ValveKing 112 Combo = Peavey ValveKing 1x12 (Combo)
+Peavey ValveKing 412 (BL) = Peavey ValveKing 4x12 (Bottom-Left Speaker)
+Peavey ValveKing 412 (BR) = Peavey ValveKing 4x12 (Bottom-Right Speaker)
+Peavey ValveKing 412 (TL) = Peavey ValveKing 4x12 (Top-Left Speaker)
+Peavey ValveKing 412 (TR) = Peavey ValveKing 4x12 (Top-Right Speaker)
+Peavey Windsor 412 Straight = Peavey Windsor 4x12 (Straight)
+Randy 412 = Randall 4x12
+Redhot PPC 112 = Orange PPC 1x12
+Redhot PPC 212 = Orange PPC 2x12
+Redhot PPC 412 = Orange PPC 4x12
+Redhot Vintage 412 (BR) = Orange Vintage 4x12 (Bottom Right Speaker)
+Redhot Vintage 412 (TL) = Orange Vintage 4x12 (Top Left Speaker)
+SV810 = Ampeg SVT 8x10
+SW Giant 410 = SWR Giant 4x10
+VHIII 412 = EVH 4x12
+REVALVER CAB MICS (31)
+4047 SV (LC) = Audio-Technica AT4047/SV (Low Cut)
+4047 SC = Audio-Technica AT4047/SC
+4060 = Audio-Technica AT4060
+414B (150Hz C) = AKG C414B (Cardioid, 150Hz Bass Cut)
+414B (150Hz O) = AKG C414B (Omnidirectional, 150Hz Bass Cut)
+414B (75Hz C) = AKG C414B (Cardioid, 75Hz Bass Cut)
+414B (75Hz O) = AKG C414B (Omnidirectional, 75Hz Bass Cut)
+414B (Card) = AKG C414B (Cardioid)
+414B (Omni) = AKG C414B (Omnidirectional)
+C 4038 = Coles 4038
+CMT 55 (C) = Schoeps CMT 55 (Cardioid)
+CMT 55 (O) = Schoeps CMT 55 (Omnidirectional)
+MD421 (LC1) = Sennheiser MD421 (Bass Roll-Off Switch 1)
+MD421 (LC2) = Sennheiser MD421 (Bass Roll-Off Switch 2)
+MD421 (LC3) = Sennheiser MD421 (Bass Roll-Off Switch 3)
+MD421 (LCS) = Sennheiser MD421 (Bass Roll-Off Switch S)
+MD421 (M) = Sennheiser MD421 (Bass Roll-Off Switch M)
+R121 = Royer 121
+Rezio = Reslo Ribbon Microphone
+SM57 = Shure SM57
+SM58 = Shure SM58
+SM7 = Shure SM7
+SM7 (LC MC) = Shure SM7 (Low Cut, Mid-Range Emphasis)
+SM7 (LC) = Shure SM7 (Low Cut)
+SM7 (MC) = Shure SM7 (Mid-Range Emphasis)
+U87 (C) = Neumann U87 (Cardioid)
+U87 (Fig 8) = Neumann U87 (Figure 8)
+U87 (LC C) = Neumann U87 (Cardioid, Bass Cut)
+U87 (LC Fig 8) = Neumann U87 (Figure 8, Bass Cut)
+U87 (LC O) = Neumann U87 (Omnidirectional
+U87 (Omni) = Neumann U87 (Omnidirectiona)
+VOCAL FX (7)
+Auto-Tune = Antares Auto-Tune
+De-Esser = HeadRush Original
+Vocal Distortion = HeadRush Original
+Vocal Doubler = HeadRush Original
+Vocal Harmony = HeadRush Original
+Vocal Stutter = HeadRush Original
+Vocoder = HeadRush Original
+OVERDRIVE (16)
+Jimmy OD = MXR Timmy
+Palace OD = MXR Duke of Tone
+Anxiety OD = Fulltone OCD
+Anxiety OD V2 = Fulltone OCD (HeadRush Mod)
+B2 Drive = Boss BD-2 Blues Driver
+Budda OM OD = Budda OM OD
+Budda ZenMan = Budda ZenMan
+D250 Drive = DOD Overdrive Preamp 250
+Green JRC-OD = Ibanez TS808
+Greener = Maxon/Ibanez Tube Screamer (Revalver Mod)
+Greener Lite = Maxon/Ibanez Tube Screamer (Revalver Mod)
+Grinder Bass OD = Revalver Original (Plug-in)
+K Drive = Klon Centaur
+S1 Drive = Boss SD-1 Super Overdrive
+Sher'ff = Marshall Guv'nor
+Treble Booster = Dallas Rangemaster Treble Booster
+White Boost = Xotic RC Booster
+Glorious Drive = JHS Morning Glory
+DISTORTION/FUZZ (11)
+8-BIT CRUSH = OTO Biscuit
+B DIST 7000 = Darkglass Microtubes B7K Ultra V2 Bass Preamp
+Black Death = ProCo Rat
+BLACK OP = ProCo Rat
+D1 Distortion = Boss DS-1
+DC DISTORT = Avid Custom Distortion (Eleven Rack)
+MX Dist = MXR Distortion
+OCT FUZZ = Dunlop JH-OC1 Octavio
+Round Fuzz = Dunlop Fuzz Face
+Slab O Meat = Revalver Original (Plug-in)
+TRI FUZZ = EHX Big Muff Pi
+DYNAMICS/EQ (10)
+Acoustic Sim = Boss Acoustic Simulator
+Acoustic Pre = HeadRush Original
+Auto Q 8 Band EQ = Revalver Original (Plug-in)
+BASS EQ = Avid Custom EQ (Eleven Rack)
+G EQ = Revalver Original (Plug-in)
+GRAPHIC EQ = Avid Custom Graphic EQ (Eleven Rack)
+PARA EQ = Avid Custom Parametric EQ (Eleven Rack)
+Promise EQ = Providence DBS-1 Bass EQ
+10 Freq EQ = MXR M108 Ten Band EQ
+COMPRESSOR (6)
+Budda Comp = Budda Chakra Compressor
+DynIII Comp = Avid Dynamic III Comp (Plug-in)
+Gray Comp = Ross Compressor
+Pressor = Revalver Original (Plug-in)
+Side Comp = HeadRush Original
+Slammer = Revalver Original (Plug-in)
+DELAY (14)
+Again Delay = Revalver Original (Plug-in)
+AIR DELAY = Pro Tools AIR Delay (Plug-in)
+BBD DELAY = EHX Deluxe Memory Man
+Budda Samsara Delay = Budda Samsara Delay
+DYN DELAY = Pro Tools AIR Dynamic Delay (Plug-in)
+M104 Analog Delay = Moog Moogerfooger MF104M Analog Delay
+PITCH DELAY = Boss PS-3
+RESO DELAY = RESO DELAY (HeadRush Original)
+REVERSE DELAY = Boss DD-5
+STEREO DOUBLER = Stereo Doubler (HeadRush Original)
+TAPE ECHO = Maestro Echoplex EP-3
+Time Warp = Digitech Space Station (Warp Mode)
+Multi Delay = HeadRush Original
+Grain Delay = HeadRush Original
+REVERB (7)
+AIR REVERB = Pro Tools AIR Reverb (Plug-in)
+ELEVEN REVERB = Avid Reverb One (Eleven Rack)
+Party Verb = HeadRush Original (Particle Reverb)
+SHIMMER = Shimmer Reverb (Headrush Original)
+SPRING REVERB = Fender Spring Reverb
+Spring Guru = HeadRush Original
+C Verb = HeadRush Original
+CHORUS (7)
+Budda Karma Chorus = Budda Karma Chorus
+C2 Bass Chorus = Boss CE-2B Bass Chorus
+C2 Chorus = Boss CE-2 Chorus
+Chorus = Boss CE-1 (Chorus Mode)
+Detune = HeadRush Original
+Dim Chorus = Boss Waza Craft Dimension-C Chorus
+Multi Chorus = AIR Multichorus (Plug-in)
+PHASER/FLANGER (10)
+Air Flanger = AIR Flanger (Plug-in)
+Analog Flanger = Revalver Original (Plug-in)
+Digital Flanger = Revalver Original (Plug-in)
+Flanger = Avid Eleven Rack Flanger
+Orange Phaser = MXR Phase 90
+Ring Mod = HeadRush Original
+Square-Phase = MXR Phase 90
+Stone Phaser = EHX Small Stone
+Tron Phaser = Mu-Tron Phasor II
+Vibe Phaser = Shin-ei Uni-Vibe
+VIB/TREM/ROTARY (6)
+AIR Vibrato = AIR Vibrato (Plug-in)
+Panner = Avid Panner (Eleven Rack)
+Rotary = AIR Rotary Module (Plug-in)
+Tremolo = Boss TR-2 Tremolo
+Tube Tremolo = Revalver Original (Plug-in)
+Vibrato = Boss CE-1 (Vibrato Mode)
+WAH/FILTER (8)
+Air Filter = AIR Filter (Plug-in)
+Black Wah = MXR Cry Baby
+Budda BudWah = Budda BudWah
+Env Filter = DOD FX25 Envelope Filter
+More Wah = Morley Wah
+Shine Wah = Vox V486
+Tron Filter = Mu-Tron III Envelope Filter
+White Bass Wah = Dunlop Cry Baby 105Q Bass Wah
+PITCH (7)
+Up Tune = Headrush Original
+Chord Wham = Digitech Whammy (Poliphonic)
+Drop Tune = Digitech Drop
+Harm = Digitech Whammy (Harmony)
+Octaves = Boss OC-2 Octave
+Octaves Up = HeadRush Original
+Smart Harm = HeadRush Original
+Wham = Digitech Whammy (Classic)
+SYNTH (4)
+AMBI VERB = HeadRush Original
+Hybrid Synth = HeadRush Original
+Electric Piano = HeadRush Original
+DB-33 Organ = HeadRush Original
+RHYTHMIC (2)
+Kill Seq = HeadRush Original
+Splicer = HeadRush Original
+VOLUME/DYNAMICS (5)
+Autoswell = Digitech Crescendo
+Feedback = HeadRush Original
+Hold = Electro-Harmonix Freeze
+Volume = HeadRush Original
+Sustain = HeadRush Original
+UTILITY (3)
+Gate = Rocktron Hush
+Kaften Gate = Revalver Original (Plug-in)
+Noise Filter = HeadRush Original
+HEADRUSH IMPULSE RESPONSE FILES (20 WAV FILES EACH, 300 TOTAL)
+60s412A = Marshall 4x12 1960A
+60s412V = Marshall 4x12 1960V
+Birch115 = Ashdown 1x15 (Bass Cab)
+Birch410 = Ashdown 4x10 (Bass Cab)
+Blackline810 = Ampeg 8x10
+Fawn212 = Vox 2x12
+Jr112 = Fender 1x12
+Mkbass212 = MarkBass 2x12 (Bass Cab)
+Tangerine212OB = Orange 4x12 (Open Back)
+Tangerine412 = Orange 4x12
+Tread212 = Mesa Boogie 2x12
+Tread412 = Mesa Boogie 4x12
+Twin212OB = Fender Twin Reverb 2x12 (Open Back)
+Whitemoon112C = Blackstar 1x12 (Closed Back)
+Whitemoon112OB = Blackstar 1x12 (Open Back)
+CHOPTONES IMPULSE RESPONSE FILES (15)
+CT-Bogie110CB-160.wav = Mesa Boogie 1x10 (Closed Back)
+CT-Bogie212VTY-60957.wav = Mesa Boogie 2x12
+CT-Bogie412V30-57421.wav = Mesa Boogie 4x12
+CT-BogieWay112-20.wav = Mesa Boogie 1x12 (Bass Cab)
+CT-Bogna412V30T75-7B.wav = Bogner 4x12
+CT-Bogna412V30T75-57421.wav = Bogner 4x12
+CT-Brit412G12M-421160.wav = Marshall 4x12
+CT-Brit412V30-160121.wav = Marshall 4x12
+CT-Brit412V30-609421.wav = Marshall 4x12
+CT-BritJH412G12M-58421.wav = Marshall 4x12
+CT-Fend312EMFDS-4217B.wav = Fender 3x12
+CT-GampeSTV410-47.wav = Ampeg 4x10 (Bass Cab)
+CT-MarcoNY212-160.wav = Markbass 2x12 (Bass Cab)
+CT-Mgan112AlnG-42158.wav = Morgan 1x12
+CT-Vocs212AlnBL-58.wav = Vox 2x12
 
-CABS (Cab Type)
-1X8 CUSTOM = Fender Champ | 1X12 BLACK PANEL LUX = Fender Deluxe Reverb (Jensen P12N) | 1X12 TWEED LUX = Fender Tweed Deluxe (Jensen P12Q)
-1X15 OPEN BACK = Ampeg Reverberocket (Jensen C15N) | 2X12 AC BLUE = Vox AC30 (Celestion Alnico Blue) | 2X12 BLACK PANEL DUO = Fender Twin Reverb (Jensen C12N)
-2X12 B30 = Bogner 2x12 (Celestion V30) | 2X12 SILVER CONE = Roland JC-120 | 4X10 TWEED BASS = Fender '59 Bassman (Jensen P10Q) | 4X10 BLACK SR = Fender Super Reverb (CTS Alnico)
-4X12 CLASSIC 30W = Marshall 1960AV (Celestion V30) | 4X12 65W = Marshall 4x12 (Celestion G12-65) | 4X12 GREEN 25W = Marshall 1960A (Celestion G12H Greenback) | 4X12 GREEN 20W = Marshall 4x12 (Celestion G12M Greenback)
-8X10 BLUE LINE = Ampeg SVT 8x10
-
-CAB MICS (Mic Type)
-DYN 7 = Shure SM7 | DYN 57 = Shure SM57 | DYN 409 = Sennheiser MD409 | DYN 421 = Sennheiser MD421 | DYN 20 = Electro-Voice RE20 | DYN 12 = AKG D112
-COND 67 = Neumann U67 | COND 87 = Neumann U87 | COND 414 = AKG C414 XLS | RIBBON 121 = Royer R-121
-
-CAB BLOCK PARAMETERS (HeadRush Core user guide): Cab Type, Mic Type, Break Up, On-Axis (On = center of the speaker, brighter / Off = angled off-center, darker), Out Gain, Amp Gain.
-There is NO mic distance parameter. Approximate the original mic distance with On/Off-Axis, Break Up, an EQ block after the cab, or an IR. Dual cabs (2X Cab) and dual IRs (2X IR) are available to blend two mics.
-
-HEADRUSH IRs (IR block)
-60S412V = Marshall 1960AV (Celestion V30) | 60S412A = Marshall 1960A (Celestion T75) | TREAD412 / TREAD212 = Mesa Rectifier 4x12 / 2x12 (V30)
-TANGERINE412 = Orange PPC412 (V30) | TANERINE212OB = Orange PPC212 open back (V30) | FAWN212 = Vox AC30 (Alnico Blue) | TWIN212OB = Fender Twin Reverb open back (Jensen C12K)
-JR112 = Fender Blues Junior | WHITEMOON112C / 112OB = Blackstar HT112 closed / open back | BLACKLINE810 = Ampeg SVT 8x10 | BIRCH115 / BIRCH410 = Orange OBC115 / OBC410 | MKBASS212 = Markbass 2x12
-
-DRIVE / DISTORTION / FUZZ
-WHITE BOOST = Xotic RC Booster | GREEN JRC-OD = Ibanez TS808 Tube Screamer | S1 DRIVE = Boss SD-1 | K DRIVE = Klon Centaur | ANXIETY OD (V2) = Fulltone OCD
-D250 DRIVE = DOD Overdrive Preamp 250 | BLACK OP = ProCo RAT | D1 DIST = Boss DS-1 | MX DIST = MXR Distortion+ (likely) | DC DISTORT = Avid Eleven Rack custom distortion
-TRI FUZZ = Electro-Harmonix Big Muff Pi | ROUND FUZZ = Dunlop Fuzz Face | OCT FUZZ = Dunlop JHC-01 Octavio | B DIST 7000 = bass preamp/distortion | 8-BIT CRUSH = original
-
-DYNAMICS / EQ
-GREY COMP = Ross Compressor | DYN111 COMP = Avid Dynamics III compressor | SIDE COMP = Avid Dynamics compressor | GATE = Rocktron Hush style gate | NOISE FILTER = original noise gate
-GRAPHIC EQ, PARA EQ, BASS EQ, TEN FREQ EQ = EQ blocks | AUTO SWELL = Digitech Crescendo style | ACOUSTIC PRE = acoustic preamp | HOLD = freeze/hold
-
-MODULATION
-CHORUS = Boss CE-1 (chorus) | VIBRATO = Boss CE-1 (vibrato) | DIM CHORUS = Roland Dimension-style chorus (likely) | MULTICHORUS = Avid AIR Multi-Chorus
-FLANGER = TC Electronic Thunderstorm style | AIR FLANGER, AIR VIBRATO, AIR FILTER = Pro Tools AIR plug-ins
-VIBE PHASER = Shin-ei Uni-Vibe | ORANGE PHASER = MXR Phase 90 | TRON PHASER = Mu-Tron Phasor II | STONE PHASER = EHX Small Stone
-ROTARY = rotary speaker | TREMOLO = Boss TR-2 style | OCTAVE PEDAL = Boss OC-2 | TRON FILTER / ENV FILTER = Mu-Tron III envelope filter
-RING MOD = Moog ring modulator style | DROP TUNE = Digitech Drop style | SMART HARM = intelligent harmonizer | DETUNE, OCTAVES UP, ACOUST SIM
-
-REVERB / DELAY
-TAPE ECHO = Maestro Echoplex EP-3 | BBD DELAY = EHX Deluxe Memory Man | DYN DELAY = AIR Dynamic Delay | AIR DELAY = AIR Delay
-REV DELAY = Boss DD-5 reverse style | PIT DELAY = Boss PS-3 pitch delay style | RESO DELAY | STEREO DOUBLER
-SPRING REVERB = Fender spring reverb | AIR REVERB | ELEVEN REVERB = Avid Reverb One | AMBI VERB | SHIMMER | PARTY VERB
-
-EXPRESSION
-VOLUME = Ernie Ball volume | SHINE WAH = Vox V846 | BLACK WAH = Dunlop Cry Baby | MORE WAH = Morley wah | WHITE BASS WAH
-WHAM = Digitech Whammy | HARM = Whammy harmony mode | CHORD WHAM = Whammy polyphonic | TIME WARP = Digitech Space Station warp | FEED BACK = feedbacker | PANNER
-
-REVALVER LIBRARY (Core / Prime only, in addition to the above)
-Amps include: Peavey 6505, Peavey 6505+, Peavey Triple XXX II, Peavey 3120, Peavey Classic 30, Peavey Masterpiece 50, Peavey Sensation 20, GK400RB (Gallien-Krueger 400RB), Budda Superdrive II, Budda Superdrive V20, BluesMaker, Basic 100, ACM 900, ACT Combo, ANGEL PB II, Demon, Flathill, Fox AC30, Hangar 18, J120H, Redhot AD30TC, plus ReValver versions of the HeadRush amps.
-For ReValver models other than the Peavey and GK ones, verify what they are based on by searching before relying on them. Core also loads Neural Amp Modeler (NAM) captures and its own clones, and ships Choptones IRs.
-
-The model names above may be shortened on screen; newer firmware may add models not listed here.`;
+CAB BLOCK PARAMETERS (HeadRush Core user guide v5.1): Cab Type, Mic Type, Break Up, On-Axis (On = center of the speaker, brighter / Off = angled off-center, darker), Out Gain, Amp Gain.
+There is NO mic distance parameter. Approximate the original mic distance with On/Off-Axis, Break Up, an EQ block after the cab, or a dual cab / dual IR blend.
+Core also loads Neural Amp Modeler (NAM) captures, its own clones, and user IRs.
+Devices other than Core (Pedalboard, Gigboard, MX5, Prime, Flex Prime) only have the HEADRUSH models plus the effects their firmware lists; the REVALVER models are Core-only.`;

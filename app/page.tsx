@@ -13,9 +13,6 @@ const CATEGORY_LABELS: Record<DeviceCategory, string> = {
   "tube-amp": "Lambalı amfiler",
 };
 
-const input =
-  "w-full rounded-lg border border-neutral-700 bg-neutral-900 px-3 py-2 text-sm outline-none focus:border-amber-400";
-
 function deviceLabel(rig: UserRig) {
   return rig.deviceId === "custom" ? rig.customDevice || "Diğer" : (findDevice(rig.deviceId)?.name ?? rig.deviceId);
 }
@@ -116,26 +113,52 @@ export default function Home() {
 
   const isSaved = current ? saved.some((s) => s.id === current.id) : false;
 
+  const device = rig && rig.deviceId !== "custom" ? findDevice(rig.deviceId) : undefined;
+
   return (
-    <main className="mx-auto max-w-5xl px-4 py-8">
-      <header className="mb-8">
-        <h1 className="text-3xl font-bold tracking-tight">
-          Tone<span className="text-amber-400">Finder</span>
-        </h1>
-        <p className="text-neutral-400">
-          Bir şarkı yaz, yapay zekâ o tonu senin ekipmanına göre birebir ayarlara çevirsin.
+    <main className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
+      <header className="hud-panel mb-6 flex flex-wrap items-center gap-x-6 gap-y-3 px-5 py-4">
+        <div className="flex items-center gap-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-ink text-lg text-white" aria-hidden>
+            ◉
+          </div>
+          <div>
+            <h1 className="text-xl font-extrabold tracking-tight text-ink">
+              TONE<span className="text-accent">FINDER</span>
+            </h1>
+            <p className="hud-label">Yapay zekâ ton motoru</p>
+          </div>
+        </div>
+        <p className="hidden max-w-md text-sm text-ink-soft md:block">
+          Bir şarkı yaz; yapay zekâ orijinal ekipmanı bulsun ve o tonu senin ekipmanına göre ayarlara çevirsin.
         </p>
+        <div className="ml-auto flex flex-wrap gap-2">
+          <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
+            RİG <b className="text-accent">{rig ? deviceLabel(rig) : "—"}</b>
+          </span>
+          <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
+            MANYETİK <b className="text-accent">{rig?.pickups ?? "—"}</b>
+          </span>
+          <span className="flex items-center gap-1.5 rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
+            <span className={`h-2 w-2 rounded-full ${loading ? "animate-pulse bg-signal" : "bg-ok"}`} />
+            {loading ? "ARAŞTIRIYOR" : "HAZIR"}
+          </span>
+        </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[320px_1fr]">
+      <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
         <aside className="space-y-6">
-          <section className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4">
-            <h2 className="mb-3 font-semibold">🎛️ Ekipmanım</h2>
+          <section className="hud-panel p-5">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="hud-label text-accent">RIG</span>
+              <h2 className="text-sm font-bold uppercase tracking-wider">Ekipmanım</h2>
+              <span className="h-px flex-1 bg-line" />
+            </div>
             {rig && (
-              <div className="space-y-3">
-                <label className="block text-sm">
-                  <span className="mb-1 block text-neutral-400">Amfi / modelleyici</span>
-                  <select className={input} value={rig.deviceId} onChange={(e) => updateRig({ deviceId: e.target.value })}>
+              <div className="space-y-4">
+                <label className="block">
+                  <span className="hud-label mb-1.5 block">Amfi / prosesör</span>
+                  <select className="hud-input" value={rig.deviceId} onChange={(e) => updateRig({ deviceId: e.target.value })}>
                     {(Object.keys(CATEGORY_LABELS) as DeviceCategory[]).map((cat) => (
                       <optgroup key={cat} label={CATEGORY_LABELS[cat]}>
                         {DEVICES.filter((d) => d.category === cat).map((d) => (
@@ -147,27 +170,32 @@ export default function Home() {
                     ))}
                     <option value="custom">Diğer (kendim yazacağım)</option>
                   </select>
+                  <span className="mt-1.5 block text-xs text-ink-mute">
+                    {device?.verified
+                      ? "✓ Doğrulanmış model listesi hazır"
+                      : "Model listesi araştırma sırasında web'den bulunur"}
+                  </span>
                 </label>
                 {rig.deviceId === "custom" && (
                   <input
-                    className={input}
-                    placeholder="ör. Laney Cub-Super12"
+                    className="hud-input"
+                    placeholder="ör. Laney Cub-Super12, Fractal FM3"
                     value={rig.customDevice}
                     onChange={(e) => updateRig({ customDevice: e.target.value })}
                   />
                 )}
-                <label className="block text-sm">
-                  <span className="mb-1 block text-neutral-400">Gitar</span>
+                <label className="block">
+                  <span className="hud-label mb-1.5 block">Gitar</span>
                   <input
-                    className={input}
+                    className="hud-input"
                     placeholder="ör. Fender Player Stratocaster"
                     value={rig.guitar}
                     onChange={(e) => updateRig({ guitar: e.target.value })}
                   />
                 </label>
-                <label className="block text-sm">
-                  <span className="mb-1 block text-neutral-400">Manyetikler</span>
-                  <select className={input} value={rig.pickups} onChange={(e) => updateRig({ pickups: e.target.value })}>
+                <label className="block">
+                  <span className="hud-label mb-1.5 block">Manyetikler</span>
+                  <select className="hud-input" value={rig.pickups} onChange={(e) => updateRig({ pickups: e.target.value })}>
                     {PICKUP_CONFIGS.map((p) => (
                       <option key={p.id} value={p.id}>
                         {p.label}
@@ -175,36 +203,42 @@ export default function Home() {
                     ))}
                   </select>
                 </label>
-                <label className="block text-sm">
-                  <span className="mb-1 block text-neutral-400">Ek pedallar (isteğe bağlı)</span>
+                <label className="block">
+                  <span className="hud-label mb-1.5 block">Pedallarım (isteğe bağlı)</span>
                   <textarea
-                    className={`${input} min-h-16`}
+                    className="hud-input min-h-16"
                     placeholder="ör. Ibanez TS9, Boss DD-8"
                     value={rig.pedals}
                     onChange={(e) => updateRig({ pedals: e.target.value })}
                   />
                 </label>
-                <p className="text-xs text-neutral-500">Ekipmanın bu tarayıcıda otomatik kaydedilir.</p>
+                <p className="text-xs text-ink-mute">Ekipmanın bu bilgisayarda otomatik kaydedilir.</p>
               </div>
             )}
           </section>
 
-          <section className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4">
-            <h2 className="mb-3 font-semibold">⭐ Kaydedilen tonlar</h2>
+          <section className="hud-panel p-5">
+            <div className="mb-3 flex items-center gap-3">
+              <span className="hud-label text-accent">MEM</span>
+              <h2 className="text-sm font-bold uppercase tracking-wider">Kayıtlı tonlar</h2>
+              <span className="h-px flex-1 bg-line" />
+            </div>
             {saved.length === 0 ? (
-              <p className="text-sm text-neutral-500">Henüz kayıtlı ton yok.</p>
+              <p className="text-sm text-ink-mute">Henüz kayıtlı ton yok.</p>
             ) : (
-              <ul className="space-y-2">
+              <ul className="space-y-1.5">
                 {saved.map((s) => (
                   <li key={s.id}>
                     <button
                       onClick={() => setCurrent(s)}
-                      className={`w-full rounded-lg px-3 py-2 text-left text-sm hover:bg-neutral-800 ${
-                        current?.id === s.id ? "bg-neutral-800" : ""
+                      className={`w-full rounded-lg border px-3 py-2 text-left text-sm transition ${
+                        current?.id === s.id
+                          ? "border-accent bg-accent-soft"
+                          : "border-transparent hover:border-line hover:bg-paper"
                       }`}
                     >
-                      <div className="font-medium">{s.result.song.title}</div>
-                      <div className="text-xs text-neutral-500">
+                      <div className="font-semibold text-ink">{s.result.song.title}</div>
+                      <div className="text-xs text-ink-mute">
                         {s.result.song.artist} · {s.part} · {s.deviceLabel}
                       </div>
                     </button>
@@ -216,17 +250,22 @@ export default function Home() {
         </aside>
 
         <div className="space-y-6">
-          <form onSubmit={findTone} className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4">
+          <form onSubmit={findTone} className="hud-panel p-5">
+            <div className="mb-4 flex items-center gap-3">
+              <span className="hud-label text-accent">SRC</span>
+              <h2 className="text-sm font-bold uppercase tracking-wider">Şarkı</h2>
+              <span className="h-px flex-1 bg-line" />
+            </div>
             <div className="grid gap-3 sm:grid-cols-2">
               <input
-                className={input}
+                className="hud-input"
                 placeholder="Şarkı (ör. Comfortably Numb)"
                 value={song}
                 onChange={(e) => setSong(e.target.value)}
                 required
               />
               <input
-                className={input}
+                className="hud-input"
                 placeholder="Sanatçı (ör. Pink Floyd)"
                 value={artist}
                 onChange={(e) => setArtist(e.target.value)}
@@ -238,46 +277,51 @@ export default function Home() {
                   type="button"
                   key={p.id}
                   onClick={() => setPart(p.id)}
-                  className={`rounded-full border px-3 py-1 text-sm ${
+                  className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
                     part === p.id
-                      ? "border-amber-400 bg-amber-400/10 text-amber-300"
-                      : "border-neutral-700 text-neutral-400 hover:border-neutral-500"
+                      ? "border-ink bg-ink text-white"
+                      : "border-line bg-white text-ink-soft hover:border-line-strong hover:text-ink"
                   }`}
                 >
                   {p.label}
                 </button>
               ))}
+            </div>
+            <div className="mt-3 flex flex-col gap-3 sm:flex-row">
+              <input
+                className="hud-input"
+                placeholder="Bölüm detayı (isteğe bağlı) — ör. 2. solo, giriş riffi"
+                value={partDetail}
+                onChange={(e) => setPartDetail(e.target.value)}
+              />
               <button
                 type="submit"
                 disabled={loading || !song.trim()}
-                className="ml-auto rounded-lg bg-amber-400 px-5 py-2 text-sm font-semibold text-neutral-950 hover:bg-amber-300 disabled:opacity-50"
+                className="shrink-0 rounded-lg bg-accent px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-ink disabled:opacity-40"
               >
-                {loading ? "Ton aranıyor…" : "Tonu bul"}
+                {loading ? "Aranıyor…" : "Tonu bul"}
               </button>
             </div>
-            <input
-              className={`${input} mt-3`}
-              placeholder="Bölüm detayı (isteğe bağlı) — ör. 2. solo, giriş riffi, nakarat ritmi"
-              value={partDetail}
-              onChange={(e) => setPartDetail(e.target.value)}
-            />
           </form>
 
           {error && (
-            <div className="rounded-xl border border-rose-500/40 bg-rose-500/10 p-4 text-sm text-rose-200">{error}</div>
+            <div className="hud-panel border-bad/40 p-4 text-sm text-bad">
+              <span className="hud-label mr-2 text-bad">HATA</span>
+              {error}
+            </div>
           )}
 
           {loading && (
-            <div className="rounded-xl border border-neutral-800 bg-neutral-900/60 p-4">
-              <p className="mb-3 animate-pulse text-neutral-300">
-                🎸 Araştırılıyor… ({rig && deviceLabel(rig)}) — bu işlem 1–3 dakika sürebilir.
+            <div className="hud-panel hud-scan p-5">
+              <p className="mb-3 font-semibold text-ink">
+                Araştırılıyor… <span className="font-normal text-ink-soft">({rig && deviceLabel(rig)}) — 1–3 dakika sürebilir</span>
               </p>
-              <ul className="max-h-72 space-y-1 overflow-y-auto text-sm">
+              <ul className="max-h-72 space-y-1 overflow-y-auto font-mono text-xs">
                 {log.map((e, i) => (
-                  <li key={i} className="truncate text-neutral-400">
-                    {e.type === "status" && <span className="text-neutral-200">{e.message}</span>}
-                    {e.type === "search" && <>🔎 {e.query}</>}
-                    {e.type === "fetch" && <>📄 {hostOf(e.url)} okunuyor</>}
+                  <li key={i} className="truncate text-ink-soft">
+                    {e.type === "status" && <span className="font-semibold text-ink">» {e.message}</span>}
+                    {e.type === "search" && <>⌕ {e.query}</>}
+                    {e.type === "fetch" && <>↳ {hostOf(e.url)} okunuyor</>}
                   </li>
                 ))}
               </ul>
@@ -286,13 +330,15 @@ export default function Home() {
 
           {current && !loading && (
             <div>
-              <div className="mb-3 flex items-center justify-between text-sm text-neutral-400">
-                <span>
+              <div className="mb-3 flex items-center justify-between gap-3">
+                <span className="hud-label">
                   {current.part} · {current.deviceLabel}
                 </span>
                 <button
                   onClick={() => toggleSave(current)}
-                  className="rounded-lg border border-neutral-700 px-3 py-1 hover:border-amber-400 hover:text-amber-300"
+                  className={`rounded-md border px-3 py-1.5 text-sm font-semibold transition ${
+                    isSaved ? "border-accent bg-accent-soft text-accent" : "border-line bg-white text-ink hover:border-accent"
+                  }`}
                 >
                   {isSaved ? "★ Kaydedildi" : "☆ Kaydet"}
                 </button>
@@ -302,8 +348,9 @@ export default function Home() {
           )}
 
           {!current && !loading && !error && (
-            <div className="rounded-xl border border-dashed border-neutral-800 p-10 text-center text-neutral-500">
-              Soldan ekipmanını seç, sonra bir şarkı ara.
+            <div className="hud-panel flex flex-col items-center gap-2 p-12 text-center">
+              <span className="hud-label">Bekleniyor</span>
+              <p className="text-ink-soft">Soldan ekipmanını seç, sonra bir şarkı ara.</p>
             </div>
           )}
         </div>
