@@ -1,18 +1,18 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
+import { isSameOrigin } from "@/lib/guard";
 import { findTone, ToneError } from "@/lib/research";
+import { getApiKey } from "@/lib/settings";
 import { ToneRequestSchema, type ToneEvent } from "@/lib/schema";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
 
-let client: Anthropic | undefined;
-
 function errorMessage(error: unknown): string {
   if (error instanceof ToneError) return error.message;
   if (error instanceof Anthropic.AuthenticationError) {
     console.error("Anthropic authentication failed:", error.message);
-    return "Sunucuda API anahtarı ayarlı değil ya da geçersiz.";
+    return "API anahtarı geçersiz. Ayarlar'dan yeni bir anahtar gir.";
   }
   if (error instanceof Anthropic.RateLimitError) return "Çok fazla istek var, biraz sonra tekrar dene.";
   if (error instanceof Anthropic.APIError) {
@@ -26,6 +26,11 @@ function errorMessage(error: unknown): string {
 // Yanıt NDJSON olarak akar: araştırma adımları (status/search/fetch),
 // ardından tek bir result ya da error satırı.
 export async function POST(request: Request) {
+  if (!isSameOrigin(request)) return NextResponse.json({ error: "İzin verilmeyen istek." }, { status: 403 });
+  const apiKey = await getApiKey();
+  if (!apiKey) {
+    return NextResponse.json({ error: "API anahtarı ayarlı değil.", code: "no_api_key" }, { status: 400 });
+  }
   const body = await request.json().catch(() => null);
   const parsed = ToneRequestSchema.safeParse(body);
   if (!parsed.success) {
@@ -37,8 +42,7 @@ export async function POST(request: Request) {
     async start(controller) {
       const emit = (event: ToneEvent) => controller.enqueue(encoder.encode(JSON.stringify(event) + "\n"));
       try {
-        client ??= new Anthropic();
-        const result = await findTone(client, parsed.data, emit);
+        const result = await findTone(new Anthropic({ apiKey: apiKey.key }), parsed.data, emit);
         emit({ type: "result", result });
       } catch (error) {
         emit({ type: "error", error: errorMessage(error) });

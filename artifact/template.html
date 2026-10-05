@@ -135,11 +135,14 @@ textarea.input { min-height: 64px; resize: vertical; }
 .badge { border: 1px solid; border-radius: 4px; padding: 1px 6px; font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; white-space: nowrap; }
 .b-confirmed { color: var(--ok); } .b-likely { color: var(--warn); } .b-guess { color: var(--bad); }
 .b-pedal { color: var(--ink); border-color: var(--signal); background: var(--signal-soft); }
+.b-processor { color: var(--ink); border-color: rgba(29, 78, 216, .35); background: var(--accent-soft); }
+.b-amp { color: var(--ink); border-color: rgba(15, 37, 87, .4); background: rgba(15, 37, 87, .05); }
 
 .strip { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; border: 1px dashed var(--line-strong); background: var(--paper); border-radius: 8px; padding: 10px 12px; margin-bottom: 16px; }
 .strip .arrow { color: var(--ink-mute); }
 .strip .blk { border: 1px solid rgba(29, 78, 216, .3); background: var(--accent-soft); border-radius: 6px; padding: 3px 8px; font-size: 13px; font-weight: 600; }
 .strip .blk.pedal { border-color: var(--signal); background: var(--signal-soft); }
+.strip .blk.amp { border-color: rgba(15, 37, 87, .4); background: rgba(15, 37, 87, .05); }
 
 .blocks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .block { border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; background: #fff; }
@@ -198,21 +201,23 @@ textarea.input { min-height: 64px; resize: vertical; }
       <section class="panel" aria-labelledby="rigTitle">
         <div class="head"><span class="label code">RIG</span><h2 id="rigTitle">Ekipmanım</h2><span class="rule"></span></div>
         <div class="stack">
-          <label class="field"><span class="label">Amfi / prosesör</span>
-            <select class="input" id="device"></select>
-            <span class="hint" id="deviceHint"></span>
+          <label class="field"><span class="label">Amfi</span>
+            <input class="input" id="amp" list="ampList" placeholder="ör. Marshall DSL40CR, Boss Katana 50">
+            <span class="hint" id="ampHint"></span>
           </label>
-          <label class="field" id="customWrap" hidden><span class="label">Cihazın adı</span>
-            <input class="input" id="customDevice" placeholder="ör. Laney Cub-Super12, Fractal FM3">
+          <label class="field"><span class="label">Gitar prosesörü / multi-efekt (varsa)</span>
+            <input class="input" id="processor" list="procList" placeholder="ör. HeadRush Core — yoksa boş bırak">
+            <span class="hint" id="procHint"></span>
           </label>
-          <label class="field"><span class="label">Gitar</span>
-            <input class="input" id="guitar" placeholder="ör. Fender Player Stratocaster">
+          <label class="field"><span class="label">Gitar modeli</span>
+            <input class="input" id="guitar" list="guitarList" placeholder="ör. Fender Player Stratocaster">
           </label>
+          <datalist id="ampList"></datalist><datalist id="procList"></datalist><datalist id="guitarList"></datalist>
           <label class="field"><span class="label">Manyetikler</span>
             <select class="input" id="pickups"></select>
           </label>
-          <label class="field"><span class="label">Pedallarım (isteğe bağlı)</span>
-            <textarea class="input" id="pedals" placeholder="ör. Ibanez TS9, Boss DD-8"></textarea>
+          <label class="field"><span class="label">Pedallarım (her satıra bir tane)</span>
+            <textarea class="input" id="pedals" placeholder="Her satıra bir pedal&#10;ör. Ibanez TS9&#10;Boss DD-8"></textarea>
           </label>
           <span class="hint">Ekipmanın bu tarayıcıda hatırlanır.</span>
         </div>
@@ -246,7 +251,7 @@ textarea.input { min-height: 64px; resize: vertical; }
         <strong>Ton hesaplanıyor…</strong> <span class="muted" id="workingSub"></span>
         <ul class="steps">
           <li>Orijinal kayıttaki gitar, amfi, kabin, mikrofon ve pedallar çıkarılıyor</li>
-          <li>Cihazındaki karşılık gelen modeller seçiliyor</li>
+          <li>Amfin, prosesörün ve pedallarınla nasıl kurulacağı belirleniyor</li>
           <li>Gitar farkı ve pedalların için ayarlar hesaplanıyor</li>
         </ul>
         <p class="hint" id="progress">Claude düşünüyor… (genelde 30–90 saniye)</p>
@@ -255,7 +260,7 @@ textarea.input { min-height: 64px; resize: vertical; }
       <section class="panel empty" id="idle">
         <span class="label">Bekleniyor</span>
         <ol>
-          <li>Soldan amfini ya da prosesörünü, gitarını ve pedallarını seç.</li>
+          <li>Solda amfini, varsa prosesörünü, gitarını ve pedallarını yaz.</li>
           <li>Şarkıyı, sanatçıyı ve bölümü yaz (ör. "2. solo").</li>
           <li><b>Tonu bul</b>'a bas. İlk seferde Claude senden izin ister; hesap kendi Claude planından düşer.</li>
         </ol>
@@ -289,17 +294,46 @@ const store = {
 };
 
 /* ---------- rig form ---------- */
-const CATS = { "modeling-amp": "Modelleme amfileri", modeler: "Modelleyiciler", "multi-fx": "Multi-efekt", "tube-amp": "Lambalı amfiler" };
-const rig = Object.assign({ deviceId: "headrush-core", customDevice: "", guitar: "", pickups: "SSS", pedals: "" }, store.get("tf.rig", {}));
+// Kullanıcı amfisini, prosesörünü, gitarını ve pedallarını serbest metinle yazar;
+// katalog yalnızca öneri ve doğrulanmış model listesi eşleştirmesi içindir.
+const DEVICES = DATA.devices.map((d) => ({ ...d, match: new RegExp(d.match, "i") }));
+const RIG_FIELDS = ["amp", "processor", "guitar", "pickups", "pedals"];
+const rig = (() => {
+  const raw = store.get("tf.rig", {});
+  const r = { amp: "", processor: "", guitar: "", pickups: "SSS", pedals: "" };
+  for (const k of RIG_FIELDS) if (typeof raw[k] === "string") r[k] = raw[k];
+  if (!raw.amp && !raw.processor && raw.deviceId) {
+    // eski sürümün { deviceId, customDevice } kaydı
+    const d = DEVICES.find((x) => x.id === raw.deviceId);
+    const name = raw.deviceId === "custom" ? raw.customDevice || "" : d?.name || "";
+    if (d && (d.category === "modeler" || d.category === "multi-fx")) r.processor = name; else r.amp = name;
+  }
+  return r;
+})();
 let part = "lead";
 
+function matchDevice(text) {
+  const t = (text || "").trim();
+  if (!t || /^(yok|none|-)$/i.test(t)) return undefined;
+  return DEVICES.find((d) => d.match.test(t));
+}
+function guessPickups(guitar) {
+  const g = guitar.toLowerCase();
+  const exact = DATA.guitars.find((s) => s.name.toLowerCase() === g);
+  if (exact) return exact.pickups;
+  if (/emg|fishman|active|aktif/.test(g)) return "active";
+  if (/hss/.test(g)) return "HSS";
+  if (/hsh|ibanez rg|soloist/.test(g)) return "HSH";
+  if (/p-?90|junior|special/.test(g)) return "P90";
+  if (/strat/.test(g)) return "SSS";
+  if (/tele/.test(g)) return "SS";
+  if (/les paul|\bsg\b|335|prs|explorer|flying v|firebird/.test(g)) return "HH";
+  return undefined;
+}
 function fillSelects() {
-  for (const [cat, label] of Object.entries(CATS)) {
-    const g = h("optgroup", { label });
-    for (const d of DATA.devices.filter((x) => x.category === cat)) g.append(h("option", { value: d.id }, d.name));
-    $("device").append(g);
-  }
-  $("device").append(h("option", { value: "custom" }, "Diğer (kendim yazacağım)"));
+  for (const a of DATA.ampSuggestions) $("ampList").append(h("option", { value: a }));
+  for (const p of DATA.processorSuggestions) $("procList").append(h("option", { value: p }));
+  for (const g of DATA.guitars) $("guitarList").append(h("option", { value: g.name }));
   for (const p of DATA.pickups) $("pickups").append(h("option", { value: p.id }, p.label));
   for (const p of DATA.parts) {
     $("parts").append(h("button", { type: "button", class: "part", "data-id": p.id, "aria-pressed": String(p.id === part), onclick: () => setPart(p.id) }, p.label));
@@ -309,23 +343,30 @@ function setPart(id) {
   part = id;
   for (const b of $("parts").children) b.setAttribute("aria-pressed", String(b.dataset.id === id));
 }
-function deviceOf(id) { return DATA.devices.find((d) => d.id === id); }
-function deviceLabel() { return rig.deviceId === "custom" ? rig.customDevice || "Diğer" : deviceOf(rig.deviceId)?.name || rig.deviceId; }
+function rigLabel() {
+  return [rig.amp, rig.processor].map((s) => s.trim()).filter((s) => s && !/^yok$/i.test(s)).join(" + ") || "—";
+}
+function hasGear() { return Boolean(rig.amp.trim() || rig.processor.trim()); }
+function hint(el, text) {
+  const d = matchDevice(text);
+  el.hidden = !text.trim() || /^yok$/i.test(text.trim());
+  el.textContent = d?.verified ? "✓ Doğrulanmış model listesi kullanılacak" : "Kanalları ve düğmeleri Claude'un bilgisinden gelir";
+  el.className = "hint" + (d?.verified ? " ok" : "");
+}
 function syncRig() {
-  $("device").value = rig.deviceId;
-  $("customDevice").value = rig.customDevice;
-  $("guitar").value = rig.guitar;
-  $("pickups").value = rig.pickups;
-  $("pedals").value = rig.pedals;
-  $("customWrap").hidden = rig.deviceId !== "custom";
-  const verified = Boolean(DATA.references[rig.deviceId]);
-  $("deviceHint").textContent = verified ? "✓ Doğrulanmış model listesi hazır" : "Model adları Claude'un bilgisinden gelir";
-  $("deviceHint").className = "hint" + (verified ? " ok" : "");
-  $("chipRig").textContent = deviceLabel();
+  for (const k of RIG_FIELDS) if ($(k).value !== rig[k]) $(k).value = rig[k];
+  hint($("ampHint"), rig.amp);
+  hint($("procHint"), rig.processor);
+  $("chipRig").textContent = rigLabel();
   $("chipPu").textContent = rig.pickups;
 }
-for (const [id, key] of [["device", "deviceId"], ["customDevice", "customDevice"], ["guitar", "guitar"], ["pickups", "pickups"], ["pedals", "pedals"]]) {
-  $(id).addEventListener("input", () => { rig[key] = $(id).value; store.set("tf.rig", rig); syncRig(); });
+for (const k of RIG_FIELDS) {
+  $(k).addEventListener("input", () => {
+    rig[k] = $(k).value;
+    if (k === "guitar") { const pu = guessPickups(rig.guitar); if (pu) rig.pickups = pu; }
+    store.set("tf.rig", rig);
+    syncRig();
+  });
 }
 
 /* ---------- prompt ---------- */
@@ -339,7 +380,7 @@ const SHAPE = `{
     "tuning": "",
     "recording_notes": "studio, producer, double-tracking, post-production; Turkish"
   },
-  "chain": [ { "block": "Noise Gate|Compressor|Drive|Fuzz|Wah|Amp|Cab|EQ|Modulation|Delay|Reverb|...", "device_model": "exact name on the user's device, or the user's own pedal", "source": "device|user_pedal", "emulates": "real gear it emulates and what it replaces in the original rig; Turkish", "settings": [ { "name": "knob/parameter name as on the device", "value": "0-10 knobs as a plain number like 6.5; others with units like 380 ms, On, Dyn 57", "note": "" } ], "note": "" } ],
+  "chain": [ { "block": "Noise Gate|Compressor|Drive|Fuzz|Wah|Amp|Cab|EQ|Modulation|Delay|Reverb|...", "device_model": "channel/setting name on the user's amp, exact model name on the user's processor, or the user's own pedal", "source": "amp|processor|pedal", "emulates": "real gear it emulates and what it replaces in the original rig; Turkish", "settings": [ { "name": "knob/parameter name as on the device", "value": "0-10 knobs as a plain number like 6.5; others with units like 380 ms, On, Dyn 57", "note": "" } ], "note": "" } ],
   "guitar": { "pickup": "selector position on the user's guitar", "volume": "", "tone": "", "tuning": "", "notes": "", "compensation": [ "each adjustment made for the guitar/pickup difference and why; Turkish" ] },
   "playing_tips": [ "" ],
   "adaptation_notes": "compromises and how they are compensated; Turkish",
@@ -347,15 +388,19 @@ const SHAPE = `{
 }`;
 
 function buildPrompt(req) {
-  const d = deviceOf(req.rig.deviceId);
-  const ref = DATA.references[req.rig.deviceId];
+  const refs = [req.rig.processor, req.rig.amp].map((t) => matchDevice(t)).map((d) => d && DATA.references[d.id]).filter((r, i, all) => r && all.indexOf(r) === i);
+  const gear = (label, text) => {
+    if (!text || /^yok$/i.test(text)) return `${label}: none`;
+    const d = matchDevice(text);
+    return `${label}: ${text}${d ? ` (known controls: ${d.controls})` : ""}`;
+  };
   const pu = DATA.pickups.find((p) => p.id === req.rig.pickups)?.label || req.rig.pickups;
   const partLabel = DATA.parts.find((p) => p.id === req.part)?.label || req.part;
   return [
     "You are a meticulous guitar tone expert and studio engineer. Recreate a song's guitar tone on the user's own gear, whatever amp, modeler, multi-FX, guitar and pedals they have. You have no web access: work from what you know, and be honest about certainty.",
     "",
     "1) Original rig for this exact song and part (if a specific solo or section is named, that one): guitar and the pickup used, amp(s) with channel and known settings, cabinet and speakers, cab mics with position and distance, pedals in order with known settings, tuning, recording context, tempo (BPM) and key. Label every gear claim confirmed (well documented), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. Never present a guess as fact.",
-    "2) Map it onto the user's amp or processor. If a <device_reference> is given, it is the source of truth: use only those exact model names and the parameters it lists. Without a reference, use model names you are sure exist on that device; when unsure, name the closest type generically and say so in the note. For a traditional amp, use its real channels and knobs and say which parts of the tone must come from pedals. Cover cab and mic as far as the device allows and say how to approximate what it can't set (e.g. mic distance).",
+    "2) Rebuild that tone with the user's own gear: their amp, their processor or multi-FX if they have one, and their pedals. Decide how the pieces work together (e.g. processor into the amp's clean channel or effects return, or the amp's own drive with pedals in front) and say so. If a <device_reference> is given, it is the source of truth: use only those exact model names and the parameters it lists. Without a reference, use channel, model and knob names you are sure exist on that gear; when unsure, name the closest type generically and say so in the note. Cover cab and mic as far as the gear allows and say how to approximate what it can't set (e.g. mic distance).",
     "3) Compensate for the guitar: compare the original guitar/pickups with the user's (e.g. Les Paul humbuckers vs Strat single-coils), choose the selector position, and adjust gain, mids, treble, boost and noise gate accordingly; list each adjustment with its reason. For each pedal the user owns, say whether and where to use it and exactly how to set it.",
     "Give concrete starting values for every block; sync delay times to the tempo.",
     "",
@@ -367,12 +412,13 @@ function buildPrompt(req) {
     `Song: ${req.song}`,
     `Artist: ${req.artist || "not given"}`,
     `Part: ${partLabel}${req.detail ? " - " + req.detail : ""}`,
-    `User's amp / processor: ${d ? `${d.name} (${d.category}; controls: ${d.controls})` : req.rig.customDevice || "unspecified"}`,
+    gear("User's amp", req.rig.amp),
+    gear("User's processor / multi-FX", req.rig.processor),
     `User's guitar: ${req.rig.guitar || "not given"}`,
     `Pickup configuration: ${pu}`,
-    `User's pedals: ${req.rig.pedals || "none"}`,
+    `User's pedals: ${req.rig.pedals.split(/\n|,/).map((p) => p.trim()).filter(Boolean).join("; ") || "none"}`,
     "</request>",
-    ref ? `\n<device_reference>\n${ref}\n</device_reference>` : "",
+    ...refs.map((r) => `\n<device_reference>\n${r}\n</device_reference>`),
   ].join("\n");
 }
 
@@ -394,7 +440,7 @@ function normalize(r) {
       tuning: S(o.tuning),
       recording_notes: S(o.recording_notes),
     },
-    chain: A(r.chain).map((b) => ({ block: S(b?.block), device_model: S(b?.device_model), source: b?.source === "user_pedal" ? "user_pedal" : "device", emulates: S(b?.emulates), settings: settings(b?.settings), note: S(b?.note) })),
+    chain: A(r.chain).map((b) => ({ block: S(b?.block), device_model: S(b?.device_model), source: { amp: "amp", processor: "processor", pedal: "pedal", user_pedal: "pedal", device: "processor" }[b?.source] || "processor", emulates: S(b?.emulates), settings: settings(b?.settings), note: S(b?.note) })),
     guitar: { pickup: S(r.guitar?.pickup), volume: S(r.guitar?.volume), tone: S(r.guitar?.tone), tuning: S(r.guitar?.tuning), notes: S(r.guitar?.notes), compensation: A(r.guitar?.compensation).map(S).filter(Boolean) },
     playing_tips: A(r.playing_tips).map(S).filter(Boolean),
     adaptation_notes: S(r.adaptation_notes),
@@ -431,6 +477,7 @@ function Knob(s) {
   if (n !== null) wrap.append(h("span", { class: "v" }, s.value));
   return wrap;
 }
+const SOURCE_LABEL = { amp: "amfin", processor: "prosesör", pedal: "pedalın" };
 const CONF = { high: ["Yüksek güven", "c-high"], medium: ["Orta güven", "c-medium"], low: ["Düşük güven", "c-low"] };
 const CERTL = { confirmed: "kaynaklı", likely: "muhtemel", guess: "tahmin" };
 const badge = (c) => h("span", { class: `badge b-${c}` }, CERTL[c]);
@@ -455,13 +502,13 @@ function render(entry) {
       (r.song.bpm || r.song.key) && h("div", { class: "tags" },
         r.song.bpm && h("span", { class: "chip" }, "TEMPO ", h("b", {}, r.song.bpm)),
         r.song.key && h("span", { class: "chip" }, "TON ", h("b", {}, r.song.key)))),
-    panel("01", "Senin cihazında sinyal zinciri",
+    panel("01", "Senin ekipmanınla sinyal zinciri",
       h("div", { class: "strip" }, h("span", { class: "label" }, "Gitar"),
-        r.chain.map((b) => [h("span", { class: "arrow" }, "→"), h("span", { class: "blk" + (b.source === "user_pedal" ? " pedal" : "") }, b.device_model || b.block)]),
+        r.chain.map((b) => [h("span", { class: "arrow" }, "→"), h("span", { class: "blk " + b.source }, b.device_model || b.block)]),
         h("span", { class: "arrow" }, "→"), h("span", { class: "label" }, "Çıkış")),
       h("ol", { class: "blocks" }, r.chain.map((b, i) => h("li", { class: "block" },
         h("div", { class: "block-head" }, h("span", { class: "num" }, i + 1), h("span", { class: "label" }, b.block), h("span", { class: "model" }, b.device_model),
-          b.source === "user_pedal" && h("span", { class: "badge b-pedal" }, "senin pedalın")),
+          h("span", { class: "badge b-" + b.source }, SOURCE_LABEL[b.source])),
         b.emulates && h("p", { class: "emu" }, "≈ " + b.emulates),
         h("div", { class: "knobs" }, b.settings.map(Knob)),
         b.note && h("p", { class: "note" }, b.note))))),
@@ -531,10 +578,11 @@ $("form").addEventListener("submit", async (e) => {
   e.preventDefault();
   const req = { song: $("song").value.trim(), artist: $("artist").value.trim(), part, detail: $("detail").value.trim(), rig: { ...rig } };
   if (!req.song) return;
+  if (!hasGear()) { showError("Ton bulmak için solda en az bir amfi ya da prosesör yaz."); return; }
   if (!sample) { showError("Bu sayfa yapay zekâyı yalnızca claude.ai içinde açıldığında kullanabilir."); return; }
   showError("");
   setBusy(true);
-  $("workingSub").textContent = `(${deviceLabel()})`;
+  $("workingSub").textContent = `(${rigLabel()})`;
   $("progress").textContent = "Claude düşünüyor… (genelde 30–90 saniye)";
   ctl = new AbortController();
   try {
@@ -544,7 +592,7 @@ $("form").addEventListener("submit", async (e) => {
       onText: ({ text }) => { $("progress").textContent = `Ayarlar yazılıyor… ${text.length.toLocaleString("tr-TR")} karakter`; },
     });
     const partLabel = DATA.parts.find((p) => p.id === part)?.label || part;
-    current = { id: String(Date.now()), song: req.song, part: [partLabel, req.detail].filter(Boolean).join(" · "), device: deviceLabel(), result: normalize(raw) };
+    current = { id: String(Date.now()), song: req.song, part: [partLabel, req.detail].filter(Boolean).join(" · "), device: rigLabel(), result: normalize(raw) };
     render(current);
   } catch (err) {
     if (err?.code !== "cancelled") showError(ERRORS[err?.code] || "Bir sorun oluştu: " + (err?.message || "bilinmeyen hata") + ". Tekrar dene.");

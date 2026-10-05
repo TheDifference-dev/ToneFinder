@@ -1,76 +1,105 @@
 # ToneFinder
 
-Guitar Tone Finder — yapay zekâ destekli gitar ton bulucu (ToneAdapt benzeri).
+Guitar Tone Finder — yapay zekâ destekli gitar ton bulucu (ToneAdapt benzeri), masaüstü uygulaması.
 
-Bir şarkı ve bölüm (ritim, solo, giriş…) seçersin; uygulama iki adımda çalışır:
+Ünlü bir şarkının solosunu ya da bir bölümünü seçersin. ToneFinder:
 
-1. **Araştırma** — yapay zekâ web'de arama yapar, tercih edilen siteleri ve forumları okur;
-   orijinal kayıttaki gitar, amfi, kabin/hoparlör, mikrofon ve mesafesi, pedallar ve
-   ayarlarını kaynaklarıyla bulur. Ardından senin cihazının (ör. HeadRush Core) model
-   listesini araştırıp her orijinal ekipmanın cihazındaki karşılığını eşleştirir.
-   Gitar farkını da telafi eder (ör. orijinalde Les Paul humbucker, sende Strat single-coil:
-   hangi manyetik konumu, ne kadar fazla gain/mid, boost ve noise gate gerekir) ve sahip
-   olduğun her pedalın ayarını verir.
-2. **Düzenleme** — araştırma raporunu ekrandaki yapılandırılmış sonuca çevirir.
+1. **Stüdyo kaydını araştırır** — o kayıtta kullanılan gitar ve manyetik, amfi ve kanalı, kabin ve
+   hoparlörler, mikrofonlar (konum ve mesafe), pedallar ve ayarları; röportajlar, rig dökümleri ve
+   forumlardan, kaynaklarıyla. Her bilgi "kaynaklı / muhtemel / tahmin" diye işaretlenir.
+2. **Senin ekipmanına çevirir** — senin amfin (her marka/model), varsa gitar prosesörün
+   (HeadRush, Helix…), gitarın ve pedalların ile aynı tona nasıl ulaşacağını söyler:
+   - amfide hangi kanal ve düğme ayarları,
+   - prosesörde hangi amfi/kabin/mikrofon/efekt modelleri ve ayarları,
+   - her pedalında hangi düğme nerede, zincirde nereye takılacağı,
+   - gitarda hangi manyetik konumu, volume ve tone ayarı,
+   - gitar farkı telafisi (ör. orijinalde Les Paul humbucker, sende Strat single-coil).
 
-Her amfi, modelleyici, multi-efekt ve gitar türüyle çalışır. Listede olmayan cihazlar için
-"Diğer" seçilip adı yazılır; yapay zekâ cihazın model listesini araştırır. HeadRush için
-doğrulanmış bir model referansı (`lib/devices/headrush.ts`) hazır gelir.
+## Masaüstüne kurulum (bir kez)
 
-Sonuçta:
+1. [Node.js](https://nodejs.org) **LTS** sürümünü kur.
+2. **GitHub Desktop** → *File → Clone repository* → `TheDifference-dev/ToneFinder` reposunu klonla.
+3. Klonladığın klasörde **`Masaustu-Kisayolu-Olustur.bat`** dosyasına çift tıkla
+   (Mac'te `npm run shortcut`). Masaüstüne ve Başlat menüsüne ToneFinder simgesi eklenir.
+4. İlk açılışı klasördeki **`ToneFinder.bat`** (Mac'te `ToneFinder.command`) ile yap: paketler
+   kurulur ve uygulama hazırlanır, birkaç dakika sürebilir. Sonraki açılışlar birkaç saniyedir.
+5. Uygulama açılınca **Ayarlar** ekranına Anthropic API anahtarını gir (aşağıya bak).
 
-- Orijinal ekipman (kaynaklı / muhtemel / tahmin etiketleriyle)
-- Senin cihazında sinyal zinciri: her blokta cihazdaki model adı, neyi taklit ettiği ve ayarları
-  (kabin bloğunda mikrofon, pozisyon ve mesafe dahil)
-- Gitar ayarları (manyetik seçimi, volume/tone, akort)
-- Orijinal ekipman, uyarlama notları ve çalım ipuçları
-- Kullanılan kaynakların linkleri
-- Araştırma sırasında yapılan aramalar ve okunan sayfalar canlı gösterilir
-- Ekipman profili ve kaydedilen tonlar tarayıcıda saklanır
+## Her açılışta ne olur
 
-## İki kullanım yolu
+Masaüstündeki **ToneFinder** simgesine tıkladığında:
 
-### 1) Ücretsiz sürüm — API anahtarı gerekmez
-`artifact/tonefinder.html`, claude.ai üzerinde bir Artifact olarak çalışır ve yapay zekâ
-isteklerini **kendi Claude aboneliğinden** karşılar (ayrı ödeme yok). İnternette arama yapmaz;
-Claude'un kendi bilgisini ve uygulamadaki doğrulanmış model listelerini kullanır.
-Sayfayı güncellemek için: `npm run build:artifact` (veriyi `lib/` dosyalarından alır).
+1. GitHub'dan son güncellemeler çekilir (`git pull`; GitHub Desktop'un kendi git'i de bulunur),
+2. gerekirse yeni paketler kurulur ve uygulama yeniden derlenir,
+3. uygulama bu bilgisayarda başlar ve **kendi penceresinde** açılır (Edge/Chrome uygulama modu,
+   adres çubuğu yok),
+4. pencereyi kapatınca arka plandaki sunucu da kapanır.
 
-### 2) Tam sürüm — web araştırmalı, bilgisayarında çalışır
-İnternette arama yapıp kaynak gösterir. Bunun için bir **Anthropic API anahtarı** gerekir:
+Uygulama yalnızca bu bilgisayarda çalışır (`127.0.0.1:3210`); internete açılan bir site değildir.
+İnternet yalnızca yapay zekâ araştırması ve güncelleme için kullanılır.
+
+## API anahtarı
+
+Araştırma Anthropic'in yapay zekâsıyla (web araması dahil) yapılır ve bir API anahtarı gerekir:
 
 1. https://console.anthropic.com adresinde hesap aç.
-2. *Billing* bölümünden kredi yükle (API, Claude aboneliğinden ayrı ücretlendirilir).
-3. *API Keys* bölümünden yeni anahtar oluştur ve kopyala.
-4. [Node.js](https://nodejs.org) (LTS) kur.
-5. Windows'ta `baslat.bat`, Mac'te `baslat.command` dosyasına çift tıkla. İlk açılışta anahtarı
-   sorar ve `.env.local` dosyasına kaydeder; tarayıcıda http://localhost:3000 açılır.
+2. *Billing* bölümünden kredi yükle (Claude aboneliğinden ayrı ücretlendirilir; bir şarkı
+   araştırması tahminen 0,3–1 $).
+3. *API Keys* bölümünden anahtar oluştur ve uygulamadaki **Ayarlar** ekranına yapıştır.
 
-Elle kurulum:
+Anahtar yalnızca bu bilgisayarda `~/.tonefinder/settings.json` dosyasında saklanır; uygulama
+güncellense de silinmez. (`ANTHROPIC_API_KEY` ortam değişkeni varsa o kullanılır.)
+
+### API anahtarı olmadan
+
+`artifact/tonefinder.html` aynı aracın claude.ai'de çalışan sürümüdür; kendi Claude
+aboneliğini kullanır, ayrı ödeme gerekmez. İnternette arama yapmaz, Claude'un kendi bilgisini ve
+uygulamadaki doğrulanmış model listelerini kullanır. Güncellemek için `npm run build:artifact`.
+
+## Doğrulanmış model listeleri
+
+Prosesör ve modelleme amfilerinde model adlarının doğru olması için bazı cihazların resmî
+listeleri uygulamaya gömülüdür (`lib/devices/`):
+
+| Cihaz | Kaynak |
+|---|---|
+| HeadRush Core (Prime, Flex Prime, Pedalboard, MX5…) | headrushfx.com Core "Full List" (amfi, kabin, mikrofon, IR, efekt → esinlendiği gerçek ekipman) |
+| Line 6 Helix / HX Stomp / POD Go | line6.com Helix 3.80 model listesi |
+| Boss Katana Gen 3 / MkII | BOSS Tone Studio for Katana Gen3 parametre kılavuzu |
+
+Diğer amfi ve prosesörler için kanal, model ve düğme bilgileri araştırma sırasında web'den bulunur.
+
+## Geliştirme
 
 ```bash
 npm install
-cp .env.example .env.local   # ANTHROPIC_API_KEY değerini gir
-npm run dev                  # http://localhost:3000
+npm run dev          # http://localhost:3000 (geliştirme modu)
+npm run desktop      # masaüstü başlatıcısını terminalden çalıştır
+npm run shortcut     # masaüstü kısayolu oluştur
+npm run build:artifact
 ```
-
-Bir şarkı araştırması tahminen 0,3–1 $ arası tutar (web aramaları + model kullanımı).
-
-## Mimari
 
 | Dosya | Görev |
 |---|---|
-| `app/page.tsx` | Arayüz: ekipman profili, şarkı arama, kayıtlı tonlar |
-| `app/api/tone/route.ts` | API rotası; araştırma ilerlemesini NDJSON olarak akıtır |
-| `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
-| `lib/sources.ts` | Araştırmada öncelik verilecek siteler |
-| `lib/devices/` | Doğrulanmış model listeleri: HeadRush (resmî Core listesi), Line 6 Helix/HX/POD Go (resmî), Boss Katana Gen 3 (resmî parametre kılavuzu) |
-| `artifact/` | Ücretsiz Artifact sürümü (`template.html` → `npm run build:artifact` → `tonefinder.html`) |
-| `baslat.bat`, `baslat.command` | Masaüstünde çift tıklamayla başlatma |
-| `lib/schema.ts` | İstek doğrulama ve yapay zekâ çıktısının Zod şeması |
-| `lib/gear.ts` | Desteklenen amfi/modelleyici kataloğu ve kontrol adları |
+| `app/page.tsx` | Arayüz: ekipman, şarkı arama, sonuç, kayıtlı tonlar |
+| `components/RigPanel.tsx` | Ekipman girişi: amfi, prosesör, gitar, manyetik, pedallar (önerili serbest metin) |
+| `components/SettingsPanel.tsx` | API anahtarı kurulum ekranı |
 | `components/ToneCard.tsx`, `components/Knob.tsx` | Sonuç kartı ve düğme görselleri |
+| `app/api/tone/route.ts` | Araştırma API'si; ilerlemeyi NDJSON olarak akıtır |
+| `app/api/settings/route.ts` | API anahtarını doğrulayıp yerel ayar dosyasına kaydeder |
+| `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
+| `lib/gear.ts` | Ekipman önerileri, cihaz eşleştirme, manyetik tahmini |
+| `lib/devices/` | Doğrulanmış model listeleri |
+| `lib/sources.ts` | Araştırmada öncelik verilecek siteler |
+| `scripts/launcher.mjs` | Masaüstü başlatıcısı: güncelle → kur/derle → başlat → uygulama penceresi |
+| `scripts/create-shortcut.mjs` | Masaüstü / Başlat menüsü kısayolu |
+| `artifact/` | API anahtarsız claude.ai sürümü |
 
-Yapay zekâ çağrısı sunucu tarafında yapılır; API anahtarı tarayıcıya hiç gitmez.
-Bir araştırma genelde 1–3 dakika sürer. Öncelikli siteleri değiştirmek için `lib/sources.ts`,
-yeni bir cihaz eklemek için `lib/gear.ts` içindeki `DEVICES` listesine bir kayıt eklemen yeterli.
+## Yol haritası
+
+- **Masaüstü** (şimdi): yerel Next.js sunucusu + uygulama penceresi, GitHub'dan otomatik güncelleme.
+- **Web sitesi**: aynı Next.js uygulaması bir sunucuya (ör. Vercel) yüklenir; API anahtarı
+  kullanıcıdan değil sunucunun ortam değişkeninden okunur (`lib/settings.ts` zaten
+  `ANTHROPIC_API_KEY`'i öncelikli kullanır), Ayarlar ekranı kapatılır, giriş ve kullanım limiti eklenir.
+- **iOS**: arayüz bileşenleri ve `lib/` mantığı korunur; web sitesindeki API'ye bağlanan bir iOS
+  uygulaması (Capacitor ile aynı arayüz ya da React Native) yapılır. Anahtar asla uygulamaya gömülmez.

@@ -1,7 +1,7 @@
 // Tarayıcıda saklanan kullanıcı verileri (ekipman profili ve kaydedilen tonlar).
 // localStorage erişilemezse (gizli pencere vb.) sessizce varsayılana döner.
 
-import { DEFAULT_RIG, type UserRig } from "./gear";
+import { migrateRig, type UserRig } from "./gear";
 import type { ToneResult } from "./schema";
 
 const RIG_KEY = "tonefinder.rig";
@@ -32,10 +32,21 @@ function write(key: string, value: unknown) {
   }
 }
 
-export const loadRig = (): UserRig => ({ ...DEFAULT_RIG, ...read<Partial<UserRig>>(RIG_KEY, {}) });
+export const loadRig = (): UserRig => migrateRig(read<Record<string, unknown>>(RIG_KEY, {}));
 export const saveRig = (rig: UserRig) => write(RIG_KEY, rig);
 
-// Eski sürümde kaydedilen tonların yapısı farklı; onları atla.
+// Eski sürümlerde kaydedilen tonlar: çok eski yapıdakileri atla, zincirdeki eski
+// kaynak etiketlerini ("device" / "user_pedal") yenilerine çevir.
+const OLD_SOURCES: Record<string, "processor" | "pedal"> = { device: "processor", user_pedal: "pedal" };
+
 export const loadSaved = (): SavedTone[] =>
-  read<SavedTone[]>(SAVED_KEY, []).filter((t) => Array.isArray(t?.result?.guitar?.compensation));
+  read<SavedTone[]>(SAVED_KEY, [])
+    .filter((t) => Array.isArray(t?.result?.guitar?.compensation) && Array.isArray(t.result.chain))
+    .map((t) => ({
+      ...t,
+      result: {
+        ...t.result,
+        chain: t.result.chain.map((b) => ({ ...b, source: OLD_SOURCES[b.source as string] ?? b.source })),
+      },
+    }));
 export const storeSaved = (tones: SavedTone[]) => write(SAVED_KEY, tones);

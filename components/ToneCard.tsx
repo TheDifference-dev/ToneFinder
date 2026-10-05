@@ -13,6 +13,13 @@ const CERTAINTY = {
   guess: { label: "tahmin", cls: "border-bad/40 text-bad" },
 } as const;
 
+// Zincirdeki her blok kullanıcının hangi ekipmanında ayarlanıyor
+const SOURCE = {
+  pedal: { label: "pedalın", strip: "border-signal/60 bg-signal/10" },
+  processor: { label: "prosesör", strip: "border-accent/30 bg-accent-soft" },
+  amp: { label: "amfin", strip: "border-ink/40 bg-ink/5" },
+} as const;
+
 type Certainty = keyof typeof CERTAINTY;
 type Setting = { name: string; value: string; note: string };
 
@@ -87,16 +94,14 @@ export function ToneCard({ result }: { result: ToneResult }) {
         )}
       </header>
 
-      <Panel title="Senin cihazında sinyal zinciri" code="01">
+      <Panel title="Senin ekipmanınla sinyal zinciri" code="01">
         <div className="mb-5 flex flex-wrap items-center gap-1.5 rounded-lg border border-dashed border-line-strong bg-paper p-3">
           <span className="hud-label mr-1">Gitar</span>
           {result.chain.map((b, i) => (
             <span key={`strip-${i}`} className="flex items-center gap-1.5">
               <span className="text-ink-mute">→</span>
               <span
-                className={`rounded-md border px-2 py-1 text-xs font-semibold ${
-                  b.source === "user_pedal" ? "border-signal/60 bg-signal/10 text-ink" : "border-accent/30 bg-accent-soft text-ink"
-                }`}
+                className={`rounded-md border px-2 py-1 text-xs font-semibold text-ink ${SOURCE[b.source].strip}`}
               >
                 {b.device_model}
               </span>
@@ -115,11 +120,9 @@ export function ToneCard({ result }: { result: ToneResult }) {
                 </span>
                 <span className="hud-label">{b.block}</span>
                 <span className="text-base font-bold text-ink">{b.device_model}</span>
-                {b.source === "user_pedal" && (
-                  <span className="rounded border border-signal/60 bg-signal/10 px-1.5 py-0.5 font-mono text-[10px] uppercase text-ink">
-                    senin pedalın
-                  </span>
-                )}
+                <span className={`rounded border px-1.5 py-0.5 font-mono text-[10px] uppercase text-ink ${SOURCE[b.source].strip}`}>
+                  {SOURCE[b.source].label}
+                </span>
               </div>
               <p className="mb-3 text-sm text-ink-soft">≈ {b.emulates}</p>
               <div className="flex flex-wrap gap-3">

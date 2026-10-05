@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -H 127.0.0.1",
     "lint": "tsc --noEmit",
-    "build:artifact": "node scripts/build-artifact.mjs"
+    "build:artifact": "node scripts/build-artifact.mjs",
+    "desktop": "node scripts/launcher.mjs",
+    "shortcut": "node scripts/create-shortcut.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",

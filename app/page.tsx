@@ -1,20 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { RigPanel } from "@/components/RigPanel";
+import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { ToneCard } from "@/components/ToneCard";
-import { DEVICES, PARTS, PICKUP_CONFIGS, findDevice, type DeviceCategory, type UserRig } from "@/lib/gear";
+import { PARTS, type UserRig } from "@/lib/gear";
 import type { ToneEvent, ToneResult } from "@/lib/schema";
 import { loadRig, loadSaved, saveRig, storeSaved, type SavedTone } from "@/lib/storage";
 
-const CATEGORY_LABELS: Record<DeviceCategory, string> = {
-  "modeling-amp": "Modelleme amfileri",
-  modeler: "Modelleyiciler",
-  "multi-fx": "Multi-efekt",
-  "tube-amp": "Lambalı amfiler",
-};
-
-function deviceLabel(rig: UserRig) {
-  return rig.deviceId === "custom" ? rig.customDevice || "Diğer" : (findDevice(rig.deviceId)?.name ?? rig.deviceId);
+function rigLabel(rig: UserRig) {
+  const parts = [rig.amp, rig.processor].map((s) => s.trim()).filter((s) => s && !/^yok$/i.test(s));
+  return parts.join(" + ") || "—";
 }
 
 async function* readEvents(body: ReadableStream<Uint8Array>): AsyncGenerator<ToneEvent> {
@@ -40,11 +36,23 @@ function hostOf(url: string) {
   }
 }
 
+function Head({ code, title }: { code: string; title: string }) {
+  return (
+    <div className="mb-4 flex items-center gap-3">
+      <span className="hud-label text-accent">{code}</span>
+      <h2 className="text-sm font-bold uppercase tracking-wider">{title}</h2>
+      <span className="h-px flex-1 bg-line" />
+    </div>
+  );
+}
+
 export default function Home() {
   const [rig, setRig] = useState<UserRig | null>(null);
+  const [keyStatus, setKeyStatus] = useState<KeyStatus | null>(null);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [song, setSong] = useState("");
   const [artist, setArtist] = useState("");
-  const [part, setPart] = useState("full");
+  const [part, setPart] = useState("lead");
   const [partDetail, setPartDetail] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -55,6 +63,10 @@ export default function Home() {
   useEffect(() => {
     setRig(loadRig());
     setSaved(loadSaved());
+    fetch("/api/settings")
+      .then((r) => r.json() as Promise<KeyStatus>)
+      .then(setKeyStatus)
+      .catch(() => setKeyStatus({ configured: false, source: null }));
   }, []);
 
   function updateRig(patch: Partial<UserRig>) {
@@ -65,9 +77,11 @@ export default function Home() {
     });
   }
 
+  const hasGear = Boolean(rig && (rig.amp.trim() || rig.processor.trim()));
+
   async function findTone(e: React.FormEvent) {
     e.preventDefault();
-    if (!rig || !song.trim()) return;
+    if (!rig || !song.trim() || !hasGear) return;
     setLoading(true);
     setError(null);
     setLog([]);
@@ -78,7 +92,11 @@ export default function Home() {
         body: JSON.stringify({ song, artist, part, partDetail, rig }),
       });
       if (!res.ok || !res.body) {
-        const data = (await res.json().catch(() => ({}))) as { error?: string };
+        const data = (await res.json().catch(() => ({}))) as { error?: string; code?: string };
+        if (data.code === "no_api_key") {
+          setKeyStatus({ configured: false, source: null });
+          return;
+        }
         throw new Error(data.error ?? "Bir şeyler ters gitti.");
       }
 
@@ -93,7 +111,7 @@ export default function Home() {
       setCurrent({
         id: crypto.randomUUID(),
         savedAt: Date.now(),
-        deviceLabel: deviceLabel(rig),
+        deviceLabel: rigLabel(rig),
         part: [PARTS.find((p) => p.id === part)?.label ?? part, partDetail.trim()].filter(Boolean).join(" · "),
         result,
       });
@@ -112,15 +130,17 @@ export default function Home() {
   }
 
   const isSaved = current ? saved.some((s) => s.id === current.id) : false;
-
-  const device = rig && rig.deviceId !== "custom" ? findDevice(rig.deviceId) : undefined;
+  const needsKey = keyStatus !== null && !keyStatus.configured;
 
   return (
     <main className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
       <header className="hud-panel mb-6 flex flex-wrap items-center gap-x-6 gap-y-3 px-5 py-4">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-ink text-lg text-white" aria-hidden>
-            ◉
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-ink" aria-hidden>
+            <svg width="22" height="22" viewBox="0 0 22 22">
+              <circle cx="11" cy="11" r="9" fill="none" stroke="#fff" strokeWidth="2" />
+              <line x1="11" y1="11" x2="16" y2="6" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+            </svg>
           </div>
           <div>
             <h1 className="text-xl font-extrabold tracking-tight text-ink">
@@ -130,99 +150,33 @@ export default function Home() {
           </div>
         </div>
         <p className="hidden max-w-md text-sm text-ink-soft md:block">
-          Bir şarkı yaz; yapay zekâ orijinal ekipmanı bulsun ve o tonu senin ekipmanına göre ayarlara çevirsin.
+          Ünlü bir şarkının stüdyo kaydında kullanılan ekipmanı bulur, o tonu senin amfine, gitarına ve pedallarına göre
+          ayarlara çevirir.
         </p>
-        <div className="ml-auto flex flex-wrap gap-2">
-          <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
-            RİG <b className="text-accent">{rig ? deviceLabel(rig) : "—"}</b>
-          </span>
-          <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
-            MANYETİK <b className="text-accent">{rig?.pickups ?? "—"}</b>
+        <div className="ml-auto flex flex-wrap items-center gap-2">
+          <span className="max-w-64 truncate rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
+            RİG <b className="text-accent">{rig ? rigLabel(rig) : "—"}</b>
           </span>
           <span className="flex items-center gap-1.5 rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
-            <span className={`h-2 w-2 rounded-full ${loading ? "animate-pulse bg-signal" : "bg-ok"}`} />
-            {loading ? "ARAŞTIRIYOR" : "HAZIR"}
+            <span className={`h-2 w-2 rounded-full ${loading ? "animate-pulse bg-signal" : needsKey ? "bg-bad" : "bg-ok"}`} />
+            {loading ? "ARAŞTIRIYOR" : needsKey ? "KURULUM GEREKLİ" : "HAZIR"}
           </span>
+          <button
+            type="button"
+            onClick={() => setSettingsOpen((v) => !v)}
+            className="rounded-md border border-line bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-ink hover:border-accent hover:text-accent"
+          >
+            AYARLAR
+          </button>
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[330px_1fr]">
+      <div className="grid gap-6 lg:grid-cols-[340px_1fr]">
         <aside className="space-y-6">
-          <section className="hud-panel p-5">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="hud-label text-accent">RIG</span>
-              <h2 className="text-sm font-bold uppercase tracking-wider">Ekipmanım</h2>
-              <span className="h-px flex-1 bg-line" />
-            </div>
-            {rig && (
-              <div className="space-y-4">
-                <label className="block">
-                  <span className="hud-label mb-1.5 block">Amfi / prosesör</span>
-                  <select className="hud-input" value={rig.deviceId} onChange={(e) => updateRig({ deviceId: e.target.value })}>
-                    {(Object.keys(CATEGORY_LABELS) as DeviceCategory[]).map((cat) => (
-                      <optgroup key={cat} label={CATEGORY_LABELS[cat]}>
-                        {DEVICES.filter((d) => d.category === cat).map((d) => (
-                          <option key={d.id} value={d.id}>
-                            {d.name}
-                          </option>
-                        ))}
-                      </optgroup>
-                    ))}
-                    <option value="custom">Diğer (kendim yazacağım)</option>
-                  </select>
-                  <span className="mt-1.5 block text-xs text-ink-mute">
-                    {device?.verified
-                      ? "✓ Doğrulanmış model listesi hazır"
-                      : "Model listesi araştırma sırasında web'den bulunur"}
-                  </span>
-                </label>
-                {rig.deviceId === "custom" && (
-                  <input
-                    className="hud-input"
-                    placeholder="ör. Laney Cub-Super12, Fractal FM3"
-                    value={rig.customDevice}
-                    onChange={(e) => updateRig({ customDevice: e.target.value })}
-                  />
-                )}
-                <label className="block">
-                  <span className="hud-label mb-1.5 block">Gitar</span>
-                  <input
-                    className="hud-input"
-                    placeholder="ör. Fender Player Stratocaster"
-                    value={rig.guitar}
-                    onChange={(e) => updateRig({ guitar: e.target.value })}
-                  />
-                </label>
-                <label className="block">
-                  <span className="hud-label mb-1.5 block">Manyetikler</span>
-                  <select className="hud-input" value={rig.pickups} onChange={(e) => updateRig({ pickups: e.target.value })}>
-                    {PICKUP_CONFIGS.map((p) => (
-                      <option key={p.id} value={p.id}>
-                        {p.label}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block">
-                  <span className="hud-label mb-1.5 block">Pedallarım (isteğe bağlı)</span>
-                  <textarea
-                    className="hud-input min-h-16"
-                    placeholder="ör. Ibanez TS9, Boss DD-8"
-                    value={rig.pedals}
-                    onChange={(e) => updateRig({ pedals: e.target.value })}
-                  />
-                </label>
-                <p className="text-xs text-ink-mute">Ekipmanın bu bilgisayarda otomatik kaydedilir.</p>
-              </div>
-            )}
-          </section>
+          {rig && <RigPanel rig={rig} onChange={updateRig} />}
 
           <section className="hud-panel p-5">
-            <div className="mb-3 flex items-center gap-3">
-              <span className="hud-label text-accent">MEM</span>
-              <h2 className="text-sm font-bold uppercase tracking-wider">Kayıtlı tonlar</h2>
-              <span className="h-px flex-1 bg-line" />
-            </div>
+            <Head code="MEM" title="Kayıtlı tonlar" />
             {saved.length === 0 ? (
               <p className="text-sm text-ink-mute">Henüz kayıtlı ton yok.</p>
             ) : (
@@ -232,9 +186,7 @@ export default function Home() {
                     <button
                       onClick={() => setCurrent(s)}
                       className={`w-full rounded-lg border px-3 py-2 text-left text-sm transition ${
-                        current?.id === s.id
-                          ? "border-accent bg-accent-soft"
-                          : "border-transparent hover:border-line hover:bg-paper"
+                        current?.id === s.id ? "border-accent bg-accent-soft" : "border-transparent hover:border-line hover:bg-paper"
                       }`}
                     >
                       <div className="font-semibold text-ink">{s.result.song.title}</div>
@@ -250,33 +202,43 @@ export default function Home() {
         </aside>
 
         <div className="space-y-6">
+          {keyStatus && (needsKey || settingsOpen) && (
+            <SettingsPanel
+              status={keyStatus}
+              onSaved={(s) => {
+                setKeyStatus(s);
+                if (s.configured) setSettingsOpen(false);
+              }}
+              onClose={() => setSettingsOpen(false)}
+            />
+          )}
+
           <form onSubmit={findTone} className="hud-panel p-5">
-            <div className="mb-4 flex items-center gap-3">
-              <span className="hud-label text-accent">SRC</span>
-              <h2 className="text-sm font-bold uppercase tracking-wider">Şarkı</h2>
-              <span className="h-px flex-1 bg-line" />
-            </div>
+            <Head code="SRC" title="Şarkı" />
             <div className="grid gap-3 sm:grid-cols-2">
               <input
                 className="hud-input"
-                placeholder="Şarkı (ör. Comfortably Numb)"
+                placeholder="Şarkı (ör. Master of Puppets)"
                 value={song}
                 onChange={(e) => setSong(e.target.value)}
                 required
+                aria-label="Şarkı"
               />
               <input
                 className="hud-input"
-                placeholder="Sanatçı (ör. Pink Floyd)"
+                placeholder="Sanatçı (ör. Metallica)"
                 value={artist}
                 onChange={(e) => setArtist(e.target.value)}
+                aria-label="Sanatçı"
               />
             </div>
-            <div className="mt-3 flex flex-wrap items-center gap-2">
+            <div className="mt-3 flex flex-wrap items-center gap-2" role="group" aria-label="Bölüm">
               {PARTS.map((p) => (
                 <button
                   type="button"
                   key={p.id}
                   onClick={() => setPart(p.id)}
+                  aria-pressed={part === p.id}
                   className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
                     part === p.id
                       ? "border-ink bg-ink text-white"
@@ -290,13 +252,14 @@ export default function Home() {
             <div className="mt-3 flex flex-col gap-3 sm:flex-row">
               <input
                 className="hud-input"
-                placeholder="Bölüm detayı (isteğe bağlı) — ör. 2. solo, giriş riffi"
+                placeholder="Hangi bölüm? (isteğe bağlı) — ör. Kirk Hammett'ın 2. solosu, giriş riffi"
                 value={partDetail}
                 onChange={(e) => setPartDetail(e.target.value)}
+                aria-label="Bölüm detayı"
               />
               <button
                 type="submit"
-                disabled={loading || !song.trim()}
+                disabled={loading || !song.trim() || !hasGear || needsKey}
                 className="shrink-0 rounded-lg bg-accent px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-ink disabled:opacity-40"
               >
                 {loading ? "Aranıyor…" : "Tonu bul"}
@@ -305,16 +268,16 @@ export default function Home() {
           </form>
 
           {error && (
-            <div className="hud-panel border-bad/40 p-4 text-sm text-bad">
+            <div className="hud-panel border-bad/40 p-4 text-sm text-bad" role="alert">
               <span className="hud-label mr-2 text-bad">HATA</span>
               {error}
             </div>
           )}
 
           {loading && (
-            <div className="hud-panel hud-scan p-5">
+            <div className="hud-panel hud-scan p-5" aria-live="polite">
               <p className="mb-3 font-semibold text-ink">
-                Araştırılıyor… <span className="font-normal text-ink-soft">({rig && deviceLabel(rig)}) — 1–3 dakika sürebilir</span>
+                Araştırılıyor… <span className="font-normal text-ink-soft">— genelde 1–3 dakika sürer</span>
               </p>
               <ul className="max-h-72 space-y-1 overflow-y-auto font-mono text-xs">
                 {log.map((e, i) => (
@@ -348,9 +311,20 @@ export default function Home() {
           )}
 
           {!current && !loading && !error && (
-            <div className="hud-panel flex flex-col items-center gap-2 p-12 text-center">
-              <span className="hud-label">Bekleniyor</span>
-              <p className="text-ink-soft">Soldan ekipmanını seç, sonra bir şarkı ara.</p>
+            <div className="hud-panel p-8">
+              <p className="hud-label mb-3 text-center">Nasıl çalışır</p>
+              <ol className="mx-auto grid max-w-xl gap-3 text-ink-soft">
+                <li>
+                  <b className="font-mono text-accent">1.</b> Solda amfini, varsa prosesörünü, gitarını ve pedallarını yaz.
+                </li>
+                <li>
+                  <b className="font-mono text-accent">2.</b> Şarkıyı ve bölümü seç (ör. Solo, &quot;2. solo&quot;).
+                </li>
+                <li>
+                  <b className="font-mono text-accent">3.</b> ToneFinder stüdyo kaydında kullanılan gitarı, amfiyi, kabini,
+                  mikrofonu ve pedalları araştırır; sonra senin amfi, gitar ve pedal ayarlarını düğme düğme verir.
+                </li>
+              </ol>
             </div>
           )}
         </div>

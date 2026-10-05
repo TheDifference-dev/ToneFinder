@@ -1,7 +1,6 @@
 import { z } from "zod";
-import { DEVICES, PARTS, PICKUP_CONFIGS } from "./gear";
+import { PARTS, PICKUP_CONFIGS } from "./gear";
 
-const deviceIds = DEVICES.map((d) => d.id);
 const partIds = PARTS.map((p) => p.id);
 const pickupIds = PICKUP_CONFIGS.map((p) => p.id);
 
@@ -11,13 +10,15 @@ export const ToneRequestSchema = z.object({
   artist: z.string().trim().max(120).default(""),
   part: z.string().refine((v) => partIds.includes(v)),
   partDetail: z.string().trim().max(120).default(""),
-  rig: z.object({
-    deviceId: z.string().refine((v) => v === "custom" || deviceIds.includes(v)),
-    customDevice: z.string().max(120).default(""),
-    guitar: z.string().max(120).default(""),
-    pickups: z.string().refine((v) => pickupIds.includes(v)),
-    pedals: z.string().max(400).default(""),
-  }),
+  rig: z
+    .object({
+      amp: z.string().trim().max(120).default(""),
+      processor: z.string().trim().max(120).default(""),
+      guitar: z.string().trim().max(120).default(""),
+      pickups: z.string().refine((v) => pickupIds.includes(v)),
+      pedals: z.string().trim().max(600).default(""),
+    })
+    .refine((r) => r.amp || r.processor, { message: "Amfi ya da prosesör gerekli" }),
 });
 
 export type ToneRequest = z.infer<typeof ToneRequestSchema>;
@@ -64,14 +65,20 @@ export const ToneResultSchema = z.object({
     .array(
       z.object({
         block: z.string().describe("Blok türü: Noise Gate, Compressor, Drive, Fuzz, Amp, Cab, Mic, EQ, Modulation, Delay, Reverb..."),
-        device_model: z.string().describe("Kullanıcının cihazında seçilecek modelin ya da kullanıcının kendi pedalının tam adı"),
-        source: z.enum(["device", "user_pedal"]).describe("device: amfi/prosesör içindeki blok; user_pedal: kullanıcının sahip olduğu fiziksel pedal"),
+        device_model: z
+          .string()
+          .describe("Amfide kanal/ayar adı, prosesörde seçilecek modelin tam adı ya da kullanıcının pedalının adı"),
+        source: z
+          .enum(["amp", "processor", "pedal"])
+          .describe("amp: kullanıcının amfisi; processor: kullanıcının prosesöründeki blok; pedal: kullanıcının fiziksel pedalı"),
         emulates: z.string().describe("Bu modelin taklit ettiği gerçek ekipman ve orijinal rig'de neyin yerine geçtiği"),
         settings: z.array(Setting),
         note: z.string(),
       }),
     )
-    .describe("Kullanıcının cihazındaki sinyal zinciri, giriş→çıkış sırasıyla. Cab bloğunda mikrofon modeli, pozisyon ve mesafe ayar olarak yer almalı."),
+    .describe(
+      "Kullanıcının ekipmanıyla sinyal zinciri, gitardan hoparlöre sırasıyla: pedallar, prosesör blokları ve amfi. Prosesörde cab bloğu varsa mikrofon modeli, pozisyon ve mesafe ayar olarak yer almalı.",
+    ),
   guitar: z.object({
     pickup: z.string().describe("Kullanıcının gitarında seçilecek manyetik pozisyonu"),
     volume: z.string(),

@@ -17,7 +17,11 @@ const { HELIX_REFERENCE } = await import(join(root, "lib/devices/helix.ts"));
 const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
 
 const data = {
-  devices: gear.DEVICES,
+  // RegExp JSON'a çevrilemez; sayfada kaynağından yeniden kurulur
+  devices: gear.DEVICES.map((d) => ({ ...d, match: d.match.source })),
+  ampSuggestions: gear.AMP_SUGGESTIONS,
+  processorSuggestions: gear.PROCESSOR_SUGGESTIONS,
+  guitars: gear.GUITAR_SUGGESTIONS,
   pickups: gear.PICKUP_CONFIGS,
   parts: gear.PARTS,
   references: {
