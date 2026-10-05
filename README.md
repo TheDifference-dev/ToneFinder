@@ -56,6 +56,24 @@ güncellense de silinmez. (`ANTHROPIC_API_KEY` ortam değişkeni varsa o kullan�
 aboneliğini kullanır, ayrı ödeme gerekmez. İnternette arama yapmaz, Claude'un kendi bilgisini ve
 uygulamadaki doğrulanmış model listelerini kullanır. Güncellemek için `npm run build:artifact`.
 
+## Amfi ve gitar kataloğu
+
+Uygulama, yazdığın amfiyi ve gitarı kataloglarla eşleştirir ve yapay zekâya ayrıntılı profilini verir:
+
+- **Amfiler** (`lib/amps.ts`): Boss (Dual Cube LX, Katana Gen 3 / MkII, Cube Street II, Nextone),
+  Roland (JC-120, Blues Cube), Marshall (1959 Plexi, JTM45, JCM800, Silver Jubilee, JVM, DSL, Origin,
+  MG Gold, CODE), Fender (Deluxe/Twin/Princeton Reverb, '59 Bassman, Blues Junior, Hot Rod, Mustang,
+  Champion, Frontman), Vox (AC30, AC15/AC10/AC4, Valvetronix VT-X, Pathfinder), Orange (Rockerverb,
+  Terror, TH30, OR15/Dual Terror, Crush), Mesa/Boogie (Mark V, Mark IV/IIC+, Rectifier), Peavey
+  (6505/5150, Classic 30), EVH (5150III), Blackstar (HT, ID:Core, St. James), Yamaha (THR).
+  Her biri için kanallar, modlar, kontroller, ses karakteri ve monitör olarak kullanım notu.
+  Güncel seriler ve tonda önemli klasik modeller kapsanır; listede olmayan amfiler araştırma sırasında bulunur.
+- **Amfi kullanım şekli**: amfi olarak / monitör (Stereo In, ton prosesörden) / prosesör amfinin önünde /
+  4 kablo. Ton bu seçime göre amfide ya da prosesörde kurulur.
+- **Gitarlar** (`lib/guitars.ts`): Fender, Squier, Gibson, Epiphone, Ibanez, PRS, ESP/LTD, Jackson,
+  Schecter, Gretsch, Yamaha; modellerin manyetik dizilimi ve ton karakteri, manyetik türlerinin
+  (single-coil, humbucker, P-90, aktif, Filter'Tron) profili ve seçici konumları.
+
 ## Doğrulanmış model listeleri
 
 Prosesör ve modelleme amfilerinde model adlarının doğru olması için bazı cihazların resmî
@@ -88,7 +106,9 @@ npm run build:artifact
 | `app/api/tone/route.ts` | Araştırma API'si; ilerlemeyi NDJSON olarak akıtır |
 | `app/api/settings/route.ts` | API anahtarını doğrulayıp yerel ayar dosyasına kaydeder |
 | `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
-| `lib/gear.ts` | Ekipman önerileri, cihaz eşleştirme, manyetik tahmini |
+| `lib/gear.ts` | Prosesör kataloğu, ekipman yapısı, amfi kullanım şekilleri |
+| `lib/amps.ts` | Amfi kataloğu (kanallar, modlar, kontroller, karakter, monitör notu) |
+| `lib/guitars.ts` | Gitar kataloğu, manyetik profilleri, seçici konumları, manyetik tahmini |
 | `lib/devices/` | Doğrulanmış model listeleri |
 | `lib/sources.ts` | Araştırmada öncelik verilecek siteler |
 | `scripts/launcher.mjs` | Masaüstü başlatıcısı: güncelle → kur/derle → başlat → uygulama penceresi |

@@ -202,8 +202,12 @@ textarea.input { min-height: 64px; resize: vertical; }
         <div class="head"><span class="label code">RIG</span><h2 id="rigTitle">Ekipmanım</h2><span class="rule"></span></div>
         <div class="stack">
           <label class="field"><span class="label">Amfi</span>
-            <input class="input" id="amp" list="ampList" placeholder="ör. Marshall DSL40CR, Boss Katana 50">
+            <input class="input" id="amp" list="ampList" placeholder="ör. Boss Dual Cube LX, Marshall DSL40CR">
             <span class="hint" id="ampHint"></span>
+          </label>
+          <label class="field"><span class="label">Amfiyi nasıl kullanıyorsun?</span>
+            <select class="input" id="ampMode"></select>
+            <span class="hint" id="modeHint"></span>
           </label>
           <label class="field"><span class="label">Gitar prosesörü / multi-efekt (varsa)</span>
             <input class="input" id="processor" list="procList" placeholder="ör. HeadRush Core — yoksa boş bırak">
@@ -211,6 +215,7 @@ textarea.input { min-height: 64px; resize: vertical; }
           </label>
           <label class="field"><span class="label">Gitar modeli</span>
             <input class="input" id="guitar" list="guitarList" placeholder="ör. Fender Player Stratocaster">
+            <span class="hint ok" id="guitarHint"></span>
           </label>
           <datalist id="ampList"></datalist><datalist id="procList"></datalist><datalist id="guitarList"></datalist>
           <label class="field"><span class="label">Manyetikler</span>
@@ -297,11 +302,14 @@ const store = {
 // Kullanıcı amfisini, prosesörünü, gitarını ve pedallarını serbest metinle yazar;
 // katalog yalnızca öneri ve doğrulanmış model listesi eşleştirmesi içindir.
 const DEVICES = DATA.devices.map((d) => ({ ...d, match: new RegExp(d.match, "i") }));
-const RIG_FIELDS = ["amp", "processor", "guitar", "pickups", "pedals"];
+const RIG_FIELDS = ["amp", "ampMode", "processor", "guitar", "pickups", "pedals"];
+const AMPS = DATA.amps.map((a) => ({ ...a, match: new RegExp(a.match, "i") }));
+const GUITARS = DATA.guitars.map((g) => ({ ...g, match: new RegExp(g.match, "i") }));
 const rig = (() => {
   const raw = store.get("tf.rig", {});
-  const r = { amp: "", processor: "", guitar: "", pickups: "SSS", pedals: "" };
+  const r = { amp: "", ampMode: "amp", processor: "", guitar: "", pickups: "SSS", pedals: "" };
   for (const k of RIG_FIELDS) if (typeof raw[k] === "string") r[k] = raw[k];
+  if (!DATA.ampModes.some((m) => m.id === r.ampMode)) r.ampMode = "amp";
   if (!raw.amp && !raw.processor && raw.deviceId) {
     // eski sürümün { deviceId, customDevice } kaydı
     const d = DEVICES.find((x) => x.id === raw.deviceId);
@@ -317,23 +325,30 @@ function matchDevice(text) {
   if (!t || /^(yok|none|-)$/i.test(t)) return undefined;
   return DEVICES.find((d) => d.match.test(t));
 }
+function matchAmp(text) {
+  const t = (text || "").trim();
+  return t ? AMPS.find((a) => a.match.test(t)) : undefined;
+}
+function matchGuitar(text) {
+  const t = (text || "").trim();
+  if (!t) return undefined;
+  const branded = GUITARS.filter((g) => t.toLowerCase().includes(g.brandKey));
+  return branded.find((g) => g.match.test(t)) || GUITARS.find((g) => g.match.test(t));
+}
 function guessPickups(guitar) {
   const g = guitar.toLowerCase();
-  const exact = DATA.guitars.find((s) => s.name.toLowerCase() === g);
-  if (exact) return exact.pickups;
   if (/emg|fishman|active|aktif/.test(g)) return "active";
-  if (/hss/.test(g)) return "HSS";
-  if (/hsh|ibanez rg|soloist/.test(g)) return "HSH";
-  if (/p-?90|junior|special/.test(g)) return "P90";
-  if (/strat/.test(g)) return "SSS";
-  if (/tele/.test(g)) return "SS";
-  if (/les paul|\bsg\b|335|prs|explorer|flying v|firebird/.test(g)) return "HH";
-  return undefined;
+  if (/\bhss\b/.test(g)) return "HSS";
+  if (/\bhsh\b/.test(g)) return "HSH";
+  if (/\bhh\b/.test(g)) return "HH";
+  if (/p-?90/.test(g)) return "P90";
+  return matchGuitar(guitar)?.pickups;
 }
 function fillSelects() {
-  for (const a of DATA.ampSuggestions) $("ampList").append(h("option", { value: a }));
+  for (const a of AMPS) $("ampList").append(h("option", { value: a.name }));
+  for (const m of DATA.ampModes) $("ampMode").append(h("option", { value: m.id }, m.label));
   for (const p of DATA.processorSuggestions) $("procList").append(h("option", { value: p }));
-  for (const g of DATA.guitars) $("guitarList").append(h("option", { value: g.name }));
+  for (const g of GUITARS) $("guitarList").append(h("option", { value: g.name }));
   for (const p of DATA.pickups) $("pickups").append(h("option", { value: p.id }, p.label));
   for (const p of DATA.parts) {
     $("parts").append(h("button", { type: "button", class: "part", "data-id": p.id, "aria-pressed": String(p.id === part), onclick: () => setPart(p.id) }, p.label));
@@ -355,7 +370,17 @@ function hint(el, text) {
 }
 function syncRig() {
   for (const k of RIG_FIELDS) if ($(k).value !== rig[k]) $(k).value = rig[k];
-  hint($("ampHint"), rig.amp);
+  const amp = matchAmp(rig.amp);
+  if (amp) {
+    $("ampHint").hidden = false;
+    $("ampHint").className = "hint ok";
+    $("ampHint").textContent = `✓ Katalogda: ${amp.name} — kanalları ve modları biliniyor`;
+  } else hint($("ampHint"), rig.amp);
+  $("modeHint").textContent = rig.ampMode === "monitor" && amp?.monitor ? amp.monitor : "";
+  $("modeHint").hidden = !$("modeHint").textContent;
+  const gtr = matchGuitar(rig.guitar);
+  $("guitarHint").textContent = gtr ? `✓ Katalogda: ${gtr.name} — ${gtr.detail}` : "";
+  $("guitarHint").hidden = !gtr;
   hint($("procHint"), rig.processor);
   $("chipRig").textContent = rigLabel();
   $("chipPu").textContent = rig.pickups;
@@ -400,8 +425,8 @@ function buildPrompt(req) {
     "You are a meticulous guitar tone expert and studio engineer. Recreate a song's guitar tone on the user's own gear, whatever amp, modeler, multi-FX, guitar and pedals they have. You have no web access: work from what you know, and be honest about certainty.",
     "",
     "1) Original rig for this exact song and part (if a specific solo or section is named, that one): guitar and the pickup used, amp(s) with channel and known settings, cabinet and speakers, cab mics with position and distance, pedals in order with known settings, tuning, recording context, tempo (BPM) and key. Label every gear claim confirmed (well documented), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. Never present a guess as fact.",
-    "2) Rebuild that tone with the user's own gear: their amp, their processor or multi-FX if they have one, and their pedals. Decide how the pieces work together (e.g. processor into the amp's clean channel or effects return, or the amp's own drive with pedals in front) and say so. If a <device_reference> is given, it is the source of truth: use only those exact model names and the parameters it lists. Without a reference, use channel, model and knob names you are sure exist on that gear; when unsure, name the closest type generically and say so in the note. Cover cab and mic as far as the gear allows and say how to approximate what it can't set (e.g. mic distance).",
-    "3) Compensate for the guitar: compare the original guitar/pickups with the user's (e.g. Les Paul humbuckers vs Strat single-coils), choose the selector position, and adjust gain, mids, treble, boost and noise gate accordingly; list each adjustment with its reason. For each pedal the user owns, say whether and where to use it and exactly how to set it.",
+    "2) Rebuild that tone with the user's own gear: their amp, their processor or multi-FX if they have one, and their pedals. Decide how the pieces work together (e.g. processor into the amp's clean channel or effects return, or the amp's own drive with pedals in front) and say so. If a <device_reference> or <user_amp_profile> is given, it is the source of truth: use only those exact model, channel, mode and knob names. Follow 'How the amp is used' strictly: it decides whether the core tone comes from the amp or from the processor. Without a reference, use channel, model and knob names you are sure exist on that gear; when unsure, name the closest type generically and say so in the note. Cover cab and mic as far as the gear allows and say how to approximate what it can't set (e.g. mic distance).",
+    "3) Compensate for the guitar (use the user's guitar and pickup profiles when given): compare the original guitar/pickups with the user's (e.g. Les Paul humbuckers vs Strat single-coils), choose the selector position, and adjust gain, mids, treble, boost and noise gate accordingly; list each adjustment with its reason. For each pedal the user owns, say whether and where to use it and exactly how to set it.",
     "Give concrete starting values for every block; sync delay times to the tempo.",
     "",
     "Write every prose field in Turkish; keep gear model names and knob/parameter names exactly as they appear on the device (usually English).",
@@ -415,9 +440,13 @@ function buildPrompt(req) {
     gear("User's amp", req.rig.amp),
     gear("User's processor / multi-FX", req.rig.processor),
     `User's guitar: ${req.rig.guitar || "not given"}`,
+    `How the amp is used: ${DATA.ampModes.find((m) => m.id === req.rig.ampMode)?.prompt || req.rig.ampMode}`,
     `Pickup configuration: ${pu}`,
     `User's pedals: ${req.rig.pedals.split(/\n|,/).map((p) => p.trim()).filter(Boolean).join("; ") || "none"}`,
     "</request>",
+    ...(matchAmp(req.rig.amp) ? [`\n<user_amp_profile>\n${matchAmp(req.rig.amp).profile}\n</user_amp_profile>`] : []),
+    ...(matchGuitar(req.rig.guitar) ? [`\n<user_guitar_profile>\n${matchGuitar(req.rig.guitar).profile}\n</user_guitar_profile>`] : []),
+    `\n<user_pickups_profile>\n${DATA.pickupProfiles[req.rig.pickups] || ""}\n</user_pickups_profile>`,
     ...refs.map((r) => `\n<device_reference>\n${r}\n</device_reference>`),
   ].join("\n");
 }

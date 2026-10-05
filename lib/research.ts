@@ -2,7 +2,9 @@ import "server-only";
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { deviceReference } from "./devices";
-import { matchDevice, PARTS, PICKUP_CONFIGS } from "./gear";
+import { ampProfileText, matchAmp } from "./amps";
+import { AMP_MODES, matchDevice, PARTS, PICKUP_CONFIGS } from "./gear";
+import { guitarProfileText, matchGuitar, pickupLayoutText } from "./guitars";
 import { ToneResultSchema, type ToneEvent, type ToneRequest, type ToneResult } from "./schema";
 import { PREFERRED_SOURCES } from "./sources";
 
@@ -30,10 +32,10 @@ Search in English. Check these preferred sites first (fetch their pages directly
 ${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
 For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the artist's rig in that era) or guess. When sources disagree, say so.
 
-PHASE 2 - Rebuild that tone with the user's own gear: their amp, their processor or multi-FX if they have one, and their pedals. Research what the user's gear can do: the amp's real channels, knobs and voicing; for a modeling amp or processor, its official model list, manual or a reliable forum list stating which real amp, pedal, cab and microphone each model is based on. If a verified model reference is provided, use it as the source of truth for model names. Decide how the pieces work together (e.g. processor into the amp's clean channel or effects return, or the amp's own drive with pedals in front) and say so. Use exact model, channel and knob names as they appear on the gear, and only parameters it really has. Cover the cab and mic as far as the gear allows; when it can't set something (e.g. mic distance), say how to approximate it.
+PHASE 2 - Rebuild that tone with the user's own gear: their amp, their processor or multi-FX if they have one, and their pedals. Research what the user's gear can do: the amp's real channels, knobs and voicing; for a modeling amp or processor, its official model list, manual or a reliable forum list stating which real amp, pedal, cab and microphone each model is based on. If a verified model reference or a user amp profile is provided, use it as the source of truth for model, channel, mode and knob names. Follow "How the amp is used" strictly: it decides whether the core tone comes from the amp or from the processor. Decide how the pieces work together (e.g. processor into the amp's clean channel or effects return, or the amp's own drive with pedals in front) and say so. Use exact model, channel and knob names as they appear on the gear, and only parameters it really has. Cover the cab and mic as far as the gear allows; when it can't set something (e.g. mic distance), say how to approximate it.
 
 PHASE 3 - Compensate for the guitar and use the user's pedals.
-- Compare the original guitar and pickups with the user's (e.g. Les Paul humbuckers vs. Strat single-coils). Choose the pickup selector position on the user's guitar that gets closest, and adjust for the difference in output and frequency response: typically more gain and mids, less treble, a boost or overdrive in front, and a noise gate for single-coil hum when going from humbuckers to single-coils; the reverse when going from single-coils to humbuckers. State each adjustment and why.
+- Use the user's guitar and pickup profiles when given. Compare the original guitar and pickups with the user's (e.g. Les Paul humbuckers vs. Strat single-coils). Choose the pickup selector position on the user's guitar that gets closest, and adjust for the difference in output and frequency response: typically more gain and mids, less treble, a boost or overdrive in front, and a noise gate for single-coil hum when going from humbuckers to single-coils; the reverse when going from single-coils to humbuckers. State each adjustment and why.
 - For each pedal the user owns, say whether to use it, where it goes in the chain and exactly how to set every knob; if it shouldn't be used, say so.
 
 Finish with concrete starting settings for every block (0-10 knob values as plain numbers; times with units, synced to the song's tempo where relevant), guitar settings (selector position, volume and tone knobs), playing tips, and notes on any compromises. List every source URL you relied on.`;
@@ -49,6 +51,8 @@ function gearLine(label: string, text: string): string[] {
 function describeRequest(req: ToneRequest): string {
   const part = PARTS.find((p) => p.id === req.part)?.label ?? req.part;
   const pickups = PICKUP_CONFIGS.find((p) => p.id === req.rig.pickups)?.label ?? req.rig.pickups;
+  const amp = matchAmp(req.rig.amp);
+  const guitar = matchGuitar(req.rig.guitar);
   const references = [req.rig.processor, req.rig.amp]
     .map((t) => matchDevice(t))
     .map((d) => d && deviceReference(d.id))
@@ -62,9 +66,16 @@ function describeRequest(req: ToneRequest): string {
     "User's gear:",
     ...gearLine("Amp", req.rig.amp),
     ...gearLine("Processor / multi-FX", req.rig.processor),
+    `- How the amp is used: ${AMP_MODES.find((m) => m.id === req.rig.ampMode)?.prompt ?? req.rig.ampMode}`,
     `- Guitar: ${req.rig.guitar || "not given"}`,
     `- Pickup configuration: ${pickups}`,
     `- Pedals: ${req.rig.pedals ? req.rig.pedals.split(/\n|,/).map((p) => p.trim()).filter(Boolean).join("; ") : "none"}`,
+    ...(amp ? ["", "<user_amp_profile>", ampProfileText(amp), "</user_amp_profile>"] : []),
+    ...(guitar ? ["", "<user_guitar_profile>", guitarProfileText(guitar), "</user_guitar_profile>"] : []),
+    "",
+    "<user_pickups_profile>",
+    pickupLayoutText(req.rig.pickups),
+    "</user_pickups_profile>",
     ...references.flatMap((r) => ["", "<device_reference>", r, "</device_reference>"]),
   ].join("\n");
 }

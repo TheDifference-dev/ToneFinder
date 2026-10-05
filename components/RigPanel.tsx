@@ -1,12 +1,31 @@
 "use client";
 
-import { AMP_SUGGESTIONS, GUITAR_SUGGESTIONS, guessPickups, matchDevice, PICKUP_CONFIGS, PROCESSOR_SUGGESTIONS, type UserRig } from "@/lib/gear";
+import { AMP_NAMES, matchAmp } from "@/lib/amps";
+import { AMP_MODES, matchDevice, PICKUP_CONFIGS, PROCESSOR_SUGGESTIONS, type AmpMode, type UserRig } from "@/lib/gear";
+import { GUITAR_NAMES, guessPickups, matchGuitar } from "@/lib/guitars";
+
+function Hint({ ok, children }: { ok: boolean; children: React.ReactNode }) {
+  return <span className={`mt-1.5 block text-xs ${ok ? "text-ok" : "text-ink-mute"}`}>{children}</span>;
+}
 
 function DeviceHint({ text }: { text: string }) {
   if (!text.trim() || /^yok$/i.test(text.trim())) return null;
   const device = matchDevice(text);
-  if (device?.verified) return <span className="mt-1.5 block text-xs text-ok">✓ Doğrulanmış model listesi kullanılacak</span>;
-  return <span className="mt-1.5 block text-xs text-ink-mute">Kanalları ve düğmeleri araştırma sırasında bulunur</span>;
+  if (device?.verified) return <Hint ok>✓ Doğrulanmış model listesi kullanılacak</Hint>;
+  return <Hint ok={false}>Model listesi araştırma sırasında bulunur</Hint>;
+}
+
+function AmpHint({ text }: { text: string }) {
+  if (!text.trim()) return null;
+  const amp = matchAmp(text);
+  if (amp) return <Hint ok>✓ Katalogda: {amp.brand} {amp.model} — kanalları ve modları biliniyor</Hint>;
+  return <DeviceHint text={text} />;
+}
+
+function GuitarHint({ text }: { text: string }) {
+  const g = text.trim() ? matchGuitar(text) : undefined;
+  if (!g) return null;
+  return <Hint ok>✓ Katalogda: {g.brand} {g.model} — {g.pickupDetail}</Hint>;
 }
 
 export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Partial<UserRig>) => void }) {
@@ -26,16 +45,30 @@ export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Pa
           <input
             className="hud-input"
             list="amp-suggestions"
-            placeholder="ör. Marshall DSL40CR, Boss Katana 50"
+            placeholder="ör. Boss Dual Cube LX, Marshall DSL40CR"
             value={rig.amp}
             onChange={(e) => onChange({ amp: e.target.value })}
           />
           <datalist id="amp-suggestions">
-            {AMP_SUGGESTIONS.map((a) => (
+            {AMP_NAMES.map((a) => (
               <option key={a} value={a} />
             ))}
           </datalist>
-          <DeviceHint text={rig.amp} />
+          <AmpHint text={rig.amp} />
+        </label>
+
+        <label className="block">
+          <span className="hud-label mb-1.5 block">Amfiyi nasıl kullanıyorsun?</span>
+          <select className="hud-input" value={rig.ampMode} onChange={(e) => onChange({ ampMode: e.target.value as AmpMode })}>
+            {AMP_MODES.map((m) => (
+              <option key={m.id} value={m.id}>
+                {m.label}
+              </option>
+            ))}
+          </select>
+          {rig.ampMode === "monitor" && matchAmp(rig.amp)?.monitor && (
+            <span className="mt-1.5 block rounded-md bg-accent-soft px-2.5 py-1.5 text-xs text-ink">{matchAmp(rig.amp)?.monitor}</span>
+          )}
         </label>
 
         <label className="block">
@@ -69,10 +102,11 @@ export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Pa
             }}
           />
           <datalist id="guitar-suggestions">
-            {GUITAR_SUGGESTIONS.map((g) => (
-              <option key={g.name} value={g.name} />
+            {GUITAR_NAMES.map((g) => (
+              <option key={g} value={g} />
             ))}
           </datalist>
+          <GuitarHint text={rig.guitar} />
         </label>
 
         <label className="block">

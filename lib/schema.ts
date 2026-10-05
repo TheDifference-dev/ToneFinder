@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { PARTS, PICKUP_CONFIGS } from "./gear";
+import { AMP_MODES, PARTS, PICKUP_CONFIGS } from "./gear";
 
 const partIds = PARTS.map((p) => p.id);
 const pickupIds = PICKUP_CONFIGS.map((p) => p.id);
@@ -14,6 +14,7 @@ export const ToneRequestSchema = z.object({
     .object({
       amp: z.string().trim().max(120).default(""),
       processor: z.string().trim().max(120).default(""),
+      ampMode: z.enum(AMP_MODES.map((m) => m.id) as [string, ...string[]]).default("amp"),
       guitar: z.string().trim().max(120).default(""),
       pickups: z.string().refine((v) => pickupIds.includes(v)),
       pedals: z.string().trim().max(600).default(""),

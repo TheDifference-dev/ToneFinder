@@ -1,5 +1,6 @@
-// Ekipman kataloğu: kullanıcı amfisini, prosesörünü, gitarını ve pedallarını serbest
-// metinle yazar; buradaki listeler yalnızca öneri (autocomplete) ve eşleştirme içindir.
+// Prosesör / modelleme cihazı kataloğu ve ekipman yapısı. Amfi kataloğu lib/amps.ts,
+// gitar kataloğu lib/guitars.ts içindedir; kullanıcı her şeyi serbest metinle yazar,
+// kataloglar yalnızca öneri (autocomplete) ve eşleştirme içindir.
 // `controls` alanı, yapay zekânın ayarları cihazın gerçek düğme adlarıyla vermesi için
 // prompt'a eklenir; `match` kullanıcının yazdığı adı kataloğa bağlar.
 
@@ -43,55 +44,12 @@ export const DEVICES: Device[] = [
   { id: "mesa-tube", match: /mesa|boogie|rectifier|mark ?(iv|v|vii)/i, name: "Mesa/Boogie (Mark / Rectifier)", category: "tube-amp", controls: "Channel/Mode, Gain, Treble, Mid, Bass, Presence, Master, Graphic EQ (Mark)" },
 ];
 
-/** Amfi alanı için öneriler (modelleme ve lambalı amfiler) */
-export const AMP_SUGGESTIONS = [
-  "Boss Katana 50 Gen 3", "Boss Katana 100 MkII", "Fender Mustang LT25", "Fender Mustang GTX50", "Positive Grid Spark 40",
-  "Yamaha THR30II", "Vox VT20X", "NUX Mighty Plug Pro", "Marshall DSL40CR", "Marshall JCM800 2203", "Marshall Origin 20C",
-  "Fender Blues Junior IV", "Fender Hot Rod Deluxe IV", "Fender Twin Reverb", "Vox AC30C2", "Vox AC15C1",
-  "Orange Rockerverb 50", "Orange Crush 35RT", "Mesa/Boogie Mark V", "Mesa/Boogie Dual Rectifier", "Peavey 6505+",
-  "EVH 5150III", "Laney Cub-Super12", "Blackstar HT-5R", "Blackstar ID:Core 40", "Hughes & Kettner Black Spirit 200",
-];
-
 /** Prosesör / multi-efekt alanı için öneriler */
 export const PROCESSOR_SUGGESTIONS = [
   "Yok", "HeadRush Core", "HeadRush Prime", "HeadRush Flex Prime", "HeadRush MX5", "Line 6 Helix", "Line 6 HX Stomp",
   "Line 6 POD Go", "Neural DSP Quad Cortex", "Fractal Audio FM3", "Kemper Profiler", "Boss GX-100", "Boss GT-1000",
   "Zoom G6", "Mooer GE300", "Valeton GP-200", "Tone Master Pro",
 ];
-
-/** Gitar alanı için öneriler ve tipik manyetik dizilimleri */
-export const GUITAR_SUGGESTIONS: { name: string; pickups: string }[] = [
-  { name: "Fender Stratocaster", pickups: "SSS" },
-  { name: "Fender Player Stratocaster HSS", pickups: "HSS" },
-  { name: "Squier Classic Vibe Stratocaster", pickups: "SSS" },
-  { name: "Fender Telecaster", pickups: "SS" },
-  { name: "Gibson Les Paul Standard", pickups: "HH" },
-  { name: "Epiphone Les Paul Standard", pickups: "HH" },
-  { name: "Gibson SG Standard", pickups: "HH" },
-  { name: "Gibson ES-335", pickups: "HH" },
-  { name: "Gibson Les Paul Junior", pickups: "P90" },
-  { name: "PRS SE Custom 24", pickups: "HH" },
-  { name: "Ibanez RG", pickups: "HSH" },
-  { name: "Jackson Soloist", pickups: "HSH" },
-  { name: "ESP LTD EC-1000 (EMG)", pickups: "active" },
-  { name: "Schecter Hellraiser (EMG)", pickups: "active" },
-  { name: "Yamaha Pacifica 112V", pickups: "HSS" },
-];
-
-/** Gitar adından tipik manyetik dizilimini tahmin et (kullanıcı değiştirebilir) */
-export function guessPickups(guitar: string): string | undefined {
-  const g = guitar.toLowerCase();
-  const exact = GUITAR_SUGGESTIONS.find((s) => s.name.toLowerCase() === g);
-  if (exact) return exact.pickups;
-  if (/emg|fishman|active|aktif/.test(g)) return "active";
-  if (/hss/.test(g)) return "HSS";
-  if (/hsh|ibanez rg|soloist/.test(g)) return "HSH";
-  if (/p-?90|junior|special/.test(g)) return "P90";
-  if (/strat/.test(g)) return "SSS";
-  if (/tele/.test(g)) return "SS";
-  if (/les paul|\bsg\b|335|prs|explorer|flying v|firebird/.test(g)) return "HH";
-  return undefined;
-}
 
 export const PICKUP_CONFIGS = [
   { id: "SSS", label: "SSS (3 single-coil, Strat)" },
@@ -101,7 +59,39 @@ export const PICKUP_CONFIGS = [
   { id: "P90", label: "P-90" },
   { id: "HSH", label: "HSH" },
   { id: "active", label: "Aktif manyetik (EMG / Fishman)" },
+  { id: "HS", label: "HS (köprüde humbucker, sapta single-coil)" },
+  { id: "FT", label: "Filter'Tron (Gretsch)" },
 ];
+
+/** Kullanıcının amfisini nasıl kullandığı; tonun nerede kurulacağını belirler */
+export const AMP_MODES = [
+  {
+    id: "amp",
+    label: "Amfi olarak (kanal, gain, EQ)",
+    prompt:
+      "The user plays through the amp itself: build the core tone with the amp's own channels, gain and EQ; pedals and the processor (if any) add drives and effects in front.",
+  },
+  {
+    id: "monitor",
+    label: "Monitör / Stereo In (ton prosesörden)",
+    prompt:
+      "The user uses the amp only as a clean (stereo) monitor for the processor. The whole tone (amp model, cab/IR with mic, drives, effects) must come from the processor with cab simulation ON, in stereo where it helps. Set the amp to its stereo-in / flat / clean mode with EQ neutral and its own effects off; give amp settings only for that, never a gain or drive setting on the amp.",
+  },
+  {
+    id: "front",
+    label: "Prosesör amfinin önünde",
+    prompt:
+      "The processor goes into the amp's normal input like a pedalboard: the amp's channel provides the base tone (clean or lightly driven); in the processor use drives, wah, modulation and time effects, with no cab simulation and normally no full amp model.",
+  },
+  {
+    id: "loop",
+    label: "Prosesör efekt döngüsünde (4 kablo)",
+    prompt:
+      "Four-cable method: processor drives/wah/compressor before the amp's input, modulation/delay/reverb in the amp's effects loop; the amp's preamp channel provides the main distortion; no cab simulation in the processor.",
+  },
+] as const;
+
+export type AmpMode = (typeof AMP_MODES)[number]["id"];
 
 export const PARTS = [
   { id: "lead", label: "Solo" },
@@ -116,6 +106,8 @@ export interface UserRig {
   amp: string;
   /** Gitar prosesörü / multi-efekt, isteğe bağlı (ör. "HeadRush Core") */
   processor: string;
+  /** Amfinin kullanım şekli (amfi / monitör / önünde / 4 kablo) */
+  ampMode: AmpMode;
   guitar: string;
   pickups: string;
   /** Her satıra bir pedal */
@@ -125,6 +117,7 @@ export interface UserRig {
 export const DEFAULT_RIG: UserRig = {
   amp: "",
   processor: "",
+  ampMode: "amp",
   guitar: "",
   pickups: "SSS",
   pedals: "",
@@ -144,9 +137,10 @@ export function matchDevice(text: string): Device | undefined {
 /** Eski sürümdeki { deviceId, customDevice } kaydını yeni yapıya çevir */
 export function migrateRig(raw: Record<string, unknown>): UserRig {
   const rig = { ...DEFAULT_RIG } as UserRig;
-  for (const k of Object.keys(DEFAULT_RIG) as (keyof UserRig)[]) {
+  for (const k of ["amp", "processor", "guitar", "pickups", "pedals"] as const) {
     if (typeof raw[k] === "string") rig[k] = raw[k] as string;
   }
+  if (AMP_MODES.some((m) => m.id === raw.ampMode)) rig.ampMode = raw.ampMode as AmpMode;
   if (!raw.amp && !raw.processor && typeof raw.deviceId === "string") {
     const old = raw.deviceId === "custom" ? String(raw.customDevice ?? "") : (findDevice(raw.deviceId)?.name ?? "");
     const d = findDevice(raw.deviceId);

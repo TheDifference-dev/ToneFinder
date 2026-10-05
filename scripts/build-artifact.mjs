@@ -12,6 +12,8 @@ const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 // lib/*.ts dosyaları import içermeyen saf veri modülleri; Node'un tip ayıklamasıyla
 // doğrudan yüklenebilirler.
 const gear = await import(join(root, "lib/gear.ts"));
+const amps = await import(join(root, "lib/amps.ts"));
+const guitars = await import(join(root, "lib/guitars.ts"));
 const { HEADRUSH_REFERENCE } = await import(join(root, "lib/devices/headrush.ts"));
 const { HELIX_REFERENCE } = await import(join(root, "lib/devices/helix.ts"));
 const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
@@ -19,9 +21,24 @@ const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
 const data = {
   // RegExp JSON'a çevrilemez; sayfada kaynağından yeniden kurulur
   devices: gear.DEVICES.map((d) => ({ ...d, match: d.match.source })),
-  ampSuggestions: gear.AMP_SUGGESTIONS,
   processorSuggestions: gear.PROCESSOR_SUGGESTIONS,
-  guitars: gear.GUITAR_SUGGESTIONS,
+  ampModes: gear.AMP_MODES,
+  // Amfi ve gitar profilleri yapay zekâya verilecek metin olarak önceden hazırlanır
+  amps: amps.AMPS.map((a) => ({
+    name: `${a.brand} ${a.model}`,
+    match: a.match.source,
+    profile: amps.ampProfileText(a),
+    monitor: a.monitor ?? "",
+  })),
+  guitars: guitars.GUITARS.map((g) => ({
+    name: `${g.brand} ${g.model}`,
+    brandKey: g.brand.split(" ")[0].toLowerCase(),
+    match: g.match.source,
+    pickups: g.pickups,
+    detail: g.pickupDetail,
+    profile: guitars.guitarProfileText(g),
+  })),
+  pickupProfiles: Object.fromEntries(gear.PICKUP_CONFIGS.map((p) => [p.id, guitars.pickupLayoutText(p.id)])),
   pickups: gear.PICKUP_CONFIGS,
   parts: gear.PARTS,
   references: {
