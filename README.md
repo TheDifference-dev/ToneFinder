@@ -87,6 +87,12 @@ listeleri uygulamaya gömülüdür (`lib/devices/`):
 
 Diğer amfi ve prosesörler için kanal, model ve düğme bilgileri araştırma sırasında web'den bulunur.
 
+## Claude chat'te devam etmek
+
+`docs/claude-chat/` klasörü, projeyi claude.ai'de (Claude chat) sürdürmek için hazırlanmış devir
+kitidir: proje özeti ve kararlar (`00-BASLA-BURADAN.md`), uygulamanın araştırma talimatı, amfi/gitar
+katalogları, cihaz model listeleri ve ekran görüntüleri. Kataloglar değişince `npm run build:chatkit`.
+
 ## Geliştirme
 
 ```bash

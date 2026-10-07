@@ -9,7 +9,8 @@
     "lint": "tsc --noEmit",
     "build:artifact": "node scripts/build-artifact.mjs",
     "desktop": "node scripts/launcher.mjs",
-    "shortcut": "node scripts/create-shortcut.mjs"
+    "shortcut": "node scripts/create-shortcut.mjs",
+    "build:chatkit": "node scripts/build-chat-kit.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.131.0",
