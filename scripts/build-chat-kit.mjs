@@ -17,6 +17,7 @@ const amps = await import(join(root, "lib/amps.ts"));
 const guitars = await import(join(root, "lib/guitars.ts"));
 const { PREFERRED_SOURCES } = await import(join(root, "lib/sources.ts"));
 const pedals = await import(join(root, "lib/pedals.ts"));
+const pickupModels = await import(join(root, "lib/pickups.ts"));
 const { HEADRUSH_REFERENCE } = await import(join(root, "lib/devices/headrush.ts"));
 const { HELIX_REFERENCE } = await import(join(root, "lib/devices/helix.ts"));
 const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
@@ -160,6 +161,12 @@ ${guitars.GUITAR_BRANDS.map((b) => `- **${b.brand}:** ${b.character}`).join("\n"
 | Marka | Model | Dizilim | Manyetikler | Ton |
 |---|---|---|---|---|
 ${guitars.GUITARS.map((g) => `| ${g.brand} | ${g.model} | ${g.pickups} | ${g.pickupDetail} | ${g.tone} |`).join("\n")}
+
+## Manyetik modelleri (stok olmayan manyetikler için)
+
+| Marka | Model | Tür | Çıkış | Karakter |
+|---|---|---|---|---|
+${pickupModels.PICKUP_MODELS.map((p) => `| ${p.brand} | ${p.model} | ${p.kind} | ${pickupModels.PICKUP_OUTPUT_LABELS[p.output]} | ${p.character} |`).join("\n")}
 `,
 );
 

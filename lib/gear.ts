@@ -19,7 +19,7 @@ export interface Device {
 
 export const DEVICES: Device[] = [
   { id: "boss-katana-gen3", verified: true, match: /katana.*(gen ?3|3rd)|katana.*artist.*gen/i, name: "Boss Katana Gen 3", category: "modeling-amp", controls: "Amp Type (Acoustic/Clean/Pushed/Crunch/Lead/Brown + Variation), Gain, Volume, Bass, Middle, Treble, Booster/Mod/FX/Delay/Reverb knobs, Tone Studio parameters" },
-  { id: "boss-katana-mk2", verified: true, match: /katana/i, name: "Boss Katana MkII", category: "modeling-amp", controls: "Amp Type (Acoustic/Clean/Crunch/Lead/Brown + Variation), Gain, Volume, Bass, Middle, Treble, Booster/Mod, FX, Delay/FX2, Reverb" },
+  { id: "boss-katana-mk2", verified: true, match: /katana(?!.*bass)/i, name: "Boss Katana MkII", category: "modeling-amp", controls: "Amp Type (Acoustic/Clean/Crunch/Lead/Brown + Variation), Gain, Volume, Bass, Middle, Treble, Booster/Mod, FX, Delay/FX2, Reverb" },
   { id: "fender-mustang-lt", match: /mustang.*lt|lt ?(25|40|50)/i, name: "Fender Mustang LT25 / LT40S / LT50", category: "modeling-amp", controls: "Amp model, Gain, Volume, Treble, Middle, Bass, Stomp/Mod/Delay/Reverb slots via Fender Tone" },
   { id: "fender-mustang-gtx", match: /mustang/i, name: "Fender Mustang GTX", category: "modeling-amp", controls: "Amp model, Gain, Volume, Treble, Middle, Bass, Presence, effect slots" },
   { id: "spark", match: /\bspark\b/i, name: "Positive Grid Spark 40 / Spark 2 / Spark MINI", category: "modeling-amp", controls: "Gate, Comp/Wah, Drive, Amp (Gain, Bass, Mid, Treble, Master), Mod/EQ, Delay, Reverb" },
@@ -62,6 +62,12 @@ export const PICKUP_CONFIGS = [
   { id: "active", label: "Aktif manyetik (EMG / Fishman)" },
   { id: "HS", label: "HS (köprüde humbucker, sapta single-coil)" },
   { id: "FT", label: "Filter'Tron (Gretsch)" },
+  { id: "P", label: "Bas: P (Precision)" },
+  { id: "PJ", label: "Bas: PJ" },
+  { id: "JJ", label: "Bas: JJ (Jazz Bass)" },
+  { id: "MM", label: "Bas: MM humbucker (StingRay)" },
+  { id: "bass-HH", label: "Bas: 2 humbucker / Rickenbacker" },
+  { id: "bass-active", label: "Bas: aktif (EQ'lu)" },
 ];
 
 /** Kullanıcının amfisini nasıl kullandığı; tonun nerede kurulacağını belirler */
@@ -144,6 +150,8 @@ export interface UserRig {
   pedals: string;
   /** Amfinin dahili efektlerinden kullanılabilenler */
   ampEffects: string[];
+  /** Stok olmayan manyetikler (boş = stok) */
+  pickupModels: { neck: string; middle: string; bridge: string };
 }
 
 export const DEFAULT_RIG: UserRig = {
@@ -154,6 +162,7 @@ export const DEFAULT_RIG: UserRig = {
   pickups: "SSS",
   pedals: "",
   ampEffects: [],
+  pickupModels: { neck: "", middle: "", bridge: "" },
 };
 
 export function findDevice(id: string): Device | undefined {
@@ -169,7 +178,11 @@ export function matchDevice(text: string): Device | undefined {
 
 /** Eski sürümdeki { deviceId, customDevice } kaydını yeni yapıya çevir */
 export function migrateRig(raw: Record<string, unknown>): UserRig {
-  const rig = { ...DEFAULT_RIG } as UserRig;
+  const rig = { ...DEFAULT_RIG, pickupModels: { ...DEFAULT_RIG.pickupModels } } as UserRig;
+  const pm = raw.pickupModels as Record<string, unknown> | undefined;
+  if (pm && typeof pm === "object") {
+    for (const k of ["neck", "middle", "bridge"] as const) if (typeof pm[k] === "string") rig.pickupModels[k] = pm[k] as string;
+  }
   for (const k of ["amp", "processor", "guitar", "pickups", "pedals"] as const) {
     if (typeof raw[k] === "string") rig[k] = raw[k] as string;
   }

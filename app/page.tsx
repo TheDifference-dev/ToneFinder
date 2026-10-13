@@ -7,8 +7,21 @@ import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
 import { toneText } from "@/lib/format";
 import { INSTRUMENTS, PARTS, TONE_TYPES, type Instrument, type ToneType, type UserRig } from "@/lib/gear";
-import type { ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
-import { loadRig, loadSaved, saveRig, storeSaved, type SavedTone, type SongQuery } from "@/lib/storage";
+import type { PartialTone, ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
+import {
+  createRigId,
+  loadHistory,
+  loadRigs,
+  loadSaved,
+  parseToneFile,
+  saveRigs,
+  storeHistory,
+  storeSaved,
+  toneFile,
+  type RigStore,
+  type SavedTone,
+  type SongQuery,
+} from "@/lib/storage";
 
 // Boş ekranda tek tıkla doldurulan örnek şarkılar
 const QUICK_PICKS: { song: string; artist: string; part: string; detail?: string }[] = [
@@ -91,8 +104,23 @@ function Head({ code, title }: { code: string; title: string }) {
   );
 }
 
+function download(name: string, text: string) {
+  const url = URL.createObjectURL(new Blob([text], { type: "application/json" }));
+  const a = Object.assign(document.createElement("a"), { href: url, download: name });
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+const fileSlug = (t: string) =>
+  t
+    .toLocaleLowerCase("tr")
+    .normalize("NFKD")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "")
+    .slice(0, 50) || "ton";
+
 export default function Home() {
-  const [rig, setRig] = useState<UserRig | null>(null);
+  const [rigStore, setRigStore] = useState<RigStore | null>(null);
   const [keyStatus, setKeyStatus] = useState<KeyStatus | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [song, setSong] = useState("");
@@ -108,24 +136,53 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [log, setLog] = useState<ToneEvent[]>([]);
   const [current, setCurrent] = useState<SavedTone | null>(null);
+  const [partial, setPartial] = useState<PartialTone | null>(null);
   const [saved, setSaved] = useState<SavedTone[]>([]);
+  const [history, setHistory] = useState<SavedTone[]>([]);
+  const [listTab, setListTab] = useState<"saved" | "history">("saved");
+
+  const activeRig = rigStore?.rigs.find((r) => r.id === rigStore.activeId) ?? null;
+  const rig = activeRig?.rig ?? null;
 
   useEffect(() => {
-    setRig(loadRig());
+    setRigStore(loadRigs());
     setSaved(loadSaved());
+    setHistory(loadHistory());
     fetch("/api/settings")
       .then((r) => r.json() as Promise<KeyStatus>)
       .then(setKeyStatus)
       .catch(() => setKeyStatus({ configured: false, source: null }));
   }, []);
 
-  function updateRig(patch: Partial<UserRig>) {
-    setRig((prev) => {
-      const next = { ...(prev as UserRig), ...patch };
-      saveRig(next);
+  function changeRigs(update: (store: RigStore) => RigStore) {
+    setRigStore((prev) => {
+      if (!prev) return prev;
+      const next = update(prev);
+      saveRigs(next);
       return next;
     });
   }
+
+  function updateRig(patch: Partial<UserRig>) {
+    changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, rig: { ...r.rig, ...patch } } : r)) }));
+  }
+
+  const rigActions = {
+    onRigSelect: (id: string) => changeRigs((st) => ({ ...st, activeId: id })),
+    onRigCreate: () =>
+      changeRigs((st) => {
+        const base = st.rigs.find((r) => r.id === st.activeId);
+        const id = createRigId();
+        return { activeId: id, rigs: [...st.rigs, { id, name: `Rig ${st.rigs.length + 1}`, rig: structuredClone(base!.rig) }] };
+      }),
+    onRigRename: (name: string) =>
+      changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, name } : r)) })),
+    onRigDelete: () =>
+      changeRigs((st) => {
+        const rigs = st.rigs.filter((r) => r.id !== st.activeId);
+        return rigs.length ? { activeId: rigs[0].id, rigs } : st;
+      }),
+  };
 
   const hasGear = Boolean(rig && (rig.amp.trim() || rig.processor.trim()));
 
@@ -135,6 +192,7 @@ export default function Home() {
     setLoading(true);
     setError(null);
     setLog([]);
+    setPartial(null);
     try {
       const res = await fetch("/api/tone", {
         method: "POST",
@@ -162,13 +220,14 @@ export default function Home() {
         if (event.type === "result") {
           result = event.result;
           meta = event.meta;
-        } else if (event.type === "error") throw new Error(event.error);
+        } else if (event.type === "original") setPartial(event.original);
+        else if (event.type === "error") throw new Error(event.error);
         else setLog((prev) => [...prev, event]);
       }
       if (!result) throw new Error("Bağlantı yarıda kesildi, lütfen tekrar dene.");
 
       setFeedback("");
-      setCurrent({
+      const tone: SavedTone = {
         id: crypto.randomUUID(),
         savedAt: Date.now(),
         deviceLabel: rigLabel(rig),
@@ -177,12 +236,46 @@ export default function Home() {
         query,
         artwork: opts.artwork ?? opts.previous?.artwork ?? "",
         meta,
+        rigName: activeRig?.name,
+        pickupLayout: rig.pickups,
+      };
+      setCurrent(tone);
+      setHistory((prev) => {
+        const next = [tone, ...prev].slice(0, 20);
+        storeHistory(next);
+        return next;
       });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Bir şeyler ters gitti.");
     } finally {
       setLoading(false);
+      setPartial(null);
     }
+  }
+
+  function removeFrom(list: "saved" | "history", id: string) {
+    if (list === "saved") {
+      const next = saved.filter((s) => s.id !== id);
+      setSaved(next);
+      storeSaved(next);
+    } else {
+      const next = history.filter((s) => s.id !== id);
+      setHistory(next);
+      storeHistory(next);
+    }
+  }
+
+  async function importTone(file: File) {
+    const tone = parseToneFile(await file.text());
+    if (!tone) {
+      setError("Bu dosya bir ToneFinder ton dosyası değil.");
+      return;
+    }
+    const next = [tone, ...saved];
+    setSaved(next);
+    storeSaved(next);
+    setCurrent(tone);
+    setListTab("saved");
   }
 
   function findTone(e: React.FormEvent) {
@@ -251,26 +344,78 @@ export default function Home() {
 
       <div className="grid gap-6 lg:grid-cols-[340px_1fr]">
         <aside className="space-y-6">
-          {rig && <RigPanel rig={rig} onChange={updateRig} />}
+          {rig && rigStore && (
+            <RigPanel
+              rig={rig}
+              onChange={updateRig}
+              rigs={rigStore.rigs}
+              activeId={rigStore.activeId}
+              {...rigActions}
+              canIdentify={keyStatus?.configured ?? false}
+            />
+          )}
 
           <section className="hud-panel p-5">
-            <Head code="MEM" title="Kayıtlı tonlar" />
-            {saved.length === 0 ? (
-              <p className="text-sm text-ink-mute">Henüz kayıtlı ton yok.</p>
+            <Head code="MEM" title="Tonlarım" />
+            <div className="mb-3 flex items-center gap-1.5" role="tablist">
+              {(
+                [
+                  ["saved", `Kayıtlı (${saved.length})`],
+                  ["history", `Geçmiş (${history.length})`],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  role="tab"
+                  aria-selected={listTab === id}
+                  onClick={() => setListTab(id)}
+                  className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${
+                    listTab === id ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft"
+                  }`}
+                >
+                  {label}
+                </button>
+              ))}
+              <label className="ml-auto cursor-pointer rounded-md border border-line px-2.5 py-1 text-xs font-semibold text-ink-soft hover:border-accent hover:text-accent">
+                İçe aktar
+                <input
+                  type="file"
+                  accept=".json,application/json"
+                  className="sr-only"
+                  onChange={(e) => {
+                    const f = e.target.files?.[0];
+                    if (f) void importTone(f);
+                    e.target.value = "";
+                  }}
+                />
+              </label>
+            </div>
+            {(listTab === "saved" ? saved : history).length === 0 ? (
+              <p className="text-sm text-ink-mute">
+                {listTab === "saved" ? "Henüz kayıtlı ton yok." : "Son 20 sonuç burada tutulur."}
+              </p>
             ) : (
               <ul className="space-y-1.5">
-                {saved.map((s) => (
-                  <li key={s.id}>
+                {(listTab === "saved" ? saved : history).map((s) => (
+                  <li key={s.id} className="group flex items-stretch gap-1">
                     <button
                       onClick={() => setCurrent(s)}
-                      className={`w-full rounded-lg border px-3 py-2 text-left text-sm transition ${
+                      className={`min-w-0 flex-1 rounded-lg border px-3 py-2 text-left text-sm transition ${
                         current?.id === s.id ? "border-accent bg-accent-soft" : "border-transparent hover:border-line hover:bg-paper"
                       }`}
                     >
-                      <div className="font-semibold text-ink">{s.result.song.title}</div>
-                      <div className="text-xs text-ink-mute">
-                        {s.result.song.artist} · {s.part} · {s.deviceLabel}
+                      <div className="truncate font-semibold text-ink">{s.result.song.title}</div>
+                      <div className="truncate text-xs text-ink-mute">
+                        {s.result.song.artist} · {s.part} · {s.rigName ?? s.deviceLabel}
                       </div>
+                    </button>
+                    <button
+                      onClick={() => removeFrom(listTab, s.id)}
+                      className="shrink-0 rounded-md px-2 text-ink-mute opacity-60 hover:bg-paper hover:text-bad group-hover:opacity-100"
+                      aria-label={`${s.result.song.title} sil`}
+                      title="Listeden sil"
+                    >
+                      ✕
                     </button>
                   </li>
                 ))}
@@ -359,9 +504,10 @@ export default function Home() {
           {loading && (
             <div className="hud-panel hud-scan p-5" aria-live="polite">
               <p className="mb-3 font-semibold text-ink">
-                Araştırılıyor… <span className="font-normal text-ink-soft">— genelde 1–3 dakika sürer</span>
+                {partial ? "Uyarlanıyor…" : "Araştırılıyor…"}{" "}
+                <span className="font-normal text-ink-soft">— genelde 1–3 dakika sürer</span>
               </p>
-              <ul className="max-h-72 space-y-1 overflow-y-auto font-mono text-xs">
+              <ul className={`${partial ? "max-h-24" : "max-h-72"} space-y-1 overflow-y-auto font-mono text-xs`}>
                 {log.map((e, i) => (
                   <li key={i} className="truncate text-ink-soft">
                     {e.type === "status" && <span className="font-semibold text-ink">» {e.message}</span>}
@@ -373,12 +519,21 @@ export default function Home() {
             </div>
           )}
 
+          {loading && partial && <ToneCard result={partial} pending />}
+
           {current && !loading && (
             <div>
               <div className="mb-3 flex flex-wrap items-center gap-2">
                 <span className="hud-label mr-auto">
                   {current.part} · {current.deviceLabel}
                 </span>
+                <button
+                  onClick={() => download(`${fileSlug(current.result.song.title)}.tonefinder.json`, toneFile(current))}
+                  className="rounded-md border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink transition hover:border-accent"
+                  title="Başka bir bilgisayara ya da arkadaşına göndermek için dosya olarak indir"
+                >
+                  Dışa aktar
+                </button>
                 <button
                   onClick={() => copyTone(current)}
                   className="rounded-md border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink transition hover:border-accent"
@@ -410,7 +565,7 @@ export default function Home() {
                   )}
                 </p>
               )}
-              <ToneCard result={current.result} />
+              <ToneCard key={current.id} result={current.result} pickupLayout={current.pickupLayout} />
               {current.query && (
                 <section className="hud-panel mt-5 p-5">
                   <Head code="FDB" title="Kulağa yanlış mı geliyor?" />

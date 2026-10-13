@@ -9,6 +9,9 @@ Kaynak: `lib/guitars.ts`.
 - **P-90:** Single-coil tasarımı ama daha geniş bobin: humbucker ile single-coil arası, ham, hırıltılı orta frekans; biraz uğultu yapar.
 - **mini-humbucker:** Humbucker'dan daha parlak ve odaklı, single-coil'den kalın (ör. Les Paul Deluxe).
 - **Filter'Tron:** Gretsch humbucker'ı; düşük çıkış, parlak, cıngıl, açık; rockabilly ve indie.
+- **bass single-coil:** Bas single-coil (Jazz Bass): parlak, net, 'growl'lu orta; iki manyetik birlikte uğultusuz ve orta frekansı oyuk (scoop).
+- **bass split-coil:** Precision Bass split-coil: kalın, yumuşak, orta frekansı dolu ve 'punch'lı; rock ve punk bas tonunun temeli.
+- **bass humbucker:** Bas humbucker'ı (Music Man, Thunderbird): yüksek çıkış, kalın alt ve belirgin üst orta; slap ve rock için agresif.
 - **active:** Aktif (EMG, Fishman Fluence) manyetikler: yüksek ve sabit çıkış, sıkıştırılmış, çok sessiz, sıkı alt frekans; modern metal. Pasif gitarla bu tona yaklaşmak için: gain artır, önüne Tube Screamer (drive 0–2, level yüksek), noise gate.
 
 ## Seçici (switch) konumları
@@ -19,6 +22,12 @@ Kaynak: `lib/guitars.ts`.
 - **SS:** 3'lü seçici (Telecaster): köprü, ikisi birden, sap.
 - **P90:** 3'lü toggle (iki P-90) ya da tek P-90 (Junior).
 - **HSH:** 5'li seçici: 1 = köprü humbucker, 2 = köprü iç bobin+orta, 3 = orta, 4 = orta+sap iç bobin, 5 = sap humbucker (Ibanez RG/Jackson'da değişebilir).
+- **P:** Tek split-coil manyetik: seçici yok; sesi volume ve tone ile şekillendir.
+- **PJ:** Sapta P, köprüde J manyetiği; her birine ayrı volume (ya da blend) ve ortak tone.
+- **JJ:** İki J manyetiği; her birine volume (ya da blend) ve ortak tone. İkisi tam açık: klasik scoop'lu Jazz Bass.
+- **MM:** Köprüde humbucker; çoğunda aktif 2–3 bantlı EQ ve coil seçici (seri/tek/paralel).
+- **bass-active:** Aktif bas: preamp EQ'su (bass/mid/treble) gitarda; çok net, kompresli ve sessiz.
+- **bass-HH:** İki bas humbucker'ı; volume ya da blend, bazılarında aktif EQ.
 - **active:** Çoğunlukla 3'lü toggle (sap / ikisi / köprü); metal lead ve ritim için köprü.
 
 ## Markaların karakteri
@@ -66,5 +75,43 @@ Kaynak: `lib/guitars.ts`.
 | Jackson | Rhoads / Kelly / King V | HH | 2 humbucker (aktif ya da pasif) | Randy Rhoads ve thrash metal; agresif, yüksek gain. |
 | Schecter | Hellraiser / C-1 / Omen | active | Hellraiser: EMG 81/89 ya da Fishman Fluence (aktif); Omen: pasif humbucker | Modern metal ve metalcore; sıkı, yüksek çıkış. |
 | Gretsch | Electromatic / Players Edition (G5420, G6120) | FT | 2 Filter'Tron humbucker, hollow/semi-hollow gövde, Bigsby | Parlak, cıngıl, havalı; rockabilly (Brian Setzer), country, AC/DC'de Malcolm Young'ın Jet'i. |
+| Fender | Precision Bass (Player, American, Vintera) | P | Tek split-coil P manyetiği, volume + tone, 34" ölçek | Kalın, yumuşak, orta frekansı dolu; rock, punk, soul bas tonunun temeli. |
+| Fender | Jazz Bass (Player, American, Vintera) | JJ | İki J single-coil, iki volume + tone | Parlak, growl'lu; köprü manyetiği tek başına sert ve odaklı (Jaco Pastorius, Geddy Lee). |
+| Squier | Precision / Jazz Bass (Classic Vibe, Affinity) | PJ | Modele göre P, J ya da PJ dizilimi | Fender P/J karakteri, biraz daha düşük çıkış. |
+| Music Man | StingRay | MM | Köprüde humbucker, aktif 2–3 bant EQ | Parlak, punch'lı, slap için ideal (Flea, Louis Johnson). |
+| Ibanez | SR serisi (SR300E, SR500) | bass-active | PJ ya da iki bas humbucker, aktif EQ (Ibanez / Bartolini / Nordstrand) | İnce sap, modern ve net; rock, metal, fusion. |
+| Rickenbacker | 4003 | bass-HH | İki single-coil (toaster ve köprü), stereo Rick-O-Sound çıkış | Parlak, metalik, kıvırcık orta (Lemmy, Chris Squire, Geddy Lee). |
+| Gibson | Thunderbird | bass-HH | İki bas humbucker, neck-through | Kalın, karanlık, doymuş rock basi. |
+| Yamaha | TRBX / BB serisi | PJ | BB: PJ pasif; TRBX: aktif ya da pasif iki manyetik | Dengeli, çok yönlü; BB serisi P basa yakın punch. |
 | Yamaha | Pacifica 112V / 612 | HSS | Köprüde humbucker, 2 single-coil (612: Seymour Duncan) | Çok yönlü Strat tarzı; temizde parlak, köprüde dolu rock tonu. |
 | Yamaha | Revstar | HH | 2 humbucker ya da P-90 (modele göre), 'Dry Switch' | Sıcak, orta frekanslı rock; Dry Switch tiz netlik ekler. |
+
+## Manyetik modelleri (stok olmayan manyetikler için)
+
+| Marka | Model | Tür | Çıkış | Karakter |
+|---|---|---|---|---|
+| Seymour Duncan | JB (SH-4) | humbucker | yüksek çıkış | Sıcak köprü humbucker'ı, tiz ve üst ortası belirgin; klasik rock/metal lead. |
+| Seymour Duncan | '59 (SH-1) | humbucker | orta çıkış | PAF tarzı, açık ve dengeli, vintage. |
+| Seymour Duncan | Jazz (SH-2) | humbucker | orta çıkış | Temiz, net sap humbucker'ı. |
+| Seymour Duncan | Distortion (SH-6) | humbucker | çok yüksek çıkış | Çok yüksek çıkış, sıkı alt, metal. |
+| Seymour Duncan | Invader (SH-8) | humbucker | çok yüksek çıkış | Kalın, sıkıştırılmış, çok yüksek çıkış. |
+| Seymour Duncan | Pearly Gates (SH-PG1) | humbucker | orta çıkış | Parlak, havadar, Billy Gibbons tonu. |
+| DiMarzio | Super Distortion (DP100) | humbucker | çok yüksek çıkış | 70'lerin yüksek çıkışlı humbucker'ı, kalın orta. |
+| DiMarzio | Evolution (DP158/159) | humbucker | yüksek çıkış | Agresif üst orta, Steve Vai. |
+| DiMarzio | PAF Pro / PAF 36th | humbucker | orta çıkış | Modern PAF, açık ve dinamik. |
+| Gibson | 490R / 498T | humbucker | orta çıkış | Modern Gibson seti, 498T köprüde biraz sıcak. |
+| Gibson | Burstbucker / '57 Classic | humbucker | orta çıkış | Vintage PAF tarzı, açık. |
+| Epiphone | ProBucker | humbucker | orta çıkış | PAF tarzı Epiphone manyetiği. |
+| Epiphone | Alnico Classic Pro | humbucker | orta çıkış | Eski Epiphone stok humbucker'ı. |
+| Bare Knuckle | Aftermath / Painkiller | humbucker | çok yüksek çıkış | Modern metal, sıkı ve agresif. |
+| EMG | 81 | active | çok yüksek çıkış | Aktif köprü, sıkıştırılmış, kesik ve sessiz (Hetfield, Wylde). |
+| EMG | 85 / 60 | active | yüksek çıkış | Aktif sap, daha sıcak ve yuvarlak. |
+| Fishman | Fluence Modern / Classic | active | yüksek çıkış | Aktif, çok sessiz, ses modları seçilebilir. |
+| Fender | Custom Shop Texas Special | single-coil | orta çıkış | Biraz sıcak Strat manyetiği, SRV tonu. |
+| Fender | Custom Shop Fat '50s / '69 | single-coil | düşük çıkış | Vintage, parlak ve net. |
+| Fender | V-Mod / Pure Vintage | single-coil | düşük çıkış | Vintage çıkış, cam gibi parlak. |
+| Fender | Noiseless (Gen 4 / N3) | single-coil | orta çıkış | Uğultusuz stacked single-coil. |
+| Seymour Duncan | Hot Rails / Little '59 (single boyutlu humbucker) | humbucker | yüksek çıkış | Single-coil yuvasına humbucker sesi. |
+| DiMarzio | Area '61 / '67 | single-coil | düşük çıkış | Uğultusuz vintage Strat sesi. |
+| Gibson | P-90 | P-90 | orta çıkış | Ham, hırıltılı orta frekans. |
+| Gibson | Mini-humbucker | mini-humbucker | orta çıkış | Humbucker'dan parlak ve odaklı. |

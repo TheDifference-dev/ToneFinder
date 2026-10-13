@@ -27,6 +27,13 @@ export const ToneRequestSchema = z.object({
       pickups: z.string().refine((v) => pickupIds.includes(v)),
       pedals: z.string().trim().max(600).default(""),
       ampEffects: z.array(z.enum(AMP_EFFECTS)).max(AMP_EFFECTS.length).default([]),
+      pickupModels: z
+        .object({
+          neck: z.string().trim().max(80).default(""),
+          middle: z.string().trim().max(80).default(""),
+          bridge: z.string().trim().max(80).default(""),
+        })
+        .default({ neck: "", middle: "", bridge: "" }),
     })
     .refine((r) => r.amp || r.processor, { message: "Amfi ya da prosesör gerekli" }),
 });
@@ -53,7 +60,10 @@ const Certainty = z.enum(["confirmed", "likely", "guess"]).describe(
   "confirmed: kaynakta açıkça geçiyor; likely: güçlü dolaylı kanıt; guess: tahmin",
 );
 
-export const ToneResultSchema = z.object({
+const Sources = z.array(z.object({ title: z.string(), url: z.string() })).describe("Dayanılan kaynaklar");
+
+// 1. adım: şarkının orijinal tonu (kullanıcının ekipmanından bağımsız; önbellekte saklanır)
+export const OriginalToneSchema = z.object({
   song: z.object({
     title: z.string(),
     artist: z.string(),
@@ -81,6 +91,22 @@ export const ToneResultSchema = z.object({
     tuning: z.string(),
     recording_notes: z.string().describe("Stüdyo, prodüktör, double-tracking, post-prodüksiyon efektleri vb."),
   }),
+  difficulty: z.object({
+    score: z.number().int().describe("Bu bölümü çalmanın zorluğu: 1 çok kolay, 5 çok zor"),
+    factors: z.array(z.string()).describe("Zorluğu belirleyen teknikler (ör. hızlı alternate picking, legato, bending)"),
+  }),
+  sections: z
+    .array(z.object({ name: z.string().describe("Türkçe bölüm adı (ör. Temiz giriş, Solo)"), description: z.string() }))
+    .describe("Şarkıdaki diğer gitar bölümleri ve tonlarının istenen bölümden farkı; yoksa boş dizi"),
+  warnings: z.array(z.string()).describe("Araştırmadaki tartışmalı ya da zayıf noktalar (Türkçe); yoksa boş dizi"),
+  research_confidence: z.enum(["high", "medium", "low"]),
+  sources: Sources,
+});
+
+export type OriginalTone = z.infer<typeof OriginalToneSchema>;
+
+// 2. adım: kullanıcının ekipmanına uyarlama
+export const AdaptedToneSchema = z.object({
   chain: z
     .array(
       z.object({
@@ -92,7 +118,16 @@ export const ToneResultSchema = z.object({
           .enum(["amp", "processor", "pedal"])
           .describe("amp: kullanıcının amfisi; processor: kullanıcının prosesöründeki blok; pedal: kullanıcının fiziksel pedalı"),
         emulates: z.string().describe("Bu modelin taklit ettiği gerçek ekipman ve orijinal rig'de neyin yerine geçtiği"),
+        match: z
+          .enum(["exact", "close", "substitute"])
+          .describe("exact: orijinaldeki ekipmanın aynısı ya da modeli; close: aynı aileden yakın karşılık; substitute: farklı ekipmanla yerine koyma"),
+        start_from: z
+          .string()
+          .describe("Önce yüklenecek fabrika preseti, kanal hafızası ya da amp type (ör. '[14] Thrash Overkill'); kaynak ya da cihaz referansı desteklemiyorsa boş string"),
         settings: z.array(AdaptedSetting),
+        unused_controls: z
+          .array(z.object({ name: z.string(), reason: z.string() }))
+          .describe("Bu blokta bu ton için dokunulmayacak/kapalı kalacak kontroller ve kısa nedeni (Türkçe); yoksa boş dizi"),
         note: z.string(),
       }),
     )
@@ -101,6 +136,9 @@ export const ToneResultSchema = z.object({
     ),
   guitar: z.object({
     pickup: z.string().describe("Kullanıcının gitarında seçilecek manyetik pozisyonu"),
+    selector: z
+      .enum(["neck", "neck_middle", "middle", "middle_bridge", "bridge", "neck_bridge", "none"])
+      .describe("Seçici konumu: neck=sap, middle=orta, bridge=köprü, ikililer ara konumlar; seçicisi olmayan gitar/bas için none"),
     volume: z.string(),
     tone: z.string(),
     tuning: z.string(),
@@ -109,11 +147,17 @@ export const ToneResultSchema = z.object({
       .array(z.string())
       .describe("Orijinal gitar/manyetik ile kullanıcınınki arasındaki farkı kapatmak için yapılan her ayar ve nedeni"),
   }),
+  other_sections: z
+    .array(
+      z.object({
+        name: z.string(),
+        changes: z.array(
+          z.object({ block: z.string(), setting: z.string(), value: z.string(), why: z.string() }),
+        ).describe("Yalnız ana tondan farklı olan ayarlar; listelenmeyen her şey ana tondaki gibi"),
+      }),
+    )
+    .describe("Orijinal araştırmadaki diğer bölümler için ana tona göre farklar; yoksa boş dizi"),
   playing_tips: z.array(z.string()),
-  difficulty: z.object({
-    score: z.number().int().describe("Bu bölümü çalmanın zorluğu: 1 çok kolay, 5 çok zor"),
-    factors: z.array(z.string()).describe("Zorluğu belirleyen teknikler (ör. hızlı alternate picking, legato, bending)"),
-  }),
   match: z.object({
     percent: z
       .number()
@@ -125,16 +169,29 @@ export const ToneResultSchema = z.object({
   alternatives: z.array(z.string()).describe("Farklı bir yaklaşım ya da ileride edinilebilecek ekipmanla alternatifler"),
   adaptation_notes: z.string().describe("Kullanıcının ekipmanına uyarlarken yapılan ödünler ve nasıl telafi edildiği"),
   confidence: z.enum(["high", "medium", "low"]),
-  sources: z.array(z.object({ title: z.string(), url: z.string() })).describe("Araştırmada dayanılan kaynaklar"),
+  sources: Sources,
 });
 
-export type ToneResult = z.infer<typeof ToneResultSchema>;
+export type AdaptedTone = z.infer<typeof AdaptedToneSchema>;
+
+/** Ekranda gösterilen tam sonuç: orijinal + uyarlama */
+export type ToneResult = OriginalTone & AdaptedTone;
+
+/** Uyarlama bitmeden önce gösterilen kısmi sonuç */
+export type PartialTone = OriginalTone & Partial<AdaptedTone>;
+
+export function mergeTone(original: OriginalTone, adapted: AdaptedTone): ToneResult {
+  const seen = new Set<string>();
+  const sources = [...original.sources, ...adapted.sources].filter((s) => !seen.has(s.url) && seen.add(s.url));
+  return { ...original, ...adapted, sources };
+}
 
 // API'nin istemciye NDJSON olarak akıttığı olaylar
 export type ToneEvent =
   | { type: "status"; message: string }
   | { type: "search"; query: string }
   | { type: "fetch"; url: string }
+  | { type: "original"; original: OriginalTone; meta: ToneMeta }
   | { type: "result"; result: ToneResult; meta: ToneMeta }
   | { type: "error"; error: string };
 
@@ -143,4 +200,35 @@ export interface ToneMeta {
   cached: boolean;
   /** Orijinal araştırmanın yapıldığı zaman (ms) */
   researchedAt: number;
+}
+
+// Katalogda olmayan bir ekipmanın web'den çıkarılan profili ("Web'de tanıt")
+export const GEAR_KINDS = ["amp", "processor", "guitar", "bass", "pedal", "other"] as const;
+
+export const GearProfileSchema = z.object({
+  exists: z.boolean().describe("Bu adla gerçek, üretilmiş ya da üretilmekte olan bir ürün bulundu mu"),
+  kind: z.enum(GEAR_KINDS),
+  brand: z.string(),
+  model: z.string().describe("Ürünün tam adı; bulunamadıysa kullanıcının yazdığı ad"),
+  summary: z.string().describe("Ne olduğu ve ses karakteri, 1–2 cümle Türkçe; bulunamadıysa nedeni"),
+  channels_or_modes: z.array(z.string()).describe("Kanallar, amp type'lar, modlar ya da manyetik dizilimi; yoksa boş"),
+  controls: z.array(z.string()).describe("Paneldeki düğme ve anahtar adları, cihazda yazdığı gibi"),
+  built_in_effects: z.array(z.string()).describe("Dahili efektler (amfi/prosesör için); yoksa boş"),
+  notes: z.string().describe("Ton ayarı için önemli notlar (ör. efekt döngüsü, stereo giriş, aktif manyetik)"),
+  sources: z.array(z.object({ title: z.string(), url: z.string() })),
+});
+
+export type GearProfile = z.infer<typeof GearProfileSchema> & { identifiedAt?: number };
+
+export function gearProfileText(p: GearProfile): string {
+  return [
+    `${p.brand} ${p.model} (${p.kind}; profile researched on the web)`,
+    p.summary && `- Summary: ${p.summary}`,
+    p.channels_or_modes.length > 0 && `- Channels/modes: ${p.channels_or_modes.join(" / ")}`,
+    p.controls.length > 0 && `- Controls: ${p.controls.join(", ")}`,
+    p.built_in_effects.length > 0 && `- Built-in effects: ${p.built_in_effects.join(", ")}`,
+    p.notes && `- Notes: ${p.notes}`,
+  ]
+    .filter(Boolean)
+    .join("\n");
 }

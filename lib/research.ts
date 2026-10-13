@@ -6,8 +6,22 @@ import { deviceReference } from "./devices";
 import { ampProfileText, matchAmp } from "./amps";
 import { AMP_MODES, matchDevice, PARTS, PICKUP_CONFIGS } from "./gear";
 import { guitarProfileText, matchGuitar, pickupLayoutText } from "./guitars";
+import { readGearProfile } from "./gear-profiles";
 import { matchPedal, pedalProfileText } from "./pedals";
-import { ToneResultSchema, type ToneEvent, type ToneMeta, type ToneRequest, type ToneResult } from "./schema";
+import { customPickupsText } from "./pickups";
+import { z } from "zod";
+import {
+  AdaptedToneSchema,
+  mergeTone,
+  OriginalToneSchema,
+  gearProfileText,
+  GearProfileSchema,
+  type GearProfile,
+  type ToneEvent,
+  type ToneMeta,
+  type ToneRequest,
+  type ToneResult,
+} from "./schema";
 import { PREFERRED_SOURCES } from "./sources";
 
 const MODEL = "claude-opus-5-5";
@@ -29,6 +43,7 @@ Research, for this exact song and part (if a specific solo or section is named, 
 - Recording context: studio, producer/engineer, double-tracking, notable post-production.
 - Song profile: tempo (BPM), key, and the character of the tone in a few tags (e.g. tight low end, scooped mids, bright, compressed, saturated, roomy).
 - Playing: the techniques this part needs (e.g. fast alternate picking, palm muting, legato, wide bends, vibrato, pinch harmonics) and how hard it is to play.
+- The song's other guitar parts (e.g. clean intro, main riff, solo, outro) and how their tone differs from this part (channel, gain, pickup, effects), so they can be given as changes from this tone.
 Search in English. Check these preferred sites first (fetch their pages directly where useful), then widen to interviews, rig rundowns, magazine articles and forums:
 ${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
 For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the player's rig in that era) or guess. When sources disagree, say so. List every source URL you relied on.`;
@@ -41,9 +56,13 @@ const ADAPT_PROMPT = `You are a meticulous guitar tone engineer. You get a resea
 
 3. The user's pedals. For each pedal, say whether to use it, where it goes in the chain and exactly how to set every knob it has (use its profile's control names); if it shouldn't be used, say so.
 
+For each block, also say whether it is the same gear as the original (or a model of it), a close relative, or a substitute; which factory preset, channel memory or amp type to load first, but only if the device reference, profile or a source supports it; and which of the device's controls to leave alone or switch off for this tone, and why. If the original research lists other guitar parts of the song, give for each only the settings that change from the main tone.
+
 Finish with concrete starting settings for every block (0-10 knob values as plain numbers; times with units, synced to the song's tempo where relevant), the guitar's selector position and volume/tone knobs, and playing tips. For every setting, say what it rests on: cited (a device reference, profile, manual or reliable source supports it directly), inferred (worked out from the original tone and how the device works) or check (uncertain; verify by ear). Also give: an honest estimate (0-100) of how close this gear can get to the original and why, what it cannot capture (limitations), and alternative approaches. List every source URL you relied on.`;
 
-const STRUCTURE_PROMPT = `You turn two reports - the original tone research and its adaptation to the user's gear - into the final structured answer for the user. Use only what the reports support; keep the original report's confirmed/likely/guess labels and the adaptation report's cited/inferred/check labels, and don't invent model or knob names that aren't in them. The match percent is an estimate; never present it as a measurement. Write all prose fields in Turkish. Keep gear model names, knob and parameter names exactly as they appear on the device or pedal (usually English).`;
+const STRUCTURE_ORIGINAL_PROMPT = `You turn a research report on a song's original studio guitar tone into a structured record. Use only what the report supports; keep its confirmed/likely/guess labels and don't invent gear. Put disputed or weakly sourced points in warnings. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the gear (usually English).`;
+
+const STRUCTURE_ADAPT_PROMPT = `You turn a report on adapting a song's original guitar tone to the user's gear into the final structured answer. Use only what the report supports; keep its cited/inferred/check labels and don't invent model or knob names that aren't in it or in the gear profiles. The match percent is an estimate; never present it as a measurement. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the device or pedal (usually English).`;
 
 const NO_AMP_PROMPT =
   "No guitar amp: the processor or amp-sim software (e.g. AmpliTube) feeds an audio interface, headphones or studio monitors, so the whole tone (amp, cab/IR with mics, effects) comes from it with cab simulation on.";
@@ -79,8 +98,20 @@ const TONE_TYPE_PROMPTS: Record<ToneRequest["toneType"], string> = {
   distorted: "the user wants the distorted tone of this part",
 };
 
+/** Katalogda olmayan ekipman için daha önce "Web'de tanıt" ile kaydedilmiş profiller */
+async function webProfiles(req: ToneRequest): Promise<string[]> {
+  const unknown = [
+    !matchAmp(req.rig.amp) && !matchDevice(req.rig.amp) ? req.rig.amp : "",
+    !matchDevice(req.rig.processor) ? req.rig.processor : "",
+    !matchGuitar(req.rig.guitar) ? req.rig.guitar : "",
+    ...pedalList(req).filter((p) => !matchPedal(p)),
+  ].filter((n) => n.trim() && !/^(yok|none|-)$/i.test(n.trim()));
+  const profiles = await Promise.all(unknown.map((n) => readGearProfile(n)));
+  return profiles.filter((p): p is NonNullable<typeof p> => Boolean(p?.exists)).map(gearProfileText);
+}
+
 /** Uyarlamanın girdisi: kullanıcının ekipmanı ve profilleri */
-function describeGear(req: ToneRequest): string {
+async function describeGear(req: ToneRequest): Promise<string> {
   const pickups = PICKUP_CONFIGS.find((p) => p.id === req.rig.pickups)?.label ?? req.rig.pickups;
   const amp = matchAmp(req.rig.amp);
   const guitar = matchGuitar(req.rig.guitar);
@@ -104,6 +135,7 @@ function describeGear(req: ToneRequest): string {
       : []),
     `- ${req.instrument === "bass" ? "Bass" : "Guitar"}: ${req.rig.guitar || "not given"}`,
     `- Pickup configuration: ${pickups}`,
+    ...(customPickupsText(req.rig.pickupModels) ? ["- Non-stock pickups:", customPickupsText(req.rig.pickupModels)] : []),
     `- Pedals: ${pedals.length ? pedals.join("; ") : "none"}`,
     ...(amp ? ["", "<user_amp_profile>", ampProfileText(amp), "</user_amp_profile>"] : []),
     ...(guitar ? ["", "<user_guitar_profile>", guitarProfileText(guitar), "</user_guitar_profile>"] : []),
@@ -113,6 +145,7 @@ function describeGear(req: ToneRequest): string {
     "</user_pickups_profile>",
     ...pedalProfiles.flatMap((p) => ["", "<user_pedal_profile>", p, "</user_pedal_profile>"]),
     ...references.flatMap((r) => ["", "<device_reference>", r, "</device_reference>"]),
+    ...(await webProfiles(req)).flatMap((p) => ["", "<user_gear_profile>", p, "</user_gear_profile>"]),
   ].join("\n");
 }
 
@@ -184,45 +217,26 @@ async function researchReport(client: Anthropic, system: string, content: string
   return { report, sources };
 }
 
-async function structure(
-  client: Anthropic,
-  req: ToneRequest,
-  original: string,
-  adaptation: string,
-  sources: Map<string, string>,
-) {
-  const sourceList = [...sources].map(([url, title]) => `- ${title}: ${url}`).join("\n");
+async function structured<T extends z.ZodType>(client: Anthropic, schema: T, system: string, content: string): Promise<z.infer<T>> {
   const response = await client.beta.messages.parse({
     model: MODEL,
     max_tokens: 16000,
     betas: BETAS,
     fallbacks: "default",
-    output_config: { effort: "low", format: betaZodOutputFormat(ToneResultSchema) },
-    system: STRUCTURE_PROMPT,
-    messages: [
-      {
-        role: "user",
-        content: [
-          describeSong(req),
-          "",
-          describeGear(req),
-          "",
-          `<original_research>\n${original}\n</original_research>`,
-          "",
-          `<adaptation_report>\n${adaptation}\n</adaptation_report>`,
-          "",
-          `<sources_consulted>\n${sourceList || "(none recorded)"}\n</sources_consulted>`,
-        ].join("\n"),
-      },
-    ],
+    output_config: { effort: "low", format: betaZodOutputFormat(schema) },
+    system,
+    messages: [{ role: "user", content }],
   });
 
   if (response.stop_reason === "refusal") throw new ToneError("Bu istek için ton önerisi üretilemedi.");
   if (response.stop_reason === "max_tokens" || !response.parsed_output) {
     throw new ToneError("Yanıt eksik geldi, lütfen tekrar dene.");
   }
-  return response.parsed_output;
+  return response.parsed_output as z.infer<T>;
 }
+
+const sourceList = (sources: Iterable<[string, string]>) =>
+  [...sources].map(([url, title]) => `- ${title}: ${url}`).join("\n") || "(none recorded)";
 
 export async function findTone(
   client: Anthropic,
@@ -240,8 +254,19 @@ export async function findTone(
     emit({ type: "status", message: "Orijinal stüdyo ekipmanı araştırılıyor…" });
     const { report, sources } = await researchReport(client, ORIGINAL_PROMPT, describeSong(req), { searches: 12, fetches: 8 }, emit);
     original = { report, sources: [...sources], researchedAt: Date.now() };
+  }
+  if (!original.structured) {
+    emit({ type: "status", message: "Orijinal ton özetleniyor…" });
+    original.structured = await structured(
+      client,
+      OriginalToneSchema,
+      STRUCTURE_ORIGINAL_PROMPT,
+      `${describeSong(req)}\n\n<research_report>\n${original.report}\n</research_report>\n\n<sources_consulted>\n${sourceList(original.sources)}\n</sources_consulted>`,
+    );
     await writeResearch(key, original);
   }
+  const meta: ToneMeta = { cached, researchedAt: original.researchedAt };
+  emit({ type: "original", original: original.structured, meta });
 
   emit({
     type: "status",
@@ -258,16 +283,54 @@ export async function findTone(
         ...(previous ? ["", "<previous_result>", JSON.stringify(previous).slice(0, 15000), "</previous_result>"] : []),
       ]
     : [];
+  const gear = await describeGear(req);
+  const originalBlock = `<original_research>\n${original.report}\n</original_research>\n\n<original_summary>\n${JSON.stringify(original.structured)}\n</original_summary>`;
   const adaptation = await researchReport(
     client,
     ADAPT_PROMPT,
-    [describeSong(req), "", describeGear(req), "", `<original_research>\n${original.report}\n</original_research>`, ...feedback].join("\n"),
+    [describeSong(req), "", gear, "", originalBlock, ...feedback].join("\n"),
     { searches: 6, fetches: 4 },
     emit,
   );
 
   emit({ type: "status", message: "Sonuç hazırlanıyor…" });
-  const sources = new Map([...original.sources, ...adaptation.sources]);
-  const result = await structure(client, req, original.report, adaptation.report, sources);
-  return { result, meta: { cached, researchedAt: original.researchedAt } };
+  const adapted = await structured(
+    client,
+    AdaptedToneSchema,
+    STRUCTURE_ADAPT_PROMPT,
+    [
+      describeSong(req),
+      "",
+      gear,
+      "",
+      `<original_summary>\n${JSON.stringify(original.structured)}\n</original_summary>`,
+      "",
+      `<adaptation_report>\n${adaptation.report}\n</adaptation_report>`,
+      "",
+      `<sources_consulted>\n${sourceList(adaptation.sources)}\n</sources_consulted>`,
+    ].join("\n"),
+  );
+  return { result: mergeTone(original.structured, adapted), meta };
+}
+
+const GEAR_PROMPT = `You identify a piece of music gear (guitar amp, bass amp, modeler/multi-FX, amp-sim software, guitar, bass or pedal) from the name a user typed. Search the web for the manufacturer's product page or manual first, then reliable retailers or reviews. Decide whether a real product with this name exists or existed; if the name is ambiguous, pick the most likely product and say so. If no such product exists, say so plainly - never invent one. For a real product report: exact name, what it is, its channels/amp types/modes (or pickup layout for an instrument), every front-panel control and switch as printed on the device, built-in effects, and anything that matters for dialing in tones (effects loop, stereo input, active pickups...). List the source URLs.`;
+
+const STRUCTURE_GEAR_PROMPT = `Turn a gear research report into a structured profile. Use only what the report supports. Write summary and notes in Turkish; keep control and mode names exactly as printed on the device. If the report says no such product exists, set exists to false.`;
+
+/** "Web'de tanıt": katalogda olmayan bir ekipmanı web'de araştırıp profil çıkarır */
+export async function identifyGear(client: Anthropic, name: string, kind: GearProfile["kind"]): Promise<GearProfile> {
+  const { report, sources } = await researchReport(
+    client,
+    GEAR_PROMPT,
+    `Gear name as typed by the user: ${name}\nThe user entered it as: ${kind}`,
+    { searches: 5, fetches: 3 },
+    () => {},
+  );
+  const profile = await structured(
+    client,
+    GearProfileSchema,
+    STRUCTURE_GEAR_PROMPT,
+    `Name typed: ${name}\nKind: ${kind}\n\n<research_report>\n${report}\n</research_report>\n\n<sources_consulted>\n${sourceList(sources)}\n</sources_consulted>`,
+  );
+  return { ...profile, identifiedAt: Date.now() };
 }

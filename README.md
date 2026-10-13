@@ -25,6 +25,18 @@ Ayrıca:
 - **Kayıtlı araştırma:** şarkının orijinal tonu bir kez araştırılır ve `~/.tonefinder/cache/` altında saklanır;
   aynı şarkı tekrar sorulunca yalnız senin ekipmanına uyarlama yapılır (daha hızlı, daha ucuz, tutarlı).
   "Orijinali yeniden araştır" ile yenilenir.
+- **Orijinal ton önce gelir:** şarkının orijinal ekipmanı hazır olur olmaz ekranda görünür, uyarlama arkada sürer.
+- **Birden çok rig:** "Ev", "Prova" gibi ekipman setleri arasında tek tıkla geçiş.
+- **Amfi seçilince** katalogdaki kanal/modlar gösterilir, amfide olan efektler kendiliğinden işaretlenir.
+- **Stok olmayan manyetikler** (ör. Strat köprüsünde Seymour Duncan JB) pozisyon başına girilebilir.
+- **"Web'de tanıt":** katalogda olmayan amfi, prosesör, gitar ya da pedal web'de araştırılır; kanalları, düğmeleri
+  ve efektleri `~/.tonefinder/gear/` altına kaydedilir ve sonraki aramalarda kullanılır. Böyle bir ürün yoksa söyler.
+- **Sonuçta:** her bloğun orijinale göre "birebir / yakın / yerine" olduğu, "önce şu preseti/kanalı yükle",
+  her ayarın nedeni, "bu tonda dokunma" listesi, manyetik seçici grafiği, araştırma uyarıları ve şarkının diğer
+  bölümleri (ör. temiz ara bölüm, solo) için yalnız değişen ayarlar.
+- **Bas:** bas gitarlar (P, J, StingRay, SR, Rickenbacker, Thunderbird...), bas dizilimleri ve bas amfileri
+  (Ampeg, Fender Rumble, Markbass, Orange, Katana Bass, GK, Darkglass).
+- **Tonlarım:** kayıtlı tonlar ve son 20 sonuç (geçmiş), listeden silme, ".tonefinder.json" olarak dışa/içe aktarma.
 - **"Kulağa yanlış mı geliyor?":** ayarları deneyip neyin farklı olduğunu yazarsın; orijinal araştırma korunur,
   ayarlar geri bildirimine göre yeniden uyarlanır.
 
@@ -140,6 +152,9 @@ npm run build:artifact
 | `lib/research.ts` | Yapay zekâ akışı: orijinal ton araştırması (önbellekli) → ekipmana uyarlama → yapılandırılmış çıktı |
 | `lib/cache.ts` | Orijinal ton araştırmalarının yerel kaydı |
 | `lib/pedals.ts` | Pedal kataloğu (tür, düğmeler, anahtarlar, karakter) |
+| `lib/pickups.ts` | Manyetik modelleri kataloğu (tür, çıkış seviyesi) |
+| `lib/gear-profiles.ts`, `app/api/gear/route.ts` | "Web'de tanıt": katalogda olmayan ekipmanın profili |
+| `components/PickupSelector.tsx` | Manyetik seçici grafiği |
 | `app/api/songs/route.ts` | Şarkı arama önerileri (iTunes / Deezer) |
 | `components/SongSearch.tsx` | Şarkı arama kutusu |
 | `lib/gear.ts` | Prosesör kataloğu, ekipman yapısı, amfi kullanım şekilleri |

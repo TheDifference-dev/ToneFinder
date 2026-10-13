@@ -2,7 +2,8 @@
 // konumları ve popüler modeller. Yapay zekâ, orijinal kayıttaki gitar ile kullanıcının
 // gitarı arasındaki farkı (ör. Les Paul humbucker → Strat single-coil) bu bilgilerle telafi eder.
 
-export type PickupLayout = "SSS" | "HSS" | "HH" | "SS" | "P90" | "HSH" | "active" | "HS" | "FT";
+export type PickupLayout = "SSS" | "HSS" | "HH" | "SS" | "P90" | "HSH" | "active" | "HS" | "FT" | BassLayout;
+export type BassLayout = "P" | "PJ" | "JJ" | "MM" | "bass-active" | "bass-HH";
 
 /** Manyetik türlerinin genel ses profili */
 export const PICKUP_TYPES: Record<string, string> = {
@@ -14,6 +15,12 @@ export const PICKUP_TYPES: Record<string, string> = {
     "Single-coil tasarımı ama daha geniş bobin: humbucker ile single-coil arası, ham, hırıltılı orta frekans; biraz uğultu yapar.",
   "mini-humbucker": "Humbucker'dan daha parlak ve odaklı, single-coil'den kalın (ör. Les Paul Deluxe).",
   "Filter'Tron": "Gretsch humbucker'ı; düşük çıkış, parlak, cıngıl, açık; rockabilly ve indie.",
+  "bass single-coil":
+    "Bas single-coil (Jazz Bass): parlak, net, 'growl'lu orta; iki manyetik birlikte uğultusuz ve orta frekansı oyuk (scoop).",
+  "bass split-coil":
+    "Precision Bass split-coil: kalın, yumuşak, orta frekansı dolu ve 'punch'lı; rock ve punk bas tonunun temeli.",
+  "bass humbucker":
+    "Bas humbucker'ı (Music Man, Thunderbird): yüksek çıkış, kalın alt ve belirgin üst orta; slap ve rock için agresif.",
   active:
     "Aktif (EMG, Fishman Fluence) manyetikler: yüksek ve sabit çıkış, sıkıştırılmış, çok sessiz, sıkı alt frekans; modern metal. Pasif gitarla bu tona yaklaşmak için: gain artır, önüne Tube Screamer (drive 0–2, level yüksek), noise gate.",
 };
@@ -26,6 +33,12 @@ export const SELECTOR_POSITIONS: Record<string, string> = {
   SS: "3'lü seçici (Telecaster): köprü, ikisi birden, sap.",
   P90: "3'lü toggle (iki P-90) ya da tek P-90 (Junior).",
   HSH: "5'li seçici: 1 = köprü humbucker, 2 = köprü iç bobin+orta, 3 = orta, 4 = orta+sap iç bobin, 5 = sap humbucker (Ibanez RG/Jackson'da değişebilir).",
+  P: "Tek split-coil manyetik: seçici yok; sesi volume ve tone ile şekillendir.",
+  PJ: "Sapta P, köprüde J manyetiği; her birine ayrı volume (ya da blend) ve ortak tone.",
+  JJ: "İki J manyetiği; her birine volume (ya da blend) ve ortak tone. İkisi tam açık: klasik scoop'lu Jazz Bass.",
+  MM: "Köprüde humbucker; çoğunda aktif 2–3 bantlı EQ ve coil seçici (seri/tek/paralel).",
+  "bass-active": "Aktif bas: preamp EQ'su (bass/mid/treble) gitarda; çok net, kompresli ve sessiz.",
+  "bass-HH": "İki bas humbucker'ı; volume ya da blend, bazılarında aktif EQ.",
   active: "Çoğunlukla 3'lü toggle (sap / ikisi / köprü); metal lead ve ritim için köprü.",
 };
 
@@ -65,7 +78,7 @@ export const GUITARS: GuitarModel[] = [
   { brand: "Fender", model: "Telecaster", match: /tele/i, pickups: "SS", pickupDetail: "Köprüde eğik single-coil (metal plaka), sapta kapaklı single-coil", tone: "Köprü manyetiği keskin ve 'twang'lı, sap sıcak ve yumuşak; country, indie, rock (Keith Richards, Jimmy Page'in ilk albümü)." },
   { brand: "Fender", model: "Jazzmaster / Jaguar", match: /jazzmaster|jaguar/i, pickups: "SS", pickupDetail: "Geniş, yassı single-coil'ler", tone: "Yumuşak, yuvarlak, P-90'a yakın; shoegaze, surf, indie." },
   { brand: "Fender", model: "Mustang / Duo-Sonic", match: /fender mustang|duo-?sonic/i, pickups: "SS", pickupDetail: "2 single-coil, kısa ölçek (24\")", tone: "Parlak, hafif; grunge ve indie (Kurt Cobain)." },
-  { brand: "Squier", model: "Classic Vibe / Affinity Stratocaster", match: /squier.*strat|affinity|classic vibe/i, pickups: "SSS", pickupDetail: "3 seramik ya da alnico single-coil", tone: "Strat karakteri, Fender'dan biraz daha düşük çıkış ve daha az detay." },
+  { brand: "Squier", model: "Classic Vibe / Affinity Stratocaster", match: /squier.*strat|(affinity|classic vibe)(?!.*bass)/i, pickups: "SSS", pickupDetail: "3 seramik ya da alnico single-coil", tone: "Strat karakteri, Fender'dan biraz daha düşük çıkış ve daha az detay." },
 
   // Gibson / Epiphone
   { brand: "Gibson", model: "Les Paul Standard / Custom / Studio", match: /les ?paul(?!.*(junior|jr|special))/i, pickups: "HH", pickupDetail: "2 humbucker (Burstbucker / '57 Classic / 490R-498T), her manyetiğe ayrı volume ve tone, 3'lü toggle", tone: "Kalın, sıcak, orta frekanslı, uzun sustain; klasik rock ve hard rock (Jimmy Page, Slash, Gary Moore, Zakk Wylde)." },
@@ -101,6 +114,16 @@ export const GUITARS: GuitarModel[] = [
 
   // Gretsch
   { brand: "Gretsch", model: "Electromatic / Players Edition (G5420, G6120)", match: /gretsch|g5420|g6120|electromatic/i, pickups: "FT", pickupDetail: "2 Filter'Tron humbucker, hollow/semi-hollow gövde, Bigsby", tone: "Parlak, cıngıl, havalı; rockabilly (Brian Setzer), country, AC/DC'de Malcolm Young'ın Jet'i." },
+
+  // Bas gitarlar
+  { brand: "Fender", model: "Precision Bass (Player, American, Vintera)", match: /precision|p-?bass/i, pickups: "P", pickupDetail: "Tek split-coil P manyetiği, volume + tone, 34\" ölçek", tone: "Kalın, yumuşak, orta frekansı dolu; rock, punk, soul bas tonunun temeli." },
+  { brand: "Fender", model: "Jazz Bass (Player, American, Vintera)", match: /jazz ?bass|j-?bass/i, pickups: "JJ", pickupDetail: "İki J single-coil, iki volume + tone", tone: "Parlak, growl'lu; köprü manyetiği tek başına sert ve odaklı (Jaco Pastorius, Geddy Lee)." },
+  { brand: "Squier", model: "Precision / Jazz Bass (Classic Vibe, Affinity)", match: /squier.*(precision|jazz ?bass|[pj]-?bass|\bpj\b)/i, pickups: "PJ", pickupDetail: "Modele göre P, J ya da PJ dizilimi", tone: "Fender P/J karakteri, biraz daha düşük çıkış." },
+  { brand: "Music Man", model: "StingRay", match: /stingray|music ?man/i, pickups: "MM", pickupDetail: "Köprüde humbucker, aktif 2–3 bant EQ", tone: "Parlak, punch'lı, slap için ideal (Flea, Louis Johnson)." },
+  { brand: "Ibanez", model: "SR serisi (SR300E, SR500)", match: /sr ?\d{3}|ibanez sr/i, pickups: "bass-active", pickupDetail: "PJ ya da iki bas humbucker, aktif EQ (Ibanez / Bartolini / Nordstrand)", tone: "İnce sap, modern ve net; rock, metal, fusion." },
+  { brand: "Rickenbacker", model: "4003", match: /rickenbacker|4003/i, pickups: "bass-HH", pickupDetail: "İki single-coil (toaster ve köprü), stereo Rick-O-Sound çıkış", tone: "Parlak, metalik, kıvırcık orta (Lemmy, Chris Squire, Geddy Lee)." },
+  { brand: "Gibson", model: "Thunderbird", match: /thunderbird/i, pickups: "bass-HH", pickupDetail: "İki bas humbucker, neck-through", tone: "Kalın, karanlık, doymuş rock basi." },
+  { brand: "Yamaha", model: "TRBX / BB serisi", match: /trbx|bb ?\d{3}/i, pickups: "PJ", pickupDetail: "BB: PJ pasif; TRBX: aktif ya da pasif iki manyetik", tone: "Dengeli, çok yönlü; BB serisi P basa yakın punch." },
 
   // Yamaha
   { brand: "Yamaha", model: "Pacifica 112V / 612", match: /pacifica/i, pickups: "HSS", pickupDetail: "Köprüde humbucker, 2 single-coil (612: Seymour Duncan)", tone: "Çok yönlü Strat tarzı; temizde parlak, köprüde dolu rock tonu." },
@@ -142,7 +165,17 @@ export function pickupLayoutText(layout: string): string {
               ? ["active"]
               : layout === "FT"
                 ? ["Filter'Tron"]
-                : [];
+                : layout === "P"
+                  ? ["bass split-coil"]
+                  : layout === "PJ"
+                    ? ["bass split-coil", "bass single-coil"]
+                    : layout === "JJ"
+                      ? ["bass single-coil"]
+                      : layout === "MM" || layout === "bass-HH"
+                        ? ["bass humbucker"]
+                        : layout === "bass-active"
+                          ? ["active"]
+                          : [];
   return [
     ...types.map((t) => `- ${t}: ${PICKUP_TYPES[t]}`),
     SELECTOR_POSITIONS[layout] ? `- Selector: ${SELECTOR_POSITIONS[layout]}` : "",
@@ -157,6 +190,7 @@ export const GUITAR_NAMES = GUITARS.map((g) => `${g.brand} ${g.model}`);
 /** Gitar adından tipik manyetik dizilimini tahmin et (kullanıcı değiştirebilir) */
 export function guessPickups(guitar: string): string | undefined {
   const g = guitar.toLowerCase();
+  if (/\bbass\b|\bbas\b/.test(g) && /emg|active|aktif/.test(g)) return "bass-active";
   if (/emg|fishman|active|aktif/.test(g)) return "active";
   if (/\bhss\b/.test(g)) return "HSS";
   if (/\bhsh\b/.test(g)) return "HSH";

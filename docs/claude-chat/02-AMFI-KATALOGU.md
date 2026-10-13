@@ -1,6 +1,6 @@
 # ToneFinder amfi kataloğu
 
-Kaynak: `lib/amps.ts` (45 model, markalar: Boss, Roland, Marshall, Fender, Vox, Orange, Mesa/Boogie, Peavey, EVH, Blackstar, Yamaha).
+Kaynak: `lib/amps.ts` (53 model, markalar: Boss, Roland, Marshall, Fender, Vox, Orange, Mesa/Boogie, Peavey, EVH, Blackstar, Yamaha, Ampeg, Markbass, Gallien-Krueger, Darkglass).
 Güncel seriler ve tonda önemli klasik modeller; her model için kanallar, modlar, kontroller,
 ses karakteri ve prosesörle monitör kullanım notu.
 
@@ -401,3 +401,61 @@ Tür: modeling
 - **Özellikler:** Stereo; USB, Bluetooth
 - **Karakter:** Masaüstü stereo modelleme amfisi.
 - **Prosesörle monitör olarak:** Prosesörle: FLAT tipi, düz EQ, efektler kapalı.
+
+### Ampeg SVT-CL / SVT Classic (kafa) + 8x10
+
+Tür: tube
+
+- **Tek kanal (Normal / Bright girişleri)**; kontroller: GAIN, BASS, MIDRANGE, TREBLE, ULTRA HI / ULTRA LO anahtarları, MIDRANGE frekans seçici (5 konum), MASTER
+- **Karakter:** 300 W lambalı rock bas sesi; sıcak, doymuş üst orta, 8x10 kabinle 'duvar' gibi alt.
+
+### Ampeg Rocket Bass RB-108 / RB-110 / RB-210 (ve eski BA serisi)
+
+Tür: solid-state
+
+- **Tek kanal**; kontroller: GAIN, BASS, MID, TREBLE, VOLUME, ULTRA HI / ULTRA LO (modele göre), SCRAMBLER drive (RB-110 ve üstü)
+- **Özellikler:** AUX IN, kulaklık; RB-210'da XLR DI çıkışı
+- **Karakter:** Ampeg karakterli pratik bas amfisi; Scrambler ile hafif overdrive.
+
+### Fender Rumble 15 / 25 / 40 / 100 / 500 (V3) ve Rumble LT25
+
+Tür: solid-state
+
+- **Tek kanal**; kontroller: GAIN, OVERDRIVE (40 ve üstü), BLEND (40 ve üstü), BASS, LOW-MID, HIGH-MID, TREBLE, MASTER, BRIGHT / CONTOUR / VINTAGE anahtarları
+- **Karakter:** Fender bas amfisi; Contour orta frekansı oyar, Vintage yuvarlak eski ses verir.
+
+### Markbass Little Mark III / Little Mark 800
+
+Tür: solid-state
+
+- **Tek kanal**; kontroller: GAIN, LOW, MID LOW, MID HIGH, HIGH, VLE (Vintage Loudspeaker Emulator), VPF (Variable Pre-shape Filter), MASTER
+- **Karakter:** Şeffaf, hi-fi modern bas; VLE yuvarlak vintage, VPF oyuk modern ses.
+
+### Orange Terror Bass / Crush Bass 25 / 50 / 100
+
+Tür: hybrid
+
+- **Tek kanal (Crush Bass: GAIN ile drive)**; kontroller: GAIN, BASS, MIDDLE, TREBLE, VOLUME, BLEND (Crush Bass 50+), Parametrik MID frekans (Crush Bass 50+)
+- **Karakter:** Orange'ın kalın, overdrive'a hazır bas sesi.
+
+### Boss Katana-110 Bass / Katana-210 Bass
+
+Tür: modeling
+
+- **AMP TYPE** — modlar: VINTAGE / FLAT / MODERN; kontroller: GAIN, VOLUME, BASS, LOW-MID, HIGH-MID, TREBLE, COMP, DRIVE, MOD/EFX, DELAY/REVERB
+- **Genel:** BOOST, COMP, DRIVE, MOD, DELAY, REVERB (Tone Studio); MASTER
+- **Karakter:** Boss bas modelleme amfisi; Vintage, Flat ve Modern amfi tipleri.
+
+### Gallien-Krueger MB 200 / MB 500 / MB 800 / Legacy
+
+Tür: solid-state
+
+- **Tek kanal**; kontroller: GAIN, CONTOUR, BASS, LO MID, HI MID, TREBLE, PRESENCE, MASTER
+- **Karakter:** Parlak, punch'lı, modern rock/funk bas sesi; Contour ile oyuk ses.
+
+### Darkglass Microtubes 500 / 900 (kafa)
+
+Tür: hybrid
+
+- **Tek kanal**; kontroller: BASS, LO MID, HI MID, TREBLE, DRIVE, BLEND, LEVEL, GRUNT / ATTACK anahtarları, MASTER
+- **Karakter:** Modern metal ve progresif bas; temiz alt + paralel distorsiyon (Blend).

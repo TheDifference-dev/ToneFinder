@@ -104,7 +104,7 @@ export const AMPS: AmpModel[] = [
     id: "boss-katana-mk2",
     brand: "Boss",
     model: "Katana MkII (50, 100, Head, Artist)",
-    match: /katana/i,
+    match: /katana(?!.*bass)/i,
     type: "modeling",
     channels: [
       {
@@ -658,6 +658,82 @@ export const AMPS: AmpModel[] = [
     voicing: "Masaüstü stereo modelleme amfisi.",
     monitor: "Prosesörle: FLAT tipi, düz EQ, efektler kapalı.",
   },
+
+  // ---------------- BAS AMFİLERİ ----------------
+  {
+    id: "ampeg-svt",
+    brand: "Ampeg",
+    model: "SVT-CL / SVT Classic (kafa) + 8x10",
+    match: /\bsvt\b|svt-?cl|8x10/i,
+    type: "tube",
+    channels: [{ name: "Tek kanal (Normal / Bright girişleri)", controls: ["GAIN", "BASS", "MIDRANGE", "TREBLE", "ULTRA HI / ULTRA LO anahtarları", "MIDRANGE frekans seçici (5 konum)", "MASTER"] }],
+    voicing: "300 W lambalı rock bas sesi; sıcak, doymuş üst orta, 8x10 kabinle 'duvar' gibi alt.",
+  },
+  {
+    id: "ampeg-rocket-bass",
+    brand: "Ampeg",
+    model: "Rocket Bass RB-108 / RB-110 / RB-210 (ve eski BA serisi)",
+    match: /rocket ?bass|\brb-?\d{3}|\bba-?1\d{2}|\bba-?2\d{2}/i,
+    type: "solid-state",
+    channels: [{ name: "Tek kanal", controls: ["GAIN", "BASS", "MID", "TREBLE", "VOLUME", "ULTRA HI / ULTRA LO (modele göre)", "SCRAMBLER drive (RB-110 ve üstü)"] }],
+    features: ["AUX IN, kulaklık; RB-210'da XLR DI çıkışı"],
+    voicing: "Ampeg karakterli pratik bas amfisi; Scrambler ile hafif overdrive.",
+  },
+  {
+    id: "fender-rumble",
+    brand: "Fender",
+    model: "Rumble 15 / 25 / 40 / 100 / 500 (V3) ve Rumble LT25",
+    match: /rumble/i,
+    type: "solid-state",
+    channels: [{ name: "Tek kanal", controls: ["GAIN", "OVERDRIVE (40 ve üstü)", "BLEND (40 ve üstü)", "BASS", "LOW-MID", "HIGH-MID", "TREBLE", "MASTER", "BRIGHT / CONTOUR / VINTAGE anahtarları"] }],
+    voicing: "Fender bas amfisi; Contour orta frekansı oyar, Vintage yuvarlak eski ses verir.",
+  },
+  {
+    id: "markbass-little-mark",
+    brand: "Markbass",
+    model: "Little Mark III / Little Mark 800",
+    match: /markbass|little ?mark/i,
+    type: "solid-state",
+    channels: [{ name: "Tek kanal", controls: ["GAIN", "LOW", "MID LOW", "MID HIGH", "HIGH", "VLE (Vintage Loudspeaker Emulator)", "VPF (Variable Pre-shape Filter)", "MASTER"] }],
+    voicing: "Şeffaf, hi-fi modern bas; VLE yuvarlak vintage, VPF oyuk modern ses.",
+  },
+  {
+    id: "orange-bass",
+    brand: "Orange",
+    model: "Terror Bass / Crush Bass 25 / 50 / 100",
+    match: /terror ?bass|crush ?bass/i,
+    type: "hybrid",
+    channels: [{ name: "Tek kanal (Crush Bass: GAIN ile drive)", controls: ["GAIN", "BASS", "MIDDLE", "TREBLE", "VOLUME", "BLEND (Crush Bass 50+)", "Parametrik MID frekans (Crush Bass 50+)"] }],
+    voicing: "Orange'ın kalın, overdrive'a hazır bas sesi.",
+  },
+  {
+    id: "boss-katana-bass",
+    brand: "Boss",
+    model: "Katana-110 Bass / Katana-210 Bass",
+    match: /katana.*bass/i,
+    type: "modeling",
+    channels: [{ name: "AMP TYPE", modes: ["VINTAGE", "FLAT", "MODERN"], controls: ["GAIN", "VOLUME", "BASS", "LOW-MID", "HIGH-MID", "TREBLE", "COMP", "DRIVE", "MOD/EFX", "DELAY/REVERB"] }],
+    global: ["BOOST, COMP, DRIVE, MOD, DELAY, REVERB (Tone Studio)", "MASTER"],
+    voicing: "Boss bas modelleme amfisi; Vintage, Flat ve Modern amfi tipleri.",
+  },
+  {
+    id: "gk-mb",
+    brand: "Gallien-Krueger",
+    model: "MB 200 / MB 500 / MB 800 / Legacy",
+    match: /gallien|\bgk\b|\bmb ?(200|500|800)/i,
+    type: "solid-state",
+    channels: [{ name: "Tek kanal", controls: ["GAIN", "CONTOUR", "BASS", "LO MID", "HI MID", "TREBLE", "PRESENCE", "MASTER"] }],
+    voicing: "Parlak, punch'lı, modern rock/funk bas sesi; Contour ile oyuk ses.",
+  },
+  {
+    id: "darkglass-microtubes",
+    brand: "Darkglass",
+    model: "Microtubes 500 / 900 (kafa)",
+    match: /darkglass/i,
+    type: "hybrid",
+    channels: [{ name: "Tek kanal", controls: ["BASS", "LO MID", "HI MID", "TREBLE", "DRIVE", "BLEND", "LEVEL", "GRUNT / ATTACK anahtarları", "MASTER"] }],
+    voicing: "Modern metal ve progresif bas; temiz alt + paralel distorsiyon (Blend).",
+  },
 ];
 
 /** Kullanıcının yazdığı amfi adını katalogdaki bir modele bağla */
@@ -684,3 +760,47 @@ export function ampProfileText(a: AmpModel): string {
 
 /** Öneri listesi için "Marka Model" adları */
 export const AMP_NAMES = AMPS.map((a) => `${a.brand} ${a.model}`);
+
+// Amfinin dahili efektleri (RigPanel'de kutucuklar amfi seçilince kendiliğinden gelsin diye).
+// Katalogdaki kontrol/mod/özellik metinlerinden çıkarılır; ayrı bir veri girişi gerektirmez.
+const EFFECT_PATTERNS: [effect: string, pattern: RegExp][] = [
+  ["Reverb", /reverb|spring|\bplate\b|\bhall\b|\broom\b/i],
+  ["Delay", /delay|\becho\b|tape echo/i],
+  ["Chorus", /chorus/i],
+  ["Flanger", /flang/i],
+  ["Phaser", /phaser|phase\b/i],
+  ["Tremolo", /tremolo|\btrem\b/i],
+  ["Vibrato", /vibrato|vibe\b/i],
+  ["Octave", /octave|octaver/i],
+  ["Compressor", /compress|\bcomp\b/i],
+  ["Wah", /\bwah\b/i],
+  ["Booster / Overdrive", /booster|\bboost\b|overdrive|\bdrive pedal|\bod\b|\bds\b/i],
+  ["Noise gate", /noise (gate|suppressor|reduction)|\bgate\b/i],
+];
+
+// "MOD" slotu olan amfilerde (Katana, Mustang, MG Gold...) modülasyon efektleri kullanılabilir
+const MOD_SLOT = /\bmod\b|booster\/mod/i;
+const MODULATION = ["Chorus", "Flanger", "Phaser", "Tremolo"];
+
+export function ampEffectsOf(a: AmpModel): string[] {
+  const text = [
+    ...(a.global ?? []),
+    ...(a.features ?? []),
+    // kanal adları (ör. Fender "VIBRATO" kanalı) ve kontroller; mod adlarındaki "(Fender Deluxe Reverb)"
+    // gibi taklit açıklamaları efekt sayılmasın diye çıkarılır
+    ...a.channels.flatMap((c) => [c.name, ...c.controls, ...(c.modes ?? []).map((m) => m.replace(/\([^)]*\)/g, ""))]),
+  ].join(" · ");
+  const found = new Set(EFFECT_PATTERNS.filter(([, re]) => re.test(text)).map(([fx]) => fx));
+  // drive kanalları ("TOP BOOST", "OVERDRIVE" kanalı, "GAIN BOOST") dahili booster efekti değildir
+  const effectText = [...(a.global ?? []), ...(a.features ?? []), ...a.channels.flatMap((c) => c.controls)]
+    .join(" · ")
+    .replace(/top boost|gain boost|overdrive \(buton\)/gi, "");
+  if (!/booster|\bboost\b|drive pedal/i.test(effectText)) found.delete("Booster / Overdrive");
+  if (MOD_SLOT.test(text)) MODULATION.forEach((fx) => found.add(fx));
+  return EFFECT_PATTERNS.map(([fx]) => fx).filter((fx) => found.has(fx));
+}
+
+/** İpucu satırı için kanal/mod adları (kısa) */
+export function ampModeNames(a: AmpModel): string[] {
+  return a.channels.flatMap((c) => (c.modes?.length ? c.modes.map((m) => m.replace(/\s*\(.*\)$/, "")) : [c.name]));
+}

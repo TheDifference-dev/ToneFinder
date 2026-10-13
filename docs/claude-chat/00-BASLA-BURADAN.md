@@ -127,6 +127,13 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
     sınırlamalar, alternatifler, Songsterr ve backing track bağlantıları, "Ayarları kopyala",
     "Kulağa yanlış mı geliyor? → Yeniden uyarla", "Orijinali yeniden araştır". Hesap, topluluk tonları ve
     çok dil web sürümüne bırakıldı; preset dosyası dışa aktarma ayrı iş.
+15. **ARDAPC'de canlı rakip incelemesi** (Claude in Chrome, 96 ekran görüntüsü, `docs/rakip-inceleme/ekran/`) →
+    14 eksik çıkarıldı. Bu oturumda eklenenler: amfi seçilince efekt/modların kendiliğinden gelmesi, "Web'de tanıt"
+    (katalogda olmayan ekipmanı web'de araştırıp kaydetme, gerçek değilse reddetme), birden çok rig, pozisyon
+    başına manyetik modeli, her ayarın nedeni ve "dokunma" listesi, "önce yükle" preset/kanal önerisi, şarkının
+    diğer bölümleri için farklar, manyetik seçici grafiği, blok başına birebir/yakın/yerine rozeti, orijinal tonun
+    uyarlamadan önce gösterilmesi, bas kataloğu, geçmiş + silme + dışa/içe aktarma. Kalanlar: topluluk/hesap/çok dil
+    (web sürümü), preset dosyası dışa aktarma, cihaz görselleri, PNG ton kartı.
 12. **Bu dosyanın güncel hâli:** ToneFinder için ayrı bir Claude Chat sohbeti/projesi açılacak; gerektiğinde
     orada, gerektiğinde Claude Code'da çalışılacak.
 

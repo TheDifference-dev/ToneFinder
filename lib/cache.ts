@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { homedir } from "node:os";
 import { join } from "node:path";
+import type { OriginalTone } from "./schema";
 
 // Orijinal ton araştırması (şarkının stüdyo kaydındaki ekipman) kullanıcının ekipmanından
 // bağımsızdır; bir kez yapılıp ~/.tonefinder/cache/ altında saklanır. Aynı şarkı + bölüm +
@@ -15,6 +16,8 @@ export interface OriginalResearch {
   report: string;
   sources: [url: string, title: string][];
   researchedAt: number;
+  /** Yapılandırılmış orijinal ton (eski kayıtlarda yok; gerekince yeniden üretilir) */
+  structured?: OriginalTone;
 }
 
 export function researchKey(parts: string[]): string {

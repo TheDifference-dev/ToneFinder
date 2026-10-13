@@ -452,6 +452,27 @@ Aynı işi kendi kaynaklarımızla (üretici kılavuzları, resmî model listele
 - **Genel "teşhis" üreten tanışma hunisi:** ToneMuse [33](rakip-inceleme/ekran/tonemuse-33-tanisma-sonuc.png).
 - **Bulanık sahte ön izleme:** kilitli alanlarda "0" ve genel pedal adları.
 
+## 13 Ekim 2026 gece: eksiklerden yapılanlar
+
+| Eksik | Durum |
+|---|---|
+| 1. Amfi seçilince efekt ve modlar kendiliğinden | ✅ katalogdaki amfide olan efektler işaretli gelir, olmayanlar soluk; mod/kanal rozetleri |
+| 2. Aranabilir katalog + listede olmayanı web'de tanıtma | ◐ "Web'de tanıt" ✅ (gerçek değilse reddeder, profil kaydedilir); marka → seri → model hiyerarşisi ve düğme min/max/varsayılan yok |
+| 3. Birden çok rig | ✅ rig seçici, yeni / ad / sil; sonuçlarda rig adı |
+| 4. Pozisyon başına manyetik modeli | ✅ sap / orta / köprü, 25 manyetiklik katalog (tür, çıkış) |
+| 5. Her ayarın nedeni + "dokunma" listesi | ✅ düğmelerin altında neden satırları, blok başına katlanır "dokunma" listesi |
+| 6. Fabrika preseti / kanaldan başla | ◐ "Önce yükle" kutusu ✅ (yalnız kaynak ya da cihaz referansı destekliyorsa); amfi/prosesör preset listeleri kataloğa girilmedi |
+| 7. Aynı şarkıda birden çok bölüm | ✅ orijinal araştırma diğer bölümleri çıkarır, uyarlama yalnız farkları verir, sekmelerle gösterilir |
+| 8. Seçici grafiği + pedalboard görünümü | ◐ seçici grafiği ✅, blok başına birebir/yakın/yerine ✅, şeritte bloğa tıkla-git ✅; ayrı pedal kutusu görünümü yok |
+| 9. Orijinal tonu uyarlama bitmeden göster | ✅ |
+| 10. Gerçek bas desteği | ✅ bas gitarlar, bas dizilimleri, bas amfileri (katalog küçük) |
+| 11. Paylaşım ve dışa aktarma | ◐ `.tonefinder.json` dışa/içe aktarma ✅; PNG kart ve preset dosyası yok |
+| 12. Topluluk, hesap, çok dil | ✗ web sürümüne |
+| 13. Kayıtlı tonlarda silme ve geçmiş | ✅ |
+| 14. Cihaz görselleri | ✗ düşük öncelik |
+
+Ayrıca araştırma uyarıları (ToneAdapt'teki "Warnings" gibi) orijinal ekipman panelinde gösteriliyor.
+
 ## ToneFinder için önerilen sıra (güncel)
 
 Öğlen listesindeki 1–5 yapıldı: şarkı arama, Riff/Solo ve ton türü, amfi efektleri, zorluk, sınırlamalar,
