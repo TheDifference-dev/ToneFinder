@@ -84,6 +84,7 @@ listeleri uygulamaya gömülüdür (`lib/devices/`):
 | HeadRush Core (Prime, Flex Prime, Pedalboard, MX5…) | headrushfx.com Core "Full List" (amfi, kabin, mikrofon, IR, efekt → esinlendiği gerçek ekipman) |
 | Line 6 Helix / HX Stomp / POD Go | line6.com Helix 3.80 model listesi |
 | Boss Katana Gen 3 / MkII | BOSS Tone Studio for Katana Gen3 parametre kılavuzu |
+| IK Multimedia AmpliTube 5 (CS / SE / AmpliTube 5 / MAX) | IK'nın sürüm karşılaştırma tablosu (tüm 416 gear ve hangi sürümde olduğu) ve AmpliTube 5 User Manual |
 
 Diğer amfi ve prosesörler için kanal, model ve düğme bilgileri araştırma sırasında web'den bulunur.
 

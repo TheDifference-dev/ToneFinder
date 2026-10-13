@@ -440,7 +440,7 @@ function buildPrompt(req) {
     gear("User's amp", req.rig.amp),
     gear("User's processor / multi-FX", req.rig.processor),
     `User's guitar: ${req.rig.guitar || "not given"}`,
-    `How the amp is used: ${DATA.ampModes.find((m) => m.id === req.rig.ampMode)?.prompt || req.rig.ampMode}`,
+    `How the amp is used: ${req.rig.amp.trim() ? DATA.ampModes.find((m) => m.id === req.rig.ampMode)?.prompt || req.rig.ampMode : "No guitar amp: the processor or amp-sim software (e.g. AmpliTube) feeds an audio interface, headphones or studio monitors, so the whole tone (amp, cab/IR with mics, effects) comes from it with cab simulation on."}`,
     `Pickup configuration: ${pu}`,
     `User's pedals: ${req.rig.pedals.split(/\n|,/).map((p) => p.trim()).filter(Boolean).join("; ") || "none"}`,
     "</request>",

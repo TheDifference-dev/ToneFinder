@@ -19,6 +19,7 @@ const { PREFERRED_SOURCES } = await import(join(root, "lib/sources.ts"));
 const { HEADRUSH_REFERENCE } = await import(join(root, "lib/devices/headrush.ts"));
 const { HELIX_REFERENCE } = await import(join(root, "lib/devices/helix.ts"));
 const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
+const { AMPLITUBE_REFERENCE } = await import(join(root, "lib/devices/amplitube.ts"));
 
 const write = (name, text) => {
   writeFileSync(join(out, name), text.trimEnd() + "\n");
@@ -164,6 +165,14 @@ Kaynak: line6.com/helix-models (Helix 3.80).
 
 \`\`\`text
 ${HELIX_REFERENCE}
+\`\`\`
+
+## IK Multimedia AmpliTube 5 (PC/Mac yazılımı)
+
+Kaynak: IK'nın CS / SE / AmpliTube 5 / MAX karşılaştırma tablosu (tüm gear ve hangi sürümde olduğu) ve AmpliTube 5 User Manual.
+
+\`\`\`text
+${AMPLITUBE_REFERENCE}
 \`\`\`
 
 ## Boss Katana Gen 3 / MkII

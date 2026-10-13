@@ -58,6 +58,7 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
 - Ekipman:
   - **Amfi:** Boss Dual Cube LX. Yalnız **STEREO IN** modunda, amfiyi **monitör** gibi kullanıyor.
   - **Prosesör:** HeadRush Core.
+  - **Yazılım:** PC'de IK Multimedia AmpliTube 5 kullanıyor (sürümü — CS / SE / AmpliTube 5 / MAX — henüz belli değil, sor).
   - **Gitar:** bir örnekte "bende Strat var" dedi (Kirk Hammett örneği). Kesin modeli sorulmadı, teyit et.
 - API anahtarı konusunda ücretsiz bir yol istiyor; ücretli API'ye karşı temkinli.
 
@@ -88,6 +89,11 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
    Epiphone, Ibanez, PRS, ESP/LTD, Jackson, Schecter, Gretsch, Yamaha) ve "amfiyi nasıl
    kullanıyorsun" ayarı (amfi olarak / monitör–Stereo In / prosesör önde / 4 kablo) eklendi.
 7. **Bu dosya:** Claude chat'e geçiş için devir dosyası.
+8. **İstek:** "PC'de AmpliTube 5 kullanıyorum; şarkı yazınca bu uygulamadaki ekipmanla aynı tonu nasıl
+   kuracağımı söyle." → AmpliTube 5'in tüm gear listesi (107 stomp, 107 amp, 101 kabin, 31 hoparlör,
+   18 mikrofon, 44 rack, 8 oda) hangi sürümde olduğuyla birlikte eklendi. Bilinen "neye dayandığı"
+   eşleşmeleri işaretlendi. Prosesör alanına "AmpliTube 5 MAX" (ya da sürümün) yazılınca sonuç
+   AmpliTube gear adlarıyla gelir. Amfi alanı boşsa ton tamamen yazılımda kurulur.
 
 ## Mevcut durum
 
@@ -128,6 +134,14 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
     44 ReValver amfi, kabinler, mikrofonlar, IR'ler, efektler, "Inspired by" eşleşmeleri).
   - **Cab bloğu:** Mic Type, Break Up, On-Axis, Out Gain, Amp Gain. **Mikrofon mesafesi ayarı yok**
     (Core User Guide v5.1.0).
+- **AmpliTube 5:**
+  - **Gear listesi:** IK'nın CS / SE / AmpliTube 5 / MAX karşılaştırma tablosu, resmî dağıtıcı Best Service'ten
+    alındı. Tüm gear ve hangi sürümde olduğu var; sayılar resmî toplamlarla aynı.
+  - **Neye dayandığı:** "based on" notları AmpliTube 5 User Manual'dan ve arama kaynaklarından. IK'nın kendi adlı
+    28 amfisinin kaynağı bulunamadı; bunlar "bilinmiyor" olarak bırakıldı. IK'nın eski PDF'leri ve forumu artık
+    erişilemiyor.
+  - **Kabin bölümü (VIR):** iki serbest yakın mikrofon, 45° açı, oda mikrofonları, hoparlör değiştirme, kendi IR'ın.
+  - **Yönlendirme:** tek yol, 2'li ve 3'lü ayırıcı, paralel yönlendirme.
 - **Line 6 Helix ailesi:** https://line6.com/helix-models/ (Helix 3.80, "Based on").
 - **Boss Katana Gen 3:** BOSS TONE STUDIO for KATANA Gen3 kılavuzu
   (https://static.roland.com/assets/media/pdf/BTS_KTN3_SP_eng02_W.pdf). Tone Studio'da aralıklar

@@ -42,6 +42,9 @@ Finish with concrete starting settings for every block (0-10 knob values as plai
 
 const STRUCTURE_PROMPT = `You turn a guitar tone research report into the final structured answer for the user. Use only what the report supports; keep the report's confirmed/likely/guess labels and don't invent model names that aren't in it. Write all prose fields in Turkish. Keep gear model names, knob and parameter names exactly as they appear on the device or pedal (usually English).`;
 
+const NO_AMP_PROMPT =
+  "No guitar amp: the processor or amp-sim software (e.g. AmpliTube) feeds an audio interface, headphones or studio monitors, so the whole tone (amp, cab/IR with mics, effects) comes from it with cab simulation on.";
+
 function gearLine(label: string, text: string): string[] {
   if (!text) return [`- ${label}: none`];
   const device = matchDevice(text);
@@ -66,7 +69,7 @@ function describeRequest(req: ToneRequest): string {
     "User's gear:",
     ...gearLine("Amp", req.rig.amp),
     ...gearLine("Processor / multi-FX", req.rig.processor),
-    `- How the amp is used: ${AMP_MODES.find((m) => m.id === req.rig.ampMode)?.prompt ?? req.rig.ampMode}`,
+    `- How the amp is used: ${req.rig.amp ? (AMP_MODES.find((m) => m.id === req.rig.ampMode)?.prompt ?? req.rig.ampMode) : NO_AMP_PROMPT}`,
     `- Guitar: ${req.rig.guitar || "not given"}`,
     `- Pickup configuration: ${pickups}`,
     `- Pedals: ${req.rig.pedals ? req.rig.pedals.split(/\n|,/).map((p) => p.trim()).filter(Boolean).join("; ") : "none"}`,

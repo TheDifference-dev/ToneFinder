@@ -17,6 +17,7 @@ const guitars = await import(join(root, "lib/guitars.ts"));
 const { HEADRUSH_REFERENCE } = await import(join(root, "lib/devices/headrush.ts"));
 const { HELIX_REFERENCE } = await import(join(root, "lib/devices/helix.ts"));
 const { KATANA_REFERENCE } = await import(join(root, "lib/devices/katana.ts"));
+const { AMPLITUBE_REFERENCE } = await import(join(root, "lib/devices/amplitube.ts"));
 
 const data = {
   // RegExp JSON'a çevrilemez; sayfada kaynağından yeniden kurulur
@@ -49,6 +50,7 @@ const data = {
     "line6-pod-go": HELIX_REFERENCE,
     "boss-katana-gen3": KATANA_REFERENCE,
     "boss-katana-mk2": KATANA_REFERENCE,
+    "amplitube-5": AMPLITUBE_REFERENCE,
   },
 };
 

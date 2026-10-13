@@ -1,3 +1,4 @@
+import { AMPLITUBE_REFERENCE } from "./amplitube";
 import { HEADRUSH_REFERENCE } from "./headrush";
 import { HELIX_REFERENCE } from "./helix";
 import { KATANA_REFERENCE } from "./katana";
@@ -13,6 +14,7 @@ const REFERENCES: Record<string, string> = {
   "line6-pod-go": HELIX_REFERENCE,
   "boss-katana-gen3": KATANA_REFERENCE,
   "boss-katana-mk2": KATANA_REFERENCE,
+  "amplitube-5": AMPLITUBE_REFERENCE,
 };
 
 export function deviceReference(deviceId: string): string | undefined {

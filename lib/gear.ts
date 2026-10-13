@@ -4,7 +4,7 @@
 // `controls` alanı, yapay zekânın ayarları cihazın gerçek düğme adlarıyla vermesi için
 // prompt'a eklenir; `match` kullanıcının yazdığı adı kataloğa bağlar.
 
-export type DeviceCategory = "modeler" | "modeling-amp" | "tube-amp" | "multi-fx";
+export type DeviceCategory = "modeler" | "modeling-amp" | "tube-amp" | "multi-fx" | "software";
 
 export interface Device {
   id: string;
@@ -34,6 +34,7 @@ export const DEVICES: Device[] = [
   { id: "kemper", match: /kemper/i, name: "Kemper Profiler", category: "modeler", controls: "Profile, Gain, Bass, Middle, Treble, Presence, Definition, Clarity, Stomps A–D, X, Mod, Delay, Reverb" },
   { id: "headrush-core", verified: true, match: /headrush.*core/i, name: "HeadRush Core", category: "modeler", controls: "HeadRush and ReValver amp models, amp block params (Gain, Bass, Mid, Treble, Presence, Master...), cab blocks (Mic Type, Break Up, On-Axis), IR loader, FX blocks, clones, NAM captures" },
   { id: "headrush", verified: true, match: /headrush/i, name: "HeadRush Prime / Flex Prime / Pedalboard / Gigboard / MX5", category: "modeler", controls: "HeadRush amp models, Gain, Bass, Mid, Treble, Presence, Master, cab blocks (Mic Type, Break Up, On-Axis), IR loader, effect blocks" },
+  { id: "amplitube-5", verified: true, match: /amplitube/i, name: "IK Multimedia AmpliTube 5 (CS / SE / AmpliTube 5 / MAX)", category: "software", controls: "PC/Mac amp-sim software: stomps, amps (real panel knob names), VIR cabinets with two movable close mics, room mics and swappable speakers, rack effects; single path, 2-way/3-way splitter and parallel routing; edition decides which gear is available" },
   { id: "boss-gx", match: /\bgx-?\d|\bgt-?\d|gt-1000/i, name: "Boss GX-100 / GT-1000 / GT-1", category: "multi-fx", controls: "Preamp type, Gain, Bass, Middle, Treble, Presence, Level, FX1/FX2, Delay, Reverb" },
   { id: "zoom", match: /zoom/i, name: "Zoom G1X Four / G3n / G5n / G6", category: "multi-fx", controls: "Amp model (Gain, Tube, Bass, Middle, Treble, Presence, Level), effect chain" },
   { id: "mooer-ge", match: /mooer/i, name: "Mooer GE150 / GE200 / GE300", category: "multi-fx", controls: "Amp model (Gain, Bass, Mid, Treble, Presence, Master), Cab, FX/DS/Mod/Delay/Reverb" },
@@ -46,7 +47,7 @@ export const DEVICES: Device[] = [
 
 /** Prosesör / multi-efekt alanı için öneriler */
 export const PROCESSOR_SUGGESTIONS = [
-  "Yok", "HeadRush Core", "HeadRush Prime", "HeadRush Flex Prime", "HeadRush MX5", "Line 6 Helix", "Line 6 HX Stomp",
+  "Yok", "AmpliTube 5 MAX", "AmpliTube 5", "AmpliTube 5 SE", "AmpliTube 5 CS", "HeadRush Core", "HeadRush Prime", "HeadRush Flex Prime", "HeadRush MX5", "Line 6 Helix", "Line 6 HX Stomp",
   "Line 6 POD Go", "Neural DSP Quad Cortex", "Fractal Audio FM3", "Kemper Profiler", "Boss GX-100", "Boss GT-1000",
   "Zoom G6", "Mooer GE300", "Valeton GP-200", "Tone Master Pro",
 ];
@@ -144,7 +145,7 @@ export function migrateRig(raw: Record<string, unknown>): UserRig {
   if (!raw.amp && !raw.processor && typeof raw.deviceId === "string") {
     const old = raw.deviceId === "custom" ? String(raw.customDevice ?? "") : (findDevice(raw.deviceId)?.name ?? "");
     const d = findDevice(raw.deviceId);
-    if (d && (d.category === "modeler" || d.category === "multi-fx")) rig.processor = old;
+    if (d && (d.category === "modeler" || d.category === "multi-fx" || d.category === "software")) rig.processor = old;
     else rig.amp = old;
   }
   return rig;
