@@ -88,6 +88,18 @@ listeleri uygulamaya gömülüdür (`lib/devices/`):
 
 Diğer amfi ve prosesörler için kanal, model ve düğme bilgileri araştırma sırasında web'den bulunur.
 
+## Evdeki bilgisayarı uzaktan yönetmek
+
+Klasördeki **`Uzaktan-Kontrol.bat`** bu bilgisayarda bir Claude Code oturumu başlatır
+(`claude remote-control`). Pencere açık kaldıkça oturum telefondaki ve claude.ai'deki Claude Code
+listesinde görünür; oradan yazılan işler bu bilgisayarda, bu klasörde çalışır. Bilgisayar kapalıyken
+bulut oturumları kullanılır.
+
+- Önce Claude Code'u kur (PowerShell): `irm https://claude.ai/install.ps1 | iex`
+- Windows açılınca kendiliğinden başlasın istersen: `Win + R` → `shell:startup` → açılan klasöre
+  `Uzaktan-Kontrol.bat` için kısayol koy.
+- Bilgisayar uykuya geçerse oturum durur: Güç ayarlarında uykuyu kapat.
+
 ## Claude chat'te devam etmek
 
 `docs/claude-chat/` klasörü, projeyi claude.ai'de (Claude chat) sürdürmek için hazırlanmış devir
