@@ -102,6 +102,35 @@ export const PARTS = [
   { id: "full", label: "Genel ton" },
 ];
 
+export const TONE_TYPES = [
+  { id: "auto", label: "Otomatik" },
+  { id: "clean", label: "Temiz" },
+  { id: "distorted", label: "Distorsiyonlu" },
+] as const;
+export type ToneType = (typeof TONE_TYPES)[number]["id"];
+
+export const INSTRUMENTS = [
+  { id: "guitar", label: "Gitar" },
+  { id: "bass", label: "Bas" },
+] as const;
+export type Instrument = (typeof INSTRUMENTS)[number]["id"];
+
+/** Amfinin kendi üzerindeki efektler (rakiplerdeki "amp effects" seçimi) */
+export const AMP_EFFECTS = [
+  "Reverb",
+  "Delay",
+  "Chorus",
+  "Flanger",
+  "Phaser",
+  "Tremolo",
+  "Vibrato",
+  "Octave",
+  "Compressor",
+  "Wah",
+  "Booster / Overdrive",
+  "Noise gate",
+] as const;
+
 export interface UserRig {
   /** Amfi modeli, serbest metin (ör. "Marshall DSL40CR") */
   amp: string;
@@ -113,6 +142,8 @@ export interface UserRig {
   pickups: string;
   /** Her satıra bir pedal */
   pedals: string;
+  /** Amfinin dahili efektlerinden kullanılabilenler */
+  ampEffects: string[];
 }
 
 export const DEFAULT_RIG: UserRig = {
@@ -122,6 +153,7 @@ export const DEFAULT_RIG: UserRig = {
   guitar: "",
   pickups: "SSS",
   pedals: "",
+  ampEffects: [],
 };
 
 export function findDevice(id: string): Device | undefined {
@@ -142,6 +174,9 @@ export function migrateRig(raw: Record<string, unknown>): UserRig {
     if (typeof raw[k] === "string") rig[k] = raw[k] as string;
   }
   if (AMP_MODES.some((m) => m.id === raw.ampMode)) rig.ampMode = raw.ampMode as AmpMode;
+  if (Array.isArray(raw.ampEffects)) {
+    rig.ampEffects = raw.ampEffects.filter((e): e is string => (AMP_EFFECTS as readonly string[]).includes(e as string));
+  }
   if (!raw.amp && !raw.processor && typeof raw.deviceId === "string") {
     const old = raw.deviceId === "custom" ? String(raw.customDevice ?? "") : (findDevice(raw.deviceId)?.name ?? "");
     const d = findDevice(raw.deviceId);

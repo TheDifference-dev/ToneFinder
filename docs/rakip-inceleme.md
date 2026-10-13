@@ -105,23 +105,26 @@ yaratıyor: yapay zekâ yalnızca cihazda gerçekten olan düğmelerle cevap ver
 | BPM ve tonalite | yok | yok | **var** |
 | Amfiyi monitör / 4 kablo kullanımı | yok | yok | **var** |
 | AmpliTube gear'ının gerçek karşılıkları | yok | model listesi | **var** (416 gear) |
-| Şarkı otomatik tamamlama (kapak resmiyle) | Last.fm | iTunes | **yok** |
-| Riff/Solo + Temiz/Distorsiyon/Otomatik seçimi | var | var | kısmen (bölüm listesi var, ton türü yok) |
+| Şarkı otomatik tamamlama (kapak resmiyle) | Last.fm | iTunes | **var** (iTunes, yedek Deezer) |
+| Riff/Solo + Temiz/Distorsiyon/Otomatik seçimi | var | var | **var** (+ gitar/bas) |
 | Aranabilir ekipman veritabanı (seçmeli) | var | **en güçlüsü** | kısmen (serbest metin + 45 amfi, 29 gitar modeli kataloğu) |
 | Amfi türleri: düz / modlu / presetli, gerçek düğme aralıkları | yok | var | kısmen (kanal/mod/düğme adları var, aralık yok) |
-| Amfinin dahili efektleri seçimi | var | var | yok |
-| Pedal veritabanı | var | yok (görülmedi) | yok (serbest metin) |
-| Her ayara "kılavuzdan / çıkarım / kontrol et" etiketi | yok | yok | yok (ToneMatcher'da var) |
-| Zorluk puanı, akort, ton eşleşme yüzdesi | var | zorluk var | akort var; zorluk ve yüzde yok |
-| Sınırlamalar ve alternatifler bölümü | yok | var | "uyarlama notları" var |
-| Songsterr tab / backing track bağlantısı | yok | var | yok |
-| Sonucu önbelleğe alma (aynı şarkıyı tekrar araştırmama) | var | var | yok (her seferinde yeni araştırma) |
-| "Kulağa yanlış geliyor" geri bildirimi / yeniden araştır | yeniden araştır | var | yok |
+| Amfinin dahili efektleri seçimi | var | var | **var** |
+| Pedal veritabanı | var | yok (görülmedi) | **var** (60 pedal, düğme adlarıyla; listede yoksa serbest yazılır) |
+| Her ayara "kılavuzdan / çıkarım / kontrol et" etiketi | yok | yok | **var** (ToneMatcher'da da var) |
+| Zorluk puanı, akort, ton eşleşme yüzdesi | var | zorluk var | **var** (yüzde "tahmin" diye gösteriliyor) |
+| Sınırlamalar ve alternatifler bölümü | yok | var | **var** |
+| Songsterr tab / backing track bağlantısı | yok | var | **var** |
+| Sonucu önbelleğe alma (aynı şarkıyı tekrar araştırmama) | var | var | **var** (yerel) |
+| "Kulağa yanlış geliyor" geri bildirimi / yeniden araştır | yeniden araştır | var | **var** (ikisi de) |
 | Kaydedilmiş tonlar | bulut | bulut | **var** (yerel) |
 | Hesap, topluluk tonları, beğeni, trend | var | var | yok (web sürümünde gelir) |
-| Preset dosyası dışa aktarma (.hlx, .rig...) | yok (yalnız metin kopyala) | yok | yok — **kimsede yok, fark yaratır** |
+| Preset dosyası dışa aktarma (.hlx, .rig...) | yok (yalnız metin kopyala) | yok | "Ayarları kopyala" var; dosya dışa aktarma yok — **kimsede yok, fark yaratır** |
 | Ses analizi (şarkıyı dinleme) | yok | yok | yok |
 | Dil | İngilizce | 6 dil | Türkçe |
+
+> **13 Ekim 2026 güncellemesi:** aşağıdaki sıradan 1–5 ToneFinder'a eklendi; 6 kısmen (pedal kataloğu ve
+> amfi efektleri; amfi düğme aralıkları ve modlu/presetli amfi türleri henüz yok). 7–8 açık.
 
 ## ToneFinder için önerilen sıra
 

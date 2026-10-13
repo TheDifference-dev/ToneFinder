@@ -1,8 +1,10 @@
 import { z } from "zod";
-import { AMP_MODES, PARTS, PICKUP_CONFIGS } from "./gear";
+import { AMP_EFFECTS, AMP_MODES, INSTRUMENTS, PARTS, PICKUP_CONFIGS, TONE_TYPES } from "./gear";
 
 const partIds = PARTS.map((p) => p.id);
 const pickupIds = PICKUP_CONFIGS.map((p) => p.id);
+
+const ids = <T extends readonly { id: string }[]>(list: T) => list.map((x) => x.id) as [T[number]["id"], ...T[number]["id"][]];
 
 // İstemciden gelen istek
 export const ToneRequestSchema = z.object({
@@ -10,6 +12,12 @@ export const ToneRequestSchema = z.object({
   artist: z.string().trim().max(120).default(""),
   part: z.string().refine((v) => partIds.includes(v)),
   partDetail: z.string().trim().max(120).default(""),
+  instrument: z.enum(ids(INSTRUMENTS)).default("guitar"),
+  toneType: z.enum(ids(TONE_TYPES)).default("auto"),
+  /** true: kayıtlı orijinal araştırmayı kullanma, yeniden araştır */
+  fresh: z.boolean().default(false),
+  /** "Kulağa yanlış mı geliyor?" geri bildirimi: orijinal araştırma korunur, yalnız uyarlama yenilenir */
+  feedback: z.string().trim().max(600).default(""),
   rig: z
     .object({
       amp: z.string().trim().max(120).default(""),
@@ -18,6 +26,7 @@ export const ToneRequestSchema = z.object({
       guitar: z.string().trim().max(120).default(""),
       pickups: z.string().refine((v) => pickupIds.includes(v)),
       pedals: z.string().trim().max(600).default(""),
+      ampEffects: z.array(z.enum(AMP_EFFECTS)).max(AMP_EFFECTS.length).default([]),
     })
     .refine((r) => r.amp || r.processor, { message: "Amfi ya da prosesör gerekli" }),
 });
@@ -31,6 +40,15 @@ const Setting = z.object({
   note: z.string().describe("Kısa açıklama; gerekmiyorsa boş string"),
 });
 
+// Kullanıcının cihazında verilen her ayarın dayanağı (ToneMatcher'daki Cited / Inferred / Double-check gibi)
+const AdaptedSetting = Setting.extend({
+  basis: z
+    .enum(["cited", "inferred", "check"])
+    .describe(
+      "cited: cihaz referansı/profili, kılavuz ya da güvenilir kaynak bu ayarı doğrudan destekliyor; inferred: orijinal tondan ve cihazın yapısından çıkarıldı; check: belirsiz, kulakla kontrol edilmeli",
+    ),
+});
+
 const Certainty = z.enum(["confirmed", "likely", "guess"]).describe(
   "confirmed: kaynakta açıkça geçiyor; likely: güçlü dolaylı kanıt; guess: tahmin",
 );
@@ -41,6 +59,7 @@ export const ToneResultSchema = z.object({
     artist: z.string(),
     album_or_year: z.string(),
     tone_character: z.string().describe("Orijinal tonun 1–2 cümlelik Türkçe tarifi"),
+    tone_tags: z.array(z.string()).describe("Tonun 3–8 kısa Türkçe özelliği (ör. sıkı alt, orta frekans öne çıkık, parlak, kompresli)"),
     bpm: z.string().describe("Şarkının temposu (ör. 117 BPM); bilinmiyorsa boş string"),
     key: z.string().describe("Şarkının tonalitesi (ör. E minör); bilinmiyorsa boş string"),
   }),
@@ -73,7 +92,7 @@ export const ToneResultSchema = z.object({
           .enum(["amp", "processor", "pedal"])
           .describe("amp: kullanıcının amfisi; processor: kullanıcının prosesöründeki blok; pedal: kullanıcının fiziksel pedalı"),
         emulates: z.string().describe("Bu modelin taklit ettiği gerçek ekipman ve orijinal rig'de neyin yerine geçtiği"),
-        settings: z.array(Setting),
+        settings: z.array(AdaptedSetting),
         note: z.string(),
       }),
     )
@@ -91,6 +110,19 @@ export const ToneResultSchema = z.object({
       .describe("Orijinal gitar/manyetik ile kullanıcınınki arasındaki farkı kapatmak için yapılan her ayar ve nedeni"),
   }),
   playing_tips: z.array(z.string()),
+  difficulty: z.object({
+    score: z.number().int().describe("Bu bölümü çalmanın zorluğu: 1 çok kolay, 5 çok zor"),
+    factors: z.array(z.string()).describe("Zorluğu belirleyen teknikler (ör. hızlı alternate picking, legato, bending)"),
+  }),
+  match: z.object({
+    percent: z
+      .number()
+      .int()
+      .describe("0–100: kullanıcının ekipmanıyla orijinal tona ne kadar yaklaşılabileceğinin dürüst tahmini; ölçüm değil"),
+    reason: z.string().describe("Yüzdeyi düşüren ya da yükselten başlıca nedenler"),
+  }),
+  limitations: z.array(z.string()).describe("Kullanıcının ekipmanıyla tam yakalanamayacak yönler"),
+  alternatives: z.array(z.string()).describe("Farklı bir yaklaşım ya da ileride edinilebilecek ekipmanla alternatifler"),
   adaptation_notes: z.string().describe("Kullanıcının ekipmanına uyarlarken yapılan ödünler ve nasıl telafi edildiği"),
   confidence: z.enum(["high", "medium", "low"]),
   sources: z.array(z.object({ title: z.string(), url: z.string() })).describe("Araştırmada dayanılan kaynaklar"),
@@ -103,5 +135,12 @@ export type ToneEvent =
   | { type: "status"; message: string }
   | { type: "search"; query: string }
   | { type: "fetch"; url: string }
-  | { type: "result"; result: ToneResult }
+  | { type: "result"; result: ToneResult; meta: ToneMeta }
   | { type: "error"; error: string };
+
+export interface ToneMeta {
+  /** Orijinal araştırma önbellekten mi geldi */
+  cached: boolean;
+  /** Orijinal araştırmanın yapıldığı zaman (ms) */
+  researchedAt: number;
+}

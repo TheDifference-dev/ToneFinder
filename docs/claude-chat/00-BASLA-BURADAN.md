@@ -15,6 +15,7 @@ projenin bilgi alanına yükle:
 | `02-AMFI-KATALOGU.md` | Amfi kataloğu (markalar, modeller, kanallar, modlar, kontroller, monitör kullanımı) |
 | `03-GITAR-KATALOGU.md` | Gitar kataloğu (markalar, modeller, manyetikler, ton karakteri, seçici konumları) |
 | `04-CIHAZ-MODEL-LISTELERI.md` | HeadRush Core, Line 6 Helix ailesi, AmpliTube 5 (tüm gear + gerçek karşılıkları), Boss Katana model listeleri |
+| `05-PEDAL-KATALOGU.md` | Pedal kataloğu (60 yaygın pedal, panel düğme adları, karakter) |
 | `../rakip-inceleme.md` | ToneMuse, ToneAdapt, ToneMatcher, TonesMatch incelemesi, ToneFinder ile karşılaştırma, önerilen sıra, canlı inceleme promptu |
 | `ekran-goruntuleri/` | Uygulamanın ekran görüntüleri (2 ve 4 numaralılar sahte örnek veriyle doldurulmuş) |
 
@@ -118,6 +119,14 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
     TonesMatch ile birlikte incelendi; sonuç `docs/rakip-inceleme.md`. Hepsi aynı iki adımlı mantık
     (araştır + uyarla), OpenAI kullanıyorlar, ses analizi yok; asıl güçleri yapılandırılmış ekipman veritabanı.
     Kararlaştırılan yön: veritabanlarını kopyalamadan aynı özellikleri kendi kaynaklarımızla kurmak.
+14. **İstek:** "Bu sitelerdeki tüm özellikleri ToneFinder'a ekle." → Eklendi: şarkı arama (iTunes, olmazsa
+    Deezer; kapak resmiyle), popüler şarkı kısayolları, gitar/bas, Otomatik/Temiz/Distorsiyonlu ton türü,
+    amfinin kendi efektleri, pedal kataloğu ve pedal listesi (öneriyle), araştırmanın iki adıma bölünmesi
+    (orijinal ton bir kez araştırılır ve `~/.tonefinder/cache/` altında saklanır; sonra ekipmana uyarlanır),
+    her ayara kaynaklı/çıkarım/kontrol et etiketi, zorluk (1–5), yakınlık tahmini (%), ton etiketleri,
+    sınırlamalar, alternatifler, Songsterr ve backing track bağlantıları, "Ayarları kopyala",
+    "Kulağa yanlış mı geliyor? → Yeniden uyarla", "Orijinali yeniden araştır". Hesap, topluluk tonları ve
+    çok dil web sürümüne bırakıldı; preset dosyası dışa aktarma ayrı iş.
 12. **Bu dosyanın güncel hâli:** ToneFinder için ayrı bir Claude Chat sohbeti/projesi açılacak; gerektiğinde
     orada, gerektiğinde Claude Code'da çalışılacak.
 

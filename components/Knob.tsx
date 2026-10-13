@@ -23,7 +23,24 @@ function arc(fraction: number) {
   return `M ${x1} ${y1} A ${r} ${r} 0 ${large} 1 ${x2} ${y2}`;
 }
 
-export function Knob({ name, value, note }: { name: string; value: string; note?: string }) {
+const BASIS_LABEL = {
+  cited: { label: "kaynaklı", cls: "text-ok" },
+  inferred: { label: "çıkarım", cls: "text-ink-mute" },
+  check: { label: "kontrol et", cls: "text-warn" },
+} as const;
+
+export function Knob({
+  name,
+  value,
+  note,
+  basis,
+}: {
+  name: string;
+  value: string;
+  note?: string;
+  /** Ayarın dayanağı; eski kayıtlarda yok */
+  basis?: keyof typeof BASIS_LABEL;
+}) {
   const numeric = parseKnobValue(value);
 
   return (
@@ -47,6 +64,9 @@ export function Knob({ name, value, note }: { name: string; value: string; note?
       )}
       <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">{name}</div>
       {numeric !== null && <div className="font-mono text-xs font-semibold text-accent">{value}</div>}
+      {basis && BASIS_LABEL[basis] && (
+        <div className={`font-mono text-[9px] uppercase tracking-wide ${BASIS_LABEL[basis].cls}`}>{BASIS_LABEL[basis].label}</div>
+      )}
     </div>
   );
 }

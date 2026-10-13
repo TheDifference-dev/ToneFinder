@@ -1,8 +1,9 @@
 "use client";
 
 import { AMP_NAMES, matchAmp } from "@/lib/amps";
-import { AMP_MODES, matchDevice, PICKUP_CONFIGS, PROCESSOR_SUGGESTIONS, type AmpMode, type UserRig } from "@/lib/gear";
+import { AMP_EFFECTS, AMP_MODES, matchDevice, PICKUP_CONFIGS, PROCESSOR_SUGGESTIONS, type AmpMode, type UserRig } from "@/lib/gear";
 import { GUITAR_NAMES, guessPickups, matchGuitar } from "@/lib/guitars";
+import { matchPedal, PEDAL_NAMES, PEDAL_TYPES } from "@/lib/pedals";
 
 function Hint({ ok, children }: { ok: boolean; children: React.ReactNode }) {
   return <span className={`mt-1.5 block text-xs ${ok ? "text-ok" : "text-ink-mute"}`}>{children}</span>;
@@ -26,6 +27,63 @@ function GuitarHint({ text }: { text: string }) {
   const g = text.trim() ? matchGuitar(text) : undefined;
   if (!g) return null;
   return <Hint ok>✓ Katalogda: {g.brand} {g.model} — {g.pickupDetail}</Hint>;
+}
+
+function PedalHint({ text }: { text: string }) {
+  const p = text.trim() ? matchPedal(text) : undefined;
+  if (!p) return null;
+  return (
+    <Hint ok>
+      ✓ {PEDAL_TYPES[p.type]} · {p.controls.join(", ")}
+    </Hint>
+  );
+}
+
+function PedalList({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  const rows = value === "" ? [] : value.split("\n");
+  const set = (next: string[]) => onChange(next.join("\n"));
+  return (
+    <div>
+      <span className="hud-label mb-1.5 block">Pedallarım</span>
+      <ul className="space-y-2">
+        {rows.map((row, i) => (
+          <li key={i}>
+            <div className="flex gap-1.5">
+              <input
+                className="hud-input"
+                list="pedal-suggestions"
+                placeholder="ör. Ibanez TS9, Boss DD-8"
+                value={row}
+                onChange={(e) => set(rows.map((r, j) => (j === i ? e.target.value : r)))}
+                aria-label={`Pedal ${i + 1}`}
+              />
+              <button
+                type="button"
+                onClick={() => set(rows.filter((_, j) => j !== i))}
+                className="shrink-0 rounded-md border border-line px-2.5 text-sm text-ink-mute hover:border-bad hover:text-bad"
+                aria-label={`Pedal ${i + 1} sil`}
+              >
+                ✕
+              </button>
+            </div>
+            <PedalHint text={row} />
+          </li>
+        ))}
+      </ul>
+      <datalist id="pedal-suggestions">
+        {PEDAL_NAMES.map((p) => (
+          <option key={p} value={p} />
+        ))}
+      </datalist>
+      <button
+        type="button"
+        onClick={() => set([...rows, ""])}
+        className="mt-2 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-sm font-medium text-ink-soft hover:border-accent hover:text-accent"
+      >
+        + Pedal ekle
+      </button>
+    </div>
+  );
 }
 
 export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Partial<UserRig>) => void }) {
@@ -70,6 +128,30 @@ export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Pa
             <span className="mt-1.5 block rounded-md bg-accent-soft px-2.5 py-1.5 text-xs text-ink">{matchAmp(rig.amp)?.monitor}</span>
           )}
         </label>
+
+        {rig.amp.trim() && rig.ampMode !== "monitor" && (
+          <fieldset>
+            <legend className="hud-label mb-1.5 block">Amfinin kendi efektleri (varsa)</legend>
+            <div className="flex flex-wrap gap-1.5">
+              {AMP_EFFECTS.map((fx) => {
+                const on = rig.ampEffects.includes(fx);
+                return (
+                  <button
+                    type="button"
+                    key={fx}
+                    aria-pressed={on}
+                    onClick={() => onChange({ ampEffects: on ? rig.ampEffects.filter((e) => e !== fx) : [...rig.ampEffects, fx] })}
+                    className={`rounded-full border px-2.5 py-1 text-xs transition ${
+                      on ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft hover:border-line-strong"
+                    }`}
+                  >
+                    {fx}
+                  </button>
+                );
+              })}
+            </div>
+          </fieldset>
+        )}
 
         <label className="block">
           <span className="hud-label mb-1.5 block">Gitar prosesörü / multi-efekt (varsa)</span>
@@ -120,15 +202,7 @@ export function RigPanel({ rig, onChange }: { rig: UserRig; onChange: (patch: Pa
           </select>
         </label>
 
-        <label className="block">
-          <span className="hud-label mb-1.5 block">Pedallarım (her satıra bir tane)</span>
-          <textarea
-            className="hud-input min-h-20"
-            placeholder={"ör. Ibanez TS9\nDunlop Cry Baby\nBoss DD-8"}
-            value={rig.pedals}
-            onChange={(e) => onChange({ pedals: e.target.value })}
-          />
-        </label>
+        <PedalList value={rig.pedals} onChange={(pedals) => onChange({ pedals })} />
 
         {!rig.amp.trim() && !rig.processor.trim() && (
           <p className="rounded-md border border-warn/40 bg-warn/10 px-3 py-2 text-xs text-warn">

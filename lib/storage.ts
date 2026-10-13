@@ -1,11 +1,21 @@
 // Tarayıcıda saklanan kullanıcı verileri (ekipman profili ve kaydedilen tonlar).
 // localStorage erişilemezse (gizli pencere vb.) sessizce varsayılana döner.
 
-import { migrateRig, type UserRig } from "./gear";
-import type { ToneResult } from "./schema";
+import { migrateRig, type Instrument, type ToneType, type UserRig } from "./gear";
+import type { ToneMeta, ToneResult } from "./schema";
 
 const RIG_KEY = "tonefinder.rig";
 const SAVED_KEY = "tonefinder.saved";
+
+/** Sonucu üreten şarkı isteği (geri bildirimle yeniden uyarlamada aynısı gönderilir) */
+export interface SongQuery {
+  song: string;
+  artist: string;
+  part: string;
+  partDetail: string;
+  instrument: Instrument;
+  toneType: ToneType;
+}
 
 export interface SavedTone {
   id: string;
@@ -13,6 +23,10 @@ export interface SavedTone {
   deviceLabel: string;
   part: string;
   result: ToneResult;
+  /** Eski sürümlerde kaydedilen tonlarda yok */
+  query?: SongQuery;
+  artwork?: string;
+  meta?: ToneMeta;
 }
 
 function read<T>(key: string, fallback: T): T {

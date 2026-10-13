@@ -24,7 +24,8 @@ function errorMessage(error: unknown): string {
 }
 
 // Yanıt NDJSON olarak akar: araştırma adımları (status/search/fetch),
-// ardından tek bir result ya da error satırı.
+// ardından tek bir result ya da error satırı. Geri bildirimle yeniden uyarlamada
+// gövdedeki "previous" (önceki sonuç) yapay zekâya bağlam olarak verilir.
 export async function POST(request: Request) {
   if (!isSameOrigin(request)) return NextResponse.json({ error: "İzin verilmeyen istek." }, { status: 403 });
   const apiKey = await getApiKey();
@@ -42,8 +43,9 @@ export async function POST(request: Request) {
     async start(controller) {
       const emit = (event: ToneEvent) => controller.enqueue(encoder.encode(JSON.stringify(event) + "\n"));
       try {
-        const result = await findTone(new Anthropic({ apiKey: apiKey.key }), parsed.data, emit);
-        emit({ type: "result", result });
+        const previous = parsed.data.feedback ? (body as { previous?: unknown }).previous : undefined;
+        const { result, meta } = await findTone(new Anthropic({ apiKey: apiKey.key }), parsed.data, emit, previous);
+        emit({ type: "result", result, meta });
       } catch (error) {
         emit({ type: "error", error: errorMessage(error) });
       } finally {

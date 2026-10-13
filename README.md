@@ -15,6 +15,19 @@ Guitar Tone Finder — yapay zekâ destekli gitar ton bulucu (ToneAdapt benzeri)
    - gitarda hangi manyetik konumu, volume ve tone ayarı,
    - gitar farkı telafisi (ör. orijinalde Les Paul humbucker, sende Strat single-coil).
 
+Ayrıca:
+- **Şarkı arama:** yazdıkça öneri ve kapak resmi (iTunes, olmazsa Deezer; anahtarsız). Gitar/bas,
+  bölüm ve ton türü (Otomatik / Temiz / Distorsiyonlu) seçimi, popüler şarkı kısayolları.
+- **Ekipman:** amfinin kendi efektleri, pedal listesi (60 pedallık katalogdan öneri ve düğme adları).
+- **Sonuç:** her ayarın yanında dayanağı (kaynaklı / çıkarım / kontrol et), zorluk (1–5), ekipmanla ne kadar
+  yaklaşılabileceğinin tahmini (%), ton özellikleri, sınırlamalar, alternatifler, Songsterr tab ve backing
+  track bağlantıları, "Ayarları kopyala".
+- **Kayıtlı araştırma:** şarkının orijinal tonu bir kez araştırılır ve `~/.tonefinder/cache/` altında saklanır;
+  aynı şarkı tekrar sorulunca yalnız senin ekipmanına uyarlama yapılır (daha hızlı, daha ucuz, tutarlı).
+  "Orijinali yeniden araştır" ile yenilenir.
+- **"Kulağa yanlış mı geliyor?":** ayarları deneyip neyin farklı olduğunu yazarsın; orijinal araştırma korunur,
+  ayarlar geri bildirimine göre yeniden uyarlanır.
+
 ## Masaüstüne kurulum (bir kez)
 
 1. [Node.js](https://nodejs.org) **LTS** sürümünü kur.
@@ -124,7 +137,11 @@ npm run build:artifact
 | `components/ToneCard.tsx`, `components/Knob.tsx` | Sonuç kartı ve düğme görselleri |
 | `app/api/tone/route.ts` | Araştırma API'si; ilerlemeyi NDJSON olarak akıtır |
 | `app/api/settings/route.ts` | API anahtarını doğrulayıp yerel ayar dosyasına kaydeder |
-| `lib/research.ts` | İki adımlı yapay zekâ akışı: web araştırması + yapılandırılmış çıktı |
+| `lib/research.ts` | Yapay zekâ akışı: orijinal ton araştırması (önbellekli) → ekipmana uyarlama → yapılandırılmış çıktı |
+| `lib/cache.ts` | Orijinal ton araştırmalarının yerel kaydı |
+| `lib/pedals.ts` | Pedal kataloğu (tür, düğmeler, anahtarlar, karakter) |
+| `app/api/songs/route.ts` | Şarkı arama önerileri (iTunes / Deezer) |
+| `components/SongSearch.tsx` | Şarkı arama kutusu |
 | `lib/gear.ts` | Prosesör kataloğu, ekipman yapısı, amfi kullanım şekilleri |
 | `lib/amps.ts` | Amfi kataloğu (kanallar, modlar, kontroller, karakter, monitör notu) |
 | `lib/guitars.ts` | Gitar kataloğu, manyetik profilleri, seçici konumları, manyetik tahmini |

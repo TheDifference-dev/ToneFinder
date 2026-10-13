@@ -1,3 +1,4 @@
+import { songLinks } from "@/lib/format";
 import type { ToneResult } from "@/lib/schema";
 import { Knob } from "./Knob";
 
@@ -58,9 +59,37 @@ function Row({ label, certainty, children }: { label: string; certainty?: Certai
   );
 }
 
+function List({ items, mark = "▸" }: { items: string[]; mark?: string }) {
+  return (
+    <ul className="space-y-1.5 text-sm text-ink">
+      {items.map((t) => (
+        <li key={t} className="flex gap-2">
+          <span className="text-accent">{mark}</span>
+          <span>{t}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+function Stat({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-xs text-ink">
+      {label} <b className="text-accent">{children}</b>
+    </span>
+  );
+}
+
 export function ToneCard({ result }: { result: ToneResult }) {
   const conf = CONFIDENCE[result.confidence];
   const rig = result.original_rig;
+  const links = songLinks(result.song.title, result.song.artist);
+  // eski sürümde kaydedilen tonlarda bu alanlar yok
+  const difficulty = result.difficulty ? Math.min(5, Math.max(1, Math.round(result.difficulty.score))) : null;
+  const match = result.match ? Math.min(100, Math.max(0, Math.round(result.match.percent))) : null;
+  const tags = result.song.tone_tags ?? [];
+  const limitations = result.limitations ?? [];
+  const alternatives = result.alternatives ?? [];
 
   return (
     <div className="space-y-5">
@@ -78,20 +107,46 @@ export function ToneCard({ result }: { result: ToneResult }) {
           <span className={`rounded-full border px-3 py-1 font-mono text-xs font-semibold ${conf.cls}`}>{conf.label}</span>
         </div>
         <p className="relative mt-4 max-w-2xl text-ink">{result.song.tone_character}</p>
-        {(result.song.bpm || result.song.key) && (
-          <div className="relative mt-4 flex flex-wrap gap-2">
-            {result.song.bpm && (
-              <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-xs text-ink">
-                TEMPO <b className="text-accent">{result.song.bpm}</b>
+        {tags.length > 0 && (
+          <div className="relative mt-3 flex flex-wrap gap-1.5">
+            {tags.map((t) => (
+              <span key={t} className="rounded-full bg-accent-soft px-2.5 py-0.5 text-xs font-medium text-accent">
+                {t}
               </span>
-            )}
-            {result.song.key && (
-              <span className="rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-xs text-ink">
-                TON <b className="text-accent">{result.song.key}</b>
-              </span>
-            )}
+            ))}
           </div>
         )}
+        <div className="relative mt-4 flex flex-wrap items-center gap-2">
+          {result.song.bpm && <Stat label="TEMPO">{result.song.bpm}</Stat>}
+          {result.song.key && <Stat label="TON">{result.song.key}</Stat>}
+          {result.guitar.tuning && <Stat label="AKORT">{result.guitar.tuning}</Stat>}
+          {difficulty !== null && (
+            <Stat label="ZORLUK">
+              <span aria-label={`5 üzerinden ${difficulty}`}>
+                {"●".repeat(difficulty)}
+                <span className="text-line-strong">{"●".repeat(5 - difficulty)}</span>
+              </span>
+            </Stat>
+          )}
+          {match !== null && <Stat label="YAKINLIK (TAHMİN)">%{match}</Stat>}
+          <a
+            href={links.tab}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-line bg-white px-2.5 py-1 text-xs font-semibold text-ink hover:border-accent hover:text-accent"
+          >
+            Tab (Songsterr) ↗
+          </a>
+          <a
+            href={links.backing}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-md border border-line bg-white px-2.5 py-1 text-xs font-semibold text-ink hover:border-accent hover:text-accent"
+          >
+            Backing track ↗
+          </a>
+        </div>
+        {match !== null && result.match.reason && <p className="relative mt-2 text-xs text-ink-mute">{result.match.reason}</p>}
       </header>
 
       <Panel title="Senin ekipmanınla sinyal zinciri" code="01">
@@ -127,7 +182,7 @@ export function ToneCard({ result }: { result: ToneResult }) {
               <p className="mb-3 text-sm text-ink-soft">≈ {b.emulates}</p>
               <div className="flex flex-wrap gap-3">
                 {b.settings.map((s) => (
-                  <Knob key={s.name} {...s} />
+                  <Knob key={s.name} name={s.name} value={s.value} note={s.note} basis={s.basis} />
                 ))}
               </div>
               {b.note && <p className="mt-3 border-t border-line/70 pt-2 text-sm text-ink-soft">{b.note}</p>}
@@ -204,24 +259,41 @@ export function ToneCard({ result }: { result: ToneResult }) {
         {rig.recording_notes && <p className="mt-3 text-sm text-ink-soft">{rig.recording_notes}</p>}
       </Panel>
 
-      {(result.adaptation_notes || result.playing_tips.length > 0) && (
-        <Panel title="Uyarlama ve çalım" code="04">
+      {(result.adaptation_notes || limitations.length > 0 || alternatives.length > 0) && (
+        <Panel title="Uyarlama" code="04">
           {result.adaptation_notes && <p className="text-sm text-ink">{result.adaptation_notes}</p>}
-          {result.playing_tips.length > 0 && (
-            <ul className="mt-3 space-y-1.5 text-sm text-ink">
-              {result.playing_tips.map((t) => (
-                <li key={t} className="flex gap-2">
-                  <span className="text-accent">▸</span>
-                  <span>{t}</span>
-                </li>
-              ))}
-            </ul>
+          {limitations.length > 0 && (
+            <div className="mt-4">
+              <p className="hud-label mb-2 text-warn">Sınırlamalar</p>
+              <List items={limitations} mark="!" />
+            </div>
+          )}
+          {alternatives.length > 0 && (
+            <div className="mt-4">
+              <p className="hud-label mb-2">Alternatifler</p>
+              <List items={alternatives} />
+            </div>
           )}
         </Panel>
       )}
 
+      {(result.playing_tips.length > 0 || (result.difficulty?.factors.length ?? 0) > 0) && (
+        <Panel title="Çalım" code="05">
+          {result.difficulty?.factors.length > 0 && (
+            <div className="mb-3 flex flex-wrap gap-1.5">
+              {result.difficulty.factors.map((f) => (
+                <span key={f} className="rounded-md border border-line bg-paper px-2 py-0.5 text-xs text-ink">
+                  {f}
+                </span>
+              ))}
+            </div>
+          )}
+          {result.playing_tips.length > 0 && <List items={result.playing_tips} />}
+        </Panel>
+      )}
+
       {result.sources.length > 0 && (
-        <Panel title="Kaynaklar" code="05">
+        <Panel title="Kaynaklar" code="06">
           <ul className="space-y-1 text-sm">
             {result.sources.map((s) => (
               <li key={s.url} className="truncate">
