@@ -15,6 +15,7 @@ projenin bilgi alanına yükle:
 | `02-AMFI-KATALOGU.md` | Amfi kataloğu (markalar, modeller, kanallar, modlar, kontroller, monitör kullanımı) |
 | `03-GITAR-KATALOGU.md` | Gitar kataloğu (markalar, modeller, manyetikler, ton karakteri, seçici konumları) |
 | `04-CIHAZ-MODEL-LISTELERI.md` | HeadRush Core, Line 6 Helix ailesi, AmpliTube 5 (tüm gear + gerçek karşılıkları), Boss Katana model listeleri |
+| `../rakip-inceleme.md` | ToneMuse, ToneAdapt, ToneMatcher, TonesMatch incelemesi, ToneFinder ile karşılaştırma, önerilen sıra, canlı inceleme promptu |
 | `ekran-goruntuleri/` | Uygulamanın ekran görüntüleri (2 ve 4 numaralılar sahte örnek veriyle doldurulmuş) |
 
 Aşağıdaki **"Proje talimatı"** bölümünü projenin *Instructions* (talimat) alanına yapıştır.
@@ -112,6 +113,11 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
     oturumu açar; telefondan/claude.ai'den o oturum seçilip yazılır. Bilgisayar kapalıyken bulut oturumu
     kullanılır. Bu oturum ekranda tıklamaz (komut, dosya, kurulum yapar); AmpliTube penceresinde gezinmek
     Claude Chat işi. Windows'ta denenmedi.
+13. **İstek:** "Tunemuse.app ve ToneAdapt'i incele, mantığını öğren, aynısını ToneFinder'da yapacağız." →
+    `tunemuse.app` yok; doğrusu **ToneMuse (tonemuse.app)**, web uygulaması. ToneAdapt, ToneMatcher,
+    TonesMatch ile birlikte incelendi; sonuç `docs/rakip-inceleme.md`. Hepsi aynı iki adımlı mantık
+    (araştır + uyarla), OpenAI kullanıyorlar, ses analizi yok; asıl güçleri yapılandırılmış ekipman veritabanı.
+    Kararlaştırılan yön: veritabanlarını kopyalamadan aynı özellikleri kendi kaynaklarımızla kurmak.
 12. **Bu dosyanın güncel hâli:** ToneFinder için ayrı bir Claude Chat sohbeti/projesi açılacak; gerektiğinde
     orada, gerektiğinde Claude Code'da çalışılacak.
 
