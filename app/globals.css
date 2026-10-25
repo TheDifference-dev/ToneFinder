@@ -1,87 +1,87 @@
 @import "tailwindcss";
 
-/* Beyaz zemin + lacivert yazı, HUD (gösterge paneli) teması */
+/* Koyu "amfi paneli" teması: kömür zemin, tek amber vurgu (lamba ışığı), kategori renkli bloklar.
+   BOSS TONE STUDIO, Fender Tone, Marshall Gateway ve HeadRush'taki ortak düzenden esinlenildi;
+   hiçbir markanın logosu, görseli ya da renk kimliği kopyalanmadı. */
 @theme {
-  --color-paper: #f5f7fb;
-  --color-panel: #ffffff;
-  --color-ink: #0f2557;
-  --color-ink-soft: #3a4f7a;
-  --color-ink-mute: #7486a8;
-  --color-line: #d5ddec;
-  --color-line-strong: #a9b8d4;
-  --color-accent: #1d4ed8;
-  --color-accent-soft: #e6edfc;
-  --color-signal: #f59e0b;
-  --color-ok: #0f9d6b;
-  --color-warn: #b7791f;
-  --color-bad: #c2410c;
+  --color-paper: #111317;
+  --color-panel: #1a1d22;
+  --color-raised: #242932;
+  --color-ink: #eceef1;
+  --color-ink-soft: #b9bfc8;
+  --color-ink-mute: #8a919c;
+  --color-line: #343a44;
+  --color-line-strong: #4a515c;
+  --color-accent: #f2b544;
+  --color-accent-soft: #2e2817;
+  --color-signal: #f0803c;
+  --color-ok: #3ddc84;
+  --color-warn: #f0a040;
+  --color-bad: #f0605a;
+
+  /* sinyal zinciri kategori renkleri (yalnız kenarlık ve etiketlerde) */
+  --color-cat-guitar: #d9c39a;
+  --color-cat-dyn: #7cc24a;
+  --color-cat-drive: #f0803c;
+  --color-cat-amp: #f2b544;
+  --color-cat-mod: #4fb0e3;
+  --color-cat-delay: #b866cc;
+  --color-cat-reverb: #e95fb5;
+  --color-cat-cab: #9aa3ae;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  --font-display: "Barlow Condensed", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-condensed-500-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-condensed-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-condensed-600-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-condensed-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-700-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
   background-color: var(--color-paper);
-  /* ince HUD ızgarası */
-  background-image:
-    linear-gradient(rgba(15, 37, 87, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(15, 37, 87, 0.045) 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--color-ink);
   font-family: var(--font-sans);
 }
 
-/* Köşe braketli HUD paneli */
+/* Panel */
 .hud-panel {
   position: relative;
   background: var(--color-panel);
   border: 1px solid var(--color-line);
   border-radius: 10px;
-  box-shadow: 0 1px 2px rgba(15, 37, 87, 0.06), 0 8px 24px -16px rgba(15, 37, 87, 0.25);
-}
-.hud-panel::before,
-.hud-panel::after {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-color: var(--color-accent);
-  pointer-events: none;
-}
-.hud-panel::before {
-  top: -1px;
-  left: -1px;
-  border-top: 2px solid;
-  border-left: 2px solid;
-  border-top-left-radius: 10px;
-}
-.hud-panel::after {
-  bottom: -1px;
-  right: -1px;
-  border-bottom: 2px solid;
-  border-right: 2px solid;
-  border-bottom-right-radius: 10px;
 }
 
+/* Büyük harf, dar etiket */
 .hud-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-ink-mute);
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
 
 .hud-input {
   width: 100%;
   border-radius: 8px;
   border: 1px solid var(--color-line);
-  background: #fbfcfe;
-  padding: 0.55rem 0.75rem;
-  font-size: 0.875rem;
+  background: var(--color-raised);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.9rem;
   color: var(--color-ink);
   outline: none;
   transition: border-color 0.15s, box-shadow 0.15s;
@@ -91,7 +91,10 @@ body {
 }
 .hud-input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px var(--color-accent-soft);
+  box-shadow: 0 0 0 3px rgba(242, 181, 68, 0.15);
+}
+select.hud-input option {
+  background: var(--color-raised);
 }
 
 @keyframes scan {
@@ -102,9 +105,8 @@ body {
     background-position: 140% 0;
   }
 }
-/* Araştırma sırasında panelin üzerinden geçen tarama ışığı (köşe braketlerini bozmaz) */
 .hud-scan {
-  background-image: linear-gradient(90deg, transparent, rgba(29, 78, 216, 0.1), transparent);
+  background-image: linear-gradient(90deg, transparent, rgba(242, 181, 68, 0.08), transparent);
   background-size: 30% 100%;
   background-repeat: no-repeat;
   animation: scan 1.8s linear infinite;

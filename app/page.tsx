@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { OriginalCard } from "@/components/OriginalCard";
 import { RigPanel } from "@/components/RigPanel";
 import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
 import { toneText } from "@/lib/format";
 import { INSTRUMENTS, PARTS, TONE_TYPES, type Instrument, type ToneType, type UserRig } from "@/lib/gear";
-import type { PartialTone, ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
+import type { OriginalTone, PartialTone, ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
 import {
   createRigId,
   loadHistory,
@@ -23,51 +24,22 @@ import {
   type SongQuery,
 } from "@/lib/storage";
 
-// Boş ekranda tek tıkla doldurulan örnek şarkılar
+type View = "research" | "rig" | "library";
+
 const QUICK_PICKS: { song: string; artist: string; part: string; detail?: string }[] = [
   { song: "Master of Puppets", artist: "Metallica", part: "rhythm" },
   { song: "Sweet Child O' Mine", artist: "Guns N' Roses", part: "intro" },
   { song: "Comfortably Numb", artist: "Pink Floyd", part: "lead", detail: "son solo" },
-  { song: "Enter Sandman", artist: "Metallica", part: "intro" },
+  { song: "Back in Black", artist: "AC/DC", part: "intro" },
   { song: "Hotel California", artist: "Eagles", part: "lead" },
   { song: "Smells Like Teen Spirit", artist: "Nirvana", part: "rhythm" },
-  { song: "Pride and Joy", artist: "Stevie Ray Vaughan", part: "full" },
-  { song: "Back in Black", artist: "AC/DC", part: "intro" },
 ];
 
-function Chips<T extends string>({
-  label,
-  options,
-  value,
-  onChange,
-}: {
-  label: string;
-  options: readonly { id: T; label: string }[];
-  value: T;
-  onChange: (v: T) => void;
-}) {
-  return (
-    <div className="flex flex-wrap items-center gap-2" role="group" aria-label={label}>
-      <span className="hud-label mr-1">{label}</span>
-      {options.map((o) => (
-        <button
-          type="button"
-          key={o.id}
-          onClick={() => onChange(o.id)}
-          aria-pressed={value === o.id}
-          className={`rounded-md border px-3 py-1.5 text-sm font-medium transition ${
-            value === o.id ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft hover:border-line-strong hover:text-ink"
-          }`}
-        >
-          {o.label}
-        </button>
-      ))}
-    </div>
-  );
-}
+const PART_SHORT: Record<string, string> = { lead: "Solo", rhythm: "Ritim", intro: "Riff", clean: "Temiz", full: "Genel" };
+const TONE_SHORT: Record<string, string> = { auto: "Oto", clean: "Temiz", distorted: "Dist" };
 
 function rigLabel(rig: UserRig) {
-  const parts = [rig.amp, rig.processor].map((s) => s.trim()).filter((s) => s && !/^yok$/i.test(s));
+  const parts = [rig.amp, rig.processor].map((s) => s.trim()).filter((s) => s && !/^(yok|-)$/i.test(s));
   return parts.join(" + ") || "—";
 }
 
@@ -94,16 +66,6 @@ function hostOf(url: string) {
   }
 }
 
-function Head({ code, title }: { code: string; title: string }) {
-  return (
-    <div className="mb-4 flex items-center gap-3">
-      <span className="hud-label text-accent">{code}</span>
-      <h2 className="text-sm font-bold uppercase tracking-wider">{title}</h2>
-      <span className="h-px flex-1 bg-line" />
-    </div>
-  );
-}
-
 function download(name: string, text: string) {
   const url = URL.createObjectURL(new Blob([text], { type: "application/json" }));
   const a = Object.assign(document.createElement("a"), { href: url, download: name });
@@ -119,7 +81,56 @@ const fileSlug = (t: string) =>
     .replace(/^-|-$/g, "")
     .slice(0, 50) || "ton";
 
+const isAdapted = (r: PartialTone): r is ToneResult => Array.isArray(r.chain);
+
+function Segmented<T extends string>({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: readonly { id: T; label: string }[];
+  value: T;
+  onChange: (v: T) => void;
+}) {
+  return (
+    <div className="flex items-center gap-2" role="group" aria-label={label || undefined}>
+      {label && <span className="hud-label">{label}</span>}
+      <div className="flex overflow-hidden rounded-md border border-line">
+        {options.map((o) => (
+          <button
+            type="button"
+            key={o.id}
+            onClick={() => onChange(o.id)}
+            aria-pressed={value === o.id}
+            className={`border-l border-line px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide first:border-l-0 ${
+              value === o.id ? "bg-accent text-paper" : "bg-raised text-ink-soft hover:text-ink"
+            }`}
+          >
+            {o.label}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function Btn({ children, primary, className, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { primary?: boolean }) {
+  return (
+    <button
+      {...props}
+      className={`rounded-md px-4 py-2 font-display text-sm font-bold uppercase tracking-wider transition disabled:opacity-40 ${
+        primary ? "bg-accent text-paper hover:brightness-110" : "border border-line bg-raised text-ink hover:border-line-strong"
+      } ${className ?? ""}`}
+    >
+      {children}
+    </button>
+  );
+}
+
 export default function Home() {
+  const [view, setView] = useState<View>("research");
   const [rigStore, setRigStore] = useState<RigStore | null>(null);
   const [keyStatus, setKeyStatus] = useState<KeyStatus | null>(null);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -130,19 +141,21 @@ export default function Home() {
   const [instrument, setInstrument] = useState<Instrument>("guitar");
   const [toneType, setToneType] = useState<ToneType>("auto");
   const [artwork, setArtwork] = useState("");
-  const [feedback, setFeedback] = useState("");
-  const [copied, setCopied] = useState(false);
-  const [loading, setLoading] = useState(false);
+  const [busy, setBusy] = useState<"research" | "adapt" | null>(null);
+  const [progress, setProgress] = useState<string[]>([]);
   const [error, setError] = useState<string | null>(null);
-  const [log, setLog] = useState<ToneEvent[]>([]);
   const [current, setCurrent] = useState<SavedTone | null>(null);
-  const [partial, setPartial] = useState<PartialTone | null>(null);
   const [saved, setSaved] = useState<SavedTone[]>([]);
   const [history, setHistory] = useState<SavedTone[]>([]);
   const [listTab, setListTab] = useState<"saved" | "history">("saved");
+  const [feedback, setFeedback] = useState("");
+  const [copied, setCopied] = useState(false);
 
   const activeRig = rigStore?.rigs.find((r) => r.id === rigStore.activeId) ?? null;
   const rig = activeRig?.rig ?? null;
+  const canResearch = Boolean(keyStatus?.configured || keyStatus?.cli);
+  const canAdapt = Boolean(keyStatus?.configured);
+  const hasGear = Boolean(rig && (rig.amp.trim() || rig.processor.trim()));
 
   useEffect(() => {
     setRigStore(loadRigs());
@@ -151,7 +164,7 @@ export default function Home() {
     fetch("/api/settings")
       .then((r) => r.json() as Promise<KeyStatus>)
       .then(setKeyStatus)
-      .catch(() => setKeyStatus({ configured: false, source: null }));
+      .catch(() => setKeyStatus({ configured: false, source: null, cli: null }));
   }, []);
 
   function changeRigs(update: (store: RigStore) => RigStore) {
@@ -163,11 +176,9 @@ export default function Home() {
     });
   }
 
-  function updateRig(patch: Partial<UserRig>) {
-    changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, rig: { ...r.rig, ...patch } } : r)) }));
-  }
-
   const rigActions = {
+    onChange: (patch: Partial<UserRig>) =>
+      changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, rig: { ...r.rig, ...patch } } : r)) })),
     onRigSelect: (id: string) => changeRigs((st) => ({ ...st, activeId: id })),
     onRigCreate: () =>
       changeRigs((st) => {
@@ -175,8 +186,7 @@ export default function Home() {
         const id = createRigId();
         return { activeId: id, rigs: [...st.rigs, { id, name: `Rig ${st.rigs.length + 1}`, rig: structuredClone(base!.rig) }] };
       }),
-    onRigRename: (name: string) =>
-      changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, name } : r)) })),
+    onRigRename: (name: string) => changeRigs((st) => ({ ...st, rigs: st.rigs.map((r) => (r.id === st.activeId ? { ...r, name } : r)) })),
     onRigDelete: () =>
       changeRigs((st) => {
         const rigs = st.rigs.filter((r) => r.id !== st.activeId);
@@ -184,112 +194,97 @@ export default function Home() {
       }),
   };
 
-  const hasGear = Boolean(rig && (rig.amp.trim() || rig.processor.trim()));
+  function remember(tone: SavedTone) {
+    setCurrent(tone);
+    setHistory((prev) => {
+      const next = [tone, ...prev.filter((t) => t.id !== tone.id)].slice(0, 20);
+      storeHistory(next);
+      return next;
+    });
+  }
 
-  /** Araştırmayı başlatır. fresh: kayıtlı orijinal araştırmayı yenile; feedback: yalnız uyarlamayı yenile */
-  async function runTone(query: SongQuery, opts: { fresh?: boolean; feedback?: string; previous?: SavedTone; artwork?: string } = {}) {
-    if (!rig || !query.song.trim() || !hasGear) return;
-    setLoading(true);
+  /** NDJSON akışını okur; ilerlemeyi kısa satırlar olarak gösterir */
+  async function stream(
+    url: string,
+    body: unknown,
+    onOriginal: (o: OriginalTone, m: ToneMeta) => void,
+    onResult?: (r: ToneResult, m: ToneMeta) => void,
+  ) {
+    const res = await fetch(url, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+    if (!res.ok || !res.body) {
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+      throw new Error(data.error ?? "Bir şeyler ters gitti.");
+    }
+    for await (const e of readEvents(res.body)) {
+      if (e.type === "error") throw new Error(e.error);
+      if (e.type === "original") onOriginal(e.original, e.meta);
+      else if (e.type === "result") onResult?.(e.result, e.meta);
+      else if (e.type === "status") setProgress((p) => [...p, e.message]);
+      else if (e.type === "search") setProgress((p) => [...p, `Aranıyor: ${e.query}`]);
+      else if (e.type === "fetch") setProgress((p) => [...p, `Okunuyor: ${hostOf(e.url)}`]);
+    }
+  }
+
+  /** 1. adım: şarkının orijinal stüdyo tonunu araştır */
+  async function research(query: SongQuery, opts: { fresh?: boolean; artwork?: string } = {}) {
+    if (!query.song.trim()) return;
+    setBusy("research");
     setError(null);
-    setLog([]);
-    setPartial(null);
+    setProgress([]);
+    setFeedback("");
     try {
-      const res = await fetch("/api/tone", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...query,
-          rig,
-          fresh: opts.fresh ?? false,
-          feedback: opts.feedback ?? "",
-          previous: opts.feedback ? opts.previous?.result : undefined,
-        }),
+      let tone: SavedTone | null = null;
+      await stream("/api/research", { ...query, fresh: opts.fresh ?? false }, (original, meta) => {
+        tone = {
+          id: crypto.randomUUID(),
+          savedAt: Date.now(),
+          deviceLabel: "",
+          part: [PARTS.find((p) => p.id === query.part)?.label ?? query.part, query.partDetail.trim()].filter(Boolean).join(" · "),
+          result: original,
+          query,
+          artwork: opts.artwork ?? "",
+          meta,
+        };
       });
-      if (!res.ok || !res.body) {
-        const data = (await res.json().catch(() => ({}))) as { error?: string; code?: string };
-        if (data.code === "no_api_key") {
-          setKeyStatus({ configured: false, source: null });
-          return;
-        }
-        throw new Error(data.error ?? "Bir şeyler ters gitti.");
-      }
+      if (!tone) throw new Error("Bağlantı yarıda kesildi, lütfen tekrar dene.");
+      remember(tone);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Bir şeyler ters gitti.");
+    } finally {
+      setBusy(null);
+    }
+  }
 
+  /** 2. adım: orijinal tonu aktif rig'e uyarla (API anahtarı gerekir) */
+  async function adapt(withFeedback?: string) {
+    if (!current?.query || !rig || !hasGear) return;
+    const base = current;
+    setBusy("adapt");
+    setError(null);
+    setProgress([]);
+    try {
       let result: ToneResult | null = null;
-      let meta: ToneMeta | undefined;
-      for await (const event of readEvents(res.body)) {
-        if (event.type === "result") {
-          result = event.result;
-          meta = event.meta;
-        } else if (event.type === "original") setPartial(event.original);
-        else if (event.type === "error") throw new Error(event.error);
-        else setLog((prev) => [...prev, event]);
-      }
+      await stream(
+        "/api/tone",
+        { ...base.query, rig, feedback: withFeedback ?? "", previous: withFeedback ? base.result : undefined },
+        () => {},
+        (r) => (result = r),
+      );
       if (!result) throw new Error("Bağlantı yarıda kesildi, lütfen tekrar dene.");
-
       setFeedback("");
-      const tone: SavedTone = {
+      remember({
+        ...base,
         id: crypto.randomUUID(),
         savedAt: Date.now(),
-        deviceLabel: rigLabel(rig),
-        part: [PARTS.find((p) => p.id === query.part)?.label ?? query.part, query.partDetail.trim()].filter(Boolean).join(" · "),
         result,
-        query,
-        artwork: opts.artwork ?? opts.previous?.artwork ?? "",
-        meta,
+        deviceLabel: rigLabel(rig),
         rigName: activeRig?.name,
         pickupLayout: rig.pickups,
-      };
-      setCurrent(tone);
-      setHistory((prev) => {
-        const next = [tone, ...prev].slice(0, 20);
-        storeHistory(next);
-        return next;
       });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Bir şeyler ters gitti.");
     } finally {
-      setLoading(false);
-      setPartial(null);
-    }
-  }
-
-  function removeFrom(list: "saved" | "history", id: string) {
-    if (list === "saved") {
-      const next = saved.filter((s) => s.id !== id);
-      setSaved(next);
-      storeSaved(next);
-    } else {
-      const next = history.filter((s) => s.id !== id);
-      setHistory(next);
-      storeHistory(next);
-    }
-  }
-
-  async function importTone(file: File) {
-    const tone = parseToneFile(await file.text());
-    if (!tone) {
-      setError("Bu dosya bir ToneFinder ton dosyası değil.");
-      return;
-    }
-    const next = [tone, ...saved];
-    setSaved(next);
-    storeSaved(next);
-    setCurrent(tone);
-    setListTab("saved");
-  }
-
-  function findTone(e: React.FormEvent) {
-    e.preventDefault();
-    void runTone({ song, artist, part, partDetail, instrument, toneType }, { artwork });
-  }
-
-  async function copyTone(tone: SavedTone) {
-    try {
-      await navigator.clipboard.writeText(toneText(tone.result));
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setError("Panoya kopyalanamadı.");
+      setBusy(null);
     }
   }
 
@@ -300,83 +295,299 @@ export default function Home() {
     storeSaved(next);
   }
 
+  function removeFrom(list: "saved" | "history", id: string) {
+    const next = (list === "saved" ? saved : history).filter((s) => s.id !== id);
+    if (list === "saved") {
+      setSaved(next);
+      storeSaved(next);
+    } else {
+      setHistory(next);
+      storeHistory(next);
+    }
+  }
+
+  async function importTone(file: File) {
+    const tone = parseToneFile(await file.text());
+    if (!tone) return setError("Bu dosya bir ToneFinder ton dosyası değil.");
+    const next = [tone, ...saved];
+    setSaved(next);
+    storeSaved(next);
+    setCurrent(tone);
+    setView("research");
+  }
+
+  async function copyTone(tone: ToneResult) {
+    try {
+      await navigator.clipboard.writeText(toneText(tone));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setError("Panoya kopyalanamadı.");
+    }
+  }
+
   const isSaved = current ? saved.some((s) => s.id === current.id) : false;
-  const needsKey = keyStatus !== null && !keyStatus.configured;
+  const engine = keyStatus?.configured ? "API" : keyStatus?.cli ? "Claude Code" : null;
+  const adapted = current && isAdapted(current.result) ? current.result : null;
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-6 sm:py-8">
-      <header className="hud-panel mb-6 flex flex-wrap items-center gap-x-6 gap-y-3 px-5 py-4">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-ink" aria-hidden>
-            <svg width="22" height="22" viewBox="0 0 22 22">
-              <circle cx="11" cy="11" r="9" fill="none" stroke="#fff" strokeWidth="2" />
-              <line x1="11" y1="11" x2="16" y2="6" stroke="#f59e0b" strokeWidth="2.5" strokeLinecap="round" />
+    <div className="min-h-screen">
+      <header className="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur">
+        <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4 sm:gap-6">
+          <div className="flex items-center gap-2">
+            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden>
+              <circle cx="11" cy="11" r="9" fill="none" stroke="var(--color-line-strong)" strokeWidth="2" />
+              <path d="M5.3 16.7 A 8 8 0 1 1 16.7 16.7" fill="none" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" />
+              <line x1="11" y1="11" x2="15" y2="6.5" stroke="var(--color-ink)" strokeWidth="2" strokeLinecap="round" />
             </svg>
-          </div>
-          <div>
-            <h1 className="text-xl font-extrabold tracking-tight text-ink">
+            <span className="hidden font-display text-xl font-bold tracking-wide text-ink sm:inline">
               TONE<span className="text-accent">FINDER</span>
-            </h1>
-            <p className="hud-label">Yapay zekâ ton motoru</p>
+            </span>
           </div>
-        </div>
-        <p className="hidden max-w-md text-sm text-ink-soft md:block">
-          Ünlü bir şarkının stüdyo kaydında kullanılan ekipmanı bulur, o tonu senin amfine, gitarına ve pedallarına göre
-          ayarlara çevirir.
-        </p>
-        <div className="ml-auto flex flex-wrap items-center gap-2">
-          <span className="max-w-64 truncate rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
-            RİG <b className="text-accent">{rig ? rigLabel(rig) : "—"}</b>
-          </span>
-          <span className="flex items-center gap-1.5 rounded-md border border-line bg-paper px-2.5 py-1 font-mono text-[11px] text-ink">
-            <span className={`h-2 w-2 rounded-full ${loading ? "animate-pulse bg-signal" : needsKey ? "bg-bad" : "bg-ok"}`} />
-            {loading ? "ARAŞTIRIYOR" : needsKey ? "KURULUM GEREKLİ" : "HAZIR"}
-          </span>
-          <button
-            type="button"
-            onClick={() => setSettingsOpen((v) => !v)}
-            className="rounded-md border border-line bg-white px-2.5 py-1 font-mono text-[11px] font-semibold text-ink hover:border-accent hover:text-accent"
-          >
-            AYARLAR
-          </button>
+          <nav className="flex h-full items-stretch" aria-label="Bölümler">
+            {(
+              [
+                ["research", "Araştır"],
+                ["rig", "Ekipmanım"],
+                ["library", "Tonlarım"],
+              ] as const
+            ).map(([id, label]) => (
+              <button
+                key={id}
+                onClick={() => setView(id)}
+                aria-current={view === id ? "page" : undefined}
+                className={`border-b-2 px-2.5 font-display text-sm font-semibold uppercase tracking-wider transition sm:px-3 ${
+                  view === id ? "border-accent text-ink" : "border-transparent text-ink-mute hover:text-ink"
+                }`}
+              >
+                {label}
+              </button>
+            ))}
+          </nav>
+          <div className="ml-auto flex items-center gap-2">
+            <span className="hidden items-center gap-1.5 font-display text-xs font-semibold uppercase tracking-wider text-ink-mute sm:flex">
+              <span className={`h-2 w-2 rounded-full ${busy ? "animate-pulse bg-accent" : engine ? "bg-ok" : "bg-bad"}`} />
+              {busy ? "Çalışıyor" : (engine ?? "Kurulum gerekli")}
+            </span>
+            <button
+              onClick={() => setSettingsOpen(true)}
+              className="rounded-md p-2 text-ink-mute hover:bg-raised hover:text-ink"
+              aria-label="Ayarlar"
+              title="Ayarlar"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
+                <circle cx="12" cy="12" r="3" />
+                <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </header>
 
-      <div className="grid gap-6 lg:grid-cols-[340px_1fr]">
-        <aside className="space-y-6">
-          {rig && rigStore && (
-            <RigPanel
-              rig={rig}
-              onChange={updateRig}
-              rigs={rigStore.rigs}
-              activeId={rigStore.activeId}
-              {...rigActions}
-              canIdentify={keyStatus?.configured ?? false}
-            />
-          )}
+      {settingsOpen && keyStatus && (
+        <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/60 p-4 pt-20" onClick={() => setSettingsOpen(false)}>
+          <div className="w-full max-w-lg" onClick={(e) => e.stopPropagation()}>
+            <SettingsPanel status={keyStatus} onSaved={setKeyStatus} onClose={() => setSettingsOpen(false)} />
+          </div>
+        </div>
+      )}
 
+      <main className="mx-auto max-w-5xl space-y-5 px-4 py-6">
+        {error && (
+          <div className="rounded-lg border border-bad/50 bg-bad/10 px-4 py-3 text-sm text-ink" role="alert">
+            {error}
+          </div>
+        )}
+
+        {view === "research" && (
+          <>
+            <form
+              className="hud-panel space-y-4 p-5"
+              onSubmit={(e) => {
+                e.preventDefault();
+                void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
+              }}
+            >
+              <SongSearch
+                song={song}
+                artist={artist}
+                artwork={artwork}
+                onChange={(p) => {
+                  if (p.song !== undefined) setSong(p.song);
+                  if (p.artist !== undefined) setArtist(p.artist);
+                  if (p.artwork !== undefined) setArtwork(p.artwork);
+                }}
+              />
+              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+                <Segmented label="Bölüm" options={PARTS.map((p) => ({ id: p.id, label: PART_SHORT[p.id] ?? p.label }))} value={part} onChange={setPart} />
+                <Segmented label="Ton" options={TONE_TYPES.map((t) => ({ id: t.id, label: TONE_SHORT[t.id] }))} value={toneType} onChange={setToneType} />
+                <Segmented label="" options={INSTRUMENTS} value={instrument} onChange={setInstrument} />
+              </div>
+              <div className="flex flex-col gap-3 sm:flex-row">
+                <input
+                  className="hud-input"
+                  placeholder="Hangi bölüm? (isteğe bağlı, ör. 2. solo)"
+                  value={partDetail}
+                  onChange={(e) => setPartDetail(e.target.value)}
+                  aria-label="Bölüm detayı"
+                />
+                <Btn primary type="submit" disabled={busy !== null || !song.trim() || !canResearch} className="shrink-0 px-8">
+                  {busy === "research" ? "Araştırılıyor…" : "Araştır"}
+                </Btn>
+              </div>
+              {keyStatus && !canResearch && (
+                <p className="text-sm text-warn">
+                  Araştırma için bu bilgisayarda Claude Code gerekli.{" "}
+                  <button type="button" className="underline" onClick={() => setSettingsOpen(true)}>
+                    Nasıl?
+                  </button>
+                </p>
+              )}
+            </form>
+
+            {!current && !busy && (
+              <div className="flex flex-wrap gap-1.5">
+                {QUICK_PICKS.map((q) => (
+                  <button
+                    key={q.song}
+                    onClick={() => {
+                      setSong(q.song);
+                      setArtist(q.artist);
+                      setPart(q.part);
+                      setPartDetail(q.detail ?? "");
+                      setArtwork("");
+                    }}
+                    className="rounded-full border border-line px-3 py-1 text-xs text-ink-soft hover:border-accent hover:text-accent"
+                  >
+                    {q.song} · {q.artist}
+                  </button>
+                ))}
+              </div>
+            )}
+
+            {busy && (
+              <div className="hud-panel hud-scan flex items-center gap-3 px-5 py-4" aria-live="polite">
+                <span className="h-2.5 w-2.5 shrink-0 animate-pulse rounded-full bg-accent" />
+                <span className="min-w-0 flex-1 truncate text-sm text-ink-soft">{progress.at(-1) ?? "Başlıyor…"}</span>
+                <span className="font-display text-xs uppercase tracking-wider text-ink-mute">{busy === "research" ? "~1–2 dk" : "~1–3 dk"}</span>
+              </div>
+            )}
+
+            {current && busy !== "research" && (
+              <>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="hud-label mr-auto">
+                    {current.part}
+                    {current.meta?.cached && " · kayıttan"}
+                  </span>
+                  <Btn type="button" onClick={() => toggleSave(current)}>
+                    {isSaved ? "★ Kayıtlı" : "☆ Kaydet"}
+                  </Btn>
+                  <Btn type="button" onClick={() => download(`${fileSlug(current.result.song.title)}.tonefinder.json`, toneFile(current))}>
+                    Dışa aktar
+                  </Btn>
+                  {current.query && (
+                    <Btn
+                      type="button"
+                      disabled={busy !== null || !canResearch}
+                      onClick={() => current.query && research(current.query, { fresh: true, artwork: current.artwork })}
+                    >
+                      Yeniden araştır
+                    </Btn>
+                  )}
+                </div>
+
+                <OriginalCard key={`o-${current.id}`} tone={current.result} artwork={current.artwork} />
+
+                <section className="hud-panel flex flex-wrap items-center gap-3 p-5">
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-display text-lg font-bold uppercase tracking-wide text-ink">2 · Ekipmanına çevir</h3>
+                    <p className="truncate text-sm text-ink-mute">
+                      {activeRig?.name}: {rig ? rigLabel(rig) : "—"}
+                      {rig?.guitar && ` · ${rig.guitar}`}
+                    </p>
+                  </div>
+                  <Btn type="button" onClick={() => setView("rig")}>
+                    Ekipman
+                  </Btn>
+                  <Btn
+                    primary
+                    type="button"
+                    disabled={busy !== null || !canAdapt || !hasGear || !current.query}
+                    onClick={() => adapt()}
+                    title={!canAdapt ? "Bu adım için API anahtarı gerekli" : undefined}
+                  >
+                    {busy === "adapt" ? "Çevriliyor…" : adapted ? "Yeniden çevir" : "Çevir"}
+                  </Btn>
+                  {!canAdapt && (
+                    <p className="w-full text-xs text-ink-mute">
+                      Şimdilik kapalı: bu adım API anahtarı istiyor.{" "}
+                      <button className="underline" onClick={() => setSettingsOpen(true)}>
+                        Ayarlar
+                      </button>
+                    </p>
+                  )}
+                </section>
+
+                {adapted && busy !== "adapt" && (
+                  <>
+                    <div className="flex justify-end">
+                      <Btn type="button" onClick={() => copyTone(adapted)}>
+                        {copied ? "✓ Kopyalandı" : "Ayarları kopyala"}
+                      </Btn>
+                    </div>
+                    <ToneCard key={`a-${current.id}`} result={adapted} pickupLayout={current.pickupLayout} />
+                    <form
+                      className="hud-panel flex flex-col gap-3 p-5 sm:flex-row"
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        if (feedback.trim()) void adapt(feedback.trim());
+                      }}
+                    >
+                      <input
+                        className="hud-input"
+                        maxLength={600}
+                        value={feedback}
+                        onChange={(e) => setFeedback(e.target.value)}
+                        placeholder="Kulağa yanlış mı geliyor? Ne farklı? (ör. çok bulanık)"
+                        aria-label="Geri bildirim"
+                      />
+                      <Btn type="submit" disabled={busy !== null || !canAdapt || !feedback.trim()} className="shrink-0">
+                        Yeniden uyarla
+                      </Btn>
+                    </form>
+                  </>
+                )}
+              </>
+            )}
+          </>
+        )}
+
+        {view === "rig" && rig && rigStore && (
+          <RigPanel rig={rig} rigs={rigStore.rigs} activeId={rigStore.activeId} {...rigActions} canIdentify={canAdapt} />
+        )}
+
+        {view === "library" && (
           <section className="hud-panel p-5">
-            <Head code="MEM" title="Tonlarım" />
-            <div className="mb-3 flex items-center gap-1.5" role="tablist">
+            <div className="mb-4 flex items-center gap-2">
               {(
                 [
-                  ["saved", `Kayıtlı (${saved.length})`],
-                  ["history", `Geçmiş (${history.length})`],
+                  ["saved", `Kayıtlı ${saved.length}`],
+                  ["history", `Geçmiş ${history.length}`],
                 ] as const
               ).map(([id, label]) => (
                 <button
                   key={id}
-                  role="tab"
-                  aria-selected={listTab === id}
                   onClick={() => setListTab(id)}
-                  className={`rounded-md border px-2.5 py-1 text-xs font-semibold ${
-                    listTab === id ? "border-ink bg-ink text-white" : "border-line bg-white text-ink-soft"
+                  aria-pressed={listTab === id}
+                  className={`rounded-md px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide ${
+                    listTab === id ? "bg-accent text-paper" : "text-ink-soft hover:text-ink"
                   }`}
                 >
                   {label}
                 </button>
               ))}
-              <label className="ml-auto cursor-pointer rounded-md border border-line px-2.5 py-1 text-xs font-semibold text-ink-soft hover:border-accent hover:text-accent">
+              <label className="ml-auto cursor-pointer rounded-md border border-line px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide text-ink-soft hover:border-accent hover:text-accent">
                 İçe aktar
                 <input
                   type="file"
@@ -391,29 +602,36 @@ export default function Home() {
               </label>
             </div>
             {(listTab === "saved" ? saved : history).length === 0 ? (
-              <p className="text-sm text-ink-mute">
-                {listTab === "saved" ? "Henüz kayıtlı ton yok." : "Son 20 sonuç burada tutulur."}
-              </p>
+              <p className="py-8 text-center text-sm text-ink-mute">Henüz bir şey yok.</p>
             ) : (
-              <ul className="space-y-1.5">
+              <ul className="grid gap-2 sm:grid-cols-2">
                 {(listTab === "saved" ? saved : history).map((s) => (
-                  <li key={s.id} className="group flex items-stretch gap-1">
+                  <li key={s.id} className="group flex items-stretch rounded-lg border border-line bg-raised">
                     <button
-                      onClick={() => setCurrent(s)}
-                      className={`min-w-0 flex-1 rounded-lg border px-3 py-2 text-left text-sm transition ${
-                        current?.id === s.id ? "border-accent bg-accent-soft" : "border-transparent hover:border-line hover:bg-paper"
-                      }`}
+                      onClick={() => {
+                        setCurrent(s);
+                        setView("research");
+                      }}
+                      className="flex min-w-0 flex-1 items-center gap-3 p-3 text-left"
                     >
-                      <div className="truncate font-semibold text-ink">{s.result.song.title}</div>
-                      <div className="truncate text-xs text-ink-mute">
-                        {s.result.song.artist} · {s.part} · {s.rigName ?? s.deviceLabel}
-                      </div>
+                      {s.artwork ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img src={s.artwork} alt="" className="h-11 w-11 shrink-0 rounded object-cover" />
+                      ) : (
+                        <span className="h-11 w-11 shrink-0 rounded bg-panel" />
+                      )}
+                      <span className="min-w-0">
+                        <span className="block truncate font-semibold text-ink">{s.result.song.title}</span>
+                        <span className="block truncate text-xs text-ink-mute">
+                          {s.result.song.artist} · {s.part}
+                          {isAdapted(s.result) ? ` · ${s.rigName ?? s.deviceLabel}` : " · araştırma"}
+                        </span>
+                      </span>
                     </button>
                     <button
                       onClick={() => removeFrom(listTab, s.id)}
-                      className="shrink-0 rounded-md px-2 text-ink-mute opacity-60 hover:bg-paper hover:text-bad group-hover:opacity-100"
+                      className="px-3 text-ink-mute opacity-50 hover:text-bad group-hover:opacity-100"
                       aria-label={`${s.result.song.title} sil`}
-                      title="Listeden sil"
                     >
                       ✕
                     </button>
@@ -422,204 +640,8 @@ export default function Home() {
               </ul>
             )}
           </section>
-        </aside>
-
-        <div className="space-y-6">
-          {keyStatus && (needsKey || settingsOpen) && (
-            <SettingsPanel
-              status={keyStatus}
-              onSaved={(s) => {
-                setKeyStatus(s);
-                if (s.configured) setSettingsOpen(false);
-              }}
-              onClose={() => setSettingsOpen(false)}
-            />
-          )}
-
-          <form onSubmit={findTone} className="hud-panel p-5">
-            <Head code="SRC" title="Şarkı" />
-            <SongSearch
-              song={song}
-              artist={artist}
-              artwork={artwork}
-              onChange={(p) => {
-                if (p.song !== undefined) setSong(p.song);
-                if (p.artist !== undefined) setArtist(p.artist);
-                if (p.artwork !== undefined) setArtwork(p.artwork);
-              }}
-            />
-            <div className="mt-3 flex flex-wrap items-center gap-x-5 gap-y-3">
-              <Chips label="Enstrüman" options={INSTRUMENTS} value={instrument} onChange={setInstrument} />
-              <Chips label="Ton" options={TONE_TYPES} value={toneType} onChange={setToneType} />
-            </div>
-            <div className="mt-3">
-              <Chips label="Bölüm" options={PARTS} value={part} onChange={setPart} />
-            </div>
-            <div className="mt-3 flex flex-col gap-3 sm:flex-row">
-              <input
-                className="hud-input"
-                placeholder="Hangi bölüm? (isteğe bağlı) — ör. Kirk Hammett'ın 2. solosu, giriş riffi"
-                value={partDetail}
-                onChange={(e) => setPartDetail(e.target.value)}
-                aria-label="Bölüm detayı"
-              />
-              <button
-                type="submit"
-                disabled={loading || !song.trim() || !hasGear || needsKey}
-                className="shrink-0 rounded-lg bg-accent px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white shadow-sm transition hover:bg-ink disabled:opacity-40"
-              >
-                {loading ? "Aranıyor…" : "Tonu bul"}
-              </button>
-            </div>
-            {!current && !loading && (
-              <div className="mt-4 flex flex-wrap items-center gap-1.5">
-                <span className="hud-label mr-1">Popüler</span>
-                {QUICK_PICKS.map((q) => (
-                  <button
-                    type="button"
-                    key={q.song}
-                    onClick={() => {
-                      setSong(q.song);
-                      setArtist(q.artist);
-                      setPart(q.part);
-                      setPartDetail(q.detail ?? "");
-                      setArtwork("");
-                    }}
-                    className="rounded-full border border-line bg-paper px-2.5 py-1 text-xs text-ink-soft hover:border-accent hover:text-accent"
-                  >
-                    {q.song} · {q.artist}
-                  </button>
-                ))}
-              </div>
-            )}
-          </form>
-
-          {error && (
-            <div className="hud-panel border-bad/40 p-4 text-sm text-bad" role="alert">
-              <span className="hud-label mr-2 text-bad">HATA</span>
-              {error}
-            </div>
-          )}
-
-          {loading && (
-            <div className="hud-panel hud-scan p-5" aria-live="polite">
-              <p className="mb-3 font-semibold text-ink">
-                {partial ? "Uyarlanıyor…" : "Araştırılıyor…"}{" "}
-                <span className="font-normal text-ink-soft">— genelde 1–3 dakika sürer</span>
-              </p>
-              <ul className={`${partial ? "max-h-24" : "max-h-72"} space-y-1 overflow-y-auto font-mono text-xs`}>
-                {log.map((e, i) => (
-                  <li key={i} className="truncate text-ink-soft">
-                    {e.type === "status" && <span className="font-semibold text-ink">» {e.message}</span>}
-                    {e.type === "search" && <>⌕ {e.query}</>}
-                    {e.type === "fetch" && <>↳ {hostOf(e.url)} okunuyor</>}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
-
-          {loading && partial && <ToneCard result={partial} pending />}
-
-          {current && !loading && (
-            <div>
-              <div className="mb-3 flex flex-wrap items-center gap-2">
-                <span className="hud-label mr-auto">
-                  {current.part} · {current.deviceLabel}
-                </span>
-                <button
-                  onClick={() => download(`${fileSlug(current.result.song.title)}.tonefinder.json`, toneFile(current))}
-                  className="rounded-md border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink transition hover:border-accent"
-                  title="Başka bir bilgisayara ya da arkadaşına göndermek için dosya olarak indir"
-                >
-                  Dışa aktar
-                </button>
-                <button
-                  onClick={() => copyTone(current)}
-                  className="rounded-md border border-line bg-white px-3 py-1.5 text-sm font-semibold text-ink transition hover:border-accent"
-                >
-                  {copied ? "✓ Kopyalandı" : "Ayarları kopyala"}
-                </button>
-                <button
-                  onClick={() => toggleSave(current)}
-                  className={`rounded-md border px-3 py-1.5 text-sm font-semibold transition ${
-                    isSaved ? "border-accent bg-accent-soft text-accent" : "border-line bg-white text-ink hover:border-accent"
-                  }`}
-                >
-                  {isSaved ? "★ Kaydedildi" : "☆ Kaydet"}
-                </button>
-              </div>
-              {current.meta && (
-                <p className="mb-3 rounded-md border border-line bg-paper px-3 py-2 text-xs text-ink-soft">
-                  {current.meta.cached ? "Orijinal ton araştırması kayıttan kullanıldı" : "Orijinal ton araştırması yapıldı"} (
-                  {new Date(current.meta.researchedAt).toLocaleDateString("tr-TR")}); ayarlar şu anki ekipmanına göre uyarlandı.
-                  {current.query && (
-                    <button
-                      type="button"
-                      disabled={loading || needsKey}
-                      onClick={() => current.query && runTone(current.query, { fresh: true, previous: current })}
-                      className="ml-2 font-semibold text-accent hover:underline disabled:opacity-40"
-                    >
-                      Orijinali yeniden araştır
-                    </button>
-                  )}
-                </p>
-              )}
-              <ToneCard key={current.id} result={current.result} pickupLayout={current.pickupLayout} />
-              {current.query && (
-                <section className="hud-panel mt-5 p-5">
-                  <Head code="FDB" title="Kulağa yanlış mı geliyor?" />
-                  <p className="mb-3 text-sm text-ink-soft">
-                    Ayarları denedikten sonra neyin farklı olduğunu yaz (ör. &quot;çok bulanık&quot;, &quot;yeterince distorsiyon yok&quot;,
-                    &quot;tiz batıyor&quot;). Orijinal araştırma korunur, yalnız ayarlar yeniden uyarlanır.
-                  </p>
-                  <form
-                    onSubmit={(e) => {
-                      e.preventDefault();
-                      if (current.query && feedback.trim()) void runTone(current.query, { feedback: feedback.trim(), previous: current });
-                    }}
-                    className="flex flex-col gap-3 sm:flex-row"
-                  >
-                    <textarea
-                      className="hud-input min-h-16"
-                      maxLength={600}
-                      value={feedback}
-                      onChange={(e) => setFeedback(e.target.value)}
-                      placeholder="Ne farklı geliyor?"
-                      aria-label="Geri bildirim"
-                    />
-                    <button
-                      type="submit"
-                      disabled={loading || needsKey || !feedback.trim()}
-                      className="shrink-0 self-end rounded-lg bg-ink px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-white transition hover:bg-accent disabled:opacity-40"
-                    >
-                      Yeniden uyarla
-                    </button>
-                  </form>
-                </section>
-              )}
-            </div>
-          )}
-
-          {!current && !loading && !error && (
-            <div className="hud-panel p-8">
-              <p className="hud-label mb-3 text-center">Nasıl çalışır</p>
-              <ol className="mx-auto grid max-w-xl gap-3 text-ink-soft">
-                <li>
-                  <b className="font-mono text-accent">1.</b> Solda amfini, varsa prosesörünü, gitarını ve pedallarını yaz.
-                </li>
-                <li>
-                  <b className="font-mono text-accent">2.</b> Şarkıyı ve bölümü seç (ör. Solo, &quot;2. solo&quot;).
-                </li>
-                <li>
-                  <b className="font-mono text-accent">3.</b> ToneFinder stüdyo kaydında kullanılan gitarı, amfiyi, kabini,
-                  mikrofonu ve pedalları araştırır; sonra senin amfi, gitar ve pedal ayarlarını düğme düğme verir.
-                </li>
-              </ol>
-            </div>
-          )}
-        </div>
-      </div>
-    </main>
+        )}
+      </main>
+    </div>
   );
 }

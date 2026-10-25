@@ -128,7 +128,7 @@ function RigBar({
         }}
       >
         <input className="hud-input" value={name} onChange={(e) => setName(e.target.value)} aria-label="Rig adı" autoFocus />
-        <button type="submit" className="shrink-0 rounded-md bg-ink px-3 text-sm font-semibold text-white">
+        <button type="submit" className="shrink-0 rounded-md bg-accent px-3 text-sm font-semibold text-paper">
           Tamam
         </button>
       </form>
@@ -441,10 +441,10 @@ export function RigPanel({
                     onClick={() => onChange({ ampEffects: on ? rig.ampEffects.filter((e) => e !== fx) : [...rig.ampEffects, fx] })}
                     className={`rounded-full border px-2.5 py-1 text-xs transition ${
                       on
-                        ? "border-ink bg-ink text-white"
+                        ? "border-accent bg-accent text-paper"
                         : missing
-                          ? "border-dashed border-line bg-white text-ink-mute/60"
-                          : "border-line bg-white text-ink-soft hover:border-line-strong"
+                          ? "border-dashed border-line bg-raised text-ink-mute/60"
+                          : "border-line bg-raised text-ink-soft hover:border-line-strong"
                     }`}
                   >
                     {fx}

@@ -43,7 +43,7 @@ export function PickupSelector({ layout, selected }: { layout?: string; selected
     <figure className="rounded-lg border border-line bg-paper p-3">
       <figcaption className="hud-label mb-2">{fiveWay ? "5'li seçici" : "3'lü seçici"}</figcaption>
       <svg viewBox={`0 0 ${w} 74`} className="h-auto w-full max-w-[260px]" role="img" aria-label={`Seçici: ${positions[index].label}`}>
-        <rect x="12" y="18" width={w - 24} height="12" rx="6" fill="#fff" stroke="var(--color-line-strong)" />
+        <rect x="12" y="18" width={w - 24} height="12" rx="6" fill="var(--color-raised)" stroke="var(--color-line-strong)" />
         {positions.map((p, i) => (
           <circle key={p.id} cx={x(i)} cy="24" r="3" fill={i === index ? "var(--color-accent)" : "var(--color-line-strong)"} />
         ))}

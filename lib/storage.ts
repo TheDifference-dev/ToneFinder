@@ -2,7 +2,7 @@
 // localStorage erişilemezse (gizli pencere vb.) sessizce varsayılana döner.
 
 import { migrateRig, type Instrument, type ToneType, type UserRig } from "./gear";
-import type { ToneMeta, ToneResult } from "./schema";
+import type { PartialTone, ToneMeta } from "./schema";
 
 const RIG_KEY = "tonefinder.rig";
 const RIGS_KEY = "tonefinder.rigs";
@@ -25,7 +25,8 @@ export interface SavedTone {
   savedAt: number;
   deviceLabel: string;
   part: string;
-  result: ToneResult;
+  /** Yalnız araştırma (1. adım) ya da araştırma + uyarlama (2. adım) */
+  result: PartialTone;
   /** Eski sürümlerde kaydedilen tonlarda yok */
   query?: SongQuery;
   artwork?: string;
@@ -85,30 +86,43 @@ export const createRigId = newId;
 // kaynak etiketlerini ("device" / "user_pedal") yenilerine çevir.
 const OLD_SOURCES: Record<string, "processor" | "pedal"> = { device: "processor", user_pedal: "pedal" };
 
-export const loadSaved = (): SavedTone[] =>
-  read<SavedTone[]>(SAVED_KEY, [])
-    .filter((t) => Array.isArray(t?.result?.guitar?.compensation) && Array.isArray(t.result.chain))
-    .map((t) => ({
-      ...t,
-      result: {
-        ...t.result,
-        chain: t.result.chain.map((b) => ({ ...b, source: OLD_SOURCES[b.source as string] ?? b.source })),
-      },
-    }));
+/** Eski sürümlerin kayıtlarında olmayan alanları tamamlar; geçersiz kaydı atar */
+function normalize(t: SavedTone): SavedTone | null {
+  const r = t?.result as (PartialTone & { confidence?: PartialTone["research_confidence"] }) | undefined;
+  if (!r?.song?.title || !r.original_rig) return null;
+  return {
+    ...t,
+    result: {
+      ...r,
+      song: { ...r.song, tone_tags: r.song.tone_tags ?? [] },
+      warnings: r.warnings ?? [],
+      sections: r.sections ?? [],
+      sources: r.sources ?? [],
+      research_confidence: r.research_confidence ?? r.confidence ?? "medium",
+      ...(Array.isArray(r.chain)
+        ? { chain: r.chain.map((b) => ({ ...b, source: OLD_SOURCES[b.source as string] ?? b.source })) }
+        : {}),
+    },
+  };
+}
+
+const normalizeAll = (list: SavedTone[]) => list.map(normalize).filter((t): t is SavedTone => t !== null);
+
+export const loadSaved = (): SavedTone[] => normalizeAll(read<SavedTone[]>(SAVED_KEY, []));
 export const storeSaved = (tones: SavedTone[]) => write(SAVED_KEY, tones);
 
 /** Son sonuçlar (kaydedilmese de sayfa yenilenince kaybolmasın) */
 export const loadHistory = (): SavedTone[] =>
-  read<SavedTone[]>(HISTORY_KEY, []).filter((t) => Array.isArray(t?.result?.chain)).slice(0, HISTORY_LIMIT);
+  normalizeAll(read<SavedTone[]>(HISTORY_KEY, [])).slice(0, HISTORY_LIMIT);
 export const storeHistory = (tones: SavedTone[]) => write(HISTORY_KEY, tones.slice(0, HISTORY_LIMIT));
 
 /** Dışa aktarılan ton dosyasını (.tonefinder.json) okur; geçersizse null */
 export function parseToneFile(text: string): SavedTone | null {
   try {
     const t = JSON.parse(text) as SavedTone & { format?: string };
-    if (t?.format !== "tonefinder-tone" || !t.result?.song?.title || !Array.isArray(t.result.chain)) return null;
+    if (t?.format !== "tonefinder-tone") return null;
     const { format: _format, ...tone } = t;
-    return { ...tone, id: newId(), savedAt: Date.now() };
+    return normalize({ ...tone, id: newId(), savedAt: Date.now() });
   } catch {
     return null;
   }

@@ -1,5 +1,6 @@
 import Anthropic from "@anthropic-ai/sdk";
 import { NextResponse } from "next/server";
+import { findClaudeCli } from "@/lib/claude-cli";
 import { isSameOrigin } from "@/lib/guard";
 import { clearApiKey, getApiKey, saveApiKey } from "@/lib/settings";
 
@@ -8,7 +9,13 @@ export const runtime = "nodejs";
 // Anahtarın kendisi asla geri döndürülmez; yalnızca ayarlı olup olmadığı.
 export async function GET() {
   const current = await getApiKey();
-  return NextResponse.json({ configured: Boolean(current), source: current?.source ?? null });
+  const cli = findClaudeCli();
+  return NextResponse.json({
+    configured: Boolean(current),
+    source: current?.source ?? null,
+    // API anahtarı yoksa 1. adım (şarkı araştırması) bilgisayardaki Claude Code ile yapılır
+    cli: cli ? { version: cli.version } : null,
+  });
 }
 
 export async function POST(request: Request) {

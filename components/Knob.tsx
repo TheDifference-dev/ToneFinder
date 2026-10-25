@@ -1,5 +1,5 @@
-// 0–10 ölçekli değerleri amfi düğmesi gibi gösterir; sayısal olmayan
-// değerler (ör. "380 ms", "On", "Dyn 57") için dijital gösterge kutusu çizer.
+// 0–10 ölçekli değerleri halka gösterge olarak çizer (değer ortada, etiket altta);
+// sayısal olmayan değerler (ör. "380 ms", "On", "Dyn 57") için düz bir gösterge kutusu.
 
 const START = -135;
 const SWEEP = 270;
@@ -12,7 +12,7 @@ export function parseKnobValue(value: string): number | null {
 }
 
 function arc(fraction: number) {
-  const r = 27;
+  const r = 26;
   const toXY = (deg: number) => {
     const a = ((deg - 90) * Math.PI) / 180;
     return [32 + Math.cos(a) * r, 32 + Math.sin(a) * r];
@@ -32,41 +32,41 @@ const BASIS_LABEL = {
 export function Knob({
   name,
   value,
-  note,
   basis,
 }: {
   name: string;
   value: string;
-  note?: string;
-  /** Ayarın dayanağı; eski kayıtlarda yok */
+  /** Ayarın dayanağı; eski kayıtlarda ve orijinal ekipmanda yok */
   basis?: keyof typeof BASIS_LABEL;
 }) {
   const numeric = parseKnobValue(value);
+  const b = basis ? BASIS_LABEL[basis] : undefined;
 
   return (
-    <div className="flex w-[76px] flex-col items-center gap-1 text-center" title={note || undefined}>
+    <div className="flex w-[84px] flex-col items-center gap-1 text-center">
       {numeric !== null ? (
-        <svg viewBox="0 0 64 64" className="h-14 w-14" aria-hidden>
-          <path d={arc(1)} fill="none" stroke="var(--color-line)" strokeWidth="3" strokeLinecap="round" />
-          {numeric > 0 && (
-            <path d={arc(numeric / 10)} fill="none" stroke="var(--color-accent)" strokeWidth="3" strokeLinecap="round" />
-          )}
-          <circle cx="32" cy="32" r="19" fill="#ffffff" stroke="var(--color-line-strong)" strokeWidth="1.5" />
-          <circle cx="32" cy="32" r="15" fill="var(--color-ink)" />
-          <g transform={`rotate(${START + (SWEEP * numeric) / 10} 32 32)`}>
-            <line x1="32" y1="31" x2="32" y2="19" stroke="var(--color-signal)" strokeWidth="2.5" strokeLinecap="round" />
-          </g>
+        <svg viewBox="0 0 64 64" className="h-16 w-16" role="img" aria-label={`${name} ${value}`}>
+          <path d={arc(1)} fill="none" stroke="var(--color-line)" strokeWidth="4" strokeLinecap="round" />
+          {numeric > 0 && <path d={arc(numeric / 10)} fill="none" stroke="var(--color-accent)" strokeWidth="4" strokeLinecap="round" />}
+          <text
+            x="32"
+            y="38"
+            textAnchor="middle"
+            fontSize="17"
+            fontWeight="600"
+            fill="var(--color-ink)"
+            style={{ fontFamily: "var(--font-display)", fontVariantNumeric: "tabular-nums" }}
+          >
+            {value}
+          </text>
         </svg>
       ) : (
-        <div className="flex h-14 w-14 items-center justify-center rounded-md border border-line-strong bg-ink px-1 font-mono text-[10px] font-semibold leading-tight text-white">
+        <div className="flex h-16 w-full items-center justify-center rounded-md border border-line bg-raised px-1.5 font-display text-sm font-semibold leading-tight text-ink">
           {value}
         </div>
       )}
-      <div className="text-[11px] font-semibold uppercase tracking-wide text-ink-soft">{name}</div>
-      {numeric !== null && <div className="font-mono text-xs font-semibold text-accent">{value}</div>}
-      {basis && BASIS_LABEL[basis] && (
-        <div className={`font-mono text-[9px] uppercase tracking-wide ${BASIS_LABEL[basis].cls}`}>{BASIS_LABEL[basis].label}</div>
-      )}
+      <div className="font-display text-[12px] font-semibold uppercase tracking-wider text-ink-soft">{name}</div>
+      {b && <div className={`font-display text-[10px] uppercase tracking-wider ${b.cls}`}>{b.label}</div>}
     </div>
   );
 }

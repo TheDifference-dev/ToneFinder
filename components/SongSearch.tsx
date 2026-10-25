@@ -117,7 +117,7 @@ export function SongSearch({
         <ul
           id="song-hits"
           role="listbox"
-          className="absolute left-0 right-0 top-full z-20 mt-1 max-h-80 overflow-y-auto rounded-lg border border-line-strong bg-white p-1 shadow-lg"
+          className="absolute left-0 right-0 top-full z-20 mt-1 max-h-80 overflow-y-auto rounded-lg border border-line-strong bg-raised p-1 shadow-lg"
         >
           {hits.map((h, i) => (
             <li key={`${h.title}-${h.artist}-${i}`} role="option" aria-selected={i === active}>

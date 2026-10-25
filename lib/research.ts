@@ -1,7 +1,8 @@
 import "server-only";
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
-import { readResearch, researchKey, writeResearch } from "./cache";
+import { readResearch, researchKey, writeResearch, type OriginalResearch } from "./cache";
+import { runClaudeCli, type ClaudeCli } from "./claude-cli";
 import { deviceReference } from "./devices";
 import { ampProfileText, matchAmp } from "./amps";
 import { AMP_MODES, matchDevice, PARTS, PICKUP_CONFIGS } from "./gear";
@@ -17,6 +18,7 @@ import {
   gearProfileText,
   GearProfileSchema,
   type GearProfile,
+  type OriginalTone,
   type ToneEvent,
   type ToneMeta,
   type ToneRequest,
@@ -238,34 +240,64 @@ async function structured<T extends z.ZodType>(client: Anthropic, schema: T, sys
 const sourceList = (sources: Iterable<[string, string]>) =>
   [...sources].map(([url, title]) => `- ${title}: ${url}`).join("\n") || "(none recorded)";
 
-export async function findTone(
-  client: Anthropic,
-  req: ToneRequest,
-  emit: Emit,
-  previous?: unknown,
-): Promise<{ result: ToneResult; meta: ToneMeta }> {
+/** Araştırmayı kim yapıyor: API anahtarıyla Anthropic API ya da bilgisayardaki Claude Code (abonelik) */
+export type Engine = { kind: "api"; client: Anthropic } | { kind: "cli"; cli: ClaudeCli };
+
+const CLI_OUTPUT_NOTE = `
+
+When you finish researching, return the result with the structured output tool. Write all prose fields in Turkish; keep gear model, knob and parameter names exactly as they appear on the gear (usually English). Put every page you relied on in sources. Put disputed or weakly sourced points in warnings.`;
+
+/** 1. adım: şarkının orijinal tonu (önbellekten ya da yeni araştırma) */
+export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) {
   const key = researchKey([req.song, req.artist, req.part, req.partDetail, req.instrument, req.toneType]);
   let original = req.fresh ? null : await readResearch(key);
-  const cached = original !== null;
+  const cached = Boolean(original?.structured);
 
-  if (original) {
-    emit({ type: "status", message: "Bu şarkının orijinal ton araştırması kayıtlı, yeniden kullanılıyor…" });
+  if (original?.structured) {
+    emit({ type: "status", message: "Bu şarkının araştırması kayıtlı, yeniden kullanılıyor…" });
+  } else if (engine.kind === "cli") {
+    emit({ type: "status", message: "Stüdyo kaydındaki ekipman araştırılıyor…" });
+    const { output, fetched } = await runClaudeCli(engine.cli, {
+      system: ORIGINAL_PROMPT + CLI_OUTPUT_NOTE,
+      prompt: describeSong(req),
+      schema: z.toJSONSchema(OriginalToneSchema),
+      onSearch: (query) => emit({ type: "search", query }),
+      onFetch: (url) => emit({ type: "fetch", url }),
+    });
+    const parsed = OriginalToneSchema.safeParse(output);
+    if (!parsed.success) throw new ToneError("Araştırma sonucu okunamadı, lütfen tekrar dene.");
+    const sources = new Map<string, string>(fetched.map((u) => [u, u]));
+    parsed.data.sources.forEach((s) => sources.set(s.url, s.title || s.url));
+    original = { report: "", sources: [...sources], researchedAt: Date.now(), structured: parsed.data };
+    await writeResearch(key, original);
   } else {
-    emit({ type: "status", message: "Orijinal stüdyo ekipmanı araştırılıyor…" });
-    const { report, sources } = await researchReport(client, ORIGINAL_PROMPT, describeSong(req), { searches: 12, fetches: 8 }, emit);
-    original = { report, sources: [...sources], researchedAt: Date.now() };
-  }
-  if (!original.structured) {
-    emit({ type: "status", message: "Orijinal ton özetleniyor…" });
+    if (!original) {
+      emit({ type: "status", message: "Stüdyo kaydındaki ekipman araştırılıyor…" });
+      const { report, sources } = await researchReport(engine.client, ORIGINAL_PROMPT, describeSong(req), { searches: 12, fetches: 8 }, emit);
+      original = { report, sources: [...sources], researchedAt: Date.now() };
+    }
+    emit({ type: "status", message: "Sonuç özetleniyor…" });
     original.structured = await structured(
-      client,
+      engine.client,
       OriginalToneSchema,
       STRUCTURE_ORIGINAL_PROMPT,
       `${describeSong(req)}\n\n<research_report>\n${original.report}\n</research_report>\n\n<sources_consulted>\n${sourceList(original.sources)}\n</sources_consulted>`,
     );
     await writeResearch(key, original);
   }
+
   const meta: ToneMeta = { cached, researchedAt: original.researchedAt };
+  return { original: original as OriginalResearch & { structured: OriginalTone }, meta };
+}
+
+/** 2. adım: orijinal tonu kullanıcının ekipmanına uyarlama (API anahtarı gerekir) */
+export async function findTone(
+  client: Anthropic,
+  req: ToneRequest,
+  emit: Emit,
+  previous?: unknown,
+): Promise<{ result: ToneResult; meta: ToneMeta }> {
+  const { original, meta } = await getOriginal({ kind: "api", client }, req, emit);
   emit({ type: "original", original: original.structured, meta });
 
   emit({
@@ -284,7 +316,10 @@ export async function findTone(
       ]
     : [];
   const gear = await describeGear(req);
-  const originalBlock = `<original_research>\n${original.report}\n</original_research>\n\n<original_summary>\n${JSON.stringify(original.structured)}\n</original_summary>`;
+  const originalBlock = [
+    original.report ? `<original_research>\n${original.report}\n</original_research>\n` : "",
+    `<original_summary>\n${JSON.stringify(original.structured)}\n</original_summary>`,
+  ].join("\n");
   const adaptation = await researchReport(
     client,
     ADAPT_PROMPT,

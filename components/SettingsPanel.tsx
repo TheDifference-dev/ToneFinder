@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 
-export type KeyStatus = { configured: boolean; source: "env" | "file" | null };
+export type KeyStatus = { configured: boolean; source: "env" | "file" | null; cli?: { version: string } | null };
 
-// Anthropic API anahtarını uygulama içinden kaydetme ekranı. Anahtar sunucu tarafında
-// ~/.tonefinder/settings.json dosyasına yazılır ve tarayıcıya hiç geri gönderilmez.
+// Ayarlar: araştırmayı yapan motorun durumu (Claude Code ya da API) ve API anahtarı.
+// Anahtar sunucu tarafında ~/.tonefinder/settings.json dosyasına yazılır, tarayıcıya geri gönderilmez.
 export function SettingsPanel({
   status,
   onSaved,
@@ -32,7 +32,7 @@ export function SettingsPanel({
       const data = (await res.json()) as KeyStatus & { error?: string };
       if (!res.ok) throw new Error(data.error ?? "Kaydedilemedi.");
       setKey("");
-      onSaved({ configured: data.configured, source: data.source });
+      onSaved({ ...status, configured: data.configured, source: data.source });
     } catch (err) {
       setError(err instanceof Error ? err.message : "Kaydedilemedi.");
     } finally {
@@ -42,76 +42,86 @@ export function SettingsPanel({
 
   async function remove() {
     const res = await fetch("/api/settings", { method: "DELETE" });
-    if (res.ok) onSaved((await res.json()) as KeyStatus);
+    if (res.ok) onSaved({ ...status, ...((await res.json()) as KeyStatus) });
   }
 
   return (
     <section className="hud-panel p-6" aria-labelledby="settings-title">
-      <div className="mb-4 flex items-center gap-3">
-        <span className="hud-label text-accent">CFG</span>
-        <h2 id="settings-title" className="text-sm font-bold uppercase tracking-wider">
-          Yapay zekâ bağlantısı
+      <div className="mb-5 flex items-center justify-between">
+        <h2 id="settings-title" className="font-display text-xl font-bold uppercase tracking-wide text-ink">
+          Ayarlar
         </h2>
-        <span className="h-px flex-1 bg-line" />
-        {onClose && status.configured && (
-          <button type="button" onClick={onClose} className="text-sm font-semibold text-accent hover:underline">
-            Kapat
+        {onClose && (
+          <button type="button" onClick={onClose} className="rounded-md px-2 py-1 text-ink-mute hover:bg-raised hover:text-ink" aria-label="Kapat">
+            ✕
           </button>
         )}
       </div>
 
-      {status.configured ? (
-        <p className="mb-4 rounded-md border border-ok/40 bg-ok/10 px-3 py-2 text-sm text-ok">
-          ✓ API anahtarı ayarlı{status.source === "env" ? " (ortam değişkeninden)" : ""}. İstersen aşağıdan yenisiyle değiştirebilirsin.
-        </p>
-      ) : (
-        <p className="mb-4 text-ink-soft">
-          ToneFinder şarkıları internette araştırmak için Anthropic'in yapay zekâsını kullanır. Bunun için bir kez API anahtarı
-          girmen gerekiyor; anahtar yalnızca bu bilgisayarda saklanır.
-        </p>
-      )}
+      <div className="space-y-4">
+        <div className="rounded-lg border border-line bg-raised p-4">
+          <div className="flex items-center justify-between gap-3">
+            <span className="hud-label text-ink-soft">1 · Şarkı araştırması</span>
+            <span className={`font-display text-sm font-semibold uppercase ${status.configured || status.cli ? "text-ok" : "text-bad"}`}>
+              {status.configured ? "API" : status.cli ? `Claude Code ${status.cli.version}` : "Hazır değil"}
+            </span>
+          </div>
+          {!status.configured && !status.cli && (
+            <div className="mt-3 space-y-1.5 text-sm text-ink-soft">
+              <p>Claude aboneliğinle, API anahtarı olmadan çalışır. Bu bilgisayarda bir kez:</p>
+              <p>
+                1. PowerShell: <code className="rounded bg-panel px-1.5 py-0.5 text-ink">irm https://claude.ai/install.ps1 | iex</code>
+              </p>
+              <p>
+                2. <code className="rounded bg-panel px-1.5 py-0.5 text-ink">claude</code> yaz, hesabınla giriş yap.
+              </p>
+              <p>3. ToneFinder&apos;ı kapatıp yeniden aç.</p>
+            </div>
+          )}
+        </div>
 
-      <ol className="mb-5 grid gap-2 text-sm text-ink">
-        <li>
-          <b className="font-mono text-accent">1.</b>{" "}
-          <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-accent underline">
-            console.anthropic.com
-          </a>{" "}
-          adresinde hesap aç.
-        </li>
-        <li>
-          <b className="font-mono text-accent">2.</b> <i>Billing</i> bölümünden kredi yükle (Claude aboneliğinden ayrı ücretlendirilir;
-          bir şarkı araştırması tahminen 0,3–1 $).
-        </li>
-        <li>
-          <b className="font-mono text-accent">3.</b> <i>API Keys</i> bölümünden yeni anahtar oluştur, kopyala ve aşağıya yapıştır.
-        </li>
-      </ol>
-
-      <form onSubmit={save} className="flex flex-col gap-3 sm:flex-row">
-        <input
-          className="hud-input font-mono"
-          type="password"
-          autoComplete="off"
-          placeholder="sk-ant-..."
-          value={key}
-          onChange={(e) => setKey(e.target.value)}
-          aria-label="Anthropic API anahtarı"
-        />
-        <button
-          type="submit"
-          disabled={saving || !key.trim()}
-          className="shrink-0 rounded-lg bg-accent px-6 py-2.5 text-sm font-bold uppercase tracking-wider text-white hover:bg-ink disabled:opacity-40"
-        >
-          {saving ? "Doğrulanıyor…" : "Kaydet"}
-        </button>
-      </form>
-      {error && <p className="mt-3 text-sm text-bad">{error}</p>}
-      {status.configured && status.source === "file" && (
-        <button type="button" onClick={remove} className="mt-4 text-xs text-ink-mute hover:text-bad">
-          Kayıtlı anahtarı bu bilgisayardan sil
-        </button>
-      )}
+        <div className="rounded-lg border border-line bg-raised p-4">
+          <div className="flex items-center justify-between gap-3">
+            <span className="hud-label text-ink-soft">2 · Ekipmana çevirme</span>
+            <span className={`font-display text-sm font-semibold uppercase ${status.configured ? "text-ok" : "text-ink-mute"}`}>
+              {status.configured ? `API anahtarı${status.source === "env" ? " (ortam)" : ""}` : "API anahtarı gerekli"}
+            </span>
+          </div>
+          <details className="mt-3" open={false}>
+            <summary className="cursor-pointer text-sm text-accent">{status.configured ? "Anahtarı değiştir" : "API anahtarı gir"}</summary>
+            <p className="mt-2 text-xs text-ink-mute">
+              <a href="https://console.anthropic.com" target="_blank" rel="noopener noreferrer" className="text-accent underline">
+                console.anthropic.com
+              </a>{" "}
+              → Billing (kredi) → API Keys. Ücretli, aboneliğe dahil değil. Anahtar yalnız bu bilgisayarda saklanır.
+            </p>
+            <form onSubmit={save} className="mt-3 flex flex-col gap-2 sm:flex-row">
+              <input
+                className="hud-input font-mono"
+                type="password"
+                autoComplete="off"
+                placeholder="sk-ant-..."
+                value={key}
+                onChange={(e) => setKey(e.target.value)}
+                aria-label="Anthropic API anahtarı"
+              />
+              <button
+                type="submit"
+                disabled={saving || !key.trim()}
+                className="shrink-0 rounded-md bg-accent px-5 py-2 font-display text-sm font-bold uppercase tracking-wider text-paper disabled:opacity-40"
+              >
+                {saving ? "Doğrulanıyor…" : "Kaydet"}
+              </button>
+            </form>
+            {error && <p className="mt-2 text-sm text-bad">{error}</p>}
+            {status.configured && status.source === "file" && (
+              <button type="button" onClick={remove} className="mt-3 text-xs text-ink-mute hover:text-bad">
+                Kayıtlı anahtarı sil
+              </button>
+            )}
+          </details>
+        </div>
+      </div>
     </section>
   );
 }
