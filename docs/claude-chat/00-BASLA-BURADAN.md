@@ -134,6 +134,13 @@ düğme düğme veren bir uygulama. Bilgi dosyalarındaki 00-BASLA-BURADAN.md pr
     diğer bölümleri için farklar, manyetik seçici grafiği, blok başına birebir/yakın/yerine rozeti, orijinal tonun
     uyarlamadan önce gösterilmesi, bas kataloğu, geçmiş + silme + dışa/içe aktarma. Kalanlar: topluluk/hesap/çok dil
     (web sürümü), preset dosyası dışa aktarma, cihaz görselleri, PNG ton kartı.
+16. **İstek:** "API anahtarı yok; şimdilik yalnız şarkının araştırması (orijinal ekipman) çalışsın; arayüz çok
+    karışık, Boss/Marshall/HeadRush/Fender uygulamaları gibi sade ve profesyonel olsun." → 1. adım (araştırma)
+    artık API anahtarı olmadan, bilgisayardaki Claude Code (`claude -p`, yalnız WebSearch/WebFetch, yapılandırılmış
+    çıktı) ile Claude aboneliği üzerinden çalışıyor (`lib/claude-cli.ts`, `app/api/research`). 2. adım (ekipmana
+    çevirme) API anahtarı varsa açık. Arayüz koyu temaya geçti: üstte ARAŞTIR / EKİPMANIM / TONLARIM sekmeleri, amber
+    vurgu, BOSS tarzı kategori renkli stüdyo zinciri (bloğa tıkla → ayrıntı), halka göstergeli düğmeler, katlanır
+    ayrıntılar; Barlow Condensed + Inter yazı tipleri uygulamayla birlikte (`public/fonts`, SIL OFL).
 12. **Bu dosyanın güncel hâli:** ToneFinder için ayrı bir Claude Chat sohbeti/projesi açılacak; gerektiğinde
     orada, gerektiğinde Claude Code'da çalışılacak.
 

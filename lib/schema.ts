@@ -70,8 +70,8 @@ export const OriginalToneSchema = z.object({
     album_or_year: z.string(),
     tone_character: z.string().describe("Orijinal tonun 1–2 cümlelik Türkçe tarifi"),
     tone_tags: z.array(z.string()).describe("Tonun 3–8 kısa Türkçe özelliği (ör. sıkı alt, orta frekans öne çıkık, parlak, kompresli)"),
-    bpm: z.string().describe("Şarkının temposu (ör. 117 BPM); bilinmiyorsa boş string"),
-    key: z.string().describe("Şarkının tonalitesi (ör. E minör); bilinmiyorsa boş string"),
+    bpm: z.string().describe("Yalnız tempo, kısa: '117 BPM' ya da '92–94 BPM'; açıklama yazma (belirsizlik warnings'e); bilinmiyorsa boş string"),
+    key: z.string().describe("Yalnız tonalite, kısa: 'E minör', 'A majör'; açıklama yazma (belirsizlik warnings'e); bilinmiyorsa boş string"),
   }),
   original_rig: z.object({
     guitar: z.object({ model: z.string(), pickup: z.string(), certainty: Certainty }),
@@ -88,7 +88,7 @@ export const OriginalToneSchema = z.object({
     pedals: z.array(
       z.object({ model: z.string(), purpose: z.string(), settings: z.array(Setting), certainty: Certainty }),
     ),
-    tuning: z.string(),
+    tuning: z.string().describe("Kısa akort adı: 'Standart E', 'Drop D', 'Yarım ses pes (Eb)'"),
     recording_notes: z.string().describe("Stüdyo, prodüktör, double-tracking, post-prodüksiyon efektleri vb."),
   }),
   difficulty: z.object({

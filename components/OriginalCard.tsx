@@ -105,8 +105,8 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
           <img src={artwork} alt="" className="h-16 w-16 rounded-md object-cover" />
         )}
         <div className="min-w-0 flex-1">
-          <h2 className="truncate font-display text-3xl font-bold leading-tight text-ink">{tone.song.title}</h2>
-          <p className="truncate text-sm text-ink-soft">
+          <h2 className="break-words font-display text-3xl font-bold leading-tight text-ink">{tone.song.title}</h2>
+          <p className="text-sm text-ink-soft">
             {tone.song.artist}
             {tone.song.album_or_year && ` · ${tone.song.album_or_year}`}
           </p>
@@ -195,11 +195,26 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
               </p>
             ))}
             {item.settings && item.settings.length > 0 && (
-              <div className="mt-4 flex flex-wrap gap-2">
-                {item.settings.map((s) => (
-                  <Knob key={s.name} name={s.name} value={s.value} />
-                ))}
-              </div>
+              <>
+                {/* sayı ya da kısa değer → düğme; uzun açıklama → satır */}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {item.settings
+                    .filter((s) => s.value.length <= 12)
+                    .map((s) => (
+                      <Knob key={s.name} name={s.name} value={s.value} />
+                    ))}
+                </div>
+                <dl className="mt-2 space-y-1 text-sm">
+                  {item.settings
+                    .filter((s) => s.value.length > 12)
+                    .map((s) => (
+                      <div key={s.name} className="flex gap-2">
+                        <dt className="shrink-0 font-display font-semibold uppercase tracking-wide text-ink">{s.name}</dt>
+                        <dd className="text-ink-soft">{s.value}</dd>
+                      </div>
+                    ))}
+                </dl>
+              </>
             )}
           </div>
         )}

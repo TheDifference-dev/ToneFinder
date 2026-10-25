@@ -63,6 +63,25 @@ Masaüstündeki **ToneFinder** simgesine tıkladığında:
 Uygulama yalnızca bu bilgisayarda çalışır (`127.0.0.1:3210`); internete açılan bir site değildir.
 İnternet yalnızca yapay zekâ araştırması ve güncelleme için kullanılır.
 
+## Araştırma motoru: API anahtarı olmadan
+
+ToneFinder iki adımda çalışır:
+
+1. **Araştır** — şarkının stüdyo kaydındaki gitar, manyetik, amfi, kabin, mikrofon ve pedallar (kaynaklı).
+2. **Ekipmanına çevir** — bu tonu senin rig'ine göre düğme düğme ayarlar.
+
+1. adım **API anahtarı olmadan** çalışır: bilgisayarda kurulu **Claude Code** komut satırı (`claude`)
+kullanılır, araştırma senin Claude aboneliğinle yapılır. Bir kez:
+
+1. PowerShell'de: `irm https://claude.ai/install.ps1 | iex`
+2. `claude` yazıp hesabınla giriş yap, sonra ToneFinder'ı yeniden aç.
+
+Uygulama Claude Code'u yalnız web araması ve sayfa okuma araçlarıyla çalıştırır (dosya ya da komut
+izni yok, kendi eklenti/hook ayarların devreye girmez). Bir araştırma ~1 dakika sürer.
+Ayarlar penceresi hangi motorun kullanıldığını gösterir.
+
+2. adım şimdilik API anahtarı ister (aşağıda).
+
 ## API anahtarı
 
 Araştırma Anthropic'in yapay zekâsıyla (web araması dahil) yapılır ve bir API anahtarı gerekir:

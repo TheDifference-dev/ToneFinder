@@ -352,8 +352,7 @@ export function RigPanel({
   return (
     <section className="hud-panel p-5" aria-labelledby="rig-title">
       <div className="mb-4 flex items-center gap-3">
-        <span className="hud-label text-accent">RIG</span>
-        <h2 id="rig-title" className="text-sm font-bold uppercase tracking-wider">
+        <h2 id="rig-title" className="font-display text-xl font-bold uppercase tracking-wide text-ink">
           Ekipmanım
         </h2>
         <span className="h-px flex-1 bg-line" />
