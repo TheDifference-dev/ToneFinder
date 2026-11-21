@@ -158,8 +158,12 @@ export async function runClaudeCli(cli: ClaudeCli, opts: RunOptions): Promise<{ 
       if (/log ?in|not logged|invalid api key|authenticat|\/login/i.test(text)) {
         return reject(new CliError("Claude Code'a giriş yapılmamış. Bir terminalde `claude` yazıp hesabınla giriş yap."));
       }
-      if (/usage limit|rate limit|limit reached/i.test(text)) {
-        return reject(new CliError("Claude kullanım limitine ulaşıldı. Bir süre sonra tekrar dene."));
+      if (/usage limit|rate limit|limit reached|hit your .{0,20}limit|5-hour limit|weekly limit/i.test(text)) {
+        // ör. "You've hit your 5-hour limit · resets 12:10am (Europe/Istanbul)"
+        const reset = text.match(/resets\s+([0-9:apm\s]+(?:\([^)]*\))?)/i)?.[1]?.trim();
+        return reject(
+          new CliError(`Claude aboneliğinin kullanım limitine ulaşıldı${reset ? ` (yenilenme: ${reset})` : ""}. Limit yenilenince tekrar dene.`),
+        );
       }
       if (/unknown option/i.test(text)) {
         return reject(new CliError("Claude Code sürümü eski. Bir terminalde `claude update` çalıştır."));
