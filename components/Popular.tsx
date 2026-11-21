@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import type { PopularEntry } from "@/lib/popular";
 import { Artwork, colorFor, Dots } from "./ui";
 
-// Songsterr'in en popüler 100 şarkısı: tanıtım bloğu, sanatçı kutuları, kart şeridi ve tam liste.
+// Songsterr'in en popüler 500 şarkısı: tanıtım bloğu, sanatçı kutuları, kart şeridi ve tam liste.
 // Hazır (önceden araştırılmış) şarkılara tıklanınca orijinal ton anında açılır.
 
 const PART_SHORT: Record<string, string> = { lead: "Solo", rhythm: "Ritim", intro: "Riff", clean: "Temiz", full: "Genel" };
@@ -49,11 +49,11 @@ export function PopularPromo({ entries, onBrowse }: { entries: PopularEntry[]; o
         ))}
       </div>
       <div className="flex flex-col justify-center gap-5 px-4 py-8 md:px-10">
-        <div className="text-[12px] font-bold uppercase tracking-[0.14em] text-white/70">Songsterr · en popüler 100</div>
+        <div className="text-[12px] font-bold uppercase tracking-[0.14em] text-white/70">Songsterr · en popüler {entries.length}</div>
         <h2 className="headline text-[44px] leading-[1.02] md:text-[52px]">Efsane riff&apos;lerin tonu tek tıkla hazır</h2>
         <p className="max-w-md text-[16px] leading-relaxed text-white/85">
-          En çok çalınan 100 şarkının stüdyo kaydındaki gitar, amfi ve pedalları önceden araştırıldı.
-          {ready > 0 && ready < entries.length && ` Şimdilik ${ready} şarkı hazır.`} Bir karta tıkla, orijinal ton anında açılsın.
+          En çok çalınan {entries.length} şarkının stüdyo kaydındaki gitar, amfi ve pedalları önceden araştırılıyor.
+          {ready > 0 && ready < entries.length && ` Şimdilik ${ready} şarkı hazır, gerisi tamamlandıkça eklenecek.`} Bir karta tıkla, orijinal ton anında açılsın.
         </p>
         <div>
           <button onClick={onBrowse} className="pill pill-dark">
@@ -148,18 +148,20 @@ export function PopularGrid({
   onArtist: (a: string) => void;
 }) {
   const [q, setQ] = useState("");
+  const [limit, setLimit] = useState(40);
   const list = useMemo(() => {
     const f = q.trim().toLocaleLowerCase("tr");
     return entries.filter(
       (e) => (!artist || e.artist === artist) && (!f || `${e.title} ${e.artist}`.toLocaleLowerCase("tr").includes(f)),
     );
   }, [entries, q, artist]);
+  const shown = list.slice(0, limit);
 
   return (
     <section id="popular-100" className="scroll-mt-24">
       <div className="mb-5 flex flex-wrap items-end gap-3">
         <div className="mr-auto">
-          <h2 className="headline text-[26px] text-ink">Popüler 100</h2>
+          <h2 className="headline text-[26px] text-ink">Popüler {entries.length}</h2>
           <p className="text-sm text-ink-mute">Songsterr&apos;de en çok açılan şarkılar, sırasıyla</p>
         </div>
         {artist && (
@@ -173,9 +175,16 @@ export function PopularGrid({
         <p className="rounded-2xl bg-panel py-12 text-center text-sm text-ink-mute">Bu aramaya uyan şarkı yok.</p>
       ) : (
         <div className="grid grid-cols-2 gap-x-5 gap-y-7 sm:grid-cols-3 lg:grid-cols-5">
-          {list.map((e) => (
+          {shown.map((e) => (
             <PopularCard key={e.slug} e={e} onOpen={onOpen} />
           ))}
+        </div>
+      )}
+      {list.length > shown.length && (
+        <div className="mt-8 text-center">
+          <button onClick={() => setLimit((n) => n + 60)} className="pill pill-soft">
+            Daha fazla göster ({list.length - shown.length} şarkı daha)
+          </button>
         </div>
       )}
     </section>

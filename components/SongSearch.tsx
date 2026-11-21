@@ -5,8 +5,8 @@ import type { ArtistHit, SongHit } from "@/app/api/songs/route";
 
 // Tek arama kutusu: şarkı ya da grup adı yazılır.
 // - Yazılana uyan gruplar/sanatçılar ve şarkılar listelenir (Deezer / iTunes, anahtarsız).
-// - Bir gruba tıklanınca o grubun popüler şarkıları gelir; şarkıya tıklanınca seçilir.
-// - Öneri gelmezse yazılan metin şarkı adı olarak kullanılır.
+// - Bir gruba tıklanınca grubun sayfası açılır (onArtist); yoksa kutunun içinde şarkıları listelenir.
+// - Şarkıya tıklanınca seçilir. Seçilmeden "Tonu bul"a basılırsa sayfa metni grup/şarkı olarak çözer.
 type Item = { kind: "artist"; artist: ArtistHit } | { kind: "song"; song: SongHit };
 
 export function SongSearch({
@@ -14,6 +14,7 @@ export function SongSearch({
   artist,
   artwork,
   onChange,
+  onArtist,
   big = false,
   action,
 }: {
@@ -21,6 +22,8 @@ export function SongSearch({
   artist: string;
   artwork: string;
   onChange: (patch: { song?: string; artist?: string; artwork?: string }) => void;
+  /** Gruba tıklanınca grup sayfasını aç */
+  onArtist?: (a: ArtistHit) => void;
   big?: boolean;
   /** Kutunun sağındaki düğme (ör. "Tonu bul") */
   action?: React.ReactNode;
@@ -69,6 +72,14 @@ export function SongSearch({
     };
   }, [text, browsing]);
 
+  // Form gönderilince (Tonu bul) açık öneri listesi kapansın
+  useEffect(() => {
+    const form = box.current?.closest("form");
+    const onSubmit = () => setOpen(false);
+    form?.addEventListener("submit", onSubmit);
+    return () => form?.removeEventListener("submit", onSubmit);
+  }, []);
+
   useEffect(() => {
     const close = (e: MouseEvent) => {
       if (box.current && !box.current.contains(e.target as Node)) setOpen(false);
@@ -116,7 +127,15 @@ export function SongSearch({
   }
 
   function choose(it: Item) {
-    if (it.kind === "artist") browse(it.artist);
+    if (it.kind === "artist") {
+      if (onArtist) {
+        setOpen(false);
+        setText("");
+        setSongs([]);
+        setArtists([]);
+        onArtist(it.artist);
+      } else browse(it.artist);
+    }
     else pick(it.song);
   }
 
@@ -222,7 +241,7 @@ export function SongSearch({
           {loading && items.length === 0 && <p className="px-4 py-3 text-sm text-ink-mute">Aranıyor…</p>}
           {!loading && items.length === 0 && (
             <p className="px-4 py-3 text-sm text-ink-mute">
-              {browsing ? "Bu grubun şarkıları bulunamadı." : "Sonuç yok; yazdığın şarkı adı olarak araştırılabilir."}
+              {browsing ? "Bu grubun şarkıları bulunamadı." : "Sonuç yok; “Tonu bul”a basınca daha geniş aranır."}
             </p>
           )}
           {browsing && items.length > 0 && <div className="hud-label px-3 pb-1 pt-2">{browsing.name} · popüler şarkılar</div>}
@@ -248,9 +267,9 @@ export function SongSearch({
                       </span>
                       <span className="min-w-0 flex-1">
                         <span className="block truncate text-[15px] font-bold text-ink">{it.artist.name}</span>
-                        <span className="block text-xs text-ink-mute">Grup / sanatçı</span>
+                        <span className="block text-xs text-ink-mute">{it.artist.inLibrary ? "Grup · kütüphanede" : "Grup / sanatçı"}</span>
                       </span>
-                      <span className="shrink-0 rounded-full bg-petrol px-3 py-1.5 text-xs font-bold text-white">Şarkılarını gör →</span>
+                      <span className="shrink-0 rounded-full bg-petrol px-3 py-1.5 text-xs font-bold text-white">Grubun sayfası →</span>
                     </>
                   ) : (
                     <>

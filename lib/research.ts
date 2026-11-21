@@ -260,7 +260,7 @@ export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) 
   let original = req.fresh ? null : await readResearch(key);
   let bundled = false;
   if (!req.fresh && !original?.structured) {
-    // Songsterr'in popüler 100 şarkısından biri: uygulamayla gelen hazır araştırmayı kullan
+    // Songsterr'in popüler 500 şarkısından biri: uygulamayla gelen hazır araştırmayı kullan
     const seed = bundledOriginal(req);
     if (seed) {
       original = { report: "", sources: seed.original.sources.map((s) => [s.url, s.title]), researchedAt: seed.researchedAt, structured: seed.original };
@@ -422,4 +422,29 @@ export async function resolveEngine(): Promise<Engine | null> {
   if (apiKey) return { kind: "api", client: new Anthropic({ apiKey: apiKey.key }) };
   const cli = findClaudeCli();
   return cli ? { kind: "cli", cli } : null;
+}
+
+const IDENTIFY_PROMPT = `The user typed a short text into a guitar-tone app's search box. It may be a band/artist name, a song title, both, a misspelling, or a Turkish name. Search the web to find out which real band(s) or song(s) it most likely means. Return up to 3 bands and up to 6 songs (title + artist), most likely first, using their official spelling. Never invent a band or song; if nothing real matches, return empty lists.`;
+
+export const IdentifySchema = z.object({
+  artists: z.array(z.string()).describe("Eşleşen grup/sanatçı adları, resmi yazılışıyla"),
+  songs: z.array(z.object({ title: z.string(), artist: z.string() })).describe("Eşleşen şarkılar"),
+});
+
+/** Kütüphanede ve Deezer/iTunes'ta bulunamayan bir aramayı web'de araştırıp grup/şarkı adaylarını döndürür */
+export async function identifyQuery(engine: Engine, q: string): Promise<z.infer<typeof IdentifySchema>> {
+  const prompt = `Search text: ${q}`;
+  if (engine.kind === "cli") {
+    const { output } = await runClaudeCli(engine.cli, {
+      system: `${IDENTIFY_PROMPT}\n\nWhen you finish, return the result with the structured output tool.`,
+      prompt,
+      schema: z.toJSONSchema(IdentifySchema),
+      timeoutMs: 4 * 60_000,
+    });
+    const parsed = IdentifySchema.safeParse(output);
+    if (!parsed.success) throw new ToneError("Arama sonucu okunamadı.");
+    return parsed.data;
+  }
+  const { report } = await researchReport(engine.client, IDENTIFY_PROMPT, prompt, { searches: 3, fetches: 1 }, () => {});
+  return structured(engine.client, IdentifySchema, "Turn the report into the structured list. Use only names the report supports.", `${prompt}\n\n<report>\n${report}\n</report>`);
 }

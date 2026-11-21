@@ -7,6 +7,8 @@ import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
 import { ArtistTiles, PopularGrid, PopularPromo, PopularRail } from "@/components/Popular";
+import { BandPage, LibraryShelf, normArtist, ResolvePanel, type ShelfArtist } from "@/components/Band";
+import type { ArtistHit, SongHit } from "@/app/api/songs/route";
 import { AppMark, Artwork, PageBand, Pill, Segmented } from "@/components/ui";
 import type { PopularEntry } from "@/lib/popular";
 import { toneText } from "@/lib/format";
@@ -27,7 +29,15 @@ import {
   type SongQuery,
 } from "@/lib/storage";
 
-type View = "research" | "rig" | "library";
+type View = "research" | "rig" | "library" | "band";
+
+interface Resolve {
+  query: string;
+  loading: boolean;
+  artists: ArtistHit[];
+  songs: SongHit[];
+  web: { loading: boolean; error?: string; done: boolean } | null;
+}
 
 const PART_SHORT: Record<string, string> = { lead: "Solo", rhythm: "Ritim", intro: "Riff", clean: "Temiz", full: "Genel" };
 const TONE_SHORT: Record<string, string> = { auto: "Oto", clean: "Temiz", distorted: "Dist" };
@@ -100,6 +110,9 @@ export default function Home() {
   const [copied, setCopied] = useState(false);
   const [popular, setPopular] = useState<PopularEntry[]>([]);
   const [popularArtist, setPopularArtist] = useState("");
+  const [band, setBand] = useState<ArtistHit | null>(null);
+  const [shelf, setShelf] = useState<ShelfArtist[]>([]);
+  const [resolve, setResolve] = useState<Resolve | null>(null);
 
   const activeRig = rigStore?.rigs.find((r) => r.id === rigStore.activeId) ?? null;
   const rig = activeRig?.rig ?? null;
@@ -115,6 +128,10 @@ export default function Home() {
     fetch("/api/popular")
       .then((r) => r.json() as Promise<{ songs?: PopularEntry[] }>)
       .then((d) => setPopular(d.songs ?? []))
+      .catch(() => {});
+    fetch("/api/library")
+      .then((r) => r.json() as Promise<{ artists?: ShelfArtist[] }>)
+      .then((d) => setShelf(d.artists ?? []))
       .catch(() => {});
     fetch("/api/settings")
       .then((r) => r.json() as Promise<KeyStatus>)
@@ -286,6 +303,8 @@ export default function Home() {
   const adapted = current && isAdapted(current.result) ? current.result : null;
   const showHome = view === "research" && !current && !busy;
   const openPopular = (e: PopularEntry) => {
+    setView("research");
+    setResolve(null);
     setSong(e.title);
     setArtist(e.artist);
     setPart(e.part);
@@ -305,8 +324,66 @@ export default function Home() {
     setView("research");
     window.scrollTo({ top: 0 });
   };
+  /** Grup sayfasını aç (aramadan, kütüphaneden ya da "Bunu mu aradın?" panelinden) */
+  const openBand = (a: ArtistHit) => {
+    setBand(a);
+    setResolve(null);
+    setSong("");
+    setArtist("");
+    setArtwork("");
+    setView("band");
+    window.scrollTo({ top: 0 });
+  };
+  /** Grup sayfasından ya da panelden bir şarkı seçildi: seçili bölümün tonunu araştır */
+  const pickSong = (s: SongHit) => {
+    const hit = popular.find((e) => e.ready && normArtist(e.title) === normArtist(s.title) && normArtist(e.artist) === normArtist(s.artist));
+    if (hit) return openPopular(hit);
+    setView("research");
+    setResolve(null);
+    setSong(s.title);
+    setArtist(s.artist);
+    setArtwork(s.artwork);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    if (canResearch) void research({ song: s.title, artist: s.artist, part, partDetail, instrument, toneType }, { artwork: s.artwork });
+  };
+  /** Yalnız metin yazılıp "Tonu bul"a basıldı: önce grup mu şarkı mı olduğunu bul, metni körlemesine araştırma */
+  const resolveQuery = async (q: string) => {
+    setError(null);
+    setResolve({ query: q, loading: true, artists: [], songs: [], web: null });
+    try {
+      const d = (await (await fetch(`/api/songs?q=${encodeURIComponent(q)}`)).json()) as { songs?: SongHit[]; artists?: ArtistHit[] };
+      const artists = d.artists ?? [];
+      const exact = artists.find((a) => normArtist(a.name) === normArtist(q));
+      // Yazılan tam olarak bir grubun adıysa doğrudan grup sayfasına git
+      if (exact) return openBand(exact);
+      setResolve({ query: q, loading: false, artists, songs: d.songs ?? [], web: null });
+    } catch {
+      setResolve({ query: q, loading: false, artists: [], songs: [], web: null });
+    }
+  };
+  const webSearch = async () => {
+    if (!resolve) return;
+    const q = resolve.query;
+    setResolve({ ...resolve, web: { loading: true, done: false } });
+    try {
+      const res = await fetch("/api/identify", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ q }) });
+      const d = (await res.json()) as { artists?: string[]; songs?: { title: string; artist: string }[]; error?: string };
+      if (!res.ok) throw new Error(d.error ?? "Web'de aranamadı.");
+      // Bulunan adları müzik servislerinde eşleştir (resim ve kapak için)
+      const artists: ArtistHit[] = [];
+      for (const name of (d.artists ?? []).slice(0, 3)) {
+        const r = (await (await fetch(`/api/songs?q=${encodeURIComponent(name)}`)).json()) as { artists?: ArtistHit[] };
+        artists.push(r.artists?.find((a) => normArtist(a.name) === normArtist(name)) ?? { id: 0, name, picture: "", fans: 0 });
+      }
+      const songs: SongHit[] = (d.songs ?? []).slice(0, 6).map((x) => ({ title: x.title, artist: x.artist, album: "", year: "", artwork: "" }));
+      setResolve((cur) => cur && cur.query === q ? { ...cur, artists, songs, web: { loading: false, done: true } } : cur);
+    } catch (err) {
+      setResolve((cur) => cur && cur.query === q ? { ...cur, web: { loading: false, done: false, error: err instanceof Error ? err.message : "Web'de aranamadı." } } : cur);
+    }
+  };
   const goHome = () => {
     setView("research");
+    setResolve(null);
     setCurrent(null);
     setSong("");
     setArtist("");
@@ -316,10 +393,13 @@ export default function Home() {
   const popularHit = popular.find(
     (e) => e.ready && e.title.toLocaleLowerCase("en") === song.trim().toLocaleLowerCase("en") && e.artist.toLocaleLowerCase("en") === artist.trim().toLocaleLowerCase("en"),
   );
-  const canSubmit = Boolean(song.trim()) && busy === null && (canResearch || Boolean(popularHit && popularHit.part === part && !partDetail.trim() && instrument === "guitar" && toneType === "auto"));
+  const canSubmit = Boolean(song.trim()) && busy === null && (!artist.trim() || canResearch || Boolean(popularHit && popularHit.part === part && !partDetail.trim() && instrument === "guitar" && toneType === "auto"));
 
   const submit = () => {
     if (!canSubmit) return;
+    // Seçilmemiş serbest metin (ör. "Duman"): grup ya da şarkı olarak çöz
+    if (!artist.trim()) return void resolveQuery(song.trim());
+    setResolve(null);
     void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
   };
 
@@ -353,11 +433,12 @@ export default function Home() {
         song={song}
         artist={artist}
         artwork={artwork}
+        onArtist={openBand}
         onChange={(p) => {
           if (p.song !== undefined) setSong(p.song);
           if (p.artist !== undefined) setArtist(p.artist);
           if (p.artwork !== undefined) setArtwork(p.artwork);
-          // Popüler 100'deki bir şarkı seçildiyse hazır kaydın bölümüne geç (ton anında açılsın)
+          // Popüler listedeki bir şarkı seçildiyse hazır kaydın bölümüne geç (ton anında açılsın)
           if (p.song && p.artist) {
             const hit = popular.find(
               (e) => e.ready && e.title.toLocaleLowerCase("en") === p.song!.toLocaleLowerCase("en") && e.artist.toLocaleLowerCase("en") === p.artist!.toLocaleLowerCase("en"),
@@ -392,11 +473,31 @@ export default function Home() {
       </div>
       {keyStatus && !canResearch && (
         <p className={`mt-3 text-sm text-warn ${big ? "text-center" : ""}`}>
-          Yeni şarkı araştırmak için bu bilgisayarda Claude Code gerekli; popüler 100 şarkının tonları yine de açılır.{" "}
+          Yeni şarkı araştırmak için bu bilgisayarda Claude Code gerekli; hazır tonu olan popüler şarkılar yine de açılır.{" "}
           <button type="button" className="underline" onClick={() => setSettingsOpen(true)}>
             Nasıl?
           </button>
         </p>
+      )}
+      {resolve && (
+        <div className="mt-5">
+          <ResolvePanel
+            query={resolve.query}
+            loading={resolve.loading}
+            artists={resolve.artists}
+            songs={resolve.songs}
+            web={resolve.web}
+            canWeb={canResearch}
+            onArtist={openBand}
+            onSong={pickSong}
+            onWeb={() => void webSearch()}
+            onRaw={() => {
+              setResolve(null);
+              void research({ song, artist: "", part, partDetail, instrument, toneType }, { artwork });
+            }}
+            onClose={() => setResolve(null)}
+          />
+        </div>
       )}
     </form>
   );
@@ -421,9 +522,9 @@ export default function Home() {
               <button
                 key={id}
                 onClick={() => (id === "research" ? goHome() : setView(id))}
-                aria-current={view === id ? "page" : undefined}
+                aria-current={view === id || (id === "research" && view === "band") ? "page" : undefined}
                 className={`rounded-full px-4 py-2 text-[15px] font-bold transition ${
-                  view === id ? "bg-panel text-ink" : "text-ink-soft hover:bg-panel hover:text-ink"
+                  view === id || (id === "research" && view === "band") ? "bg-panel text-ink" : "text-ink-soft hover:bg-panel hover:text-ink"
                 }`}
               >
                 {label}
@@ -455,6 +556,12 @@ export default function Home() {
           </div>
         )}
 
+        {view === "band" && band && (
+          <>
+            <BandPage band={band} popular={popular} part={part} onPart={setPart} onSong={pickSong} onPopular={openPopular} onBack={goHome} />
+          </>
+        )}
+
         {view === "research" && (
           <>
             {showHome ? (
@@ -473,7 +580,8 @@ export default function Home() {
               <>
                 <PopularPromo entries={popular} onBrowse={() => browsePopular("")} />
                 <PopularRail title="En çok çalınanlar" subtitle="Songsterr listesinin ilk 12 şarkısı" entries={popular.slice(0, 12)} onOpen={openPopular} />
-                <ArtistTiles entries={popular} onPick={(a) => browsePopular(a)} />
+                {shelf.length > 0 && <LibraryShelf artists={shelf} onOpen={(a) => openBand({ id: a.id, name: a.name, picture: a.picture, fans: a.fans, inLibrary: true })} />}
+                <ArtistTiles entries={popular} onPick={(a) => openBand({ id: 0, name: a, picture: "", fans: 0 })} />
                 {history.length > 0 && (
                   <section>
                     <div className="mb-4 flex items-end justify-between">

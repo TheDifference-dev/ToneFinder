@@ -16,12 +16,21 @@ Guitar Tone Finder — yapay zekâ destekli gitar ton bulucu (ToneAdapt benzeri)
    - gitar farkı telafisi (ör. orijinalde Les Paul humbucker, sende Strat single-coil).
 
 Ayrıca:
-- **Tek kutuda arama:** şarkı ya da grup adı yazılır. Grup adı yazınca grup çıkar; "Şarkılarını gör" ile
-  o grubun popüler şarkıları listelenir ve tıklanarak seçilir. Kapak resimleriyle (Deezer, olmazsa iTunes;
-  anahtarsız). Gitar/bas, bölüm ve ton türü (Otomatik / Temiz / Distorsiyonlu) seçimi.
-- **Popüler 100:** Songsterr'in en popüler 100 şarkısının orijinal tonları önceden araştırılıp uygulamayla
+- **Tek kutuda arama:** şarkı ya da grup adı yazılır. Grup çıkınca resmine tıklanır ve **grup sayfası** açılır:
+  grubun en popüler şarkıları, varsa hazır tonları; bir şarkıya tıklayınca seçilen bölümün tonu araştırılır.
+  Yalnız grup adı yazıp "Tonu bul"a basılırsa metin şarkı gibi araştırılmaz: tam bir grup adıysa grup sayfası
+  açılır, değilse "Bunu mu aradın?" paneli gelir. Hiçbir yerde bulunamazsa Claude Code web'de arar.
+- **Grup kütüphanesi:** 100 ünlü grup (80 dünya, 20 Türkçe rock) ve her birinin en popüler 20 şarkısı
+  uygulamayla gelir (`data/library/`, `scripts/build-library.mjs`). Arama önce buraya, sonra Deezer/iTunes'a bakar.
+- **Popüler 500:** Songsterr'in en popüler 500 şarkısının orijinal tonları önceden araştırılıp uygulamayla
   birlikte gelir (`data/popular/`). Karta tıklayınca ton anında açılır; Claude Code ya da API anahtarı
-  gerekmez. Liste `scripts/research-popular.mjs` ve `scripts/fetch-popular-artwork.mjs` ile yenilenir.
+  gerekmez. Liste `scripts/build-popular-from-raw.py`, `scripts/research-popular.mjs` ve
+  `scripts/fetch-popular-artwork.mjs` ile yenilenir.
+- **Sinyal zinciri:** pedallar ve bloklar gitardan hoparlöre doğru sırada gösterilir (`lib/signal-chain.ts`):
+  wah/filtre → kompresör → pitch → drive/fuzz → EQ → noise gate → modülasyon → **amfi** → kabin → mikrofon →
+  **delay → reverb**. Delay ve reverb her zaman amfiden sonra gelir (efekt döngüsü ya da stüdyo).
+- **Claude Code ile uyarlama:** API anahtarı yoksa 2. adım (ekipmanına çevirme) ve "Web'de tanıt" de
+  bilgisayardaki Claude Code (Claude aboneliğin) ile yapılır.
 - **Ekipman:** amfinin kendi efektleri, pedal listesi (60 pedallık katalogdan öneri ve düğme adları).
 - **Sonuç:** her ayarın yanında dayanağı (kaynaklı / çıkarım / kontrol et), zorluk (1–5), ekipmanla ne kadar
   yaklaşılabileceğinin tahmini (%), ton özellikleri, sınırlamalar, alternatifler, Songsterr tab ve backing

@@ -3,7 +3,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { OriginalToneSchema, type OriginalTone, type ToneRequest } from "./schema";
 
-// Uygulamayla birlikte gelen popüler şarkı kataloğu (Songsterr'in en popüler 100 şarkısı).
+// Uygulamayla birlikte gelen popüler şarkı kataloğu (Songsterr'in en popüler 500 şarkısı).
 // data/popular/songs.json listeyi, data/popular/tones/*.json her şarkının önceden araştırılmış
 // orijinal tonunu, data/popular/artwork.json kapak resimlerini tutar. Bu şarkılardan biri
 // listedeki bölümüyle istenince araştırma yapılmadan bu kayıt kullanılır.
