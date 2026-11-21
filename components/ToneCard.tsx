@@ -52,14 +52,14 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
 
   return (
     <article className="hud-panel rise overflow-hidden">
-      <header className="flex flex-wrap items-end gap-4 bg-c-purple px-6 pb-7 pt-6">
+      <header className="flex flex-wrap items-end gap-4 bg-ink px-6 pb-7 pt-6">
         <div className="min-w-0 flex-1">
-          <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cream-ink/65">Uyarlanmış ton</div>
-          <h2 className="serif mt-1 text-[40px] font-semibold leading-[1.02] text-cream-ink">Senin ekipmanınla</h2>
+          <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">Uyarlanmış ton</div>
+          <h2 className="headline mt-1 text-[40px] font-semibold leading-[1.02] text-white">Senin ekipmanınla</h2>
         </div>
         {match !== null && (
-          <span className="flex items-baseline gap-2 rounded-full bg-cream-ink px-4 py-2 text-xs font-semibold text-white" title={result.match?.reason}>
-            Yakınlık (tahmin) <b className="serif text-lg text-accent">%{match}</b>
+          <span className="flex items-baseline gap-2 rounded-full bg-white px-4 py-2 text-xs font-semibold text-ink" title={result.match?.reason}>
+            Yakınlık (tahmin) <b className="headline text-lg text-petrol">%{match}</b>
           </span>
         )}
       </header>
@@ -73,7 +73,7 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
               aria-selected={section === i - 1}
               onClick={() => setSection(i - 1)}
               className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                section === i - 1 ? "bg-ink text-cream-ink" : "bg-raised text-ink-soft hover:text-ink"
+                section === i - 1 ? "bg-ink text-white" : "bg-panel text-ink-soft hover:text-ink"
               }`}
             >
               {s.name}
@@ -85,7 +85,7 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
       {activeSection ? (
         <section className="px-6 pb-6 pt-5">
           <p className="mb-2 text-xs text-ink-mute">Yalnız değişen ayarlar; gerisi ana tondaki gibi.</p>
-          <ul className="divide-y divide-line overflow-hidden rounded-2xl bg-raised">
+          <ul className="divide-y divide-line overflow-hidden rounded-2xl bg-panel">
             {activeSection.changes.map((c, i) => (
               <li key={i} className="flex items-start justify-between gap-3 p-3 text-sm">
                 <span>
@@ -93,7 +93,7 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
                   <b className="text-ink">{c.setting}</b>
                   <span className="block text-xs text-ink-mute">{c.why}</span>
                 </span>
-                <span className="serif text-xl font-semibold text-accent">{c.value}</span>
+                <span className="headline text-xl font-semibold text-accent">{c.value}</span>
               </li>
             ))}
           </ul>
@@ -120,9 +120,9 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
           </ChainRow>
 
           {block && (
-            <div className="mt-3 rounded-2xl bg-raised p-5">
+            <div className="mt-3 rounded-2xl bg-panel p-5">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="serif text-2xl font-semibold text-ink">{block.device_model}</span>
+                <span className="headline text-2xl font-semibold text-ink">{block.device_model}</span>
                 {block.match && MATCH[block.match] && (
                   <span className="text-xs font-semibold uppercase tracking-[0.06em]" style={{ color: MATCH[block.match].color }}>
                     {MATCH[block.match].label}

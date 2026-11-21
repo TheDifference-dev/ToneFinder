@@ -40,7 +40,7 @@ export function PickupSelector({ layout, selected }: { layout?: string; selected
   const x = (i: number) => 20 + i * step;
 
   return (
-    <figure className="rounded-2xl bg-paper p-4">
+    <figure className="rounded-2xl bg-panel p-4">
       <figcaption className="hud-label mb-2">{fiveWay ? "5'li seçici" : "3'lü seçici"}</figcaption>
       <svg viewBox={`0 0 ${w} 74`} className="h-auto w-full max-w-[260px]" role="img" aria-label={`Seçici: ${positions[index].label}`}>
         <rect x="12" y="18" width={w - 24} height="12" rx="6" fill="var(--color-raised)" stroke="var(--color-line-strong)" />

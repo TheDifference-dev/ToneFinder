@@ -2,6 +2,7 @@ import "server-only";
 import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { readResearch, researchKey, writeResearch, type OriginalResearch } from "./cache";
+import { bundledOriginal } from "./popular";
 import { runClaudeCli, type ClaudeCli } from "./claude-cli";
 import { deviceReference } from "./devices";
 import { ampProfileText, matchAmp } from "./amps";
@@ -251,10 +252,19 @@ When you finish researching, return the result with the structured output tool. 
 export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) {
   const key = researchKey([req.song, req.artist, req.part, req.partDetail, req.instrument, req.toneType]);
   let original = req.fresh ? null : await readResearch(key);
+  let bundled = false;
+  if (!req.fresh && !original?.structured) {
+    // Songsterr'in popüler 100 şarkısından biri: uygulamayla gelen hazır araştırmayı kullan
+    const seed = bundledOriginal(req);
+    if (seed) {
+      original = { report: "", sources: seed.original.sources.map((s) => [s.url, s.title]), researchedAt: seed.researchedAt, structured: seed.original };
+      bundled = true;
+    }
+  }
   const cached = Boolean(original?.structured);
 
   if (original?.structured) {
-    emit({ type: "status", message: "Bu şarkının araştırması kayıtlı, yeniden kullanılıyor…" });
+    emit({ type: "status", message: bundled ? "Popüler şarkı: hazır araştırma kullanılıyor…" : "Bu şarkının araştırması kayıtlı, yeniden kullanılıyor…" });
   } else if (engine.kind === "cli") {
     emit({ type: "status", message: "Stüdyo kaydındaki ekipman araştırılıyor…" });
     const { output, fetched } = await runClaudeCli(engine.cli, {
@@ -286,7 +296,7 @@ export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) 
     await writeResearch(key, original);
   }
 
-  const meta: ToneMeta = { cached, researchedAt: original.researchedAt };
+  const meta: ToneMeta = { cached, researchedAt: original.researchedAt, bundled };
   return { original: original as OriginalResearch & { structured: OriginalTone }, meta };
 }
 

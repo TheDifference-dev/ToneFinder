@@ -6,7 +6,9 @@ import { RigPanel } from "@/components/RigPanel";
 import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
-import { AppMark, Artwork, CARD_COLORS, PageBand, Pill, Segmented } from "@/components/ui";
+import { ArtistTiles, PopularGrid, PopularPromo, PopularRail } from "@/components/Popular";
+import { AppMark, Artwork, PageBand, Pill, Segmented } from "@/components/ui";
+import type { PopularEntry } from "@/lib/popular";
 import { toneText } from "@/lib/format";
 import { INSTRUMENTS, PARTS, TONE_TYPES, type Instrument, type ToneType, type UserRig } from "@/lib/gear";
 import type { OriginalTone, PartialTone, ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
@@ -26,15 +28,6 @@ import {
 } from "@/lib/storage";
 
 type View = "research" | "rig" | "library";
-
-const QUICK_PICKS: { song: string; artist: string; part: string; detail?: string }[] = [
-  { song: "Master of Puppets", artist: "Metallica", part: "rhythm" },
-  { song: "Sweet Child O' Mine", artist: "Guns N' Roses", part: "intro" },
-  { song: "Comfortably Numb", artist: "Pink Floyd", part: "lead", detail: "son solo" },
-  { song: "Back in Black", artist: "AC/DC", part: "intro" },
-  { song: "Hotel California", artist: "Eagles", part: "lead" },
-  { song: "Smells Like Teen Spirit", artist: "Nirvana", part: "rhythm" },
-];
 
 const PART_SHORT: Record<string, string> = { lead: "Solo", rhythm: "Ritim", intro: "Riff", clean: "Temiz", full: "Genel" };
 const TONE_SHORT: Record<string, string> = { auto: "Oto", clean: "Temiz", distorted: "Dist" };
@@ -105,6 +98,8 @@ export default function Home() {
   const [listTab, setListTab] = useState<"saved" | "history">("saved");
   const [feedback, setFeedback] = useState("");
   const [copied, setCopied] = useState(false);
+  const [popular, setPopular] = useState<PopularEntry[]>([]);
+  const [popularArtist, setPopularArtist] = useState("");
 
   const activeRig = rigStore?.rigs.find((r) => r.id === rigStore.activeId) ?? null;
   const rig = activeRig?.rig ?? null;
@@ -116,6 +111,10 @@ export default function Home() {
     setRigStore(loadRigs());
     setSaved(loadSaved());
     setHistory(loadHistory());
+    fetch("/api/popular")
+      .then((r) => r.json() as Promise<{ songs?: PopularEntry[] }>)
+      .then((d) => setPopular(d.songs ?? []))
+      .catch(() => {});
     fetch("/api/settings")
       .then((r) => r.json() as Promise<KeyStatus>)
       .then(setKeyStatus)
@@ -284,30 +283,72 @@ export default function Home() {
   const isSaved = current ? saved.some((s) => s.id === current.id) : false;
   const engine = keyStatus?.configured ? "API" : keyStatus?.cli ? "Claude Code" : null;
   const adapted = current && isAdapted(current.result) ? current.result : null;
-  const showHero = view === "research" && !current && !busy;
-  const pickQuick = (q: (typeof QUICK_PICKS)[number]) => {
-    setSong(q.song);
-    setArtist(q.artist);
-    setPart(q.part);
-    setPartDetail(q.detail ?? "");
-    setArtwork("");
+  const showHome = view === "research" && !current && !busy;
+  const openPopular = (e: PopularEntry) => {
+    setSong(e.title);
+    setArtist(e.artist);
+    setPart(e.part);
+    setPartDetail("");
+    setInstrument("guitar");
+    setToneType("auto");
+    setArtwork(e.artwork);
     window.scrollTo({ top: 0, behavior: "smooth" });
+    void research({ song: e.title, artist: e.artist, part: e.part, partDetail: "", instrument: "guitar", toneType: "auto" }, { artwork: e.artwork });
+  };
+  const browsePopular = (artistName = "") => {
+    setPopularArtist(artistName);
+    setTimeout(() => document.getElementById("popular-100")?.scrollIntoView({ behavior: "smooth" }), 30);
   };
   const openTone = (s: SavedTone) => {
     setCurrent(s);
     setView("research");
     window.scrollTo({ top: 0 });
   };
+  const goHome = () => {
+    setView("research");
+    setCurrent(null);
+    setSong("");
+    setArtist("");
+    setArtwork("");
+    window.scrollTo({ top: 0 });
+  };
+  const popularHit = popular.find(
+    (e) => e.ready && e.title.toLocaleLowerCase("en") === song.trim().toLocaleLowerCase("en") && e.artist.toLocaleLowerCase("en") === artist.trim().toLocaleLowerCase("en"),
+  );
+  const canSubmit = Boolean(song.trim()) && busy === null && (canResearch || Boolean(popularHit && popularHit.part === part && !partDetail.trim() && instrument === "guitar" && toneType === "auto"));
 
-  const searchForm = (
+  const submit = () => {
+    if (!canSubmit) return;
+    void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
+  };
+
+  const searchForm = (big: boolean) => (
     <form
-      className="hud-panel rise space-y-4 p-5"
+      className={big ? "mx-auto max-w-4xl" : "hud-panel rise p-4"}
       onSubmit={(e) => {
         e.preventDefault();
-        void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
+        submit();
       }}
     >
+      {big && (
+        <div className="mb-4 flex flex-wrap justify-center gap-1" role="group" aria-label="Bölüm">
+          {PARTS.map((p) => (
+            <button
+              type="button"
+              key={p.id}
+              onClick={() => setPart(p.id)}
+              aria-pressed={part === p.id}
+              className={`rounded-full border-b-[3px] px-4 pb-2 pt-1.5 text-[15px] font-bold transition ${
+                part === p.id ? "border-ink text-ink" : "border-transparent text-ink-mute hover:text-ink"
+              }`}
+            >
+              {PART_SHORT[p.id] ?? p.label}
+            </button>
+          ))}
+        </div>
+      )}
       <SongSearch
+        big={big}
         song={song}
         artist={artist}
         artwork={artwork}
@@ -316,27 +357,29 @@ export default function Home() {
           if (p.artist !== undefined) setArtist(p.artist);
           if (p.artwork !== undefined) setArtwork(p.artwork);
         }}
+        action={
+          <Pill tone="primary" type="submit" disabled={!canSubmit} className={big ? "!px-7 !py-4 text-base" : "!px-5"}>
+            {busy === "research" ? "Araştırılıyor…" : "Tonu bul"}
+          </Pill>
+        }
       />
-      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-        <Segmented label="Bölüm" options={PARTS.map((p) => ({ id: p.id, label: PART_SHORT[p.id] ?? p.label }))} value={part} onChange={setPart} />
+      <div className={`mt-4 flex flex-wrap items-center gap-x-5 gap-y-3 ${big ? "justify-center" : ""}`}>
+        {!big && (
+          <Segmented label="Bölüm" options={PARTS.map((p) => ({ id: p.id, label: PART_SHORT[p.id] ?? p.label }))} value={part} onChange={setPart} />
+        )}
         <Segmented label="Ton" options={TONE_TYPES.map((t) => ({ id: t.id, label: TONE_SHORT[t.id] }))} value={toneType} onChange={setToneType} />
         <Segmented label="" options={INSTRUMENTS} value={instrument} onChange={setInstrument} />
-      </div>
-      <div className="flex flex-col gap-3 sm:flex-row">
         <input
-          className="hud-input"
+          className="hud-input !w-72 !rounded-full !py-2"
           placeholder="Hangi bölüm? (isteğe bağlı, ör. 2. solo)"
           value={partDetail}
           onChange={(e) => setPartDetail(e.target.value)}
           aria-label="Bölüm detayı"
         />
-        <Pill tone="light" type="submit" disabled={busy !== null || !song.trim() || !canResearch} className="shrink-0 px-8">
-          {busy === "research" ? "Araştırılıyor…" : "Tonu araştır"}
-        </Pill>
       </div>
       {keyStatus && !canResearch && (
-        <p className="text-sm text-warn">
-          Araştırma için bu bilgisayarda Claude Code gerekli.{" "}
+        <p className={`mt-3 text-sm text-warn ${big ? "text-center" : ""}`}>
+          Yeni şarkı araştırmak için bu bilgisayarda Claude Code gerekli; popüler 100 şarkının tonları yine de açılır.{" "}
           <button type="button" className="underline" onClick={() => setSettingsOpen(true)}>
             Nasıl?
           </button>
@@ -346,83 +389,53 @@ export default function Home() {
   );
 
   return (
-    <div className="min-h-screen pb-16">
-      {/* Yüzen menü çubuğu */}
-      <header className="fixed inset-x-0 top-3 z-30 px-4">
-        <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 rounded-full border border-white/5 bg-[#1e1f22]/95 pl-3 pr-2 shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur">
-          <button onClick={() => { setView("research"); setCurrent(null); }} className="flex items-center gap-2.5 rounded-full pr-3" aria-label="Ana sayfa">
-            <AppMark size={30} />
-            <span className="serif hidden text-[19px] font-semibold text-ink sm:inline">ToneFinder</span>
+    <div className="min-h-screen pb-20">
+      {/* Üst çubuk */}
+      <header className="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur">
+        <div className="mx-auto flex h-[68px] max-w-[1200px] items-center gap-3 px-6">
+          <button onClick={goHome} className="flex items-center gap-2.5" aria-label="Ana sayfa">
+            <AppMark size={34} />
+            <span className="headline hidden text-[23px] text-ink sm:inline">ToneFinder</span>
           </button>
-          <nav className="ml-2 flex items-center gap-1" aria-label="Bölümler">
+          <nav className="ml-auto flex items-center gap-1" aria-label="Bölümler">
             {(
               [
-                ["research", "Araştır"],
+                ["research", "Keşfet"],
                 ["rig", "Ekipmanım"],
                 ["library", "Tonlarım"],
               ] as const
             ).map(([id, label]) => (
               <button
                 key={id}
-                onClick={() => setView(id)}
+                onClick={() => (id === "research" ? goHome() : setView(id))}
                 aria-current={view === id ? "page" : undefined}
-                className={`rounded-full px-3.5 py-2 text-sm font-semibold transition ${
-                  view === id ? "bg-raised text-ink" : "text-ink-soft hover:text-ink"
+                className={`rounded-full px-4 py-2 text-[15px] font-bold transition ${
+                  view === id ? "bg-panel text-ink" : "text-ink-soft hover:bg-panel hover:text-ink"
                 }`}
               >
                 {label}
               </button>
             ))}
           </nav>
-          <div className="ml-auto flex items-center gap-2">
-            <span className="hidden items-center gap-2 rounded-full bg-raised px-3 py-2 text-xs font-semibold text-ink-soft sm:flex">
-              <span className={`h-2 w-2 rounded-full ${busy ? "animate-pulse bg-accent" : engine ? "bg-ok" : "bg-bad"}`} />
-              {busy ? "Çalışıyor" : (engine ?? "Kurulum gerekli")}
-            </span>
-            <button
-              onClick={() => setSettingsOpen(true)}
-              className="flex h-10 w-10 items-center justify-center rounded-full text-ink-soft hover:bg-raised hover:text-ink"
-              aria-label="Ayarlar"
-              title="Ayarlar"
-            >
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden>
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z" />
-              </svg>
-            </button>
-          </div>
+          <span className="ml-3 hidden items-center gap-2 text-[13px] font-semibold text-ink-soft md:flex" title="Araştırma motoru">
+            <span className={`h-2.5 w-2.5 rounded-full ${busy ? "animate-pulse bg-petrol" : engine ? "bg-ok" : "bg-bad"}`} />
+            {busy ? "Çalışıyor" : (engine ?? "Kurulum gerekli")}
+          </span>
+          <Pill tone="dark" onClick={() => setSettingsOpen(true)} className="ml-2">
+            Ayarlar
+          </Pill>
         </div>
       </header>
 
       {settingsOpen && keyStatus && (
-        <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/60 p-4 pt-24 backdrop-blur-sm" onClick={() => setSettingsOpen(false)}>
+        <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/40 p-4 pt-24 backdrop-blur-sm" onClick={() => setSettingsOpen(false)}>
           <div className="rise w-full max-w-lg" onClick={(e) => e.stopPropagation()}>
             <SettingsPanel status={keyStatus} onSaved={setKeyStatus} onClose={() => setSettingsOpen(false)} />
           </div>
         </div>
       )}
 
-      {/* Krem karşılama bandı (yalnız boş araştırma ekranında) */}
-      {showHero && (
-        <section className="bg-cream px-6 pb-20 pt-36 text-center">
-          <h1 className="serif rise mx-auto max-w-3xl text-[56px] font-semibold leading-[1.04] text-cream-ink sm:text-[68px]">
-            Sevdiğin şarkının tonu, kendi ekipmanında
-          </h1>
-          <p className="rise mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-cream-mute" style={{ animationDelay: "60ms" }}>
-            Stüdyo kaydındaki gitar, amfi ve pedalları kaynaklarıyla bulur; sonra düğme düğme senin rig&apos;ine çevirir.
-          </p>
-          <div className="rise mt-8 flex justify-center gap-3" style={{ animationDelay: "120ms" }}>
-            <Pill tone="dark" onClick={() => document.querySelector<HTMLInputElement>("[aria-label='Şarkı']")?.focus()}>
-              Şarkı ara
-            </Pill>
-            <Pill tone="ghost" className="!bg-black/5 !text-cream-ink hover:!bg-black/10" onClick={() => setView("rig")}>
-              Ekipmanımı kur
-            </Pill>
-          </div>
-        </section>
-      )}
-
-      <main className={`mx-auto max-w-6xl space-y-6 px-6 ${showHero ? "pt-10" : "pt-24"}`}>
+      <main className="mx-auto max-w-[1200px] space-y-14 px-6 pt-10">
         {error && (
           <div className="rounded-2xl border border-bad/40 bg-bad/10 px-5 py-3.5 text-sm text-ink" role="alert">
             {error}
@@ -431,59 +444,58 @@ export default function Home() {
 
         {view === "research" && (
           <>
-            {searchForm}
+            {showHome ? (
+              <section className="pt-6 text-center">
+                <h1 className="headline rise text-[56px] leading-none text-ink sm:text-[72px]">Hangi şarkının tonu?</h1>
+                <p className="rise mx-auto mb-8 mt-4 max-w-xl text-[17px] text-ink-soft" style={{ animationDelay: "60ms" }}>
+                  Şarkı ya da grup adını yaz; stüdyo kaydındaki ekipmanı bulup senin rig&apos;ine çevirelim.
+                </p>
+                {searchForm(true)}
+              </section>
+            ) : (
+              <div className="space-y-6">{searchForm(false)}</div>
+            )}
 
-            {showHero && (
+            {showHome && popular.length > 0 && (
               <>
-                <section>
-                  <div className="mb-4 flex items-end justify-between">
-                    <h2 className="text-lg font-semibold text-ink">Popüler tonlar</h2>
-                    <span className="text-xs text-ink-mute">Birine tıkla, form dolsun</span>
-                  </div>
-                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
-                    {QUICK_PICKS.map((q, i) => (
-                      <button key={q.song} onClick={() => pickQuick(q)} className="lift group overflow-hidden rounded-2xl bg-panel text-left">
-                        <span className="relative flex aspect-square flex-col justify-between p-4" style={{ background: CARD_COLORS[i % CARD_COLORS.length] }}>
-                          <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cream-ink/60">{PART_SHORT[q.part]}</span>
-                          <span className="serif text-[22px] font-semibold leading-[1.05] text-cream-ink">{q.song}</span>
-                          <svg className="absolute right-3 top-3 opacity-25 transition group-hover:opacity-40" width="34" height="34" viewBox="0 0 40 40" aria-hidden>
-                            <path d="M20 3c9 0 16 4 16 11 0 9-8 19-16 23C12 33 4 23 4 14 4 7 11 3 20 3z" fill="#141414" />
-                          </svg>
-                        </span>
-                        <span className="block truncate px-4 py-3 text-[13px] font-semibold text-ink">{q.artist}</span>
-                      </button>
-                    ))}
-                  </div>
-                </section>
-
+                <PopularPromo entries={popular} onBrowse={() => browsePopular("")} />
+                <PopularRail title="En çok çalınanlar" subtitle="Songsterr listesinin ilk 12 şarkısı" entries={popular.slice(0, 12)} onOpen={openPopular} />
+                <ArtistTiles entries={popular} onPick={(a) => browsePopular(a)} />
                 {history.length > 0 && (
                   <section>
-                    <div className="mb-3 flex items-end justify-between">
-                      <h2 className="text-lg font-semibold text-ink">Son araştırmaların</h2>
-                      <button onClick={() => { setListTab("history"); setView("library"); }} className="text-xs font-semibold text-ink-soft hover:text-ink">
+                    <div className="mb-4 flex items-end justify-between">
+                      <h2 className="headline text-[26px] text-ink">Son araştırmaların</h2>
+                      <button
+                        onClick={() => {
+                          setListTab("history");
+                          setView("library");
+                        }}
+                        className="text-sm font-bold text-ink underline-offset-4 hover:underline"
+                      >
                         Tümünü gör
                       </button>
                     </div>
                     <ToneRows items={history.slice(0, 5)} onOpen={openTone} />
                   </section>
                 )}
+                <PopularGrid entries={popular} onOpen={openPopular} artist={popularArtist} onArtist={setPopularArtist} />
               </>
             )}
 
             {busy && (
-              <div className="hud-panel hud-scan flex items-center gap-3 px-5 py-4" aria-live="polite">
-                <span className="h-2.5 w-2.5 shrink-0 animate-pulse rounded-full bg-accent" />
+              <div className="hud-panel hud-scan -mt-8 flex items-center gap-3 px-5 py-4" aria-live="polite">
+                <span className="h-2.5 w-2.5 shrink-0 animate-pulse rounded-full bg-petrol" />
                 <span className="min-w-0 flex-1 truncate text-sm text-ink-soft">{progress.at(-1) ?? "Başlıyor…"}</span>
                 <span className="text-xs font-semibold text-ink-mute">{busy === "research" ? "~1–2 dk" : "~1–3 dk"}</span>
               </div>
             )}
 
             {current && busy !== "research" && (
-              <>
+              <div className="-mt-8 space-y-6">
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="hud-label mr-auto">
                     {current.part}
-                    {current.meta?.cached && " · kayıttan"}
+                    {current.meta?.bundled ? " · hazır popüler kayıt" : current.meta?.cached ? " · kayıttan" : ""}
                   </span>
                   <Pill type="button" onClick={() => toggleSave(current)}>
                     {isSaved ? "★ Kayıtlı" : "☆ Kaydet"}
@@ -505,9 +517,9 @@ export default function Home() {
                 <OriginalCard key={`o-${current.id}`} tone={current.result} artwork={current.artwork} />
 
                 <section className="hud-panel flex flex-wrap items-center gap-4 p-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-c-purple text-sm font-bold text-cream-ink">2</span>
+                  <span className="headline flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink text-lg text-white">2</span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="serif text-xl font-semibold text-ink">Ekipmanına çevir</h3>
+                    <h3 className="headline text-[22px] text-ink">Ekipmanına çevir</h3>
                     <p className="truncate text-sm text-ink-mute">
                       {activeRig?.name}: {rig ? rigLabel(rig) : "—"}
                       {rig?.guitar && ` · ${rig.guitar}`}
@@ -517,7 +529,7 @@ export default function Home() {
                     Ekipman
                   </Pill>
                   <Pill
-                    tone="light"
+                    tone="primary"
                     type="button"
                     disabled={busy !== null || !canAdapt || !hasGear || !current.query}
                     onClick={() => adapt()}
@@ -558,34 +570,34 @@ export default function Home() {
                         placeholder="Kulağa yanlış mı geliyor? Ne farklı? (ör. çok bulanık)"
                         aria-label="Geri bildirim"
                       />
-                      <Pill type="submit" disabled={busy !== null || !canAdapt || !feedback.trim()} className="shrink-0">
+                      <Pill type="submit" tone="dark" disabled={busy !== null || !canAdapt || !feedback.trim()} className="shrink-0">
                         Yeniden uyarla
                       </Pill>
                     </form>
                   </>
                 )}
-              </>
+              </div>
             )}
           </>
         )}
 
         {view === "rig" && rig && rigStore && (
-          <>
-            <PageBand kicker="Ekipman" title="Ekipmanım" color="var(--color-c-purple)">
+          <div className="space-y-6">
+            <PageBand kicker="Ekipman" title="Ekipmanım" color="var(--color-ink)">
               Amfin, prosesörün, gitarın ve pedalların. Tonlar bu bilgilere göre düğme düğme ayarlanır; &quot;Ev&quot;, &quot;Prova&quot; gibi birden çok set tutabilirsin.
             </PageBand>
             <RigPanel rig={rig} rigs={rigStore.rigs} activeId={rigStore.activeId} {...rigActions} canIdentify={canAdapt} />
-          </>
+          </div>
         )}
 
         {view === "library" && (
-          <>
+          <div className="space-y-6">
             <PageBand
               kicker="Kütüphane"
               title="Tonlarım"
-              color="var(--color-c-lime)"
+              color="var(--color-petrol)"
               action={
-                <label className="pill pill-ghost cursor-pointer">
+                <label className="pill pill-soft cursor-pointer">
                   İçe aktar
                   <input
                     type="file"
@@ -602,7 +614,7 @@ export default function Home() {
             >
               Kaydettiğin tonlar ve son 20 sonuç. Bir satıra tıklayınca ton açılır.
             </PageBand>
-            <div className="flex items-center gap-1 rounded-full bg-panel p-1 w-fit">
+            <div className="flex w-fit items-center gap-1 rounded-full bg-panel p-1">
               {(
                 [
                   ["saved", `Kayıtlı · ${saved.length}`],
@@ -613,9 +625,7 @@ export default function Home() {
                   key={id}
                   onClick={() => setListTab(id)}
                   aria-pressed={listTab === id}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
-                    listTab === id ? "bg-ink text-cream-ink" : "text-ink-soft hover:text-ink"
-                  }`}
+                  className={`rounded-full px-4 py-2 text-sm font-bold transition ${listTab === id ? "bg-ink text-white" : "text-ink-soft hover:text-ink"}`}
                 >
                   {label}
                 </button>
@@ -626,7 +636,7 @@ export default function Home() {
             ) : (
               <ToneRows items={listTab === "saved" ? saved : history} onOpen={openTone} onRemove={(id) => removeFrom(listTab, id)} />
             )}
-          </>
+          </div>
         )}
       </main>
     </div>
@@ -636,11 +646,11 @@ export default function Home() {
 /** Parça listesi gibi kapaklı satırlar */
 function ToneRows({ items, onOpen, onRemove }: { items: SavedTone[]; onOpen: (s: SavedTone) => void; onRemove?: (id: string) => void }) {
   return (
-    <ul className="divide-y divide-line/70 overflow-hidden rounded-2xl bg-panel">
+    <ul className="divide-y divide-line overflow-hidden rounded-2xl border border-line bg-paper">
       {items.map((s) => {
         const date = new Date(s.savedAt).toLocaleDateString("tr-TR", { day: "numeric", month: "short" });
         return (
-          <li key={s.id} className="group flex items-center gap-4 px-4 py-3 transition hover:bg-raised/60">
+          <li key={s.id} className="group flex items-center gap-4 px-4 py-3 transition hover:bg-panel">
             <button onClick={() => onOpen(s)} className="flex min-w-0 flex-1 items-center gap-4 text-left">
               <Artwork src={s.artwork} title={s.result.song.title} size={46} />
               <span className="min-w-0 flex-1">
@@ -653,7 +663,7 @@ function ToneRows({ items, onOpen, onRemove }: { items: SavedTone[]; onOpen: (s:
               </span>
               <span
                 className={`hidden rounded-full px-2.5 py-1 text-[11px] font-semibold sm:inline ${
-                  isAdapted(s.result) ? "bg-c-lime text-cream-ink" : "bg-raised text-ink-soft"
+                  isAdapted(s.result) ? "bg-petrol text-white" : "bg-panel text-ink-soft"
                 }`}
               >
                 {isAdapted(s.result) ? "Uyarlandı" : "Araştırma"}

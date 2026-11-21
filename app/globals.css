@@ -1,61 +1,57 @@
 @import "tailwindcss";
 
-/* "Stüdyo kataloğu" teması: koyu içerik zemini, krem karşılama bandı, serif başlıklar,
-   hap biçimli düğmeler ve canlı düz renkli kartlar. Epidemic Sound gibi müzik kataloglarının
-   tasarım dilinden esinlenildi; hiçbir markanın logosu, adı ya da görseli kullanılmadı. */
+/* "Rock'n'roll" teması: beyaz zemin, siyah kalın başlıklar, petrol mavisi ana renk, uzay grisi
+   ikincil renk. Düzen seyahat/katalog sitelerinin (Tripadvisor gibi) ana sayfa kalıbından esinlenildi:
+   ortada büyük arama, tanıtım bloğu, görselli kart şeritleri. Hiçbir markanın logosu ya da görseli yok. */
 @theme {
-  --color-paper: #121314;
-  --color-panel: #1b1c1f;
-  --color-raised: #24262a;
-  --color-ink: #f5f3ee;
-  --color-ink-soft: #c8c6bf;
-  --color-ink-mute: #8e8d88;
-  --color-line: #2c2e32;
-  --color-line-strong: #44464b;
-  --color-cream: #efede6;
-  --color-cream-ink: #141414;
-  --color-cream-mute: #55534d;
-  --color-accent: #d4f28a;
-  --color-accent-soft: #252c17;
-  --color-signal: #ff7a45;
-  --color-ok: #6fdc8c;
-  --color-warn: #ffc24d;
-  --color-bad: #ff6b5e;
+  --color-paper: #ffffff;
+  --color-panel: #f4f5f6;
+  --color-raised: #e9eaec;
+  --color-ink: #0f1012;
+  --color-ink-soft: #43464c;
+  --color-ink-mute: #72757c;
+  --color-line: #e2e3e6;
+  --color-line-strong: #c6c8cd;
 
-  /* kart paleti (düz, doygun renkler; üzerindeki yazı her zaman koyu) */
-  --color-c-pink: #ff92c8;
-  --color-c-orange: #ff9b45;
-  --color-c-purple: #b892ff;
-  --color-c-red: #ff6a4d;
-  --color-c-lime: #d4f28a;
-  --color-c-yellow: #ffd84d;
-  --color-c-blue: #86c8ff;
-  --color-c-mint: #7fe3b4;
+  /* ana renkler */
+  --color-petrol: #0b5f6b;
+  --color-petrol-dark: #074751;
+  --color-petrol-light: #e3eff1;
+  --color-petrol-bright: #2a9aab;
+  --color-space: #4a4d53;
+  --color-space-dark: #2c2e32;
 
-  /* sinyal zinciri kategori renkleri */
-  --color-cat-guitar: #e7d3a8;
-  --color-cat-dyn: #7fe3b4;
-  --color-cat-drive: #ff9b45;
-  --color-cat-amp: #d4f28a;
-  --color-cat-mod: #86c8ff;
-  --color-cat-delay: #b892ff;
-  --color-cat-reverb: #ff92c8;
-  --color-cat-cab: #c4c2bb;
+  --color-accent: #0b5f6b;
+  --color-accent-soft: #e3eff1;
+  --color-signal: #0b5f6b;
+  --color-ok: #1d8a57;
+  --color-warn: #b7791f;
+  --color-bad: #c2412f;
+
+  /* sinyal zinciri kategori renkleri (petrol ve uzay grisi tonları) */
+  --color-cat-guitar: #0f1012;
+  --color-cat-dyn: #5c6067;
+  --color-cat-drive: #0b5f6b;
+  --color-cat-amp: #074751;
+  --color-cat-mod: #2a7f8c;
+  --color-cat-delay: #4a4d53;
+  --color-cat-reverb: #3c8d99;
+  --color-cat-cab: #72757c;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  /* küçük etiketler ve sayılar için (eski adıyla) */
   --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --font-headline: "Archivo", "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
-@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/fraunces-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/fraunces-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/archivo-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Archivo'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/archivo-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
+
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -65,27 +61,25 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Serif başlık (büyük boyutlarda ince ayarlı optik boy) */
-.font-serif,
-.serif {
-  font-family: var(--font-serif);
-  font-optical-sizing: auto;
-  font-variation-settings: "SOFT" 0, "WONK" 0;
-  letter-spacing: -0.015em;
+/* Kalın başlık */
+.headline {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  letter-spacing: -0.025em;
 }
 
 /* Panel */
 .hud-panel {
   position: relative;
-  background: var(--color-panel);
+  background: var(--color-paper);
   border: 1px solid var(--color-line);
   border-radius: 18px;
 }
 
-/* Küçük büyük harf etiket (ör. "TÜR", "BÖLÜM") */
+/* Küçük büyük harf etiket */
 .hud-label {
   font-family: var(--font-sans);
-  font-weight: 600;
+  font-weight: 700;
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -99,26 +93,26 @@ body {
 .hud-input {
   width: 100%;
   border-radius: 12px;
-  border: 1px solid transparent;
-  background: var(--color-raised);
+  border: 1px solid var(--color-line-strong);
+  background: var(--color-paper);
   padding: 0.7rem 0.95rem;
   font-size: 0.95rem;
   color: var(--color-ink);
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s;
 }
 .hud-input::placeholder {
   color: var(--color-ink-mute);
 }
 .hud-input:hover {
-  background: #2a2c31;
+  border-color: var(--color-ink-mute);
 }
 .hud-input:focus {
-  border-color: var(--color-ink-soft);
-  box-shadow: 0 0 0 3px rgba(245, 243, 238, 0.08);
+  border-color: var(--color-petrol);
+  box-shadow: 0 0 0 3px rgba(11, 95, 107, 0.15);
 }
 select.hud-input option {
-  background: var(--color-raised);
+  background: var(--color-paper);
 }
 
 /* Hap biçimli düğmeler */
@@ -128,9 +122,9 @@ select.hud-input option {
   justify-content: center;
   gap: 0.4rem;
   border-radius: 999px;
-  padding: 0.6rem 1.2rem;
+  padding: 0.65rem 1.25rem;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1;
   white-space: nowrap;
   transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
@@ -142,38 +136,59 @@ select.hud-input option {
   opacity: 0.4;
   cursor: not-allowed;
 }
-.pill-light {
-  background: var(--color-ink);
-  color: var(--color-cream-ink);
+.pill-primary {
+  background: var(--color-petrol);
+  color: #fff;
 }
-.pill-light:hover:not(:disabled) {
-  background: #ffffff;
+.pill-primary:hover:not(:disabled) {
+  background: var(--color-petrol-dark);
 }
 .pill-dark {
-  background: var(--color-cream-ink);
+  background: var(--color-ink);
   color: #fff;
 }
 .pill-dark:hover:not(:disabled) {
   background: #000;
 }
 .pill-ghost {
-  background: var(--color-raised);
+  background: var(--color-paper);
   color: var(--color-ink);
+  border: 1.5px solid var(--color-ink);
 }
 .pill-ghost:hover:not(:disabled) {
-  background: #2f3136;
+  background: var(--color-panel);
+}
+.pill-soft {
+  background: var(--color-panel);
+  color: var(--color-ink);
+}
+.pill-soft:hover:not(:disabled) {
+  background: var(--color-raised);
 }
 
 /* Kartın üstüne binen hafif yükselme */
 .lift {
-  transition: transform 0.18s ease, filter 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 .lift:hover {
   transform: translateY(-3px);
-  filter: brightness(1.04);
+  box-shadow: 0 14px 30px -14px rgba(15, 16, 18, 0.35);
 }
 
-/* İnce kaydırma çubuğu */
+/* Yatay kart şeridi */
+.rail {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(200px, 1fr);
+  gap: 18px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 8px;
+}
+.rail > * {
+  scroll-snap-align: start;
+}
+
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--color-line-strong) transparent;
@@ -188,7 +203,7 @@ select.hud-input option {
   }
 }
 .hud-scan {
-  background-image: linear-gradient(90deg, transparent, rgba(212, 242, 138, 0.09), transparent);
+  background-image: linear-gradient(90deg, transparent, rgba(11, 95, 107, 0.1), transparent);
   background-size: 30% 100%;
   background-repeat: no-repeat;
   animation: scan 1.8s linear infinite;

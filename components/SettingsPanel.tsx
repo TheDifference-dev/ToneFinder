@@ -48,7 +48,7 @@ export function SettingsPanel({
   return (
     <section className="hud-panel p-6" aria-labelledby="settings-title">
       <div className="mb-5 flex items-center justify-between">
-        <h2 id="settings-title" className="serif text-2xl font-semibold text-ink">
+        <h2 id="settings-title" className="headline text-2xl font-semibold text-ink">
           Ayarlar
         </h2>
         {onClose && (
@@ -108,7 +108,7 @@ export function SettingsPanel({
               <button
                 type="submit"
                 disabled={saving || !key.trim()}
-                className="pill pill-light shrink-0"
+                className="pill pill-primary shrink-0"
               >
                 {saving ? "Doğrulanıyor…" : "Kaydet"}
               </button>

@@ -5,7 +5,7 @@ import { songLinks } from "@/lib/format";
 import type { OriginalTone } from "@/lib/schema";
 import { categoryOf, ChainBlock, ChainCap, ChainLink, ChainRow, type Category } from "./chain";
 import { Knob } from "./Knob";
-import { Artwork, colorFor } from "./ui";
+import { Artwork } from "./ui";
 
 // 1. adım sonucu: şarkının stüdyo kaydındaki ekipman
 
@@ -64,7 +64,7 @@ function gearItems(t: OriginalTone): GearItem[] {
 
 function Spec({ label, children }: { label: string; children: React.ReactNode }) {
   return (
-    <div className="min-w-0 rounded-2xl bg-raised px-4 py-3">
+    <div className="min-w-0 rounded-2xl bg-panel px-4 py-3">
       <div className="hud-label">{label}</div>
       <div className="mt-1 truncate text-lg font-semibold text-ink" title={typeof children === "string" ? children : undefined}>
         {children}
@@ -100,17 +100,17 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
   return (
     <article className="hud-panel rise overflow-hidden">
       {/* Şarkı: renkli bant */}
-      <header className="flex flex-wrap items-end gap-6 px-6 pb-7 pt-6" style={{ background: colorFor(tone.song.title) }}>
+      <header className="flex flex-wrap items-end gap-6 px-6 pb-7 pt-6" style={{ background: "var(--color-petrol)" }}>
         <Artwork src={artwork} title={tone.song.title} size={112} rounded={14} inverted />
         <div className="min-w-0 flex-1">
-          <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cream-ink/65">Orijinal stüdyo tonu</div>
-          <h2 className="serif mt-1 break-words text-[44px] font-semibold leading-[1.02] text-cream-ink">{tone.song.title}</h2>
-          <p className="mt-1.5 text-[15px] font-medium text-cream-ink/75">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-white/70">Orijinal stüdyo tonu</div>
+          <h2 className="headline mt-1 break-words text-[44px] font-semibold leading-[1.02] text-white">{tone.song.title}</h2>
+          <p className="mt-1.5 text-[15px] font-medium text-white/80">
             {tone.song.artist}
             {tone.song.album_or_year && ` · ${tone.song.album_or_year}`}
           </p>
         </div>
-        <span className="flex items-center gap-2 rounded-full bg-cream-ink px-3.5 py-2 text-xs font-semibold text-white">
+        <span className="flex items-center gap-2 rounded-full bg-white px-3.5 py-2 text-xs font-semibold text-ink">
           <span className="h-2 w-2 rounded-full" style={{ background: conf.color }} />
           {conf.label}
         </span>
@@ -138,7 +138,7 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
         {tone.song.tone_tags.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-1.5">
             {tone.song.tone_tags.map((t) => (
-              <span key={t} className="rounded-full bg-raised px-3 py-1 text-xs font-semibold text-ink-soft">
+              <span key={t} className="rounded-full bg-petrol-light px-3 py-1 text-xs font-semibold text-petrol">
                 {t}
               </span>
             ))}
@@ -179,9 +179,9 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
         </ChainRow>
 
         {item && (
-          <div className="mt-3 rounded-2xl bg-raised p-5">
+          <div className="mt-3 rounded-2xl bg-panel p-5">
             <div className="flex flex-wrap items-center gap-2">
-              <span className="serif text-2xl font-semibold text-ink">{item.title}</span>
+              <span className="headline text-2xl font-semibold text-ink">{item.title}</span>
               {item.certainty && (
                 <span className="text-xs font-semibold uppercase tracking-[0.06em]" style={{ color: CERTAINTY[item.certainty].color }}>
                   {CERTAINTY[item.certainty].label}
@@ -265,10 +265,10 @@ export function OriginalCard({ tone, artwork }: { tone: OriginalTone; artwork?: 
           ))}
         </ul>
         <div className="mt-3 flex gap-2">
-          <a href={links.tab} target="_blank" rel="noopener noreferrer" className="pill pill-ghost !px-3.5 !py-2 text-xs">
+          <a href={links.tab} target="_blank" rel="noopener noreferrer" className="pill pill-soft !px-3.5 !py-2 text-xs">
             Tab ↗
           </a>
-          <a href={links.backing} target="_blank" rel="noopener noreferrer" className="pill pill-ghost !px-3.5 !py-2 text-xs">
+          <a href={links.backing} target="_blank" rel="noopener noreferrer" className="pill pill-soft !px-3.5 !py-2 text-xs">
             Backing track ↗
           </a>
         </div>

@@ -434,7 +434,7 @@ export function RigPanel({
                     onClick={() => onChange({ ampEffects: on ? rig.ampEffects.filter((e) => e !== fx) : [...rig.ampEffects, fx] })}
                     className={`rounded-full border px-2.5 py-1 text-xs transition ${
                       on
-                        ? "border-transparent bg-ink text-cream-ink"
+                        ? "border-transparent bg-ink text-white"
                         : missing
                           ? "border-dashed border-line bg-raised text-ink-mute/60"
                           : "border-line bg-raised text-ink-soft hover:border-line-strong"

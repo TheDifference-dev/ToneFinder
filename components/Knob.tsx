@@ -62,7 +62,7 @@ export function Knob({
           </text>
         </svg>
       ) : (
-        <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-paper px-1.5 text-[13px] font-semibold leading-tight text-ink">
+        <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-panel px-1.5 text-[13px] font-semibold leading-tight text-ink">
           {value}
         </div>
       )}

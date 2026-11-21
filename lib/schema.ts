@@ -200,6 +200,8 @@ export interface ToneMeta {
   cached: boolean;
   /** Orijinal araştırmanın yapıldığı zaman (ms) */
   researchedAt: number;
+  /** Uygulamayla gelen hazır popüler şarkı kaydından mı geldi */
+  bundled?: boolean;
 }
 
 // Katalogda olmayan bir ekipmanın web'den çıkarılan profili ("Web'de tanıt")

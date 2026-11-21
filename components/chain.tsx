@@ -66,21 +66,21 @@ export function ChainBlock({
         dim ? "opacity-40" : ""
       }`}
       style={{
-        background: selected ? c.color : "var(--color-raised)",
+        background: selected ? c.color : "var(--color-panel)",
         boxShadow: selected ? `0 10px 24px -12px ${c.color}` : `inset 0 3px 0 ${c.color}`,
       }}
     >
       <span
         className="text-[10.5px] font-semibold uppercase tracking-[0.08em]"
-        style={{ color: selected ? "rgba(20,20,20,0.65)" : c.color }}
+        style={{ color: selected ? "rgba(255,255,255,0.75)" : c.color }}
       >
         {sub ?? c.label}
       </span>
-      <span className={`mt-0.5 line-clamp-2 text-[13.5px] font-semibold leading-tight ${selected ? "text-cream-ink" : "text-ink"}`}>{title}</span>
+      <span className={`mt-0.5 line-clamp-2 text-[13.5px] font-semibold leading-tight ${selected ? "text-white" : "text-ink"}`}>{title}</span>
       {dot && (
         <span
           className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full"
-          style={{ background: dot, boxShadow: selected ? "0 0 0 2px rgba(20,20,20,0.35)" : undefined }}
+          style={{ background: dot, boxShadow: selected ? "0 0 0 2px rgba(255,255,255,0.6)" : undefined }}
           aria-hidden
         />
       )}
