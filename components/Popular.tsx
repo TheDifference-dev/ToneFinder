@@ -29,7 +29,7 @@ function Cover({ e, size = "full", rounded = 16 }: { e: PopularEntry; size?: "fu
       src={e.artwork}
       alt=""
       loading="lazy"
-      className={size === "full" ? "aspect-square w-full object-cover" : "shrink-0 object-cover"}
+      className={size === "full" ? "aspect-square w-full bg-raised object-cover" : "shrink-0 bg-raised object-cover"}
       style={size === "full" ? { borderRadius: rounded } : { width: size, height: size, borderRadius: rounded }}
     />
   );
@@ -38,7 +38,8 @@ function Cover({ e, size = "full", rounded = 16 }: { e: PopularEntry; size?: "fu
 /** Büyük petrol mavisi tanıtım bloğu (kapak kolajı + başlık) */
 export function PopularPromo({ entries, onBrowse }: { entries: PopularEntry[]; onBrowse: () => void }) {
   const ready = entries.filter((e) => e.ready).length;
-  const covers = entries.filter((e) => e.artwork).slice(0, 4);
+  // farklı gruplardan dört kapak (aynı albüm iki kez çıkmasın)
+  const covers = entries.filter((e, i, all) => e.artwork && all.findIndex((x) => x.artist === e.artist) === i).slice(0, 4);
   return (
     <section className="rise grid overflow-hidden rounded-[28px] bg-petrol p-5 text-white md:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)]">
       <div className="grid grid-cols-2 gap-3 md:max-w-[440px]">

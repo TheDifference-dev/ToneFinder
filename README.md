@@ -16,8 +16,12 @@ Guitar Tone Finder — yapay zekâ destekli gitar ton bulucu (ToneAdapt benzeri)
    - gitar farkı telafisi (ör. orijinalde Les Paul humbucker, sende Strat single-coil).
 
 Ayrıca:
-- **Şarkı arama:** yazdıkça öneri ve kapak resmi (iTunes, olmazsa Deezer; anahtarsız). Gitar/bas,
-  bölüm ve ton türü (Otomatik / Temiz / Distorsiyonlu) seçimi, popüler şarkı kısayolları.
+- **Tek kutuda arama:** şarkı ya da grup adı yazılır. Grup adı yazınca grup çıkar; "Şarkılarını gör" ile
+  o grubun popüler şarkıları listelenir ve tıklanarak seçilir. Kapak resimleriyle (Deezer, olmazsa iTunes;
+  anahtarsız). Gitar/bas, bölüm ve ton türü (Otomatik / Temiz / Distorsiyonlu) seçimi.
+- **Popüler 100:** Songsterr'in en popüler 100 şarkısının orijinal tonları önceden araştırılıp uygulamayla
+  birlikte gelir (`data/popular/`). Karta tıklayınca ton anında açılır; Claude Code ya da API anahtarı
+  gerekmez. Liste `scripts/research-popular.mjs` ve `scripts/fetch-popular-artwork.mjs` ile yenilenir.
 - **Ekipman:** amfinin kendi efektleri, pedal listesi (60 pedallık katalogdan öneri ve düğme adları).
 - **Sonuç:** her ayarın yanında dayanağı (kaynaklı / çıkarım / kontrol et), zorluk (1–5), ekipmanla ne kadar
   yaklaşılabileceğinin tahmini (%), ton özellikleri, sınırlamalar, alternatifler, Songsterr tab ve backing

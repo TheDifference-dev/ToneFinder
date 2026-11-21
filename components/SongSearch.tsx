@@ -86,6 +86,8 @@ export function SongSearch({
 
   function browse(a: ArtistHit) {
     setBrowsing(a);
+    setText("");
+    onChange({ song: "", artist: "", artwork: "" });
     setSongs([]);
     setActive(-1);
     setLoading(true);

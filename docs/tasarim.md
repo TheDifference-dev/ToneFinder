@@ -1,20 +1,29 @@
-# ToneFinder tasarım dili (Kasım 2026)
+# ToneFinder tasarım dili (Kasım 2026, "Rock'n'roll")
 
-Müzik kataloğu siteleri (özellikle Epidemic Sound) örnek alınarak yenilendi. Amaç **benzer tasarım dili**,
-birebir kopya değil: hiçbir markanın logosu, adı, illüstrasyonu ya da görseli kullanılmaz.
+Ana sayfa düzeni Tripadvisor gibi keşif sitelerinden esinlenildi: ortada büyük soru başlığı ve iri arama
+çubuğu, altında büyük renkli tanıtım bloğu, görselli kart şeritleri ve kategori kutuları. Birebir kopya
+değil; hiçbir markanın logosu, adı ya da görseli kullanılmaz.
 
-## Temel kurallar
-- **Zemin:** koyu kömür (`--color-paper #121314`), paneller `#1b1c1f`, yükseltilmiş alanlar `#24262a`.
-- **Karşılama bandı:** yalnız boş araştırma ekranında, krem zemin (`--color-cream #efede6`) üstünde büyük serif başlık.
-- **Yazı tipleri:** başlıklar *Fraunces* (serif, `.serif` sınıfı), gövde ve küçük etiketler *Inter*.
-  Fontlar `public/fonts` içinde gömülü (uygulama çevrimdışı da aynı görünür). Lisanslar `OFL-*.txt`.
-- **Düğmeler:** hap biçimli `.pill` + `pill-light` (koyu zeminde birincil), `pill-dark` (krem zeminde), `pill-ghost`.
-- **Renkli kartlar:** düz, doygun renkler (`--color-c-*`: lime, pembe, turuncu, mor, sarı, mavi, kırmızı, nane),
-  üstündeki yazı her zaman koyu (`--color-cream-ink`). Şarkıya göre renk `colorFor(başlık)` ile sabit seçilir.
-- **Sayfa başı:** `PageBand` — renkli üst alan + küçük büyük-harf etiket + serif başlık, altında koyu açıklama şeridi.
-- **Listeler:** Tonlarım ve "Son araştırmaların" parça listesi gibi kapaklı satırlar (`ToneRows`).
-- **Sinyal zinciri:** kategori renkli bloklar; seçili blok o rengin düz dolgusu, diğerleri üstte renkli şerit.
-- **Vurgu:** lime (`--color-accent #d4f28a`) yalnız düğme halkası, etkin durum ve önemli sayılar için.
-- **Simge:** koyu kare üstünde lime ton düğmesi ve pembe merkez (`AppMark`, `public/tonefinder.ico`).
+## Renkler (yalnız dört aile)
+- **Beyaz** zemin (`--color-paper`), açık uzay grisi paneller (`--color-panel #f4f5f6`, `--color-raised #e9eaec`).
+- **Siyah** başlıklar, metin ve koyu düğmeler (`--color-ink #0f1012`).
+- **Petrol mavisi** ana renk: birincil düğmeler, tanıtım bloğu, orijinal ton bandı (`--color-petrol #0b5f6b`,
+  koyusu `#074751`, açığı `#e3eff1`, parlak `#2a9aab`).
+- **Uzay grisi** ikincil metin ve nötr alanlar (`--color-space #4a4d53`, `--color-ink-soft`, `--color-ink-mute`).
+- Durum renkleri (kaynaklı / muhtemel / tahmin) yalnız küçük noktalarda: yeşil, kehribar, kırmızı.
+
+## Yazı
+- Başlıklar: **Archivo** 800, sıkı harf aralığı (`.headline`). Gövde: **Inter**. Fontlar `public/fonts`
+  içinde gömülü; lisanslar `OFL-*.txt`.
+
+## Parçalar
+- Düğmeler: `.pill` + `pill-primary` (petrol), `pill-dark` (siyah), `pill-ghost` (siyah çerçeve), `pill-soft` (gri).
+- Arama: tek iri yuvarlak kutu (`SongSearch`), sağında "Tonu bul". Grup adı yazılınca grup satırı çıkar,
+  "Şarkılarını gör" ile grubun popüler şarkıları listelenir.
+- Bölüm seçimi ana sayfada arama kutusunun üstünde sekme olarak (Solo / Ritim / Riff / Temiz / Genel).
+- Popüler 100 (`components/Popular.tsx`): tanıtım bloğu, "En çok çalınanlar" yatay şeridi, "Gruba göre keşfet"
+  kutuları ve süzülebilir tam liste. Kartlarda sıra rozeti, bölüm etiketi ve zorluk noktaları (`Dots`).
+- Sayfa başı: `PageBand` — koyu renkli blok (petrol ya da siyah) + kalın başlık.
+- Simge: siyah kare üstünde petrol mavisi ton düğmesi (`AppMark`, `public/tonefinder.ico`).
 
 Ortak parçalar `components/ui.tsx`, renkler ve temel sınıflar `app/globals.css` içinde.
