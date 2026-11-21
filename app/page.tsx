@@ -104,7 +104,8 @@ export default function Home() {
   const activeRig = rigStore?.rigs.find((r) => r.id === rigStore.activeId) ?? null;
   const rig = activeRig?.rig ?? null;
   const canResearch = Boolean(keyStatus?.configured || keyStatus?.cli);
-  const canAdapt = Boolean(keyStatus?.configured);
+  // Uyarlama da Claude Code ile yapılabilir (API anahtarı şart değil)
+  const canAdapt = canResearch;
   const hasGear = Boolean(rig && (rig.amp.trim() || rig.processor.trim()));
 
   useEffect(() => {
@@ -209,7 +210,7 @@ export default function Home() {
     }
   }
 
-  /** 2. adım: orijinal tonu aktif rig'e uyarla (API anahtarı gerekir) */
+  /** 2. adım: orijinal tonu aktif rig'e uyarla (Claude Code ya da API) */
   async function adapt(withFeedback?: string) {
     if (!current?.query || !rig || !hasGear) return;
     const base = current;
@@ -545,13 +546,13 @@ export default function Home() {
                     type="button"
                     disabled={busy !== null || !canAdapt || !hasGear || !current.query}
                     onClick={() => adapt()}
-                    title={!canAdapt ? "Bu adım için API anahtarı gerekli" : undefined}
+                    title={!canAdapt ? "Bu adım için Claude Code ya da API anahtarı gerekli" : undefined}
                   >
                     {busy === "adapt" ? "Çevriliyor…" : adapted ? "Yeniden çevir" : "Çevir"}
                   </Pill>
                   {!canAdapt && (
                     <p className="w-full text-xs text-ink-mute">
-                      Şimdilik kapalı: bu adım API anahtarı istiyor.{" "}
+                      Bu adım için bu bilgisayarda Claude Code ya da bir API anahtarı gerekli.{" "}
                       <button className="underline" onClick={() => setSettingsOpen(true)}>
                         Ayarlar
                       </button>

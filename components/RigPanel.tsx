@@ -88,7 +88,7 @@ function WebIdentify({
         disabled={!canIdentify}
         onClick={() => onIdentify(name, kind)}
         className="rounded-full border border-line px-2 py-0.5 font-semibold text-accent hover:border-accent disabled:opacity-40"
-        title={canIdentify ? "Ekipmanı web'de araştırıp kanallarını, düğmelerini ve efektlerini kaydeder" : "API anahtarı gerekli"}
+        title={canIdentify ? "Ekipmanı web'de araştırıp kanallarını, düğmelerini ve efektlerini kaydeder" : "Claude Code ya da API anahtarı gerekli"}
       >
         Web'de tanıt
       </button>
@@ -321,7 +321,7 @@ export function RigPanel({
   onRigCreate: () => void;
   onRigRename: (name: string) => void;
   onRigDelete: () => void;
-  /** API anahtarı varsa "Web'de tanıt" kullanılabilir */
+  /** Claude Code ya da API anahtarı varsa "Web'de tanıt" kullanılabilir */
   canIdentify: boolean;
 }) {
   const amp = matchAmp(rig.amp);

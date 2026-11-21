@@ -87,7 +87,7 @@ export const OriginalToneSchema = z.object({
     }),
     pedals: z.array(
       z.object({ model: z.string(), purpose: z.string(), settings: z.array(Setting), certainty: Certainty }),
-    ),
+    ).describe("Pedallar ve efektler sinyal sırasıyla: amfi önündekiler önce, delay ve reverb en sonda (amfiden sonra). purpose alanında amfi önünde mi, efekt döngüsünde mi, stüdyoda/mikste mi eklendiği yazılsın. Pedal kullanılmadıysa boş dizi."),
     tuning: z.string().describe("Kısa akort adı: 'Standart E', 'Drop D', 'Yarım ses pes (Eb)'"),
     recording_notes: z.string().describe("Stüdyo, prodüktör, double-tracking, post-prodüksiyon efektleri vb."),
   }),
@@ -132,7 +132,7 @@ export const AdaptedToneSchema = z.object({
       }),
     )
     .describe(
-      "Kullanıcının ekipmanıyla sinyal zinciri, gitardan hoparlöre sırasıyla: pedallar, prosesör blokları ve amfi. Prosesörde cab bloğu varsa mikrofon modeli, pozisyon ve mesafe ayar olarak yer almalı.",
+      "Kullanıcının ekipmanıyla sinyal zinciri, gitardan hoparlöre sırasıyla: amfi önü pedallar (wah, kompresör, drive, noise gate, modülasyon), amfi, kabin, mikrofon; delay ve reverb her zaman amfiden sonra (efekt döngüsünde ya da amfi/kabin bloğundan sonra). Prosesörde cab bloğu varsa mikrofon modeli, pozisyon ve mesafe ayar olarak yer almalı.",
     ),
   guitar: z.object({
     pickup: z.string().describe("Kullanıcının gitarında seçilecek manyetik pozisyonu"),

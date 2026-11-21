@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { songLinks } from "@/lib/format";
 import type { OriginalTone } from "@/lib/schema";
+import { isNoGear, POST_AMP, sortChain, stageOf } from "@/lib/signal-chain";
 import { categoryOf, ChainBlock, ChainCap, ChainLink, ChainRow, type Category } from "./chain";
 import { Knob } from "./Knob";
 import { Artwork } from "./ui";
@@ -34,16 +35,25 @@ interface GearItem {
 
 function gearItems(t: OriginalTone): GearItem[] {
   const r = t.original_rig;
-  return [
-    { category: "guitar" as const, sub: "Gitar", title: r.guitar.model, certainty: r.guitar.certainty, lines: [r.guitar.pickup, r.tuning && `Akort: ${r.tuning}`].filter(Boolean) as string[] },
-    ...r.pedals.map((p) => ({
-      category: categoryOf(`${p.model} ${p.purpose}`),
-      sub: "Pedal",
+  // Pedallar sinyal zinciri kuralına göre ikiye ayrılır: amfi önü ve amfi sonrası (efekt döngüsü / stüdyo).
+  // Delay ve reverb her zaman amfiden sonra gelir.
+  const pedals = sortChain(
+    r.pedals.filter((p) => p.model?.trim() && !isNoGear(p.model)).map((p) => ({ p, stage: stageOf(p.model, p.purpose, true) })),
+    (x) => x.stage,
+  ).map(({ p, stage }) => ({
+    post: POST_AMP.has(stage),
+    item: {
+      category: categoryOf(p.model, p.purpose, true),
+      sub: POST_AMP.has(stage) ? "Amfi sonrası" : "Pedal",
       title: p.model,
       certainty: p.certainty,
       settings: p.settings,
       lines: [p.purpose],
-    })),
+    } satisfies GearItem,
+  }));
+  return [
+    { category: "guitar" as const, sub: "Gitar", title: r.guitar.model, certainty: r.guitar.certainty, lines: [r.guitar.pickup, r.tuning && `Akort: ${r.tuning}`].filter(Boolean) as string[] },
+    ...pedals.filter((x) => !x.post).map((x) => x.item),
     ...r.amps.map((a) => ({
       category: "amp" as const,
       sub: "Amfi",
@@ -59,6 +69,7 @@ function gearItems(t: OriginalTone): GearItem[] {
       title: m.model,
       lines: [m.position && `Konum: ${m.position}`, m.distance && `Mesafe: ${m.distance}`].filter(Boolean) as string[],
     })),
+    ...pedals.filter((x) => x.post).map((x) => x.item),
   ].filter((g) => g.title?.trim());
 }
 

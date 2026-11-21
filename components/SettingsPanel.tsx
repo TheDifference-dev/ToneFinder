@@ -83,8 +83,12 @@ export function SettingsPanel({
         <div className="rounded-2xl bg-raised p-4">
           <div className="flex items-center justify-between gap-3">
             <span className="hud-label text-ink-soft">2 · Ekipmana çevirme</span>
-            <span className={`text-sm font-semibold ${status.configured ? "text-ok" : "text-ink-mute"}`}>
-              {status.configured ? `API anahtarı${status.source === "env" ? " (ortam)" : ""}` : "API anahtarı gerekli"}
+            <span className={`text-sm font-semibold ${status.configured || status.cli ? "text-ok" : "text-ink-mute"}`}>
+              {status.configured
+                ? `API anahtarı${status.source === "env" ? " (ortam)" : ""}`
+                : status.cli
+                  ? `Claude Code ${status.cli.version}`
+                  : "Claude Code ya da API anahtarı gerekli"}
             </span>
           </div>
           <details className="mt-3" open={false}>

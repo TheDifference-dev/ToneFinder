@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import { sortChain, stageOf } from "@/lib/signal-chain";
 import type { AdaptedTone } from "@/lib/schema";
 import { categoryOf, ChainBlock, ChainCap, ChainLink, ChainRow } from "./chain";
 import { Knob } from "./Knob";
@@ -42,7 +43,8 @@ function Bullets({ items }: { items: string[] }) {
 }
 
 export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone>; pickupLayout?: string }) {
-  const chain = result.chain ?? [];
+  // Zincir sinyal sırasına göre dizilir (delay/reverb amfiden sonra), yapay zekâ farklı sırada yazsa bile
+  const chain = useMemo(() => sortChain(result.chain ?? [], (b) => stageOf(b.block, `${b.device_model} ${b.note}`)), [result.chain]);
   const sections = result.other_sections ?? [];
   const [section, setSection] = useState(-1);
   const [selected, setSelected] = useState(() => Math.max(0, chain.findIndex((b) => /amp/i.test(b.block))));
@@ -106,7 +108,7 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
               <span key={`${b.block}-${i}`} className="flex items-center">
                 <ChainLink />
                 <ChainBlock
-                  category={categoryOf(`${b.block} ${b.device_model}`)}
+                  category={categoryOf(b.block, `${b.device_model} ${b.note}`)}
                   sub={`${b.block} · ${SOURCE[b.source]}`}
                   title={b.device_model}
                   selected={i === selected}

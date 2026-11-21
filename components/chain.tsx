@@ -1,6 +1,8 @@
 // Sinyal zinciri bileşenleri: kategori renkli bloklar (BOSS TONE STUDIO'daki CHAIN görünümü gibi),
 // IN/OUT uçları ve bloklar arası ince hat. Hem orijinal stüdyo ekipmanı hem uyarlanmış zincir kullanır.
 
+import { stageOf, type Stage } from "@/lib/signal-chain";
+
 export type Category = "guitar" | "dyn" | "drive" | "amp" | "mod" | "delay" | "reverb" | "cab";
 
 export const CATEGORY: Record<Category, { label: string; color: string }> = {
@@ -14,16 +16,27 @@ export const CATEGORY: Record<Category, { label: string; color: string }> = {
   cab: { label: "Kabin", color: "var(--color-cat-cab)" },
 };
 
-/** Pedal/blok adından kategori tahmini */
-export function categoryOf(text: string): Category {
-  const t = text.toLowerCase();
-  if (/reverb|verb|spring|plate|hall/.test(t)) return "reverb";
-  if (/delay|echo|echoplex|memory man|dd-\d/.test(t)) return "delay";
-  if (/chorus|flang|phase|phaser|vibe|trem|octav|wah|whammy|pitch|rotary|leslie|mod/.test(t)) return "mod";
-  if (/comp|gate|suppress|eq|equaliz|volume|tuner|dyna/.test(t)) return "dyn";
-  if (/cab|ir\b|mic|speaker|kabin|mikrofon/.test(t)) return "cab";
-  if (/amp|amfi|preamp|head|marshall|mesa|fender|vox|plexi/.test(t)) return "amp";
-  return "drive";
+const STAGE_CATEGORY: Record<Stage, Category> = {
+  guitar: "guitar",
+  tuner: "dyn",
+  comp: "dyn",
+  gate: "dyn",
+  eq: "dyn",
+  filter: "mod",
+  pitch: "mod",
+  mod: "mod",
+  post: "mod",
+  drive: "drive",
+  amp: "amp",
+  cab: "cab",
+  mic: "cab",
+  delay: "delay",
+  reverb: "reverb",
+};
+
+/** Pedal/blok adından kategori (renk) tahmini; sıralama kuralı lib/signal-chain.ts'te */
+export function categoryOf(text: string, detail = "", pedal = false): Category {
+  return STAGE_CATEGORY[stageOf(text, detail, pedal)];
 }
 
 export function ChainCap({ label }: { label: string }) {

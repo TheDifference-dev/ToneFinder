@@ -700,6 +700,2806 @@
    "artist": "Pink Floyd",
    "part": "lead",
    "slug": "100-pink-floyd-another-brick-in-the-wall-part-2"
+  },
+  {
+   "rank": 101,
+   "title": "The Man Who Sold The World (David Bowie)",
+   "artist": "Nirvana",
+   "part": "clean",
+   "slug": "101-nirvana-the-man-who-sold-the-world-david-bowie"
+  },
+  {
+   "rank": 102,
+   "title": "Song 2",
+   "artist": "Blur",
+   "part": "lead",
+   "slug": "102-blur-song-2"
+  },
+  {
+   "rank": 103,
+   "title": "Paint It Black",
+   "artist": "The Rolling Stones",
+   "part": "lead",
+   "slug": "103-the-rolling-stones-paint-it-black"
+  },
+  {
+   "rank": 104,
+   "title": "Lithium",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "104-nirvana-lithium"
+  },
+  {
+   "rank": 105,
+   "title": "Purple Haze",
+   "artist": "The Jimi Hendrix Experience",
+   "part": "lead",
+   "slug": "105-the-jimi-hendrix-experience-purple-haze"
+  },
+  {
+   "rank": 106,
+   "title": "Take Me Out",
+   "artist": "Franz Ferdinand",
+   "part": "lead",
+   "slug": "106-franz-ferdinand-take-me-out"
+  },
+  {
+   "rank": 107,
+   "title": "Floods",
+   "artist": "Pantera",
+   "part": "full",
+   "slug": "107-pantera-floods"
+  },
+  {
+   "rank": 108,
+   "title": "Duality",
+   "artist": "Slipknot",
+   "part": "rhythm",
+   "slug": "108-slipknot-duality"
+  },
+  {
+   "rank": 109,
+   "title": "Monster",
+   "artist": "Skillet",
+   "part": "lead",
+   "slug": "109-skillet-monster"
+  },
+  {
+   "rank": 110,
+   "title": "Scar Tissue",
+   "artist": "Red Hot Chili Peppers",
+   "part": "full",
+   "slug": "110-red-hot-chili-peppers-scar-tissue"
+  },
+  {
+   "rank": 111,
+   "title": "Du hast",
+   "artist": "Rammstein",
+   "part": "lead",
+   "slug": "111-rammstein-du-hast"
+  },
+  {
+   "rank": 112,
+   "title": "Given Up",
+   "artist": "Linkin Park",
+   "part": "full",
+   "slug": "112-linkin-park-given-up"
+  },
+  {
+   "rank": 113,
+   "title": "Man In The Box",
+   "artist": "Alice in Chains",
+   "part": "lead",
+   "slug": "113-alice-in-chains-man-in-the-box"
+  },
+  {
+   "rank": 114,
+   "title": "No More Tears",
+   "artist": "Ozzy Osbourne",
+   "part": "lead",
+   "slug": "114-ozzy-osbourne-no-more-tears"
+  },
+  {
+   "rank": 115,
+   "title": "The Kids Aren't Alright",
+   "artist": "The Offspring",
+   "part": "lead",
+   "slug": "115-the-offspring-the-kids-aren-t-alright"
+  },
+  {
+   "rank": 116,
+   "title": "Black Dog",
+   "artist": "Led Zeppelin",
+   "part": "lead",
+   "slug": "116-led-zeppelin-black-dog"
+  },
+  {
+   "rank": 117,
+   "title": "Battery",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "117-metallica-battery"
+  },
+  {
+   "rank": 118,
+   "title": "Black Hole Sun",
+   "artist": "Soundgarden",
+   "part": "rhythm",
+   "slug": "118-soundgarden-black-hole-sun"
+  },
+  {
+   "rank": 119,
+   "title": "Whole Lotta Love",
+   "artist": "Led Zeppelin",
+   "part": "full",
+   "slug": "119-led-zeppelin-whole-lotta-love"
+  },
+  {
+   "rank": 120,
+   "title": "Hurt (Nine Inch Nails)",
+   "artist": "Johnny Cash",
+   "part": "clean",
+   "slug": "120-johnny-cash-hurt-nine-inch-nails"
+  },
+  {
+   "rank": 121,
+   "title": "Knockin' On Heaven's Door (Bob Dylan)",
+   "artist": "Guns N' Roses",
+   "part": "lead",
+   "slug": "121-guns-n-roses-knockin-on-heaven-s-door-bob-dylan"
+  },
+  {
+   "rank": 122,
+   "title": "Don't Cry",
+   "artist": "Guns N' Roses",
+   "part": "lead",
+   "slug": "122-guns-n-roses-don-t-cry"
+  },
+  {
+   "rank": 123,
+   "title": "The Chain",
+   "artist": "Fleetwood Mac",
+   "part": "clean",
+   "slug": "123-fleetwood-mac-the-chain"
+  },
+  {
+   "rank": 124,
+   "title": "N.I.B.",
+   "artist": "Black Sabbath",
+   "part": "full",
+   "slug": "124-black-sabbath-n-i-b"
+  },
+  {
+   "rank": 125,
+   "title": "Roundabout",
+   "artist": "Yes",
+   "part": "clean",
+   "slug": "125-yes-roundabout"
+  },
+  {
+   "rank": 126,
+   "title": "Blackened",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "126-metallica-blackened"
+  },
+  {
+   "rank": 127,
+   "title": "No Surprises",
+   "artist": "Radiohead",
+   "part": "lead",
+   "slug": "127-radiohead-no-surprises"
+  },
+  {
+   "rank": 128,
+   "title": "Rock You Like A Hurricane",
+   "artist": "Scorpions",
+   "part": "lead",
+   "slug": "128-scorpions-rock-you-like-a-hurricane"
+  },
+  {
+   "rank": 129,
+   "title": "Boys Don't Cry",
+   "artist": "The Cure",
+   "part": "lead",
+   "slug": "129-the-cure-boys-don-t-cry"
+  },
+  {
+   "rank": 130,
+   "title": "Ain't Talkin' 'Bout Love",
+   "artist": "Van Halen",
+   "part": "lead",
+   "slug": "130-van-halen-ain-t-talkin-bout-love"
+  },
+  {
+   "rank": 131,
+   "title": "Peace Sells",
+   "artist": "Megadeth",
+   "part": "rhythm",
+   "slug": "131-megadeth-peace-sells"
+  },
+  {
+   "rank": 132,
+   "title": "You Give Love a Bad Name!",
+   "artist": "Bon Jovi",
+   "part": "lead",
+   "slug": "132-bon-jovi-you-give-love-a-bad-name"
+  },
+  {
+   "rank": 133,
+   "title": "Say It Ain't So",
+   "artist": "Weezer",
+   "part": "lead",
+   "slug": "133-weezer-say-it-ain-t-so"
+  },
+  {
+   "rank": 134,
+   "title": "Dani California",
+   "artist": "Red Hot Chili Peppers",
+   "part": "lead",
+   "slug": "134-red-hot-chili-peppers-dani-california"
+  },
+  {
+   "rank": 135,
+   "title": "Eye Of The Tiger",
+   "artist": "Survivor",
+   "part": "lead",
+   "slug": "135-survivor-eye-of-the-tiger"
+  },
+  {
+   "rank": 136,
+   "title": "I Hate Everything About You",
+   "artist": "Three Days Grace",
+   "part": "full",
+   "slug": "136-three-days-grace-i-hate-everything-about-you"
+  },
+  {
+   "rank": 137,
+   "title": "Kickstart My Heart",
+   "artist": "Mötley Crüe",
+   "part": "lead",
+   "slug": "137-motley-crue-kickstart-my-heart"
+  },
+  {
+   "rank": 138,
+   "title": "Holy Diver",
+   "artist": "Dio",
+   "part": "rhythm",
+   "slug": "138-dio-holy-diver"
+  },
+  {
+   "rank": 139,
+   "title": "You Shook Me All Night Long",
+   "artist": "AC/DC",
+   "part": "lead",
+   "slug": "139-ac-dc-you-shook-me-all-night-long"
+  },
+  {
+   "rank": 140,
+   "title": "Mr. Brightside",
+   "artist": "The Killers",
+   "part": "clean",
+   "slug": "140-the-killers-mr-brightside"
+  },
+  {
+   "rank": 141,
+   "title": "Still Got The Blues",
+   "artist": "Gary Moore",
+   "part": "lead",
+   "slug": "141-gary-moore-still-got-the-blues"
+  },
+  {
+   "rank": 142,
+   "title": "Domination",
+   "artist": "Pantera",
+   "part": "lead",
+   "slug": "142-pantera-domination"
+  },
+  {
+   "rank": 143,
+   "title": "Don't Fear The Reaper",
+   "artist": "Blue Öyster Cult",
+   "part": "rhythm",
+   "slug": "143-blue-oyster-cult-don-t-fear-the-reaper"
+  },
+  {
+   "rank": 144,
+   "title": "I Was Made for Lovin' You",
+   "artist": "KISS",
+   "part": "rhythm",
+   "slug": "144-kiss-i-was-made-for-lovin-you"
+  },
+  {
+   "rank": 145,
+   "title": "Dust In The Wind",
+   "artist": "Kansas",
+   "part": "clean",
+   "slug": "145-kansas-dust-in-the-wind"
+  },
+  {
+   "rank": 146,
+   "title": "Paradise City",
+   "artist": "Guns N' Roses",
+   "part": "lead",
+   "slug": "146-guns-n-roses-paradise-city"
+  },
+  {
+   "rank": 147,
+   "title": "Supermassive Black Hole",
+   "artist": "Muse",
+   "part": "lead",
+   "slug": "147-muse-supermassive-black-hole"
+  },
+  {
+   "rank": 148,
+   "title": "Wicked Game",
+   "artist": "Chris Isaak",
+   "part": "lead",
+   "slug": "148-chris-isaak-wicked-game"
+  },
+  {
+   "rank": 149,
+   "title": "Nutshell",
+   "artist": "Alice in Chains",
+   "part": "clean",
+   "slug": "149-alice-in-chains-nutshell"
+  },
+  {
+   "rank": 150,
+   "title": "Buddy Holly",
+   "artist": "Weezer",
+   "part": "lead",
+   "slug": "150-weezer-buddy-holly"
+  },
+  {
+   "rank": 151,
+   "title": "All The Small Things",
+   "artist": "blink-182",
+   "part": "rhythm",
+   "slug": "151-blink182-all-the-small-things"
+  },
+  {
+   "rank": 152,
+   "title": "Simple Man",
+   "artist": "Lynyrd Skynyrd",
+   "part": "rhythm",
+   "slug": "152-lynyrd-skynyrd-simple-man"
+  },
+  {
+   "rank": 153,
+   "title": "Eruption",
+   "artist": "Van Halen",
+   "part": "lead",
+   "slug": "153-van-halen-eruption"
+  },
+  {
+   "rank": 154,
+   "title": "Message In A Bottle",
+   "artist": "The Police",
+   "part": "rhythm",
+   "slug": "154-the-police-message-in-a-bottle"
+  },
+  {
+   "rank": 155,
+   "title": "Be Quiet And Drive (Far Away)",
+   "artist": "Deftones",
+   "part": "full",
+   "slug": "155-deftones-be-quiet-and-drive-far-away"
+  },
+  {
+   "rank": 156,
+   "title": "The Four Horsemen",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "156-metallica-the-four-horsemen"
+  },
+  {
+   "rank": 157,
+   "title": "Before I Forget",
+   "artist": "Slipknot",
+   "part": "lead",
+   "slug": "157-slipknot-before-i-forget"
+  },
+  {
+   "rank": 158,
+   "title": "Mr. Crowley",
+   "artist": "Ozzy Osbourne",
+   "part": "lead",
+   "slug": "158-ozzy-osbourne-mr-crowley"
+  },
+  {
+   "rank": 159,
+   "title": "The Pretender",
+   "artist": "Foo Fighters",
+   "part": "lead",
+   "slug": "159-foo-fighters-the-pretender"
+  },
+  {
+   "rank": 160,
+   "title": "Ace Of Spades",
+   "artist": "Motörhead",
+   "part": "full",
+   "slug": "160-motorhead-ace-of-spades"
+  },
+  {
+   "rank": 161,
+   "title": "Hallowed Be Thy Name",
+   "artist": "Iron Maiden",
+   "part": "full",
+   "slug": "161-iron-maiden-hallowed-be-thy-name"
+  },
+  {
+   "rank": 162,
+   "title": "Like A Stone",
+   "artist": "Audioslave",
+   "part": "full",
+   "slug": "162-audioslave-like-a-stone"
+  },
+  {
+   "rank": 163,
+   "title": "Money For Nothing",
+   "artist": "Dire Straits",
+   "part": "lead",
+   "slug": "163-dire-straits-money-for-nothing"
+  },
+  {
+   "rank": 164,
+   "title": "Faint",
+   "artist": "Linkin Park",
+   "part": "lead",
+   "slug": "164-linkin-park-faint"
+  },
+  {
+   "rank": 165,
+   "title": "T.N.T.",
+   "artist": "AC/DC",
+   "part": "lead",
+   "slug": "165-ac-dc-t-n-t"
+  },
+  {
+   "rank": 166,
+   "title": "B.Y.O.B.",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "166-system-of-a-down-b-y-o-b"
+  },
+  {
+   "rank": 167,
+   "title": "The Less I Know The Better",
+   "artist": "Tame Impala",
+   "part": "lead",
+   "slug": "167-tame-impala-the-less-i-know-the-better"
+  },
+  {
+   "rank": 168,
+   "title": "Tears Don't Fall",
+   "artist": "Bullet for My Valentine",
+   "part": "lead",
+   "slug": "168-bullet-for-my-valentine-tears-don-t-fall"
+  },
+  {
+   "rank": 169,
+   "title": "The Final Countdown",
+   "artist": "Europe",
+   "part": "lead",
+   "slug": "169-europe-the-final-countdown"
+  },
+  {
+   "rank": 170,
+   "title": "Painkiller",
+   "artist": "Judas Priest",
+   "part": "lead",
+   "slug": "170-judas-priest-painkiller"
+  },
+  {
+   "rank": 171,
+   "title": "Here Comes The Sun",
+   "artist": "The Beatles",
+   "part": "clean",
+   "slug": "171-the-beatles-here-comes-the-sun"
+  },
+  {
+   "rank": 172,
+   "title": "Shape Of My Heart",
+   "artist": "Sting",
+   "part": "clean",
+   "slug": "172-sting-shape-of-my-heart"
+  },
+  {
+   "rank": 173,
+   "title": "Cliffs Of Dover",
+   "artist": "Eric Johnson",
+   "part": "full",
+   "slug": "173-eric-johnson-cliffs-of-dover"
+  },
+  {
+   "rank": 174,
+   "title": "I WANNA BE YOUR SLAVE",
+   "artist": "Måneskin",
+   "part": "full",
+   "slug": "174-maneskin-i-wanna-be-your-slave"
+  },
+  {
+   "rank": 175,
+   "title": "Through The Fire And Flames",
+   "artist": "DragonForce",
+   "part": "lead",
+   "slug": "175-dragonforce-through-the-fire-and-flames"
+  },
+  {
+   "rank": 176,
+   "title": "Breed",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "176-nirvana-breed"
+  },
+  {
+   "rank": 177,
+   "title": "Bat Country",
+   "artist": "Avenged Sevenfold",
+   "part": "lead",
+   "slug": "177-avenged-sevenfold-bat-country"
+  },
+  {
+   "rank": 178,
+   "title": "Immigrant Song",
+   "artist": "Led Zeppelin",
+   "part": "lead",
+   "slug": "178-led-zeppelin-immigrant-song"
+  },
+  {
+   "rank": 179,
+   "title": "Am I Evil? (Diamond Head)",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "179-metallica-am-i-evil-diamond-head"
+  },
+  {
+   "rank": 180,
+   "title": "About A Girl",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "180-nirvana-about-a-girl"
+  },
+  {
+   "rank": 181,
+   "title": "Bring Me To Life",
+   "artist": "Evanescence",
+   "part": "full",
+   "slug": "181-evanescence-bring-me-to-life"
+  },
+  {
+   "rank": 182,
+   "title": "Plug In Baby",
+   "artist": "Muse",
+   "part": "full",
+   "slug": "182-muse-plug-in-baby"
+  },
+  {
+   "rank": 183,
+   "title": "21 Guns",
+   "artist": "Green Day",
+   "part": "clean",
+   "slug": "183-green-day-21-guns"
+  },
+  {
+   "rank": 184,
+   "title": "Anastasia",
+   "artist": "Slash",
+   "part": "lead",
+   "slug": "184-slash-anastasia"
+  },
+  {
+   "rank": 185,
+   "title": "One Step Closer",
+   "artist": "Linkin Park",
+   "part": "full",
+   "slug": "185-linkin-park-one-step-closer"
+  },
+  {
+   "rank": 186,
+   "title": "Fear Of The Dark",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "186-iron-maiden-fear-of-the-dark"
+  },
+  {
+   "rank": 187,
+   "title": "The Call Of Ktulu",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "187-metallica-the-call-of-ktulu"
+  },
+  {
+   "rank": 188,
+   "title": "Blind",
+   "artist": "Korn",
+   "part": "lead",
+   "slug": "188-korn-blind"
+  },
+  {
+   "rank": 189,
+   "title": "Psycho Killer",
+   "artist": "Talking Heads",
+   "part": "rhythm",
+   "slug": "189-talking-heads-psycho-killer"
+  },
+  {
+   "rank": 190,
+   "title": "Even Flow",
+   "artist": "Pearl Jam",
+   "part": "lead",
+   "slug": "190-pearl-jam-even-flow"
+  },
+  {
+   "rank": 191,
+   "title": "Scotty Doesn't Know",
+   "artist": "Lustra",
+   "part": "lead",
+   "slug": "191-lustra-scotty-doesn-t-know"
+  },
+  {
+   "rank": 192,
+   "title": "I Love Rock N' Roll (The Arrows)",
+   "artist": "Joan Jett",
+   "part": "rhythm",
+   "slug": "192-joan-jett-i-love-rock-n-roll-the-arrows"
+  },
+  {
+   "rank": 193,
+   "title": "505",
+   "artist": "Arctic Monkeys",
+   "part": "full",
+   "slug": "193-arctic-monkeys-505"
+  },
+  {
+   "rank": 194,
+   "title": "Kashmir",
+   "artist": "Led Zeppelin",
+   "part": "rhythm",
+   "slug": "194-led-zeppelin-kashmir"
+  },
+  {
+   "rank": 195,
+   "title": "Square Hammer",
+   "artist": "Ghost",
+   "part": "rhythm",
+   "slug": "195-ghost-square-hammer"
+  },
+  {
+   "rank": 196,
+   "title": "Laid To Rest",
+   "artist": "Lamb of God",
+   "part": "full",
+   "slug": "196-lamb-of-god-laid-to-rest"
+  },
+  {
+   "rank": 197,
+   "title": "Pretty Fly (For A White Guy)",
+   "artist": "The Offspring",
+   "part": "rhythm",
+   "slug": "197-the-offspring-pretty-fly-for-a-white-guy"
+  },
+  {
+   "rank": 198,
+   "title": "Brain Stew",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "198-green-day-brain-stew"
+  },
+  {
+   "rank": 199,
+   "title": "Hey Joe",
+   "artist": "The Jimi Hendrix Experience",
+   "part": "lead",
+   "slug": "199-the-jimi-hendrix-experience-hey-joe"
+  },
+  {
+   "rank": 200,
+   "title": "Rape Me",
+   "artist": "Nirvana",
+   "part": "lead",
+   "slug": "200-nirvana-rape-me"
+  },
+  {
+   "rank": 201,
+   "title": "Wanted Dead Or Alive",
+   "artist": "Bon Jovi",
+   "part": "clean",
+   "slug": "201-bon-jovi-wanted-dead-or-alive"
+  },
+  {
+   "rank": 202,
+   "title": "Change (In The House Of Flies)",
+   "artist": "Deftones",
+   "part": "rhythm",
+   "slug": "202-deftones-change-in-the-house-of-flies"
+  },
+  {
+   "rank": 203,
+   "title": "Drain You",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "203-nirvana-drain-you"
+  },
+  {
+   "rank": 204,
+   "title": "1979",
+   "artist": "Smashing Pumpkins",
+   "part": "rhythm",
+   "slug": "204-smashing-pumpkins-1979"
+  },
+  {
+   "rank": 205,
+   "title": "Killer Queen",
+   "artist": "Queen",
+   "part": "lead",
+   "slug": "205-queen-killer-queen"
+  },
+  {
+   "rank": 206,
+   "title": "Little Wing",
+   "artist": "The Jimi Hendrix Experience",
+   "part": "lead",
+   "slug": "206-the-jimi-hendrix-experience-little-wing"
+  },
+  {
+   "rank": 207,
+   "title": "This Love",
+   "artist": "Pantera",
+   "part": "full",
+   "slug": "207-pantera-this-love"
+  },
+  {
+   "rank": 208,
+   "title": "Down With The Sickness",
+   "artist": "Disturbed",
+   "part": "lead",
+   "slug": "208-disturbed-down-with-the-sickness"
+  },
+  {
+   "rank": 209,
+   "title": "Santeria",
+   "artist": "Sublime",
+   "part": "lead",
+   "slug": "209-sublime-santeria"
+  },
+  {
+   "rank": 210,
+   "title": "Whiskey In The Jar",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "210-metallica-whiskey-in-the-jar"
+  },
+  {
+   "rank": 211,
+   "title": "Sugar",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "211-system-of-a-down-sugar"
+  },
+  {
+   "rank": 212,
+   "title": "Don't Stop Believin'",
+   "artist": "Journey",
+   "part": "lead",
+   "slug": "212-journey-don-t-stop-believin"
+  },
+  {
+   "rank": 213,
+   "title": "Would?",
+   "artist": "Alice in Chains",
+   "part": "lead",
+   "slug": "213-alice-in-chains-would"
+  },
+  {
+   "rank": 214,
+   "title": "I'm Broken",
+   "artist": "Pantera",
+   "part": "lead",
+   "slug": "214-pantera-i-m-broken"
+  },
+  {
+   "rank": 215,
+   "title": "Time",
+   "artist": "Pink Floyd",
+   "part": "rhythm",
+   "slug": "215-pink-floyd-time"
+  },
+  {
+   "rank": 216,
+   "title": "Buried Alive",
+   "artist": "Avenged Sevenfold",
+   "part": "clean",
+   "slug": "216-avenged-sevenfold-buried-alive"
+  },
+  {
+   "rank": 217,
+   "title": "Bombtrack",
+   "artist": "Rage Against the Machine",
+   "part": "rhythm",
+   "slug": "217-rage-against-the-machine-bombtrack"
+  },
+  {
+   "rank": 218,
+   "title": "Crystal Mountain",
+   "artist": "Death",
+   "part": "lead",
+   "slug": "218-death-crystal-mountain"
+  },
+  {
+   "rank": 219,
+   "title": "Yellow",
+   "artist": "Coldplay",
+   "part": "lead",
+   "slug": "219-coldplay-yellow"
+  },
+  {
+   "rank": 220,
+   "title": "Let It Be",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "220-the-beatles-let-it-be"
+  },
+  {
+   "rank": 221,
+   "title": "The Devil In I",
+   "artist": "Slipknot",
+   "part": "rhythm",
+   "slug": "221-slipknot-the-devil-in-i"
+  },
+  {
+   "rank": 222,
+   "title": "Fortunate Son",
+   "artist": "Creedence Clearwater Revival",
+   "part": "lead",
+   "slug": "222-creedence-clearwater-revival-fortunate-son"
+  },
+  {
+   "rank": 223,
+   "title": "...And Justice for All",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "223-metallica-and-justice-for-all"
+  },
+  {
+   "rank": 224,
+   "title": "Afterlife",
+   "artist": "Avenged Sevenfold",
+   "part": "lead",
+   "slug": "224-avenged-sevenfold-afterlife"
+  },
+  {
+   "rank": 225,
+   "title": "Undone - The Sweater Song",
+   "artist": "Weezer",
+   "part": "rhythm",
+   "slug": "225-weezer-undone-the-sweater-song"
+  },
+  {
+   "rank": 226,
+   "title": "Hold The Line",
+   "artist": "Toto",
+   "part": "lead",
+   "slug": "226-toto-hold-the-line"
+  },
+  {
+   "rank": 227,
+   "title": "The Day That Never Comes",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "227-metallica-the-day-that-never-comes"
+  },
+  {
+   "rank": 228,
+   "title": "My Curse",
+   "artist": "Killswitch Engage",
+   "part": "lead",
+   "slug": "228-killswitch-engage-my-curse"
+  },
+  {
+   "rank": 229,
+   "title": "Спокойная ночь",
+   "artist": "Кино",
+   "part": "lead",
+   "slug": "229-kino-spokoynaya-noch"
+  },
+  {
+   "rank": 230,
+   "title": "While My Guitar Gently Weeps",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "230-the-beatles-while-my-guitar-gently-weeps"
+  },
+  {
+   "rank": 231,
+   "title": "What I've Done",
+   "artist": "Linkin Park",
+   "part": "lead",
+   "slug": "231-linkin-park-what-i-ve-done"
+  },
+  {
+   "rank": 232,
+   "title": "Psycho",
+   "artist": "Muse",
+   "part": "full",
+   "slug": "232-muse-psycho"
+  },
+  {
+   "rank": 233,
+   "title": "When I Come Around",
+   "artist": "Green Day",
+   "part": "lead",
+   "slug": "233-green-day-when-i-come-around"
+  },
+  {
+   "rank": 234,
+   "title": "Misery Business",
+   "artist": "Paramore",
+   "part": "lead",
+   "slug": "234-paramore-misery-business"
+  },
+  {
+   "rank": 235,
+   "title": "To Live Is To Die",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "235-metallica-to-live-is-to-die"
+  },
+  {
+   "rank": 236,
+   "title": "My Hero",
+   "artist": "Foo Fighters",
+   "part": "lead",
+   "slug": "236-foo-fighters-my-hero"
+  },
+  {
+   "rank": 237,
+   "title": "Are You Gonna Be My Girl",
+   "artist": "Jet",
+   "part": "lead",
+   "slug": "237-jet-are-you-gonna-be-my-girl"
+  },
+  {
+   "rank": 238,
+   "title": "Should I Stay Or Should I Go",
+   "artist": "The Clash",
+   "part": "lead",
+   "slug": "238-the-clash-should-i-stay-or-should-i-go"
+  },
+  {
+   "rank": 239,
+   "title": "Bulls On Parade",
+   "artist": "Rage Against the Machine",
+   "part": "full",
+   "slug": "239-rage-against-the-machine-bulls-on-parade"
+  },
+  {
+   "rank": 240,
+   "title": "Walk This Way",
+   "artist": "Aerosmith",
+   "part": "rhythm",
+   "slug": "240-aerosmith-walk-this-way"
+  },
+  {
+   "rank": 241,
+   "title": "Black Magic Woman (Fleetwood Mac)",
+   "artist": "Santana",
+   "part": "lead",
+   "slug": "241-santana-black-magic-woman-fleetwood-mac"
+  },
+  {
+   "rank": 242,
+   "title": "Have You Ever Seen The Rain",
+   "artist": "Creedence Clearwater Revival",
+   "part": "rhythm",
+   "slug": "242-creedence-clearwater-revival-have-you-ever-seen-the-rain"
+  },
+  {
+   "rank": 243,
+   "title": "No One Knows",
+   "artist": "Queens of the Stone Age",
+   "part": "lead",
+   "slug": "243-queens-of-the-stone-age-no-one-knows"
+  },
+  {
+   "rank": 244,
+   "title": "All Along The Watchtower (Bob Dylan)",
+   "artist": "The Jimi Hendrix Experience",
+   "part": "lead",
+   "slug": "244-the-jimi-hendrix-experience-all-along-the-watchtower-bob-dylan"
+  },
+  {
+   "rank": 245,
+   "title": "Harvester of Sorrow",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "245-metallica-harvester-of-sorrow"
+  },
+  {
+   "rank": 246,
+   "title": "Plush",
+   "artist": "Stone Temple Pilots",
+   "part": "rhythm",
+   "slug": "246-stone-temple-pilots-plush"
+  },
+  {
+   "rank": 247,
+   "title": "Babe I'm Gonna Leave You",
+   "artist": "Led Zeppelin",
+   "part": "clean",
+   "slug": "247-led-zeppelin-babe-i-m-gonna-leave-you"
+  },
+  {
+   "rank": 248,
+   "title": "Panama",
+   "artist": "Van Halen",
+   "part": "lead",
+   "slug": "248-van-halen-panama"
+  },
+  {
+   "rank": 249,
+   "title": "Kryptonite",
+   "artist": "3 Doors Down",
+   "part": "full",
+   "slug": "249-3-doors-down-kryptonite"
+  },
+  {
+   "rank": 250,
+   "title": "Break Stuff",
+   "artist": "Limp Bizkit",
+   "part": "full",
+   "slug": "250-limp-bizkit-break-stuff"
+  },
+  {
+   "rank": 251,
+   "title": "I Don't Wanna Be Me",
+   "artist": "Type O Negative",
+   "part": "rhythm",
+   "slug": "251-type-o-negative-i-don-t-wanna-be-me"
+  },
+  {
+   "rank": 252,
+   "title": "Shepherd Of Fire",
+   "artist": "Avenged Sevenfold",
+   "part": "lead",
+   "slug": "252-avenged-sevenfold-shepherd-of-fire"
+  },
+  {
+   "rank": 253,
+   "title": "All Apologies",
+   "artist": "Nirvana",
+   "part": "lead",
+   "slug": "253-nirvana-all-apologies"
+  },
+  {
+   "rank": 254,
+   "title": "Smooth",
+   "artist": "Santana",
+   "part": "full",
+   "slug": "254-santana-smooth"
+  },
+  {
+   "rank": 255,
+   "title": "Blitzkrieg Bop",
+   "artist": "The Ramones",
+   "part": "rhythm",
+   "slug": "255-the-ramones-blitzkrieg-bop"
+  },
+  {
+   "rank": 256,
+   "title": "More Than A Feeling",
+   "artist": "Boston",
+   "part": "lead",
+   "slug": "256-boston-more-than-a-feeling"
+  },
+  {
+   "rank": 257,
+   "title": "Hangar 18",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "257-megadeth-hangar-18"
+  },
+  {
+   "rank": 258,
+   "title": "Welcome To The Black Parade",
+   "artist": "My Chemical Romance",
+   "part": "lead",
+   "slug": "258-my-chemical-romance-welcome-to-the-black-parade"
+  },
+  {
+   "rank": 259,
+   "title": "Fuel",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "259-metallica-fuel"
+  },
+  {
+   "rank": 260,
+   "title": "Karma Police",
+   "artist": "Radiohead",
+   "part": "clean",
+   "slug": "260-radiohead-karma-police"
+  },
+  {
+   "rank": 261,
+   "title": "Shine On You Crazy Diamond (Parts I - IX)",
+   "artist": "Pink Floyd",
+   "part": "lead",
+   "slug": "261-pink-floyd-shine-on-you-crazy-diamond-parts-i-ix"
+  },
+  {
+   "rank": 262,
+   "title": "Sharp Dressed Man",
+   "artist": "ZZ Top",
+   "part": "lead",
+   "slug": "262-zz-top-sharp-dressed-man"
+  },
+  {
+   "rank": 263,
+   "title": "Numb",
+   "artist": "Linkin Park",
+   "part": "rhythm",
+   "slug": "263-linkin-park-numb"
+  },
+  {
+   "rank": 264,
+   "title": "The Number Of The Beast",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "264-iron-maiden-the-number-of-the-beast"
+  },
+  {
+   "rank": 265,
+   "title": "Silvera",
+   "artist": "Gojira",
+   "part": "lead",
+   "slug": "265-gojira-silvera"
+  },
+  {
+   "rank": 266,
+   "title": "South Of Heaven",
+   "artist": "Slayer",
+   "part": "lead",
+   "slug": "266-slayer-south-of-heaven"
+  },
+  {
+   "rank": 267,
+   "title": "Wasted Years",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "267-iron-maiden-wasted-years"
+  },
+  {
+   "rank": 268,
+   "title": "Something In The Way",
+   "artist": "Nirvana",
+   "part": "clean",
+   "slug": "268-nirvana-something-in-the-way"
+  },
+  {
+   "rank": 269,
+   "title": "Why'd You Only Call Me When You're High?",
+   "artist": "Arctic Monkeys",
+   "part": "full",
+   "slug": "269-arctic-monkeys-why-d-you-only-call-me-when-you-re-high"
+  },
+  {
+   "rank": 270,
+   "title": "Day Tripper",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "270-the-beatles-day-tripper"
+  },
+  {
+   "rank": 271,
+   "title": "Freaks",
+   "artist": "Surf Curse",
+   "part": "lead",
+   "slug": "271-surf-curse-freaks"
+  },
+  {
+   "rank": 272,
+   "title": "Sextape",
+   "artist": "Deftones",
+   "part": "rhythm",
+   "slug": "272-deftones-sextape"
+  },
+  {
+   "rank": 273,
+   "title": "Лесник",
+   "artist": "Король и Шут",
+   "part": "lead",
+   "slug": "273-korol-i-shut-lesnik"
+  },
+  {
+   "rank": 274,
+   "title": "Heartbreaker",
+   "artist": "Led Zeppelin",
+   "part": "lead",
+   "slug": "274-led-zeppelin-heartbreaker"
+  },
+  {
+   "rank": 275,
+   "title": "Pride And Joy",
+   "artist": "Stevie Ray Vaughan & Double Trouble",
+   "part": "lead",
+   "slug": "275-stevie-ray-vaughan-double-trouble-pride-and-joy"
+  },
+  {
+   "rank": 276,
+   "title": "Eyeless",
+   "artist": "Slipknot",
+   "part": "rhythm",
+   "slug": "276-slipknot-eyeless"
+  },
+  {
+   "rank": 277,
+   "title": "In The End",
+   "artist": "Linkin Park",
+   "part": "full",
+   "slug": "277-linkin-park-in-the-end"
+  },
+  {
+   "rank": 278,
+   "title": "Fluorescent Adolescent",
+   "artist": "Arctic Monkeys",
+   "part": "lead",
+   "slug": "278-arctic-monkeys-fluorescent-adolescent"
+  },
+  {
+   "rank": 279,
+   "title": "Deutschland",
+   "artist": "Rammstein",
+   "part": "rhythm",
+   "slug": "279-rammstein-deutschland"
+  },
+  {
+   "rank": 280,
+   "title": "Barracuda",
+   "artist": "Heart",
+   "part": "lead",
+   "slug": "280-heart-barracuda"
+  },
+  {
+   "rank": 281,
+   "title": "So Far Away",
+   "artist": "Avenged Sevenfold",
+   "part": "clean",
+   "slug": "281-avenged-sevenfold-so-far-away"
+  },
+  {
+   "rank": 282,
+   "title": "Them Bones",
+   "artist": "Alice in Chains",
+   "part": "lead",
+   "slug": "282-alice-in-chains-them-bones"
+  },
+  {
+   "rank": 283,
+   "title": "Mississippi Queen",
+   "artist": "Mountain",
+   "part": "lead",
+   "slug": "283-mountain-mississippi-queen"
+  },
+  {
+   "rank": 284,
+   "title": "Don't Look Back In Anger",
+   "artist": "Oasis",
+   "part": "lead",
+   "slug": "284-oasis-don-t-look-back-in-anger"
+  },
+  {
+   "rank": 285,
+   "title": "Self Esteem",
+   "artist": "The Offspring",
+   "part": "full",
+   "slug": "285-the-offspring-self-esteem"
+  },
+  {
+   "rank": 286,
+   "title": "Under Pressure",
+   "artist": "Queen, David Bowie",
+   "part": "full",
+   "slug": "286-queen-david-bowie-under-pressure"
+  },
+  {
+   "rank": 287,
+   "title": "Beggin' (Four Seasons)",
+   "artist": "Måneskin",
+   "part": "full",
+   "slug": "287-maneskin-beggin-four-seasons"
+  },
+  {
+   "rank": 288,
+   "title": "Forty Six & 2",
+   "artist": "Tool",
+   "part": "full",
+   "slug": "288-tool-forty-six-2"
+  },
+  {
+   "rank": 289,
+   "title": "Highway Star",
+   "artist": "Deep Purple",
+   "part": "lead",
+   "slug": "289-deep-purple-highway-star"
+  },
+  {
+   "rank": 290,
+   "title": "Good Riddance (Time of Your Life)",
+   "artist": "Green Day",
+   "part": "clean",
+   "slug": "290-green-day-good-riddance-time-of-your-life"
+  },
+  {
+   "rank": 291,
+   "title": "Island In The Sun",
+   "artist": "Weezer",
+   "part": "lead",
+   "slug": "291-weezer-island-in-the-sun"
+  },
+  {
+   "rank": 292,
+   "title": "Crazy Little Thing Called Love",
+   "artist": "Queen",
+   "part": "lead",
+   "slug": "292-queen-crazy-little-thing-called-love"
+  },
+  {
+   "rank": 293,
+   "title": "Alive",
+   "artist": "Pearl Jam",
+   "part": "full",
+   "slug": "293-pearl-jam-alive"
+  },
+  {
+   "rank": 294,
+   "title": "Interstate Love Song",
+   "artist": "Stone Temple Pilots",
+   "part": "full",
+   "slug": "294-stone-temple-pilots-interstate-love-song"
+  },
+  {
+   "rank": 295,
+   "title": "Dark Necessities",
+   "artist": "Red Hot Chili Peppers",
+   "part": "lead",
+   "slug": "295-red-hot-chili-peppers-dark-necessities"
+  },
+  {
+   "rank": 296,
+   "title": "Misirlou",
+   "artist": "Dick Dale",
+   "part": "lead",
+   "slug": "296-dick-dale-misirlou"
+  },
+  {
+   "rank": 297,
+   "title": "(I Can't Get No) Satisfaction",
+   "artist": "The Rolling Stones",
+   "part": "lead",
+   "slug": "297-the-rolling-stones-i-can-t-get-no-satisfaction"
+  },
+  {
+   "rank": 298,
+   "title": "Black",
+   "artist": "Pearl Jam",
+   "part": "rhythm",
+   "slug": "298-pearl-jam-black"
+  },
+  {
+   "rank": 299,
+   "title": "My Friend Of Misery",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "299-metallica-my-friend-of-misery"
+  },
+  {
+   "rank": 300,
+   "title": "Yesterday",
+   "artist": "The Beatles",
+   "part": "clean",
+   "slug": "300-the-beatles-yesterday"
+  },
+  {
+   "rank": 301,
+   "title": "Don't Stop Me Now",
+   "artist": "Queen",
+   "part": "lead",
+   "slug": "301-queen-don-t-stop-me-now"
+  },
+  {
+   "rank": 302,
+   "title": "Angel of Death",
+   "artist": "Slayer",
+   "part": "lead",
+   "slug": "302-slayer-angel-of-death"
+  },
+  {
+   "rank": 303,
+   "title": "Run To The Hills",
+   "artist": "Iron Maiden",
+   "part": "rhythm",
+   "slug": "303-iron-maiden-run-to-the-hills"
+  },
+  {
+   "rank": 304,
+   "title": "Bark at the Moon",
+   "artist": "Ozzy Osbourne",
+   "part": "rhythm",
+   "slug": "304-ozzy-osbourne-bark-at-the-moon"
+  },
+  {
+   "rank": 305,
+   "title": "Slow Dancing In A Burning Room",
+   "artist": "John Mayer",
+   "part": "rhythm",
+   "slug": "305-john-mayer-slow-dancing-in-a-burning-room"
+  },
+  {
+   "rank": 306,
+   "title": "One Last Breath",
+   "artist": "Creed",
+   "part": "clean",
+   "slug": "306-creed-one-last-breath"
+  },
+  {
+   "rank": 307,
+   "title": "Wonderful Tonight",
+   "artist": "Eric Clapton",
+   "part": "lead",
+   "slug": "307-eric-clapton-wonderful-tonight"
+  },
+  {
+   "rank": 308,
+   "title": "Are You Gonna Go My Way",
+   "artist": "Lenny Kravitz",
+   "part": "rhythm",
+   "slug": "308-lenny-kravitz-are-you-gonna-go-my-way"
+  },
+  {
+   "rank": 309,
+   "title": "Jump In The Fire",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "309-metallica-jump-in-the-fire"
+  },
+  {
+   "rank": 310,
+   "title": "Tom Sawyer",
+   "artist": "Rush",
+   "part": "lead",
+   "slug": "310-rush-tom-sawyer"
+  },
+  {
+   "rank": 311,
+   "title": "Knights Of Cydonia",
+   "artist": "Muse",
+   "part": "lead",
+   "slug": "311-muse-knights-of-cydonia"
+  },
+  {
+   "rank": 312,
+   "title": "Sweating Bullets",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "312-megadeth-sweating-bullets"
+  },
+  {
+   "rank": 313,
+   "title": "It's My Life",
+   "artist": "Bon Jovi",
+   "part": "lead",
+   "slug": "313-bon-jovi-it-s-my-life"
+  },
+  {
+   "rank": 314,
+   "title": "I Want You Back",
+   "artist": "The Jackson 5",
+   "part": "rhythm",
+   "slug": "314-the-jackson-5-i-want-you-back"
+  },
+  {
+   "rank": 315,
+   "title": "Iris",
+   "artist": "Goo Goo Dolls",
+   "part": "clean",
+   "slug": "315-goo-goo-dolls-iris"
+  },
+  {
+   "rank": 316,
+   "title": "The Pot",
+   "artist": "Tool",
+   "part": "full",
+   "slug": "316-tool-the-pot"
+  },
+  {
+   "rank": 317,
+   "title": "Stricken",
+   "artist": "Disturbed",
+   "part": "full",
+   "slug": "317-disturbed-stricken"
+  },
+  {
+   "rank": 318,
+   "title": "Phantom Of The Opera",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "318-iron-maiden-phantom-of-the-opera"
+  },
+  {
+   "rank": 319,
+   "title": "Something",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "319-the-beatles-something"
+  },
+  {
+   "rank": 320,
+   "title": "Losing My Religion",
+   "artist": "R.E.M.",
+   "part": "clean",
+   "slug": "320-r-e-m-losing-my-religion"
+  },
+  {
+   "rank": 321,
+   "title": "This Charming Man",
+   "artist": "The Smiths",
+   "part": "lead",
+   "slug": "321-the-smiths-this-charming-man"
+  },
+  {
+   "rank": 322,
+   "title": "I'm Not Okay (I Promise)",
+   "artist": "My Chemical Romance",
+   "part": "lead",
+   "slug": "322-my-chemical-romance-i-m-not-okay-i-promise"
+  },
+  {
+   "rank": 323,
+   "title": "Trust",
+   "artist": "Megadeth",
+   "part": "rhythm",
+   "slug": "323-megadeth-trust"
+  },
+  {
+   "rank": 324,
+   "title": "Europa (Earth's Cry Heaven's Smile)",
+   "artist": "Santana",
+   "part": "lead",
+   "slug": "324-santana-europa-earth-s-cry-heaven-s-smile"
+  },
+  {
+   "rank": 325,
+   "title": "What's My Age Again?",
+   "artist": "blink-182",
+   "part": "rhythm",
+   "slug": "325-blink182-what-s-my-age-again"
+  },
+  {
+   "rank": 326,
+   "title": "Purple Rain",
+   "artist": "Prince",
+   "part": "lead",
+   "slug": "326-prince-purple-rain"
+  },
+  {
+   "rank": 327,
+   "title": "Behind Blue Eyes",
+   "artist": "Limp Bizkit",
+   "part": "clean",
+   "slug": "327-limp-bizkit-behind-blue-eyes"
+  },
+  {
+   "rank": 328,
+   "title": "Cirice",
+   "artist": "Ghost",
+   "part": "lead",
+   "slug": "328-ghost-cirice"
+  },
+  {
+   "rank": 329,
+   "title": "Sex On Fire",
+   "artist": "Kings of Leon",
+   "part": "lead",
+   "slug": "329-kings-of-leon-sex-on-fire"
+  },
+  {
+   "rank": 330,
+   "title": "Get Lucky",
+   "artist": "Daft Punk",
+   "part": "lead",
+   "slug": "330-daft-punk-get-lucky"
+  },
+  {
+   "rank": 331,
+   "title": "Longview",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "331-green-day-longview"
+  },
+  {
+   "rank": 332,
+   "title": "In My Darkest Hour",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "332-megadeth-in-my-darkest-hour"
+  },
+  {
+   "rank": 333,
+   "title": "Hot For Teacher",
+   "artist": "Van Halen",
+   "part": "full",
+   "slug": "333-van-halen-hot-for-teacher"
+  },
+  {
+   "rank": 334,
+   "title": "5 Minutes Alone",
+   "artist": "Pantera",
+   "part": "lead",
+   "slug": "334-pantera-5-minutes-alone"
+  },
+  {
+   "rank": 335,
+   "title": "Rock And Roll",
+   "artist": "Led Zeppelin",
+   "part": "rhythm",
+   "slug": "335-led-zeppelin-rock-and-roll"
+  },
+  {
+   "rank": 336,
+   "title": "YYZ",
+   "artist": "Rush",
+   "part": "full",
+   "slug": "336-rush-yyz"
+  },
+  {
+   "rank": 337,
+   "title": "Paranoid Android",
+   "artist": "Radiohead",
+   "part": "clean",
+   "slug": "337-radiohead-paranoid-android"
+  },
+  {
+   "rank": 338,
+   "title": "Hey There Delilah",
+   "artist": "Plain White T's",
+   "part": "clean",
+   "slug": "338-plain-white-t-s-hey-there-delilah"
+  },
+  {
+   "rank": 339,
+   "title": "Teenagers",
+   "artist": "My Chemical Romance",
+   "part": "lead",
+   "slug": "339-my-chemical-romance-teenagers"
+  },
+  {
+   "rank": 340,
+   "title": "Into the Void",
+   "artist": "Black Sabbath",
+   "part": "full",
+   "slug": "340-black-sabbath-into-the-void"
+  },
+  {
+   "rank": 341,
+   "title": "September",
+   "artist": "Earth, Wind & Fire",
+   "part": "rhythm",
+   "slug": "341-earth-wind-fire-september"
+  },
+  {
+   "rank": 342,
+   "title": "Rooster",
+   "artist": "Alice in Chains",
+   "part": "rhythm",
+   "slug": "342-alice-in-chains-rooster"
+  },
+  {
+   "rank": 343,
+   "title": "Polly",
+   "artist": "Nirvana",
+   "part": "clean",
+   "slug": "343-nirvana-polly"
+  },
+  {
+   "rank": 344,
+   "title": "Smooth Criminal",
+   "artist": "Michael Jackson",
+   "part": "full",
+   "slug": "344-michael-jackson-smooth-criminal"
+  },
+  {
+   "rank": 345,
+   "title": "Spirit Crusher",
+   "artist": "Death",
+   "part": "lead",
+   "slug": "345-death-spirit-crusher"
+  },
+  {
+   "rank": 346,
+   "title": "Embryo / Children Of The Grave",
+   "artist": "Black Sabbath",
+   "part": "full",
+   "slug": "346-black-sabbath-embryo-children-of-the-grave"
+  },
+  {
+   "rank": 347,
+   "title": "Freak On A Leash",
+   "artist": "Korn",
+   "part": "full",
+   "slug": "347-korn-freak-on-a-leash"
+  },
+  {
+   "rank": 348,
+   "title": "Waking The Demon",
+   "artist": "Bullet for My Valentine",
+   "part": "full",
+   "slug": "348-bullet-for-my-valentine-waking-the-demon"
+  },
+  {
+   "rank": 349,
+   "title": "Never Too Late",
+   "artist": "Three Days Grace",
+   "part": "rhythm",
+   "slug": "349-three-days-grace-never-too-late"
+  },
+  {
+   "rank": 350,
+   "title": "The Middle",
+   "artist": "Jimmy Eat World",
+   "part": "lead",
+   "slug": "350-jimmy-eat-world-the-middle"
+  },
+  {
+   "rank": 351,
+   "title": "We're Not Gonna Take It",
+   "artist": "Twisted Sister",
+   "part": "lead",
+   "slug": "351-twisted-sister-we-re-not-gonna-take-it"
+  },
+  {
+   "rank": 352,
+   "title": "Around The World",
+   "artist": "Red Hot Chili Peppers",
+   "part": "full",
+   "slug": "352-red-hot-chili-peppers-around-the-world"
+  },
+  {
+   "rank": 353,
+   "title": "Engine No. 9",
+   "artist": "Deftones",
+   "part": "lead",
+   "slug": "353-deftones-engine-no-9"
+  },
+  {
+   "rank": 354,
+   "title": "Hand Of Blood",
+   "artist": "Bullet for My Valentine",
+   "part": "rhythm",
+   "slug": "354-bullet-for-my-valentine-hand-of-blood"
+  },
+  {
+   "rank": 355,
+   "title": "Fight Fire With Fire",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "355-metallica-fight-fire-with-fire"
+  },
+  {
+   "rank": 356,
+   "title": "A Tout Le Monde",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "356-megadeth-a-tout-le-monde"
+  },
+  {
+   "rank": 357,
+   "title": "Aces High",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "357-iron-maiden-aces-high"
+  },
+  {
+   "rank": 358,
+   "title": "Lounge Act",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "358-nirvana-lounge-act"
+  },
+  {
+   "rank": 359,
+   "title": "By The Way",
+   "artist": "Red Hot Chili Peppers",
+   "part": "clean",
+   "slug": "359-red-hot-chili-peppers-by-the-way"
+  },
+  {
+   "rank": 360,
+   "title": "Are You Dead Yet?",
+   "artist": "Children of Bodom",
+   "part": "lead",
+   "slug": "360-children-of-bodom-are-you-dead-yet"
+  },
+  {
+   "rank": 361,
+   "title": "Don't Let Me Down",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "361-the-beatles-don-t-let-me-down"
+  },
+  {
+   "rank": 362,
+   "title": "Parisienne Walkways",
+   "artist": "Gary Moore",
+   "part": "full",
+   "slug": "362-gary-moore-parisienne-walkways"
+  },
+  {
+   "rank": 363,
+   "title": "2 Minutes To Midnight",
+   "artist": "Iron Maiden",
+   "part": "lead",
+   "slug": "363-iron-maiden-2-minutes-to-midnight"
+  },
+  {
+   "rank": 364,
+   "title": "Learn To Fly",
+   "artist": "Foo Fighters",
+   "part": "rhythm",
+   "slug": "364-foo-fighters-learn-to-fly"
+  },
+  {
+   "rank": 365,
+   "title": "Roxanne",
+   "artist": "The Police",
+   "part": "full",
+   "slug": "365-the-police-roxanne"
+  },
+  {
+   "rank": 366,
+   "title": "Pull Me Under",
+   "artist": "Dream Theater",
+   "part": "full",
+   "slug": "366-dream-theater-pull-me-under"
+  },
+  {
+   "rank": 367,
+   "title": "Freezing Moon",
+   "artist": "Mayhem",
+   "part": "full",
+   "slug": "367-mayhem-freezing-moon"
+  },
+  {
+   "rank": 368,
+   "title": "Yellow Ledbetter",
+   "artist": "Pearl Jam",
+   "part": "clean",
+   "slug": "368-pearl-jam-yellow-ledbetter"
+  },
+  {
+   "rank": 369,
+   "title": "Helena",
+   "artist": "My Chemical Romance",
+   "part": "rhythm",
+   "slug": "369-my-chemical-romance-helena"
+  },
+  {
+   "rank": 370,
+   "title": "Teenage Dirtbag",
+   "artist": "Wheatus",
+   "part": "clean",
+   "slug": "370-wheatus-teenage-dirtbag"
+  },
+  {
+   "rank": 371,
+   "title": "Electric Funeral",
+   "artist": "Black Sabbath",
+   "part": "lead",
+   "slug": "371-black-sabbath-electric-funeral"
+  },
+  {
+   "rank": 372,
+   "title": "A New Level",
+   "artist": "Pantera",
+   "part": "full",
+   "slug": "372-pantera-a-new-level"
+  },
+  {
+   "rank": 373,
+   "title": "Whiplash",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "373-metallica-whiplash"
+  },
+  {
+   "rank": 374,
+   "title": "Just",
+   "artist": "Radiohead",
+   "part": "lead",
+   "slug": "374-radiohead-just"
+  },
+  {
+   "rank": 375,
+   "title": "The Beautiful People",
+   "artist": "Marilyn Manson",
+   "part": "full",
+   "slug": "375-marilyn-manson-the-beautiful-people"
+  },
+  {
+   "rank": 376,
+   "title": "Voice Of The Soul",
+   "artist": "Death",
+   "part": "lead",
+   "slug": "376-death-voice-of-the-soul"
+  },
+  {
+   "rank": 377,
+   "title": "Just The Two Of Us",
+   "artist": "Bill Withers",
+   "part": "full",
+   "slug": "377-bill-withers-just-the-two-of-us"
+  },
+  {
+   "rank": 378,
+   "title": "Ramble On",
+   "artist": "Led Zeppelin",
+   "part": "clean",
+   "slug": "378-led-zeppelin-ramble-on"
+  },
+  {
+   "rank": 379,
+   "title": "The Godfather Theme (Nino Rota)",
+   "artist": "Slash",
+   "part": "lead",
+   "slug": "379-slash-the-godfather-theme-nino-rota"
+  },
+  {
+   "rank": 380,
+   "title": "Born To Be Wild",
+   "artist": "Steppenwolf",
+   "part": "lead",
+   "slug": "380-steppenwolf-born-to-be-wild"
+  },
+  {
+   "rank": 381,
+   "title": "Summer Of '69",
+   "artist": "Bryan Adams",
+   "part": "lead",
+   "slug": "381-bryan-adams-summer-of-69"
+  },
+  {
+   "rank": 382,
+   "title": "Time Is Running Out",
+   "artist": "Muse",
+   "part": "full",
+   "slug": "382-muse-time-is-running-out"
+  },
+  {
+   "rank": 383,
+   "title": "Sober",
+   "artist": "Tool",
+   "part": "lead",
+   "slug": "383-tool-sober"
+  },
+  {
+   "rank": 384,
+   "title": "Just Like Heaven",
+   "artist": "The Cure",
+   "part": "lead",
+   "slug": "384-the-cure-just-like-heaven"
+  },
+  {
+   "rank": 385,
+   "title": "Riot",
+   "artist": "Three Days Grace",
+   "part": "rhythm",
+   "slug": "385-three-days-grace-riot"
+  },
+  {
+   "rank": 386,
+   "title": "Still Into You",
+   "artist": "Paramore",
+   "part": "rhythm",
+   "slug": "386-paramore-still-into-you"
+  },
+  {
+   "rank": 387,
+   "title": "Pneuma",
+   "artist": "Tool",
+   "part": "full",
+   "slug": "387-tool-pneuma"
+  },
+  {
+   "rank": 388,
+   "title": "Mama, I'm Coming Home",
+   "artist": "Ozzy Osbourne",
+   "part": "full",
+   "slug": "388-ozzy-osbourne-mama-i-m-coming-home"
+  },
+  {
+   "rank": 389,
+   "title": "Angie",
+   "artist": "The Rolling Stones",
+   "part": "clean",
+   "slug": "389-the-rolling-stones-angie"
+  },
+  {
+   "rank": 390,
+   "title": "Heaven And Hell",
+   "artist": "Black Sabbath",
+   "part": "clean",
+   "slug": "390-black-sabbath-heaven-and-hell"
+  },
+  {
+   "rank": 391,
+   "title": "Jigsaw Falling Into Place",
+   "artist": "Radiohead",
+   "part": "clean",
+   "slug": "391-radiohead-jigsaw-falling-into-place"
+  },
+  {
+   "rank": 392,
+   "title": "Roadhouse Blues",
+   "artist": "The Doors",
+   "part": "lead",
+   "slug": "392-the-doors-roadhouse-blues"
+  },
+  {
+   "rank": 393,
+   "title": "People Are Strange",
+   "artist": "The Doors",
+   "part": "rhythm",
+   "slug": "393-the-doors-people-are-strange"
+  },
+  {
+   "rank": 394,
+   "title": "Fast Car",
+   "artist": "Tracy Chapman",
+   "part": "clean",
+   "slug": "394-tracy-chapman-fast-car"
+  },
+  {
+   "rank": 395,
+   "title": "Hammer Smashed Face",
+   "artist": "Cannibal Corpse",
+   "part": "lead",
+   "slug": "395-cannibal-corpse-hammer-smashed-face"
+  },
+  {
+   "rank": 396,
+   "title": "Disposable Heroes",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "396-metallica-disposable-heroes"
+  },
+  {
+   "rank": 397,
+   "title": "Dazed And Confused (Jake Holmes)",
+   "artist": "Led Zeppelin",
+   "part": "lead",
+   "slug": "397-led-zeppelin-dazed-and-confused-jake-holmes"
+  },
+  {
+   "rank": 398,
+   "title": "Flying Whales",
+   "artist": "Gojira",
+   "part": "full",
+   "slug": "398-gojira-flying-whales"
+  },
+  {
+   "rank": 399,
+   "title": "The Kill (Bury Me)",
+   "artist": "Thirty Seconds to Mars",
+   "part": "clean",
+   "slug": "399-thirty-seconds-to-mars-the-kill-bury-me"
+  },
+  {
+   "rank": 400,
+   "title": "Mary",
+   "artist": "Alex G",
+   "part": "rhythm",
+   "slug": "400-alex-g-mary"
+  },
+  {
+   "rank": 401,
+   "title": "Angry Again",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "401-megadeth-angry-again"
+  },
+  {
+   "rank": 402,
+   "title": "Drive",
+   "artist": "Incubus",
+   "part": "clean",
+   "slug": "402-incubus-drive"
+  },
+  {
+   "rank": 403,
+   "title": "Beast And The Harlot",
+   "artist": "Avenged Sevenfold",
+   "part": "lead",
+   "slug": "403-avenged-sevenfold-beast-and-the-harlot"
+  },
+  {
+   "rank": 404,
+   "title": "Black Sabbath",
+   "artist": "Black Sabbath",
+   "part": "lead",
+   "slug": "404-black-sabbath-black-sabbath"
+  },
+  {
+   "rank": 405,
+   "title": "Dammit",
+   "artist": "blink-182",
+   "part": "rhythm",
+   "slug": "405-blink182-dammit"
+  },
+  {
+   "rank": 406,
+   "title": "High And Dry",
+   "artist": "Radiohead",
+   "part": "clean",
+   "slug": "406-radiohead-high-and-dry"
+  },
+  {
+   "rank": 407,
+   "title": "Give It Away",
+   "artist": "Red Hot Chili Peppers",
+   "part": "full",
+   "slug": "407-red-hot-chili-peppers-give-it-away"
+  },
+  {
+   "rank": 408,
+   "title": "Snuff",
+   "artist": "Slipknot",
+   "part": "full",
+   "slug": "408-slipknot-snuff"
+  },
+  {
+   "rank": 409,
+   "title": "Dreams",
+   "artist": "Fleetwood Mac",
+   "part": "lead",
+   "slug": "409-fleetwood-mac-dreams"
+  },
+  {
+   "rank": 410,
+   "title": "Take A Look Around",
+   "artist": "Limp Bizkit",
+   "part": "clean",
+   "slug": "410-limp-bizkit-take-a-look-around"
+  },
+  {
+   "rank": 411,
+   "title": "Rebel Yell",
+   "artist": "Billy Idol",
+   "part": "rhythm",
+   "slug": "411-billy-idol-rebel-yell"
+  },
+  {
+   "rank": 412,
+   "title": "For The Love of God",
+   "artist": "Steve Vai",
+   "part": "lead",
+   "slug": "412-steve-vai-for-the-love-of-god"
+  },
+  {
+   "rank": 413,
+   "title": "How You Remind Me",
+   "artist": "Nickelback",
+   "part": "full",
+   "slug": "413-nickelback-how-you-remind-me"
+  },
+  {
+   "rank": 414,
+   "title": "Adam's Song",
+   "artist": "blink-182",
+   "part": "clean",
+   "slug": "414-blink182-adam-s-song"
+  },
+  {
+   "rank": 415,
+   "title": "You're Gonna Go Far, Kid",
+   "artist": "The Offspring",
+   "part": "lead",
+   "slug": "415-the-offspring-you-re-gonna-go-far-kid"
+  },
+  {
+   "rank": 416,
+   "title": "Today",
+   "artist": "Smashing Pumpkins",
+   "part": "lead",
+   "slug": "416-smashing-pumpkins-today"
+  },
+  {
+   "rank": 417,
+   "title": "Mouth For War",
+   "artist": "Pantera",
+   "part": "lead",
+   "slug": "417-pantera-mouth-for-war"
+  },
+  {
+   "rank": 418,
+   "title": "Engel",
+   "artist": "Rammstein",
+   "part": "full",
+   "slug": "418-rammstein-engel"
+  },
+  {
+   "rank": 419,
+   "title": "La Grange",
+   "artist": "ZZ Top",
+   "part": "lead",
+   "slug": "419-zz-top-la-grange"
+  },
+  {
+   "rank": 420,
+   "title": "The Hellion / Electric Eye",
+   "artist": "Judas Priest",
+   "part": "lead",
+   "slug": "420-judas-priest-the-hellion-electric-eye"
+  },
+  {
+   "rank": 421,
+   "title": "Black Betty",
+   "artist": "Ram Jam",
+   "part": "lead",
+   "slug": "421-ram-jam-black-betty"
+  },
+  {
+   "rank": 422,
+   "title": "Detroit Rock City",
+   "artist": "KISS",
+   "part": "full",
+   "slug": "422-kiss-detroit-rock-city"
+  },
+  {
+   "rank": 423,
+   "title": "Freaking Out the Neighborhood",
+   "artist": "Mac DeMarco",
+   "part": "lead",
+   "slug": "423-mac-demarco-freaking-out-the-neighborhood"
+  },
+  {
+   "rank": 424,
+   "title": "Bullet With Butterfly Wings",
+   "artist": "Smashing Pumpkins",
+   "part": "rhythm",
+   "slug": "424-smashing-pumpkins-bullet-with-butterfly-wings"
+  },
+  {
+   "rank": 425,
+   "title": "River flows in you-Yiruma (shunga jung)",
+   "artist": "Yiruma-Shunga Jung Fingerstyle",
+   "part": "clean",
+   "slug": "425-yirumashunga-jung-fingerstyle-river-flows-in-youyiruma-shunga-jung"
+  },
+  {
+   "rank": 426,
+   "title": "(Sic)",
+   "artist": "Slipknot",
+   "part": "lead",
+   "slug": "426-slipknot-sic"
+  },
+  {
+   "rank": 427,
+   "title": "Spiders",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "427-system-of-a-down-spiders"
+  },
+  {
+   "rank": 428,
+   "title": "Since I've Been Loving You",
+   "artist": "Led Zeppelin",
+   "part": "rhythm",
+   "slug": "428-led-zeppelin-since-i-ve-been-loving-you"
+  },
+  {
+   "rank": 429,
+   "title": "The Adults Are Talking",
+   "artist": "The Strokes",
+   "part": "rhythm",
+   "slug": "429-the-strokes-the-adults-are-talking"
+  },
+  {
+   "rank": 430,
+   "title": "Stranded",
+   "artist": "Gojira",
+   "part": "full",
+   "slug": "430-gojira-stranded"
+  },
+  {
+   "rank": 431,
+   "title": "Come Out And Play",
+   "artist": "The Offspring",
+   "part": "full",
+   "slug": "431-the-offspring-come-out-and-play"
+  },
+  {
+   "rank": 432,
+   "title": "Over The Hills And Far Away",
+   "artist": "Led Zeppelin",
+   "part": "clean",
+   "slug": "432-led-zeppelin-over-the-hills-and-far-away"
+  },
+  {
+   "rank": 433,
+   "title": "ZITTI E BUONI",
+   "artist": "Måneskin",
+   "part": "lead",
+   "slug": "433-maneskin-zitti-e-buoni"
+  },
+  {
+   "rank": 434,
+   "title": "Wind Of Change",
+   "artist": "Scorpions",
+   "part": "lead",
+   "slug": "434-scorpions-wind-of-change"
+  },
+  {
+   "rank": 435,
+   "title": "The Thrill Is Gone",
+   "artist": "B.B. King",
+   "part": "full",
+   "slug": "435-b-b-king-the-thrill-is-gone"
+  },
+  {
+   "rank": 436,
+   "title": "Good Times Bad Times",
+   "artist": "Led Zeppelin",
+   "part": "rhythm",
+   "slug": "436-led-zeppelin-good-times-bad-times"
+  },
+  {
+   "rank": 437,
+   "title": "The Last Of Us",
+   "artist": "Gustavo Santaolalla",
+   "part": "clean",
+   "slug": "437-gustavo-santaolalla-the-last-of-us"
+  },
+  {
+   "rank": 438,
+   "title": "Still Waiting",
+   "artist": "Sum 41",
+   "part": "lead",
+   "slug": "438-sum-41-still-waiting"
+  },
+  {
+   "rank": 439,
+   "title": "Breathe (In The Air)",
+   "artist": "Pink Floyd",
+   "part": "rhythm",
+   "slug": "439-pink-floyd-breathe-in-the-air"
+  },
+  {
+   "rank": 440,
+   "title": "Higher Ground (Stevie Wonder)",
+   "artist": "Red Hot Chili Peppers",
+   "part": "lead",
+   "slug": "440-red-hot-chili-peppers-higher-ground-stevie-wonder"
+  },
+  {
+   "rank": 441,
+   "title": "Sugar, We're Goin Down",
+   "artist": "Fall Out Boy",
+   "part": "lead",
+   "slug": "441-fall-out-boy-sugar-we-re-goin-down"
+  },
+  {
+   "rank": 442,
+   "title": "Brown Eyed Girl",
+   "artist": "Van Morrison",
+   "part": "lead",
+   "slug": "442-van-morrison-brown-eyed-girl"
+  },
+  {
+   "rank": 443,
+   "title": "Thank You for the Venom",
+   "artist": "My Chemical Romance",
+   "part": "lead",
+   "slug": "443-my-chemical-romance-thank-you-for-the-venom"
+  },
+  {
+   "rank": 444,
+   "title": "Is This Love",
+   "artist": "Whitesnake",
+   "part": "clean",
+   "slug": "444-whitesnake-is-this-love"
+  },
+  {
+   "rank": 445,
+   "title": "Bad To The Bone",
+   "artist": "George Thorogood & the Destroyers",
+   "part": "full",
+   "slug": "445-george-thorogood-the-destroyers-bad-to-the-bone"
+  },
+  {
+   "rank": 446,
+   "title": "Lateralus",
+   "artist": "Tool",
+   "part": "full",
+   "slug": "446-tool-lateralus"
+  },
+  {
+   "rank": 447,
+   "title": "Cocaine (J.J. Cale)",
+   "artist": "Eric Clapton",
+   "part": "lead",
+   "slug": "447-eric-clapton-cocaine-j-j-cale"
+  },
+  {
+   "rank": 448,
+   "title": "Your Betrayal",
+   "artist": "Bullet for My Valentine",
+   "part": "rhythm",
+   "slug": "448-bullet-for-my-valentine-your-betrayal"
+  },
+  {
+   "rank": 449,
+   "title": "King Nothing",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "449-metallica-king-nothing"
+  },
+  {
+   "rank": 450,
+   "title": "I Bet You Look Good On The Dancefloor",
+   "artist": "Arctic Monkeys",
+   "part": "lead",
+   "slug": "450-arctic-monkeys-i-bet-you-look-good-on-the-dancefloor"
+  },
+  {
+   "rank": 451,
+   "title": "King For A Day",
+   "artist": "Pierce the Veil",
+   "part": "lead",
+   "slug": "451-pierce-the-veil-king-for-a-day"
+  },
+  {
+   "rank": 452,
+   "title": "More Than Words",
+   "artist": "Extreme",
+   "part": "clean",
+   "slug": "452-extreme-more-than-words"
+  },
+  {
+   "rank": 453,
+   "title": "I Want You (She's So Heavy)",
+   "artist": "The Beatles",
+   "part": "lead",
+   "slug": "453-the-beatles-i-want-you-she-s-so-heavy"
+  },
+  {
+   "rank": 454,
+   "title": "Know Your Enemy",
+   "artist": "Rage Against the Machine",
+   "part": "full",
+   "slug": "454-rage-against-the-machine-know-your-enemy"
+  },
+  {
+   "rank": 455,
+   "title": "Twist And Shout",
+   "artist": "The Beatles",
+   "part": "rhythm",
+   "slug": "455-the-beatles-twist-and-shout"
+  },
+  {
+   "rank": 456,
+   "title": "Poison",
+   "artist": "Alice Cooper",
+   "part": "lead",
+   "slug": "456-alice-cooper-poison"
+  },
+  {
+   "rank": 457,
+   "title": "Stayin' Alive",
+   "artist": "Bee Gees",
+   "part": "lead",
+   "slug": "457-bee-gees-stayin-alive"
+  },
+  {
+   "rank": 458,
+   "title": "Rollin'",
+   "artist": "Limp Bizkit",
+   "part": "full",
+   "slug": "458-limp-bizkit-rollin"
+  },
+  {
+   "rank": 459,
+   "title": "Welcome To Paradise",
+   "artist": "Green Day",
+   "part": "full",
+   "slug": "459-green-day-welcome-to-paradise"
+  },
+  {
+   "rank": 460,
+   "title": "Bad Moon Rising",
+   "artist": "Creedence Clearwater Revival",
+   "part": "clean",
+   "slug": "460-creedence-clearwater-revival-bad-moon-rising"
+  },
+  {
+   "rank": 461,
+   "title": "Seasons In The Abyss",
+   "artist": "Slayer",
+   "part": "full",
+   "slug": "461-slayer-seasons-in-the-abyss"
+  },
+  {
+   "rank": 462,
+   "title": "Soul To Squeeze",
+   "artist": "Red Hot Chili Peppers",
+   "part": "rhythm",
+   "slug": "462-red-hot-chili-peppers-soul-to-squeeze"
+  },
+  {
+   "rank": 463,
+   "title": "Dance, Dance",
+   "artist": "Fall Out Boy",
+   "part": "lead",
+   "slug": "463-fall-out-boy-dance-dance"
+  },
+  {
+   "rank": 464,
+   "title": "We Will Rock You",
+   "artist": "Queen",
+   "part": "full",
+   "slug": "464-queen-we-will-rock-you"
+  },
+  {
+   "rank": 465,
+   "title": "Patience",
+   "artist": "Guns N' Roses",
+   "part": "clean",
+   "slug": "465-guns-n-roses-patience"
+  },
+  {
+   "rank": 466,
+   "title": "Pumped Up Kicks",
+   "artist": "Foster the People",
+   "part": "rhythm",
+   "slug": "466-foster-the-people-pumped-up-kicks"
+  },
+  {
+   "rank": 467,
+   "title": "Hey Jude",
+   "artist": "The Beatles",
+   "part": "clean",
+   "slug": "467-the-beatles-hey-jude"
+  },
+  {
+   "rank": 468,
+   "title": "Blood and Thunder",
+   "artist": "Mastodon",
+   "part": "full",
+   "slug": "468-mastodon-blood-and-thunder"
+  },
+  {
+   "rank": 469,
+   "title": "Wasting Love",
+   "artist": "Iron Maiden",
+   "part": "rhythm",
+   "slug": "469-iron-maiden-wasting-love"
+  },
+  {
+   "rank": 470,
+   "title": "96 Quite Bitter Beings",
+   "artist": "CKY (Camp Kill Yourself)",
+   "part": "full",
+   "slug": "470-cky-camp-kill-yourself-96-quite-bitter-beings"
+  },
+  {
+   "rank": 471,
+   "title": "With Or Without You",
+   "artist": "U2",
+   "part": "lead",
+   "slug": "471-u2-with-or-without-you"
+  },
+  {
+   "rank": 472,
+   "title": "Roots Bloody Roots",
+   "artist": "Sepultura",
+   "part": "rhythm",
+   "slug": "472-sepultura-roots-bloody-roots"
+  },
+  {
+   "rank": 473,
+   "title": "Fat Lip",
+   "artist": "Sum 41",
+   "part": "lead",
+   "slug": "473-sum-41-fat-lip"
+  },
+  {
+   "rank": 474,
+   "title": "Hypnotize",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "474-system-of-a-down-hypnotize"
+  },
+  {
+   "rank": 475,
+   "title": "Riders On The Storm",
+   "artist": "The Doors",
+   "part": "rhythm",
+   "slug": "475-the-doors-riders-on-the-storm"
+  },
+  {
+   "rank": 476,
+   "title": "What's Up?",
+   "artist": "4 Non Blondes",
+   "part": "full",
+   "slug": "476-4-non-blondes-what-s-up"
+  },
+  {
+   "rank": 477,
+   "title": "Mother",
+   "artist": "Danzig",
+   "part": "lead",
+   "slug": "477-danzig-mother"
+  },
+  {
+   "rank": 478,
+   "title": "The Diary Of Jane",
+   "artist": "Breaking Benjamin",
+   "part": "rhythm",
+   "slug": "478-breaking-benjamin-the-diary-of-jane"
+  },
+  {
+   "rank": 479,
+   "title": "Custer",
+   "artist": "Slipknot",
+   "part": "full",
+   "slug": "479-slipknot-custer"
+  },
+  {
+   "rank": 480,
+   "title": "Sound Of Silence",
+   "artist": "Simon & Garfunkel",
+   "part": "clean",
+   "slug": "480-simon-garfunkel-sound-of-silence"
+  },
+  {
+   "rank": 481,
+   "title": "Black Sheep",
+   "artist": "Metric",
+   "part": "lead",
+   "slug": "481-metric-black-sheep"
+  },
+  {
+   "rank": 482,
+   "title": "The Thing That Should Not Be",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "482-metallica-the-thing-that-should-not-be"
+  },
+  {
+   "rank": 483,
+   "title": "Nightrain",
+   "artist": "Guns N' Roses",
+   "part": "rhythm",
+   "slug": "483-guns-n-roses-nightrain"
+  },
+  {
+   "rank": 484,
+   "title": "Good Times",
+   "artist": "Chic",
+   "part": "full",
+   "slug": "484-chic-good-times"
+  },
+  {
+   "rank": 485,
+   "title": "Smooth Criminal (Michael Jackson)",
+   "artist": "Alien Ant Farm",
+   "part": "lead",
+   "slug": "485-alien-ant-farm-smooth-criminal-michael-jackson"
+  },
+  {
+   "rank": 486,
+   "title": "Walk With Me In Hell",
+   "artist": "Lamb of God",
+   "part": "full",
+   "slug": "486-lamb-of-god-walk-with-me-in-hell"
+  },
+  {
+   "rank": 487,
+   "title": "Fake Plastic Trees",
+   "artist": "Radiohead",
+   "part": "clean",
+   "slug": "487-radiohead-fake-plastic-trees"
+  },
+  {
+   "rank": 488,
+   "title": "Oh, Pretty Woman",
+   "artist": "Roy Orbison",
+   "part": "lead",
+   "slug": "488-roy-orbison-oh-pretty-woman"
+  },
+  {
+   "rank": 489,
+   "title": "Pour Some Sugar On Me",
+   "artist": "Def Leppard",
+   "part": "lead",
+   "slug": "489-def-leppard-pour-some-sugar-on-me"
+  },
+  {
+   "rank": 490,
+   "title": "Jump",
+   "artist": "Van Halen",
+   "part": "lead",
+   "slug": "490-van-halen-jump"
+  },
+  {
+   "rank": 491,
+   "title": "No One Like You",
+   "artist": "Scorpions",
+   "part": "full",
+   "slug": "491-scorpions-no-one-like-you"
+  },
+  {
+   "rank": 492,
+   "title": "Weird Fishes/Arpeggi",
+   "artist": "Radiohead",
+   "part": "rhythm",
+   "slug": "492-radiohead-weird-fishes-arpeggi"
+  },
+  {
+   "rank": 493,
+   "title": "California Dreamin'",
+   "artist": "The Mamas and the Papas",
+   "part": "clean",
+   "slug": "493-the-mamas-and-the-papas-california-dreamin"
+  },
+  {
+   "rank": 494,
+   "title": "Africa",
+   "artist": "Toto",
+   "part": "rhythm",
+   "slug": "494-toto-africa"
+  },
+  {
+   "rank": 495,
+   "title": "Love Buzz (Shocking Blue)",
+   "artist": "Nirvana",
+   "part": "lead",
+   "slug": "495-nirvana-love-buzz-shocking-blue"
+  },
+  {
+   "rank": 496,
+   "title": "Limelight",
+   "artist": "Rush",
+   "part": "full",
+   "slug": "496-rush-limelight"
+  },
+  {
+   "rank": 497,
+   "title": "Decode",
+   "artist": "Paramore",
+   "part": "full",
+   "slug": "497-paramore-decode"
+  },
+  {
+   "rank": 498,
+   "title": "Leper Messiah",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "498-metallica-leper-messiah"
+  },
+  {
+   "rank": 499,
+   "title": "Eye of the Beholder",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "499-metallica-eye-of-the-beholder"
+  },
+  {
+   "rank": 500,
+   "title": "Shoot To Thrill",
+   "artist": "AC/DC",
+   "part": "rhythm",
+   "slug": "500-ac-dc-shoot-to-thrill"
   }
  ]
 }

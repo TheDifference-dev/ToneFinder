@@ -3,7 +3,8 @@ import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { readResearch, researchKey, writeResearch, type OriginalResearch } from "./cache";
 import { bundledOriginal } from "./popular";
-import { runClaudeCli, type ClaudeCli } from "./claude-cli";
+import { findClaudeCli, runClaudeCli, type ClaudeCli } from "./claude-cli";
+import { getApiKey } from "./settings";
 import { deviceReference } from "./devices";
 import { ampProfileText, matchAmp } from "./amps";
 import { AMP_MODES, matchDevice, PARTS, PICKUP_CONFIGS } from "./gear";
@@ -26,6 +27,7 @@ import {
   type ToneResult,
 } from "./schema";
 import { PREFERRED_SOURCES } from "./sources";
+import { SIGNAL_CHAIN_RULES } from "./signal-chain";
 
 const MODEL = "claude-opus-5-5";
 const BETAS: Anthropic.Beta.AnthropicBeta[] = ["server-side-fallback-2026-07-01"];
@@ -42,14 +44,16 @@ Research, for this exact song and part (if a specific solo or section is named, 
 - Amp(s): exact model, channel, and any known settings.
 - Cabinet and speakers.
 - Microphones on the cab, their position (cap/edge/off-axis) and distance; room mics if relevant.
-- Pedals and rack effects in signal order, with any known settings (wah position, delay times, etc.).
+- Pedals and rack effects in signal order, with any known settings (wah position, delay times, etc.), and for each one whether it sat in front of the amp, in the amp's effects loop, or was added in the studio/mix.
 - Recording context: studio, producer/engineer, double-tracking, notable post-production.
 - Song profile: tempo (BPM), key, and the character of the tone in a few tags (e.g. tight low end, scooped mids, bright, compressed, saturated, roomy).
 - Playing: the techniques this part needs (e.g. fast alternate picking, palm muting, legato, wide bends, vibrato, pinch harmonics) and how hard it is to play.
 - The song's other guitar parts (e.g. clean intro, main riff, solo, outro) and how their tone differs from this part (channel, gain, pickup, effects), so they can be given as changes from this tone.
 Search in English. Check these preferred sites first (fetch their pages directly where useful), then widen to interviews, rig rundowns, magazine articles and forums:
 ${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
-For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the player's rig in that era) or guess. When sources disagree, say so. List every source URL you relied on.`;
+For every claim, label it confirmed (a source states it), likely (strong indirect evidence, e.g. the player's rig in that era) or guess. When sources disagree, say so. List every source URL you relied on.
+
+${SIGNAL_CHAIN_RULES}`;
 
 const ADAPT_PROMPT = `You are a meticulous guitar tone engineer. You get a research report on the ORIGINAL studio tone of a song part and a description of the user's own gear. Work out how to recreate that tone on the user's gear. Your output is an internal report that another step will turn into the final answer, so be thorough and concrete rather than polished.
 
@@ -61,11 +65,13 @@ const ADAPT_PROMPT = `You are a meticulous guitar tone engineer. You get a resea
 
 For each block, also say whether it is the same gear as the original (or a model of it), a close relative, or a substitute; which factory preset, channel memory or amp type to load first, but only if the device reference, profile or a source supports it; and which of the device's controls to leave alone or switch off for this tone, and why. If the original research lists other guitar parts of the song, give for each only the settings that change from the main tone.
 
-Finish with concrete starting settings for every block (0-10 knob values as plain numbers; times with units, synced to the song's tempo where relevant), the guitar's selector position and volume/tone knobs, and playing tips. For every setting, say what it rests on: cited (a device reference, profile, manual or reliable source supports it directly), inferred (worked out from the original tone and how the device works) or check (uncertain; verify by ear). Also give: an honest estimate (0-100) of how close this gear can get to the original and why, what it cannot capture (limitations), and alternative approaches. List every source URL you relied on.`;
+Finish with concrete starting settings for every block (0-10 knob values as plain numbers; times with units, synced to the song's tempo where relevant), the guitar's selector position and volume/tone knobs, and playing tips. For every setting, say what it rests on: cited (a device reference, profile, manual or reliable source supports it directly), inferred (worked out from the original tone and how the device works) or check (uncertain; verify by ear). Also give: an honest estimate (0-100) of how close this gear can get to the original and why, what it cannot capture (limitations), and alternative approaches. List every source URL you relied on.
 
-const STRUCTURE_ORIGINAL_PROMPT = `You turn a research report on a song's original studio guitar tone into a structured record. Use only what the report supports; keep its confirmed/likely/guess labels and don't invent gear. Put disputed or weakly sourced points in warnings. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the gear (usually English). Turkish guitar terms: pickup = manyetik (never mikrofon; mikrofon is only a microphone on the cab), neck pickup = sap manyetiği, bridge = köprü, middle = orta, cabinet = kabin, amp = amfi, tuning = akort.`;
+${SIGNAL_CHAIN_RULES}`;
 
-const STRUCTURE_ADAPT_PROMPT = `You turn a report on adapting a song's original guitar tone to the user's gear into the final structured answer. Use only what the report supports; keep its cited/inferred/check labels and don't invent model or knob names that aren't in it or in the gear profiles. The match percent is an estimate; never present it as a measurement. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the device or pedal (usually English). Turkish guitar terms: pickup = manyetik (never mikrofon; mikrofon is only a microphone on the cab), neck pickup = sap manyetiği, bridge = köprü, middle = orta, cabinet = kabin, amp = amfi, tuning = akort.`;
+const STRUCTURE_ORIGINAL_PROMPT = `You turn a research report on a song's original studio guitar tone into a structured record. Use only what the report supports; keep its confirmed/likely/guess labels and don't invent gear. Put disputed or weakly sourced points in warnings. List pedals in signal order (front of amp first; delay and reverb last, after the amp) and say in each pedal's purpose whether it sits in front of the amp, in the effects loop or was added in the studio/mix. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the gear (usually English). Turkish guitar terms: pickup = manyetik (never mikrofon; mikrofon is only a microphone on the cab), neck pickup = sap manyetiği, bridge = köprü, middle = orta, cabinet = kabin, amp = amfi, tuning = akort.`;
+
+const STRUCTURE_ADAPT_PROMPT = `You turn a report on adapting a song's original guitar tone to the user's gear into the final structured answer. Use only what the report supports; keep its cited/inferred/check labels and don't invent model or knob names that aren't in it or in the gear profiles. The match percent is an estimate; never present it as a measurement. Order the chain from guitar to speaker: pedals in front of the amp, then the amp, cab and mic, then delay and reverb (in the effects loop or after the amp/cab block) — delay and reverb never come before the amp. Write all prose fields in Turkish. Keep gear model, knob and parameter names exactly as they appear on the device or pedal (usually English). Turkish guitar terms: pickup = manyetik (never mikrofon; mikrofon is only a microphone on the cab), neck pickup = sap manyetiği, bridge = köprü, middle = orta, cabinet = kabin, amp = amfi, tuning = akort.`;
 
 const NO_AMP_PROMPT =
   "No guitar amp: the processor or amp-sim software (e.g. AmpliTube) feeds an audio interface, headphones or studio monitors, so the whole tone (amp, cab/IR with mics, effects) comes from it with cab simulation on.";
@@ -300,14 +306,14 @@ export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) 
   return { original: original as OriginalResearch & { structured: OriginalTone }, meta };
 }
 
-/** 2. adım: orijinal tonu kullanıcının ekipmanına uyarlama (API anahtarı gerekir) */
+/** 2. adım: orijinal tonu kullanıcının ekipmanına uyarlama (API anahtarı ya da Claude Code) */
 export async function findTone(
-  client: Anthropic,
+  engine: Engine,
   req: ToneRequest,
   emit: Emit,
   previous?: unknown,
 ): Promise<{ result: ToneResult; meta: ToneMeta }> {
-  const { original, meta } = await getOriginal({ kind: "api", client }, req, emit);
+  const { original, meta } = await getOriginal(engine, req, emit);
   emit({ type: "original", original: original.structured, meta });
 
   emit({
@@ -330,6 +336,29 @@ export async function findTone(
     original.report ? `<original_research>\n${original.report}\n</original_research>\n` : "",
     `<original_summary>\n${JSON.stringify(original.structured)}\n</original_summary>`,
   ].join("\n");
+
+  if (engine.kind === "cli") {
+    // Claude Code: cihaz kılavuzu / model listesi gibi eksikleri web'de araştırıp yapılandırılmış sonucu tek adımda döndürür
+    const { output, fetched } = await runClaudeCli(engine.cli, {
+      system: `${ADAPT_PROMPT}\n\n${STRUCTURE_ADAPT_PROMPT}${CLI_OUTPUT_NOTE}`,
+      prompt: [describeSong(req), "", gear, "", originalBlock, ...feedback].join("\n"),
+      schema: z.toJSONSchema(AdaptedToneSchema),
+      onSearch: (query) => emit({ type: "search", query }),
+      onFetch: (url) => emit({ type: "fetch", url }),
+    });
+    const parsed = AdaptedToneSchema.safeParse(output);
+    if (!parsed.success) {
+      console.error("adapt parse failed", parsed.error.issues.slice(0, 5));
+      throw new ToneError("Uyarlama sonucu okunamadı, lütfen tekrar dene.");
+    }
+    const adapted = parsed.data;
+    const known = new Set(adapted.sources.map((x) => x.url));
+    for (const url of fetched) if (!known.has(url)) adapted.sources.push({ title: url, url });
+    emit({ type: "status", message: "Sonuç hazırlanıyor…" });
+    return { result: mergeTone(original.structured, adapted), meta };
+  }
+
+  const client = engine.client;
   const adaptation = await researchReport(
     client,
     ADAPT_PROMPT,
@@ -363,14 +392,21 @@ const GEAR_PROMPT = `You identify a piece of music gear (guitar amp, bass amp, m
 const STRUCTURE_GEAR_PROMPT = `Turn a gear research report into a structured profile. Use only what the report supports. Write summary and notes in Turkish; keep control and mode names exactly as printed on the device. If the report says no such product exists, set exists to false.`;
 
 /** "Web'de tanıt": katalogda olmayan bir ekipmanı web'de araştırıp profil çıkarır */
-export async function identifyGear(client: Anthropic, name: string, kind: GearProfile["kind"]): Promise<GearProfile> {
-  const { report, sources } = await researchReport(
-    client,
-    GEAR_PROMPT,
-    `Gear name as typed by the user: ${name}\nThe user entered it as: ${kind}`,
-    { searches: 5, fetches: 3 },
-    () => {},
-  );
+export async function identifyGear(engine: Engine, name: string, kind: GearProfile["kind"]): Promise<GearProfile> {
+  const input = `Gear name as typed by the user: ${name}\nThe user entered it as: ${kind}`;
+  if (engine.kind === "cli") {
+    const { output } = await runClaudeCli(engine.cli, {
+      system: `${GEAR_PROMPT}\n\n${STRUCTURE_GEAR_PROMPT}${CLI_OUTPUT_NOTE}`,
+      prompt: input,
+      schema: z.toJSONSchema(GearProfileSchema),
+      timeoutMs: 5 * 60_000,
+    });
+    const parsed = GearProfileSchema.safeParse(output);
+    if (!parsed.success) throw new ToneError("Ekipman profili okunamadı, lütfen tekrar dene.");
+    return { ...parsed.data, identifiedAt: Date.now() };
+  }
+  const client = engine.client;
+  const { report, sources } = await researchReport(client, GEAR_PROMPT, input, { searches: 5, fetches: 3 }, () => {});
   const profile = await structured(
     client,
     GearProfileSchema,
@@ -378,4 +414,12 @@ export async function identifyGear(client: Anthropic, name: string, kind: GearPr
     `Name typed: ${name}\nKind: ${kind}\n\n<research_report>\n${report}\n</research_report>\n\n<sources_consulted>\n${sourceList(sources)}\n</sources_consulted>`,
   );
   return { ...profile, identifiedAt: Date.now() };
+}
+
+/** Kullanılabilir araştırma motoru: API anahtarı öncelikli, yoksa bilgisayardaki Claude Code (abonelik) */
+export async function resolveEngine(): Promise<Engine | null> {
+  const apiKey = await getApiKey();
+  if (apiKey) return { kind: "api", client: new Anthropic({ apiKey: apiKey.key }) };
+  const cli = findClaudeCli();
+  return cli ? { kind: "cli", cli } : null;
 }
