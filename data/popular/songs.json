@@ -1,0 +1,705 @@
+{
+ "source": "Songsterr ana sayfa popüler listesi (21 Kasım 2026)",
+ "songs": [
+  {
+   "rank": 1,
+   "title": "Master of Puppets",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "001-metallica-master-of-puppets"
+  },
+  {
+   "rank": 2,
+   "title": "Enter Sandman",
+   "artist": "Metallica",
+   "part": "intro",
+   "slug": "002-metallica-enter-sandman"
+  },
+  {
+   "rank": 3,
+   "title": "Nothing Else Matters",
+   "artist": "Metallica",
+   "part": "clean",
+   "slug": "003-metallica-nothing-else-matters"
+  },
+  {
+   "rank": 4,
+   "title": "Stairway to Heaven",
+   "artist": "Led Zeppelin",
+   "part": "lead",
+   "slug": "004-led-zeppelin-stairway-to-heaven"
+  },
+  {
+   "rank": 5,
+   "title": "Sweet Child O' Mine",
+   "artist": "Guns N' Roses",
+   "part": "intro",
+   "slug": "005-guns-n-roses-sweet-child-o-mine"
+  },
+  {
+   "rank": 6,
+   "title": "Smells Like Teen Spirit",
+   "artist": "Nirvana",
+   "part": "rhythm",
+   "slug": "006-nirvana-smells-like-teen-spirit"
+  },
+  {
+   "rank": 7,
+   "title": "Come As You Are",
+   "artist": "Nirvana",
+   "part": "intro",
+   "slug": "007-nirvana-come-as-you-are"
+  },
+  {
+   "rank": 8,
+   "title": "Creep",
+   "artist": "Radiohead",
+   "part": "full",
+   "slug": "008-radiohead-creep"
+  },
+  {
+   "rank": 9,
+   "title": "Crazy Train",
+   "artist": "Ozzy Osbourne",
+   "part": "intro",
+   "slug": "009-ozzy-osbourne-crazy-train"
+  },
+  {
+   "rank": 10,
+   "title": "Back In Black",
+   "artist": "AC/DC",
+   "part": "intro",
+   "slug": "010-ac-dc-back-in-black"
+  },
+  {
+   "rank": 11,
+   "title": "Californication",
+   "artist": "Red Hot Chili Peppers",
+   "part": "clean",
+   "slug": "011-red-hot-chili-peppers-californication"
+  },
+  {
+   "rank": 12,
+   "title": "One",
+   "artist": "Metallica",
+   "part": "lead",
+   "slug": "012-metallica-one"
+  },
+  {
+   "rank": 13,
+   "title": "Hotel California",
+   "artist": "Eagles",
+   "part": "full",
+   "slug": "013-eagles-hotel-california"
+  },
+  {
+   "rank": 14,
+   "title": "Fade to Black",
+   "artist": "Metallica",
+   "part": "clean",
+   "slug": "014-metallica-fade-to-black"
+  },
+  {
+   "rank": 15,
+   "title": "Killing in the Name",
+   "artist": "Rage Against the Machine",
+   "part": "rhythm",
+   "slug": "015-rage-against-the-machine-killing-in-the-name"
+  },
+  {
+   "rank": 16,
+   "title": "Paranoid",
+   "artist": "Black Sabbath",
+   "part": "rhythm",
+   "slug": "016-black-sabbath-paranoid"
+  },
+  {
+   "rank": 17,
+   "title": "For Whom The Bell Tolls",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "017-metallica-for-whom-the-bell-tolls"
+  },
+  {
+   "rank": 18,
+   "title": "Seek & Destroy",
+   "artist": "Metallica",
+   "part": "intro",
+   "slug": "018-metallica-seek-destroy"
+  },
+  {
+   "rank": 19,
+   "title": "Iron Man",
+   "artist": "Black Sabbath",
+   "part": "intro",
+   "slug": "019-black-sabbath-iron-man"
+  },
+  {
+   "rank": 20,
+   "title": "Zombie",
+   "artist": "The Cranberries",
+   "part": "full",
+   "slug": "020-the-cranberries-zombie"
+  },
+  {
+   "rank": 21,
+   "title": "Everlong",
+   "artist": "Foo Fighters",
+   "part": "rhythm",
+   "slug": "021-foo-fighters-everlong"
+  },
+  {
+   "rank": 22,
+   "title": "Can't Stop",
+   "artist": "Red Hot Chili Peppers",
+   "part": "rhythm",
+   "slug": "022-red-hot-chili-peppers-can-t-stop"
+  },
+  {
+   "rank": 23,
+   "title": "Where Is My Mind?",
+   "artist": "Pixies",
+   "part": "full",
+   "slug": "023-pixies-where-is-my-mind"
+  },
+  {
+   "rank": 24,
+   "title": "Do I Wanna Know?",
+   "artist": "Arctic Monkeys",
+   "part": "intro",
+   "slug": "024-arctic-monkeys-do-i-wanna-know"
+  },
+  {
+   "rank": 25,
+   "title": "The Trooper",
+   "artist": "Iron Maiden",
+   "part": "intro",
+   "slug": "025-iron-maiden-the-trooper"
+  },
+  {
+   "rank": 26,
+   "title": "Sultans Of Swing",
+   "artist": "Dire Straits",
+   "part": "lead",
+   "slug": "026-dire-straits-sultans-of-swing"
+  },
+  {
+   "rank": 27,
+   "title": "Johnny B. Goode",
+   "artist": "Chuck Berry",
+   "part": "intro",
+   "slug": "027-chuck-berry-johnny-b-goode"
+  },
+  {
+   "rank": 28,
+   "title": "Hysteria",
+   "artist": "Muse",
+   "part": "rhythm",
+   "slug": "028-muse-hysteria"
+  },
+  {
+   "rank": 29,
+   "title": "Symphony Of Destruction",
+   "artist": "Megadeth",
+   "part": "rhythm",
+   "slug": "029-megadeth-symphony-of-destruction"
+  },
+  {
+   "rank": 30,
+   "title": "Thunderstruck",
+   "artist": "AC/DC",
+   "part": "intro",
+   "slug": "030-ac-dc-thunderstruck"
+  },
+  {
+   "rank": 31,
+   "title": "Bohemian Rhapsody",
+   "artist": "Queen",
+   "part": "lead",
+   "slug": "031-queen-bohemian-rhapsody"
+  },
+  {
+   "rank": 32,
+   "title": "Smoke On The Water",
+   "artist": "Deep Purple",
+   "part": "intro",
+   "slug": "032-deep-purple-smoke-on-the-water"
+  },
+  {
+   "rank": 33,
+   "title": "Beat It",
+   "artist": "Michael Jackson",
+   "part": "lead",
+   "slug": "033-michael-jackson-beat-it"
+  },
+  {
+   "rank": 34,
+   "title": "Highway To Hell",
+   "artist": "AC/DC",
+   "part": "rhythm",
+   "slug": "034-ac-dc-highway-to-hell"
+  },
+  {
+   "rank": 35,
+   "title": "Under The Bridge",
+   "artist": "Red Hot Chili Peppers",
+   "part": "clean",
+   "slug": "035-red-hot-chili-peppers-under-the-bridge"
+  },
+  {
+   "rank": 36,
+   "title": "My Own Summer (Shove It)",
+   "artist": "Deftones",
+   "part": "rhythm",
+   "slug": "036-deftones-my-own-summer-shove-it"
+  },
+  {
+   "rank": 37,
+   "title": "The House Of The Rising Sun",
+   "artist": "The Animals",
+   "part": "clean",
+   "slug": "037-the-animals-the-house-of-the-rising-sun"
+  },
+  {
+   "rank": 38,
+   "title": "Toxicity",
+   "artist": "System of a Down",
+   "part": "rhythm",
+   "slug": "038-system-of-a-down-toxicity"
+  },
+  {
+   "rank": 39,
+   "title": "Heart-Shaped Box",
+   "artist": "Nirvana",
+   "part": "full",
+   "slug": "039-nirvana-heart-shaped-box"
+  },
+  {
+   "rank": 40,
+   "title": "Sweet Home Alabama",
+   "artist": "Lynyrd Skynyrd",
+   "part": "intro",
+   "slug": "040-lynyrd-skynyrd-sweet-home-alabama"
+  },
+  {
+   "rank": 41,
+   "title": "Wish You Were Here",
+   "artist": "Pink Floyd",
+   "part": "lead",
+   "slug": "041-pink-floyd-wish-you-were-here"
+  },
+  {
+   "rank": 42,
+   "title": "Aerials",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "042-system-of-a-down-aerials"
+  },
+  {
+   "rank": 43,
+   "title": "Comfortably Numb",
+   "artist": "Pink Floyd",
+   "part": "lead",
+   "slug": "043-pink-floyd-comfortably-numb"
+  },
+  {
+   "rank": 44,
+   "title": "Seven Nation Army",
+   "artist": "The White Stripes",
+   "part": "intro",
+   "slug": "044-the-white-stripes-seven-nation-army"
+  },
+  {
+   "rank": 45,
+   "title": "Psychosocial",
+   "artist": "Slipknot",
+   "part": "rhythm",
+   "slug": "045-slipknot-psychosocial"
+  },
+  {
+   "rank": 46,
+   "title": "Another One Bites the Dust",
+   "artist": "Queen",
+   "part": "rhythm",
+   "slug": "046-queen-another-one-bites-the-dust"
+  },
+  {
+   "rank": 47,
+   "title": "Feel Good Inc.",
+   "artist": "Gorillaz",
+   "part": "full",
+   "slug": "047-gorillaz-feel-good-inc"
+  },
+  {
+   "rank": 48,
+   "title": "Chop Suey!",
+   "artist": "System of a Down",
+   "part": "rhythm",
+   "slug": "048-system-of-a-down-chop-suey"
+  },
+  {
+   "rank": 49,
+   "title": "War Pigs",
+   "artist": "Black Sabbath",
+   "part": "rhythm",
+   "slug": "049-black-sabbath-war-pigs"
+  },
+  {
+   "rank": 50,
+   "title": "Money",
+   "artist": "Pink Floyd",
+   "part": "lead",
+   "slug": "050-pink-floyd-money"
+  },
+  {
+   "rank": 51,
+   "title": "Creeping Death",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "051-metallica-creeping-death"
+  },
+  {
+   "rank": 52,
+   "title": "Orion",
+   "artist": "Metallica",
+   "part": "full",
+   "slug": "052-metallica-orion"
+  },
+  {
+   "rank": 53,
+   "title": "The Unforgiven",
+   "artist": "Metallica",
+   "part": "full",
+   "slug": "053-metallica-the-unforgiven"
+  },
+  {
+   "rank": 54,
+   "title": "Snow (Hey Oh)",
+   "artist": "Red Hot Chili Peppers",
+   "part": "clean",
+   "slug": "054-red-hot-chili-peppers-snow-hey-oh"
+  },
+  {
+   "rank": 55,
+   "title": "Hotel California Solo",
+   "artist": "Eagles",
+   "part": "lead",
+   "slug": "055-eagles-hotel-california-solo"
+  },
+  {
+   "rank": 56,
+   "title": "Cowboys From Hell",
+   "artist": "Pantera",
+   "part": "rhythm",
+   "slug": "056-pantera-cowboys-from-hell"
+  },
+  {
+   "rank": 57,
+   "title": "Tornado of Souls",
+   "artist": "Megadeth",
+   "part": "lead",
+   "slug": "057-megadeth-tornado-of-souls"
+  },
+  {
+   "rank": 58,
+   "title": "Animal I Have Become",
+   "artist": "Three Days Grace",
+   "part": "rhythm",
+   "slug": "058-three-days-grace-animal-i-have-become"
+  },
+  {
+   "rank": 59,
+   "title": "Holy Wars... The Punishment Due",
+   "artist": "Megadeth",
+   "part": "rhythm",
+   "slug": "059-megadeth-holy-wars-the-punishment-due"
+  },
+  {
+   "rank": 60,
+   "title": "Boulevard Of Broken Dreams",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "060-green-day-boulevard-of-broken-dreams"
+  },
+  {
+   "rank": 61,
+   "title": "Sweet Dreams (Are Made of This)",
+   "artist": "Marilyn Manson",
+   "part": "rhythm",
+   "slug": "061-marilyn-manson-sweet-dreams-are-made-of-this"
+  },
+  {
+   "rank": 62,
+   "title": "Dream On",
+   "artist": "Aerosmith",
+   "part": "full",
+   "slug": "062-aerosmith-dream-on"
+  },
+  {
+   "rank": 63,
+   "title": "Welcome To The Jungle",
+   "artist": "Guns N' Roses",
+   "part": "intro",
+   "slug": "063-guns-n-roses-welcome-to-the-jungle"
+  },
+  {
+   "rank": 64,
+   "title": "Walk",
+   "artist": "Pantera",
+   "part": "rhythm",
+   "slug": "064-pantera-walk"
+  },
+  {
+   "rank": 65,
+   "title": "Sad But True",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "065-metallica-sad-but-true"
+  },
+  {
+   "rank": 66,
+   "title": "In Bloom",
+   "artist": "Nirvana",
+   "part": "rhythm",
+   "slug": "066-nirvana-in-bloom"
+  },
+  {
+   "rank": 67,
+   "title": "November Rain",
+   "artist": "Guns N' Roses",
+   "part": "lead",
+   "slug": "067-guns-n-roses-november-rain"
+  },
+  {
+   "rank": 68,
+   "title": "Ride The Lightning",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "068-metallica-ride-the-lightning"
+  },
+  {
+   "rank": 69,
+   "title": "Free Bird",
+   "artist": "Lynyrd Skynyrd",
+   "part": "lead",
+   "slug": "069-lynyrd-skynyrd-free-bird"
+  },
+  {
+   "rank": 70,
+   "title": "American Idiot",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "070-green-day-american-idiot"
+  },
+  {
+   "rank": 71,
+   "title": "Raining Blood",
+   "artist": "Slayer",
+   "part": "rhythm",
+   "slug": "071-slayer-raining-blood"
+  },
+  {
+   "rank": 72,
+   "title": "Schism",
+   "artist": "Tool",
+   "part": "full",
+   "slug": "072-tool-schism"
+  },
+  {
+   "rank": 73,
+   "title": "Still Loving You",
+   "artist": "Scorpions",
+   "part": "lead",
+   "slug": "073-scorpions-still-loving-you"
+  },
+  {
+   "rank": 74,
+   "title": "Last Resort",
+   "artist": "Papa Roach",
+   "part": "rhythm",
+   "slug": "074-papa-roach-last-resort"
+  },
+  {
+   "rank": 75,
+   "title": "Holiday",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "075-green-day-holiday"
+  },
+  {
+   "rank": 76,
+   "title": "Wherever I May Roam",
+   "artist": "Metallica",
+   "part": "rhythm",
+   "slug": "076-metallica-wherever-i-may-roam"
+  },
+  {
+   "rank": 77,
+   "title": "Lonely Day",
+   "artist": "System of a Down",
+   "part": "full",
+   "slug": "077-system-of-a-down-lonely-day"
+  },
+  {
+   "rank": 78,
+   "title": "R U Mine?",
+   "artist": "Arctic Monkeys",
+   "part": "rhythm",
+   "slug": "078-arctic-monkeys-r-u-mine"
+  },
+  {
+   "rank": 79,
+   "title": "Nightmare",
+   "artist": "Avenged Sevenfold",
+   "part": "rhythm",
+   "slug": "079-avenged-sevenfold-nightmare"
+  },
+  {
+   "rank": 80,
+   "title": "Layla",
+   "artist": "Derek and the Dominos",
+   "part": "intro",
+   "slug": "080-derek-and-the-dominos-layla"
+  },
+  {
+   "rank": 81,
+   "title": "Every Breath You Take",
+   "artist": "The Police",
+   "part": "clean",
+   "slug": "081-the-police-every-breath-you-take"
+  },
+  {
+   "rank": 82,
+   "title": "Come Together",
+   "artist": "The Beatles",
+   "part": "full",
+   "slug": "082-the-beatles-come-together"
+  },
+  {
+   "rank": 83,
+   "title": "Sunshine Of Your Love",
+   "artist": "Cream",
+   "part": "intro",
+   "slug": "083-cream-sunshine-of-your-love"
+  },
+  {
+   "rank": 84,
+   "title": "Billie Jean",
+   "artist": "Michael Jackson",
+   "part": "clean",
+   "slug": "084-michael-jackson-billie-jean"
+  },
+  {
+   "rank": 85,
+   "title": "Cemetery Gates",
+   "artist": "Pantera",
+   "part": "lead",
+   "slug": "085-pantera-cemetery-gates"
+  },
+  {
+   "rank": 86,
+   "title": "Wonderwall",
+   "artist": "Oasis",
+   "part": "full",
+   "slug": "086-oasis-wonderwall"
+  },
+  {
+   "rank": 87,
+   "title": "Tears In Heaven",
+   "artist": "Eric Clapton",
+   "part": "clean",
+   "slug": "087-eric-clapton-tears-in-heaven"
+  },
+  {
+   "rank": 88,
+   "title": "Hells Bells",
+   "artist": "AC/DC",
+   "part": "intro",
+   "slug": "088-ac-dc-hells-bells"
+  },
+  {
+   "rank": 89,
+   "title": "Blackbird",
+   "artist": "The Beatles",
+   "part": "clean",
+   "slug": "089-the-beatles-blackbird"
+  },
+  {
+   "rank": 90,
+   "title": "Unholy Confessions",
+   "artist": "Avenged Sevenfold",
+   "part": "rhythm",
+   "slug": "090-avenged-sevenfold-unholy-confessions"
+  },
+  {
+   "rank": 91,
+   "title": "Sonne",
+   "artist": "Rammstein",
+   "part": "rhythm",
+   "slug": "091-rammstein-sonne"
+  },
+  {
+   "rank": 92,
+   "title": "Otherside",
+   "artist": "Red Hot Chili Peppers",
+   "part": "clean",
+   "slug": "092-red-hot-chili-peppers-otherside"
+  },
+  {
+   "rank": 93,
+   "title": "Livin' On A Prayer",
+   "artist": "Bon Jovi",
+   "part": "rhythm",
+   "slug": "093-bon-jovi-livin-on-a-prayer"
+  },
+  {
+   "rank": 94,
+   "title": "Breaking The Law",
+   "artist": "Judas Priest",
+   "part": "intro",
+   "slug": "094-judas-priest-breaking-the-law"
+  },
+  {
+   "rank": 95,
+   "title": "Basket Case",
+   "artist": "Green Day",
+   "part": "rhythm",
+   "slug": "095-green-day-basket-case"
+  },
+  {
+   "rank": 96,
+   "title": "Welcome Home (Sanitarium)",
+   "artist": "Metallica",
+   "part": "clean",
+   "slug": "096-metallica-welcome-home-sanitarium"
+  },
+  {
+   "rank": 97,
+   "title": "Wake Me Up When September Ends",
+   "artist": "Green Day",
+   "part": "full",
+   "slug": "097-green-day-wake-me-up-when-september-ends"
+  },
+  {
+   "rank": 98,
+   "title": "Hail To The King",
+   "artist": "Avenged Sevenfold",
+   "part": "rhythm",
+   "slug": "098-avenged-sevenfold-hail-to-the-king"
+  },
+  {
+   "rank": 99,
+   "title": "Carry On Wayward Son",
+   "artist": "Kansas",
+   "part": "intro",
+   "slug": "099-kansas-carry-on-wayward-son"
+  },
+  {
+   "rank": 100,
+   "title": "Another Brick In The Wall, Part 2",
+   "artist": "Pink Floyd",
+   "part": "lead",
+   "slug": "100-pink-floyd-another-brick-in-the-wall-part-2"
+  }
+ ]
+}
