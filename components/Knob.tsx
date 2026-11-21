@@ -46,14 +46,15 @@ export function Knob({
     <div className="flex w-[84px] flex-col items-center gap-1 text-center">
       {numeric !== null ? (
         <svg viewBox="0 0 64 64" className="h-16 w-16" role="img" aria-label={`${name} ${value}`}>
-          <path d={arc(1)} fill="none" stroke="var(--color-line)" strokeWidth="4" strokeLinecap="round" />
-          {numeric > 0 && <path d={arc(numeric / 10)} fill="none" stroke="var(--color-accent)" strokeWidth="4" strokeLinecap="round" />}
+          <circle cx="32" cy="32" r="19" fill="var(--color-paper)" />
+          <path d={arc(1)} fill="none" stroke="var(--color-line-strong)" strokeWidth="5" strokeLinecap="round" />
+          {numeric > 0 && <path d={arc(numeric / 10)} fill="none" stroke="var(--color-accent)" strokeWidth="5" strokeLinecap="round" />}
           <text
             x="32"
             y="38"
             textAnchor="middle"
             fontSize="17"
-            fontWeight="600"
+            fontWeight="700"
             fill="var(--color-ink)"
             style={{ fontFamily: "var(--font-display)", fontVariantNumeric: "tabular-nums" }}
           >
@@ -61,12 +62,12 @@ export function Knob({
           </text>
         </svg>
       ) : (
-        <div className="flex h-16 w-full items-center justify-center rounded-md border border-line bg-raised px-1.5 font-display text-sm font-semibold leading-tight text-ink">
+        <div className="flex h-16 w-full items-center justify-center rounded-2xl bg-paper px-1.5 text-[13px] font-semibold leading-tight text-ink">
           {value}
         </div>
       )}
-      <div className="font-display text-[12px] font-semibold uppercase tracking-wider text-ink-soft">{name}</div>
-      {b && <div className={`font-display text-[10px] uppercase tracking-wider ${b.cls}`}>{b.label}</div>}
+      <div className="text-[12px] font-semibold text-ink-soft">{name}</div>
+      {b && <div className={`text-[10px] font-semibold uppercase tracking-[0.06em] ${b.cls}`}>{b.label}</div>}
     </div>
   );
 }

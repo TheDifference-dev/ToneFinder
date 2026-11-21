@@ -80,8 +80,14 @@ export function SongSearch({
   }
 
   return (
-    <div ref={box} className="relative grid gap-3 sm:grid-cols-[auto_1fr_1fr]">
-      <div className="hidden h-11 w-11 shrink-0 overflow-hidden rounded-md border border-line bg-paper sm:block" aria-hidden>
+    <div ref={box} className="relative grid gap-3 sm:grid-cols-[auto_1.4fr_1fr]">
+      <div className="hidden h-[46px] w-[46px] shrink-0 overflow-hidden rounded-xl bg-raised sm:flex sm:items-center sm:justify-center" aria-hidden>
+        {!artwork && (
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-ink-mute)" strokeWidth="2" strokeLinecap="round">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.5-3.5" />
+          </svg>
+        )}
         {artwork && (
           // eslint-disable-next-line @next/next/no-img-element
           <img src={artwork} alt="" className="h-full w-full object-cover" onError={(e) => (e.currentTarget.style.visibility = "hidden")} />
@@ -117,7 +123,7 @@ export function SongSearch({
         <ul
           id="song-hits"
           role="listbox"
-          className="absolute left-0 right-0 top-full z-20 mt-1 max-h-80 overflow-y-auto rounded-lg border border-line-strong bg-raised p-1 shadow-lg"
+          className="absolute left-0 right-0 top-full z-20 mt-2 max-h-96 overflow-y-auto rounded-2xl border border-line bg-[#202125] p-1.5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
         >
           {hits.map((h, i) => (
             <li key={`${h.title}-${h.artist}-${i}`} role="option" aria-selected={i === active}>
@@ -125,11 +131,11 @@ export function SongSearch({
                 type="button"
                 onMouseDown={(e) => e.preventDefault()}
                 onClick={() => pick(h)}
-                className={`flex w-full items-center gap-3 rounded-md px-2 py-1.5 text-left ${
-                  i === active ? "bg-accent-soft" : "hover:bg-paper"
+                className={`flex w-full items-center gap-3 rounded-xl px-2.5 py-2 text-left ${
+                  i === active ? "bg-raised" : "hover:bg-raised/70"
                 }`}
               >
-                <span className="h-9 w-9 shrink-0 overflow-hidden rounded bg-paper">
+                <span className="h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-paper">
                   {h.artwork && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={h.artwork} alt="" className="h-full w-full object-cover" onError={(e) => (e.currentTarget.style.visibility = "hidden")} />

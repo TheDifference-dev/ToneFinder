@@ -48,21 +48,21 @@ export function SettingsPanel({
   return (
     <section className="hud-panel p-6" aria-labelledby="settings-title">
       <div className="mb-5 flex items-center justify-between">
-        <h2 id="settings-title" className="font-display text-xl font-bold uppercase tracking-wide text-ink">
+        <h2 id="settings-title" className="serif text-2xl font-semibold text-ink">
           Ayarlar
         </h2>
         {onClose && (
-          <button type="button" onClick={onClose} className="rounded-md px-2 py-1 text-ink-mute hover:bg-raised hover:text-ink" aria-label="Kapat">
+          <button type="button" onClick={onClose} className="flex h-9 w-9 items-center justify-center rounded-full text-ink-mute hover:bg-raised hover:text-ink" aria-label="Kapat">
             ✕
           </button>
         )}
       </div>
 
       <div className="space-y-4">
-        <div className="rounded-lg border border-line bg-raised p-4">
+        <div className="rounded-2xl bg-raised p-4">
           <div className="flex items-center justify-between gap-3">
             <span className="hud-label text-ink-soft">1 · Şarkı araştırması</span>
-            <span className={`font-display text-sm font-semibold uppercase ${status.configured || status.cli ? "text-ok" : "text-bad"}`}>
+            <span className={`text-sm font-semibold ${status.configured || status.cli ? "text-ok" : "text-bad"}`}>
               {status.configured ? "API" : status.cli ? `Claude Code ${status.cli.version}` : "Hazır değil"}
             </span>
           </div>
@@ -80,10 +80,10 @@ export function SettingsPanel({
           )}
         </div>
 
-        <div className="rounded-lg border border-line bg-raised p-4">
+        <div className="rounded-2xl bg-raised p-4">
           <div className="flex items-center justify-between gap-3">
             <span className="hud-label text-ink-soft">2 · Ekipmana çevirme</span>
-            <span className={`font-display text-sm font-semibold uppercase ${status.configured ? "text-ok" : "text-ink-mute"}`}>
+            <span className={`text-sm font-semibold ${status.configured ? "text-ok" : "text-ink-mute"}`}>
               {status.configured ? `API anahtarı${status.source === "env" ? " (ortam)" : ""}` : "API anahtarı gerekli"}
             </span>
           </div>
@@ -108,7 +108,7 @@ export function SettingsPanel({
               <button
                 type="submit"
                 disabled={saving || !key.trim()}
-                className="shrink-0 rounded-md bg-accent px-5 py-2 font-display text-sm font-bold uppercase tracking-wider text-paper disabled:opacity-40"
+                className="pill pill-light shrink-0"
               >
                 {saving ? "Doğrulanıyor…" : "Kaydet"}
               </button>

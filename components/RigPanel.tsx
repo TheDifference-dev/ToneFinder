@@ -75,7 +75,7 @@ function WebIdentify({
         {state.controls.length > 0 && ` — ${state.controls.slice(0, 8).join(", ")}`}
       </Hint>
     ) : (
-      <span className="mt-1.5 block rounded-md border border-warn/40 bg-warn/10 px-2 py-1 text-xs text-warn">
+      <span className="mt-1.5 block rounded-xl border border-warn/40 bg-warn/10 px-2 py-1 text-xs text-warn">
         Böyle bir model bulunamadı: {state.summary} Adı kontrol et.
       </span>
     );
@@ -87,7 +87,7 @@ function WebIdentify({
         type="button"
         disabled={!canIdentify}
         onClick={() => onIdentify(name, kind)}
-        className="rounded border border-line px-1.5 py-0.5 font-semibold text-accent hover:border-accent disabled:opacity-40"
+        className="rounded-full border border-line px-2 py-0.5 font-semibold text-accent hover:border-accent disabled:opacity-40"
         title={canIdentify ? "Ekipmanı web'de araştırıp kanallarını, düğmelerini ve efektlerini kaydeder" : "API anahtarı gerekli"}
       >
         Web'de tanıt
@@ -128,7 +128,7 @@ function RigBar({
         }}
       >
         <input className="hud-input" value={name} onChange={(e) => setName(e.target.value)} aria-label="Rig adı" autoFocus />
-        <button type="submit" className="shrink-0 rounded-md bg-accent px-3 text-sm font-semibold text-paper">
+        <button type="submit" className="shrink-0 rounded-xl bg-accent px-3 text-sm font-semibold text-paper">
           Tamam
         </button>
       </form>
@@ -149,7 +149,7 @@ function RigBar({
           setName(active?.name ?? "");
           setEditing(true);
         }}
-        className="rounded-md border border-line px-2 py-2 text-xs text-ink-soft hover:border-accent hover:text-accent"
+        className="rounded-xl border border-line px-2 py-2 text-xs text-ink-soft hover:border-accent hover:text-accent"
         title="Yeniden adlandır"
       >
         Ad
@@ -157,7 +157,7 @@ function RigBar({
       <button
         type="button"
         onClick={onCreate}
-        className="rounded-md border border-line px-2 py-2 text-xs text-ink-soft hover:border-accent hover:text-accent"
+        className="rounded-xl border border-line px-2 py-2 text-xs text-ink-soft hover:border-accent hover:text-accent"
         title="Yeni rig (şu anki ekipmanın kopyası)"
       >
         + Yeni
@@ -168,7 +168,7 @@ function RigBar({
           onClick={() => {
             if (confirm(`"${active?.name}" rig'i silinsin mi?`)) onDelete();
           }}
-          className="rounded-md border border-line px-2 py-2 text-xs text-ink-mute hover:border-bad hover:text-bad"
+          className="rounded-xl border border-line px-2 py-2 text-xs text-ink-mute hover:border-bad hover:text-bad"
           title="Bu rig'i sil"
         >
           Sil
@@ -220,7 +220,7 @@ function PedalList({
                 <button
                   type="button"
                   onClick={() => set(rows.filter((_, j) => j !== i))}
-                  className="shrink-0 rounded-md border border-line px-2.5 text-sm text-ink-mute hover:border-bad hover:text-bad"
+                  className="shrink-0 rounded-xl border border-line px-2.5 text-sm text-ink-mute hover:border-bad hover:text-bad"
                   aria-label={`Pedal ${i + 1} sil`}
                 >
                   ✕
@@ -245,7 +245,7 @@ function PedalList({
       <button
         type="button"
         onClick={() => set([...rows, ""])}
-        className="mt-2 rounded-md border border-dashed border-line-strong px-3 py-1.5 text-sm font-medium text-ink-soft hover:border-accent hover:text-accent"
+        className="mt-2 rounded-xl border border-dashed border-line-strong px-3 py-1.5 text-sm font-medium text-ink-soft hover:border-accent hover:text-accent"
       >
         + Pedal ekle
       </button>
@@ -265,7 +265,7 @@ function positionsFor(layout: string): PickupPosition[] {
 function PickupModels({ rig, onChange }: { rig: UserRig; onChange: (patch: Partial<UserRig>) => void }) {
   const custom = Object.values(rig.pickupModels).some((v) => v.trim());
   return (
-    <details className="rounded-md border border-line bg-paper px-3 py-2" open={custom}>
+    <details className="rounded-xl border border-line bg-paper px-3 py-2" open={custom}>
       <summary className="cursor-pointer text-xs font-semibold text-ink-soft">Manyetikler stok değil mi? (isteğe bağlı)</summary>
       <div className="mt-2 space-y-2">
         {positionsFor(rig.pickups).map((pos) => {
@@ -350,13 +350,7 @@ export function RigPanel({
   }
 
   return (
-    <section className="hud-panel p-5" aria-labelledby="rig-title">
-      <div className="mb-4 flex items-center gap-3">
-        <h2 id="rig-title" className="font-display text-xl font-bold uppercase tracking-wide text-ink">
-          Ekipmanım
-        </h2>
-        <span className="h-px flex-1 bg-line" />
-      </div>
+    <section className="hud-panel rise p-6" aria-label="Ekipmanım">
 
       <div className="space-y-4">
         <RigBar
@@ -392,7 +386,7 @@ export function RigPanel({
                 {ampModeNames(amp)
                   .slice(0, 10)
                   .map((m) => (
-                    <span key={m} className="rounded bg-paper px-1.5 py-0.5 font-mono text-[10px] text-ink-soft">
+                    <span key={m} className="rounded-full bg-paper px-2 py-0.5 font-mono text-[10px] text-ink-soft">
                       {m}
                     </span>
                   ))}
@@ -418,7 +412,7 @@ export function RigPanel({
               ))}
             </select>
             {rig.ampMode === "monitor" && amp?.monitor && (
-              <span className="mt-1.5 block rounded-md bg-accent-soft px-2.5 py-1.5 text-xs text-ink">{amp.monitor}</span>
+              <span className="mt-1.5 block rounded-xl bg-accent-soft px-2.5 py-1.5 text-xs text-ink">{amp.monitor}</span>
             )}
           </label>
         )}
@@ -440,7 +434,7 @@ export function RigPanel({
                     onClick={() => onChange({ ampEffects: on ? rig.ampEffects.filter((e) => e !== fx) : [...rig.ampEffects, fx] })}
                     className={`rounded-full border px-2.5 py-1 text-xs transition ${
                       on
-                        ? "border-accent bg-accent text-paper"
+                        ? "border-transparent bg-ink text-cream-ink"
                         : missing
                           ? "border-dashed border-line bg-raised text-ink-mute/60"
                           : "border-line bg-raised text-ink-soft hover:border-line-strong"
@@ -520,7 +514,7 @@ export function RigPanel({
         <PedalList value={rig.pedals} onChange={(pedals) => onChange({ pedals })} identify={(row) => webIdentify(row, "pedal")} />
 
         {!rig.amp.trim() && !rig.processor.trim() && (
-          <p className="rounded-md border border-warn/40 bg-warn/10 px-3 py-2 text-xs text-warn">
+          <p className="rounded-xl border border-warn/40 bg-warn/10 px-3 py-2 text-xs text-warn">
             Ton bulmak için en az bir amfi ya da prosesör yaz.
           </p>
         )}

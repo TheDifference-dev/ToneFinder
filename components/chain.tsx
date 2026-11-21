@@ -28,14 +28,14 @@ export function categoryOf(text: string): Category {
 
 export function ChainCap({ label }: { label: string }) {
   return (
-    <span className="flex h-16 shrink-0 items-center rounded-md border border-line bg-panel px-2 font-display text-[11px] font-semibold uppercase tracking-wider text-ink-mute">
+    <span className="flex h-9 shrink-0 items-center rounded-full bg-raised px-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-ink-mute">
       {label}
     </span>
   );
 }
 
 export function ChainLink() {
-  return <span className="h-px w-4 shrink-0 bg-line-strong" aria-hidden />;
+  return <span className="w-5 shrink-0 border-t-2 border-dotted border-line-strong" aria-hidden />;
 }
 
 export function ChainBlock({
@@ -62,24 +62,32 @@ export function ChainBlock({
       type="button"
       onClick={onClick}
       aria-pressed={selected}
-      className={`relative flex h-16 w-36 shrink-0 flex-col justify-center rounded-md border-2 px-2.5 text-left transition ${
+      className={`relative flex h-[76px] w-40 shrink-0 flex-col justify-center overflow-hidden rounded-2xl px-3.5 text-left transition hover:-translate-y-0.5 ${
         dim ? "opacity-40" : ""
       }`}
       style={{
-        borderColor: c.color,
-        background: selected ? `color-mix(in srgb, ${c.color} 16%, var(--color-raised))` : "var(--color-raised)",
-        boxShadow: selected ? `0 0 14px -4px ${c.color}` : undefined,
+        background: selected ? c.color : "var(--color-raised)",
+        boxShadow: selected ? `0 10px 24px -12px ${c.color}` : `inset 0 3px 0 ${c.color}`,
       }}
     >
-      <span className="font-display text-[11px] font-semibold uppercase tracking-wider" style={{ color: c.color }}>
+      <span
+        className="text-[10.5px] font-semibold uppercase tracking-[0.08em]"
+        style={{ color: selected ? "rgba(20,20,20,0.65)" : c.color }}
+      >
         {sub ?? c.label}
       </span>
-      <span className="line-clamp-2 text-[13px] font-medium leading-tight text-ink">{title}</span>
-      {dot && <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full" style={{ background: dot }} aria-hidden />}
+      <span className={`mt-0.5 line-clamp-2 text-[13.5px] font-semibold leading-tight ${selected ? "text-cream-ink" : "text-ink"}`}>{title}</span>
+      {dot && (
+        <span
+          className="absolute right-2.5 top-2.5 h-2 w-2 rounded-full"
+          style={{ background: dot, boxShadow: selected ? "0 0 0 2px rgba(20,20,20,0.35)" : undefined }}
+          aria-hidden
+        />
+      )}
     </button>
   );
 }
 
 export function ChainRow({ children }: { children: React.ReactNode }) {
-  return <div className="-mx-1 flex items-center overflow-x-auto px-1 pb-2">{children}</div>;
+  return <div className="-mx-1 flex items-center overflow-x-auto px-1 pb-3 pt-1">{children}</div>;
 }

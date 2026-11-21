@@ -19,14 +19,14 @@ const MATCH = {
 function Fold({ title, count, open, children }: { title: string; count?: number; open?: boolean; children: React.ReactNode }) {
   return (
     <details className="group border-t border-line" open={open}>
-      <summary className="flex cursor-pointer list-none items-center justify-between px-5 py-3 hover:bg-raised/50">
+      <summary className="flex cursor-pointer list-none items-center justify-between px-6 py-3.5 hover:bg-raised/50">
         <span className="hud-label text-ink-soft">
           {title}
           {count !== undefined && <span className="ml-2 text-ink-mute">{count}</span>}
         </span>
         <span className="text-ink-mute transition group-open:rotate-90">›</span>
       </summary>
-      <div className="px-5 pb-4 text-sm text-ink-soft">{children}</div>
+      <div className="px-6 pb-5 text-sm leading-relaxed text-ink-soft">{children}</div>
     </details>
   );
 }
@@ -51,26 +51,29 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
   const match = result.match ? Math.min(100, Math.max(0, Math.round(result.match.percent))) : null;
 
   return (
-    <article className="hud-panel overflow-hidden">
-      <header className="flex flex-wrap items-center gap-3 p-5">
-        <h2 className="flex-1 font-display text-2xl font-bold text-ink">Senin ekipmanınla</h2>
+    <article className="hud-panel rise overflow-hidden">
+      <header className="flex flex-wrap items-end gap-4 bg-c-purple px-6 pb-7 pt-6">
+        <div className="min-w-0 flex-1">
+          <div className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cream-ink/65">Uyarlanmış ton</div>
+          <h2 className="serif mt-1 text-[40px] font-semibold leading-[1.02] text-cream-ink">Senin ekipmanınla</h2>
+        </div>
         {match !== null && (
-          <span className="rounded-full border border-line px-3 py-1 font-display text-xs font-semibold uppercase tracking-wider text-ink-soft" title={result.match?.reason}>
-            Yakınlık (tahmin) <b className="text-accent">%{match}</b>
+          <span className="flex items-baseline gap-2 rounded-full bg-cream-ink px-4 py-2 text-xs font-semibold text-white" title={result.match?.reason}>
+            Yakınlık (tahmin) <b className="serif text-lg text-accent">%{match}</b>
           </span>
         )}
       </header>
 
       {sections.length > 0 && (
-        <div className="flex flex-wrap gap-1.5 px-5 pb-3" role="tablist" aria-label="Bölümler">
+        <div className="flex flex-wrap gap-1.5 px-6 pb-1 pt-5" role="tablist" aria-label="Bölümler">
           {[{ name: "Ana ton" }, ...sections].map((s, i) => (
             <button
               key={`${s.name}-${i}`}
               role="tab"
               aria-selected={section === i - 1}
               onClick={() => setSection(i - 1)}
-              className={`rounded-md border px-3 py-1 font-display text-sm font-semibold uppercase tracking-wide ${
-                section === i - 1 ? "border-accent bg-accent text-paper" : "border-line text-ink-soft hover:border-line-strong"
+              className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                section === i - 1 ? "bg-ink text-cream-ink" : "bg-raised text-ink-soft hover:text-ink"
               }`}
             >
               {s.name}
@@ -80,9 +83,9 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
       )}
 
       {activeSection ? (
-        <section className="px-5 pb-5">
+        <section className="px-6 pb-6 pt-5">
           <p className="mb-2 text-xs text-ink-mute">Yalnız değişen ayarlar; gerisi ana tondaki gibi.</p>
-          <ul className="divide-y divide-line rounded-lg border border-line bg-raised">
+          <ul className="divide-y divide-line overflow-hidden rounded-2xl bg-raised">
             {activeSection.changes.map((c, i) => (
               <li key={i} className="flex items-start justify-between gap-3 p-3 text-sm">
                 <span>
@@ -90,13 +93,13 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
                   <b className="text-ink">{c.setting}</b>
                   <span className="block text-xs text-ink-mute">{c.why}</span>
                 </span>
-                <span className="font-display text-lg font-semibold text-accent">{c.value}</span>
+                <span className="serif text-xl font-semibold text-accent">{c.value}</span>
               </li>
             ))}
           </ul>
         </section>
       ) : (
-        <section className="px-5 pb-5">
+        <section className="px-6 pb-6 pt-5">
           <ChainRow>
             <ChainCap label="In" />
             {chain.map((b, i) => (
@@ -117,18 +120,18 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
           </ChainRow>
 
           {block && (
-            <div className="mt-3 rounded-lg border border-line bg-raised p-4">
+            <div className="mt-3 rounded-2xl bg-raised p-5">
               <div className="flex flex-wrap items-center gap-2">
-                <span className="font-display text-xl font-semibold text-ink">{block.device_model}</span>
+                <span className="serif text-2xl font-semibold text-ink">{block.device_model}</span>
                 {block.match && MATCH[block.match] && (
-                  <span className="font-display text-xs font-semibold uppercase tracking-wider" style={{ color: MATCH[block.match].color }}>
+                  <span className="text-xs font-semibold uppercase tracking-[0.06em]" style={{ color: MATCH[block.match].color }}>
                     {MATCH[block.match].label}
                   </span>
                 )}
               </div>
               <p className="mt-0.5 text-sm text-ink-mute">≈ {block.emulates}</p>
               {block.start_from && (
-                <p className="mt-3 rounded-md border border-accent/40 bg-accent-soft px-3 py-2 text-sm text-ink">
+                <p className="mt-3 rounded-xl bg-accent-soft px-3.5 py-2.5 text-sm text-ink">
                   <span className="hud-label mr-2 text-accent">Önce yükle</span>
                   {block.start_from}
                 </p>
@@ -162,7 +165,7 @@ export function ToneCard({ result, pickupLayout }: { result: Partial<AdaptedTone
       )}
 
       {result.guitar && (
-        <section className="grid gap-4 border-t border-line p-5 sm:grid-cols-[1fr_auto]">
+        <section className="grid gap-4 border-t border-line p-6 sm:grid-cols-[1fr_auto]">
           <div>
             <h3 className="hud-label mb-2 text-ink-soft">Gitar</h3>
             <div className="flex flex-wrap gap-2">

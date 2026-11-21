@@ -6,6 +6,7 @@ import { RigPanel } from "@/components/RigPanel";
 import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
+import { AppMark, Artwork, CARD_COLORS, PageBand, Pill, Segmented } from "@/components/ui";
 import { toneText } from "@/lib/format";
 import { INSTRUMENTS, PARTS, TONE_TYPES, type Instrument, type ToneType, type UserRig } from "@/lib/gear";
 import type { OriginalTone, PartialTone, ToneEvent, ToneMeta, ToneResult } from "@/lib/schema";
@@ -82,52 +83,6 @@ const fileSlug = (t: string) =>
     .slice(0, 50) || "ton";
 
 const isAdapted = (r: PartialTone): r is ToneResult => Array.isArray(r.chain);
-
-function Segmented<T extends string>({
-  label,
-  options,
-  value,
-  onChange,
-}: {
-  label: string;
-  options: readonly { id: T; label: string }[];
-  value: T;
-  onChange: (v: T) => void;
-}) {
-  return (
-    <div className="flex items-center gap-2" role="group" aria-label={label || undefined}>
-      {label && <span className="hud-label">{label}</span>}
-      <div className="flex overflow-hidden rounded-md border border-line">
-        {options.map((o) => (
-          <button
-            type="button"
-            key={o.id}
-            onClick={() => onChange(o.id)}
-            aria-pressed={value === o.id}
-            className={`border-l border-line px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide first:border-l-0 ${
-              value === o.id ? "bg-accent text-paper" : "bg-raised text-ink-soft hover:text-ink"
-            }`}
-          >
-            {o.label}
-          </button>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function Btn({ children, primary, className, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { primary?: boolean }) {
-  return (
-    <button
-      {...props}
-      className={`rounded-md px-4 py-2 font-display text-sm font-bold uppercase tracking-wider transition disabled:opacity-40 ${
-        primary ? "bg-accent text-paper hover:brightness-110" : "border border-line bg-raised text-ink hover:border-line-strong"
-      } ${className ?? ""}`}
-    >
-      {children}
-    </button>
-  );
-}
 
 export default function Home() {
   const [view, setView] = useState<View>("research");
@@ -329,22 +284,77 @@ export default function Home() {
   const isSaved = current ? saved.some((s) => s.id === current.id) : false;
   const engine = keyStatus?.configured ? "API" : keyStatus?.cli ? "Claude Code" : null;
   const adapted = current && isAdapted(current.result) ? current.result : null;
+  const showHero = view === "research" && !current && !busy;
+  const pickQuick = (q: (typeof QUICK_PICKS)[number]) => {
+    setSong(q.song);
+    setArtist(q.artist);
+    setPart(q.part);
+    setPartDetail(q.detail ?? "");
+    setArtwork("");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+  const openTone = (s: SavedTone) => {
+    setCurrent(s);
+    setView("research");
+    window.scrollTo({ top: 0 });
+  };
+
+  const searchForm = (
+    <form
+      className="hud-panel rise space-y-4 p-5"
+      onSubmit={(e) => {
+        e.preventDefault();
+        void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
+      }}
+    >
+      <SongSearch
+        song={song}
+        artist={artist}
+        artwork={artwork}
+        onChange={(p) => {
+          if (p.song !== undefined) setSong(p.song);
+          if (p.artist !== undefined) setArtist(p.artist);
+          if (p.artwork !== undefined) setArtwork(p.artwork);
+        }}
+      />
+      <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+        <Segmented label="Bölüm" options={PARTS.map((p) => ({ id: p.id, label: PART_SHORT[p.id] ?? p.label }))} value={part} onChange={setPart} />
+        <Segmented label="Ton" options={TONE_TYPES.map((t) => ({ id: t.id, label: TONE_SHORT[t.id] }))} value={toneType} onChange={setToneType} />
+        <Segmented label="" options={INSTRUMENTS} value={instrument} onChange={setInstrument} />
+      </div>
+      <div className="flex flex-col gap-3 sm:flex-row">
+        <input
+          className="hud-input"
+          placeholder="Hangi bölüm? (isteğe bağlı, ör. 2. solo)"
+          value={partDetail}
+          onChange={(e) => setPartDetail(e.target.value)}
+          aria-label="Bölüm detayı"
+        />
+        <Pill tone="light" type="submit" disabled={busy !== null || !song.trim() || !canResearch} className="shrink-0 px-8">
+          {busy === "research" ? "Araştırılıyor…" : "Tonu araştır"}
+        </Pill>
+      </div>
+      {keyStatus && !canResearch && (
+        <p className="text-sm text-warn">
+          Araştırma için bu bilgisayarda Claude Code gerekli.{" "}
+          <button type="button" className="underline" onClick={() => setSettingsOpen(true)}>
+            Nasıl?
+          </button>
+        </p>
+      )}
+    </form>
+  );
 
   return (
-    <div className="min-h-screen">
-      <header className="sticky top-0 z-30 border-b border-line bg-paper/95 backdrop-blur">
-        <div className="mx-auto flex h-14 max-w-5xl items-center gap-3 px-4 sm:gap-6">
-          <div className="flex items-center gap-2">
-            <svg width="22" height="22" viewBox="0 0 22 22" aria-hidden>
-              <circle cx="11" cy="11" r="9" fill="none" stroke="var(--color-line-strong)" strokeWidth="2" />
-              <path d="M5.3 16.7 A 8 8 0 1 1 16.7 16.7" fill="none" stroke="var(--color-accent)" strokeWidth="2" strokeLinecap="round" />
-              <line x1="11" y1="11" x2="15" y2="6.5" stroke="var(--color-ink)" strokeWidth="2" strokeLinecap="round" />
-            </svg>
-            <span className="hidden font-display text-xl font-bold tracking-wide text-ink sm:inline">
-              TONE<span className="text-accent">FINDER</span>
-            </span>
-          </div>
-          <nav className="flex h-full items-stretch" aria-label="Bölümler">
+    <div className="min-h-screen pb-16">
+      {/* Yüzen menü çubuğu */}
+      <header className="fixed inset-x-0 top-3 z-30 px-4">
+        <div className="mx-auto flex h-14 max-w-6xl items-center gap-2 rounded-full border border-white/5 bg-[#1e1f22]/95 pl-3 pr-2 shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur">
+          <button onClick={() => { setView("research"); setCurrent(null); }} className="flex items-center gap-2.5 rounded-full pr-3" aria-label="Ana sayfa">
+            <AppMark size={30} />
+            <span className="serif hidden text-[19px] font-semibold text-ink sm:inline">ToneFinder</span>
+          </button>
+          <nav className="ml-2 flex items-center gap-1" aria-label="Bölümler">
             {(
               [
                 ["research", "Araştır"],
@@ -356,8 +366,8 @@ export default function Home() {
                 key={id}
                 onClick={() => setView(id)}
                 aria-current={view === id ? "page" : undefined}
-                className={`border-b-2 px-2.5 font-display text-sm font-semibold uppercase tracking-wider transition sm:px-3 ${
-                  view === id ? "border-accent text-ink" : "border-transparent text-ink-mute hover:text-ink"
+                className={`rounded-full px-3.5 py-2 text-sm font-semibold transition ${
+                  view === id ? "bg-raised text-ink" : "text-ink-soft hover:text-ink"
                 }`}
               >
                 {label}
@@ -365,13 +375,13 @@ export default function Home() {
             ))}
           </nav>
           <div className="ml-auto flex items-center gap-2">
-            <span className="hidden items-center gap-1.5 font-display text-xs font-semibold uppercase tracking-wider text-ink-mute sm:flex">
+            <span className="hidden items-center gap-2 rounded-full bg-raised px-3 py-2 text-xs font-semibold text-ink-soft sm:flex">
               <span className={`h-2 w-2 rounded-full ${busy ? "animate-pulse bg-accent" : engine ? "bg-ok" : "bg-bad"}`} />
               {busy ? "Çalışıyor" : (engine ?? "Kurulum gerekli")}
             </span>
             <button
               onClick={() => setSettingsOpen(true)}
-              className="rounded-md p-2 text-ink-mute hover:bg-raised hover:text-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-full text-ink-soft hover:bg-raised hover:text-ink"
               aria-label="Ayarlar"
               title="Ayarlar"
             >
@@ -385,91 +395,86 @@ export default function Home() {
       </header>
 
       {settingsOpen && keyStatus && (
-        <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/60 p-4 pt-20" onClick={() => setSettingsOpen(false)}>
-          <div className="w-full max-w-lg" onClick={(e) => e.stopPropagation()}>
+        <div className="fixed inset-0 z-40 flex items-start justify-center bg-black/60 p-4 pt-24 backdrop-blur-sm" onClick={() => setSettingsOpen(false)}>
+          <div className="rise w-full max-w-lg" onClick={(e) => e.stopPropagation()}>
             <SettingsPanel status={keyStatus} onSaved={setKeyStatus} onClose={() => setSettingsOpen(false)} />
           </div>
         </div>
       )}
 
-      <main className="mx-auto max-w-5xl space-y-5 px-4 py-6">
+      {/* Krem karşılama bandı (yalnız boş araştırma ekranında) */}
+      {showHero && (
+        <section className="bg-cream px-6 pb-20 pt-36 text-center">
+          <h1 className="serif rise mx-auto max-w-3xl text-[56px] font-semibold leading-[1.04] text-cream-ink sm:text-[68px]">
+            Sevdiğin şarkının tonu, kendi ekipmanında
+          </h1>
+          <p className="rise mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-cream-mute" style={{ animationDelay: "60ms" }}>
+            Stüdyo kaydındaki gitar, amfi ve pedalları kaynaklarıyla bulur; sonra düğme düğme senin rig&apos;ine çevirir.
+          </p>
+          <div className="rise mt-8 flex justify-center gap-3" style={{ animationDelay: "120ms" }}>
+            <Pill tone="dark" onClick={() => document.querySelector<HTMLInputElement>("[aria-label='Şarkı']")?.focus()}>
+              Şarkı ara
+            </Pill>
+            <Pill tone="ghost" className="!bg-black/5 !text-cream-ink hover:!bg-black/10" onClick={() => setView("rig")}>
+              Ekipmanımı kur
+            </Pill>
+          </div>
+        </section>
+      )}
+
+      <main className={`mx-auto max-w-6xl space-y-6 px-6 ${showHero ? "pt-10" : "pt-24"}`}>
         {error && (
-          <div className="rounded-lg border border-bad/50 bg-bad/10 px-4 py-3 text-sm text-ink" role="alert">
+          <div className="rounded-2xl border border-bad/40 bg-bad/10 px-5 py-3.5 text-sm text-ink" role="alert">
             {error}
           </div>
         )}
 
         {view === "research" && (
           <>
-            <form
-              className="hud-panel space-y-4 p-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-                void research({ song, artist, part, partDetail, instrument, toneType }, { artwork });
-              }}
-            >
-              <SongSearch
-                song={song}
-                artist={artist}
-                artwork={artwork}
-                onChange={(p) => {
-                  if (p.song !== undefined) setSong(p.song);
-                  if (p.artist !== undefined) setArtist(p.artist);
-                  if (p.artwork !== undefined) setArtwork(p.artwork);
-                }}
-              />
-              <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
-                <Segmented label="Bölüm" options={PARTS.map((p) => ({ id: p.id, label: PART_SHORT[p.id] ?? p.label }))} value={part} onChange={setPart} />
-                <Segmented label="Ton" options={TONE_TYPES.map((t) => ({ id: t.id, label: TONE_SHORT[t.id] }))} value={toneType} onChange={setToneType} />
-                <Segmented label="" options={INSTRUMENTS} value={instrument} onChange={setInstrument} />
-              </div>
-              <div className="flex flex-col gap-3 sm:flex-row">
-                <input
-                  className="hud-input"
-                  placeholder="Hangi bölüm? (isteğe bağlı, ör. 2. solo)"
-                  value={partDetail}
-                  onChange={(e) => setPartDetail(e.target.value)}
-                  aria-label="Bölüm detayı"
-                />
-                <Btn primary type="submit" disabled={busy !== null || !song.trim() || !canResearch} className="shrink-0 px-8">
-                  {busy === "research" ? "Araştırılıyor…" : "Araştır"}
-                </Btn>
-              </div>
-              {keyStatus && !canResearch && (
-                <p className="text-sm text-warn">
-                  Araştırma için bu bilgisayarda Claude Code gerekli.{" "}
-                  <button type="button" className="underline" onClick={() => setSettingsOpen(true)}>
-                    Nasıl?
-                  </button>
-                </p>
-              )}
-            </form>
+            {searchForm}
 
-            {!current && !busy && (
-              <div className="flex flex-wrap gap-1.5">
-                {QUICK_PICKS.map((q) => (
-                  <button
-                    key={q.song}
-                    onClick={() => {
-                      setSong(q.song);
-                      setArtist(q.artist);
-                      setPart(q.part);
-                      setPartDetail(q.detail ?? "");
-                      setArtwork("");
-                    }}
-                    className="rounded-full border border-line px-3 py-1 text-xs text-ink-soft hover:border-accent hover:text-accent"
-                  >
-                    {q.song} · {q.artist}
-                  </button>
-                ))}
-              </div>
+            {showHero && (
+              <>
+                <section>
+                  <div className="mb-4 flex items-end justify-between">
+                    <h2 className="text-lg font-semibold text-ink">Popüler tonlar</h2>
+                    <span className="text-xs text-ink-mute">Birine tıkla, form dolsun</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+                    {QUICK_PICKS.map((q, i) => (
+                      <button key={q.song} onClick={() => pickQuick(q)} className="lift group overflow-hidden rounded-2xl bg-panel text-left">
+                        <span className="relative flex aspect-square flex-col justify-between p-4" style={{ background: CARD_COLORS[i % CARD_COLORS.length] }}>
+                          <span className="text-[11px] font-semibold uppercase tracking-[0.1em] text-cream-ink/60">{PART_SHORT[q.part]}</span>
+                          <span className="serif text-[22px] font-semibold leading-[1.05] text-cream-ink">{q.song}</span>
+                          <svg className="absolute right-3 top-3 opacity-25 transition group-hover:opacity-40" width="34" height="34" viewBox="0 0 40 40" aria-hidden>
+                            <path d="M20 3c9 0 16 4 16 11 0 9-8 19-16 23C12 33 4 23 4 14 4 7 11 3 20 3z" fill="#141414" />
+                          </svg>
+                        </span>
+                        <span className="block truncate px-4 py-3 text-[13px] font-semibold text-ink">{q.artist}</span>
+                      </button>
+                    ))}
+                  </div>
+                </section>
+
+                {history.length > 0 && (
+                  <section>
+                    <div className="mb-3 flex items-end justify-between">
+                      <h2 className="text-lg font-semibold text-ink">Son araştırmaların</h2>
+                      <button onClick={() => { setListTab("history"); setView("library"); }} className="text-xs font-semibold text-ink-soft hover:text-ink">
+                        Tümünü gör
+                      </button>
+                    </div>
+                    <ToneRows items={history.slice(0, 5)} onOpen={openTone} />
+                  </section>
+                )}
+              </>
             )}
 
             {busy && (
               <div className="hud-panel hud-scan flex items-center gap-3 px-5 py-4" aria-live="polite">
                 <span className="h-2.5 w-2.5 shrink-0 animate-pulse rounded-full bg-accent" />
                 <span className="min-w-0 flex-1 truncate text-sm text-ink-soft">{progress.at(-1) ?? "Başlıyor…"}</span>
-                <span className="font-display text-xs uppercase tracking-wider text-ink-mute">{busy === "research" ? "~1–2 dk" : "~1–3 dk"}</span>
+                <span className="text-xs font-semibold text-ink-mute">{busy === "research" ? "~1–2 dk" : "~1–3 dk"}</span>
               </div>
             )}
 
@@ -480,45 +485,46 @@ export default function Home() {
                     {current.part}
                     {current.meta?.cached && " · kayıttan"}
                   </span>
-                  <Btn type="button" onClick={() => toggleSave(current)}>
+                  <Pill type="button" onClick={() => toggleSave(current)}>
                     {isSaved ? "★ Kayıtlı" : "☆ Kaydet"}
-                  </Btn>
-                  <Btn type="button" onClick={() => download(`${fileSlug(current.result.song.title)}.tonefinder.json`, toneFile(current))}>
+                  </Pill>
+                  <Pill type="button" onClick={() => download(`${fileSlug(current.result.song.title)}.tonefinder.json`, toneFile(current))}>
                     Dışa aktar
-                  </Btn>
+                  </Pill>
                   {current.query && (
-                    <Btn
+                    <Pill
                       type="button"
                       disabled={busy !== null || !canResearch}
                       onClick={() => current.query && research(current.query, { fresh: true, artwork: current.artwork })}
                     >
                       Yeniden araştır
-                    </Btn>
+                    </Pill>
                   )}
                 </div>
 
                 <OriginalCard key={`o-${current.id}`} tone={current.result} artwork={current.artwork} />
 
-                <section className="hud-panel flex flex-wrap items-center gap-3 p-5">
+                <section className="hud-panel flex flex-wrap items-center gap-4 p-5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-c-purple text-sm font-bold text-cream-ink">2</span>
                   <div className="min-w-0 flex-1">
-                    <h3 className="font-display text-lg font-bold uppercase tracking-wide text-ink">2 · Ekipmanına çevir</h3>
+                    <h3 className="serif text-xl font-semibold text-ink">Ekipmanına çevir</h3>
                     <p className="truncate text-sm text-ink-mute">
                       {activeRig?.name}: {rig ? rigLabel(rig) : "—"}
                       {rig?.guitar && ` · ${rig.guitar}`}
                     </p>
                   </div>
-                  <Btn type="button" onClick={() => setView("rig")}>
+                  <Pill type="button" onClick={() => setView("rig")}>
                     Ekipman
-                  </Btn>
-                  <Btn
-                    primary
+                  </Pill>
+                  <Pill
+                    tone="light"
                     type="button"
                     disabled={busy !== null || !canAdapt || !hasGear || !current.query}
                     onClick={() => adapt()}
                     title={!canAdapt ? "Bu adım için API anahtarı gerekli" : undefined}
                   >
                     {busy === "adapt" ? "Çevriliyor…" : adapted ? "Yeniden çevir" : "Çevir"}
-                  </Btn>
+                  </Pill>
                   {!canAdapt && (
                     <p className="w-full text-xs text-ink-mute">
                       Şimdilik kapalı: bu adım API anahtarı istiyor.{" "}
@@ -532,9 +538,9 @@ export default function Home() {
                 {adapted && busy !== "adapt" && (
                   <>
                     <div className="flex justify-end">
-                      <Btn type="button" onClick={() => copyTone(adapted)}>
+                      <Pill type="button" onClick={() => copyTone(adapted)}>
                         {copied ? "✓ Kopyalandı" : "Ayarları kopyala"}
-                      </Btn>
+                      </Pill>
                     </div>
                     <ToneCard key={`a-${current.id}`} result={adapted} pickupLayout={current.pickupLayout} />
                     <form
@@ -552,9 +558,9 @@ export default function Home() {
                         placeholder="Kulağa yanlış mı geliyor? Ne farklı? (ör. çok bulanık)"
                         aria-label="Geri bildirim"
                       />
-                      <Btn type="submit" disabled={busy !== null || !canAdapt || !feedback.trim()} className="shrink-0">
+                      <Pill type="submit" disabled={busy !== null || !canAdapt || !feedback.trim()} className="shrink-0">
                         Yeniden uyarla
-                      </Btn>
+                      </Pill>
                     </form>
                   </>
                 )}
@@ -564,84 +570,108 @@ export default function Home() {
         )}
 
         {view === "rig" && rig && rigStore && (
-          <RigPanel rig={rig} rigs={rigStore.rigs} activeId={rigStore.activeId} {...rigActions} canIdentify={canAdapt} />
+          <>
+            <PageBand kicker="Ekipman" title="Ekipmanım" color="var(--color-c-purple)">
+              Amfin, prosesörün, gitarın ve pedalların. Tonlar bu bilgilere göre düğme düğme ayarlanır; &quot;Ev&quot;, &quot;Prova&quot; gibi birden çok set tutabilirsin.
+            </PageBand>
+            <RigPanel rig={rig} rigs={rigStore.rigs} activeId={rigStore.activeId} {...rigActions} canIdentify={canAdapt} />
+          </>
         )}
 
         {view === "library" && (
-          <section className="hud-panel p-5">
-            <div className="mb-4 flex items-center gap-2">
+          <>
+            <PageBand
+              kicker="Kütüphane"
+              title="Tonlarım"
+              color="var(--color-c-lime)"
+              action={
+                <label className="pill pill-ghost cursor-pointer">
+                  İçe aktar
+                  <input
+                    type="file"
+                    accept=".json,application/json"
+                    className="sr-only"
+                    onChange={(e) => {
+                      const f = e.target.files?.[0];
+                      if (f) void importTone(f);
+                      e.target.value = "";
+                    }}
+                  />
+                </label>
+              }
+            >
+              Kaydettiğin tonlar ve son 20 sonuç. Bir satıra tıklayınca ton açılır.
+            </PageBand>
+            <div className="flex items-center gap-1 rounded-full bg-panel p-1 w-fit">
               {(
                 [
-                  ["saved", `Kayıtlı ${saved.length}`],
-                  ["history", `Geçmiş ${history.length}`],
+                  ["saved", `Kayıtlı · ${saved.length}`],
+                  ["history", `Geçmiş · ${history.length}`],
                 ] as const
               ).map(([id, label]) => (
                 <button
                   key={id}
                   onClick={() => setListTab(id)}
                   aria-pressed={listTab === id}
-                  className={`rounded-md px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide ${
-                    listTab === id ? "bg-accent text-paper" : "text-ink-soft hover:text-ink"
+                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                    listTab === id ? "bg-ink text-cream-ink" : "text-ink-soft hover:text-ink"
                   }`}
                 >
                   {label}
                 </button>
               ))}
-              <label className="ml-auto cursor-pointer rounded-md border border-line px-3 py-1.5 font-display text-sm font-semibold uppercase tracking-wide text-ink-soft hover:border-accent hover:text-accent">
-                İçe aktar
-                <input
-                  type="file"
-                  accept=".json,application/json"
-                  className="sr-only"
-                  onChange={(e) => {
-                    const f = e.target.files?.[0];
-                    if (f) void importTone(f);
-                    e.target.value = "";
-                  }}
-                />
-              </label>
             </div>
             {(listTab === "saved" ? saved : history).length === 0 ? (
-              <p className="py-8 text-center text-sm text-ink-mute">Henüz bir şey yok.</p>
+              <p className="rounded-2xl bg-panel py-14 text-center text-sm text-ink-mute">Henüz bir şey yok. Bir şarkı araştırınca burada görünür.</p>
             ) : (
-              <ul className="grid gap-2 sm:grid-cols-2">
-                {(listTab === "saved" ? saved : history).map((s) => (
-                  <li key={s.id} className="group flex items-stretch rounded-lg border border-line bg-raised">
-                    <button
-                      onClick={() => {
-                        setCurrent(s);
-                        setView("research");
-                      }}
-                      className="flex min-w-0 flex-1 items-center gap-3 p-3 text-left"
-                    >
-                      {s.artwork ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img src={s.artwork} alt="" className="h-11 w-11 shrink-0 rounded object-cover" />
-                      ) : (
-                        <span className="h-11 w-11 shrink-0 rounded bg-panel" />
-                      )}
-                      <span className="min-w-0">
-                        <span className="block truncate font-semibold text-ink">{s.result.song.title}</span>
-                        <span className="block truncate text-xs text-ink-mute">
-                          {s.result.song.artist} · {s.part}
-                          {isAdapted(s.result) ? ` · ${s.rigName ?? s.deviceLabel}` : " · araştırma"}
-                        </span>
-                      </span>
-                    </button>
-                    <button
-                      onClick={() => removeFrom(listTab, s.id)}
-                      className="px-3 text-ink-mute opacity-50 hover:text-bad group-hover:opacity-100"
-                      aria-label={`${s.result.song.title} sil`}
-                    >
-                      ✕
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <ToneRows items={listTab === "saved" ? saved : history} onOpen={openTone} onRemove={(id) => removeFrom(listTab, id)} />
             )}
-          </section>
+          </>
         )}
       </main>
     </div>
+  );
+}
+
+/** Parça listesi gibi kapaklı satırlar */
+function ToneRows({ items, onOpen, onRemove }: { items: SavedTone[]; onOpen: (s: SavedTone) => void; onRemove?: (id: string) => void }) {
+  return (
+    <ul className="divide-y divide-line/70 overflow-hidden rounded-2xl bg-panel">
+      {items.map((s) => {
+        const date = new Date(s.savedAt).toLocaleDateString("tr-TR", { day: "numeric", month: "short" });
+        return (
+          <li key={s.id} className="group flex items-center gap-4 px-4 py-3 transition hover:bg-raised/60">
+            <button onClick={() => onOpen(s)} className="flex min-w-0 flex-1 items-center gap-4 text-left">
+              <Artwork src={s.artwork} title={s.result.song.title} size={46} />
+              <span className="min-w-0 flex-1">
+                <span className="block truncate text-[15px] font-semibold text-ink">{s.result.song.title}</span>
+                <span className="block truncate text-[13px] text-ink-mute">{s.result.song.artist}</span>
+              </span>
+              <span className="hidden w-40 truncate text-[13px] text-ink-soft md:block">{s.part}</span>
+              <span className="hidden w-48 truncate text-[13px] text-ink-soft lg:block">
+                {isAdapted(s.result) ? (s.rigName ?? s.deviceLabel) : "Orijinal ton"}
+              </span>
+              <span
+                className={`hidden rounded-full px-2.5 py-1 text-[11px] font-semibold sm:inline ${
+                  isAdapted(s.result) ? "bg-c-lime text-cream-ink" : "bg-raised text-ink-soft"
+                }`}
+              >
+                {isAdapted(s.result) ? "Uyarlandı" : "Araştırma"}
+              </span>
+              <span className="w-14 text-right text-xs tabular-nums text-ink-mute">{date}</span>
+            </button>
+            {onRemove && (
+              <button
+                onClick={() => onRemove(s.id)}
+                className="flex h-9 w-9 items-center justify-center rounded-full text-ink-mute opacity-0 transition hover:bg-raised hover:text-bad group-hover:opacity-100 focus:opacity-100"
+                aria-label={`${s.result.song.title} sil`}
+              >
+                ✕
+              </button>
+            )}
+          </li>
+        );
+      })}
+    </ul>
   );
 }

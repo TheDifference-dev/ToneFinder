@@ -1,45 +1,56 @@
 @import "tailwindcss";
 
-/* Koyu "amfi paneli" teması: kömür zemin, tek amber vurgu (lamba ışığı), kategori renkli bloklar.
-   BOSS TONE STUDIO, Fender Tone, Marshall Gateway ve HeadRush'taki ortak düzenden esinlenildi;
-   hiçbir markanın logosu, görseli ya da renk kimliği kopyalanmadı. */
+/* "Stüdyo kataloğu" teması: koyu içerik zemini, krem karşılama bandı, serif başlıklar,
+   hap biçimli düğmeler ve canlı düz renkli kartlar. Epidemic Sound gibi müzik kataloglarının
+   tasarım dilinden esinlenildi; hiçbir markanın logosu, adı ya da görseli kullanılmadı. */
 @theme {
-  --color-paper: #111317;
-  --color-panel: #1a1d22;
-  --color-raised: #242932;
-  --color-ink: #eceef1;
-  --color-ink-soft: #b9bfc8;
-  --color-ink-mute: #8a919c;
-  --color-line: #343a44;
-  --color-line-strong: #4a515c;
-  --color-accent: #f2b544;
-  --color-accent-soft: #2e2817;
-  --color-signal: #f0803c;
-  --color-ok: #3ddc84;
-  --color-warn: #f0a040;
-  --color-bad: #f0605a;
+  --color-paper: #121314;
+  --color-panel: #1b1c1f;
+  --color-raised: #24262a;
+  --color-ink: #f5f3ee;
+  --color-ink-soft: #c8c6bf;
+  --color-ink-mute: #8e8d88;
+  --color-line: #2c2e32;
+  --color-line-strong: #44464b;
+  --color-cream: #efede6;
+  --color-cream-ink: #141414;
+  --color-cream-mute: #55534d;
+  --color-accent: #d4f28a;
+  --color-accent-soft: #252c17;
+  --color-signal: #ff7a45;
+  --color-ok: #6fdc8c;
+  --color-warn: #ffc24d;
+  --color-bad: #ff6b5e;
 
-  /* sinyal zinciri kategori renkleri (yalnız kenarlık ve etiketlerde) */
-  --color-cat-guitar: #d9c39a;
-  --color-cat-dyn: #7cc24a;
-  --color-cat-drive: #f0803c;
-  --color-cat-amp: #f2b544;
-  --color-cat-mod: #4fb0e3;
-  --color-cat-delay: #b866cc;
-  --color-cat-reverb: #e95fb5;
-  --color-cat-cab: #9aa3ae;
+  /* kart paleti (düz, doygun renkler; üzerindeki yazı her zaman koyu) */
+  --color-c-pink: #ff92c8;
+  --color-c-orange: #ff9b45;
+  --color-c-purple: #b892ff;
+  --color-c-red: #ff6a4d;
+  --color-c-lime: #d4f28a;
+  --color-c-yellow: #ffd84d;
+  --color-c-blue: #86c8ff;
+  --color-c-mint: #7fe3b4;
+
+  /* sinyal zinciri kategori renkleri */
+  --color-cat-guitar: #e7d3a8;
+  --color-cat-dyn: #7fe3b4;
+  --color-cat-drive: #ff9b45;
+  --color-cat-amp: #d4f28a;
+  --color-cat-mod: #86c8ff;
+  --color-cat-delay: #b892ff;
+  --color-cat-reverb: #ff92c8;
+  --color-cat-cab: #c4c2bb;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --font-display: "Barlow Condensed", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  /* küçük etiketler ve sayılar için (eski adıyla) */
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
   --font-mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-condensed-500-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 500; font-display: swap; src: url('/fonts/barlow-condensed-500-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-condensed-600-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 600; font-display: swap; src: url('/fonts/barlow-condensed-600-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-700-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
-@font-face { font-family: 'Barlow Condensed'; font-style: normal; font-weight: 700; font-display: swap; src: url('/fonts/barlow-condensed-700-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/fraunces-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'Fraunces'; font-style: normal; font-weight: 100 900; font-display: swap; src: url('/fonts/fraunces-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin-ext.woff2') format('woff2'); unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 700; font-display: swap; src: url('/fonts/inter-var-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 
@@ -51,6 +62,16 @@ body {
   background-color: var(--color-paper);
   color: var(--color-ink);
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Serif başlık (büyük boyutlarda ince ayarlı optik boy) */
+.font-serif,
+.serif {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+  letter-spacing: -0.015em;
 }
 
 /* Panel */
@@ -58,14 +79,14 @@ body {
   position: relative;
   background: var(--color-panel);
   border: 1px solid var(--color-line);
-  border-radius: 10px;
+  border-radius: 18px;
 }
 
-/* Büyük harf, dar etiket */
+/* Küçük büyük harf etiket (ör. "TÜR", "BÖLÜM") */
 .hud-label {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--color-ink-mute);
@@ -77,24 +98,85 @@ body {
 
 .hud-input {
   width: 100%;
-  border-radius: 8px;
-  border: 1px solid var(--color-line);
+  border-radius: 12px;
+  border: 1px solid transparent;
   background: var(--color-raised);
-  padding: 0.6rem 0.8rem;
-  font-size: 0.9rem;
+  padding: 0.7rem 0.95rem;
+  font-size: 0.95rem;
   color: var(--color-ink);
   outline: none;
-  transition: border-color 0.15s, box-shadow 0.15s;
+  transition: border-color 0.15s, box-shadow 0.15s, background 0.15s;
 }
 .hud-input::placeholder {
   color: var(--color-ink-mute);
 }
+.hud-input:hover {
+  background: #2a2c31;
+}
 .hud-input:focus {
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(242, 181, 68, 0.15);
+  border-color: var(--color-ink-soft);
+  box-shadow: 0 0 0 3px rgba(245, 243, 238, 0.08);
 }
 select.hud-input option {
   background: var(--color-raised);
+}
+
+/* Hap biçimli düğmeler */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border-radius: 999px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s, transform 0.1s;
+}
+.pill:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.pill:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+.pill-light {
+  background: var(--color-ink);
+  color: var(--color-cream-ink);
+}
+.pill-light:hover:not(:disabled) {
+  background: #ffffff;
+}
+.pill-dark {
+  background: var(--color-cream-ink);
+  color: #fff;
+}
+.pill-dark:hover:not(:disabled) {
+  background: #000;
+}
+.pill-ghost {
+  background: var(--color-raised);
+  color: var(--color-ink);
+}
+.pill-ghost:hover:not(:disabled) {
+  background: #2f3136;
+}
+
+/* Kartın üstüne binen hafif yükselme */
+.lift {
+  transition: transform 0.18s ease, filter 0.18s ease;
+}
+.lift:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.04);
+}
+
+/* İnce kaydırma çubuğu */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-line-strong) transparent;
 }
 
 @keyframes scan {
@@ -106,14 +188,32 @@ select.hud-input option {
   }
 }
 .hud-scan {
-  background-image: linear-gradient(90deg, transparent, rgba(242, 181, 68, 0.08), transparent);
+  background-image: linear-gradient(90deg, transparent, rgba(212, 242, 138, 0.09), transparent);
   background-size: 30% 100%;
   background-repeat: no-repeat;
   animation: scan 1.8s linear infinite;
 }
 
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.35s ease both;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .hud-scan {
+  .hud-scan,
+  .rise {
     animation: none;
+  }
+  .lift:hover {
+    transform: none;
   }
 }
