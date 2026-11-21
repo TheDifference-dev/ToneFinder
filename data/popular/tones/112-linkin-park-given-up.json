@@ -1,0 +1,235 @@
+{
+ "rank": 112,
+ "part": "full",
+ "researchedAt": 1795285650077,
+ "original": {
+  "song": {
+   "title": "Given Up",
+   "artist": "Linkin Park",
+   "album_or_year": "Minutes to Midnight (2007)",
+   "tone_character": "Drop D akortta, yüksek gainli ama Meteora dönemine göre ortaları daha dolu, daha 'rock' karakterli, ham ve agresif bir distorsiyon tonu. Rick Rubin prodüksiyonu nedeniyle vintage amfi/gitar karışımı, daha az işlenmiş ve daha doğal bir saturasyon.",
+   "tone_tags": [
+    "yüksek gain",
+    "orta frekanslar dolu (az scoop)",
+    "sıkı alt",
+    "ham/agresif",
+    "double-track geniş stereo",
+    "punk/hardcore enerjisi"
+   ],
+   "bpm": "100 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Vintage Fender Stratocaster / Gibson Les Paul (Minutes to Midnight seanslarında kullanılan vintage gitarlar; bu şarkı için hangisinin kullanıldığı belgelenmemiş)",
+    "pickup": "Köprü manyetiği (yüksek gainli ritim için; humbucker olması muhtemel)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Soldano SLO-100",
+     "channel": "Overdrive",
+     "settings": [
+      {
+       "name": "Preamp Gain",
+       "value": "7",
+       "note": "tahmini; doygun ama sıkı"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmini"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmini; Meteora'ya göre daha az scoop"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmini"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "İkincil kaynaklara göre (Guitar Player 2007 röportajının özetleri) Delson albümde '72 Hiwatt Custom 50, Soldano SLO, Marshall JCM800, bir 'Bo Diddley' amfi kullandı; Wikipedia ayrıca Bogner Uberschall ve Mesa/Boogie Dual Rectifier sayıyor. Given Up için hangi amfinin kullanıldığı belgelenmemiş; ayarlar tamamen tahmin."
+    },
+    {
+     "model": "Mesa/Boogie Dual Rectifier veya Bogner Uberschall",
+     "channel": "Red / Modern yüksek gain kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6.5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Bass",
+       "value": "5.5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Mid",
+       "value": "5.5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmini"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Albümün en ağır şarkılarından biri olduğu için ağır ritim katmanlarında modern yüksek gainli amfinin harmanlanmış olması muhtemel; doğrudan kaynak yok."
+    }
+   ],
+   "cab": {
+    "model": "4x12 kabin (Marshall 1960 veya Mesa Rectifier 4x12 tipi)",
+    "speakers": "Celestion Vintage 30 / G12 serisi (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kon kenarına yakın, hafif off-axis",
+      "distance": "1–2 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi hiçbir kaynakta yok; standart rock stüdyo yaklaşımına göre tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Boss NS-2 Noise Suppressor",
+     "purpose": "Amfi önünde/döngüde gürültü kapısı; Delson'ın sahne rack'inde biliniyor, stüdyoda bu şarkıda kullanıldığı belgesiz",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "4",
+       "note": "tahmini"
+      },
+      {
+       "name": "Decay",
+       "value": "3",
+       "note": "tahmini"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb (oda/plate)",
+     "purpose": "Mikste eklendi; çok hafif oda hissi",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%10",
+       "note": "tahmini, çok kuru"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "2007'de The Mansion'da (Laurel Canyon, Los Angeles) kaydedildi; prodüktörler Rick Rubin ve Mike Shinoda. Rubin vintage gitar ve amfilere, daha doğal ve az işlenmiş tonlara yöneltti. Girişteki anahtar şıngırtısı ve el çırpma katmanları Brad Delson'ın fikri (confirmed). Ritim gitarlarının sol/sağ double-track edildiği tür gereği muhtemel (likely). Köprüde Chester'ın ~17 saniyelik çığlığı var."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Drop D'de tek parmakla power chord riffleri (2-5-0-7 perdeleri)",
+    "Sıkı downpicking ve çift zamanlı punk hissi",
+    "Pick scrape efektleri",
+    "Gitarın volume düğmesiyle gain kontrolü (intro ve köprüde yarım volume)",
+    "Köprüde 12b15 tam ses bend"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş 1. kısım",
+    "description": "Aynı distorsiyonlu ton, ama gitarın volume düğmesi 5'in altında; daha temiz ve kırılmaya yakın bir ton. Arkada anahtar şıngırtısı ve el çırpmaları var."
+   },
+   {
+    "name": "Giriş 2. kısım / ana riff",
+    "description": "Volume 10'da, tam gainli ana ton."
+   },
+   {
+    "name": "Kıtalar",
+    "description": "Aynı ton. Pick scrape'ler ve daha seyrek vuruşlar var, vokale yer açılıyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ana ton. 2-5-0-7 tekrarlı power chord riffi (E-G-D-A), katmanlı/double-track olduğu için daha geniş ve yoğun."
+   },
+   {
+    "name": "Köprü (~1:55)",
+    "description": "Volume 5'in altına iniyor. Alt perdelerde dolaşan tek nota figürleri ve 12b15 bend var; çığlığın altında daha az gainli, daha ince bir doku."
+   },
+   {
+    "name": "Final",
+    "description": "Giriş 2. kısım iki kez çalınıp nakarata dönülüyor; tam gain."
+   }
+  ],
+  "warnings": [
+   "Given Up'a özgü amfi, gitar, kabin veya mikrofon bilgisi hiçbir kaynakta bulunamadı. Ekipman, albüm geneline ait ikincil kaynaklara dayanıyor ve ayarların hepsi tahmin.",
+   "2007 Guitar Player röportajına doğrudan ulaşılamadı (guitarfxdepot sayfası açılmadı). Amfi listesi arama özetlerinden ve Wikipedia'dan geliyor; kaynaklar listede tam uyuşmuyor.",
+   "Tonalite kaynaklara göre değişiyor: Musicnotes ve Mixmeister E minör, SongBPM G, Klang D, AcousticBrainz A minör diyor. Drop D'deki riff (E-G-D-A) E minörü destekliyor.",
+   "Tempo yaklaşık 100 BPM olarak listeleniyor, ama çift zamanlı hissedilip 200 BPM olarak da sayılabilir.",
+   "Akort: Tablar Drop D'de hemfikir, fakat bu resmi bir kaynak değil, transkripsiyon.",
+   "Bu dönemde Delson'ın Strat ağırlıklı çaldığı söyleniyor, ama ağır ritimler için humbucker'lı bir gitar (Les Paul/PRS) da kullanılmış olabilir."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Given Up - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Given_Up"
+   },
+   {
+    "title": "Brad Delson - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Brad_Delson"
+   },
+   {
+    "title": "Minutes to Midnight - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Minutes_to_Midnight_(Linkin_Park_album)"
+   },
+   {
+    "title": "Thomann Blog - The Linkin Park signature sound",
+    "url": "https://www.thomannmusic.com/blog/the-linkin-park-signature-sound-amps-guitars-secrets"
+   },
+   {
+    "title": "guitartabs.cc - Given Up tab ver 3",
+    "url": "https://www.guitartabs.cc/tabs/l/linkin_park/given_up_tab_ver_3.html"
+   },
+   {
+    "title": "Ultimate Guitar - Given Up Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/linkin-park/given-up-tabs-708407"
+   },
+   {
+    "title": "Brad Delson (Linkin Park) - guitarfxdepot",
+    "url": "https://guitarfxdepot.com/?p=745"
+   },
+   {
+    "title": "MusicRadar - Brad Delson interview on Living Things",
+    "url": "https://musicradar.com/news/guitars/interview-brad-delson-on-linkin-parks-punchy-new-album-living-things-553756"
+   },
+   {
+    "title": "SongBPM - Given Up",
+    "url": "https://songbpm.com/@linkin-park/given-up"
+   },
+   {
+    "title": "Musicnotes - Given Up",
+    "url": "https://www.musicnotes.com/sheetmusic/linkin-park/given-up/MN0062773"
+   },
+   {
+    "title": "lplive.net forum - Amp settings",
+    "url": "https://lplive.net/forums/topic/10374-amp-settings/"
+   }
+  ]
+ }
+}

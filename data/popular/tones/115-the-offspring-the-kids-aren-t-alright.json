@@ -1,0 +1,131 @@
+{
+ "rank": 115,
+ "part": "lead",
+ "researchedAt": 1795285755944,
+ "original": {
+  "song": {
+   "title": "The Kids Aren't Alright",
+   "artist": "The Offspring",
+   "album_or_year": "Americana (1998)",
+   "tone_character": "Sıkı, orta frekansları dolu, yüksek kazançlı ama boğulmayan 90'lar pop-punk distorsiyonu. Solo, katmanlı ritim gitarların üstünde şarkı söyler gibi duran, hafif kompresli, net ataklı bir lead tonudur.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "orta frekans dolu",
+    "sıkı alt",
+    "kompresli",
+    "kuru (az reverb)",
+    "katmanlı/double-track ritim",
+    "parlak atak"
+   ],
+   "bpm": "99–100 BPM",
+   "key": "D♭ majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Ibanez Talman (90'lar custom shop) – Noodles",
+    "pickup": "Köprü manyetiği (DiMarzio Tone Zone, humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IV",
+     "channel": "Lead (yüksek kazanç) kanalı",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Noodles, Americana döneminde ağır işi Mesa/Boogie amfilerin yaptığını ve en çok Mark IV'ün kullanıldığını söylüyor. Ama bu bilgi bu şarkıya ya da soloya özel değil. Ayarlarla ilgili bir kaynak yok. Prodüktör Dave Jerden birden fazla amfiyi denemiş ve katmanlamış."
+    },
+    {
+     "model": "VHT Pittbull",
+     "channel": "Yüksek kazanç",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Noodles, Mesa'nın tizde ince kaldığını, VHT'yi kalınlık için eklediğini ve 90'ların sonundan beri birlikte kullandığını söylüyor. VHT'nin tam olarak Americana kayıtlarında kullanılıp kullanılmadığı belirsiz."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie 4x12 (muhtemel)",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Hoparlöre doğrultulmuş, cap/edge arası (tahmin)",
+      "distance": "Yakın mikrofon, yaklaşık 1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kayıt mühendisi Bryan Carlstrom, Jerden'le çalışırken neredeyse her zaman 'bir gitar amfisi ve önünde bir 57' kullandıklarını anlatıyor. Amfi, kabin, gitar ve pedalları değiştirip birden fazla kaydı üst üste koyduklarını da söylüyor. Bu anlatım Alice in Chains bağlamında geçiyor; Offspring kayıtlarına da uygulandığı dolaylı bir çıkarım."
+   },
+   "pedals": [],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör Dave Jerden, mühendis Bryan Carlstrom. Kayıt Temmuz–Eylül 1998, Eldorado Recording Studios, Burbank. Noodles'a göre Jerden'in ana odağı gitar sesiydi ('If the guitars don't sound good, we've got nothing'). Amfiler ve kabinler değiştirilerek denendi, birden fazla gitar kaydı üst üste katmanlandı. SM57 sinyali Summit tüp preamp ve kompresörden geçirilerek kaseta kaydedilmiş olabilir; bu Carlstrom'un genel yöntemi. Solo için ayrıca efekt kullanıldığına dair kaynak yok. Duyulan ton kuru: olası hafif oda ya da plate reverb ve stüdyo kompresyonu mikste eklenmiş olabilir (tahmin)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "ana vokal melodisine dayanan kısa melodik solo",
+    "bütün ve yarım ses bending, bend entonasyonu",
+    "kısa vibrato",
+    "tempoda kalmak (~100 BPM)",
+    "sap boyunca küçük pozisyon değişiklikleri"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / ritim",
+    "description": "Aynı yüksek kazançlı ton, köprü manyetiği. Hızlı ve sürekli downstroke ile çalınan, kısmen palm-mute'lu power chord'lar ve tek nota riffler. Noodles bu bölümü 'downstroke'lar yüzünden fiziksel olarak yorucu' diye anlatıyor. Birden fazla kayıt katmanlanmış; Dexter ve Noodles birlikte çalıyor. Solodan farkı: lead katmanı yok, ses daha geniş ve stereo."
+   },
+   {
+    "name": "Köprü / sakin bölüm",
+    "description": "Bazı katmanlarda kazanç ve doluluk biraz azalıyor, palm-mute'lu sürüş öne çıkıyor. Ayrı bir temiz kanal kullanıldığına dair kaynak yok."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya ya da soloya özel bir gitar, amfi veya ayar kaynağı bulunamadı. Ekipman bilgileri Noodles'ın Americana dönemi için verdiği genel röportajlara dayanıyor.",
+   "Soloyu Noodles'ın çaldığı varsayıldı; bunu doğrulayan doğrudan bir kaynak bulunamadı.",
+   "Tonalite tartışmalı. Analiz siteleri C♯/D♭ majör, B♭ minör veya G#m veriyor. Akor yürüyüşü Eb akortta D–A–Bm–G gibi çalınıyor; bu da duyulan D♭ majör ya da relatif B♭ minör anlamına geliyor.",
+   "Tunebat sayfasına ulaşılamadı. BPM; Hooktheory, audiokeychain ve klang.io sitelerinin 98–100 aralığındaki değerlerinden alındı.",
+   "Americana'da Noodles'ın küçük, pilli Smokey Amp'ı kullandığı da biliniyor. Ama bu farklı bir şarkının temiz 'jang jang' partisi için; bu solo için geçerli değil.",
+   "Noodles, Talman'a 'Smash'ten sonra' geçtiğini söylüyor. Americana'da Les Paul ya da Strat gibi başka gitarların da kullanılmış olabileceğini dışlamak mümkün değil.",
+   "Kabin, hoparlör ve mikrofon detayları tahmin."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar World – Noodles: Rise and Fall, Rage and Grace 15th anniversary (Americana, Jerden, Mesa Mark IV, VHT, Talman)",
+    "url": "https://www.guitarworld.com/features/the-offspring-noodles-rise-and-fall-rage-and-grace-15th-anniversary"
+   },
+   {
+    "title": "Louder – The Offspring: Their best albums in their own words",
+    "url": "https://www.loudersound.com/features/the-offspring-their-best-albums-in-their-own-words"
+   },
+   {
+    "title": "Tape Op – Bryan Carlstrom interview",
+    "url": "https://tapeop.com/interviews/28/bryan-carlstrom"
+   },
+   {
+    "title": "Guitar Player – Behind the Offspring hit Come Out and Play (Mesa Mark IV)",
+    "url": "https://www.guitarplayer.com/players/behind-the-offspring-hit-come-out-and-play"
+   },
+   {
+    "title": "Wikipedia – Noodles (musician)",
+    "url": "https://en.wikipedia.org/wiki/Noodles_(musician)"
+   },
+   {
+    "title": "Equipboard – Kevin 'Noodles' Wasserman",
+    "url": "https://equipboard.com/pros/kevin-noodles-wasserman"
+   },
+   {
+    "title": "Hooktheory – The Kids Aren't Alright",
+    "url": "https://www.hooktheory.com/theorytab/view/the-offspring/the-kids-arent-alright"
+   },
+   {
+    "title": "Audiokeychain – The Kids Aren't Alright",
+    "url": "https://www.audiokeychain.com/track/FQv/the-offspring-the-kids-arent-alright"
+   },
+   {
+    "title": "Wikipedia – Americana (album)",
+    "url": "https://wikipedia.com/wiki/Pay_the_Man"
+   }
+  ]
+ }
+}

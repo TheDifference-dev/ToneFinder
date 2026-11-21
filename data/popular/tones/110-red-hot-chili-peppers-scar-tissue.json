@@ -1,0 +1,210 @@
+{
+ "rank": 110,
+ "part": "full",
+ "researchedAt": 1795285617613,
+ "original": {
+  "song": {
+   "title": "Scar Tissue",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "Californication (1999)",
+   "tone_character": "Kuru, temiz ve tek bobinli Strat tonu. Yüksek headroom'lu bir Fender Showman'dan geliyor, aşırı yakın mikrofonlanmış ve 1176 ile sıkıştırılmış. Kayıtta reverb yok, ses doğal ve öne çıkık; orta frekanslar hafifçe şişkin, alt taraf dolgun.",
+   "tone_tags": [
+    "temiz",
+    "kuru (reverb yok)",
+    "parlak tek bobin",
+    "orta frekans öne çıkık",
+    "kompresli",
+    "yakın mikrofon",
+    "mono / ortada",
+    "dinamik vuruşa duyarlı"
+   ],
+   "bpm": "89 BPM",
+   "key": "F majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster, akçaağaç sap ('55 olarak anılıyor; seri numarasına göre '54 olabilir)",
+    "pickup": "Orijinal 50'ler tek bobin manyetikler. Temiz double-stop riffi için köprü+orta ya da orta/sap konumları düşünülebilir; hangi konumun kullanıldığı kaynaklarda geçmiyor (guess). Slide partileri ayrı bir gitarla, '65 Telecaster ile kaydedildi (confirmed).",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Showman (Blackface, kafa)",
+     "channel": "Temiz (Normal/Vibrato kanalı; hangisi olduğu bilinmiyor)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "5",
+       "note": "guess: Showman'ın headroom'u çok yüksek, ses temiz kalıyor; Frusciante yüksek seste çaldığı için hafif bir amfi sıkışması oluşuyor"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "guess"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "guess"
+      },
+      {
+       "name": "Bright",
+       "value": "Off",
+       "note": "guess"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Frusciante (Guitar Player, Eylül 1999): \"I think I ran it through the Showman because the Marshall wasn't clean enough.\" Ayarları hiçbir kaynakta yok. Albümün geri kalanında Marshall JTM45, Marshall Super Bass, JCM800 ve Vox AC30 da kullanıldı."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor; Showman'la eşleşen bir Fender kabin ya da Marshall 4x12 olabilir",
+    "speakers": "Bilinmiyor (JBL D130F/D140F'li bir Fender kabin ya da Celestion'lu bir Marshall 4x12 olabilir)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Hoparlöre çok yakın, mümkün olduğunca içeri; cap/edge konumu belirtilmemiş",
+      "distance": "~0–1 in (temas mesafesi)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Hoparlöre çok yakın",
+      "distance": "~1 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mikrofonlama confirmed: Jim Scott kabin başına bir SM57 ve bir U87 kullandığını, mikrofonları çok yakına koyduğunu ve hepsini tek kanala topladığını anlatıyor. Kabin ve hoparlör modeli ise tahmin. Otherside'da Showman bir Marshall 4x12 ile kullanılmış (confirmed); Scar Tissue için kabin belirtilmemiş. Amfiler büyük bir izolasyon kabininde duruyordu ve oda mikrofonu kullanılmadı."
+   },
+   "pedals": [
+    {
+     "model": "Fuzz pedalı (model belirsiz; Boss FZ-3 ya da Electro-Harmonix Big Muff olabilir)",
+     "purpose": "Amfi önünde, yalnızca ikinci (outro) slide solosunda açık. Ana temiz tonda kullanılmıyor.",
+     "settings": [
+      {
+       "name": "Level",
+       "value": "5",
+       "note": "guess"
+      },
+      {
+       "name": "Fuzz/Sustain",
+       "value": "7",
+       "note": "guess"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "guess"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Urei/Universal Audio 1176 (stüdyo kompresörü)",
+     "purpose": "Stüdyoda, kayıt sırasında amfiden sonra (mikrofon zincirinde)",
+     "settings": [
+      {
+       "name": "Ratio",
+       "value": "4:1",
+       "note": "guess"
+      },
+      {
+       "name": "Gain Reduction",
+       "value": "3–5 dB",
+       "note": "guess"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Neve 1073 EQ (Neve 8038 konsol)",
+     "purpose": "Stüdyoda, kayıt sırasında",
+     "settings": [
+      {
+       "name": "Mid boost",
+       "value": "1–2 kHz",
+       "note": "confirmed (Jim Scott, Sound on Sound): orta frekans boost'u"
+      },
+      {
+       "name": "Low boost",
+       "value": "100 Hz",
+       "note": "confirmed: dolgunluk için alt boost"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Rick Rubin, kayıt ve miks mühendisi Jim Scott. Kayıt Cello Recording'in 2. stüdyosunda yapıldı; Neve 8038 konsol ve Dolby'siz Ampex 124 24 kanal teyp kullanıldı. Temel gitar kanalı grupla birlikte canlı alındı. Slide partisi sonradan eklenen bir overdub (confirmed). Mikrofonlar SM57+U87 'iyi mikrofon/kötü mikrofon' kombinasyonuyla tek kanala basıldı. Jim Scott'a göre miks 'tamamen kuru', yani reverb eklenmedi. Gitarlar pan denemelerine rağmen mono ve ortada bırakıldı. Scott, Frusciante'nin düzenini 'gitar, kablo, amfi' diye özetliyor; ton büyük ölçüde vuruş dinamiğinden geliyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Aralarında boşluk olan iki notalı (double-stop/dyad) partiler ve aradaki telleri susturma",
+    "Ritmik his ve hafif vuruş dinamiği",
+    "Slide solosu: doğru entonasyon, slide vibratosu ve susturma",
+    "Pek çok sus ve boşluk; zamanlama hassasiyeti"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "Temel ton budur: Strat, temiz bir Showman, efekt yok. Arada sessiz tel bulunan iki notalı figürler çalınıyor; Frusciante bunu 'birbirinden uzak iki notayı havalı bir ritimde çalmak' diye anlatıyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ton aynı, sadece vuruş biraz daha dolu. Ayrı bir overdub olduğuna dair bilgi yok."
+   },
+   {
+    "name": "Birinci slide solosu",
+    "description": "Overdub. Gitar '65 Telecaster'a değişiyor (bir kaynak 1960 Custom Telecaster diyor). Ton temiz, aynı Showman zinciri, fuzz yok. Tele köprü manyetiği daha parlak ve twangy bir ses veriyor (pickup için guess)."
+   },
+   {
+    "name": "İkinci (outro) slide solosu",
+    "description": "Aynı Telecaster ve slide, ama bu kez fuzz pedalı amfi önünde açık. Ses doygun ve sustain'li fuzz'a dönüyor; ritimdeki temiz tondan en büyük fark bu."
+   }
+  ],
+  "warnings": [
+   "Strat'ın yılı tartışmalı: Frusciante '55 diyor, Ground Guitar seri numarasına göre '54 olduğunu söylüyor.",
+   "Telecaster'ın yılı tartışmalı: birincil kaynakta Frusciante '65 Telecaster diyor, Ground Guitar ise 1960 Custom Telecaster yazıyor. Birincil kaynağa öncelik verildi.",
+   "Fuzz pedalının modeli birincil kaynakta geçmiyor (sadece 'a fuzz pedal'). Ground Guitar'ın Boss FZ-3 iddiası zayıf; o dönem için Big Muff da olası.",
+   "Showman ayarları, kabin ve hoparlör bilgisi hiçbir kaynakta yok; verilen değerler tahmin.",
+   "Frusciante, Showman'ı 'sanırım' diyerek hatırlıyor; yani kesin bir ifade değil.",
+   "Tonalite kaynaklara göre değişiyor: F majör (Klang, Karaoke-version), D minör (Hooktheory), C# minör (AcousticBrainz, düşük güvenle). Tunebat'ta orijinal kayıt bulunamadı. BPM 89'da kaynaklar uzlaşıyor."
+  ],
+  "research_confidence": "high",
+  "sources": [
+   {
+    "title": "Guitar Player, Eylül 1999 – Return Of The Prodigal Son (invisible-movement arşivi)",
+    "url": "https://invisible-movement.net/press/1999-09-guitarplayer"
+   },
+   {
+    "title": "Sound on Sound – Jim Scott: Recording Red Hot Chili Peppers' Californication",
+    "url": "https://www.soundonsound.com/people/jim-scott-recording-red-hot-chili-peppers-californications"
+   },
+   {
+    "title": "Ground Guitar – John Frusciante's Gear on Californication",
+    "url": "https://www.groundguitar.com/tone-breakdown/john-frusciante-californication-rig/"
+   },
+   {
+    "title": "Ground Guitar – John Frusciante's Fender Blackface Showman",
+    "url": "https://www.groundguitar.com/john-frusciante-gear/john-frusciantes-fender-blackface-showman-head/"
+   },
+   {
+    "title": "Hooktheory – Scar Tissue",
+    "url": "https://www.hooktheory.com/theorytab/view/red-hot-chili-peppers/scar-tissue"
+   },
+   {
+    "title": "AcousticBrainz – Scar Tissue",
+    "url": "https://acousticbrainz.org/7141e0fc-0f06-4d69-b6f5-fc7d93ecdee3"
+   },
+   {
+    "title": "Klang – Scar Tissue",
+    "url": "https://songs.klang.io/en/s/Red%20Hot%20Chili%20Peppers/Scar%20Tissue/mzJj5-lubeM"
+   },
+   {
+    "title": "Equipboard – John Frusciante",
+    "url": "https://equipboard.com/pros/john-frusciante"
+   }
+  ]
+ }
+}

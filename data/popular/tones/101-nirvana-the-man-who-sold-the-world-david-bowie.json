@@ -1,0 +1,178 @@
+{
+ "rank": 101,
+ "part": "clean",
+ "researchedAt": 1795285267265,
+ "original": {
+  "song": {
+   "title": "The Man Who Sold The World",
+   "artist": "Nirvana",
+   "album_or_year": "MTV Unplugged in New York (kayıt 18 Kasım 1993, yayın 1994)",
+   "tone_character": "Amfiye bağlanmış bir akustik gitar: Martin D-18E'nin Bartolini manyetiğinden gelen sinyal kiralık bir Fender Twin Reverb'e giriyor. Ton parlak ve elektroakustik karakterli; üstüne hafif chorus ve az yaylı reverb ekleniyor.",
+   "tone_tags": [
+    "temiz",
+    "parlak",
+    "manyetikli akustik rengi",
+    "hafif chorus",
+    "az reverb",
+    "canlı his"
+   ],
+   "bpm": "114–118 BPM",
+   "key": "C# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1959 C.F. Martin D-18E",
+    "pickup": "Bartolini 3AV ses deliği manyetiği (orijinal DeArmond manyetiklerinin yerine takıldı)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Twin Reverb (silver-panel, SIR'dan kiralık)",
+     "channel": "Temiz kanal (Normal mi Vibrato mu olduğu bilinmiyor)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "3",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin: manyetiğin boğuklaşmasını önlemek için"
+      },
+      {
+       "name": "Reverb",
+       "value": "2",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Livenirvana'ya göre Kurt'ün kendi Twin'i gelmedi, SIR'dan silver-panel bir Twin kiralandı. Equipboard '1982 Blackface' diyor, bu bilgiyle çelişiyor. Amfi, kamerada monitör gibi görünsün diye sahte bir ahşap kutunun içine gizlendi. Düğme ayarlarını veren bir kaynak yok."
+    }
+   ],
+   "cab": {
+    "model": "Twin Reverb combo'nun kendi kabini (açık arkalı)",
+    "speakers": "2x12 (bu amfideki hoparlör modeli bilinmiyor)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "bilinmiyor",
+      "distance": "bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Efektlerden sonra bir Countryman Type 85 DI kullanıldı. Bu yüzden kayıttaki ton muhtemelen DI sinyaliyle amfi mikrofonunun karışımı. Amfi mikrofonuyla ilgili kaynak yok."
+   },
+   "pedals": [
+    {
+     "model": "Electro-Harmonix Small Clone",
+     "purpose": "Amfi önünde (Twin'de efekt döngüsü yok); hafif chorus. Livenirvana'ya göre provada EchoFlanger/Polychorus denendi, çekimde Small Clone kullanıldı.",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "saat 11 civarı",
+       "note": "tahmin: 1993 turnesinde başka bir konserde bu ayar belgelenmiş"
+      },
+      {
+       "name": "Depth",
+       "value": "Off",
+       "note": "tahmin: düşük derinlik"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Countryman Type 85 DI",
+     "purpose": "Efektlerden sonra; sinyali konsola doğrudan da gönderiyor",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Twin Reverb dahili spring reverb",
+     "purpose": "Amfinin içinde, preamptan sonra",
+     "settings": [
+      {
+       "name": "Reverb",
+       "value": "2",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Kayıt 18 Kasım 1993'te New York'taki Sony Music Studios'ta canlı alındı. MTV prodüktörü Alex Coletti; albümün prodüksiyonunu Scott Litt ve Nirvana yaptı. Overdub ya da double-tracking olduğuna dair bir bilgi yok. Kurt'ün sinyali hem Twin'den hem efektlerden sonraki Countryman DI'dan alındı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Akor vuruşu ve serbest arpejler",
+    "Ana riff melodisini ritimli çalmak",
+    "Eb akort gerekiyor",
+    "Vokalle birlikte canlı çalma dinamiği"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / solo melodisi",
+    "description": "Gitar ve amfi aynı. Guitar World'e göre bu kayıtta Boss DS-2 duyuluyor, büyük ihtimalle riff ve solo melodisinde. Temiz tona göre biraz daha kirli ve öne çıkık; DS-2 düşük gain'de, Mode I'de amfinin önünde."
+   },
+   {
+    "name": "Pat Smear'in ritim gitarı",
+    "description": "Bartolini 3AV takılı Harmony Buck Owens akustik. Daha düz ve efektsiz bir akustik ritim."
+   }
+  ],
+  "warnings": [
+   "Pedal ayarları belgelenmemiş. Small Clone'un çekimde kullanıldığını yalnızca livenirvana söylüyor.",
+   "DS-2 mi DS-1 mi kullanıldığı ve tam olarak hangi bölümde açıldığı tartışmalı.",
+   "Amfi yılı ve panel tipi kaynaklar arasında çelişiyor: silver-panel kiralık mı, 1982 Blackface mı.",
+   "Tonalite ve BPM kaynağa göre değişiyor: C# minör / G# minör, 108–119 BPM. Tunebat'ta sayfa bulunamadı.",
+   "Amfi mikrofonu ve hoparlör modeli tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Livenirvana Kurt amps & FX",
+    "url": "https://www.livenirvana.com/equipment/cleme/kurt2.php"
+   },
+   {
+    "title": "Livenirvana Kurt guitars",
+    "url": "https://www.livenirvana.com/equipment/kurt.php"
+   },
+   {
+    "title": "Equipboard Unplugged",
+    "url": "https://equipboard.com/albums/nirvana-mtv-unplugged-in-new-york"
+   },
+   {
+    "title": "Guitar World Martin mod",
+    "url": "https://www.guitarworld.com/artists/guitarists/kurt-cobain-6-million-dollar-martin-mod"
+   },
+   {
+    "title": "Guitar World five cheap pedals",
+    "url": "https://www.guitarworld.com/gear/how-to-get-nirvanas-guitar-tones-with-five-cheap-pedals"
+   },
+   {
+    "title": "UG chords",
+    "url": "https://tabs.ultimate-guitar.com/tab/nirvana/the-man-who-sold-the-world-chords-2172467"
+   },
+   {
+    "title": "Songtell",
+    "url": "https://songtell.com/nirvana/the-man-who-sold-the-world"
+   },
+   {
+    "title": "Audiokeychain",
+    "url": "https://www.audiokeychain.com/track/tVb/nirvana-the-man-who-sold-the-world-mtv-unplugged"
+   }
+  ]
+ }
+}

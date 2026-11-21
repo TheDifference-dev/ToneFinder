@@ -1,0 +1,235 @@
+{
+ "rank": 102,
+ "part": "lead",
+ "researchedAt": 1795285240171,
+ "original": {
+  "song": {
+   "title": "Song 2",
+   "artist": "Blur",
+   "album_or_year": "Blur (1997)",
+   "tone_character": "Bilerek amatörce, kaba ve patlayan bir fuzz/distortion tonu: ince, sıkıştırılmış bir girişten sonra nakarat ve 'woo-hoo' bölümünde Big Muff'tan geçen bas ile birleşen, orta frekansı yırtıcı, kirli ve doygun bir gitar duvarı. Grunge parodisi olarak tasarlanmış, cilalanmamış ve 'dağılmak üzere' bir ses.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "kirli fuzz/distortion",
+    "orta frekans öne çıkık",
+    "kaba ve lo-fi",
+    "sıkıştırılmış",
+    "bas ile kaynaşan alt",
+    "punk enerjisi"
+   ],
+   "bpm": "130 BPM",
+   "key": "F minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Telecaster (Coxon'un 1952 Telecaster'ı ya da Blur dönemindeki Telecaster'larından biri)",
+    "pickup": "Köprü manyetiği (tek bobin Telecaster köprü)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 SLP Super Lead 100W",
+     "channel": "Tek kanal (High Treble girişi), pedal ile sürülmüş",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin; Marshall PB100 Power Brake ile güç düşürülmüş olabilir"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Coxon'un Blur dönemindeki ana amfisi Marshall 1959 SLP + PB100 Power Brake (Groundguitar); Guitar Player'da 'çoğunlukla Telecaster ve Marshall' dendi. Song 2 kaydına özel amfi bilgisi bulunamadı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960/1969 4x12",
+    "speakers": "Celestion G12 serisi (muhtemelen G12T-75 / Vintage 30)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kapağa yakın, hafif kenar",
+      "distance": "2-3 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon için kayda özel kaynak yok; Stephen Street'in Song 2 anlatımı davul odası mikrofonlarına (Neumann U87, PZM) ve vokalde kontrol odasında SM57'ye odaklanıyor."
+   },
+   "pedals": [
+    {
+     "model": "DOD FX76 Punkifier",
+     "purpose": "Amfi önünde; nakarattaki/hook bölümündeki ana distortion",
+     "settings": [
+      {
+       "name": "Level",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Low",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "High",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Distortion",
+       "value": "9",
+       "note": "tahmin; neredeyse sonuna kadar"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Pro Co RAT / RAT 2",
+     "purpose": "Amfi önünde; alternatif ana distortion. Coxon 'nakaratta Rat'e basar, verse'te kapatırdım' diyor (genel ifade)",
+     "settings": [
+      {
+       "name": "Distortion",
+       "value": "8",
+       "note": "tahmin"
+      },
+      {
+       "name": "Filter",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss VB-2 Vibrato",
+     "purpose": "Amfi önünde; finalde/çıkışta yalpalayan detune efekti",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Depth",
+       "value": "8",
+       "note": "tahmin; mide bulandırıcı detune"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Stephen Street, Mayfair Studios (Londra), 1996. Kayıt Otari RADAR sabit diskli sistemine yapıldı. Rowntree ve Coxon iki davul setiyle çaldı; odada Neumann U87 ve olasılıkla PZM ile lo-fi 'küçük' bir davul sesi alındı, en iyi ölçüler kopyalanıp şarkı boyunca süren bir loop yapıldı ve grup bunun üzerine çaldı. Albarn kontrol odasında el SM57'ye söyledi. Mikste Alex James'in bas partisi Big Muff'tan geçirildi; nakarattaki 'büyük distorted ses'in önemli bir kısmı bastan geliyor (bazı forumlara göre iki distorted bas). SSL konsolda EQ ve kompresyonla loop daha 'grainy' hale getirildi. Coxon bilerek amatörce bir gitar sesi istedi ve şarkının hızlandırılmasını önerdi."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Hızlı, sert aşağı vuruşlu power chord'lar (~130 BPM)",
+    "Dinamik geçiş: verse'te sakin, nakaratta pedala basıp tam saturasyon",
+    "Feedback ve gürültüyü bilerek kontrol etmek",
+    "Teknik olarak basit; asıl zorluk enerjiyi korumak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş",
+    "description": "Lo-fi davul loop'u üzerinde ince, tiz ve sıkıştırılmış gitar riffi. Distortion açık ama daha dar bantlı ve küçük ses; patlamadan önceki gerilim. Orta frekansı ve kazancı biraz azaltılmış hali."
+   },
+   {
+    "name": "Verse",
+    "description": "Pedal kapalı ya da çok az kazançla, seyrek, yalın vuruşlar. Coxon'un 'verse'te kapatırdım' ifadesine uygun olarak temiz ile hafif crunch arası bir ton."
+   },
+   {
+    "name": "Nakarat / 'Woo-hoo' hook",
+    "description": "Solo olarak istenen bölüme en yakın kısım: tam distortion açık, Big Muff'lı bas ile birleşen yoğun duvar. Ana ton budur."
+   },
+   {
+    "name": "Final / çıkış",
+    "description": "Aynı yüksek kazançlı ton; kaynaklara göre Boss VB-2 vibrato ile yalpalayan detune eklenmiş olabilir; feedback ve gürültü."
+   }
+  ],
+  "warnings": [
+   "Song 2'de klasik bir gitar solosu yok. 'Solo' isteği, nakarattaki/'woo-hoo' hook'taki ve finaldeki distorted enstrümantal bölüm olarak yorumlandı.",
+   "Hangi gitarın kullanıldığı kesin değil. Ultimate Guitar'a göre Coxon kayıtta her zamanki '52 Telecaster'ını kullanmadı; klipteki fretless Hayman'ın kayıtta kullanıldığından şüphe ediliyor. Gearspace'te fretless gitar iddiası doğrulanmamış.",
+   "DOD FX76 Punkifier'ın stüdyo kaydında kullanıldığını yalnızca Groundguitar söylüyor; diğer rig sayfaları pedalı kayda bağlamıyor. Rat ise Coxon'un genel tercihi.",
+   "Nakarattaki ağır distortion'ın büyük kısmı Big Muff'tan geçen bastan geliyor (Sound on Sound'da Street doğruluyor). Gitarın payı kaynaklarda net değil.",
+   "Tonalite tartışmalı: kaynaklarda F minör / F Dorian, Ab majör, C minör gibi farklı değerler var. F Dorian/F minör en olası görünüyor. Tempo tutarlı: yaklaşık 130 BPM.",
+   "Amfi, kabin, mikrofon ve tüm düğme ayarları kayda özel kaynakla doğrulanamadı; bunlar Coxon'un o dönemdeki genel rig'ine dayanan tahminler."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Sound on Sound - How I Got That Sound: Stephen Street (Song 2)",
+    "url": "https://www.soundonsound.com/techniques/how-got-sound-stephen-street"
+   },
+   {
+    "title": "Wikipedia - Song 2",
+    "url": "https://en.wikipedia.org/wiki/Song_2"
+   },
+   {
+    "title": "Ground Guitar - Graham Coxon Blur Guitars & Gear",
+    "url": "https://www.groundguitar.com/graham-coxon-blur-guitars-gear/"
+   },
+   {
+    "title": "Ultimate Guitar - The Story Behind 'Song 2' by Blur",
+    "url": "https://www.ultimate-guitar.com/articles/features/the_story_behind_song_2_by_blur-66877"
+   },
+   {
+    "title": "Gearspace - Blur Song 2 production",
+    "url": "https://gearspace.com/board/so-much-gear-so-little-time/453734-blur-quot-song-2-quot-production.html"
+   },
+   {
+    "title": "Guitar Player - Graham Coxon on His Unique Style",
+    "url": "https://guitarplayer.com/players/my-records-always-sound-like-me-slightly-shambolic-and-about-to-break-graham-coxon-on-his-unique-style"
+   },
+   {
+    "title": "Guitar World - Why Graham Coxon is questioning his classic Blur guitar rig",
+    "url": "https://www.guitarworld.com/artists/guitarists/why-graham-coxon-is-questioning-his-classic-blur-guitar-rig"
+   },
+   {
+    "title": "Far Out - Graham Coxon explains creation of Song 2",
+    "url": "https://faroutmagazine.co.uk/graham-coxon-blur-explain-creation-song-2/"
+   },
+   {
+    "title": "Reverb - Potent Pairings: How to Sound Like Blur",
+    "url": "https://reverb.com/news/potent-pairings-how-to-sound-like-blur"
+   },
+   {
+    "title": "Hooktheory - Song 2",
+    "url": "https://hooktheory.com/theorytab/view/blur/song-2"
+   },
+   {
+    "title": "AudioKeychain - Blur Song 2",
+    "url": "https://www.audiokeychain.com/track/YDv/blur-song-2"
+   },
+   {
+    "title": "Karaoke Version - Song 2",
+    "url": "https://www.karaoke-version.com/custombackingtrack/blur/song-2.html"
+   }
+  ]
+ }
+}

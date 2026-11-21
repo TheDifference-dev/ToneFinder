@@ -1,0 +1,227 @@
+{
+ "rank": 114,
+ "part": "lead",
+ "researchedAt": 1795285726455,
+ "original": {
+  "song": {
+   "title": "No More Tears",
+   "artist": "Ozzy Osbourne",
+   "album_or_year": "No More Tears (1991)",
+   "tone_character": "EMG'li Les Paul Custom'ın SD-1 ile itilmiş bir Marshall JCM800 2203'e girdiği, bas ve tizi açık ama ortası tanımlı, sıkı ve agresif yüksek gainli bir ton. Üzerinde hafif chorus genişliği, solonun sonunda mikste eklenmiş dijital delay var.",
+   "tone_tags": [
+    "distorted",
+    "sıkı alt",
+    "parlak tiz",
+    "tanımlı orta",
+    "hafif chorus genişliği",
+    "agresif vibrato",
+    "stereo"
+   ],
+   "bpm": "103–104 BPM",
+   "key": "C# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Custom (Zakk Wylde'ın 'The Grail' / 'The Rebel'; Guitar World 1981 Les Paul Custom diyor)",
+    "pickup": "Köprü manyetiği EMG 81 (aktif); sapta EMG 85. Solo için köprü manyetiği tahmini (likely)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (100 W), iki kafa stereo",
+     "channel": "Tek kanal, high-sensitivity input",
+     "settings": [
+      {
+       "name": "Preamp Volume",
+       "value": "10",
+       "note": "Guitar World'ün verdiği ayar"
+      },
+      {
+       "name": "Master Volume",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Bass",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "9",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "3",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Amfi modeli kesin: hem Guitar World hem de Zakk'ın kendisi (MusicRadar) JCM800 2203 diyor. Düğme ayarları Guitar World'ün ton dökümünden geliyor; bunlar stüdyo notu değil, yeniden kurgulama olabilir. Lamba türü tartışmalı: Guitar World 6550 diyor, Zakk o dönemde EL34 olduğunu düşünüyor. Ton, iki kafanın chorus pedalının stereo çıkışlarıyla sürülmesiyle elde ediliyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12",
+    "speakers": "Celestion G12T-75 (Guitar World) ya da Celestion Greenback (Zakk'ın kendi anlatımı)",
+    "mics": [],
+    "certainty": "likely",
+    "notes": "Kabin hoparlörü tartışmalı. Mikrofon modeli, pozisyonu ve mesafesi hiçbir kaynakta yok. Dönemin standardı SM57 olurdu, ancak bu yalnızca tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Boss SD-1 Super Overdrive",
+     "purpose": "Amfi önünde boost/ek gain ve çıkış",
+     "settings": [
+      {
+       "name": "Level",
+       "value": "6.5",
+       "note": ""
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Drive",
+       "value": "6.5",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss CH-1 Super Chorus",
+     "purpose": "Amfi önünde, stereo çıkışlarla iki Marshall'ı besliyor; şarkı boyunca açık, gövde ve hafif modülasyon veriyor (yüksek gainli bir kurulumda efekt döngüsüne de konulabilir)",
+     "settings": [
+      {
+       "name": "E.Level",
+       "value": "8",
+       "note": ""
+      },
+      {
+       "name": "EQ",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Rate",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Depth",
+       "value": "5",
+       "note": ""
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Yamaha SPX90 (Symphonic/chorus)",
+     "purpose": "Stüdyoda/mikste eklenmiş olabilecek chorus; Zakk, Michael Wagener'in eklediğini düşünüyor",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Dijital delay ünitesi (model bilinmiyor)",
+     "purpose": "Mikste; yalnızca solonun sonunda",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~580 ms",
+       "note": "Tahmin: 103 BPM'de dörtlük nota; kaynakta süre yok"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Drop C# (C# G# C# F# A# D#)",
+   "recording_notes": "Prodüktörler John Purdell ve Duane Baron (Wikipedia). Zakk, Michael Wagener'in mikse katkı verdiğini ve SPX90 chorus'u eklemiş olabileceğini söylüyor. Solo 'tek geçiş' (one pass) olarak kaydedilmiş, klavye partisine ve akor değişimlerine göre önceden kurgulanmış. Wah (Cry Baby) ve Rotovibe bu şarkıda kullanılmamış (Guitar World). İki JCM800 stereo çalışıyor. Teller GHS Boomers .010–.060, pena Dunlop Tortex 1.14 mm. Stüdyo adı kaynaklarda doğrulanmadı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Hızlı alternate picking ile pentatonik koşular",
+    "Geniş, agresif Zakk Wylde vibratosu",
+    "Geniş bend'ler",
+    "Sona doğru akor değişimlerine oturan tırmanan pasaj",
+    "Solo yavaş başlayıp 8. ölçüye kadar hızlanıyor; zamanlama kontrolü",
+    "Pinch harmonik (Wylde imzası; bu soloda doğrulanmadı)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Bas girişi ve kıta",
+    "description": "Giriş bas ve klavye ağırlıklı. Kıtalarda gitar seyrek akor ve vurgular çalıyor; aynı rig, daha az yoğun çalım ve muhtemelen sesi biraz kısılmış gitar (tahmin)."
+   },
+   {
+    "name": "Nakarat / ana riff",
+    "description": "Aynı rig: köprü manyetiği EMG 81, SD-1 ile itilmiş JCM800 ve sürekli açık CH-1. Drop C#'de power chord'lar ve palm mute; solodan farkı yalnızca ritim çalımı."
+   },
+   {
+    "name": "Ara bölüm / slide partisi",
+    "description": "Piyano ve orkestral ağırlıklı 'art-rock' köprüde, Zakk'ın 'Freebird'e saygı' dediği slide partisi var (krom kaplı pirinç slide). Distorted ton korunuyor, muhtemelen daha uzun sustain ve mikste daha fazla delay/reverb var (tahmin). Manyetik tercihi bilinmiyor."
+   },
+   {
+    "name": "Solo sonu",
+    "description": "Solonun bitişinde mikste dijital delay eklenmiş; geri kalan solo kuru (chorus hariç)."
+   }
+  ],
+  "warnings": [
+   "Lamba türü tartışmalı: Guitar World 6550 diyor, Zakk o dönemde EL34 olduğunu düşünüyor.",
+   "Hoparlör tartışmalı: Guitar World G12T-75 diyor, Zakk Greenback diyor.",
+   "Chorus kaynağı tartışmalı: Guitar World Boss CH-1 diyor; Zakk ve bonedo stüdyoda Yamaha SPX90 eklendiğini söylüyor. Zakk kaydı chorus'la yapmadığını belirtiyor.",
+   "Guitar World'ün düğme ayarları stüdyo kaydına değil, ton dökümüne dayanıyor olabilir.",
+   "Mikrofon, pozisyon, mesafe ve stüdyo bilgisi bulunamadı.",
+   "Tonalite kaynaklarda C#m, Cm ve Db arasında değişiyor; drop C# akort nedeniyle C# minör en olası.",
+   "Tunebat'ta bu şarkının sayfası bulunamadı; BPM değeri AcousticBrainz ve Karaoke-Version'dan geliyor ve şarkı içinde değişken.",
+   "Delay süresi (~580 ms) yalnızca tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World - The secrets behind Zakk Wylde's guitar tone on No More Tears",
+    "url": "https://www.guitarworld.com/features/the-secrets-behind-zakk-wyldes-guitar-tone-on-ozzy-osbournes-no-more-tears"
+   },
+   {
+    "title": "MusicRadar - Zakk Wylde No More Tears interview",
+    "url": "https://www.musicradar.com/news/zakk-wylde-ozzy-osbourne-no-more-tears-interview"
+   },
+   {
+    "title": "Wikipedia - No More Tears (song)",
+    "url": "https://en.wikipedia.org/wiki/No_More_Tears_(Ozzy_Osbourne_song)"
+   },
+   {
+    "title": "bonedo - No More Tears solo workshop",
+    "url": "https://www.bonedo.de/artikel/die-besten-gitarren-soli-ozzy-osbourne-no-more-tears-workshop"
+   },
+   {
+    "title": "Mixdown - Gear Rundown: Zakk Wylde",
+    "url": "https://mixdownmag.com.au/features/gear-rundown-zakk-wylde"
+   },
+   {
+    "title": "Hooktheory - No More Tears",
+    "url": "https://www.hooktheory.com/theorytab/view/ozzy-osbourne/no-more-tears"
+   },
+   {
+    "title": "Karaoke-Version - No More Tears",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/ozzy-osbourne/no-more-tears.html"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/194dfd11-4164-4b88-ae0c-73ace8f6c30e"
+   },
+   {
+    "title": "Skyminds tab",
+    "url": "https://www.skyminds.net/ozzy-osbourne/no-more-tears.tab"
+   }
+  ]
+ }
+}

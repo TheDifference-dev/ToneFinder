@@ -1,0 +1,228 @@
+{
+ "rank": 108,
+ "part": "rhythm",
+ "researchedAt": 1795285493938,
+ "original": {
+  "song": {
+   "title": "Duality",
+   "artist": "Slipknot",
+   "album_or_year": "Vol. 3: (The Subliminal Verses), 2004",
+   "tone_character": "Drop B akortta, iki gitarla double-track edilmiş, yüksek gain'li ama Iowa'ya göre daha az gain'li ve daha fazla orta frekanslı, daha 'temiz/net' prodüksiyonlu modern metal ritim tonu. Alt frekans sıkı, akorlar okunaklı, Rick Rubin'in kuru ve doğal miksi nedeniyle belirgin reverb yok.",
+   "tone_tags": [
+    "yüksek gain",
+    "orta frekans öne çıkık",
+    "sıkı alt",
+    "kuru (az reverb)",
+    "double-track geniş stereo",
+    "Drop B",
+    "net akor ayrımı"
+   ],
+   "bpm": "144 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Mick Thomson: Ibanez MTM1 (imza model) / Jim Root: Fender Flathead Telecaster ya da Showmaster (siyah, imza Fender modellerinin temeli)",
+    "pickup": "Köprü manyetiği; o dönemde iki gitaristte de aktif EMG 81 (Jim Root'ta köprüde EMG 81, sapta EMG 60)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "VHT Pitbull Ultra Lead (Mick Thomson)",
+     "channel": "Lead / yüksek gain kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6",
+       "note": "Mick: 'Vol. 3'te gain'i biraz düşürdüm' — Iowa'ya göre daha az; değer tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6.5",
+       "note": "Mick: 'daha fazla orta ekledim'; değer tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "MusicRadar'da Mick: 'Iowa ve Vol. 3'te bunu kullandım... aynı amfi, sadece farklı ayarlar; Vol. 3 çok daha temiz bir kayıttı, gain'i biraz düşürüp orta ekledim; ilk kez Pro Tools kullandık.' Ayrıca bazı kaynaklar Reinhold Bogner'in getirdiği modlu bir Bogner Uberschall'dan söz ediyor (doğrulanamadı)."
+    },
+    {
+     "model": "Rivera K120TRE Knucklehead Tre (Jim Root)",
+     "channel": "Yüksek gain kanalı (Channel 3 / lead)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mid",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Equipboard: Vol. 3'te Jim Root'un ana amfisi. Duality'nin tam olarak hangi amfiyle çalındığı belirtilmiyor."
+    }
+   ],
+   "cab": {
+    "model": "4x12 kabinler (Mick: Carvin 4x12 / VHT 4x12; Jim: Rivera ya da Mesa 4x12)",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Cap kenarına yakın, hafif off-axis",
+      "distance": "1-2 in"
+     },
+     {
+      "model": "Royer R-121 (tahmin)",
+      "position": "Cap-kenar arası",
+      "distance": "2-4 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin/mikrofon detayı hiçbir kaynakta yok. Kayıt stüdyo değil Houdini malikânesi (The Mansion) olduğu için tüm ekipman kiralandı/getirildi. Mikrofon seçimi tipik Greg Fidelman pratiğine dayalı tahmindir."
+   },
+   "pedals": [
+    {
+     "model": "Noise gate (ör. ISP Decimator / Boss NS-2)",
+     "purpose": "Amfi önünde; Drop B yüksek gain'de chug aralarını susturmak için",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "Orta",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "DigiTech X-Series Hyper Phase",
+     "purpose": "Jim Root'un Vol. 3 rig diyagramında; Duality ritminde kullanıldığına dair kanıt yok (muhtemelen kapalı). Yüksek gain'le efekt döngüsünde olmalı",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb/ambiyans (minimal)",
+     "purpose": "Mikste; çok az oda ambiyansı, gitarlar kuru",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop B (B F# B E G# C#)",
+   "recording_notes": "Prodüktör Rick Rubin; mühendislik/miks Greg Fidelman. 2003'te Los Angeles'taki The Mansion'da (Houdini malikânesi) kaydedildi; stüdyo olmadığı için ekipman kiralandı. Grubun ilk Pro Tools kaydı. Mick ve Jim ritimleri ayrı kanallara double-track etti (sol/sağ). Mick'e göre Iowa'dan daha temiz ses, daha az gain ve daha fazla orta frekans hedeflendi."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Drop B akortta sıkı palm muting ile chug riffleri",
+    "Davul ile senkoplu, tam oturan ritim (yaklaşık 144 BPM)",
+    "Nakaratta uzun tutulan akorlarda sustain ve susturma disiplini",
+    "Köprü bölümünde hızlı alternate picking ile tekrar eden chug'lar",
+    "İki gitarın birbirine oturması için sıkı double-tracking"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / kıta",
+    "description": "Kıtalarda gitarlar daha seyrek ve atmosferik; tek notalı uyumsuz figürler ya da yarı temiz/hafif distorsiyonlu arpejler var. Gain'i belirgin düşürün ya da gitar volume düğmesini kısın, isterseniz sap manyetiğine geçin; hafif reverb eklenebilir."
+   },
+   {
+    "name": "Ön nakarat / nakarat",
+    "description": "Ana ritim tonuyla aynı: tam gain, köprü manyetiği, büyük ve uzun tutulan power akorlar. Double-track genişliği en fazla burada hissediliyor."
+   },
+   {
+    "name": "Köprü ('You cannot kill what you did not make')",
+    "description": "Aynı yüksek gain'li ton, daha sıkı palm mute'lu ve davulla senkoplu chug'lar. Ton değişikliği yok, belki gate biraz daha sıkı."
+   },
+   {
+    "name": "Solo",
+    "description": "Şarkıda klasik bir gitar solosu yok."
+   }
+  ],
+  "warnings": [
+   "Duality'ye özel ekipman bilgisi bulunamadı; amfiler albüm genelindeki kaynaklara dayanıyor.",
+   "Mick Thomson'ın Vol. 3 amfisi: MusicRadar'da kendisi VHT Pitbull diyor. Bazı kaynaklar modlu bir Bogner Uberschall'dan bahsediyor ama doğrulanamadı. Başka bir röportajda ismi geçmeyen bir albüm için KR7, VHT ve Rivera K-Tre'nin karıştırıldığını söylüyor.",
+   "Kaynaklar tonaliteyi farklı veriyor: SongBPM E, AcousticBrainz B minör (%65), Hooktheory B Frigyen, Musicnotes D minör. Drop B akordu ve riffler B merkezli olmayı destekliyor.",
+   "Akort: Ultimate Guitar Drop B diyor, KillerRig Drop A diyor. Drop B daha güvenilir.",
+   "Kabin, hoparlör ve mikrofon bilgileri tamamen tahmin.",
+   "Amfi düğme değerleri tahmin; sadece 'daha az gain, daha fazla orta' bilgisi doğrulanmış.",
+   "Ibanez MTM1/EMG 81 ve Fender Flathead/EMG 81 ile dönem rig'ine dayanan güçlü bir tahmin. Kayıtta tam olarak hangi gitarların kullanıldığı belgelenmemiş."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Equipboard – Slipknot Vol. 3 The Subliminal Verses",
+    "url": "https://equipboard.com/albums/slipknot-vol-3-the-subliminal-verses"
+   },
+   {
+    "title": "MusicRadar – Mick Thomson favourite guitars and gear",
+    "url": "https://musicradar.com/news/in-pictures-slipknots-mick-thomson-shares-his-favourite-guitars-and-gear-from-an-extensive-collection"
+   },
+   {
+    "title": "MusicRadar – Mick Thomson and Jim Root talk gear",
+    "url": "https://musicradar.com/news/guitars/slipknots-mick-thomson-and-jim-root-talk-gear-tone-and-being-flat-broke-580682"
+   },
+   {
+    "title": "Louder – Story behind Vol. 3",
+    "url": "https://loudersound.com/bands-artists/interviews/slipknot-story-behind-vol-3-subliminal-verses"
+   },
+   {
+    "title": "Wikipedia – Vol. 3: (The Subliminal Verses)",
+    "url": "https://en.wikipedia.org/wiki/Vol._3:_(The_Subliminal_Verses)"
+   },
+   {
+    "title": "Wikipedia – Duality (song)",
+    "url": "https://en.wikipedia.org/wiki/Duality_(song)"
+   },
+   {
+    "title": "Ultimate Guitar – Duality Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/slipknot/duality-tabs-819915"
+   },
+   {
+    "title": "SongBPM – Duality",
+    "url": "https://songbpm.com/@slipknot/duality"
+   },
+   {
+    "title": "AcousticBrainz – Duality",
+    "url": "https://acousticbrainz.org/3f6e7946-3457-4c8d-bd96-1ba0a1641a13"
+   },
+   {
+    "title": "Hooktheory – Duality",
+    "url": "https://hooktheory.com/theorytab/view/slipknot/duality"
+   },
+   {
+    "title": "Musicnotes – Duality",
+    "url": "https://www.musicnotes.com/sheetmusic/slipknot/duality/MN0093256"
+   },
+   {
+    "title": "KillerRig – Slipknot amp settings",
+    "url": "https://killerrig.com/slipknot-amp-settings-and-tone-guide/"
+   }
+  ]
+ }
+}

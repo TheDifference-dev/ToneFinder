@@ -1,0 +1,177 @@
+{
+ "rank": 106,
+ "part": "lead",
+ "researchedAt": 1795285505901,
+ "original": {
+  "song": {
+   "title": "Take Me Out",
+   "artist": "Franz Ferdinand",
+   "album_or_year": "Franz Ferdinand (2004)",
+   "tone_character": "Kuru, orta frekansları öne çıkık, hafif crunch'lı vintage İngiliz valf kombo tonu. Yüksek gain yok, amfinin kendi kırılması var. Mikste neredeyse tüm enstrümanlara eklenen birkaç eko 'marş eden, makineli, endüstriyel' bir his veriyor.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "kırılma eşiğinde / hafif crunch",
+    "kuru ve sıkı atak",
+    "vintage İngiliz valf karakteri",
+    "mikste eklenen kısa eko",
+    "teyp sıkıştırması",
+    "keskin üst orta"
+   ],
+   "bpm": "105 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Telecaster (Kapranos) veya Gibson SG (McCarthy); lead/solo hattını kimin çaldığı belgelenmemiş",
+    "pickup": "Köprü manyetiği (tahmin; keskin, orta frekansı öne çıkık ton)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Selmer valf kombo (eski, 1960'lar; model adı verilmemiş)",
+     "channel": "Tek kanal / normal giriş",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Tahmin: crunch amfinin kendi kırılmasından geliyor"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin; sıkı alt için"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Sound on Sound'a göre albümde Kapranos'un partilerinin çoğu 'hırpalanmış eski Selmer valf kombosu' ile kaydedildi; bu bilgi albümün geneli için confirmed, Take Me Out için likely. McCarthy'nin stüdyo amfisi kaynaklarda adıyla geçmiyor. Kapranos 2004'te sahnede Fender Hot Rod Deluxe kullanmış (Equipboard, Pinkpop 2004); bu bilgi stüdyo kaydı için kanıt sayılmaz."
+    }
+   ],
+   "cab": {
+    "model": "Selmer kombonun kendi hoparlörü",
+    "speakers": "Bilinmiyor (tahmin: dönemin İngiliz kombolarındaki gibi tek 12 inç)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (tahmin: dinamik mikrofon, örn. Shure SM57 veya Sennheiser MD421; ikisi de bu seanslarda davul ve vokalde kullanıldı)",
+      "position": "Bilinmiyor (tahmin: kona yakın, hafif kenara doğru)",
+      "distance": "Bilinmiyor (tahmin: yakın mikrofonlama)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Gitar kabini için mikrofonlama bilgisi bulunamadı. Kayıt Neve 8014 konsoluyla yapıldı, agresif EQ ve kompresyon için ayrıca Neve 33122 kullanıldı."
+   },
+   "pedals": [
+    {
+     "model": "Echo (mikste eklenen birden fazla eko; cihaz adı verilmemiş)",
+     "purpose": "Stüdyoda/mikste, amfiden sonra eklendi. Tore Johansson'a göre neredeyse tüm enstrümanlar 'marş eden, makineli, endüstriyel' his için birkaç ekodan geçirildi.",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "143 ms",
+       "note": "Tahmin: 105 BPM'de onaltılık nota; kısa slapback benzeri"
+      },
+      {
+       "name": "Feedback",
+       "value": "%15",
+       "note": "Tahmin: tek-iki tekrar"
+      },
+      {
+       "name": "Mix",
+       "value": "%15",
+       "note": "Tahmin: ton kuru hissediliyor"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Haziran 2003'te İsveç'in Malmö şehrindeki Gula Studion'da, prodüktör Tore Johansson ile kaydedildi. Grup kendi denenmiş gitar/amfi düzenini kullandı. Şarkı, intro ve tempo değişimleri dahil grup halinde canlı kaydedildi; en iyi take'lerin derlenmesi dışında düzenleme yapılmadı. Kapranos ile McCarthy albüm boyunca ritim ve lead rollerini değiştirdi. Mikste neredeyse tüm enstrümanlar birkaç ekodan geçirildi. Grup 'daha thrashy' bir ses istediği için klavye partilerinin çoğu kapatıldı. Kayıt Neve 8014 konsolu ve sinyalin yüksek seviyede basıldığı MCI JH16 teyp üzerinden yapıldı. Line 6 Amp Farm albümde yalnızca başka iki şarkıda kullanıldı, bu şarkıda kullanılmadı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Akorların notalarını tek tek, kesik (staccato) çalmak",
+    "Sol elle susturarak notaları kısa kesmek",
+    "Disko hi-hat'iyle tam oturan, aşağı vuruşlu sıkı zamanlama",
+    "Riff ile vokal arasında soru-cevap ifadesi",
+    "Tempo değişimine uyum (kayıt canlı alındı)",
+    "Uzun bend, hızlı legato ya da virtüöz pasaj yok"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Hızlı giriş (intro/verse)",
+    "description": "Daha hızlı tempoda (yaklaşık 140+ BPM, tahmin) çalınan, iki gitarlı sekizlik ritim bölümü. Ton benzer bir crunch, ama vuruşlar daha yoğun. Sonra şarkı yavaş bölüme geçiyor."
+   },
+   {
+    "name": "Ana riff (yavaş bölüm)",
+    "description": "Şarkının ünlü tek nota riffi, E minör civarında, yaklaşık 105 BPM'de. Lead/solo bölümüyle aynı amfi tonu: hafif crunch, kuru, kesik notalar, mikste eko. Gitarlardan biri riffi çalarken diğeri akorlarla eşlik ediyor."
+   },
+   {
+    "name": "Lead/solo arası",
+    "description": "Şarkıda klasik anlamda bir gitar solosu yok; enstrümantal arada riffin yüksek perdeden, riffe dayalı bir lead varyasyonu çalınıyor. Ton aynı crunch; gerekirse biraz daha fazla gain veya volume ile öne çıkarılabilir (tahmin)."
+   },
+   {
+    "name": "Nakarat ve çıkış",
+    "description": "Akorlu, daha dolgun çalım; aynı amfi tonu, belki daha fazla pena gücüyle. Yüksek gain ya da modülasyon kullanıldığına dair kanıt yok."
+   }
+  ],
+  "warnings": [
+   "Şarkıda belgelenmiş, gerçek anlamda bir gitar solosu yok. 'Solo', enstrümantal aradaki riff/lead bölümü olarak yorumlandı.",
+   "Lead hattını Kapranos'un mu McCarthy'nin mi çaldığı kaynaklarda belirtilmiyor.",
+   "Selmer kombo bilgisi albümün geneli için verilmiş; Take Me Out için ayrıca doğrulanmadı. Selmer modelinin adı bilinmiyor.",
+   "Gitar modelleri dönem fotoğraflarına ve sonraki röportajlara dayanıyor (Telecaster, Gibson SG); bu kayıt için doğrulanmadı.",
+   "Mikrofon, hoparlör ve amfi ayarlarının tümü tahmin.",
+   "BPM kaynaklara göre 104–108 arasında değişiyor (105 en sık değer). Tonalite için E minör (Hooktheory, Mixgraph) ile G majör (karaoke kaynakları) çelişiyor.",
+   "Eko cihazı ve ayarları belirtilmemiş; verilen değerler tahmin. Kapranos'un sonraki yıllardaki Watkins Copycat kullanımı bu kayıt için kanıt değil.",
+   "Song Exploder transkripti (PDF) okunamadı; içinde gear bilgisi olabilir."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Sound on Sound - Recording Franz Ferdinand (Tore Johansson)",
+    "url": "https://www.soundonsound.com/people/recording-franz-ferdinand"
+   },
+   {
+    "title": "Wikipedia - Take Me Out (song)",
+    "url": "https://en.wikipedia.org/wiki/Take_Me_Out_(song)"
+   },
+   {
+    "title": "Equipboard - Alex Kapranos",
+    "url": "https://equipboard.com/alex-kapranos"
+   },
+   {
+    "title": "Equipboard - Nick McCarthy",
+    "url": "https://equipboard.com/nick-mccarthy"
+   },
+   {
+    "title": "Premier Guitar - Franz Ferdinand: Spanners in the Works",
+    "url": "https://www.premierguitar.com/artists/franz-ferdinand-spanners-in-the-works"
+   },
+   {
+    "title": "Guitar World - Alex Kapranos (The Human Fear)",
+    "url": "https://www.guitarworld.com/artists/guitarists/alex-kapranos-franz-ferdinand-the-human-fear"
+   },
+   {
+    "title": "Hooktheory - Take Me Out",
+    "url": "https://hooktheory.com/theorytab/view/franz-ferdinand/take-me-out"
+   },
+   {
+    "title": "Mixgraph - Take Me Out",
+    "url": "https://www.mixgraph.io/tracks/franz-ferdinand-take-me-out"
+   },
+   {
+    "title": "Song Exploder - Franz Ferdinand",
+    "url": "https://songexploder.net/franz-ferdinand"
+   },
+   {
+    "title": "Songfacts - Take Me Out",
+    "url": "https://www.songfacts.com/facts/franz-ferdinand/take-me-out"
+   }
+  ]
+ }
+}

@@ -1,0 +1,132 @@
+{
+ "rank": 111,
+ "part": "lead",
+ "researchedAt": 1795285623237,
+ "original": {
+  "song": {
+   "title": "Du hast",
+   "artist": "Rammstein",
+   "album_or_year": "Sehnsucht (1997)",
+   "tone_character": "Çok kanallı kaydedilmiş, sıkı ve kuru, yüksek gainli Mesa/Boogie Rectifier distorsiyonu; analog amfi sinyali SansAmp ile alınan dijital/direkt bir sinyalle harmanlanmış. Şarkıda klasik bir gitar solosu yok; 'solo' yerine geçen enstrümantal arada ana riff ve klavye melodisi çalınıyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "kuru",
+    "çok katmanlı double-tracking",
+    "palm mute ağırlıklı",
+    "endüstriyel/mekanik",
+    "hafif dijital-direkt karakter"
+   ],
+   "bpm": "125 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP 901 veya ESP KH-2 (Richard Kruspe); Paul Landers'ın gitarı bilinmiyor",
+    "pickup": "Köprü manyetiği (901'de muhtemelen Seymour Duncan SH-4 JB)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Dual Rectifier (Triple Rectifier da olabilir)",
+     "channel": "Yüksek gainli kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Hellner'e göre ses yaklaşık 2/3 Rectifier ile 1/3 SansAmp'ın karışımı. Bu bilgi Herzeleid kayıtları için verilmiş; aynı yapımcıyla yapılan Sehnsucht'ta da aynı yöntemin kullanılmış olması güçlü bir olasılık. Ayarlar bilinmiyor."
+    },
+    {
+     "model": "Tech 21 SansAmp",
+     "channel": "Direkt (DI)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Rectifier ile aynı anda ayrı bir kanala kaydedilmiş. Analog ve dijital sinyal arasındaki faz farkı yüzünden kanallar çapraz panlanmış."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie 4x12",
+    "speakers": "Celestion (muhtemelen Vintage 30)",
+    "mics": [
+     {
+      "model": "Neumann U 67 / M 149 / U 47",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Hellner'e göre SM57 ya da MD421 hiç kullanılmamış; mikrofonlar Neve preamplerden geçiyor (Herzeleid dönemi bilgisi)."
+   },
+   "pedals": [],
+   "tuning": "Drop D (tartışmalı; Standart E diyen kaynaklar da var)",
+   "recording_notes": "Kayıt: Temple Studios, St. Paul's Bay, Malta (Kasım 1996 - Temmuz 1997). Yapımcılar: Jacob Hellner ve Rammstein. Miks: Ronald Prent; mastering: Björn Engelmann. Her riff 2-4 kez çalınıp kaydedilmiş, her çalış Rectifier ve SansAmp olarak iki kanal; böylece tek riff 8 kanala ulaşabiliyor. Kopyala-yapıştır kullanılmamış. Belirgin bir delay ya da reverb yok, ton kuru."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Sıkı palm muting ile chug",
+    "Klavye ve davulla kesin ritim senkronu",
+    "Ani susmalar ve temiz susturma",
+    "Çok kanallı kayıt için riffi her seferinde aynı çalmak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş",
+    "description": "Klavye melodisiyle başlar; gitarlar ağır distorsiyonlu, palm mute'lu chug ile girer. Ton aynı."
+   },
+   {
+    "name": "Kıta",
+    "description": "Gitarlar büyük ölçüde susar ya da seyrek vuruşlarla eşlik eder; vokal ve klavye öndedir. Ton aynı."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Tüm gitar kanalları açık, palm mute ve açık akorların karışımı; en yoğun ve en geniş katman."
+   },
+   {
+    "name": "Köprü / enstrümantal ara (solo yerine)",
+    "description": "Klasik bir solo yok; ana riff klavye melodisinin altında tekrarlanır. Ayrı bir solo tonu kullanılmamış, ritim tonu aynen geçerli."
+   }
+  ],
+  "warnings": [
+   "Du hast'ta geleneksel bir gitar solosu yok; 'Solo' isteği enstrümantal ara ya da riff bölümü olarak yorumlandı.",
+   "Rectifier + SansAmp yöntemi Herzeleid için onaylı; Sehnsucht için çıkarım (likely).",
+   "Akort tartışmalı: tab siteleri Standart E diyor, bazı UG yorumları ve bas tabı Drop D diyor. Tonalite E minör olarak listeleniyor.",
+   "Gitar modeli ve manyetik bu şarkı için doğrulanmadı; Paul Landers'ın 1997 rigi bilinmiyor.",
+   "Amfi ayarları ve mikrofon konumları hiçbir kaynakta yok."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar World - Jacob Hellner on Herzeleid",
+    "url": "https://www.guitarworld.com/features/rammstein-producer-jacob-hellner-details-the-making-of-the-industrial-metal-icons-1995-debut-herzeleid"
+   },
+   {
+    "title": "Wikipedia - Sehnsucht",
+    "url": "https://en.wikipedia.org/wiki/Sehnsucht_(Rammstein_album)"
+   },
+   {
+    "title": "Equipboard - Richard Z. Kruspe",
+    "url": "https://equipboard.com/richard-zven-kruspe"
+   },
+   {
+    "title": "SongBPM - Du hast",
+    "url": "https://songbpm.com/@rammstein/du-hast"
+   },
+   {
+    "title": "Karaoke Version - Du hast",
+    "url": "https://www.karaoke-version.com/custombackingtrack/rammstein/du-hast.html"
+   },
+   {
+    "title": "UG Du Hast Bass tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/rammstein/du-hast-bass-329859"
+   },
+   {
+    "title": "UG Sehnsucht tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/rammstein/sehnsucht-tabs-19883"
+   },
+   {
+    "title": "chords-and-tabs.net Du hast",
+    "url": "https://www.chords-and-tabs.net/song/name/rammstein-du-hast-5"
+   }
+  ]
+ }
+}

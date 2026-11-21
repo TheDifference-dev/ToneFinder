@@ -1,0 +1,161 @@
+{
+ "rank": 103,
+ "part": "lead",
+ "researchedAt": 1795285178616,
+ "original": {
+  "song": {
+   "title": "Paint It Black",
+   "artist": "The Rolling Stones",
+   "album_or_year": "Aftermath (ABD baskısı), single, Mayıs 1966",
+   "tone_character": "Şarkıda klasik anlamda bir elektro gitar solosu yok. 'Solo' gibi duyulan enstrümantal ara ve giriş riffi Brian Jones'un çaldığı sitar melodisi. Gitarda bu bölüm, sitarı taklit eden tek notalı bir lead olarak çalınıyor. Ses temiz ya da hafif kırılmaya yakın, tiz ve orta frekansları öne çıkık, ince ve vızıldayan bir karakterde. Arkada 1966 RCA stüdyosunun kuru, kompresli ve oda etkisi taşıyan sesi var.",
+   "tone_tags": [
+    "temiz / hafif kırılma sınırı",
+    "parlak",
+    "orta frekans öne çıkık, burunlu",
+    "ince alt",
+    "kompresli (stüdyo)",
+    "az reverb, kuru-oda",
+    "sitar taklidi"
+   ],
+   "bpm": "156–162 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Kaynaklar bu kayıt için kesin bir model vermiyor. Keith Richards'ın 1965–66 dönemi gitarları: 1959 Gibson Les Paul Standard (Bigsby'li), Epiphone Casino, Gibson Firebird, Guild M-65 Freshman. Bir Guitar World dersi elektro partisi bir Vox gitarla gösteriyor ama bu derste kullanılan gitar, orijinal kayıttaki değil.",
+    "pickup": "Bilinmiyor. Tiz ve ince sitar taklidi için en olası seçim köprü manyetiği (tahmin).",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Vox AC30 ya da Fender (Twin/Showman) tipi bir amfi; RCA'da stüdyo amfisi kullanılmış da olabilir",
+     "channel": "Normal/Brilliant tipi temiz kanal (tahmin)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "5",
+       "note": "Temiz ya da hafif kırılmaya yakın; tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Sitar benzeri tiz ses için; tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "İnce alt; tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Bu kayıtta hangi amfinin kullanıldığını belgeleyen bir kaynak bulunamadı. Stones 1965–66'da sahnede Vox ve Fender amfileri kullandı. Ayarların tamamı kulaktan yapılmış tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (amfiye bağlı: Vox AC30 kombo 2x12 ya da Fender kombo/kabin)",
+    "speakers": "Bilinmiyor (Celestion Alnico Blue ya da Jensen/JBL olabilir; tahmin)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (1966 RCA Hollywood: büyük ihtimalle dinamik ya da ribbon bir mikrofon; tahmin)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kayıt mühendisi Dave Hassinger. Mikrofon kurulumuna dair bir belge bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok (büyük ihtimalle doğrudan amfiye)",
+     "purpose": "Bu bölümde fuzz ya da başka bir pedala ait kanıt yok. Maestro FZ-1 'Satisfaction'da kullanıldı, bu şarkıda değil.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo kompresörü ve oda/plate reverb (RCA Hollywood)",
+     "purpose": "Stüdyoda ve mikste eklendi, amfiden sonra; hafif reverb ve kompresyon.",
+     "settings": [
+      {
+       "name": "Reverb",
+       "value": "Az",
+       "note": "Kısa oda/plate etkisi; tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E (çoğu ders capo ile çalıyor)",
+   "recording_notes": "Kayıt 6–9 Mart 1966'da RCA Studios, Hollywood'da yapıldı. Prodüktör Andrew Loog Oldham, mühendis Dave Hassinger (doğrulandı). Brian Jones sitarı, Keith Richards elektro ve akustik gitarları, Bill Wyman bas ile Hammond org pedallarını, Jack Nitzsche piyanoyu çaldı. Wyman'ın perdesiz bası şarkının imzalarından biri. Bir kaynağa göre Keith stüdyoda tüm gitar partilerini kendisi overdub etmiş, başka bir kaynak ise Brian Jones'u akustik gitarda gösteriyor. Şarkının sonunda Keith'in bolero ritimli akustik gitarı var. Keith, bitişin fazla kayıt üstüne kayıtla doldurulduğunu düşünüyordu."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Sitar melodisini tek notalı çalmak (E harmonik minör / Doğu tınısı)",
+    "Hızlı tekrarlanan 8'lik ve 16'lık notalar (~158 BPM)",
+    "Slide ve hammer-on ile sitar benzeri süslemeler",
+    "Açık telden drone (E/B) kullanımı",
+    "Final bölümünde hızlanan, çılgın coda"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / sitar riffi",
+    "description": "Sitarla ve aynı melodiyle çalınıyor. Gitarda çalarken solo ile aynı ton kullanılabilir: temiz, tiz, köprü manyetiği."
+   },
+   {
+    "name": "Kıtalar (verse) – elektro ritim",
+    "description": "Keith parmakla çalınan temiz elektro gitarla akorları çalıyor (kaynağa göre: 'nimbly fingerpicking a clean electric guitar'). Ses tamamen temiz ve gain daha düşük. Daha yuvarlak bir ses için sap ya da orta manyetik seçilebilir (tahmin). Capo 2. perdede, Dm şekilleri ile ses Em'de çıkıyor."
+   },
+   {
+    "name": "Akustik ritim / bolero outro",
+    "description": "Akustik gitarda sert, aşağı yönlü vuruşlu bolero ritmi. Sonlarda tempo hızlanıyor. Elektro tonun yerine akustik gitar sesi gelmeli."
+   }
+  ],
+  "warnings": [
+   "Şarkıda klasik bir elektro gitar solosu yok. 'Solo' olarak adlandırılan bölüm Brian Jones'un sitar melodisi ya da enstrümantal arası. Bu rapor onu gitarda sitar taklidi olarak ele alıyor.",
+   "Gitar, amfi, kabin ve mikrofon için doğrudan kaynak bulunamadı. Hepsi Keith'in 1965–66 dönemi ekipmanına dayanan tahmin.",
+   "Kaydın perdesi E minör ile F minör arasında, biraz tiz (bant hızı). AcousticBrainz E minör veriyor, bir DJ analizi F minör diyor. Derslerde capo 1. ya da 2. perdede gösteriliyor, kaynaklar birbirini tutmuyor.",
+   "Kimin hangi gitarı çaldığı tartışmalı: Brian Jones akustik gitarda mı, yoksa Keith tüm gitarları kendisi mi overdub etti?",
+   "Tunebat sayfasına ulaşılamadı. BPM değeri AcousticBrainz ve DJ analizlerinden alındı (~156–162)."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Wikipedia – Paint It Black",
+    "url": "https://en.wikipedia.org/wiki/Paint_It_Black"
+   },
+   {
+    "title": "Skidmore – Paint It Black session notes",
+    "url": "https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/16-PopArt/Stones/60br1601b.html"
+   },
+   {
+    "title": "Guitar World – Keith Richards' guitars",
+    "url": "https://www.guitarworld.com/features/keith-richards-a-life-in-guitars"
+   },
+   {
+    "title": "Guitar World – Acoustic Nation lesson Paint It Black",
+    "url": "https://www.guitarworld.com/acoustic-nation/acoustic-nation-lesson-how-play-rolling-stones-paint-it-black"
+   },
+   {
+    "title": "BOSS – Patch Work: Paint It Black",
+    "url": "https://articles.boss.info/patch-work-paint-it-black-by-the-rolling-stones/"
+   },
+   {
+    "title": "Guitar Alliance – Quick Notes Paint It Black",
+    "url": "https://guitaralliance.net/wp-content/uploads/2023/08/Quick-Notes-Paint-It-Black-Rolling-Stones.pdf"
+   },
+   {
+    "title": "AcousticBrainz analysis",
+    "url": "https://acousticbrainz.org/19537d2b-1491-4d95-96ac-587922c43c41?n=2"
+   },
+   {
+    "title": "udiscovermusic – Paint It Black story",
+    "url": "https://www.udiscovermusic.com/stories/the-rolling-stones-paint-it-black-feature/"
+   },
+   {
+    "title": "Wikipedia – Instruments played by the Rolling Stones",
+    "url": "https://en.wikipedia.com/wiki/Instruments_played_by_the_Rolling_Stones"
+   }
+  ]
+ }
+}

@@ -1,0 +1,226 @@
+{
+ "rank": 107,
+ "part": "full",
+ "researchedAt": 1795285407137,
+ "original": {
+  "song": {
+   "title": "Floods",
+   "artist": "Pantera",
+   "album_or_year": "The Great Southern Trendkill (1996)",
+   "tone_character": "Akort 1,5 ses pes. Ana ton katı transistörlü Randall RG100 amfiden gelen, ağır ve doymuş bir high-gain distorsiyon. Orta frekanslar oyulmuş, parametrik ve grafik EQ ile şekillendirilmiş. Dimebag'in diğer albümlerine göre daha karanlık ve çamurlu, kalın bir duvar etkisi var. Temiz arpej bölümleri ise melankolik ve modülasyonlu.",
+   "tone_tags": [
+    "yüksek gain",
+    "oyulmuş orta frekanslar",
+    "sıkı ama kalın alt",
+    "solid-state keskinliği",
+    "double-track ritim",
+    "noise gate ile kesik susmalar",
+    "karanlık"
+   ],
+   "bpm": "",
+   "key": "C# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Washburn Dime 3 / Dimebag signature (ör. 'The Great Southern Trendkillers' grafikli Dime 3), Floyd Rose",
+    "pickup": "Köprü: Bill Lawrence L-500XL (ana distorsiyonlu ritim ve solo). Sap: Seymour Duncan SH-1N '59 (temiz bölümlerde olabilir).",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Randall RG100 (RG100ES, halı kaplı, Cowboys From Hell'deki kafa)",
+     "channel": "Lead (distorsiyon) kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "8",
+       "note": "tahmin; Dime genelde gain'i çok yüksek tutardı"
+      },
+      {
+       "name": "Bass",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "3",
+       "note": "tahmin; mid'ler büyük ölçüde MXR 6-band EQ ile oyuluyordu"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Dimebag 1996'daki röportajında albümde her zamanki Century 200 kafaları yerine eski, halı kaplı RG-100'ü kullandığını söylüyor. Bu bilgi albüm genelini kapsıyor, Floods'a özel değil. Düğme ayarları kaynaklarda yok, hepsi tahmin."
+    },
+    {
+     "model": "Mesa/Boogie Mark IV (temiz) ya da RG100'ün temiz kanalı",
+     "channel": "Clean",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Teknisyeni Grady Champion'a göre 1992–96 arasında temiz tonlar için Mesa Mark IV kullanılıyordu. Floods'un temiz bölümlerinde hangisinin çaldığı doğrulanmadı."
+    }
+   ],
+   "cab": {
+    "model": "Randall 4x12 kabin",
+    "speakers": "Celestion (model doğrulanmadı)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "cap kenarı / hafif off-axis",
+      "distance": "1–2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Bu dönemde kullanılan kabin ve hoparlör kaynaklarda belgelenmemiş. Mikrofon bilgisi genel stüdyo pratiğine dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby DCR-1SR rack wah / Vox V847 wah",
+     "purpose": "Amfi önünde. Solo vurgularında kullanılmış olabilir, Floods için doğrulanmadı.",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "DigiTech Whammy",
+     "purpose": "Amfi önünde. Sololun sonundaki iki telli harmonik çığlıklar (G ve B telleri, 4. ve 12. perdeler) bununla çalındı.",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Octave up / pitch bend",
+       "note": "Kesin mod bilinmiyor; harmoniğe basıp pedalla perdeyi yükseltme"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Furman PQ-3 Parametric EQ",
+     "purpose": "Amfi önünde, distorsiyon tonunu şekillendirmek için. Dime demolarda ve RG100 setinde kullandığını söylüyor.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR 6-Band Graphic EQ (mavi)",
+     "purpose": "Amfi önünde. Tipik Dime ayarı orta frekansları oymak, alt ve tizi yükseltmek.",
+     "settings": [
+      {
+       "name": "800 Hz / 1.6 kHz",
+       "value": "-",
+       "note": "Oyuk; tahmin"
+      },
+      {
+       "name": "100 Hz / 6.4 kHz",
+       "value": "+",
+       "note": "Yükseltme; tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss Noise Gate (NF-1) / Rocktron Guitar Silencer",
+     "purpose": "Amfi önünde. Riff aralarındaki kesik, sessiz duruşları sağlıyor.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss CE-1 Chorus / MXR Flanger/Doubler",
+     "purpose": "Temiz bölümlerde modülasyon. Distorsiyonlu tonda yalnızca efekt döngüsünde olmalı. Floods'ta kullanıldığı doğrulanmadı.",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Korg G3 (multi-efekt)",
+     "purpose": "Yalnızca outro: New York'taki mastering günü ödünç bir Les Paul doğrudan G3'e takılıp DAT'a kaydedildi. Bir amfi kullanılmadı.",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Stüdyo delay / reverb",
+     "purpose": "Miks aşamasında. Temiz bölümlerde ve soloda ortam katmak için kullanılmış olabilir.",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "1,5 ses pes (C# standart: C# F# B E G# C#)",
+   "recording_notes": "Prodüktörler Terry Date ve Vinnie Paul. Albümün büyük kısmı Dimebag'in arka bahçesindeki stüdyoda (dönüştürülmüş karavan garajı, Arlington TX) MCI 500 konsolla kaydedildi. Vokaller Trent Reznor'ın New Orleans'taki stüdyosunda alındı. Dime her şarkıya iki ritim gitarı kaydetti. Soloları double-track'ledi ve sağ-sol panlamak yerine üst üste bindirdi. Floods solosunun ilk 8 ölçülük arpej teması kalınlık için ikilendi (Randy Rhoads etkisi). Son büyük notada dört gitar katmanı var. Terry Date'e göre solo için dört kanal ayrılıyor, üç tam take alınıp dördüncü kanala comp yapılıyordu. Outro mastering günü Korg G3 ile yeniden kaydedildi."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "drop-tune ağır ritimde sıkı palm muting",
+    "hızlı alternate picking",
+    "melodik, kurgulanmış solo: arpejler ve geniş bendler",
+    "Whammy pedalıyla harmonik çığlıklar ve pinch harmonik",
+    "Floyd Rose ile vibrato ve dive",
+    "solo double-track'i için çok tutarlı çalmak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş / temiz arpej bölümleri",
+    "description": "Temiz kanal, muhtemelen sap ya da ara manyetik. Gain düşük, chorus veya flanger katmanı ve miks reverb/delay var. Ekipman doğrulanmadı."
+   },
+   {
+    "name": "Ana riff / dize",
+    "description": "Bu raporun temel tonu: RG100 lead kanalı, köprü manyetiği L-500XL, oyulmuş mid'ler, noise gate, iki ritim gitarının double-track'i."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı distorsiyon tonu, köprü manyetiği. İlk 8 ölçü double-track'li ve kalın. Doruktaki iki telli harmonik çığlıklar DigiTech Whammy ile yapıldı ve son notada 4 katman var. Biraz daha fazla delay/reverb olabilir."
+   },
+   {
+    "name": "Outro (yağmur sesi üzerindeki melodik bölüm)",
+    "description": "Rig tamamen farklı: ödünç bir Gibson Les Paul doğrudan Korg G3 multi-efekte bağlanıp DAT'a kaydedildi. Daha yumuşak, sakin, işlenmiş bir lead tonu. 'Police chord' tipi akorlar var."
+   }
+  ],
+  "warnings": [
+   "Floods'a özel amfi ayarı, kabin ve mikrofon bilgisi bulunamadı. RG100 bilgisi albüm geneli için doğrulanmış durumda.",
+   "Akort kaynaklara göre değişiyor: çoğu tab 1,5 ses pes (C#) diyor, bazıları farklı akort veriyor.",
+   "Tonalite ve BPM güvenilir bir kaynakla doğrulanmadı (Guitar Zone D minör diyor). Tunebat'ta kontrol edilemedi.",
+   "Temiz bölümlerde hangi amfi ve modülasyonun kullanıldığı bilinmiyor. Mesa Mark IV de, RG100'ün temiz kanalı da olabilir.",
+   "Dime bazı yerlerde chorus gibi duyulan sesin efekt değil double-track olduğunu söylüyor.",
+   "Furman PQ-3 için hem PQ-3 hem PQ-4 geçiyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Hear Dimebag Darrell's Isolated Guitar from Pantera's Floods (Guitar World)",
+    "url": "https://www.guitarworld.com/artists/hear-dimebag-darrells-isolated-guitar-panteras-floods"
+   },
+   {
+    "title": "How Dimebag Darrell recorded the Floods outro at the last minute (Guitar World)",
+    "url": "https://www.guitarworld.com/artists/guitarists/how-dimebag-darrell-recorded-the-floods-outro-at-the-last-minute"
+   },
+   {
+    "title": "From the Archive: Dimebag Darrell Discusses The Great Southern Trendkill (Guitar World)",
+    "url": "https://guitarworld.com/gw-archive/archive-dimebag-darrell-discusses-panteras-1996-album-great-southern-trendkill"
+   },
+   {
+    "title": "Terry Date on Dimebag Darrell's unconventional approach to tone",
+    "url": "https://www.guitarworld.com/music-industry/producers-engineers/terry-date-on-dimebag-darrell-unconventional-approach-to-tone"
+   },
+   {
+    "title": "Dimebag Darrell's Guitars and Gear (Ground Guitar)",
+    "url": "https://www.groundguitar.com/dimebag-darrell-gear/"
+   },
+   {
+    "title": "Grady Champion talks amps and tone (MusicRadar)",
+    "url": "https://www.musicradar.com/news/dimebag-day-dimes-longtime-tech-grady-champion-talks-guitar-amps-and-tone"
+   },
+   {
+    "title": "Floods Tab (Ultimate Guitar)",
+    "url": "https://tabs.ultimate-guitar.com/tab/pantera/floods-tabs-1424230"
+   },
+   {
+    "title": "Pantera Floods Solo (GMC)",
+    "url": "https://guitarmasterclass.net/ls/Pantera-Floods-Solo"
+   },
+   {
+    "title": "Equipboard – The Great Southern Trendkill",
+    "url": "https://equipboard.com/albums/pantera-the-great-southern-trendkill"
+   }
+  ]
+ }
+}

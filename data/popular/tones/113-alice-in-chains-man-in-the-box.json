@@ -1,0 +1,201 @@
+{
+ "rank": 113,
+ "part": "lead",
+ "researchedAt": 1795285755968,
+ "original": {
+  "song": {
+   "title": "Man In The Box",
+   "artist": "Alice in Chains",
+   "album_or_year": "Facelift (1990)",
+   "tone_character": "Ritim gitarlarıyla aynı Bogner-modifiyeli Marshall distorsiyonu, üstünde de koyu ve vokal gibi konuşan bir wah. Kalın, orta frekansları dolu, kompresli bir grunge/hard rock lead tonu; gain aşırı değil, nota tanımı korunuyor.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "wah ile vokal gibi",
+    "orta frekans öne çıkık",
+    "kalın alt",
+    "kompresli",
+    "kuru, az ambiyans"
+   ],
+   "bpm": "106 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "G&L Rampage (Cantrell'in ana gitarı); forumdaki bir yoruma göre solo bir Gibson Les Paul ile başlayıp tek bobinli sap manyetikli bir G&L ASAT ile çalınmış bir bölüme eklenmiş olabilir",
+    "pickup": "Köprü humbucker (Rampage'de tek köprü humbucker var; yaygın görüşe göre Seymour Duncan JB). Solonun bir kısmı sap manyetiğiyle çalınmış olabilir (spekülatif).",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 (Bogner modifiyeli; mühendis Ronnie Champagne'e göre 'the Snorkler' adlı 50 W JCM800 combo: 4x 12AX7A, EL34)",
+     "channel": "Modifiyeli tek kanallı yüksek gain preamp",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; mid'ler belirgin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Cantrell'in Facelift ve Dirt'te Bogner-modifiyeli Marshall kullandığı birden fazla kaynakta geçiyor (confirmed). 'Snorkler' bilgisi bir mühendisin forum gönderisinden geliyor. Bir forum gönderisine göre Jerden, Facelift lead'leri için Randall RG100ES ve Mike Morin modlu Marshall Super Lead da anmış. Cantrell sinyali sık sık birden çok amfiye bölüp karıştırırdı. Ayarların hiçbiri kaynaklarda yok."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 kabin ya da JCM800 combo'nun kendi hoparlörleri",
+    "speakers": "Celestion (muhtemelen G12T-75 veya Vintage 30) – tahmin",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kapak kenarına yakın, hafif off-axis",
+      "distance": "1–2 in"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Kabin önü / oda",
+      "distance": "yaklaşık 30–60 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Riffology, albüm için SM57 ve U87'yi 'muhtemelen kullanılmış' diye listeliyor. Kabin ve hoparlör belgelenmemiş. Champagne'in anlattığı amfi bir combo olduğu için 4x12 kesin değil."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby (o dönemin standart wah'ı)",
+     "purpose": "Amfi önünde. Solo boyunca ritmik ve vokal gibi süpürmelerle kullanılıyor; forum yorumuna göre stüdyo kaydında wah sadece soloda var.",
+     "settings": [
+      {
+       "name": "Pozisyon",
+       "value": "Ritmik süpürme",
+       "note": "Bend'lerde topuktan parmak ucuna; uzun notalarda yarı açık"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Heil Talk Box",
+     "purpose": "Amfi önünde (amfi çıkışı tüpe). Solo için değil, ana riff ve verse dolgularındaki 'konuşan' gitar için; Jerden önermiş.",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "UREI 1176 / LA-2A",
+     "purpose": "Stüdyoda/mikste kompresyon",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb (plaka/oda)",
+     "purpose": "Mikste eklenen hafif ambiyans; en sonda",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%10",
+       "note": "tahmin; kuru bir miks"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör ve mühendis Dave Jerden. Kayıt Aralık 1989 – Nisan 1990 arasında London Bridge Studio (Seattle) ve Capitol Studios'ta (Hollywood) yapıldı; konsol Neve 8068 (Riffology). Cantrell'in ritim gitarları katmanlı/double-track; verse'lerde kuru bir kayıtla talk box kaydı karıştırılmış. Forum yorumuna göre solo iki farklı kaydın birleştirilmesiyle oluşmuş olabilir."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "wah'ı ritimle konuşturmak",
+    "geniş bend'ler",
+    "blues tadında geniş vibrato",
+    "Eb minör pentatonik ve dorian kalıplarında orta hızlı legato ve alternate picking",
+    "uzun notalarda kontrollü sustain"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / giriş",
+    "description": "Aynı distorsiyonlu amfi tonu, köprü manyetiği; wah yok. Riffin aralarındaki 'konuşan' dolgular Heil Talk Box ile yapılmış, bazı kaynaklara göre bir wah kaydıyla da double-track edilmiş."
+   },
+   {
+    "name": "Verse",
+    "description": "Palm mute ağırlıklı, sıkı distorsiyonlu ritim. Kuru kayıtla talk box kaydı karıştırılmış; wah'ı kapat."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Açık çalınan, katmanlı power chord'lar; aynı gain, wah kapalı, double-track hissi."
+   }
+  ],
+  "warnings": [
+   "Solonun gitarı tartışmalı: Rampage tahmin; forumda Les Paul + G&L ASAT sap manyetiği birleştirmesi iddiası var.",
+   "Amfi konusunda çelişkiler var: Bogner modlu JCM800 (Cantrell) ile Randall RG100ES / Morin modlu Super Lead (Jerden'e atfedilen forum alıntısı).",
+   "Talk box'un soloda da kullanılıp kullanılmadığı tartışmalı; çoğu yorum soloda sadece wah olduğunu söylüyor.",
+   "Kabin, mikrofon ve amfi ayarlarının hepsi tahmin.",
+   "Tonalite konusunda Tunebat Ab majör diyor, diğer kaynaklar Eb minör/dorian. Musicnotes, Eb akorttaki parmak pozisyonlarına göre E minör yazıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Riffology – The making of Facelift",
+    "url": "https://riffology.co/2024/09/25/the-making-of-facelift-by-alice-in-chains/"
+   },
+   {
+    "title": "Equipboard – Facelift",
+    "url": "https://equipboard.com/albums/alice-in-chains-facelift"
+   },
+   {
+    "title": "Equipboard – Jerry Cantrell",
+    "url": "https://equipboard.com/jerry-cantrell"
+   },
+   {
+    "title": "Seymour Duncan forum – MXR talk box",
+    "url": "https://forum.seymourduncan.com/threads/mxr-talk-box.305197/page-2"
+   },
+   {
+    "title": "Rig-Talk – Snorkler post",
+    "url": "https://www.rig-talk.com/forum/goto/post?id=3850760"
+   },
+   {
+    "title": "Harmony Central – Cantrell wah",
+    "url": "https://www.harmonycentral.com/forums/topic/1527871-what-wah-did-jerry-cantrell-use-for-dirtfacelift/"
+   },
+   {
+    "title": "Guitar Chalk – Man in the Box amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-man-in-the-box-alice-in-chains/"
+   },
+   {
+    "title": "Tunebat",
+    "url": "https://tunebat.com/Info/Man-in-the-Box-Alice-In-Chains/6gZVQvQZOFpzIy3HblJ20F"
+   },
+   {
+    "title": "Karaoke-Version",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/alice-in-chains/man-in-the-box.html"
+   },
+   {
+    "title": "Hooktheory",
+    "url": "https://hooktheory.com/theorytab/view/alice-in-chains/man-in-the-box"
+   },
+   {
+    "title": "Wikipedia – Facelift",
+    "url": "https://en.wikipedia.org/wiki/Facelift_(album)"
+   }
+  ]
+ }
+}

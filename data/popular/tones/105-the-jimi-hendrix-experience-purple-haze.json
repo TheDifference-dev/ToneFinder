@@ -1,0 +1,193 @@
+{
+ "rank": 105,
+ "part": "lead",
+ "researchedAt": 1795285340733,
+ "original": {
+  "song": {
+   "title": "Purple Haze",
+   "artist": "The Jimi Hendrix Experience",
+   "album_or_year": "Single, Mart 1967 (ABD baskısı Are You Experienced, 1967)",
+   "tone_character": "Fuzz ve Octavia ile sertleşmiş, oktav-üstü harmoniklerle çınlayan, delici, çok satüre bir solo tonu. Telecaster'ın köprü manyetiği ve sonuna kadar açılmış 100W Marshall, dört kanallı kayıtta neredeyse kendi kendine besleme yapan, kulağa kaba gelen bir ses veriyor.",
+   "tone_tags": [
+    "yoğun satürasyon",
+    "oktav-üstü fuzz (Octavia)",
+    "delici üst-orta",
+    "ince/keskin alt",
+    "ham, kuru 60'lar kaydı",
+    "Marshall power amp doygunluğu",
+    "hafif oda ambiansı"
+   ],
+   "bpm": "108–112 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Telecaster (Butterscotch Blonde, büyük olasılıkla akçaağaç klavye; Noel Redding'in bir arkadaşından ödünç alındı)",
+    "pickup": "Köprü manyetiği (stok tek bobinli Tele köprü manyetiği)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall 100W (JTM45/100 ya da erken dönem 1959 Super Lead)",
+     "channel": "Muhtemelen High Treble girişi (ya da köprülenmiş kanallar)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "Dönem pratiği: sonuna kadar açık, power amp satürasyonu (tahmin)"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin; Tele köprü zaten parlak"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kaynaklar Purple Haze için '100 watt Marshall stack' diyor (IEEE Spectrum); bu solo seansındaki amfi açıkça belgelenmemiş. Ayarların hepsi tahmin. Bir kaynak, amfiler o kadar yüksek sesteydi ki Fuzz Face'in yalnızca hafif kullanıldığını söylüyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 serisi)",
+    "speakers": "Celestion G12 (muhtemelen 20/25W Greenback G12M ya da G12H)",
+    "mics": [
+     {
+      "model": "Neumann U67 (ya da U87/dinamik bir mikrofon)",
+      "position": "Kabin önü, hoparlör konisine biraz eksen dışı",
+      "distance": "15–30 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Olympic'te Eddie Kramer'in genelde yaptığı yakın mikrofon + oda kullanımına dayanan bir tahmin; bu şarkı için kaynakta mikrofon bilgisi bulunamadı. Hendrix'in amfiye göre konumu geri beslemeyi şekillendiriyordu."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Arbiter Fuzz Face (germanyum)",
+     "purpose": "Amfi önünde; temel fuzz/sustain. Hafif kullanıldığı da söylenir, çünkü amfi zaten çok bastırılmıştı.",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Fuzz",
+       "value": "10",
+       "note": "Tahmin; gitarın volume düğmesiyle kontrol edildi"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Roger Mayer Octavia (prototip, ticari kutusu yok)",
+     "purpose": "Amfi önünde; oktav-üstü, halka modülatör benzeri fuzz. Kayıtta ilk kullanımı bu solodur. Fuzz Face'ten önce mi sonra mı geldiği belgelenmemiş.",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Roger Mayer yapımı booster (transistör tipi belirsiz)",
+     "purpose": "Amfi önünde; gain eklemek, sürüş empedansını ve EQ'yu değiştirmek için. Mayer seansa bunu da getirmişti.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo: Chas Chandler'ın kulaklık/mikrofon 'yankısı', panlama ve bant hızı manipülasyonu",
+     "purpose": "Stüdyoda/mikste eklendi; amfiden sonra, kayıt aşamasında",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Temel parça 11 Ocak 1967'de De Lane Lea Studios'ta (Londra) kaydedildi. Solo ve overdub'lar 3–8 Şubat 1967'de Olympic Studios'ta yapıldı. Prodüktör Chas Chandler, mühendis Eddie Kramer (Hendrix ile ilk seansı). Kayıt dört kanallı banda yapıldı; sololar en fazla 2–3 take'te alındı. Hendrix aynı gün Ricky Tick'te (Hounslow) Strat'ını tavana vurup bir burgusunu eğdiği için sololar ödünç bir Telecaster ile çalındı. Chandler arka plandaki sesleri kulaklıktan çalıp kulaklığı mikrofonun etrafında gezdirerek 'tuhaf bir yankı' oluşturdu; yarım hızda kaydedilmiş (playback'te tizleşen) gitarlar ve panlama kullandı. Kasetler ABD'ye 'sondaki distorsiyon arıza değil, kasıt' notuyla gönderildi."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Geniş bend'ler (1–1,5 ton) ve vibrato",
+    "Klavyenin üst bölgesinde E minör pentatonik/blues kalıpları",
+    "Fuzz + Octavia ile gürültü ve geri besleme kontrolü",
+    "Behind-the-beat, gevşek blues fraseolojisi",
+    "Octavia'nın en iyi tepki verdiği bölgede (12. perde üstü) temiz tek nota artikülasyonu"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (tritone oktavları)",
+    "description": "Gitar, basın E'sine karşı Bb oktavları çalarak tritone gerilimi yaratır. Fuzz'lı Strat ve Marshall; Octavia yok, gain soloya göre biraz daha az. Gitarda Strat, büyük olasılıkla köprü/orta manyetik."
+   },
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "E7#9 'Hendrix akoru' ile G ve A (kök sesler başparmakla basılır). De Lane Lea temel kaydı Stratocaster ile yapıldı; Fuzz Face + 100W Marshall ile aşırı overdrive. Octavia yok, alt orta frekanslar biraz daha dolgun."
+   },
+   {
+    "name": "Çıkış (outro)",
+    "description": "7½ ips'de kaydedilip 15 ips'de çalınan gitar (bir oktav tiz, hızlanmış) Octavia ile birleşir; aşırı distorsiyonlu ve panlanmış. Solo tonuna stüdyoda bant hızı manipülasyonu eklenmiş halidir; çalarken pitch shifter ile +12 yarım ses eklenerek taklit edilebilir."
+   }
+  ],
+  "warnings": [
+   "Solonun Telecaster'la çalındığını yalnızca Roger Mayer'in anlatımı söylüyor; Strat ile kaydedildiğine dair yaygın inanış hâlâ var.",
+   "Solo seansındaki amfinin modeli ve ayarları belgelenmemiş; '100W Marshall stack' genel bir ifade. Bütün düğme değerleri tahmin.",
+   "Pedal sırası (Octavia → Fuzz Face mı, tersi mi) ve Fuzz Face'in soloda kullanılıp kullanılmadığı tartışmalı. Wikipedia 'Octavia + Fuzz Face' diyor, Guitar World makalesi ise seansta Fuzz Face kullanıldığını doğrulamıyor.",
+   "Akort belirsiz: Hendrix sonraki dönemlerde yarım ses pes (Eb) akort kullandı. 1967 stüdyo kaydı için kesin kaynak bulunamadı; bant hızı küçük pitch sapmalarına yol açmış olabilir.",
+   "Tonalite ve BPM araçlara göre değişiyor (D, Ab, A, E minör; 104–122 BPM). Müzikal olarak şarkı E (E7#9) merkezli; Tunebat sayfasına erişilemedi.",
+   "Mikrofon bilgisi tamamen tahmine dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Wikipedia – Purple Haze",
+    "url": "https://en.wikipedia.org/wiki/Purple_Haze"
+   },
+   {
+    "title": "Guitar World – Jimi Hendrix Telecaster Purple Haze",
+    "url": "https://guitarworld.com/news/jimi-hendrix-telecaster-purple-haze"
+   },
+   {
+    "title": "Guitar Player – Here's Why Jimi Hendrix Ditched His Strat for a Tele",
+    "url": "https://www.guitarplayer.com/players/heres-why-jimi-hendrix-ditched-his-strat-for-a-tele"
+   },
+   {
+    "title": "IEEE Spectrum – Jimi Hendrix Was a Systems Engineer",
+    "url": "https://spectrum.ieee.org/jimi-hendrix-systems-engineer"
+   },
+   {
+    "title": "Far Out – Inside the recording of Purple Haze",
+    "url": "https://faroutmagazine.co.uk/recording-jimi-hendrix-song-purple-haze/"
+   },
+   {
+    "title": "Louder – Jimi Hendrix Purple Haze",
+    "url": "https://www.loudersound.com/music/tracks-singles/jimi-hendrix-purple-haze"
+   },
+   {
+    "title": "Equipboard – Are You Experienced",
+    "url": "https://equipboard.com/albums/jimi-hendrix-are-you-experienced"
+   },
+   {
+    "title": "SFR Beats BPM & Key – Purple Haze",
+    "url": "https://sfrbeats.com/tools/bpm/the-jimi-hendrix-experience/purple-haze"
+   },
+   {
+    "title": "Klang.io – Purple Haze",
+    "url": "https://songs.klang.io/en/s/Jimi%20Hendrix/Purple%20Haze/I-PK3sbxvhw"
+   },
+   {
+    "title": "Sound On Sound – Roger Mayer Purple Haze Octavia",
+    "url": "https://www.soundonsound.com/reviews/roger-mayer-purple-haze-octavia"
+   }
+  ]
+ }
+}

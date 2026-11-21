@@ -1,0 +1,268 @@
+{
+ "rank": 109,
+ "part": "lead",
+ "researchedAt": 1795285530367,
+ "original": {
+  "song": {
+   "title": "Monster",
+   "artist": "Skillet",
+   "album_or_year": "Awake (2009)",
+   "tone_character": "Modern, sıkı ve yoğun distorsiyonlu bir hard rock/alt-metal tonu. Solo/lead kısmı, ritim gitarlarının üstünde biraz daha orta frekansı öne çıkan, sustain'i uzun ve hafif delay ile genişletilmiş bir high-gain lead sesi. Miksi Chris Lord-Alge yaptığı için ton kompresli ve parlak, öne çıkan bir sese sahip.",
+   "tone_tags": [
+    "high-gain",
+    "sıkı alt",
+    "orta frekans öne çıkık (lead)",
+    "kompresli",
+    "parlak üst",
+    "uzun sustain",
+    "hafif delay"
+   ],
+   "bpm": "135–136 BPM",
+   "key": "C minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul (Awake kayıtlarında ağırlıklı olarak)",
+    "pickup": "Köprü humbucker (lead için köprü manyetiği; manyetik modeli bilinmiyor)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Dual Rectifier",
+     "channel": "Red (Channel 3, modern high-gain)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6.5",
+       "note": "Ton rehberi sitesinin tahmini, stüdyo kaydına dayanmıyor"
+      },
+      {
+       "name": "Bass",
+       "value": "5.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mid",
+       "value": "4",
+       "note": "tahmin; solo için biraz artırılabilir (5 civarı)"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mode",
+       "value": "Modern",
+       "note": "Rehberde 'Bold/Silicon Diode' olarak geçiyor"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Dual Rectifier yalnızca Guitar Chalk'ta stüdyo amfisi olarak geçiyor; Equipboard Kasica'nın kişisel rig'inde Dual Rectifier ve Vox AC30HH olduğunu gösteriyor. Kayıt mühendisi Mike Plotnikoff, drop C/B tunelu modern rock'ta Peavey 5150 (EVH modlu) ve Wizard amfileri tercih ettiğini söylüyor. Howard Benson/Plotnikoff oturumlarında genelde birçok amfi katmanlandığı için gerçek amfi bunlardan biri ya da bir karışım olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie Rectifier Traditional 4x12 (Kasica'nın rig'i) / stüdyoda Plotnikoff'un kabinleri",
+    "speakers": "Celestion Vintage 30 (olası); Plotnikoff lead gitarlarda orijinal 25W Celestion Blackback'li 1974 Marshall 4x12 kabini sık kullandığını söylüyor",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Doğrudan konin üzerinde (on-axis), merkeze yakın tatlı noktada",
+      "distance": "Yakın mikrofonlama (yaklaşık 1–2 in; mesafe kaynakta belirtilmemiş)"
+     },
+     {
+      "model": "Shure KSM32 veya Sennheiser MD421 (opsiyonel)",
+      "position": "SM57'ye ek, alt-orta frekansları doldurmak için",
+      "distance": "Yakın"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mikrofon bilgisi, Sound On Sound'daki Mike Plotnikoff röportajındaki genel yöntemden geliyor (tek SM57, mikrofonlarda EQ yok). Awake albümüne özgü değil. Room mikrofonu kullanıldığına dair bilgi bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Ibanez TS9DX Turbo Tube Screamer (veya TS tarzı overdrive)",
+     "purpose": "Amfi önünde boost: low-gain/yüksek level ayarıyla amfiyi sıkılaştırmak için",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "0",
+       "note": "Rehberin önerisi"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Level",
+       "value": "7",
+       "note": ""
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss NS-2 Noise Suppressor",
+     "purpose": "Amfi önünde (veya send/return loop ile) gürültü kapısı",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Decay",
+       "value": "3",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mode",
+       "value": "MUTE",
+       "note": ""
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss DD-7 Digital Delay / Line 6 DL4 (veya stüdyoda eklenen delay)",
+     "purpose": "Amfiden sonra (efekt döngüsünde ya da miks aşamasında); lead'e derinlik veren hafif delay",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~440 ms",
+       "note": "136 BPM'de çeyrek nota ≈ 441 ms; tahmin"
+      },
+      {
+       "name": "Feedback",
+       "value": "%20",
+       "note": "tahmin"
+      },
+      {
+       "name": "E.Level",
+       "value": "%15–20",
+       "note": "Miks içinde düşük seviyede"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb (miks, Chris Lord-Alge)",
+     "purpose": "Miks aşamasında eklenmiş, kısa/orta plate veya oda reverb'ü",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "1.2 s",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%10",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop C (C G C F A D)",
+   "recording_notes": "Prodüktör Howard Benson. Kayıt Bay 7 Studios'ta (Valley Village/Los Angeles) ve Sparky Dark Studio'da (Calabasas) yapıldı. Kayıt mühendisi Mike Plotnikoff, ek mühendis Hatsukazu 'Hatch' Inagaki. Miksi Chris Lord-Alge Mix LA'de yaptı, mastering Ted Jensen'e ait (Sterling Sound). Albümde elektro ve akustik gitar Ben Kasica'ya kredilendirilmiş, gitar teknisyeni Marc Vangool. Korey Cooper albümde klavye ve programlamada kredili. Benson prodüksiyonlarında ritim gitarlarının çift (ya da daha çok) kanala kaydedilip sağa sola yayılması standart bir uygulama; lead/solo genelde tek kanal olarak ortada durur ve CLA miksinde yoğun kompresyon uygulanır (genel pratik, Monster için doğrulanmadı)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Kısa, melodik tek nota lead",
+    "Bending ve vibrato",
+    "Drop C akortta pozisyon değişimi",
+    "Ritim bölümlerinde palm muting ve hızlı power chord geçişleri (şarkının geneli)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / Verse",
+    "description": "Aynı high-gain amfi kanalı, köprü manyetiği. Drop C'de palm muting'li, power chord ağırlıklı riff. Daha az orta frekans, daha sıkı alt; delay yok, kuru. En az iki kanala kaydedilip sağa sola yayılmış (çift kayıt)."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı distorsiyonlu ton, açık çalınan (palm muting'siz) üç notalı power chord'lar. Çift kayıtlı, geniş stereo duvar. Solodan farkı: delay yok, mid biraz daha düşük."
+   },
+   {
+    "name": "Fill / kısa tek nota geçişleri",
+    "description": "Verse'ler arasında kısa tek nota fill'ler. Aynı ton, köprü manyetiği; isteğe bağlı çok hafif delay."
+   },
+   {
+    "name": "Bridge (köprü bölüm)",
+    "description": "Vokalin öne çıktığı daha seyrek bölüm. Gitarlar aynı kanalda ama daha az yoğun, uzatılmış akorlarla çalınıyor. Final nakarattan önce yeniden tam distorsiyona dönüş."
+   }
+  ],
+  "warnings": [
+   "Monster'da klasik, uzun bir gitar solosu yok. Bulunan tab'lar Verse/Fill/Chorus/Bridge yapısını gösteriyor ve ayrı bir solo transkripsiyonu bulunamadı. 'Solo' büyük olasılıkla kısa bir lead/fill bölümü; bu raporda o kısım lead tonu olarak ele alındı.",
+   "Albüme özgü amfi bilgisi doğrulanamadı. Mesa Dual Rectifier yalnızca Guitar Chalk'ta geçiyor ve oradaki ayarlar sitenin kendi tahmini.",
+   "Mikrofon ve kabin bilgisi Mike Plotnikoff'un genel yöntemine dayanıyor, Monster/Awake oturumlarına özgü değil.",
+   "Gitar konusunda kaynaklar ayrışıyor: Guitar Chalk ve Wikipedia kaynaklı bilgiler Awake için Gibson Les Paul diyor. Equipboard'a göre Kasica, Monster ders videosunda ve 2009 Heaven Fest'te PRS Mike Mushok SE Baritone kullanıyor, ama bu canlı/ders bağlamı.",
+   "Akort: resmi UG tab'ı ve yorumlar stüdyo kaydı için Drop C diyor. Canlıda Drop B kullanıldığı da belirtiliyor. Bazı tab'larda Drop D yazıyor ama bunlar yanlış kabul ediliyor.",
+   "Pedal listesi Kasica'nın sahne rig'inden geliyor (Equipboard). Stüdyoda hangilerinin kullanıldığı bilinmiyor; delay ve reverb'ün miks aşamasında eklenmiş olması muhtemel.",
+   "Tonalite çoğu kaynakta C minör; AcousticBrainz'de F minör ve E minör gibi farklı sonuçlar da var."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar Chalk – Monster Amp Settings",
+    "url": "https://www.guitarchalk.com/monster-amp-settings/"
+   },
+   {
+    "title": "Wikipedia – Awake (Skillet album)",
+    "url": "https://en.wikipedia.org/wiki/Awake_(Skillet_album)"
+   },
+   {
+    "title": "Equipboard – Ben Kasica",
+    "url": "https://equipboard.com/pros/ben-kasica"
+   },
+   {
+    "title": "Equipboard – Skillet",
+    "url": "https://equipboard.com/band/skillet"
+   },
+   {
+    "title": "Sound On Sound – Mike Plotnikoff: How To Record Electric Guitars",
+    "url": "https://www.soundonsound.com/techniques/mike-plotnikoff-how-record-electric-guitars"
+   },
+   {
+    "title": "ProSoundWeb – Mojave MA-200 choice of Skillet's Ben Kasica",
+    "url": "https://www.prosoundweb.com/mojave-audio-ma-200-the-choice-of-skillets-ben-kasica/"
+   },
+   {
+    "title": "Ultimate Guitar – Monster Tab (Drop C, official)",
+    "url": "https://tabs.ultimate-guitar.com/tab/skillet/monster-tabs-868215"
+   },
+   {
+    "title": "Ultimate Guitar – Monster Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/skillet/monster-tabs-828527"
+   },
+   {
+    "title": "Guitar Tabs Explorer – Monster bass tab",
+    "url": "https://www.guitartabsexplorer.com/skillet/monster-btab"
+   },
+   {
+    "title": "Hooktheory – Skillet Monster",
+    "url": "https://www.hooktheory.com/theorytab/view/skillet/monster"
+   },
+   {
+    "title": "Klang.io – Skillet Monster",
+    "url": "https://songs.klang.io/en/s/Skillet/Monster/1mjlM_RnsVE"
+   },
+   {
+    "title": "Karaoke Version – Monster Drum Backing Track",
+    "url": "https://www.karaoke-version.com/drums-backing-track/skillet/monster.html"
+   }
+  ]
+ }
+}

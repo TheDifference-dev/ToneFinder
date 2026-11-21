@@ -1,0 +1,243 @@
+{
+ "rank": 104,
+ "part": "full",
+ "researchedAt": 1795285283968,
+ "original": {
+  "song": {
+   "title": "Lithium",
+   "artist": "Nirvana",
+   "album_or_year": "Nevermind (1991)",
+   "tone_character": "Şarkı sessiz/gürültülü dinamiğe dayanıyor. Verse'ler yumuşak, hafif tını katan temiz bir tonla çalınıyor. Nakaratta ise Big Muff fuzz, Fender Bassman'a giriyor; ortaya kalın, koyu, 'thumpy' ve fazla parlak olmayan, duvar gibi bir distorsiyon çıkıyor. Butch Vig bilerek daha ağır ve az parlak bir ses aradı.",
+   "tone_tags": [
+    "sessiz/gürültülü dinamik",
+    "temiz verse",
+    "koyu fuzz nakarat",
+    "kalın alt-orta",
+    "parlak değil",
+    "katmanlı (üç gitar kanalı)",
+    "sıkıştırılmış miks"
+   ],
+   "bpm": "123 BPM",
+   "key": "D majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Mustang (1969 Competition, Lake Placid Blue) ya da 1965 Fender Jaguar (DiMarzio humbucker'lı). Sessionlarda Mosrite Gospel de vardı",
+    "pickup": "Köprü manyetiği (Jaguar'da DiMarzio humbucker, muhtemelen Super Distortion). Verse'lerde de büyük olasılıkla köprü ya da ikisi birden",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Fender Bassman",
+     "channel": "Tek kanal. Big Muff'ın girdiği nakarat tonu",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin, Guitar.com 'cranked' diyor"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "tahmin, Vig 'fazla parlak değil' istedi"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Vig şöyle dedi: 'Lithium'da daha thumpy ve koyu bir ses için Electro-Harmonix Big Muff'ı Fender Bassman'a verdik.' Bassman'ın hangi model ve yıldan olduğu belli değil. Knob değerlerinin hepsi tahmin."
+    },
+    {
+     "model": "Mesa/Boogie Studio Preamp → Crown Power Base 2 power amp",
+     "channel": "Rhythm kanalı, temiz ayar",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin, temiz kalacak düzeyde"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kurt'ün Nevermind'daki ana rig'i bu. Guitar.com'a göre verse'ler bu Mesa'yla temiz çalındı. Total Guitar ise tüm gitarların Bassman'dan geçtiğini söylüyor. Sessionlarda Vox AC30 ve kiralık bir Marshall stack da vardı."
+    }
+   ],
+   "cab": {
+    "model": "Bassman kendi kabini (ya da combo'su) / Mesa+Crown için Marshall 4x12 kabinler",
+    "speakers": "Bilinmiyor. Marshall kabinlerde muhtemelen Celestion G12 serisi",
+    "mics": [
+     {
+      "model": "Neumann U87",
+      "position": "Kabine doğru, eksen konumu bilinmiyor",
+      "distance": "Bilinmiyor. Kondansatör olduğu için muhtemelen 15-30 cm"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Vig, Big Muff/Bassman gitarını daha ağır ve az parlak bir ses için U87 ile çektiğini söylüyor. Bu bilgi Berkenstadt & Cross'un kitabından, Live Nirvana aktarıyor. Kabin ve hoparlör bilgisi tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Electro-Harmonix Big Muff Pi",
+     "purpose": "Amfi önünde. Nakarattaki koyu, kalın fuzz",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "4",
+       "note": "tahmin, koyu ses için saat 11 civarı"
+      },
+      {
+       "name": "Sustain",
+       "value": "7",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss DS-1 Distortion",
+     "purpose": "Amfi önünde. Kurt'ün o dönemki temel distorsiyonu, bazı katmanlarda kullanılmış olabilir",
+     "settings": [
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Dist",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Electro-Harmonix Small Clone",
+     "purpose": "Amfi önünde, temiz verse'te çok hafif chorus. Lithium için kaynaklarda geçmiyor",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "3",
+       "note": "tahmin"
+      },
+      {
+       "name": "Depth",
+       "value": "Off",
+       "note": "tahmin, kullanıldıysa sığ"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb/ambiyans (Andy Wallace miksi)",
+     "purpose": "Stüdyoda/mikste eklendi. Kısa oda/plate ambiyansı",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "1.2 s",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "D Standart (bir tam ses pes) — tartışmalı",
+   "recording_notes": "Mayıs 1991, Sound City (Van Nuys). Prodüktör Butch Vig, miks Andy Wallace (Devonshire Studios). Grup hızlanma eğiliminde olduğu için Lithium, sessionlarda baştan click ile kaydedilen tek parça. Cobain'in gitarı için üç kanal, Novoselic'in basına iki kanal ayrıldı. Bu, gitarların katmanlı ya da double-track kaydedildiğini düşündürüyor. Vig verse'lerin rahat, nakaratın olabildiğince yoğun duyulmasını sağlamakta zorlandığını anlatıyor. Şarkı ilk kez Nisan 1990'da Smart Studios'ta (Madison) kaydedilmişti. Günün gerginliği 'Endless, Nameless' jam'ine dönüştü."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Barre akorlar (verse'te arpej ya da tutulan akorlar)",
+    "Temiz ve fuzz arasında dinamik geçiş",
+    "Nakaratta güçlü down-stroke power chord'lar",
+    "Bb–C geçişlerinde akor değişim hızı"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz verse ve giriş",
+    "description": "Fuzz kapalı, temiz amfi (Mesa rhythm ya da Bassman temiz). Gain düşük, akorlar hafif çalınıyor. Belki çok hafif chorus var (tahmin). Ses seviyesi düşük ve yumuşak."
+   },
+   {
+    "name": "Nakarat ('Yeah yeah yeah')",
+    "description": "Big Muff açık, Bassman'a giriyor. Kalın, koyu, az parlak fuzz duvarı. Birden fazla gitar katmanıyla genişliyor. Treble verse'ten daha düşük, alt-orta daha dolgun."
+   },
+   {
+    "name": "Köprü / ara bölüm (Bb–C / 'I like it, I'm not gonna crack')",
+    "description": "Nakarattaki fuzz tonuyla aynı, daha sert ve tekrarlı power chord vuruşları var. Ton değişikliği yok."
+   }
+  ],
+  "warnings": [
+   "Akort tartışmalı. Tab'lar D Standart, Eb, E Standart ve Drop D arasında bölünüyor. Kayıt konser perdesinde D majör duyuluyor. D Standart'ta E şekilleriyle çalmak yaygın bir yorum ama kaynaklarla doğrulanmadı.",
+   "Verse'lerin amfisi kaynaklar arasında çelişkili. Guitar.com verse'te Mesa/Boogie, nakaratta cranked Bassman diyor. Total Guitar ise hepsinin Bassman'dan geçtiğini söylüyor.",
+   "Bu şarkıda hangi gitarın kullanıldığına dair kaynak yok. Mustang, Jaguar ve Mosrite Gospel'in hepsi sessionlarda vardı.",
+   "DS-1 ve Small Clone'un Lithium'da kullanıldığına dair doğrudan kanıt yok. Small Clone yalnızca Teen Spirit ve Come As You Are için doğrulanmış.",
+   "Knob ayarlarının tamamı tahmin. U87'nin konumu ve mesafesi bilinmiyor.",
+   "BPM (~123) ve tonalite (D) otomatik analizlerden ve karaoke sitesinden geliyor. AcousticBrainz G ya da C majör gibi farklı sonuçlar veriyor. Akor yapısı D majörü destekliyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Live Nirvana – Sessions History May–June 1991 (Sound City)",
+    "url": "https://www.livenirvana.com/sessions/studio/may-june-1991.php"
+   },
+   {
+    "title": "Guitar.com – Nirvana 10 greatest guitar moments ranked",
+    "url": "https://guitar.com/guides/essential-guide/nirvana-10-greatest-guitar-moments-ranked/"
+   },
+   {
+    "title": "Total Guitar – Classic Track: Nirvana – Lithium (PressReader)",
+    "url": "https://www.pressreader.com/australia/total-guitar/20201218/282480006378178"
+   },
+   {
+    "title": "Guitar World – Secrets behind Kurt Cobain's tone on Smells Like Teen Spirit",
+    "url": "https://guitarworld.com/features/the-secrets-behind-kurt-cobains-guitar-tone-on-nirvanas-smells-like-teen-spirit"
+   },
+   {
+    "title": "zZounds – Legends of Tone: Kurt Cobain",
+    "url": "https://blog.zzounds.com/2017/10/21/legends-of-tone-kurt-cobain"
+   },
+   {
+    "title": "Equipboard – Kurt Cobain amplifiers",
+    "url": "https://equipboard.com/pros/kurt-cobain/gear/amplifiers"
+   },
+   {
+    "title": "Wikipedia – Lithium (Nirvana song)",
+    "url": "https://wikipedia.com/wiki/Curmudgeon_(song)"
+   },
+   {
+    "title": "Karaoke Version – Lithium (tempo/key)",
+    "url": "https://www.karaoke-version.com/custombackingtrack/nirvana/lithium.html?aff=670"
+   },
+   {
+    "title": "Ultimate Guitar – Lithium Chords",
+    "url": "https://tabs.ultimate-guitar.com/tab/nirvana/lithium-chords-1119299"
+   },
+   {
+    "title": "AcousticBrainz – Lithium analysis",
+    "url": "https://acousticbrainz.org/397430d1-3baf-4e7c-a98b-005049d80dcb"
+   }
+  ]
+ }
+}
