@@ -1,0 +1,180 @@
+{
+ "rank": 120,
+ "part": "clean",
+ "researchedAt": 1795295733967,
+ "original": {
+  "song": {
+   "title": "Hurt (Nine Inch Nails cover)",
+   "artist": "Johnny Cash",
+   "album_or_year": "American IV: The Man Comes Around (2002)",
+   "tone_character": "Kuru, çok yakından kaydedilmiş, parlak ama sıcak akustik gitar arpejleri; distortion yok, reverb neredeyse yok. Elektro gitarla taklit edilecekse tam temiz, hafif kompresli, tizleri açık ve tok bir 'unplugged' ton gerekir.",
+   "tone_tags": [
+    "tamamen temiz",
+    "kuru",
+    "yakın mikrofon",
+    "parlak tizler",
+    "hafif kompresli",
+    "sade aranje",
+    "dinamik"
+   ],
+   "bpm": "85–92 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Akustik gitar (Martin dreadnought; klipteki Cash gitarı Martin D-42 Johnny Cash prototipi), ek akustikler Mike Campbell ve Smokey Hormel",
+    "pickup": "Yok – akustik gitar mikrofonla kaydedildi; elektro gitar karşılığı için sap ya da sap+orta manyetik önerilir (tahmin)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Amfi yok (akustik doğrudan mikrofonlandı). Elektro uyarlama referansı: Fender Bassman / Blackface tarzı temiz amfi",
+     "channel": "Clean / Normal",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "3",
+       "note": "Hiç kırılma olmayacak; tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Rubin/Ferguson ekolü yaklaşık 100 Hz altını keser; tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "Akustik parlaklığını taklit etmek için; tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Kaynaklarda 'Hurt' için hiçbir amfi geçmiyor. Mühendis David R. Ferguson, sonraki American VI oturumlarında elektro gitarı Fender Bassman + SM57 ile kaydetmiş; bu sadece ekolü gösteren dolaylı bir referans."
+    }
+   ],
+   "cab": {
+    "model": "Kabin yok (akustik kayıt). Elektro uyarlama için 2x12 ya da 4x10 açık kasa Fender tarzı kabin",
+    "speakers": "Bilinmiyor; uyarlamada Jensen tarzı temiz hoparlör (tahmin)",
+    "mics": [
+     {
+      "model": "Neumann KM64 / KM84 (küçük diyaframlı kondenser; akustik gitarda)",
+      "position": "Akustik gitarın gövdesi ile 12. perde arası (tahmin)",
+      "distance": "Yakın, yaklaşık 15–30 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "KM64/KM84 + Neve 8068 zinciri, Ferguson'un American VI'daki Smokey Hormel akustik kaydına ait. Aynı ekip ve yaklaşım olduğu için muhtemel ama Hurt için doğrulanmış değil."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo kompresörü (Universal Audio 1176 tarzı)",
+     "purpose": "Stüdyoda/mikste; hafif seviye dengeleme. Elektro uyarlamada amfi önünde hafif bir kompresör pedalı da olur",
+     "settings": [
+      {
+       "name": "Ratio",
+       "value": "4:1",
+       "note": "tahmin"
+      },
+      {
+       "name": "Gain reduction",
+       "value": "2–4 dB",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Reverb (çok az ya da hiç)",
+     "purpose": "Mikste; Rubin/Ferguson kayıtları çok kuru, istenirse çok kısa oda reverb'i en sona eklenir",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%5–10",
+       "note": "Neredeyse kuru; tahmin"
+      },
+      {
+       "name": "Decay",
+       "value": "0.8 s",
+       "note": "Kısa oda; tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Rick Rubin. 2002'de büyük ölçüde Rubin'in evinde (oturma odası) ve Cash Cabin'de (Hendersonville) kaydedildi (doğrulanmış/muhtemel). Kayıt ve mix mühendisi David R. Ferguson (MusicBrainz). Aranje: arpejli akustik gitar (Mike Campbell, Smokey Hormel, Cash), Benmont Tench'in piyanosu, orgu ve Mellotron'u. Kredilerde elektro gitar yok. Final crescendo piyano ve vurgulu akustik vuruşlarla kuruluyor. Ferguson ekolünde katmanlar 7 ms kaydırılarak stereo genişlik veriliyor ve reverb pek kullanılmıyor (American VI'dan dolaylı bilgi)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "parmakla ya da penayla arpej (Am–C–D, nakaratta G–Am–F–C)",
+    "dinamik kontrolü: sessiz girişten finaldeki güçlü vuruşlara geçiş",
+    "teller birbirini susturmadan temiz çınlamalı",
+    "sabit, ağır tempo"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş ve kıtalar (temiz arpej)",
+    "description": "İstenen bölüm. Am–C–D üzerinde yumuşak ve kuru arpejler, en düşük dinamikte. Elektro gitarda sap manyetiğiyle, tamamen temiz tonda ve hafif tuşeyle çalınır."
+   },
+   {
+    "name": "Nakarat",
+    "description": "G–Am–F–C. Ton aynı kalır, sadece vuruş daha dolgun ve güçlü olur. Elektro uyarlamada kompresörü biraz açmak ya da köprü+sap pozisyonuna geçmek yeterli. Gain'e dokunulmaz."
+   },
+   {
+    "name": "Final crescendo",
+    "description": "Akustik gitar sertçe vurulur ve en yüksek dinamiğe çıkılır. Distortion yine yok. Elektro gitarda sadece daha sert pena vuruşu ve biraz daha fazla Volume; amfi temiz kalmalı ya da en fazla hafif kırılmalı."
+   }
+  ],
+  "warnings": [
+   "Bilinen kredilere göre Cash'in 'Hurt' kaydında elektro gitar yok; gitarlar akustik (Mike Campbell, Smokey Hormel ve Cash). 'Temiz bölüm' bu yüzden akustik arpej partisinin elektro gitara uyarlanması olarak ele alındı.",
+   "Amfi, kabin ve ayarların hepsi tahmin. Mikrofon bilgisi (KM64/KM84, Neve) Ferguson'un sonraki American VI oturumlarından geliyor, Hurt için doğrulanmış değil.",
+   "BPM kaynaklara göre değişiyor: Musicnotes yaklaşık 85, Audiokeychain 92, Musictonic 91, Musiciwant 75 diyor. Tunebat'te bu kaydın sayfası bulunamadı.",
+   "Kayıt yeri olarak Rubin'in evi ve Cash Cabin ayrı ayrı anılıyor; parçanın hangi kısmının nerede kaydedildiği net değil."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "MusicBrainz – American IV release credits",
+    "url": "https://musicbrainz.org/release/62e0cb6f-1660-4321-8199-c4f43858f576"
+   },
+   {
+    "title": "Wikipedia – Hurt (Nine Inch Nails song)",
+    "url": "https://en.wikipedia.org/wiki/Hurt_(Nine_Inch_Nails_song)"
+   },
+   {
+    "title": "Louder – The story of Johnny Cash's haunting Hurt",
+    "url": "https://www.loudersound.com/features/it-really-upset-me-and-it-really-affected-me-the-story-of-johnny-cashs-haunting-hurt"
+   },
+   {
+    "title": "Sound On Sound – Secrets of the Mix Engineers: David R. Ferguson",
+    "url": "https://www.soundonsound.com/techniques/secrets-mix-engineers-david-r-ferguson"
+   },
+   {
+    "title": "Martin Guitar – Johnny Cash D-42",
+    "url": "https://martinguitar.com/blog-categories/from-the-factory/blog-101624-johnny-cash-d42.html"
+   },
+   {
+    "title": "Musicnotes – Hurt sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/james-bartholomew/hurt/MN0192811"
+   },
+   {
+    "title": "Audiokeychain – Johnny Cash Hurt",
+    "url": "https://www.audiokeychain.com/track/wM/johnny-cash-hurt"
+   },
+   {
+    "title": "Musictonic – Hurt",
+    "url": "https://musictonic.com/songs/hurt/"
+   },
+   {
+    "title": "Karaoke Version – Hurt",
+    "url": "https://karaoke-version.com/mp3-backingtrack/johnny-cash/hurt.html"
+   }
+  ]
+ }
+}

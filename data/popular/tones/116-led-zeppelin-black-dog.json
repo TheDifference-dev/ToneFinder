@@ -1,0 +1,176 @@
+{
+ "rank": 116,
+ "part": "lead",
+ "researchedAt": 1795295620026,
+ "original": {
+  "song": {
+   "title": "Black Dog",
+   "artist": "Led Zeppelin",
+   "album_or_year": "Led Zeppelin IV (1971)",
+   "tone_character": "Amfisiz, DI kutusundan miksaj masasının mikrofon preamp'ına aşırı yüklenip iki seri UA 1176 ile sıkıştırılmış, 'analog synth gibi' vzıldayan, kuru ve öne atılmış bir distorsiyon. Solo da aynı kuru, kabin rezonansı az, orta frekanslı ve yoğun kompresli karakterde duyulur.",
+   "tone_tags": [
+    "DI / amfisiz distorsiyon",
+    "yoğun kompresli",
+    "kuru (reverb’siz)",
+    "vzıldayan üst orta",
+    "synth benzeri fuzz",
+    "sıkışık dinamik",
+    "az kabin rezonansı"
+   ],
+   "bpm": "82 BPM",
+   "key": "A minör (blues)"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Standard 1959 'Number One' (Sunburst)",
+    "pickup": "Köprü manyetiği (PAF humbucker) – solo için tahmin",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Miksaj masası mikrofon preamp'ı (DI kutusu üzerinden; Island Studios / Rolling Stones Mobile – muhtemelen Helios konsol)",
+     "channel": "Mikrofon girişi, aşırı yüklenmiş (overdrive)",
+     "settings": [
+      {
+       "name": "Mic Gain",
+       "value": "Yüksek",
+       "note": "Distorsiyon masanın mic amp'ı aşırı sürülerek elde edildi (Page/Johns); kesin değer bilinmiyor"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Ritim/riff kayıtları için DI → masa mic preamp → iki seri 1176 zinciri confirmed (Page, Guitar World/Guitar Player; Andy Johns, Equipboard). Solonun aynı zincirle mi yoksa bir amfiyle mi kaydedildiğine dair kaynak bulunamadı; duyulan karakter aynı DI tonuna çok benzer olduğundan 'likely'. Konsol markası (Helios) tahmini/dolaylı."
+    }
+   ],
+   "cab": {
+    "model": "Yok (DI kayıt)",
+    "speakers": "Yok",
+    "mics": [],
+    "certainty": "likely",
+    "notes": "Ritim için amfi/kabin kullanılmadığı confirmed; solo için ayrı belge yok. Modelleyicide kabin IR'ı kapalı ya da çok hafif bir 4x12 IR + yüksek frekans kesimi gerekebilir."
+   },
+   "pedals": [
+    {
+     "model": "Universal Audio 1176 (Urei 1176LN) #1",
+     "purpose": "Stüdyoda, masa preamp'ından sonra seri ilk birim; Johns'a göre biri 'amfi gibi çalışsın diye' modifiye edilmiş – doyum/crunch sağlar",
+     "settings": [
+      {
+       "name": "Input",
+       "value": "Yüksek",
+       "note": "Tahmin; doyum için sert sürülmüş"
+      },
+      {
+       "name": "Attack",
+       "value": "Hızlı",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Ratio",
+       "value": "4:1",
+       "note": "Tahmin; UA eğitiminde bu birimde kompresyon kapalı (Attack Off), headroom vidası tam saat yönünde"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Universal Audio 1176 (Urei 1176LN) #2",
+     "purpose": "Stüdyoda, seri ikinci birim; asıl ağır kompresyon/limitleme",
+     "settings": [
+      {
+       "name": "Input",
+       "value": "Yüksek",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Ratio",
+       "value": "20:1",
+       "note": "Tahmin; ezik, synth benzeri sustain için"
+      },
+      {
+       "name": "Attack",
+       "value": "Hızlı",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Release",
+       "value": "Hızlı",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Jimmy Page, mühendis Andy Johns. Temel kayıtlar Island Studios (Londra, Aralık 1970), overdub'lar Headley Grange'de Rolling Stones Mobile ile ve tekrar Island'da (Şubat 1971). Riff gitarı üç kez üst üste kaydedildi (triple-tracking); solo tek kanal önde. Giriş, birkaç gitar kanalının başlangıcının bant hızlanırken birlikte çalınmasından oluşan bir kolaj. Solo kayda alınan son öğelerden biri olarak anılır. Belirgin delay/reverb yok; ton kuru."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "A minör pentatonik/blues kalıplarında hızlı, gevşek alternate picking ve legato (hammer-on/pull-off)",
+    "Geniş bending ve unison bend'ler",
+    "Page tarzı hızlı parmak vibratosu",
+    "Tekrarlayan triyole dayalı lick dizileri",
+    "Fade-out'a kadar süren doğaçlama hissi"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff (unison gitar/bas)",
+    "description": "Aynı DI → masa preamp → 2x1176 zinciri; gitar üç kez üst üste kaydedilmiş, daha kalın ve geniş. Soloya göre tek fark double/triple-tracking ve ritmik, düşük perdeli çalım; gain/kompresyon aynı karakterde (confirmed)."
+   },
+   {
+    "name": "Giriş",
+    "description": "Birkaç gitar kanalının başlangıcının bant hızlanırken üst üste duyulması (tape spin-up kolaı); ayrı bir ton yok."
+   },
+   {
+    "name": "Ara 'groove' / kapanış akçorları",
+    "description": "Solonun altındaki A-merkezli ritim; aynı DI tonu, akçor vuruşları."
+   }
+  ],
+  "warnings": [
+   "Solo için ayrı ekipman belgesi bulunamadı; solonun da riff ile aynı DI/1176 zinciriyle kaydedildiği duyuma ve dönemin yöntemine dayanıyor (likely). Bazı forumlar Marshall benzeri amfi tonu ileri sürüyor.",
+   "1176 ayar değerleri kaynakta yok; verilen değerler tahmin. UA'nın eğitimi ilk birimi sadece doyum için (Attack Off) kullandırıyor.",
+   "Andy Johns gitarı 'Les Paul Sunburst 52 or something' diye belirsiz tanımlıyor; 1959 No.1 Les Paul olması likely.",
+   "Konsolun Helios olduğu doğrudan kaynakla doğrulanmadı.",
+   "Tonalite kaynaklarda A, A minör veya D olarak farklı görünüyor; BPM 81–83 aralığında, bazı sitelerde 162–164 (double-time)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar Player – Jimmy Page on Led Zeppelin's Black Dog",
+    "url": "https://www.guitarplayer.com/music/jimmy-page-on-led-zeppelins-black-dog"
+   },
+   {
+    "title": "Wikipedia – Black Dog (Led Zeppelin song)",
+    "url": "https://en.wikipedia.org/wiki/Black_Dog_(Led_Zeppelin_song)"
+   },
+   {
+    "title": "Equipboard – Led Zeppelin IV",
+    "url": "https://equipboard.com/albums/led-zeppelin-led-zeppelin-iv-remaster"
+   },
+   {
+    "title": "Universal Audio – Learn Jimmy Page's Secret Distortion Trick",
+    "url": "https://www.uaudio.com/blog/learn-jimmy-pages-secret-distortion-trick"
+   },
+   {
+    "title": "Woodytone – Black F-ing Dog! Jimmy Used No Amp",
+    "url": "https://www.woodytone.com/2010/07/02/black-f-ing-dog-jimmy-used-no-amp/"
+   },
+   {
+    "title": "Guitar.com – Gear used by Jimmy Page on Led Zeppelin IV",
+    "url": "https://guitar.com/features/artist-rigs/the-gear-used-by-jimmy-page-on-led-zeppelin-iv/"
+   },
+   {
+    "title": "SongBPM – Black Dog",
+    "url": "https://songbpm.com/@led-zeppelin/black-dog---basic-track-with-guitar-overdubs"
+   },
+   {
+    "title": "Musicnotes – Black Dog",
+    "url": "https://www.musicnotes.com/sheetmusic/led-zeppelin/black-dog/MN0111048"
+   },
+   {
+    "title": "AllSolos – Black Dog",
+    "url": "https://www.allsolos.com/recording/193/black-dog"
+   }
+  ]
+ }
+}

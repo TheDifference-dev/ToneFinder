@@ -1,0 +1,210 @@
+{
+ "rank": 117,
+ "part": "rhythm",
+ "researchedAt": 1795295629641,
+ "original": {
+  "song": {
+   "title": "Battery",
+   "artist": "Metallica",
+   "album_or_year": "Master of Puppets (1986)",
+   "tone_character": "Yüksek gainli ama kuru ve sıkı bir thrash ritim tonu. Mesa Mark IIC+ preamp'ı Marshall güç katında, mid'i oyulmuş (V şeklinde) EQ ile çalıyor. Altı dolu, tizi keskin. Çok katmanlı (4+ kanal) kayıt duvar gibi geniş bir stereo ritim veriyor; reverb yok, ortam mikrofonları doğal oda hissi katıyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "mid oyuk (scooped)",
+    "sıkı ve dolu alt",
+    "keskin tiz",
+    "kuru, reverbsiz",
+    "çok katmanlı stereo",
+    "palm mute'ta perküsif"
+   ],
+   "bpm": "188–192 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (beyaz, 1980'ler)",
+    "pickup": "Köprü manyetiği. Orijinal Gibson seramik humbucker; EMG 81'e geçiş 1987'de, albümden sonra.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (preamp olarak kullanılmış) → 100W Marshall güç amfisi (modifiye JCM800)",
+     "channel": "Lead (yüksek gain) kanalı, 5 bantlı grafik EQ açık",
+     "settings": [
+      {
+       "name": "Gain (Lead Drive)",
+       "value": "8",
+       "note": "tahmin; doygun ama sıkı"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": "tahmin; Mark serisinde Bass düşük tutulur, alt GEQ ile verilir"
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "GEQ 80 Hz",
+       "value": "+",
+       "note": "tahmin; klasik V şekli"
+      },
+      {
+       "name": "GEQ 240 Hz",
+       "value": "0",
+       "note": "tahmin"
+      },
+      {
+       "name": "GEQ 750 Hz",
+       "value": "-",
+       "note": "tahmin; mid oyuğunu bu bant verir"
+      },
+      {
+       "name": "GEQ 2200 Hz",
+       "value": "0/+",
+       "note": "tahmin"
+      },
+      {
+       "name": "GEQ 6600 Hz",
+       "value": "+",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar World ve MusicRadar (Rasmussen): Mark II C+ preamp olarak yeniden kablolanmış, 100W Marshall güç amfisini sürüyor (doğrulanmış). Ayar değerlerinin hepsi tahmin. Rasmussen beş bantlı EQ'nun beklenenin tersine davrandığını, ayar bulmanın uzun sürdüğünü söylüyor. Kaydın bir kısmı Kirk Hammett'in rig'inde (Boogie + Arredondo modifiyeli Marshall, Tube Screamer ile) tekrar çalındı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (iki farklı kabin)",
+    "speakers": "Muhtemelen Celestion G12T-75 veya Vintage 30 (kaynakta yok)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Hoparlör konisinin tam ortası (cap)",
+      "distance": "Izgaraya dayalı"
+     },
+     {
+      "model": "AKG tüp mikrofon ('Gold')",
+      "position": "Kabinden 45° dışa açılı",
+      "distance": "90–120 cm (3–4 ft)"
+     },
+     {
+      "model": "Brüel & Kjær (BMK, bugünkü DPA) oda mikrofonu",
+      "position": "Oda / ortam, her kabin için bir tane",
+      "distance": "Birkaç metre"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Mikrofonlar Rasmussen'in MusicRadar röportajından alındı. Mix'te ortam (ambience) kanalları da SM57'yle çekildi. Hoparlör modeli tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Distorsiyon/overdrive pedalı yok (Hetfield)",
+     "purpose": "Bilgi notu: Guitar World'e göre Hetfield en son Ride the Lightning'de distorsiyon pedalı kullandı, MoP'ta gain tamamen amfiden geliyor. Kirk'ün rig'inde tekrar çalınan ritimlerde amfi önünde Ibanez Tube Screamer olabilir.",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Aphex / B&B parametrik EQ (stüdyo)",
+     "purpose": "Preamp ile güç amfisi arasında / amfi insert'inde (efekt döngüsü konumu). Rasmussen tonu kontrol odasından bu EQ ile şekillendirdi.",
+     "settings": [
+      {
+       "name": "Mid cut",
+       "value": "~500–800 Hz",
+       "note": "tahmin; mid oyuğunu derinleştirmek için"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Trident A Range konsol preamp/EQ + UREI 1176",
+     "purpose": "Stüdyoda, kayıt zincirinde (amfi ve mikrofonlardan sonra)",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "UREI 530 / Orban 622B EQ (mix)",
+     "purpose": "Stüdyo/mix (Michael Wagener). Gitarlara kompresör neredeyse hiç uygulanmadı.",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Sweet Silence Studios'ta (Kopenhag) yapıldı. Prodüktör Flemming Rasmussen, mix Michael Wagener (Amigo Studios). 24 kanallı analog teyp, synchronizer ile iki makine bağlandı. Ritimlerin hepsini Hetfield çaldı: kendi rig'inde stereo double, ardından Kirk'ün rig'inde yine double. Ground Guitar her ritmin üç kez, farklı ayarlarla çekildiğini yazıyor. Ritim katmanı hiçbir yerde 4 gitardan az değil, yer yer 8'e çıkıyor. Grup reverb istemedi, oda hissi ortam mikrofonlarından geliyor. Mix'te gitarlara kompresör neredeyse hiç kullanılmadı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "~190 BPM'de sürekli hızlı downpicking",
+    "sıkı palm muting ve tam açık akorlar arasında hızlı geçiş",
+    "gallop ve sekizlik/onaltılık kalıplarda dayanıklılık",
+    "çok sıkı ritmik zamanlama",
+    "hızlı power chord pozisyon değişimleri"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Akustik/klasik giriş",
+    "description": "Distorsiyonsuz, çok katmanlı akustik gitarlar, armonili ezgi. Tamamen ayrı bir ton: akustik ya da çok temiz ses. Elektrikle çalınacaksa gain sıfır, sap manyetiği ve hafif oda reverb'ü kullanılabilir."
+   },
+   {
+    "name": "Distorsiyonlu giriş teması (armoni)",
+    "description": "Giriş melodisi ağır distorsiyonla tekrar ediyor, üzerinde birden çok armoni gitarı var. Ritim tonuyla aynı amfi tonu, palm mute yerine uzun notalar ve power chord'lar."
+   },
+   {
+    "name": "Ana riff, kıta ve nakarat",
+    "description": "İstenen bölüm: Mark IIC+ Lead kanalı, köprü manyetiği, V EQ, kuru ton."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "Kirk'ün rig'i: Gibson Flying V veya Floyd Rose'lu Fernandes Strat kopyası, Boogie/Marshall, amfi önünde Ibanez Tube Screamer. Mid daha öne çıkık, daha fazla sustain, yer yer wah (Cry Baby). Mix'te AMS/Lexicon delay eklenmiş olabilir."
+   }
+  ],
+  "warnings": [
+   "Mesa/Boogie ayar değerlerinin hepsi tahmin; hiçbir kaynakta kesin knob değeri yok.",
+   "Battery için Tunebat sayfası bulunamadı. AcousticBrainz 96 BPM / A# minör veriyor, bu yarım tempo ve hatalı tonalite gibi görünüyor. 188–192 BPM ve E minör kulak/genel bilgiye dayalı tahmin. Kayıt yavaşlatılmış teyple yapıldığı için perde tam A440 olmayabilir.",
+   "Gitar konusunda kaynaklar çelişiyor: Guitar World/MusicRadar beyaz Gibson Explorer diyor, bazı kaynaklar Flying V ya da ESP Explorer kopyalarını anıyor. Battery özelinde hangi gitarın kullanıldığı doğrulanmadı.",
+   "Mark IIC+ ile Mark IIC++ adı kaynaklarda karıştırılıyor; Marshall güç amfisinin modifiye JCM800 olup olmadığı 'most accounts' düzeyinde.",
+   "Ritimlerin bir kısmı Kirk'ün rig'inde çalındığı için mixteki ritim tonu iki farklı amfi zincirinin karışımı. Kirk'ün rig'indeki Tube Screamer ritimlerde kullanıldı mı, belirsiz.",
+   "Kabin hoparlör modeli ve AKG tüp mikrofonun tam modeli kaynaklarda yok. Mikrofon sayısı konusunda MusicRadar metni kendi içinde tutarsız."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar – Flemming Rasmussen, Master of Puppets prodüksiyonu",
+    "url": "https://www.musicradar.com/artists/producers-engineers/all-the-albums-i-did-with-metallica-were-recorded-on-24-track-analogue-tape-theres-not-a-computer-in-sight-how-flemming-rasmussen-produced-metallicas-classic-master-of-puppets"
+   },
+   {
+    "title": "Guitar World – How Metallica changed metal with Master of Puppets",
+    "url": "https://www.guitarworld.com/features/metallica-master-of-puppets"
+   },
+   {
+    "title": "Mix – Classic Track: Master of Puppets",
+    "url": "https://www.mixonline.com/recording/classic-track-master-of-puppets-metallica"
+   },
+   {
+    "title": "Ground Guitar – James Hetfield's Mesa Boogie Mark IIC+",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-mesa-boogie-mark-iic/"
+   },
+   {
+    "title": "Equipboard – Master of Puppets",
+    "url": "https://equipboard.com/albums/metallica-master-of-puppets-remastered"
+   },
+   {
+    "title": "AcousticBrainz – Battery analizi",
+    "url": "https://acousticbrainz.org/3bfda26a-49fa-4bc4-a4d6-8bbfa0767ab7"
+   },
+   {
+    "title": "Wikipedia – Battery (song)",
+    "url": "https://wikipedia.com/wiki/Battery_(song)"
+   }
+  ]
+ }
+}

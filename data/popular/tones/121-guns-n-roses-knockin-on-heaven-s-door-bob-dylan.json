@@ -1,0 +1,178 @@
+{
+ "rank": 121,
+ "part": "lead",
+ "researchedAt": 1795295800395,
+ "original": {
+  "song": {
+   "title": "Knockin' On Heaven's Door",
+   "artist": "Guns N' Roses",
+   "album_or_year": "Use Your Illusion II (1991); ilk versiyon Days of Thunder soundtrack (1990)",
+   "tone_character": "Orta-yüksek kazançlı, sıcak ve şarkı söyler gibi bir Marshall lead tonu. Ton düğmesi kısılmış 1958/59 Gibson Korina Flying V/Explorer'dan gelen nazal, wah'a benzeyen bir orta frekans rengi var; üstüne mikste hafif reverb eklenmiş.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "nazal (ton düğmesi kısık)",
+    "sıcak",
+    "sustain'li",
+    "orta-yüksek kazanç",
+    "humbucker",
+    "hafif reverb"
+   ],
+   "bpm": "67 BPM",
+   "key": "F# majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1959 Gibson Korina Flying V (bazı kaynaklara göre 1958 Gibson Explorer)",
+    "pickup": "Köprü humbucker (orijinal PAF), ton düğmesi büyük ölçüde kısık",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (modifiyeli) veya Marshall 2555 Silver Jubilee",
+     "channel": "Tek kanal / high-gain giriş (lead)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Slash, Use Your Illusion'daki imza sesinin 'Les Paul + Marshall half-stack' olduğunu söylüyor (Guitar Player). Bu solo için hangi amfi modelinin kullanıldığını yazan bir kaynak yok. Equipboard albüm sayfası JCM800 2203'ü listeliyor (6550 lambalı), dönemin canlı rig'inde ise Silver Jubilee var. Overdub'larda feedback için ayrıca bir MESA/Boogie Mark III kombo, splitter ve volume pedalıyla birlikte kullanılmış; Slash da yüksek sesli stüdyo monitörlerinin önünde çalmış. Ayarların hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion G12T-75 veya Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kenara yakın, hafif off-axis",
+      "distance": "2-3 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin, hoparlör ve mikrofon için bu kayda özel bir kaynak bulunamadı; bunlar dönemin LA stüdyolarında standart olan kurulum."
+   },
+   "pedals": [
+    {
+     "model": "Volume pedal + splitter (MESA/Boogie Mark III kombosuna ikinci sinyal)",
+     "purpose": "Amfi önünde; overdub'larda kontrollü feedback için ikinci amfiyi beslemek. Bu soloda kullanıldığı kesin değil.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo reverb'ü (plaka/oda; modeli bilinmiyor)",
+     "purpose": "Stüdyoda/mikste, amfiden sonra eklenmiş. Bonedo'ya göre bu şarkıda 'biraz reverb yeterli'.",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "1.8 s",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%15",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör Mike Clink, mühendis Jim Mitchell. Temel kanallar A&M'de kaydedildi, Slash'ın overdub'ları Record Plant'in kontrol odasında, yüksek sesli monitörlerin önünde yapıldı. Slash, stüdyoya kısa bir süreliğine uğrayıp solonun tamamını yeni aldığı Flying V ile tek take'te çaldığını anlatıyor (Guitar World). Solo tek bir kanal; double-tracking'e dair bir bilgi yok. UYI miksini Bill Price yaptı (Bob Clearmountain'ın yerine). Ilk versiyon 1990'da Days of Thunder soundtrack'i için yayınlandı. Akort, grubun dönemdeki standardı olan Eb ve duyulan F# tonalitesine dayanıyor (likely)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Geniş ve ifadeli bendler (tam ve 1,5 ses), entonasyon kontrolü",
+    "Geniş ve yavaş Slash vibratosu",
+    "F# minör/majör pentatonik karışımı, blues frazlama",
+    "Yavaş tempoda zamanlama",
+    "Nota sonlarında sustain ve feedback kontrolü",
+    "Ton düğmesiyle nazal rengi ayarlamak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana akor/ritim bölümü",
+    "description": "G-D-Am / G-D-C akorlarının arpejli ya da tam vuruşlu çalındığı kısım. Ses daha temiz ya da hafif crunch; kazanç solodan belirgin şekilde düşük (gitarın volume düğmesi kısılabilir). Ton düğmesi açık, nazal renk yok. Izzy Stradlin'in gitarı çoğunlukla solda."
+   },
+   {
+    "name": "Akustik katmanlar",
+    "description": "Slash bu albümde Guild ve Martin akustikler kullanmış. Akorlara eşlik eden akustik katmanlar olabilir; bu kayıt için kesin değil."
+   },
+   {
+    "name": "Uzun outro / lead dolguları",
+    "description": "UYI II versiyonundaki uzatılmış outro'da daha fazla lead dolgusu var. Ton soloyla aynı: yüksek kazanç, sustain ve feedback."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: Slash'ın Guitar World'deki sözlerine göre solo 1959 Korina Flying V ile tek seferde çalınmış. Equipboard ise otobiyografiye dayanarak 1958 Explorer diyor. Guitar Player'da 'Heaven's Door'daki nazal tonun '58 V'nin ton düğmesinden geldiği, wah kullanılmadığı' yazıyor.",
+   "Bu solo için amfi modeli, kabin, mikrofon ve ayarlar hiçbir kaynakta doğrulanmadı; hepsi dönem rig'ine dayanan tahminler.",
+   "BPM ve tonalite: AcousticBrainz ve Klang Days of Thunder versiyonu için 133 BPM (yarım tempo ~67) ve F# veriyor. Başka bir analiz 88.9 BPM / C#m diyor. Grup yarım ses pes akortla G pozisyonunda çalıyor, duyulan ses F# majör.",
+   "Days of Thunder (1990) ve UYI II (1991) versiyonları farklı miksler; UYI II'de uzatılmış outro var. Solonun aynı take olması muhtemel ama kesin değil.",
+   "Wah yok (Guitar Player, Slash'ın kendi sözleri); talk box kullanıldığına dair bir kanıt da bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar Player - How I Recorded Use Your Illusion by Slash",
+    "url": "https://www.guitarplayer.com/news/guns-n-roses-use-your-illusion-albums-turn-30-today"
+   },
+   {
+    "title": "Guitar World - Slash's 5 most iconic guitars in his own words",
+    "url": "https://www.guitarworld.com/gear/electric-guitars/slashs-5-most-iconic-guitars-in-his-own-words"
+   },
+   {
+    "title": "Equipboard - Use Your Illusion II",
+    "url": "https://equipboard.com/albums/guns-n-roses-use-your-illusion-ii"
+   },
+   {
+    "title": "MusicRadar - The story of Use Your Illusion I & II",
+    "url": "https://www.musicradar.com/news/guitars/the-story-of-guns-n-roses-use-your-illusion-i-ii-496629"
+   },
+   {
+    "title": "Bonedo - Knockin' on Heaven's Door Workshop",
+    "url": "https://www.bonedo.de/artikel/die-besten-gitarrensoli-guns-nroses-knockin-on-heavens-door-workshop"
+   },
+   {
+    "title": "Marshall - Slash Guitar Heroes",
+    "url": "https://www.marshall.com/backstage/guitar-heroes/slash"
+   },
+   {
+    "title": "UBC track analysis - GNR Knockin' on Heaven's Door",
+    "url": "https://www.cs.ubc.ca/~davet/music/track/GUNSROSE_IL2/GUNSROSE_IL2-04.html"
+   },
+   {
+    "title": "Klang - Knockin' On Heaven's Door",
+    "url": "https://songs.klang.io/en/s/Guns%20N'%20Roses/Knockin'%20On%20Heaven's%20Door/k04tX2fvh0o"
+   }
+  ]
+ }
+}

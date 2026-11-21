@@ -1,0 +1,236 @@
+{
+ "rank": 118,
+ "part": "rhythm",
+ "researchedAt": 1795295572091,
+ "original": {
+  "song": {
+   "title": "Black Hole Sun",
+   "artist": "Soundgarden",
+   "album_or_year": "Superunknown (1994)",
+   "tone_character": "Orta seviye overdrive'lı, iki amfinin karışımından oluşan kalın ama tanımlı bir ritim tonu. Marshall'ın parlak pena atağı ile Mesa'nın koyu, gövdeli alt frekansları birleşiyor; kıtadaki arpejler hızlı dönen bir Leslie 16'dan geçerek titreyen, 'su altında' gibi bir vibrato kazanıyor.",
+   "tone_tags": [
+    "orta gain (crunch-overdrive)",
+    "iki amfi karışımı",
+    "Leslie dönen hoparlör vibratosu",
+    "kalın alt-orta",
+    "tanımlı pena atağı",
+    "Filter'Tron parlaklığı",
+    "psikedelik"
+   ],
+   "bpm": "105 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gretsch G6128T Duo Jet (1989), Chris Cornell'in",
+    "pickup": "Köprü manyetiği, seramik mıknatıslı Filter'Tron humbucker; master volume, köprü volume ve master tone 10'da",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP Model 1987 50W Lead (1970'lerin sonu)",
+     "channel": "Tek kanal, Input I ile Input II arası jumper ile bağlı (iki kanal birlikte)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "8",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Volume I",
+       "value": "7",
+       "note": "Parlak kanal"
+      },
+      {
+       "name": "Volume II",
+       "value": "5",
+       "note": "Normal kanal"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Amfi modeli birden fazla kaynakta geçiyor (Beinhorn'a dayandırılıyor). Ayarlar Guitar World'ün ton rehberinden; muhtemelen yeniden yaratma amaçlı, belgelenmiş stüdyo ayarı değil. Parlak ton, net pena atağı sağlıyor. Kıta arpejinde Leslie 16'yı da bu kafa sürüyor."
+    },
+    {
+     "model": "Mesa/Boogie Dual Rectifier Solo Head (1993, 6L6)",
+     "channel": "Orange/Vintage kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "5",
+       "note": "Orta seviye overdrive"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Mid",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "2",
+       "note": ""
+      },
+      {
+       "name": "Master",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Gain switch",
+       "value": "Variable High Gain",
+       "note": "Orange kanalı modu"
+      },
+      {
+       "name": "Rectifier",
+       "value": "Vacuum Tubes",
+       "note": ""
+      },
+      {
+       "name": "Power",
+       "value": "Spongy",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Marshall ile aynı anda çalındı ve karıştırıldı; daha koyu, gövdeli ve alt frekansı dolgun tarafı veriyor. Ayarlar Guitar World ton rehberinden."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960A 4x12 (eğimli) + Mesa/Boogie 4x12; kıta için ayrıca Leslie Model 16 / Fender Vibratone dönen hoparlör",
+    "speakers": "Marshall: Celestion G12H-30 Greenback; Mesa: Celestion Vintage 30; Leslie 16: tek 10 inç hoparlör ve dönen bafıl",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Bilinmiyor (her amfide; muhtemelen koniye yakın, eksen üstünde)",
+      "distance": "Bilinmiyor (muhtemelen birkaç cm, yakın mikrofonlama)"
+     },
+     {
+      "model": "RCA BK-5B (şerit/ribbon)",
+      "position": "Bilinmiyor (her amfide ikinci mikrofon)",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Produce Like A Pro'ya göre her amfide iki mikrofon kullanıldı: SM57 ve RCA BK5B. Mikrofonların konumu ve mesafesi bir kaynakta yazmıyor. Hoparlör tipleri Guitar World rehberinden."
+   },
+   "pedals": [
+    {
+     "model": "Fender Vibratone / Leslie Model 16 rotating speaker",
+     "purpose": "Amfiden sonra. Marshall kafasının hoparlör çıkışından sürülen dönen hoparlör kabini; kıta arpejindeki titreyen vibrato/chorus etkisi. Pedal değil, ayrı bir kabin.",
+     "settings": [
+      {
+       "name": "Speed",
+       "value": "Fast",
+       "note": "Guitar World'e göre hızlı ayar. Produce Like A Pro ağır kısımlar için daha yavaş dönüşten söz ediyor."
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Electro-Harmonix Memory Man",
+     "purpose": "Amfiden sonra / efekt döngüsünde: büyük delay sesleri için. Daha çok solo ve atmosferik kısımlarla ilgili olabilir.",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D (DADGBE); kayıt yaklaşık çeyrek ses tiz",
+   "recording_notes": "Kayıt Bad Animals Studio'da (Studio X), Seattle'da yapıldı. Prodüktör Michael Beinhorn ve Soundgarden, kayıt mühendisi Jason Corsaro, asistan Adam Kasper, miks Brendan O'Brien. SSL 4064 G-Series konsol ve Studer A827 bant kullanıldı. Ritim gitarlarının neredeyse hepsini Chris Cornell çaldı; Kim Thayil yalnızca lead/solo çaldı. Beinhorn'a göre Cornell, Marshall JMP 50 ve Mesa Dual Rectifier yarım stack'lerini orta seviye overdrive'da birlikte çalıp karıştırdı. Kıta gitarı Leslie'den geçirildi; bir kaynağa göre Leslie, ağır arpej kısımlarında doğrudan amfi sesiyle karıştırıldı. Solo iki kanaldan oluşuyor ve miks sırasında comp yapıldı. Kayıt yaklaşık çeyrek ses tiz; bant hızından olabilir."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Kıtada akor değişimlerini izleyen, akıcı ve temiz bir arpej",
+    "Drop D'de alışılmadık akor geçişleri ve kromatik inen hatlar",
+    "Kıta arpejinden nakaratın ağır, açık çalınan akorlarına dinamik geçiş",
+    "Leslie altında notaların eşit ve net çıkması için pena kontrolü, çalınmayan telleri susturma",
+    "Tempo yavaş (~105 BPM) ama groove ve zamanlama hassas"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta arpeji (Leslie)",
+    "description": "Ana ritim figürü. Aynı iki amfi karışımı orta gain'de; sinyal ayrıca hızlı dönen bir Leslie 16'dan geçiyor ve titreyen vibrato kazanıyor. Arpejin netliği için gitarın volume'u biraz kısılabilir (tahmin)."
+   },
+   {
+    "name": "Nakarat ('Black hole sun, won't you come')",
+    "description": "Daha ağır, açık çalınan akorlar. Leslie azalıyor veya yok, kuru Marshall+Mesa karışımı öne çıkıyor; gain aynı ama vuruş daha sert, ses daha kalın ve doymuş."
+   },
+   {
+    "name": "Solo (Kim Thayil)",
+    "description": "Thayil'in çaldığı, iki kanaldan comp yapılmış, bükmeli ve tuhaf aralıklı bir solo. Biraz daha fazla gain ve sustain var; Leslie/vibrato rengi korunuyor olabilir. Kesin ekipman belgelenmemiş: Gretsch veya Guild, Mesa Rectifier."
+   },
+   {
+    "name": "Outro / ağır riff",
+    "description": "Şarkının sonundaki kalın, ağır riff kısmı. Aynı iki amfi karışımı, daha sert vuruş; Leslie olmadan."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: Guitar World, Beinhorn'a dayanarak bu şarkıda yalnızca Gretsch Duo Jet kullanıldığını söylüyor. Gearnews ise yine Beinhorn'a dayanarak Gretsch Silver Jet diyor. Produce Like A Pro üç gitarı (Silver Jet, Duo Jet, Jazzmaster) yanlışlıkla Thayil'e atfediyor.",
+   "Amfi ve pedal ayarları Guitar World'ün 'secrets behind the tone' rehberinden. Bunlar büyük olasılıkla yeniden yaratma için önerilen değerler; belgelenmiş stüdyo ayarları değil.",
+   "Leslie hızı belirsiz: Guitar World 'fast' diyor, Produce Like A Pro ağır arpej kısımlarında daha yavaş dönüş ve Fender Vibratone'dan söz ediyor.",
+   "Mikrofon konumu ve mesafesi bilinmiyor; yalnızca mikrofon modelleri (SM57 + RCA BK5B) bir kaynakta geçiyor.",
+   "EHX Memory Man yalnızca Gearnews'te geçiyor ve hangi kısımda kullanıldığı belirsiz.",
+   "Tonalite: şarkı Drop D'de ve G merkezli, ama kayıt yaklaşık çeyrek ses tiz. Bu yüzden tespit araçları F#/G♭ veya Eb gibi farklı sonuçlar veriyor. Tunebat sayfası bulunamadı; BPM için songbpm (105) ve Waterloo veritabanı (107) kullanıldı.",
+   "Bazı kaynaklar (AltoMusic) Superunknown'da Thayil'in Sunn Model T ve Guild S-100 kullandığını söylüyor. Bu bilgi Cornell'in ritim parçası için geçerli değil."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World - The secrets behind Chris Cornell's tone on Soundgarden's Black Hole Sun",
+    "url": "https://www.guitarworld.com/gear/the-secrets-behind-chris-cornells-tone-on-soundgardens-black-hole-sun"
+   },
+   {
+    "title": "Gearnews - Black Hole Sun sound",
+    "url": "https://www.gearnews.com/?p=239193"
+   },
+   {
+    "title": "Produce Like A Pro - Black Hole Sun",
+    "url": "https://producelikeapro.com/blog/black-hole-sun/"
+   },
+   {
+    "title": "Bonedo - Black Hole Sun tabs (Drop D, kayıt çeyrek ses tiz)",
+    "url": "https://www.bonedo.de/artikel/die-besten-gitarrenriffs-in-noten-und-tabs-soundgarden-black-hole-sun/"
+   },
+   {
+    "title": "Equipboard - Superunknown",
+    "url": "https://equipboard.com/albums/soundgarden-superunknown-super-deluxe"
+   },
+   {
+    "title": "AltoMusic - Essential Elements: Superunknown",
+    "url": "https://www.altomusic.com/blogs/news/essential-elements-of-essential-classics-soundgarden-superunknown"
+   },
+   {
+    "title": "SongBPM - Black Hole Sun",
+    "url": "https://songbpm.com/@soundgarden/black-hole-sun"
+   },
+   {
+    "title": "Waterloo music DB - Black Hole Sun",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/POWERTRK_044/POWERTRK_044-05.html"
+   }
+  ]
+ }
+}

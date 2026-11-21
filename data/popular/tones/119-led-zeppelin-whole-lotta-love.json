@@ -1,0 +1,243 @@
+{
+ "rank": 119,
+ "part": "full",
+ "researchedAt": 1795295720253,
+ "original": {
+  "song": {
+   "title": "Whole Lotta Love",
+   "artist": "Led Zeppelin",
+   "album_or_year": "Led Zeppelin II (1969)",
+   "tone_character": "Orta frekanslarda yoğun, kalın ve ham bir crunch/overdrive. Amfi zorlanarak elde edilmiş, aşırı gain olmadan kırılıyor; odanın doğal ambiyansını taşıyor ve stereo panoramada konumlanıyor. Riff kuru ve önde; solo ve orta bölüm yankı, ters echo ve reverb'le yoğun biçimde işlenmiş.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "ham crunch / orta gain",
+    "kalın humbucker karakteri",
+    "oda ambiyansı",
+    "az kompresyon, dinamik",
+    "stereo panlama"
+   ],
+   "bpm": "90–92 BPM",
+   "key": "E majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Standard (1959 Sunburst, \"No. 1\"; Nisan 1969'da Joe Walsh'tan alındı)",
+    "pickup": "Köprü manyetiği, PAF humbucker; solo da büyük olasılıkla köprü manyetiğiyle",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Vox Super Beatle (V1141/V1143, tranzistörlü kafa)",
+     "channel": "Normal/Brilliant giriş; overdrive amfinin zorlanmasıyla",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "Tahmin: kırılma için yüksek seviye"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Top Boost",
+       "value": "On",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Page 2020'de Total Guitar/Guitar World'e Paul Samwell-Smith'ten kalan Super Beatle kafalarını Rickenbacker Transonic kabinlerle kullandığını söyledi: \"That's exactly what's on Whole Lotta Love.\" Wikipedia da tranzistörlü amfi diyor. Model kesin; ayarlar hiçbir kaynakta yok."
+    },
+    {
+     "model": "Marshall 1959 Super Lead / Super Bass 100W (Plexi)",
+     "channel": "Tek kanal",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Volume I",
+       "value": "7",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Page Marshall'a 1969 yazında LZ II overdub'larında geçti. Bu şarkı için doğrudan kanıt yok; yalnızca alternatif bir olasılık olarak verildi."
+    }
+   ],
+   "cab": {
+    "model": "Rickenbacker Transonic kabin",
+    "speakers": "Bilinmiyor (Transonic kabinlerde genellikle çoklu 12\" hoparlör var)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönem için Neumann U67/U87 veya Shure SM57 tahmini)",
+      "position": "Tahmin: cap ile edge arası",
+      "distance": "Tahmin: yakın mikrofon + birkaç metrede oda mikrofonu"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Kabin modeli Page'in sözüyle doğrulandı. Mikrofonlar tahmin: Page'in 'distance makes depth' (mesafe derinlik yaratır) yaklaşımı, yakın ve uzak mikrofonların birlikte kullanılmasını destekliyor."
+   },
+   "pedals": [
+    {
+     "model": "Vox / Thomas Organ Cry Baby wah",
+     "purpose": "Amfinin önünde; yalnızca soloda, sabit konumda ton filtresi olarak",
+     "settings": [
+      {
+       "name": "Position",
+       "value": "%60–70 basılı",
+       "note": "Tahmin: nazal, üst-orta tepe"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Bant makinesiyle ters echo (reverse echo) ve muhtemelen Binson Echorec",
+     "purpose": "Stüdyoda/mikste; orta bölümde ve finalde",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~300–350 ms",
+       "note": "Tahmin; tempoya yakın"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Stüdyo plate/chamber reverb (Olympic/A&M)",
+     "purpose": "Mikste; solo, orta bölüm ve final",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "2–3 s",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Nisan 1969'da Olympic Studios (Londra) ve A&M (Hollywood) stüdyolarında yapıldı; miks A&R (New York) stüdyosunda Eddie Kramer ile tamamlandı. Yapımcı Jimmy Page; mühendisler George Chkiantz ve Eddie Kramer. Riff hafif bend'li unison notalarla çalınarak çift gitar etkisi veriyor ve bas riffi oktav aşağıdan katlıyor. Orta bölümdeki ters echo, theremin ve panlamalar mikste yapıldı (\"Jimmy and I went nuts on the knobs\"). İkinci gitar izinde Plant'in eski bir vokal kaydının izleri duyuluyor (bleed)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Ana riffte açık D teli ile basılı notanın unison çalınması ve hafif bend",
+    "Ağır, senkoplu groove ve zamanlama hissi",
+    "Solo: hızlı pentatonik lickler, geniş bend, vibrato",
+    "Orta bölümde slide ve doku odaklı gürültüler",
+    "Stop-time kısımlarda tellerin hassas susturulması"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "Referans ton: köprü manyetiği, orta gain'li crunch, kuru ve önde, stereo panoramada konumlanmış."
+   },
+   {
+    "name": "Orta bölüm (psikedelik ara)",
+    "description": "Theremin, slide ve gitar gürültüleri; mikste ters tape echo ve yoğun reverb eklenmiş, panlama manipülasyonları var. Riffe göre çok daha ıslak ve uzamsal."
+   },
+   {
+    "name": "Solo",
+    "description": "Wah pedalı sabit konumda bırakılıp ton filtresi gibi kullanılıyor; nazal, üst-orta renk veriyor. Gain riffe yakın, sustain biraz daha fazla."
+   },
+   {
+    "name": "Final / outro",
+    "description": "Pedal-steel benzeri bend'li overdub'lar; ambiyans reverb, ters echo ve stereo panlamayla işlenmiş."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı: Page 2020'de Vox Super Beatle + Rickenbacker Transonic dedi; eski yayınlarda ve forumlarda Marshall Plexi geçiyor.",
+   "Les Paul No. 1 için şarkıya özgü bir kaynak yok; dönemin rig'ine göre 'likely'.",
+   "Stüdyo dağılımı kaynaklarda farklı: Olympic, A&M ve A&R stüdyoları anılıyor.",
+   "Mikrofon ve hoparlör detayları bulunamadı; verilenler tahmin.",
+   "Solodaki wah'ın hareketi tartışmalı; Page ve Reverb sabit konum diyor.",
+   "Echo cihazı (Echorec mi, bant mı) netleşmedi.",
+   "Tonalite: Wikipedia E majör, Tunebat A majör, bazı analizler E minör diyor; müzikal olarak E blues/mixolydian. Tempo 89–92 BPM; bazı araçlar iki katını gösteriyor.",
+   "Tüm ayar değerleri tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Jimmy Page reveals the amp he really used to record Whole Lotta Love",
+    "url": "https://www.guitarworld.com/news/jimmy-page-reveals-the-amp-he-really-used-to-record-whole-lotta-love"
+   },
+   {
+    "title": "Guitar Player – Jimmy Page Reveals His Whole Lotta Love Amp",
+    "url": "https://www.guitarplayer.com/news/jimmy-page-reveals-his-whole-lotta-love-amp"
+   },
+   {
+    "title": "Wikipedia – Whole Lotta Love",
+    "url": "https://en.wikipedia.org/wiki/Whole_Lotta_Love"
+   },
+   {
+    "title": "Open Culture – Jimmy Page Describes the Creation of Whole Lotta Love",
+    "url": "https://www.openculture.com/2014/06/jimmy-page-describes-the-creation-of-led-zeppelins-whole-lotta-love.html"
+   },
+   {
+    "title": "Far Out – Reverse echo in Whole Lotta Love",
+    "url": "https://faroutmagazine.co.uk/how-did-led-zeppelin-build-the-reverse-echo-in-whole-lotta-love/"
+   },
+   {
+    "title": "Guitar World – 25 greatest wah solos",
+    "url": "https://www.guitarworld.com/features/25-greatest-wah-solos-all-time"
+   },
+   {
+    "title": "Guitar World – 50 greatest guitar effects moments",
+    "url": "https://www.guitarworld.com/features/greatest-guitar-effects-moments/4"
+   },
+   {
+    "title": "Reverb – Nailing It: Jimmy Page",
+    "url": "https://reverb.com/news/nailing-it-achieving-the-tones-of-jimmy-page"
+   },
+   {
+    "title": "American Songwriter – Led Zeppelin accessories",
+    "url": "https://americansongwriter.com/led-zeppelin-favorite-guitar-accessories"
+   },
+   {
+    "title": "Far Out – First Led Zeppelin song through a Marshall",
+    "url": "https://faroutmagazine.co.uk/first-led-zeppelin-song-jimmy-page-played-through-a-marshall-stack-amp/"
+   },
+   {
+    "title": "Equipboard – Jimmy Page",
+    "url": "https://equipboard.com/pros/jimmy-page"
+   },
+   {
+    "title": "Seymour Duncan Forum – Whole Lotta Love",
+    "url": "https://forum.seymourduncan.com/threads/jimmie-page-on-whole-lotta-love.105482/page-2"
+   },
+   {
+    "title": "Tunebat – Whole Lotta Love",
+    "url": "https://tunebat.com/Info/Whole-Lotta-Love-1990-Remaster-Led-Zeppelin/0hCB0YR03f6AmQaHbwWDe8"
+   },
+   {
+    "title": "Dave Tompkins – Whole Lotta Love analysis",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/LEDZEPLN_G1A/LEDZEPLN_G1A-01.html"
+   }
+  ]
+ }
+}
