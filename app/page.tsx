@@ -356,6 +356,18 @@ export default function Home() {
           if (p.song !== undefined) setSong(p.song);
           if (p.artist !== undefined) setArtist(p.artist);
           if (p.artwork !== undefined) setArtwork(p.artwork);
+          // Popüler 100'deki bir şarkı seçildiyse hazır kaydın bölümüne geç (ton anında açılsın)
+          if (p.song && p.artist) {
+            const hit = popular.find(
+              (e) => e.ready && e.title.toLocaleLowerCase("en") === p.song!.toLocaleLowerCase("en") && e.artist.toLocaleLowerCase("en") === p.artist!.toLocaleLowerCase("en"),
+            );
+            if (hit) {
+              setPart(hit.part);
+              setPartDetail("");
+              setInstrument("guitar");
+              setToneType("auto");
+            }
+          }
         }}
         action={
           <Pill tone="primary" type="submit" disabled={!canSubmit} className={big ? "!px-7 !py-4 text-base" : "!px-5"}>

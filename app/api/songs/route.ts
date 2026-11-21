@@ -41,7 +41,15 @@ interface DeezerTrack {
   album?: { title?: string; cover_medium?: string };
 }
 
+/** "Enter Sandman (Remastered 2021)" → "Enter Sandman"; canlı/remix gibi farklı kayıtlar korunur */
+const cleanTitle = (t: string) =>
+  t
+    .replace(/\s*[([](?:[^)\]]*\b(?:remaster(?:ed)?|mono|stereo|deluxe|bonus track|single version|album version)\b[^)\]]*)[)\]]/gi, "")
+    .replace(/\s+-\s+(?:\d{4}\s+)?(?:remaster(?:ed)?|mono|stereo|single version|album version)\b.*$/i, "")
+    .trim();
+
 function dedupe(songs: SongHit[]): SongHit[] {
+  songs = songs.map((s) => ({ ...s, title: cleanTitle(s.title) || s.title }));
   const seen = new Set<string>();
   return songs.filter((s) => {
     const id = `${s.title}|${s.artist}`.toLowerCase();
@@ -153,6 +161,7 @@ async function artistTop(name: string, id: number): Promise<SongHit[]> {
 
 /** Aynı şarkının remaster/live sürümlerini tek satıra indir */
 function dedupeTitles(songs: SongHit[]): SongHit[] {
+  songs = songs.map((s) => ({ ...s, title: cleanTitle(s.title) || s.title }));
   const seen = new Set<string>();
   return songs.filter((s) => {
     const base = norm(s.title.replace(/\(.*?\)|\[.*?\]|-\s*(remaster|live|remix|demo|mono|stereo).*$/gi, ""));
