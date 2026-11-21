@@ -1,0 +1,149 @@
+{
+ "rank": 83,
+ "part": "intro",
+ "researchedAt": 1795281443228,
+ "original": {
+  "song": {
+   "title": "Sunshine Of Your Love",
+   "artist": "Cream",
+   "album_or_year": "Disraeli Gears (1967)",
+   "tone_character": "Sonuna kadar açılmış bir Marshall'ın doğal güç lambası overdrive'ı; tone düğmesi neredeyse kapalı olduğu için tiz yuvarlanmış, kalın, orta frekansı ağır, kompresli ve 'boğuk' bir ton. Atlantic'in büyük odasıyla hafif oda havası taşıyor.",
+   "tone_tags": [
+    "koyu / tiz kısılmış",
+    "orta frekans öne çıkık",
+    "amfiden gelen doğal distorsiyon",
+    "kompresli",
+    "kalın humbucker",
+    "hafif oda ambiyansı",
+    "fuzz/pedal yok"
+   ],
+   "bpm": "115 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1964 Gibson SG Standard \"The Fool\" (psikedelik boyalı)",
+    "pickup": "Köprü manyetiği (vintage çıkışlı Gibson PAF tipi humbucker, ~7–8k), Volume 10, Tone ~1; Guitar World'e göre riff/kıta/nakaratta köprü, soloda sap manyetiği",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall JTM45/100 (Super 100, 1966, KT66 lambalı)",
+     "channel": "Normal kanal, Input 2",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Bass",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Normal Volume",
+       "value": "10",
+       "note": "Tamamen açık, distorsiyon ve sustain buradan geliyor"
+      },
+      {
+       "name": "High Treble Volume",
+       "value": "0",
+       "note": "Kullanılmadı"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar World ton analizi tüm düğmeleri 10 olarak veriyor. Bazı kaynaklar 50W Marshall half-stack diyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B straight-front 4x12",
+    "speakers": "Celestion G12M T1221 'Greenback' 20W",
+    "mics": [
+     {
+      "model": "B&K ribbon (Dowd'un hatırladığı şekliyle)",
+      "position": "Tek bir hoparlöre 45° açılı (off-axis)",
+      "distance": "yaklaşık 2 in"
+     },
+     {
+      "model": "Western Electric 639A (kardioid)",
+      "position": "Amfiye bakan, uzak/oda mikrofonu",
+      "distance": "yaklaşık 2,5 ft daha geride"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Stüdyoda sahnedeki iki kabin yerine tek kabin kullanılmış (Guitar World). Mikrofon bilgisi Tom Dowd'un Mix röportajından."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Atlantic Studios, New York, Mayıs 1967 (11–15 Mayıs). Prodüktör Felix Pappalardi, mühendis Tom Dowd. Ampex 8 kanal, 15 ips. Gitar stereo kaydedilmiş (yakın + uzak mikrofon). Temel kanallar canlı çalınmış; riff bas gitarla unison çalınıyor. Solo bir vokal kanalına overdub edilmiş, böylece riff altta devam ediyor. İşleme minimal; Dowd'a göre odanın kendisi sesin %30–40'ı. Gitar efekt pedalı kullanılmamış. Teller Fender Rock 'N Roll 150 (.010–.038)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Riff basit, tek nota çizgisi + akorlar",
+    "Sap boyunca pozisyon kaydırma (10. perde bölgesinden aşağıya)",
+    "Hafif bend ve vibrato riff sonlarında",
+    "Davulun ters vuruşlu ritmine oturan zamanlama",
+    "Akor kısmında (D–C–Bb/F tipi) tam akor vuruşları"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta / riff altı akorlar",
+    "description": "Aynı ton; riff ile dönüşümlü güçlü akor vuruşları, köprü manyetiği, tone kısık."
+   },
+   {
+    "name": "Nakarat ('I've been waiting so long')",
+    "description": "Aynı amfi ayarı, A–C–G–D tipi akorlar; ton değişmiyor."
+   },
+   {
+    "name": "Solo",
+    "description": "Sap manyetiğine geçiş, tone ~1: klasik 'woman tone' — daha yuvarlak, daha flütümsü, daha uzun sustain. 'Blue Moon' alıntısıyla başlar; geniş bendler, güçlü vibrato, pentatonik/blues lick'leri. Ayrı overdub kanalı. Wah veya pedal yok."
+   }
+  ],
+  "warnings": [
+   "Riff için manyetik tartışmalı: Guitar World köprü (tone 1) diyor, yaygın inanış ise tüm şarkıda sap manyetiğiyle 'woman tone'.",
+   "Bazı kaynaklar Les Paul Custom 'Black Beauty' ve 50W Marshall da kullanıldığını söylüyor; Guitar World bu şarkıda yalnızca SG + JTM45/100 kullanıldığını belirtiyor.",
+   "Mikrofon bilgisi Tom Dowd'un onlarca yıl sonraki hatırasına dayanıyor; 'B&K ribbon' ifadesi alışılmadık, tam model belirsiz.",
+   "BPM 115–116 civarı (DJ yazılımı analizi); bazı araçlar A minör diyor ama riff D merkezli (D blues/Dorian)."
+  ],
+  "research_confidence": "high",
+  "sources": [
+   {
+    "title": "Guitar World – Eric Clapton Cream Sunshine of Your Love tone",
+    "url": "https://www.guitarworld.com/features/eric-clapton-cream-sunshine-of-your-love-tone"
+   },
+   {
+    "title": "Mix – Classic Tracks: Cream's Sunshine of Your Love",
+    "url": "https://www.mixonline.com/recording/classic-tracks/classic-tracks-creams-sunshine-your-love-375554"
+   },
+   {
+    "title": "Wikipedia – Sunshine of Your Love",
+    "url": "https://en.wikipedia.org/wiki/Sunshine_of_Your_Love"
+   },
+   {
+    "title": "Reverb – Learn to Play Sunshine of Your Love",
+    "url": "https://reverb.com/news/learn-to-play-sunshine-of-your-love-by-cream"
+   },
+   {
+    "title": "Track BPM analizi (Mixmeister/Traktor)",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/POWERTRK_063/POWERTRK_063-04.html"
+   },
+   {
+    "title": "Karaoke-Version – Sunshine of Your Love",
+    "url": "https://www.karaoke-version.com/guitar-backing-track/cream/sunshine-of-your-love.html"
+   }
+  ]
+ }
+}

@@ -1,0 +1,178 @@
+{
+ "rank": 5,
+ "part": "intro",
+ "researchedAt": 1795278558132,
+ "original": {
+  "song": {
+   "title": "Sweet Child O' Mine",
+   "artist": "Guns N' Roses",
+   "album_or_year": "Appetite for Destruction (1987)",
+   "tone_character": "Orta-yüksek kazançlı, sıcak ve yuvarlak bir Les Paul + modlu Marshall tonu. Notalar tek tek seçilebilecek kadar net ama sustain'i uzun, hafif doymuş. Üstüne Roland SRV-2000'den gelen hafif bir ambiyans/reverb ekleniyor.",
+   "tone_tags": [
+    "orta yüksek kazanç",
+    "sıcak orta frekans",
+    "yuvarlak sap manyetiği karakteri",
+    "uzun sustain",
+    "notalar net ayrışıyor",
+    "hafif reverb/ambiyans",
+    "vintage Marshall crunch"
+   ],
+   "bpm": "125 BPM",
+   "key": "Db majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Kris Derrig yapımı 1959 Les Paul Standard replikası (1980'lerin ortası)",
+    "pickup": "Sap manyetiği (Seymour Duncan Alnico II Pro humbucker) intro riff için yaygın olarak kabul görüyor. Gitarın iki pozisyonunda da Alnico II Pro var.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead 100W (S.I.R. kiralık, modlu; #36 Levi/Buckley modu ya da #39 1959T Caswell modu, hangisi olduğu tartışmalı)",
+     "channel": "Channel 1 (High Treble), üst giriş; modlu ekstra kazanç katı ve master volume ile",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "8",
+       "note": "Guitar World'ün Appetite/Welcome to the Jungle tablosundan; Sweet Child için ayrı bir değer yayımlanmamış"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "aynı kaynak"
+      },
+      {
+       "name": "Middle",
+       "value": "8.5",
+       "note": "aynı kaynak"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "aynı kaynak"
+      },
+      {
+       "name": "Volume 1",
+       "value": "10",
+       "note": "aynı kaynak; mod yüzünden kazanç preamp'ten geliyor"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Albüm genelinde SIR'den kiralanmış modlu bir Marshall kullanıldığı doğrulanmış. Hangi kafanın kullanıldığı (#36 mı #39 mu) ve bazı partilerde bir JCM800 olup olmadığı tartışmalı. Ayarlar Welcome to the Jungle için verilmiş; bu şarkıda da benzer olduğu tahmin ediliyor. Intro, solo tonuna göre biraz daha az kazançlı ve daha yuvarlak duyuluyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion Vintage 30 (Guitar World'e göre; dönemin Marshall kabinleri için G12T-75 de olası)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "kon kenarına yakın, hafif açılı (tahmin)",
+      "distance": "yakın mikrofonlama, 2–5 cm (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin ve hoparlör bilgisi Guitar World'ün Appetite rig tablosundan. Mikrofon bilgisi hiçbir kaynakta yok; dönemin standart yakın mikrofon pratiğine göre tahmin edildi."
+   },
+   "pedals": [
+    {
+     "model": "Roland SRV-2000 Digital Reverb",
+     "purpose": "Intro'ya hafif delay/reverb ambiyansı (Guitar World'e göre SRV-2000, Sweet Child intro'sunda önemli rol oynuyor). Muhtemelen miksaj aşamasında, efekt döngüsünde ya da konsolda uygulandı.",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Plate/Room reverb ya da gizli delay modu",
+       "note": "Sweet Child için kesin ayar yayımlanmadı"
+      },
+      {
+       "name": "Mix",
+       "value": "düşük",
+       "note": "riff kuru ve önde duyuluyor; tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör Mike Clink (\"o Les Paul doğrudan bir Marshall'a\"). Temel kayıtlar Rumbo Recorders'ta (Canoga Park), Slash'in gitar overdub'ları Take One Studio'da (Burbank) yapıldı. Ağustos–Aralık 1986. Miksaj Steve Thompson ve Michael Barbiero'nun (Media Sound, NY). Derrig Les Paul overdub'lar öncesinde menajer Alan Niven tarafından verildi. Kıta temiz akorları için stüdyoda duran bir Roland JC-120 kullanıldı. Izzy Stradlin riffin arkasına akor eşliği ekledi. Ana gitarlar katmanlı; intro riff tek bir belirgin kanal gibi duyuluyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "telleri atlayan hızlı alternate picking (string skipping)",
+    "sabit 8'lik akış ve zamanlama",
+    "sol el gerilmesi (stretch) ve notaların birbirine kanmasını önleme",
+    "sağ elde dinamik kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta (temiz akorlar)",
+    "description": "Roland JC-120 temiz kanal: distorsiyon yok, JC'nin parlak ve şeffaf temiz tonu, muhtemelen hafif chorus/reverb. Intro'daki Marshall kazancından tamamen farklı."
+   },
+   {
+    "name": "Nakarat / ritim",
+    "description": "Aynı Marshall ve Les Paul, büyük olasılıkla köprü manyetiği. Akorlar için biraz daha kalın ve agresif crunch; Izzy'nin ritim gitarıyla katmanlı."
+   },
+   {
+    "name": "Solo (ilk bölüm)",
+    "description": "Marshall ile sıcak ve vokal gibi bir lead tonu. Yaygın görüşe göre sap manyetiği, intro'dan biraz daha fazla kazanç ve sustain."
+   },
+   {
+    "name": "Outro solo (\"Where do we go now\")",
+    "description": "Köprü manyetiği ve Dunlop Cry Baby wah (likely), Eb minör/pentatonik. Daha agresif ve parlak, wah ile ortaları vurgulanmış, geniş bendler ve vibrato."
+   }
+  ],
+  "warnings": [
+   "Intro'da hangi manyetiğin kullanıldığı birincil kaynakta doğrulanmadı. Sap manyetiği yaygın kabul görüyor, ancak Guitar World'ün rig tablosu genel olarak köprü manyetiğini listeliyor.",
+   "Hangi Marshall'ın kullanıldığı tartışmalı: SIR #36 (Levi/Buckley modlu 1959 Super Lead) mi, #39 (Caswell modlu 1959T) mı; bazı partilerde JCM800 kullanılmış olabilir.",
+   "Amfi ayarları Welcome to the Jungle için yayımlanmış; Sweet Child'a uyarlandı.",
+   "Mikrofon bilgisi tamamen tahmin.",
+   "Tonalite tespiti kaynaklara göre değişiyor (Tunebat F# majör, AcousticBrainz C# majör). Eb akortta D–C–G şekilleri çalındığı için intro/kıta Db (mixolydian), solo ise Eb minör olarak duyuluyor.",
+   "SRV-2000'in Sweet Child intro'sundaki tam ayarı bilinmiyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – The secrets behind Slash's tone on Welcome to the Jungle",
+    "url": "https://guitarworld.com/artists/tone-secrets-behind-welcome-jungle-guns-roses-slash-gnr-appetite-destruction"
+   },
+   {
+    "title": "Guitar World – Guns N' Roses tone article",
+    "url": "https://www.guitarworld.com/guns-n-roses"
+   },
+   {
+    "title": "MusicRadar – Slash tells the story of Sweet Child O' Mine",
+    "url": "https://www.musicradar.com/news/guns-n-roses-sweet-child-o-mine-song-story-slash-interview"
+   },
+   {
+    "title": "Tony McKenzie – AFD100 Marshall Slash amp history",
+    "url": "https://tonymckenzie.com/afd100_history.htm"
+   },
+   {
+    "title": "Tunebat – Sweet Child O' Mine",
+    "url": "https://tunebat.com/Info/Sweet-Child-O-Mine-Guns-N-Roses/7o2CTH4ctstm8TNelqjb51"
+   },
+   {
+    "title": "Guitar Chalk – Sweet Child O' Mine amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-sweet-child-o-mine-guns-n-roses/"
+   },
+   {
+    "title": "Equipboard – Slash & His Les Paul",
+    "url": "https://equipboard.com/posts/slash-guitar"
+   },
+   {
+    "title": "Guitar Player – Mike Clink on Slash's Les Paul",
+    "url": "https://www.guitarplayer.com/news/mike-clink-slash-les-paul-cool-again"
+   },
+   {
+    "title": "LA Weekly – Derrig Les Paul",
+    "url": "https://www.laweekly.com/?p=36734"
+   },
+   {
+    "title": "Mental Floss – Sweet Child O' Mine riff oral history",
+    "url": "https://www.mentalfloss.com/entertainment/music/sweet-child-o-mine-riff-oral-history"
+   }
+  ]
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "rank": 88,
+ "part": "intro",
+ "researchedAt": 1795281635721,
+ "original": {
+  "song": {
+   "title": "Hells Bells",
+   "artist": "AC/DC",
+   "album_or_year": "Back in Black (1980)",
+   "tone_character": "Hafif sıkıştırılmış, gerçek Marshall güç katı crunch'ı: yüksek gain değil, açık telleri çınlatan, net ve orta frekansı dolgun bir \"edge of breakup\"tan biraz fazlası olan crunch. Kuru, efektsiz, odanın doğal ambiyansıyla kayıt edilmiş, iki gitar sağ/sol panlı.",
+   "tone_tags": [
+    "orta-düşük gain crunch",
+    "orta frekans dolgun",
+    "kuru / efektsiz",
+    "açık tellerin çınlaması",
+    "dinamik (pena gücüne duyarlı)",
+    "geniş stereo (L/R iki gitar)",
+    "doğal oda ambiyansı"
+   ],
+   "bpm": "107 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG Standard (1970 civarı) – Angus Young",
+    "pickup": "Köprü manyetiği, stok Gibson humbucker (T-Top), Volume 10, Tone 10",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP 2203 100W (geç '70ler) – Angus ana ritim kanalı (sağ)",
+     "channel": "Tek kanal, High Sensitivity girişi",
+     "settings": [
+      {
+       "name": "Preamp Volume",
+       "value": "6",
+       "note": "Guitar World yeniden yaratma önerisi; orijinal kayıt ayarı değil"
+      },
+      {
+       "name": "Master Volume",
+       "value": "5",
+       "note": "Guitar World önerisi"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "0",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World, şarkıdaki sağa panlı ana ritmin SG + 2203 yarım stack ile kaydedildiğini belirtiyor. Tony Platt ise her şarkıda farklı 50W/100W Marshall kafa-kabin kombinasyonu kullanıldığını, amfilerin 'şarkı söylemeye başlayana' kadar açıldığını, maksimuma çıkarılmadığını söylüyor."
+    },
+    {
+     "model": "Marshall Super Lead 100W (Plexi/JMP 1959) – Malcolm Young (sol kanal)",
+     "channel": "Tek kanal (non-master volume)",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Malcolm'un o dönemki tipik rig'i; bu şarkı için kaynakla doğrulanmadı. Malcolm'un gitarı muhtemelen Gretsch Jet Firebird/White Falcon modifiyeli ('The Beast'), köprü manyetiği."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960A/B, eğimli ve düz kabinler şarkıya göre değişti)",
+    "speakers": "Celestion G12M Greenback (25W) – Platt'a göre farklı watt'lı hoparlörler karıştırıldı",
+    "mics": [
+     {
+      "model": "Neumann U67",
+      "position": "Bir hoparlöre, kardioid/sekiz/omni desenleri şarkıya göre denendi",
+      "distance": "Belirtilmemiş (yakın)"
+     },
+     {
+      "model": "Neumann U67 veya U87",
+      "position": "Kabindeki farklı bir hoparlöre (genişlik/derinlik için)",
+      "distance": "Belirtilmemiş"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Mikrofonlar SOS ve Premier Guitar'da Tony Platt tarafından doğrulandı (her gitara iki Neumann). Hoparlör tipi Guitar World'e dayanıyor (likely). Mikrofon pozisyonları şarkıdan şarkıya, hatta çekim sırasında değiştirildi."
+   },
+   "pedals": [
+    {
+     "model": "Schaffer-Vega Diversity System (kablosuz verici/alıcı)",
+     "purpose": "Angus'un orta kanal ritim overdub'ları ve solosunda kullanıldı; ~30 dB temiz boost + kompanding, orta frekansa 'kenar' katıyor. Giriş arpejinde kullanılıp kullanılmadığı belirsiz.",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Compass Point Studios, Nassau (Bahamalar), 1980; prodüktör Robert John 'Mutt' Lange, mühendis Tony Platt. Temel parçalar canlı (iki gitar, bas, davul) kaydedildi; Malcolm stüdyoda solda, Angus sağda paravanla ayrıldı. Panlama: bir gitar ~7 ve 1 yönünde, diğeri ~5 ve 11 yönünde (iki mikrofon farklı pan). Grup reverb/eko istemediği için neredeyse kuru; yalnızca oda ambiyansı ve arka planda çok gizli bir delay. Çan: Loughborough'daki John Taylor dökümhanesinde Ronnie Lane'in mobil stüdyosuyla kaydedildi, yarım hıza düşürülüp oktav pes yapıldı. Bazı solo overdub'ları Electric Lady'de (New York) yapıldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "açık telleri çınlatarak temiz arpej picking",
+    "notaların birbirine karışmadan net duyulması (parmakların açık telleri susturmaması)",
+    "zamanlama / groove (orta tempo, geride oturan his)",
+    "sonraki bölümlerde palm mute'lu power chord ve akor geçişleri"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Çan girişi",
+    "description": "Gitar yok; yalnızca yarım hıza düşürülmüş çan sesi."
+   },
+   {
+    "name": "Giriş arpej riffi (istenen bölüm)",
+    "description": "Açık telleri çınlatan Am11 benzeri arpej (A–G–F hareketi), crunch Marshall tonu, köprü manyetiği; önce tek gitar, ardından ikinci gitar akorlarla katılır. Referans ton budur."
+   },
+   {
+    "name": "Verse / ana ritim",
+    "description": "Aynı amfi tonu; Malcolm sol kanalda power chord'larla, Angus sağda riffi sürdürür. Gain değişmez, sadece daha güçlü pena ve palm mute dinamiği."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Tam akorlar, aynı crunch; daha sert vuruşla daha fazla doygunluk. Efekt yok."
+   },
+   {
+    "name": "Solo",
+    "description": "Angus, Schaffer-Vega kablosuz sistem üzerinden (temiz boost + kompanding) daha fazla sustain ve orta frekans; geniş bend'ler, hızlı vibrato, pentatonik (A minör) çalım. Muhtemelen farklı bir amfi kombinasyonu (Platt: solo kurulumu ayrıydı)."
+   }
+  ],
+  "warnings": [
+   "Giriş arpejini kimin çaldığı (Angus mı Malcolm mı) kaynaklarda net değil; genel kabul Angus'un sağ kanalda başladığı yönünde, bu 'likely' sayılmalı.",
+   "Guitar World'deki amfi ayarları (Preamp 6, Master 5 vb.) bir yeniden yaratma önerisi; orijinal stüdyo ayarları belgelenmemiş.",
+   "Tony Platt her şarkıda farklı Marshall kafa (50W/100W, Super Lead/2203) ve kabin kombinasyonu kullanıldığını söylüyor; 2203'ün bu şarkıda kullanıldığı yalnızca Guitar World'e dayanıyor.",
+   "Malcolm'un bu şarkıdaki gitarı ve amfisi kaynakla doğrulanmadı.",
+   "BPM için 107–110 aralığı verilmiş (analizler 107, Musicnotes ~110); Tunebat'ta stüdyo versiyonu sayfası bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Sound on Sound – Classic Tracks: AC/DC 'Back In Black'",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-acdc-back-black"
+   },
+   {
+    "title": "Premier Guitar – The Making of Back in Black: A Conversation with Tony Platt",
+    "url": "https://www.premierguitar.com/articles/The_Making_of_Back_in_Black_A_Conversation_with_Tony_Platt"
+   },
+   {
+    "title": "Guitar World – The Secrets Behind Angus Young's Guitar Tone on Hells Bells",
+    "url": "https://guitarworld.com/gear/the-secrets-behind-angus-youngs-guitar-tone-on-acdcs-hells-bells"
+   },
+   {
+    "title": "Reverb – Tony Platt Shares the Secret to Angus Young's Back in Black Tone",
+    "url": "https://reverb.com/news/tony-platt-shares-secret-angus-young-back-in-black-tone"
+   },
+   {
+    "title": "80s Album Gear Lists – AC/DC Back In Black gear",
+    "url": "https://80salbumgearlists.blogspot.com/2021/05/acdc-back-in-black-gear.html"
+   },
+   {
+    "title": "Hells Bells BPM/Key analysis (Mixmeister)",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/POWERTRK_061/POWERTRK_061-13.html"
+   },
+   {
+    "title": "Musicnotes – Hells Bells sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/acdc/hells-bells/MN0083032_U2"
+   },
+   {
+    "title": "AcousticBrainz – Hells Bells",
+    "url": "https://acousticbrainz.org/9be541a9-0152-4cf1-8c6c-470dd03b8e69"
+   }
+  ]
+ }
+}

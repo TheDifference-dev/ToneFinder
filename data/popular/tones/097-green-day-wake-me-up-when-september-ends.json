@@ -1,0 +1,168 @@
+{
+ "rank": 97,
+ "part": "full",
+ "researchedAt": 1795281942461,
+ "original": {
+  "song": {
+   "title": "Wake Me Up When September Ends",
+   "artist": "Green Day",
+   "album_or_year": "American Idiot (2004)",
+   "tone_character": "Şarkı iki yüzlü: ilk yarıda akustik gitarın altında parlak, temiz elektro arpejler; ikinci yarıda ve nakaratlarda Marshall tipi, kalın, orta frekansları dolu, double-track'li kranç/distorsiyonlu power-chord duvarı. 'Genel ton' olarak tam grubun girdiği distorsiyonlu ana ritim tonu esas alındı, temiz giriş ayrı bölüm olarak verildi.",
+   "tone_tags": [
+    "kalın orta frekans",
+    "orta-yüksek gain kranç",
+    "double-track geniş stereo",
+    "sıkı ama dolgun alt",
+    "parlak temiz arpej (giriş)",
+    "modern parlak miks"
+   ],
+   "bpm": "105 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Junior (ve/veya Gibson Les Paul Standard 'Boobie')",
+    "pickup": "Ağır bölümlerde köprü manyetiği (LP Junior'da tek P-90; LP Standard'da köprü humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Modifiyeli Marshall 'Idiot Amp' (Plexi/Super Lead türevi, ekstra gain katlı)",
+     "channel": "Tek kanal, gain ön amfiden",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin; kalın kranç, tam doygun değil"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World albüm genelinde ana distorsiyon için bu amfiyi ve Park 75'i anıyor; şarkıya özgü teyit yok. Ayarlar tamamen tahmin (bazı rehberler Gain 6, Bass 6, Mid 7, Treble 4 öneriyor)."
+    },
+    {
+     "model": "Park 75 (Dookie mod'lu, 50 W)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Armstrong MixOnline röportajında (Ground Guitar alıntısı) double-track ritimleri Park ile, ardından büyük gitarlar için Marshall ile bir çift daha kaydettiğini söylüyor; albüm geneli."
+    },
+    {
+     "model": "Victoria 80212 'Clean Vicky' / Fender Tweed Tremolux",
+     "channel": "Temiz",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Albümde temiz tonlar için kullanıldığı teyitli (ör. American Idiot girişi); bu şarkının temiz arpejinde kullanılması tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (Idiot Amp/Park için); Victoria combo 2x12 (temizler için)",
+    "speakers": "Celestion (muhtemelen G12M/G12T-75 tipi) – tahmin; Clean Vicky'de Jensen (teyitli, amfi için)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kon ile toz kapağı kenarı arası",
+      "distance": "1 in civarı"
+     },
+     {
+      "model": "Royer R-121 veya kondansatör",
+      "position": "Hafif off-axis",
+      "distance": "yakın"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mikrofonlama hakkında kaynak bulunamadı; dönemin Rob Cavallo/Studio 880 standart uygulamasına dayalı tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Danelectro Daddy-O",
+     "purpose": "Overdrive/boost (albüm kayıtlarında kullanıldığı Equipboard'da geçiyor)",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Rob Cavallo & Green Day; kayıt Studio 880 (Oakland) ve Ocean Way (Hollywood), miks Chris Lord-Alge (genel bilgi, bu araştırmada kaynakla teyit edilmedi). Albüm boyunca ritim gitarları Park ve Marshall ile çoklu double-track edilmiş (teyitli, albüm geneli). Şarkı girişte akustik gitar (muhtemelen Rob Cavallo'nun Taylor 514C'si – Equipboard) üzerine temiz elektro arpejle başlar; ikinci yarıda tam grup ve yaylı düzenlemeler girer."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "temiz arpej/çekiç (hammer-on) içeren parmak ya da pena ile arpej",
+    "power-chord ve açık akor ritimleri",
+    "dinamik geçişler (temizden distorsiyona)",
+    "solo: vokal melodisini izleyen orta tempolu bend ve vibrato"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş / ilk dizeler",
+    "description": "Akustik gitarın altında temiz elektro arpej (G–G/F#–Em–Em/D... çevrimi). Gain neredeyse sıfır, tiz biraz açık, hafif oda reverb'ü; sap veya orta manyetik (Les Paul'de iki manyetik birlikte ya da sap). Bazı tablar volüm düğmesini kısıp çekiçlerde açmayı öneriyor. Amfi muhtemelen temiz Victoria/Tremolux."
+   },
+   {
+    "name": "Ağır bölüm / nakarat (ana ton)",
+    "description": "Davul girdikten sonra köprü manyetiği, Marshall tipi kalın kranç, double-track power-chord ve açık akorlar."
+   },
+   {
+    "name": "Solo",
+    "description": "Ana distorsiyon tonuyla aynı ya da biraz daha fazla gain/boost; köprü manyetiği, vokal melodisine dayalı bend ve vibrato. Hafif delay/reverb eklenebilir (tahmin)."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Tekrar temiz arpeje dönüş; giriş tonu ile aynı."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya özgü gitar, amfi veya ayar bilgisi veren bir kaynak bulunamadı; tüm ekipman American Idiot albümünün genel kayıt ekipmanından çıkarım.",
+   "Amfi ayarları ve kabin/mikrofon bilgileri tamamen tahmin.",
+   "Temiz giriş tonunun hangi amfiyle kaydedildiği (Victoria mı Tremolux mu) belirsiz.",
+   "Danelectro Daddy-O ve Taylor 514C bilgisi kalabalık kaynaklı Equipboard'dan; zayıf kaynak.",
+   "BPM (≈104–105) ve ton (G majör) Tunebat'tan çekilemedi; yaygın tab/akor kaynaklarına ve genel bilgiye dayanıyor."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar World – Billie Joe Armstrong on the making of American Idiot",
+    "url": "https://guitarworld.com/features/green-day-billie-joe-armstrong-on-the-making-of-american-idiot"
+   },
+   {
+    "title": "Ground Guitar – Billie Joe Armstrong's Victoria 80212-T",
+    "url": "https://www.groundguitar.com/billie-joe-armstrong-guitars-and-gear/billie-joe-armstrongs-victoria-80212-t-clean-dirty-vicky/"
+   },
+   {
+    "title": "Ground Guitar – Billie Joe Armstrong's Park 75",
+    "url": "https://www.groundguitar.com/billie-joe-armstrong-guitars-and-gear/billie-joe-armstrongs-park-75/"
+   },
+   {
+    "title": "Equipboard – Green Day American Idiot (Deluxe)",
+    "url": "https://equipboard.com/albums/green-day-american-idiot-deluxe"
+   },
+   {
+    "title": "ProSoundHQ – How to Sound Like Green Day",
+    "url": "https://prosoundhq.com/how-to-sound-like-green-day-amp-settings-guide/"
+   },
+   {
+    "title": "Ultimate Guitar – Wake Me Up When September Ends Intro Tab",
+    "url": "https://pt.ultimate-guitar.com/tab/green-day/wake-me-up-when-september-ends-tabs-5687510"
+   }
+  ]
+ }
+}

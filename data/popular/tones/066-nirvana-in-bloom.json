@@ -1,0 +1,229 @@
+{
+ "rank": 66,
+ "part": "rhythm",
+ "researchedAt": 1795280801127,
+ "original": {
+  "song": {
+   "title": "In Bloom",
+   "artist": "Nirvana",
+   "album_or_year": "Nevermind (1991)",
+   "tone_character": "Orta frekansları öne çıkan, kalın ve ham bir grunge distorsiyonu. Verse'te Mesa Boogie'nin daha sıkı ve kontrollü crunch'ı var. Nakaratta Fender Bassman ile kaydedilmiş, iki kez çekilmiş (double-tracked), daha ağır ve fuzz'a yakın bir duvar sesi geliyor.",
+   "tone_tags": [
+    "yüksek gain ama aşırı değil",
+    "orta frekanslar öne çıkık",
+    "kalın alt-orta",
+    "double-tracked nakarat",
+    "tiz kontrol altında",
+    "ham/punk",
+    "kompresli mix"
+   ],
+   "bpm": "156 BPM",
+   "key": "Bb majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Mustang (Competition) veya Univox Hi-Flyer; 1991 Nevermind dönemi Cobain gitarları",
+    "pickup": "Köprü manyetiği (humbucker; Cobain gitarlarına genelde DiMarzio Super Distortion gibi yüksek çıkışlı manyetikler taktırırdı)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Studio Preamp + Crown power amp",
+     "channel": "Clean/Rhythm kanalı, distorsiyonu Boss DS-1 sağlıyor",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "5",
+       "note": "tahmin; asıl doygunluk pedaldan geliyor"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin; mid scoop yok"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Wikipedia'ya göre verse'lerde Mesa Boogie amfi kullanıldı. Preamp/Crown eşleşmesi Cobain'in dönemsel rig'inden geliyor (likely). Ayarlar hakkında kaynak yok."
+    },
+    {
+     "model": "Fender Bassman (vintage, muhtemelen 1959 tarzı tweed)",
+     "channel": "Tek kanal, yüksek volume",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "tahmin; sonuna yakın açık"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Wikipedia'ya göre Vig'in önerisiyle nakaratta Bassman'a geçildi; sonuç 'daha ağır, double-tracked fuzz ton'. Vintage King'e göre Smart Studios demolarında Bassman, yüksek gain tondaki fazla tizi azaltmak için kullanıldı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (Mesa/Crown hattı için); Bassman kendi hoparlörleriyle (combo)",
+    "speakers": "Marshall 4x12'de muhtemelen Celestion G12T-75 veya Vintage 30; Bassman'da 4x10 Jensen tarzı",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "kon kenarına yakın, on-axis",
+      "distance": "1-2 in"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "on-axis, hafif geride",
+      "distance": "6-12 in"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "kenar",
+      "distance": "1-2 in"
+     },
+     {
+      "model": "AKG C414",
+      "position": "geride",
+      "distance": "12 in"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "İkincil bir kaynak (Medium) amfilerin aynı anda U87, 414, 421 ve SM57 ile mikrofonlandığını, en iyi mikrofonun sonradan seçildiğini yazıyor. Pozisyon ve mesafeler tahmin. Sound City canlı odası da muhtemelen biraz oda sesi kattı."
+   },
+   "pedals": [
+    {
+     "model": "Boss DS-1 Distortion",
+     "purpose": "Ana distorsiyon kaynağı; temiz ayarlı amfiyi sürüyor",
+     "settings": [
+      {
+       "name": "Dist",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "ProCo RAT",
+     "purpose": "Nevermind'da ek fuzz dokusu için kullanıldı; In Bloom'daki kullanımı belirsiz",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sound City Studios, Van Nuys, Mayıs 1991. Prodüktör: Butch Vig. Miks: Andy Wallace (kompresli, cilalı miks). Verse'ler Mesa ile, nakaratlar Bassman ile çalındı; nakarat gitarları üst üste katlandı/double-tracked (confirmed, Wikipedia). Vig, overdub sevmeyen Cobain'i gitarları double-track etmeye ikna etti. Şarkının daha önce Smart Studios'ta (1990) bir demosu da var; orada da Bassman kullanıldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "power chord geçişleri (kökler 6. ve 5. telde)",
+    "sıkı, tutarlı aşağı vuruşlar ve 8'lik ritim",
+    "verse ile nakarat arasında dinamik geçiş",
+    "nakaratta tam açık, sert vuruş",
+    "kısa slide'lar ve boş tel ara sesleri"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Distorsiyonlu power chord riff'i. Kaynaklar verse için Mesa'yı söylediğinden giriş riff'inde de muhtemelen Mesa + DS-1 tonu var."
+   },
+   {
+    "name": "Verse",
+    "description": "Mesa Boogie ile daha kontrollü crunch. Daha hafif vurulur ve gain biraz düşük hissedilir. Bas ve vokal öne çıkar."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Fender Bassman'a geçiliyor. Daha ağır, fuzz'a yakın, katmanlı/double-tracked bir duvar sesi. Tiz daha yumuşak, alt-orta daha dolu. Gerçekçi olmak için gain'i artırıp tizi biraz kısın ve iki ayrı kanal kaydedip sağ-sol panlayın."
+   },
+   {
+    "name": "Solo",
+    "description": "Vokal melodisini takip eden basit, melodik bir solo. Aynı distorsiyonlu ton, muhtemelen köprü manyetiği. Ekstra efekt bilinmiyor."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıda kullanılan gitar modeli hiçbir kaynakta açıkça geçmiyor. Bir Medium yazısı Mosrite diyor; Cobain'in 1991 dönemi Mustang/Univox kullanımı daha yaygın biliniyor.",
+   "Mesa preamp modelinin adı tartışmalı: 'Studio .22' mi, 'Studio Preamp' mi, net değil. Crown yerine Crest power amp kullanıldığını söyleyen kaynaklar da var.",
+   "Amfi ve pedal ayarları tamamen tahmin; birincil kaynak yok.",
+   "Mikrofon listesi ikincil bir kaynaktan geliyor; Vig'in kendi ağzından doğrulanmadı.",
+   "BPM: Musicnotes ~78 (yarım zaman) veriyor, analiz araçları ~155-157 BPM veriyor. Tunebat sayfası bulunamadı.",
+   "Tonalite: Musicnotes ve Hooktheory Bb majör diyor; bazı tab'lar Bbm yazıyor.",
+   "Akort: Tab'lar ve Reddit standart akort diyor; bazı canlı performanslarda yarım ses pes çalındığı belirtiliyor.",
+   "DS-1'in bu şarkıda kullanıldığı genel rig bilgisinden çıkarım; RAT kullanımı belirsiz."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "In Bloom - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/In_Bloom"
+   },
+   {
+    "title": "Vintage King - Nirvana Nevermind",
+    "url": "https://vintageking.com/blog/nirvana-nevermind/"
+   },
+   {
+    "title": "An analysis of Nirvana's Nevermind (Medium)",
+    "url": "https://medium.com/@mattzoppa/an-analysis-of-nirvanas-nevermind-3f1afe624463"
+   },
+   {
+    "title": "Legends of Tone: Nirvana (zZounds)",
+    "url": "https://blog.zzounds.com/2017/10/21/legends-of-tone-kurt-cobain"
+   },
+   {
+    "title": "Kurt Cobain Guitar Rig 1991",
+    "url": "https://musicteacher.com/kurt-cobain-guitar-rig-1991/"
+   },
+   {
+    "title": "Guitar World - Smells Like Teen Spirit tone secrets",
+    "url": "https://guitarworld.com/features/the-secrets-behind-kurt-cobains-guitar-tone-on-nirvanas-smells-like-teen-spirit"
+   },
+   {
+    "title": "Ultimate Guitar - In Bloom Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/nirvana/in-bloom-tabs-1099536"
+   },
+   {
+    "title": "Musicnotes - In Bloom",
+    "url": "https://www.musicnotes.com/sheetmusic/nirvana/in-bloom/MN0083070"
+   },
+   {
+    "title": "Hooktheory - In Bloom",
+    "url": "https://hooktheory.com/theorytab/view/nirvana/in-bloom"
+   },
+   {
+    "title": "Seymour Duncan forum - What can get this tone",
+    "url": "https://forum.seymourduncan.com/threads/what-can-get-this-tone.310748"
+   },
+   {
+    "title": "MusicRadar - Story of Nevermind",
+    "url": "https://musicradar.com/news/story-of-nirvana-nevermind"
+   }
+  ]
+ }
+}

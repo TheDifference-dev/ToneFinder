@@ -1,0 +1,212 @@
+{
+ "rank": 20,
+ "part": "full",
+ "researchedAt": 1795279015237,
+ "original": {
+  "song": {
+   "title": "Zombie",
+   "artist": "The Cranberries",
+   "album_or_year": "No Need to Argue (1994)",
+   "tone_character": "Tamamen distorsiyonlu, kalın ve dolgun bir 90'lar alternatif rock tonu. Birkaç gitar katman katman çalınmış. Distorsiyon pedalı ve tam açık Vox AC30/Marshall amfilerden gelen kirli, hafif fuzz'lı bir doygunluk var. Orta frekanslar güçlü, kayıt ortam hissi taşıyor; nakaratta duvar gibi bir ses oluşuyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "fuzz benzeri doygunluk",
+    "katmanlı/çoklu gitar",
+    "güçlü orta frekans",
+    "kalın alt",
+    "oda hissi",
+    "geri besleme (feedback)"
+   ],
+   "bpm": "84 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul (Custom), Gibson ES-335 ve Fender Telecaster katmanlanmış",
+    "pickup": "Les Paul/ES-335'te köprü humbucker (muhtemelen), Telecaster'da köprü single-coil; manyetik modelleri bilinmiyor",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Vox AC30 (vintage)",
+     "channel": "Top Boost / Brilliant (tahmin)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "9",
+       "note": "Hogan amfiyi 'cranked', yani tam açık çaldığını söylüyor; sayısal değer tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Cut",
+       "value": "4",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Hogan'a göre Les Paul yüksek sesle AC30'dan çalındı. Model doğrulanmış, ayarlar tahmin."
+    },
+    {
+     "model": "Marshall (vintage; model belirtilmemiş, JCM800 olabilir)",
+     "channel": "Tek kanal / lead",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master Volume",
+       "value": "8",
+       "note": "yüksek sesle çalındığı biliniyor, sayısal değer tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World röportajında 'Marshall ve AC30'ların karışımı, ikisi de tam açık' deniyor. Marshall'ın modeli doğrulanmadı; JCM800 ve JCM900 iddiaları kaynaksız."
+    }
+   ],
+   "cab": {
+    "model": "Vox AC30 kombo içi hoparlör ve Marshall 4x12 kabin",
+    "speakers": "AC30: 2x12 Celestion Alnico Blue veya G12M Greenback (tahmin); Marshall 4x12: Celestion G12T-75 veya Greenback (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "cap kenarı, hafif off-axis",
+      "distance": "2-5 cm"
+     },
+     {
+      "model": "Neumann U87 / U67 (oda veya uzak mikrofon)",
+      "position": "kabin önü",
+      "distance": "1-2 m"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mikrofonlama hakkında kaynak bulunamadı. Yazılanlar, Stephen Street'in dönem prodüksiyonları için standart uygulamaya dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Distorsiyon pedalı (model bilinmiyor; forumda Big Muff tarzı fuzz olduğu tahmin ediliyor)",
+     "purpose": "Ana distorsiyon. Hogan şarkı için ilk distorsiyon pedalını aldığını ve sesi o pedal olmadan elde edemediğini söylüyor.",
+     "settings": [
+      {
+       "name": "Sustain/Gain",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss CE-1 Chorus Ensemble",
+     "purpose": "Hogan'ın genel ekipmanında var; temiz/arpej bölümlerde kullanılmış olabilir",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Stephen Street. Wikipedia'ya göre kayıt 1994'te The Manor Studio (Oxford) ve Townhouse Studios'ta (Londra) yapıldı. Hogan, Street'ten gitarları üst üste katmanlamayı öğrendiğini ve Les Paul, ES-335 ve Telecaster/Strat kombinasyonunun kayıttaki sesi oluşturduğunu söylüyor. Dolores O'Riordan da elektro gitar çaldı. Grup gitar ayarları üzerinde uzun süre çalıştı; ses canlı enstrümanlar, feedback ve distorsiyonla 'organik' biçimde oluştu."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "dört akorlu basit progresyon (Em-Cmaj7-G-D/F#)",
+    "güçlü downstroke ritim",
+    "tek nota melodik riff",
+    "feedback ve sustain kontrolü",
+    "yüksek gain'de susturma (muting)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Tam distorsiyonlu, tek notalı melodik riff ile açık akorlar. Aynı yüksek gain tonu kullanılıyor, sap manyetiği yerine köprü manyetiği tercih edilebilir. Lead çizgi hafif öne çıkmalı."
+   },
+   {
+    "name": "Kıta",
+    "description": "Gain belirgin biçimde azalıyor: daha hafif, temize yakın ya da hafif crunch'lı akor/arpej çalınıyor. Distorsiyon pedalı kapalı ya da amfi volümü düşük; isteğe bağlı hafif chorus eklenebilir. Bu bilgi kayda dayalı bir yorumdur."
+   },
+   {
+    "name": "Nakarat ('In your head, zombie')",
+    "description": "Ana ton: distorsiyon pedalı açık, tüm gitar katmanları birlikte çalıyor ve duvar gibi bir ses oluşuyor. En yüksek gain ve yoğunluk bu bölümde."
+   },
+   {
+    "name": "Nakarat sonrası lead / outro",
+    "description": "Aynı distorsiyonlu ton kullanılıyor. Uzun sustain'li tek nota melodi ve feedback var; daha fazla sustain ve orta frekans için gain biraz artırılabilir."
+   }
+  ],
+  "warnings": [
+   "Distorsiyon pedalının modeli hiçbir kaynakta geçmiyor. Big Muff iddiası 2006 tarihli bir forum tahmininden ibaret.",
+   "Marshall amfinin modeli (JCM800, JCM900 ya da 30th Anniversary) kaynaklar arasında çelişkili ve doğrulanmamış.",
+   "Amfi ve pedal ayarlarının tamamı tahmindir.",
+   "Kabin, hoparlör ve mikrofon bilgileri tamamen tahmindir.",
+   "Kayıt stüdyosu konusunda belirsizlik var: Wikipedia The Manor ve Townhouse diyor, bazı kaynaklar Windmill Lane (Dublin) olarak anıyor.",
+   "Tonalite konusunda Musicnotes A minör veriyor, otomatik analizler çelişiyor. Akor progresyonu (Em-C-G-D) E minörü gösteriyor. BPM yaklaşık 84; bazı araçlar iki katını (~167) ölçüyor.",
+   "Les Paul Custom bilgisi Equipboard'da klipten yapılmış, kaynaksız bir gözleme dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar - How The Cranberries created the monster hit Zombie",
+    "url": "https://musicradar.com/artists/the-way-she-delivered-it-was-more-important-than-the-actual-subject-matter-her-delivery-of-that-chorus-is-so-powerful-how-the-cranberries-created-the-monster-hit-zombie"
+   },
+   {
+    "title": "Guitar World - Noel Hogan interview",
+    "url": "https://www.guitarworld.com/artists/guitarists/noel-hogan-cranberries"
+   },
+   {
+    "title": "Seymour Duncan Forum - Cranberries Zombie tone",
+    "url": "https://forum.seymourduncan.com/threads/cranberries-zombie-tone.79669"
+   },
+   {
+    "title": "Equipboard - Noel Hogan",
+    "url": "https://equipboard.com/pros/noel-hogan"
+   },
+   {
+    "title": "Wikipedia - Zombie (The Cranberries song)",
+    "url": "https://en.wikipedia.org/wiki/Zombie_(The_Cranberries_song)"
+   },
+   {
+    "title": "Musicnotes - Zombie sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/the-cranberries/zombie/MN0150458"
+   },
+   {
+    "title": "Guitar Chalk - Zombie amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-zombie-the-cranberries/"
+   }
+  ]
+ }
+}

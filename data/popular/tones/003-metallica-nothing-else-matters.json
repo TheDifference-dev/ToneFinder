@@ -1,0 +1,178 @@
+{
+ "rank": 3,
+ "part": "clean",
+ "researchedAt": 1795278467572,
+ "original": {
+  "song": {
+   "title": "Nothing Else Matters",
+   "artist": "Metallica",
+   "album_or_year": "Metallica (The Black Album), 1991",
+   "tone_character": "Intro ve kıtalardaki temiz arpejler hiç kırılmayan, cam gibi parlak ve yuvarlak bir ton. İki ayrı temiz sinyalle (amfi + direkt konsol) kaydedildiği için hem amfi rengi hem de DI'ın netliği var. Hafif oda/plate reverb ile geniş ve stereo duyuluyor, distorsiyon hiç yok.",
+   "tone_tags": [
+    "tamamen temiz",
+    "parlak ve cam gibi",
+    "yumuşak atak",
+    "hafif reverb",
+    "stereo ve katmanlı",
+    "az kompresyon",
+    "geniş alt-orta"
+   ],
+   "bpm": "71 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Tom Anderson elektro gitar (muhtemelen Kirk Hammett'in Tom Anderson ProAM'i); klipte ESP Explorer görülüyor",
+    "pickup": "Bilinmiyor. Cam gibi tona bakılırsa orta pozisyon ya da single-coil/split bir ses (tahmin)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Roland JC-120 Jazz Chorus",
+     "channel": "Clean (Normal)",
+     "settings": [
+      {
+       "name": "Chorus",
+       "value": "Off",
+       "note": "Tahmin; kayıtta belirgin bir chorus duyulmuyor"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "Topluluk tahmini (musicstrive), doğrulanmadı"
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": "Topluluk tahmini"
+      },
+      {
+       "name": "Treble",
+       "value": "4",
+       "note": "Topluluk tahmini"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "MusicRadar ve Guitar Player temiz tonları JC-120'ye bağlıyor. Hetfield 1991'de 'biri amfiden, diğeri doğrudan konsola giden iki son derece temiz sinyal' kullandıklarını söylemiş ama amfinin modelini belirtmemiş."
+    },
+    {
+     "model": "Direkt sinyal (DI ile konsola)",
+     "channel": "-",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Hetfield'in Guitar World Ekim 1991 röportajına göre ikinci sinyal amfisiz, doğrudan konsola gitti. Groundguitar'daki alıntı üzerinden doğrulandı."
+    }
+   ],
+   "cab": {
+    "model": "Roland JC-120'nin dahili kabini (kombo)",
+    "speakers": "2x12 Roland stok hoparlör",
+    "mics": [
+     {
+      "model": "Bilinmiyor (muhtemelen Shure SM57 / dinamik)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Bob Rock'ın albüm için yaptığı mikrofonlamaya dair parça bazında bir bilgi bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo reverb (plate/hall), miksajda",
+     "purpose": "Temiz arpejlere derinlik ve genişlik vermek",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%15-20",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt 1990-91'de One on One Studios'ta (Los Angeles) yapıldı. Prodüktör Bob Rock, mühendis Randy Staub. Bob Rock gitarları sol/sağ/orta olmak üzere stereo üç kanal halinde katmanladı. Hetfield, sololar dahil parçadaki gitarların neredeyse hepsini kendisi çaldı. Temiz bölümde iki temiz sinyal (amfi + DI) birleştirildi. Nakaratın ardındaki alçalan 'iniş yapan uçak' efekti, Bob Rock'ın Gretsch White Falcon'unun Bigsby kolu ve yalnızca reverb sesiyle kaydedildi. Orkestra düzenlemesi Michael Kamen'e ait."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "boş tellerle E minör arpej",
+    "temiz ve eşit tel dengesi",
+    "pena ya da parmakla arpej",
+    "dinamik kontrol"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta temiz arpejleri",
+    "description": "Intro ile aynı temiz ton. Katmanlı çalınıyor; olası bir Guild 12 telli de dahil birkaç gitar stereo dağıtılmış."
+   },
+   {
+    "name": "White Falcon iniş efekti",
+    "description": "İlk nakarattan sonra geliyor. Gretsch White Falcon'un Bigsby kolunda alçalan bir ses var; atak duyulmuyor, ağırlıklı olarak reverb sesi. Bu bölüm için reverbi artırın, volume swell kullanın."
+   },
+   {
+    "name": "Nakarat / distorsiyonlu ritim",
+    "description": "Mesa/Boogie Mark IIC+ (Simulclass Mark II) distorsiyonlu kanala geçiliyor. Köprü manyetiği (EMG 81, ESP Explorer), yüksek gain, sıkı alt."
+   },
+   {
+    "name": "Solo",
+    "description": "Soloyu Hetfield çalıyor. MusicRadar'a göre Gibson Explorer ve Mesa ile kaydedildi. Orta gain, köprü manyetiği, hafif delay ya da reverb; melodik bendler ve vibrato var."
+   }
+  ],
+  "warnings": [
+   "Intro gitarı tartışmalı. Hetfield (GW 1991) parçanın çoğunu bir Tom Anderson ile çaldığını söylüyor, oysa klipte ESP Explorer (EMG) görülüyor. Hangi manyetiğin kullanıldığı bilinmiyor.",
+   "JC-120 bilgisi genel 'temiz tonlar' bağlamında geçiyor. Bu parça için birebir doğrulanmadı.",
+   "Amfi ayarları ve mikrofonlama bilgisi yok. Verilen değerler tahmin.",
+   "Tempo kaynaklara göre değişiyor: 6/8'de yaklaşık 46-48 (noktalı dörtlük), yaklaşık 71 (dörtlük) ya da yaklaşık 142 BPM (sekizlik). Tunebat sayfasına erişilemedi.",
+   "Tom Anderson alıntısı ikincil bir kaynaktan (groundguitar) alındı. Orijinal GW sayfasında doğrulanamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Groundguitar - James Hetfield's Tom Anderson ProAM",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-tom-anderson-proam/"
+   },
+   {
+    "title": "Groundguitar - James Hetfield's Gretsch White Falcon",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-gretsch-white-falcon/"
+   },
+   {
+    "title": "MusicRadar - Metallica Week: Tone tips for 5 classic tracks",
+    "url": "https://musicradar.com/news/guitars/metallica-week-tone-tips-for-5-classic-tracks-172815"
+   },
+   {
+    "title": "Guitar World - Metallica Black Album 1991 interview",
+    "url": "https://www.guitarworld.com/features/metallica-black-album-1991-interview"
+   },
+   {
+    "title": "Guitar World archive 1991 interview",
+    "url": "https://www.guitarworld.com/gw-archive/metallicas-james-hetfield-and-kirk-hammett-talk-guitar-solos-and-gear-1991-guitar-world-interview"
+   },
+   {
+    "title": "Reverb - Bob Rock looks back on Black Album",
+    "url": "https://reverb.com/news/producer-bob-rock-looks-back-on-recording-metallicas-black-album"
+   },
+   {
+    "title": "Bonedo - Nothing Else Matters Intro workshop",
+    "url": "https://www.bonedo.de/?p=1422237"
+   },
+   {
+    "title": "Groundguitar - Hetfield Roland JC-120",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-roland-jc-120-jazz-chorus/"
+   },
+   {
+    "title": "Hooktheory - Nothing Else Matters",
+    "url": "https://www.hooktheory.com/theorytab/view/metallica/nothing-else-matters"
+   },
+   {
+    "title": "Klang.io - Nothing Else Matters",
+    "url": "https://songs.klang.io/en/s/Metallica/Nothing%20Else%20Matters/tAGnKpE4NCI"
+   },
+   {
+    "title": "musicstrive - Metallica guitar tone",
+    "url": "https://musicstrive.com/metallica-guitar-tone"
+   }
+  ]
+ }
+}

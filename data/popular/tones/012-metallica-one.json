@@ -1,0 +1,208 @@
+{
+ "rank": 12,
+ "part": "lead",
+ "researchedAt": 1795278825188,
+ "original": {
+  "song": {
+   "title": "One",
+   "artist": "Metallica",
+   "album_or_year": "...And Justice for All (1988)",
+   "tone_character": "Kirk Hammett'ın solo tonu orta frekansları öne çıkık, çok kompresli ve sustain'i uzun, yüksek kazançlı bir Mesa/Boogie lead tonu. Kaynağa göre Boogie amfiler ADA MP-1 ile harmanlanmış. Albümün kuru, bas frekansları zayıf miksi içinde parlak ve keskin duyuluyor. Hafif delay ve reverb post-prodüksiyonda eklenmiş olabilir.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "orta frekans öne çıkık",
+    "kompresli",
+    "uzun sustain",
+    "parlak",
+    "sıkı alt",
+    "hafif delay/reverb"
+   ],
+   "bpm": "108 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP KH-2 (Kirk'ün 'neck-thru KH-1, skulls on the fingerboard' dediği gitar; ESP'ye göre aslında ilk KH-2, M-II gövdeli)",
+    "pickup": "Köprü manyetiği, EMG 81 (aktif). Sap manyetiği EMG 60 veya 81 olabilir.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (Mark IIC++ olarak modifiye)",
+     "channel": "Lead (Drive) kanalı",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "7.5",
+       "note": "tahmin, lead gain"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "2.5",
+       "note": "tahmin; IIC+ amfilerde bas genelde düşük tutulur"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin; lead için orta frekans ritimden daha dolgun"
+      },
+      {
+       "name": "Lead Drive",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Lead Master",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Graphic EQ",
+       "value": "Hafif V",
+       "note": "tahmin; solo için 750 Hz bandı ritimdeki kadar kesilmemiş olabilir"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kirk lead ve temiz tonlarda Boogie amfilerini ADA ile harmanladığını söylüyor (confirmed). Justice oturumlarında Mark IIC+ kafaların kullanıldığı birçok kaynakta geçiyor. Ayarlar kaynakta yok, hepsi tahmin."
+    },
+    {
+     "model": "A/DA MP-1 (tüplü programlanabilir preamp) + rack EQ",
+     "channel": "Lead programı",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Kirk 'ADA preamp ve ADA MP-1'i Boogie'lerle lead ve temiz tonlar için harmanladım' diyor. Rack'te bir Aphex parametrik EQ ya da ADA MQ-1 EQ de bulunuyordu. Temiz tonlar neredeyse tamamen MP-1 ile kaydedildi."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie 4x12 veya Marshall 4x12",
+    "speakers": "Celestion (muhtemelen Vintage 30; Metallica 1988-89'dan beri V30 kullanıyor)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Konun kenarına yakın, hafif açılı",
+      "distance": "1-2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi kaynaklarda bulunamadı. Guitar World 2008, Metallica'nın 1988-89'dan beri Celestion Vintage 30 kullandığını söylüyor."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby wah (veya benzeri)",
+     "purpose": "Solonun bazı yerlerinde vurgu, örneğin tiz telde aşağı inen kromatik lick",
+     "settings": [
+      {
+       "name": "Kullanım",
+       "value": "Seçici",
+       "note": "Kirk wah'ı solo yazıldıktan sonra ekliyor ve her vuruşta basmıyor"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo delay/reverb (rack veya mix aşaması)",
+     "purpose": "Lead'e derinlik ve ambiyans katmak",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "300-400 ms",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%10-15",
+       "note": "tahmin; çok kuru miks"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Flemming Rasmussen (Mike Clink'in yerine geldi), Hetfield ve Ulrich kontrol odasında yoğun şekilde etkiliydi. Kayıt 24 kanal analog teyp üzerine yapıldı. Ana kayıtlar One on One Studios'ta (LA) yapıldı; bu, kaynakça dışında bilinen bir bilgi. Kirk'ün orta solosu son anda Hit Factory'de (New York) yeniden kaydedildi: Kirk turne sırasında gitarını ve ana amfilerinden birini getirdi, solo RFK Stadium konserinden önceki gece tamamlandı. Albümün miksi upstate New York'ta Steve Thompson ve Michael Barbiero tarafından yapıldı; bilinen bilgiye göre stüdyo Bearsville. Solo oturumları günde 15-16 saat sürdü. Solo tek kanal lead olarak kaydedilmiş görünüyor."
+  },
+  "difficulty": {
+   "score": 5,
+   "factors": [
+    "Outro solosunda hızlı, Van Halen tarzı sağ el tapping",
+    "Hızlı alternate ve tremolo picking koşuları",
+    "Senkoplu 'makineli tüfek' ritmine karşı lead zamanlaması",
+    "Geniş bending'ler ve vibrato",
+    "İlk soloda staccato çalınan major akor figürü ve arpejler",
+    "Tiz telde kromatik inişler, legato"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş ve arpejler",
+    "description": "Neredeyse tamamen A/DA MP-1 ile kaydedildi (confirmed). Temiz kanal, chorus ve reverb var; kazanç çok düşük, muhtemelen sap ya da köprü manyetiği. Kirk'ün temiz tondaki melodik dolguları da bu tonda."
+   },
+   {
+    "name": "İlk (melodik) solo",
+    "description": "Temiz bölümden sonra gelen ilk distorsiyonlu lead. Aynı lead tonu kullanılıyor, belki biraz daha az gain ve daha fazla delay ile. Açılıştaki iki lick Hetfield'ın fikri. İçinde staccato çalınan major akor fikri var."
+   },
+   {
+    "name": "Orta solo",
+    "description": "Distorsiyonlu ağır bölümde çalınıyor. Hit Factory'de ayrı bir oturumda, Kirk'ün yanında getirdiği amfiyle yeniden kaydedildi, bu yüzden tonu biraz farklı olabilir. Aynı yüksek kazançlı lead ayarı, köprü manyetiği."
+   },
+   {
+    "name": "Outro (tapping) solo",
+    "description": "Makineli tüfek riffinin üzerinde çalınan hızlı tapping solo. Aynı lead tonu, köprü manyetiği; belirgin bir modülasyon yok."
+   },
+   {
+    "name": "Ana ağır riff (ritim)",
+    "description": "Hetfield'ın ritim tonu: Mark IIC+ ile çok sıkı, orta frekansları oyulmuş, palm-mute ağırlıklı. Solo tonuna göre daha az orta frekans ve daha kuru."
+   }
+  ],
+  "warnings": [
+   "Kullanıcı 'Solo' dedi ama şarkıda üç solo var (ilk melodik, orta, outro tapping). Rapor ortak lead tonunu veriyor.",
+   "Kirk gitarını 'KH-1' diye anıyor; ESP bunun aslında KH-2 olduğunu söylüyor.",
+   "Amfi ayarları, kabin ve mikrofon bilgileri tahmin; kaynak bulunamadı.",
+   "Wah'ın One'da hangi solo bölümünde kullanıldığı net değil.",
+   "BPM ve ton kaynaklara göre değişiyor: 102, 109 veya 111 BPM; G majör ya da B minör. Şarkının farklı bölümlerinde tempo değişiyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World - Kirk Hammett on recording One",
+    "url": "https://www.guitarworld.com/news/and-justice-for-all-30th-anniversary-kirk-hammett-discusses-recording-metallicas-one"
+   },
+   {
+    "title": "MusicRadar - How Metallica created One",
+    "url": "https://www.musicradar.com/artists/i-remember-showing-up-at-10-or-11-in-the-morning-and-working-on-solos-and-that-leading-to-two-or-three-oclock-in-the-morning-the-next-day-how-metallica-beat-the-clock-and-battled-fatigue-to-create-a-poignant-and-pulverising-anti-war-epic"
+   },
+   {
+    "title": "ESP - Guitar World: Kirk Hammett on the Recording of One",
+    "url": "https://www.espguitars.com/articles/2010273-guitar-world-kirk-hammett-on-the-recording-of-one"
+   },
+   {
+    "title": "Guitar World - Kirk Hammett favorite wah solos",
+    "url": "https://www.guitarworld.com/news/kirk-hammett-favorite-metallica-wah-solos"
+   },
+   {
+    "title": "Guitar World - Kirk Hammett (2008)",
+    "url": "https://www.guitarworld.com/features/kirk-hammet-and-justice-all"
+   },
+   {
+    "title": "Equipboard - And Justice for All",
+    "url": "https://equipboard.com/albums/metallica-and-justice-for-all-remastered"
+   },
+   {
+    "title": "Ground Guitar - Kirk Hammett gear",
+    "url": "https://www.groundguitar.com/kirk-hammetts-guitars-and-gear/"
+   },
+   {
+    "title": "Klang.io - One",
+    "url": "https://songs.klang.io/en/s/Metallica/One/oTS5cPTqFWM"
+   },
+   {
+    "title": "AcousticBrainz - One",
+    "url": "https://acousticbrainz.org/7db598af-2646-485c-bbac-eb91688b360e"
+   }
+  ]
+ }
+}

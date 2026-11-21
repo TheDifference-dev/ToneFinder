@@ -1,0 +1,190 @@
+{
+ "rank": 98,
+ "part": "rhythm",
+ "researchedAt": 1795282024140,
+ "original": {
+  "song": {
+   "title": "Hail To The King",
+   "artist": "Avenged Sevenfold",
+   "album_or_year": "Hail to the King (2013)",
+   "tone_character": "Sade ve oturaklı, hard rock'a yakın (Metallica 'Black Album' tarzı) yüksek gainli ama aşırı doymamış bir ritim tonu. Orta frekanslar dolgun, alt sıkı; gitarlar davul ve basın arkasında kalacak şekilde, Andy Wallace miksinde temiz ve net duyuluyor.",
+   "tone_tags": [
+    "yüksek gain ama kontrollü",
+    "sıkı alt",
+    "dolgun orta frekans",
+    "EL34 karakterli",
+    "net ve tanımlı",
+    "çift kanallı (L/R) ritim",
+    "kuru, az efekt"
+   ],
+   "bpm": "118 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Schecter Zacky Vengeance imza modeli (ritim: Zacky Vengeance); Synyster Gates için Schecter Synyster Custom",
+    "pickup": "Köprü manyetiği. Zacky: Seymour Duncan JB (TB-4) humbucker; Syn: Seymour Duncan Invader (SH-8)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Schecter Hellwin USA 100 (100 W EL34 kafa, James Brown tasarımı)",
+     "channel": "Yüksek gainli lead/drive kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6",
+       "note": "tahmin; ton sade, aşırı doymamış"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin; orta frekanslar oyuk değil"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "MusicRadar'a göre grup 25 amfilik kör bir karşılaştırma yaptı ve Hellwin amfi ile kabini oybirliğiyle kazandı. Hellwin kayıttaki ilk çıkışını bu albümde yaptı (Musician's Friend, Seymour Duncan). Ayarlar hiçbir kaynakta yok, değerler tahmin."
+    },
+    {
+     "model": "Jet City JCA100HDM (Soldano tabanlı 6L6 kafa)",
+     "channel": "Overdrive",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Zacky o dönem Jet City endorsee'si ve 2013 turnesinde bunu kullandı. Stüdyoda Hellwin'in yanında ya da yerine kullanılmış olabilir; doğrulanmadı."
+    }
+   ],
+   "cab": {
+    "model": "Schecter Hellwin 4x12",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kon kenarına yakın, hafif eksen dışı (tahmin)",
+      "distance": "1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kaynak yalnızca 'Hellwin amp and cab'in karşılaştırmayı kazandığını söylüyor. Hoparlör ve mikrofon bilgisi yok. Syn başka bir parça için yalnızca amfilere mikrofon konduğunu belirtiyor."
+   },
+   "pedals": [
+    {
+     "model": "ISP Technologies Decimator (ya da amfinin dahili noise gate'i)",
+     "purpose": "Durmalarda ve palm mute'larda gürültü kesme",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "orta",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "MXR Custom Comp",
+     "purpose": "Zacky'nin turne rack'inde var; ritim tonunda kullanıldığı belirsiz",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop Db (Db Ab Db Gb Bb Eb)",
+   "recording_notes": "Prodüktör Mike Elizondo. Kayıt Can-Am (Los Angeles) ve Capitol Studios'ta (Hollywood) yapıldı, Ocak 2013'te başladı. Mühendis Adam Hawkins, asistan mühendisler Brent Arrowood ve Chris Sporleder, Pro Tools'ta Paul Suarez. Miksi Andy Wallace, masteringi Bob Ludwig yaptı (hepsi confirmed, Wikipedia). Ritim gitarları bilerek sadeleştirildi ve ağırlık davul ile basa bırakıldı; Zacky gitarların miks içinde geride tutulduğunu söylüyor (confirmed, MusicRadar). Ritim gitarının sol-sağ çift kaydedildiği tahmin ediliyor (likely, tür standardı). Ritim gitarını Zacky Vengeance, lead'i Synyster Gates çaldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Orta tempoda (yaklaşık 118 BPM) sıkı palm muting ve groove",
+    "Açık alt tel pedal notası ile riff arasında geçişler",
+    "Down-picking dayanıklılığı ve davula oturan zamanlama",
+    "Phrygian dominant renkli tek nota riff çizgileri",
+    "Kuplelerde bırakılan power chord'lar ve susturma kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana tema (Syn)",
+    "description": "Gypsy jazz etkili, Django Reinhardt esinli tek nota lead melodisi. Aynı distorsiyonlu amfi, köprü manyetiği; ritimden biraz daha fazla gain ve sustain, hafif delay ya da reverb (tahmin). Syn'in Invader'lı Schecter'i."
+   },
+   {
+    "name": "Solo",
+    "description": "Minör blues akorları üzerine kurulmuş, Syn'in çaldığı solo. Hellwin lead kanalı, köprü Invader; legato, geniş bend'ler, vibrato ve hızlı koşular. Daha fazla gain ve orta frekans; miksde hafif delay ya da reverb (tahmin)."
+   },
+   {
+    "name": "Kuplelerdeki ritim",
+    "description": "Aynı ton. Vokal altında bırakılan power chord'lar ve palm mute arası; gain aynı, çalım dinamiği farklı."
+   }
+  ],
+  "warnings": [
+   "Akort tartışmalı: UG'nin akor sayfası Eb standart olduğunu ve ana riffin drop akortta çalındığını söylüyor; birçok tab Db Ab Db Gb Bb Eb (Drop Db) veriyor; bazı tablar Drop D ya da standart akort gösteriyor.",
+   "Tonalite: veri tabanları Eb (D#) minör diyor, ama riff Hint-Doğu (phrygian dominant) havasında olduğundan ton merkezi farklı yorumlanabilir.",
+   "Ritimde Zacky'nin hangi amfiyi kullandığı doğrulanmadı. Hellwin'in karşılaştırmayı kazandığı biliniyor, ama Jet City kullanmış olması da mümkün.",
+   "Amfi ayarları, kabin hoparlörleri ve mikrofonlar hiçbir kaynakta yok; hepsi tahmin.",
+   "Zacky'nin JB manyetiği 2013 turnesindeki rig rundown'dan geliyor; stüdyoda aynı gitarın kullanıldığı varsayılıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar - Avenged Sevenfold talk songwriting and Hail To The King",
+    "url": "https://musicradar.com/news/guitars/avenged-sevenfold-talk-songwriting-and-hail-to-the-king-586384"
+   },
+   {
+    "title": "MusicRadar - Synyster Gates track by track",
+    "url": "https://www.musicradar.com/news/guitars/synyster-gates-talks-avenged-sevenfolds-hail-to-the-king-track-by-track-582256"
+   },
+   {
+    "title": "Guitar World - Gates & Vengeance on Hail to the King",
+    "url": "https://guitarworld.com/features/avenged-sevenfolds-synyster-gates-and-zacky-vengeance-discuss-their-hard"
+   },
+   {
+    "title": "Premier Guitar Rig Rundown 2013",
+    "url": "https://www.premierguitar.com/gear/rig-rundown-avenged-sevenfolds-synyster-gates-zacky-vengeance-and-johnny-christ"
+   },
+   {
+    "title": "Wikipedia - Hail to the King (album)",
+    "url": "https://en.wikipedia.org/wiki/Hail_to_the_King_(Avenged_Sevenfold_album)"
+   },
+   {
+    "title": "Musician's Friend - Avenged Sevenfold Interview",
+    "url": "https://www.musiciansfriend.com/avenged-sevenfold"
+   },
+   {
+    "title": "Seymour Duncan - The Sound of Synyster Gates",
+    "url": "https://www.seymourduncan.com/blog/latest-updates/the-sound-of-synyster-gates"
+   },
+   {
+    "title": "Equipboard - Zacky Vengeance",
+    "url": "https://equipboard.com/zacky-vengeance"
+   },
+   {
+    "title": "Ultimate Guitar - Hail To The King Chords",
+    "url": "https://tabs.ultimate-guitar.com/tab/avenged-sevenfold/hail-to-the-king-chords-1404288"
+   },
+   {
+    "title": "Ultimate Guitar - Hail To The King Solo Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/avenged-sevenfold/hail-to-the-king-tabs-1405250"
+   },
+   {
+    "title": "SongBPM",
+    "url": "https://songbpm.com/@first-to-eleven/hail-to-the-king-K-0REWWfNT"
+   },
+   {
+    "title": "AudioKeychain",
+    "url": "https://www.audiokeychain.com/track/YMJ/avenged-sevenfold-hail-to-the-king"
+   }
+  ]
+ }
+}

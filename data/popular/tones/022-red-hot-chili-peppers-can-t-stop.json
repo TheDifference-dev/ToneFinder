@@ -1,0 +1,154 @@
+{
+ "rank": 22,
+ "part": "rhythm",
+ "researchedAt": 1795279071219,
+ "original": {
+  "song": {
+   "title": "Can't Stop",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "By the Way (2002)",
+   "tone_character": "Kuru, parlak ve perküsif bir ritim tonu. Temiz ile hafif crunch arasında, tam kırılma sınırında duruyor. Tonun çoğunu sert pena atağı ve susturulmuş teller veriyor; yüksek gain yok.",
+   "tone_tags": [
+    "kırılma sınırında (edge of breakup)",
+    "parlak",
+    "perküsif",
+    "kuru, az efekt",
+    "orta frekans belirgin",
+    "sıkı alt",
+    "dinamiğe duyarlı"
+   ],
+   "bpm": "91–92 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1962 Fender Stratocaster (sources disagree; the alternative is a 1960 Fender Telecaster Custom)",
+    "pickup": "Köprü manyetiği (stok vintage single-coil)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall Major 200W (head)",
+     "channel": "Tek kanal; yüksek giriş, master volume yok",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Frusciante'nin By the Way döneminde kullandığı ana Marshall'lar Major 200W ve Super Bass 100W. Genelde bir Fender amfiyle (Showman veya Bassman) ya da Silver Jubilee 2555 ile stereo çalıştırılıyordu. Bu şarkıya özel bir kaynak yok. Bilinen bir ayar da yok; Major'ın headroom'u çok yüksek, bu yüzden kırılma sınırındaki ton büyük olasılıkla amfiyi yüksek sesle sürmekten ve atakla tetiklenen hafif kırılmadan geliyor."
+    },
+    {
+     "model": "1960'lar Fender Deluxe Reverb",
+     "channel": "Vibrato kanalı (tahmin)",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "2002 tarihli Total Guitar röportajında Frusciante, albüm kayıtlarında 60'lardan bir Deluxe Reverb kullandığını söylüyor (Gearnews bu röportajı aktarıyor). Hangi şarkılarda kullanıldığı belirtilmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 tipi)",
+    "speakers": "Celestion (büyük olasılıkla G12T-75 veya Greenback; doğrulanmadı)",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Bu kayıt için kabin ve mikrofon bilgisi bulunamadı. Cello Studios'ta yaygın kurulum yakın mesafeden dinamik mikrofon (SM57 vb.) artı oda mikrofonu olurdu; bu tamamen tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Boss CE-1 Chorus Ensemble",
+     "purpose": "Çoğunlukla preamp/gövde için kullanılıyor (chorus efekti kapalıyken preamp devresi); riffin karakterine önemli katkısı olduğu söyleniyor",
+     "settings": [
+      {
+       "name": "Effect",
+       "value": "Off",
+       "note": "Chorus kapalı, yalnızca preamp devresi (tahmin)"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Micro Amp",
+     "purpose": "Dönemin pedalboard'unda bulunan clean boost/tampon",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Rick Rubin. Kayıtlar Kasım 2001–Mayıs 2002 arasında Los Angeles'ta Cello Studios ve Chateau Marmont'ta yapıldı. Kayıt mühendisi ve mix Jim Scott; ek mühendisler Ryan Hewitt, Ethan Mates ve Jason Wormer. Frusciante gitar partilerinin çoğunu Şubat 2002'den itibaren kaydetti. Ritim gitarı kuru ve öne mikslenmiş, belirgin reverb yok. Nakarat ve bridge bölümlerinde Frusciante'nin katmanlı overdub'ları ve vokal armonileri var. Ritim partisinin double-track edilip edilmediğine dair bir kaynak bulunamadı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Sol el susturmasıyla yapılan perküsif, staccato akor vuruşları",
+    "Funk tarzında 16'lık sağ el hareketi (el sürekli gidip geliyor)",
+    "Sert pena atağı ve dinamik kontrolü",
+    "Ghost note ile çalınan akorlar arasında hızlı geçiş",
+    "Kıta ile nakarat arasında net dinamik fark"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Susturulmuş tellerle çalınan staccato riff; köprü manyetiği, sert atak. Ritim tonuyla aynı. Pratikte referans ton bu."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Daha açık, tını bırakılan akorlar ve daha çok overdub katmanı. Biraz daha dolgun ve yüksek, kırılma biraz artıyor (daha sert çalarak). Efekt değişmiyor."
+   },
+   {
+    "name": "Bridge (köprü bölümü)",
+    "description": "Bölümün ikinci yarısında Electro-Harmonix Electric Mistress flanger kullanılıyor (canlı performanslarda doğrulanmış, stüdyoda olası). Ritim tonuna flanger eklenmiş hali."
+   },
+   {
+    "name": "Solo",
+    "description": "Electro-Harmonix Big Muff Pi ile fuzz'lı, sustain'li ton (dönemin pedalboard fotoğraflarına dayanan olası bilgi). Arkasında bir miktar reverb/oda ambiyansı var; kaynağı belirsiz. Ritim tonuna göre çok daha yüksek gain."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: Ground Guitar şarkıda büyük olasılıkla 1960 Telecaster Custom kullanıldığını söylüyor ama doğrudan bir alıntı yok; şarkı canlıda neredeyse hep bu Telecaster ile çalınıyor. Total Guitar 2002 röportajına göre ise albümün ana gitarı 1962 Stratocaster.",
+   "Amfi bu şarkı için doğrulanmadı: Deluxe Reverb albüm geneli için doğrulanmış; Marshall Major/Silver Jubilee dönemin rig'ine dayanan bir çıkarım.",
+   "Mikrofon, kabin ve amfi ayarlarına dair hiçbir kaynak bulunamadı.",
+   "Tonalite kaynakları çelişiyor: Klangio ve AcousticBrainz E minör veriyor, Audiokeychain ise 10A/Bm. Tempo 91 ile 92 BPM arasında. Tunebat sayfasına erişilemedi.",
+   "CE-1'in stüdyoda tam olarak nasıl kullanıldığı (chorus açık mı, yalnızca preamp mı) net değil."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Ground Guitar – John Frusciante's Gear on By the Way",
+    "url": "https://www.groundguitar.com/tone-breakdown/john-frusciante-by-the-way-gear/"
+   },
+   {
+    "title": "Gearnews – The Can't Stop Guitar Tone",
+    "url": "https://www.gearnews.com/the-cant-stop-guitar-tone-guitar/"
+   },
+   {
+    "title": "Guitar Chalk – Can't Stop amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-cant-stop-rhcp/"
+   },
+   {
+    "title": "Reverb – Nailing it: Frusciante tones",
+    "url": "https://reverb.com/news/nailing-it-achieving-the-tones-of-red-hot-chili-peppers-john-frusciante"
+   },
+   {
+    "title": "Wikipedia – By the Way",
+    "url": "https://en.wikipedia.org/wiki/By_the_Way"
+   },
+   {
+    "title": "RHCP Sessions – 2001/2002 By the Way",
+    "url": "https://www.rhcpsessions.com/20012002-by-the-way"
+   },
+   {
+    "title": "Louder – How RHCP made By the Way",
+    "url": "https://www.loudersound.com/bands-artists/how-red-hot-chili-peppers-made-by-the-way"
+   },
+   {
+    "title": "Audiokeychain – Can't Stop",
+    "url": "https://www.audiokeychain.com/track/Frb/red-hot-chili-peppers-cant-stop"
+   },
+   {
+    "title": "Klangio – Can't Stop",
+    "url": "https://songs.klang.io/en/s/Red%20Hot%20Chili%20Peppers/Can't%20Stop/8DyziWtkfBw"
+   },
+   {
+    "title": "AcousticBrainz – Can't Stop",
+    "url": "https://acousticbrainz.org/76cfb695-48db-4e10-8ca5-0d11cf3f0572"
+   }
+  ]
+ }
+}

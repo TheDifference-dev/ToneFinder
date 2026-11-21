@@ -1,0 +1,162 @@
+{
+ "rank": 95,
+ "part": "rhythm",
+ "researchedAt": 1795281864924,
+ "original": {
+  "song": {
+   "title": "Basket Case",
+   "artist": "Green Day",
+   "album_or_year": "Dookie (1994)",
+   "tone_character": "Dookie'nin ünlü tonu: modifiye bir Marshall Plexi'den gelen, kalın ve orta frekansları öne çıkan, yarı doymuş bir İngiliz crunch'ı. Pedalsız ve kuru kaydedilmiş, iki gitar sağa-sola double-track edilmiş. Yarım ses pes akort alt frekansları dolgunlaştırıyor.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "yüksek kazançlı crunch",
+    "kalın alt-orta",
+    "kuru (reverb yok)",
+    "sağ-sol double-track",
+    "punk enerjisi",
+    "tiz frekanslar hafif yumuşatılmış"
+   ],
+   "bpm": "175 BPM",
+   "key": "Eb majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fernandes Stratocaster kopyası (\"Blue\") / ucuz Meksika yapımı Fernandes Strat",
+    "pickup": "Köprü humbucker: Seymour Duncan JB (Cavallo'ya göre). Bazı kaynaklar Bill Lawrence L-500XL diyor. Sadece köprü manyetiği kullanılmış, ses düğmeleri tam açık.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead (Plexi, 100W; Rob Cavallo'nun 1971 model amfisi), CAE'de \"crunch mod\" ile modifiye edilmiş (Bob Bradshaw / Martin Golub, John Suhr tasarımı)",
+     "channel": "Modifiye tek kazanç yolu (kademeli kazanç katları ve master volume)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7.5",
+       "note": "Tahmin: kalın crunch, tam bir lead tonu değil"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6.5",
+       "note": "Tahmin: orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "Tahmin: mod tizleri zaten biraz kısıyor"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "Tahmin: güç katı da biraz zorlansın"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Amfinin modifiye bir Marshall olduğu kesin. Ayar değerleri hiçbir kaynakta yok, buradakiler Guitar Chalk'un genel önerileri ve tahmin. Kayıt sırasında kontrol odasında birden fazla kafa (head) kullanılmış. Hepsinin aynı amfi olup olmadığı bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 kabin (Fantasy Studios Studio B)",
+    "speakers": "Bilinmiyor. Muhtemelen Celestion (G12T-75 ya da Greenback).",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "En iyi ses veren hoparlör konilerinden birine yakın mikrofon (tam pozisyon belirtilmemiş)",
+      "distance": "Yakın (yaklaşık 2–5 cm, tahmin)"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "En iyi ses veren diğer koniye yakın mikrofon",
+      "distance": "Yakın (tahmin)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Oda mikrofonu",
+      "distance": "Yaklaşık 5 yard (~4.5 m)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabinin 'Marshall' olduğunu ve mikrofonları Sound On Sound (Neill King) doğruluyor. Hoparlör modeli kaynakta yok."
+   },
+   "pedals": [],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Fantasy Studios, Berkeley, 1993 sonu, yaklaşık 3 hafta. Prodüktör Rob Cavallo (ve Green Day), kayıt mühendisi Neill King. Temel kayıtlar Studio A'da, amfi bir kabinde. Gitar overdub'ları Studio B'de (Trident 80B konsol), kafalar kontrol odasında. Ritim gitarları genelde sol ve sağ olarak iki kez kaydedilmiş, bazen üçüncü bir kanal miksi güçlendirmiş. Distorsiyon yüzünden double-track'lerde akort/entonasyon hassas çıkmış ve çok akort çalışması gerekmiş. Miks bilerek kuru tutulmuş, gitarlarda reverb yok. İlk miks Studio D'de (SSL) yapılmış. Pedal kullanıldığı bilinmiyor; ton doğrudan amfiden geliyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Hızlı ve sürekli aşağı vuruşlar (175 BPM)",
+    "Power chord'lar ve kısmi palm mute",
+    "Akor geçişlerinde sıkı zamanlama",
+    "Uzun süre aşağı vuruşta dayanıklılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (gitar + vokal)",
+    "description": "Tek gitar ve vokal, aynı distorsiyonlu ton. Davul ve bas yok, double-track de genelde yok (tek gitar). Akorlar daha hafif, açık bırakılarak çalınıyor. İstersen gitarın ses düğmesini biraz kısabilirsin."
+   },
+   {
+    "name": "Kıta ve nakarat ritmi",
+    "description": "Ana ton bu: sağ-sol double-track, köprü manyetiği, kuru. Kıtalarda biraz palm mute, nakaratta açık power chord'lar."
+   },
+   {
+    "name": "Köprü / ara bölüm",
+    "description": "Ton aynı kalıyor. Dinamik değişiyor, bazı yerlerde üçüncü bir gitar katmanı eklenmiş olabilir."
+   },
+   {
+    "name": "Kısa melodik lead",
+    "description": "Ayrı tek hatlı bir overdub. Muhtemelen aynı amfiyle, biraz daha fazla kazançla ya da sadece öne mikslenerek kaydedilmiş. Efekt yok."
+   }
+  ],
+  "warnings": [
+   "Amfinin modeli ve yılı konusunda kaynaklar ayrışıyor: Marshall 1959SLP diyor, Cavallo 1971 Super Lead Plexi diyor. Modu kimin taktığı da tartışmalı (Bradshaw ya da Golub).",
+   "Köprü manyetiği Seymour Duncan JB (Cavallo/Guitar World) mi, Bill Lawrence L-500XL (Guitar Chalk, kaynaksız) mi, belli değil.",
+   "Amfi ayarları hiçbir güvenilir kaynakta yok, verilen değerler tahmin.",
+   "Hoparlör tipi ve mikrofonların koni üzerindeki tam pozisyonu belgelenmemiş.",
+   "BPM bazı araçlarda yarım tempo (~88) çıkıyor. Doğru değer 175 BPM. Kaynaklar Eb akortla çalındığı için tonaliteyi bazen E olarak yazıyor, kayıttaki tonalite Eb."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Sound On Sound – Classic Tracks: Green Day 'Basket Case'",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-green-day-basket-case"
+   },
+   {
+    "title": "Guitar World – The real story behind Green Day's iconic Dookie tone",
+    "url": "https://www.guitarworld.com/gear/guitar-amp-heads/the-real-story-behind-green-days-iconic-dookie-tone"
+   },
+   {
+    "title": "Marshall – The Dookie Mod",
+    "url": "https://www.marshall.com/ad/en/backstage/articles/the-dookie-mod"
+   },
+   {
+    "title": "Guitar Chalk – Basket Case amp settings",
+    "url": "https://www.guitarchalk.com/basket-case-amp-settings/"
+   },
+   {
+    "title": "Equipboard – Green Day Dookie",
+    "url": "https://equipboard.com/albums/green-day-dookie"
+   },
+   {
+    "title": "Tunebat – Basket Case (live)",
+    "url": "https://tunebat.com/Info/Basket-Case-Live-at-Milton-Keynes-National-Bowl-Milton-Keynes-England-6-18-05-Green-Day/4unD2O56RtWAMLuZLWTWbr"
+   },
+   {
+    "title": "Audiokeychain – Basket Case",
+    "url": "https://www.audiokeychain.com/track/FeF/green-day-basket-case"
+   }
+  ]
+ }
+}

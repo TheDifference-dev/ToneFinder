@@ -1,0 +1,196 @@
+{
+ "rank": 42,
+ "part": "full",
+ "researchedAt": 1795279882066,
+ "original": {
+  "song": {
+   "title": "Aerials",
+   "artist": "System of a Down",
+   "album_or_year": "Toxicity (2001)",
+   "tone_character": "Şarkı iki tona dayanıyor. Bir yanda giriş ve kıtalarda drop C akortlu, sıcak ve hafif odalı temiz/az kirli arpejler var. Öbür yanda nakarat ve doruklarda orta frekansı öne çıkık, katmanlı (double-track) ve kalın Rectifier+Marshall distorsiyon var. Genel karakter, modern metale göre fazla oyulmamış orta frekans ve sıkı ama dolgun bir alt uç.",
+   "tone_tags": [
+    "drop C",
+    "orta frekans öne çıkık",
+    "katmanlı/double-track",
+    "temiz–distorsiyon dinamiği",
+    "kalın alt",
+    "hafif kompresli",
+    "sıcak temiz arpejler"
+   ],
+   "bpm": "80–81 BPM",
+   "key": "C minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG (1962) / siyah Gibson Les Paul Standard; Toxicity seanslarında başka gitarlar da kullanıldı (Gibson Korina Flying V, beyaz Jackson Randy Rhoads V, Firebird, EDS-1275, Iceman)",
+    "pickup": "Distorsiyonlu bölümlerde köprü humbucker (stok pasif Gibson humbucker olduğu düşünülüyor). Temiz arpejlerde sap manyetiği ya da ara pozisyon olabilir (guess).",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Triple Rectifier",
+     "channel": "Distorsiyon kanalı (Modern, high gain)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "Guitar Chalk tahmini, orijinal değil"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mid",
+       "value": "6.5",
+       "note": "orta frekansı oymamak önemli (tahmin)"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar Player'ın Ocak 2002 sayısında Malakian, Triple Rectifier'ı Toxicity stüdyo seanslarında ve sahnede kullandığını söylüyor (Equipboard'dan aktarım). Ayarlar kaynaklı değil, blog tahmini."
+    },
+    {
+     "model": "Marshall 1959SLP Plexi Super Lead 100W",
+     "channel": "Tek kanal (High Treble girişi muhtemel)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Equipboard, Sylvia Massy kaynaklı fotoğraflar ve Mix Online'a dayanarak Toxicity ve Steal This Album dönemi için listeliyor. Mesa ile karıştırıldığı (Mesa 'diş', Marshall 'gövde') anlatılıyor, ama bu alıntı Guitar Chalk'ta geçiyor ve doğrulanmadı. Bazı kaynaklarda Marshall JMP100 olarak geçiyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 ve Mesa/Boogie 4x12 kabinler",
+    "speakers": "Bilinmiyor; Marshall kabinde Celestion, Mesa kabinde Celestion Vintage 30 olması muhtemel (guess)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Her kabinde birer tane; pozisyon bilinmiyor",
+      "distance": "Bilinmiyor (yakın mikrofon)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Her kabinde birer tane; pozisyon bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Equipboard'un aktardığı bir prodüksiyon makalesine göre her kabinde bir 57 ve bir 87 vardı ve sinyal bir çift blackface 1176'dan geçiyordu. Orijinal makaleye ulaşamadım."
+   },
+   "pedals": [
+    {
+     "model": "Universal Audio (UREI) 1176LN Blackface",
+     "purpose": "Stüdyoda gitar sinyalini sıkıştırma (rack kompresör)",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Phase 90",
+     "purpose": "Temiz bölümlerde hafif faz rengi",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss DD-6 / Line 6 DL4 Delay",
+     "purpose": "Temiz bölümlerde delay/ambiyans",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "MXR Smart Gate",
+     "purpose": "High gain bölümlerde gürültü kapısı",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop C (C G C F A D)",
+   "recording_notes": "Kayıt 2001 baharında Hollywood'daki Cello Studios'ta yapıldı (Thomann). Prodüktörler Rick Rubin ve Daron Malakian; kaydı David Schiffman yaptı, miksi Andy Wallace (bu kredileri bilgimden yazıyorum, bu oturumda kaynakla doğrulamadım). Gitarlar katmanlanıp double-track edildi (Gearnews). Bir blogda geçen 'susturulmuş akustik gitarlarla kaplı duvar' hikâyesi doğrulanmadı. Şarkının sonunda gizli parça 'Arto' var (gitar içermiyor)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "drop C'de arpej ve temiz tek nota melodisi",
+    "temiz/distorsiyon arası dinamik kontrolü",
+    "nakaratta power chord ve palm muting",
+    "doğru zamanlama (yavaş tempo, yarım zaman hissi)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş ve kıtalar",
+    "description": "Distorsiyon yok ya da çok az; gain çok düşük, bas biraz artırılmış. Hafif oda ya da reverb ambiyansı var. Muhtemelen sap ya da ara manyetik kullanılıyor. Tab kaynaklarına göre ilk nakarat da temiz çalınıyor."
+   },
+   {
+    "name": "Ağır nakarat ve doruklar",
+    "description": "İkinci kıtadan sonra Rectifier+Marshall high gain distorsiyona geçiliyor. Köprü manyetiği kullanılıyor, orta frekans dolgun, gitarlar double-track. Power chord'larla çalınıyor, gürültü kapısı yararlı olur."
+   },
+   {
+    "name": "Outro",
+    "description": "Temiz motif geri dönüyor ya da distorsiyon sönümleniyor. Sonundaki gizli parça 'Arto' gitar dışı bir parça."
+   }
+  ],
+  "warnings": [
+   "Aerials için şarkıya özgü bir ekipman kaynağı bulamadım; bilgiler Toxicity albümünün genel rig'inden çıkarıldı.",
+   "Amfi ayarlarının hepsi blog tahmini (Guitar Chalk); orijinal değerler bilinmiyor.",
+   "Dual Rectifier mi Triple Rectifier mi tartışmalı. Guitar Player alıntısı Triple'ı işaret ediyor.",
+   "Hangi gitarın kullanıldığı belirsiz: SG, Les Paul, Flying V ve Iceman'in hepsi o dönemde anılıyor.",
+   "BPM 80–95 arasında farklı veriliyor; 80–81 en tutarlı değer. Tunebat sayfasına ulaşamadım.",
+   "Tonalite çoğunlukla C minör olarak veriliyor; Audiokeychain G diyor.",
+   "57+87 mikrofon ve 1176 bilgisi Equipboard'un aktardığı bir makaleden geliyor; asıl kaynağı doğrulayamadım.",
+   "Temiz bölümlerdeki efektler (Phase 90, delay) zayıf kaynaklı.",
+   "Kayıt kredileri (David Schiffman, Andy Wallace) bilgimden geliyor; bu oturumda kaynakla doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Equipboard – Toxicity album gear",
+    "url": "https://equipboard.com/albums/system-of-a-down-toxicity"
+   },
+   {
+    "title": "Equipboard – Daron Malakian",
+    "url": "https://equipboard.com/daron-malakian"
+   },
+   {
+    "title": "Guitar Chalk – Aerials amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-aerials-system-of-a-down/"
+   },
+   {
+    "title": "Gearnews – The guitar sound of Chop Suey",
+    "url": "https://www.gearnews.com/the-guitar-sound-of-chop-suey-guitar/"
+   },
+   {
+    "title": "Thomann – System Of A Down Guitars, Amps & the SOAD Sound",
+    "url": "https://www.thomannmusic.com/blog/gear/system-of-a-down-guitars-amps-the-soad-sound/"
+   },
+   {
+    "title": "Ultimate Guitar – Aerials tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/system-of-a-down/aerials-tabs-28919"
+   },
+   {
+    "title": "Musicstrive – SOAD guitar tone",
+    "url": "https://musicstrive.com/system-of-a-down-guitar-tone"
+   },
+   {
+    "title": "Klang.io – Aerials",
+    "url": "https://songs.klang.io/en/s/System%20Of%20A%20Down/Aerials/L-iepu3EtyE"
+   },
+   {
+    "title": "Hooktheory – Aerials",
+    "url": "https://hooktheory.com/theorytab/view/system-of-a-down/aerials"
+   },
+   {
+    "title": "Audiokeychain – Aerials",
+    "url": "https://www.audiokeychain.com/track/YPO/system-of-a-down-aerials"
+   }
+  ]
+ }
+}

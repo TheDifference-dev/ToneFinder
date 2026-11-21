@@ -1,0 +1,166 @@
+{
+ "rank": 57,
+ "part": "lead",
+ "researchedAt": 1795280439373,
+ "original": {
+  "song": {
+   "title": "Tornado of Souls",
+   "artist": "Megadeth",
+   "album_or_year": "Rust in Peace (1990)",
+   "tone_character": "Kuru ve net, çok doymuş ama sıkı ve 'cızırtılı' (buzzy) bir 80 sonu/90 başı rack-high-gain lead tonu. Orta frekanslar öne çıkık, solo miksin önünde. Hafif reverb ya da delay var, büyük ölçüde kuru.",
+   "tone_tags": [
+    "distorted",
+    "doymuş lead",
+    "orta frekans öne çıkık",
+    "sıkı alt",
+    "parlak/cızırtılı üst",
+    "kuru",
+    "rack preamp karakteri",
+    "hafif reverb/delay"
+   ],
+   "bpm": "196 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Jackson Kelly (Friedman'ın gençliğinde Hawaii'de aldığı kendi Kelly'si; sonradan Jackson KE-1 imza modeline temel oldu)",
+    "pickup": "Köprü humbucker, muhtemelen Seymour Duncan (bir hayran sorusunda 'JB/JBJ' geçiyor, model doğrulanmadı)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Bogner Triple Giant preamp (Hafler Triple Giant, #11/25)",
+     "channel": "Lead (high-gain) kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Wikipedia/Equipboard, Friedman için 'Rust in Peace album and tour' kaydıyla listeliyor. Kanal ve ayarlar bilinmiyor. Gitar kanıtı doğrudan, amfi kanıtı ise ikincil."
+    },
+    {
+     "model": "VHT 2150 power amp",
+     "channel": "",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Forumda Mustaine'in RIP rig'i olarak geçiyor. Friedman'ın eski ekipman listesinde de VHT 2150 var ama albümle bağı belirtilmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (straight)",
+    "speakers": "Forum iddiası: bir kabin Celestion G12M 25W Greenback, bir kabin Celestion Vintage 30, bir kabin Celestion G12T-75",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Koniye yakın (close-mic), pozisyon bilinmiyor",
+      "distance": "Yakın, birkaç cm (tahmin)"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Koniye yakın",
+      "distance": "Yakın (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi Seymour Duncan forumunda 'deth forumlarından' kopyalanan, Mustaine'e atfedilen tek bir gönderiye dayanıyor. Friedman'ın aynı kabini kullandığı varsayım."
+   },
+   "pedals": [
+    {
+     "model": "Bradshaw RSB-12 switching sistemi",
+     "purpose": "Rack anahtarlama",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb/delay (model bilinmiyor)",
+     "purpose": "Solonun miksinde hafif ambiyans",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%10-15",
+       "note": "Kulakla tahmin, kaynak yok"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt 1989-1990'da Canoga Park'taki Rumbo Recorders'ta yapıldı (confirmed). Prodüksiyon Mike Clink ve Dave Mustaine'e ait. Kayıt ve mühendislik Micajah Ryan ile Mike Clink, asistan mühendis Andy Udoff, miks Max Norman. Mustaine'e göre Clink Guns N' Roses nedeniyle stüdyoya ara ara geldi. Ritimlerin çoğunu Mustaine çaldı, Friedman'ın soloları bitmiş ritim kanallarının üzerine eklendi (confirmed, Guitar World). Friedman albümde yalnızca Kelly'sini kullandı (confirmed). Solo tek kanal olarak ortada, üzerinde hafif reverb olduğu tahmin ediliyor. 2004 remiksi farklı bir mikse sahip, orijinal 1990 miksi esas alınmalı."
+  },
+  "difficulty": {
+   "score": 5,
+   "factors": [
+    "Hızlı alternate picking",
+    "Sweep ve arpej geçişleri",
+    "Hızlı legato koşuları",
+    "Geniş bending'ler (ön bend, bend-release)",
+    "Kontrollü vibrato",
+    "Friedman'a özgü egzotik ve kromatik nota seçimi",
+    "Karmaşık ritmik gruplamalar",
+    "Hızlı tempoda uzun, kompoze bir solo"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / ritim",
+    "description": "Büyük ölçüde Dave Mustaine çaldı (Jackson King V, Seymour Duncan JB köprü manyetiği; Marshall JCM800 ya da Bogner/Hafler rack, kaynaklar çelişiyor). Hızlı, palm-mute'lu, aşağı vuruşlu thrash riffleri. Gain solodan biraz düşük, tonu daha kuru ve sıkı. Sol/sağ kanala double-track edildiği tahmin ediliyor."
+   },
+   {
+    "name": "Solo öncesi lead ve harmoniler",
+    "description": "Kısa lead ve harmoni pasajları solo tonuna benzer, köprü manyetiğiyle çalınıyor."
+   },
+   {
+    "name": "Mustaine lead bölümleri",
+    "description": "Mustaine'in leadleri tüm düğmeleri sonuna kadar açık bir JCM800 ile anlatılıyor; solodan daha ham ve tiz. Bu parçada asıl solo Friedman'ın."
+   }
+  ],
+  "warnings": [
+   "Friedman'ın RIP amfisi için tek dayanak Wikipedia/Equipboard listesi (Bogner Triple Giant). Doğrudan bir röportaj bulunamadı.",
+   "Kabin, hoparlör ve mikrofon bilgisi tek bir forum gönderisine dayanıyor ve Mustaine'e atfediliyor.",
+   "Mustaine'in amfisi konusunda kaynaklar çelişiyor: JCM800 (Guitar World), Bogner Fish + VHT 2150 (forum), JMP-1 (Rig-Talk).",
+   "Manyetik modeli doğrulanmadı.",
+   "BPM ve tonalite için Tunebat verisi yok. 196 BPM tab sitesinden, E minör pratik sitesinden alındı. Solo modlu ve kromatik geçişler içeriyor.",
+   "Prodüktör Mike Clink ara ara stüdyodaydı. Kaydın büyük kısmını Micajah Ryan, Max Norman ve Mustaine yaptı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Real Sound – Marty Friedman Kelly story",
+    "url": "https://realsound.jp/2023/02/post-1265340_2.html"
+   },
+   {
+    "title": "Wikipedia – Marty Friedman",
+    "url": "https://en.wikipedia.org/wiki/Marty_Friedman"
+   },
+   {
+    "title": "Wikipedia – Tornado of Souls",
+    "url": "https://en.wikipedia.org/wiki/Tornado_of_Souls"
+   },
+   {
+    "title": "Equipboard – Rust in Peace",
+    "url": "https://equipboard.com/albums/megadeth-rust-in-peace"
+   },
+   {
+    "title": "Guitar World – Megadeth: Rust Never Sleeps",
+    "url": "https://www.guitarworld.com/features/megadeth-rust-never-sleeps"
+   },
+   {
+    "title": "Seymour Duncan forum – What amps on Rust in Peace",
+    "url": "https://forum.seymourduncan.com/threads/what-amps-on-rust-in-peace-and-countdown.90065"
+   },
+   {
+    "title": "MusicRadar – Hangar 18",
+    "url": "https://www.musicradar.com/news/megadeth-hangar-18-dave-mustaine-marty-friedman-beatles-zeppelin"
+   },
+   {
+    "title": "Rig-Talk – Megadeth Hangar 18",
+    "url": "https://www.rig-talk.com/forum/threads/megadeth-hangar-18.186353/"
+   },
+   {
+    "title": "GuitarMasterClass – Tornado of Souls",
+    "url": "https://guitarmasterclass.net/ls/Megadeth-Tornado-Of-Souls-Riffs"
+   },
+   {
+    "title": "Martyfriedman.com FAQ",
+    "url": "https://martyfriedman.com/fans_faq_content.php?id=7556"
+   }
+  ]
+ }
+}

@@ -1,0 +1,169 @@
+{
+ "rank": 72,
+ "part": "full",
+ "researchedAt": 1795280982135,
+ "original": {
+  "song": {
+   "title": "Schism",
+   "artist": "Tool",
+   "album_or_year": "Lateralus (2001)",
+   "tone_character": "Birden fazla amfinin aynı anda çalındığı, kalın, orta frekansları dolu ve sıkı bir dağıtıklık; aşırı gain'li değil, akorlar ve armoniler net kalıyor. Sessiz bölümlerde delay ile hafif kirli/temize yakın tonlar, ağır bölümlerde Drop D'de güçlü, 'karton' gibi tok bir alt bölge.",
+   "tone_tags": [
+    "orta-yüksek gain",
+    "orta frekans dolu",
+    "sıkı alt",
+    "çok amfili karışım",
+    "net akor tanımı",
+    "hafif delay",
+    "kuru miks"
+   ],
+   "bpm": "107–108 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Custom Silverburst (1979–1981)",
+    "pickup": "Köprü manyetiği (stok Gibson humbucker); tone düğmesi tamamen açık veya kapalı",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Diezel VH4",
+     "channel": "Kanal 3 (crunch/lead) muhtemel",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Jones'un Lateralus döneminde 'en sevdiğim amfi' dediği dört kanallı Alman amfi; aynı anda çalınan üç amfiden biri. Ayar bilgisi yok."
+    },
+    {
+     "model": "Marshall Super Bass 100 (modifiyeli, master volume'süz bas kafası)",
+     "channel": "Tek kanal (jumper'lı olabilir)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Guitar Player röportajında 'modified non-master-volume Marshall bass head' olarak geçiyor; tok alt ve crunch katkısı."
+    },
+    {
+     "model": "Sunn Beta Lead (solid-state)",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Jones, kayıtta Mesa/Boogie Dual Rectifier yerine Sunn Beta Lead kullandığını söylüyor; üç amfiden 'solid-state' olanı. Dual Rectifier'ın canlı/başka kayıtlarda kullanıldığı biliniyor."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie 4x12 (Rectifier tipi) kabinler",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mixdown rig yazısı Marshall + VH4'lerin Mesa/Boogie kabinlerden çalındığını belirtiyor; Lateralus stüdyo mikrofonlaması hakkında kaynak bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop 535Q Cry Baby",
+     "purpose": "Geçişlerde ve ince ton değişiklikleri için sabit/yarı açık wah, belirgin efekt olarak değil",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss EQ pedalı (GE-7 muhtemel)",
+     "purpose": "Ton şekillendirme/boost",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez digital delay",
+     "purpose": "Sessiz bölümlerde ve volume swell'lerde ambiyans",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez flanger",
+     "purpose": "Ara bölümlerde renk",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "Prodüktör David Bottrill ve Tool. Kayıt 2000'de (Cello Studios ve The Hook, Los Angeles bölgesi – kaynakla doğrulanmadı), miks Larrabee Studios. Jones parçaların çoğunu tek gitar olarak kaydettiğini, bazı şarkılarda birkaç overdub katmanı olduğunu; ya tek geçişi birkaç amfiye aynı anda gönderdiğini ya da aynı notaları iki kez çaldığını söylüyor. Ton, üç amfinin karışımıdır."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "sürekli değişen ölçüler (5/8, 7/8, 6½/8 hissi, ~47 ölçü değişimi)",
+    "bas ile kilitlenen senkoplu riffler",
+    "Drop D'de açık tel ve armonik kullanımı",
+    "palm muting ve dinamik kontrol",
+    "arpejli akorlarda net çalım"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / sessiz bölümler",
+    "description": "Bas riffi önde; gitar armonikler ve açık tel arpejleriyle giriyor. Gain düşük (temize yakın/hafif kirli), delay daha belirgin, volume ile dinamik kontrol."
+   },
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "Bası destekleyen orta gain'li dağıtıklık, palm mute'lu senkoplu kalıplar; genel tonun temel hâli."
+   },
+   {
+    "name": "Ağır köprü ve doruk bölümü",
+    "description": "Tam çok amfili ağır ton, gain ve hacim artışı, Drop D akorlar; olası wah'ın yarı açık bırakılmasıyla orta frekans vurgusu."
+   },
+   {
+    "name": "Ara (orta) bölüm",
+    "description": "Sakin, delay/flanger renkli temiz-hafif kirli tonlar; ardından kademeli yükselme."
+   }
+  ],
+  "warnings": [
+   "Schism'e özel amfi ayarı, mikrofon veya kabin bilgisi bulunamadı; bilgiler Lateralus dönemi genel rig'ine dayanıyor.",
+   "Kayıtta Mesa Dual Rectifier mi Sunn Beta Lead mi kullanıldığı kaynaklar arasında tartışmalı; Guitar Player röportajında Jones Sunn Beta Lead diyor.",
+   "Guitar Chalk gibi siteler Marshall DSL önerisi veriyor; bunlar orijinal rig değil yaklaşık ayarlardır.",
+   "BPM ve tonalite tahminleri değişiyor (107–108 BPM, yarım/çift tempo okumaları 69 ve 215 BPM; tonalite çoğunlukla D minör, SongBPM'de A).",
+   "Kayıt stüdyoları (Cello/The Hook) bu araştırmada doğrudan doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar Player – Adam Jones on Lateralus",
+    "url": "https://www.guitarplayer.com/players/adam-jones-tool-lateralus"
+   },
+   {
+    "title": "Wikipedia – Schism (song)",
+    "url": "https://en.wikipedia.org/wiki/Schism_(song)"
+   },
+   {
+    "title": "Mixdown – Gear Rundown: Adam Jones of Tool",
+    "url": "https://mixdownmag.com.au/features/rig-rundown-adam-jones-of-tool/"
+   },
+   {
+    "title": "Gearnews – Adam Jones guitar tone",
+    "url": "https://www.gearnews.com/adam-jones-guitar-tone-guitar/"
+   },
+   {
+    "title": "Equipboard – Adam Jones",
+    "url": "https://equipboard.com/adam-jones"
+   },
+   {
+    "title": "Guitar Chalk – Schism amp settings",
+    "url": "https://www.guitarchalk.com/schism-amp-settings/"
+   },
+   {
+    "title": "SongBPM – Tool Schism",
+    "url": "https://songbpm.com/@tool/schism"
+   },
+   {
+    "title": "AcousticBrainz – Schism",
+    "url": "https://acousticbrainz.org/865f015e-0ecf-4af5-b019-9edf16ea21c5"
+   },
+   {
+    "title": "Musicnotes – Schism",
+    "url": "https://www.musicnotes.com/sheetmusic/tool/schism/MN0092057"
+   }
+  ]
+ }
+}

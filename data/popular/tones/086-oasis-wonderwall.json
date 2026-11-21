@@ -1,0 +1,144 @@
+{
+ "rank": 86,
+ "part": "full",
+ "researchedAt": 1795281534692,
+ "original": {
+  "song": {
+   "title": "Wonderwall",
+   "artist": "Oasis",
+   "album_or_year": "(What's the Story) Morning Glory? (1995)",
+   "tone_character": "Şarkı akustik gitar üzerine kurulu; elektrik gitar sonradan eklenmiş, miksin arkasında duran, Strat tek bobinli manyetiğin hafif crunch'lı (kırılma sınırında), orta frekansları öne çıkan, parlak ama yumuşak tonu. Tüm miks Owen Morris'in 'brickwall' kompresyonu ile yoğun ve sıkıştırılmış.",
+   "tone_tags": [
+    "kırılma sınırında / hafif crunch",
+    "tek bobinli parlaklık",
+    "orta frekans öne çıkık",
+    "miksin arkasında",
+    "yoğun kompresli miks",
+    "hafif oda ambiyansı"
+   ],
+   "bpm": "87 BPM",
+   "key": "F# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (c. 1965, Johnny Marr'dan satın alınan) – elektrik overdub'lar; ana parça Takamine FP-460SC akustik",
+    "pickup": "Tek bobinli manyetik; hangi pozisyon kullanıldığı bilinmiyor (köprü veya orta/köprü ara pozisyonu tahmin)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Vox AC30",
+     "channel": "Top Boost / Normal (bilinmiyor)",
+     "settings": [
+      {
+       "name": "Gain/Volume",
+       "value": "5",
+       "note": "Tahmin: kırılma sınırında hafif crunch"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Sound On Sound, Morning Glory oturumlarında Noel'in Vox AC30, Marshall kombolar, WEM kombo ve Orange amfi kullandığını belirtiyor; Wonderwall için hangisinin kullanıldığı belgelenmemiş. Ayarlar tamamen tahmin."
+    },
+    {
+     "model": "Marshall kombo (model belirsiz)",
+     "channel": "bilinmiyor",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Oturumlardaki alternatif amfi; Wonderwall'a özel kanıt yok."
+    }
+   ],
+   "cab": {
+    "model": "AC30 kombo dahili kabin (varsayım)",
+    "speakers": "2x12 Celestion (AC30 varsayımına bağlı, tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "bilinmiyor (koni kenarına yakın varsayımı)",
+      "distance": "yakın, ~2-5 cm (tahmin)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "bilinmiyor",
+      "distance": "bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "SOS'a göre oturumlarda gitar amfilerinde SM57 + U87 kombinasyonu kullanıldı (Bonehead'in Marshall'ı için açıkça, Noel'in amfileri için 'aynısı'). Wonderwall'a özel değil."
+   },
+   "pedals": [],
+   "tuning": "Standart E, kapo 2. perde (akustik; Em7 şekilleri ile F# minör)",
+   "recording_notes": "Rockfield Studios (Coach House), Monmouth, Galler; Mayıs 1995. Prodüktör Owen Morris ve Noel Gallagher; şarkı yarım günde üretildi. Noel klik eşliğinde akustik + guide vokal kaydetti, sonra Alan White davulu (Gretsch) çaldı; Noel bas ve ek gitarları (elektrik dahil) overdub etti. Noel üç akustik gitar katmanı kaydetti. Bonehead Mellotron çello sesiyle kök notaları çaldı; miks sırasında Kurzweil yaylılar, sonra piyano eklendi. Studer A820, Apogee çeviriciler (soft-limit), yoğun 'brickwall' kompresyon/mastering. Elektrik gitar kayıt detayları (amfi, pedal) hiçbir kaynakta belgelenmemiş."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "kapo 2 ile sürekli 16'lık akustik ritim (aksanlı strum)",
+    "elektrik kısımda basit tek nota melodi/dolgu çizgileri",
+    "hafif bending ve vibrato",
+    "miksin içinde oturan dinamik kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana akustik ritim (tüm şarkı)",
+    "description": "Şarkının omurgası: Takamine FP-460SC akustik, kapo 2, Em7–G–Dsus4–A7sus4 şekilleri, üç katman akustik. Elektrik tondan tamamen farklı; amfisiz, mikrofonla kaydedilmiş temiz akustik."
+   },
+   {
+    "name": "Nakarat elektrik dolgu/melodi",
+    "description": "Nakarat ve köprüde akustik melodiye eşlik eden elektrik overdub; Strat ile hafif crunch, temel tondan farkı yok, miksin arkasında. Biraz daha fazla sustain için gain hafif artırılabilir (tahmin)."
+   },
+   {
+    "name": "Çıkış (outro)",
+    "description": "Mellotron çello ve piyano öne çıkar; elektrik gitar aynı hafif crunch tonuyla tekrar eden dolgular (tahmin)."
+   }
+  ],
+  "warnings": [
+   "Wonderwall'daki elektrik gitar parçası için amfi, pedal ve ayarları belgeleyen bir kaynak bulunamadı; amfi seçimi ve ayarlar tahmin.",
+   "Elektrik gitar kaynakları çelişiyor: MusicRadar Johnny Marr'dan alınan ~1965 Strat'ın Wonderwall'da kullanıldığını söylüyor; SOS oturumlar genelinde Noel'in Epiphone Casino ve Les Paul kullandığını belirtiyor. 1984 Epiphone Riviera, Wonderwall'a değil 'Don't Look Back In Anger' rekreasyonuna ait.",
+   "Sound On Sound, Bonehead'in Wonderwall'da elektrik barre akor çalmadığını belirtiyor; elektrik katmanlar Noel'in overdub'ları ve miksin arka planında.",
+   "Ton tipi (kırılma sınırında) kayıt dinlenerek yapılmış bir değerlendirme; kesin değil.",
+   "Tunebat sayfası doğrudan doğrulanamadı; 87 BPM ve F# minör birden fazla kaynakta tutarlı."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Sound On Sound – Classic Tracks: Oasis 'Wonderwall'",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-oasis-wonderwall"
+   },
+   {
+    "title": "MusicRadar – The story of Wonderwall",
+    "url": "https://www.musicradar.com/news/the-story-of-wonderwall-noel-gallaghers-song-that-liam-hated-i-remember-our-kid-saying-why-are-you-writing-reggae-songs"
+   },
+   {
+    "title": "MusicRadar – Morning Glory guitars / Wonderwall",
+    "url": "https://musicradar.com/news/oasis-whats-the-story-morning-glory-guitars-noel-gallagher-wonderwall"
+   },
+   {
+    "title": "Wikipedia – Wonderwall",
+    "url": "https://en.wikipedia.org/wiki/Wonderwall"
+   },
+   {
+    "title": "Rolling Stone – Wonderwall at 25",
+    "url": "https://www.rollingstone.com/music/music-features/oasis-wonderwall-at-25-how-oasis-making-inspiration-last-rock-standards-1059189/"
+   },
+   {
+    "title": "Hooktheory – Wonderwall",
+    "url": "https://hooktheory.com/theorytab/view/oasis/wonderwall"
+   },
+   {
+    "title": "Audiokeychain – Oasis Wonderwall",
+    "url": "https://www.audiokeychain.com/track/FQT/oasis-wonderwall"
+   }
+  ]
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "rank": 16,
+ "part": "rhythm",
+ "researchedAt": 1795278924630,
+ "original": {
+  "song": {
+   "title": "Paranoid",
+   "artist": "Black Sabbath",
+   "album_or_year": "Paranoid (1970)",
+   "tone_character": "Bası kısılmış, ortaları ve tizleri öne çıkan, treble booster'la sürülmüş bir Laney'nin verdiği ham, orta kazançlı ve hırıltılı bir distorsiyon. Modern metal tonlarına göre gain düşük, ama sert ve ısırıcı.",
+   "tone_tags": [
+    "orta kazanç",
+    "orta frekans öne çıkık",
+    "az bas",
+    "parlak/ısırıcı",
+    "güç katı doygunluğu",
+    "ham, canlı kayıt hissi"
+   ],
+   "bpm": "163 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG Special (1965, solak, 'Monkey' lakaplı)",
+    "pickup": "Köprü manyetiği büyük ihtimalle P-90 tek bobin; tam hangi manyetiğin kullanıldığı belgelenmemiş",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Laney LA100BL (Supergroup öncesi 100W, 4x EL34)",
+     "channel": "Tek kanal",
+     "settings": [
+      {
+       "name": "Bass",
+       "value": "0",
+       "note": "Kaynaklara göre bas tamamen kısık"
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": "Bir kaynağa göre sonuna kadar açık; Thomann 'orta düzey' diyor"
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": "Sonuna kadar açık"
+      },
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": "Sonuna kadar açık"
+      },
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "'Hepsini sonuna kadar aç' yorumu; düşük kazançlı amfi güç katı doygunluğuyla sürülüyor"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Amfinin Laney olduğu doğrulanmış. Ayarlar röportaj yorumlarından ve ikinci el kaynaklardan geliyor; stüdyoda kullanılan tam değerler belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Laney 4x12",
+    "speakers": "Celestion 12\" (büyük ihtimalle G12H/G12M tipi)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönemin stüdyolarına göre Neumann U67/U87 veya dinamik mikrofon tahmini)",
+      "position": "Bilinmiyor; muhtemelen hoparlöre yakın",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofonlama hakkında birincil kaynak bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Rangemaster Treble Booster (modifiyeli)",
+     "purpose": "Amfinin girişini sürerek distorsiyonu artırmak, bası azaltmak, tiz/orta frekansları öne çıkarmak",
+     "settings": [
+      {
+       "name": "Boost",
+       "value": "10",
+       "note": "Tahmin; tipik kullanım tam açık"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Haziran 1970'te Londra'da Regent Sound ve Island Studios'ta kaydedildi; prodüktör Rodger Bain, mühendis Tom Allom. Şarkı, albüm için eksik kalan süreyi doldurmak amacıyla stüdyoda çok hızlı yazılıp kaydedildi. Grup büyük ölçüde canlı çaldı. Solo sonradan overdub edildi; solonun bir kanalı normal distorsiyon, diğerinde ring modulator etkisi var. Ritim gitarının çift kayıt olup olmadığı belgelenmemiş."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Sürekli hızlı aşağı vuruşlu (downpicking) 8'lik notalar, yaklaşık 163 BPM",
+    "E5 pedal notası üzerinde palm muting",
+    "Hızlı power chord geçişleri (D5–G5–D5, E5–D5–C5)",
+    "Dayanıklılık ve sıkı zamanlama gerekiyor"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş riff'i",
+    "description": "Ana ritimle aynı ton. E5 pedal notası üzerinde hammer-on/pull-off yapılan kısa lick'ler var; teknik deişiklik gerekmiyor."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı Laney + Rangemaster tonu, muhtemelen köprü manyetiğiyle çalınıyor. Çift kayıtlı: bir kanalda düz distorsiyon, diğerinde ring modulator. Daha fazla sustain için biraz daha fazla sürüş ve bend/vibrato gerekiyor."
+   }
+  ],
+  "warnings": [
+   "Amfi modelinin adı kaynaklara göre değişiyor: LA100BL veya Supergroup MK1.",
+   "Ton ayarları ikinci el kaynaklara dayanıyor; Thomann ortaların 'orta düzeyde' olduğunu söylüyor.",
+   "Thomann gitarda humbucker olduğunu yazıyor, ama 1965 SG Special'da orijinal olarak P-90 manyetik vardı. Bu çelişki çözülemedi.",
+   "Kabin, hoparlör ve mikrofonlama bilgileri tahmin.",
+   "BPM değerleri 161 ile 164 arasında değişiyor; Tunebat'ta bu şarkının sayfası bulunamadı.",
+   "Paranoid standart akortta. Iommi pes akorda Master of Reality döneminde geçti."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Thomann - Hit the Tone! Black Sabbath's Paranoid",
+    "url": "https://www.thomannmusic.com/blog/hit-the-tone-black-sabbaths-paranoid"
+   },
+   {
+    "title": "Guitar World - The secrets behind Tony Iommi's classic Black Sabbath guitar tone",
+    "url": "https://www.guitarworld.com/features/the-secrets-behind-tony-iommis-classic-black-sabbath-guitar-tone"
+   },
+   {
+    "title": "Louder - Black Sabbath's Paranoid greatest solos",
+    "url": "https://www.loudersound.com/features/classic-rocks-100-greatest-guitar-solos-black-sabbaths-paranoid"
+   },
+   {
+    "title": "Equipboard - Black Sabbath Paranoid",
+    "url": "https://equipboard.com/albums/black-sabbath-paranoid"
+   },
+   {
+    "title": "MusicRadar - Tony Iommi tone tips",
+    "url": "https://musicradar.com/totalguitar/tony-iommi-tone-tips-336115"
+   },
+   {
+    "title": "Guitar Player - Iommi modified treble booster",
+    "url": "https://www.guitarplayer.com/guitarists/tony-iommi-modified-treble-booster-thrown-out"
+   },
+   {
+    "title": "Track DB - Paranoid BPM/key",
+    "url": "https://www.cs.ubc.ca/~davet/music/track/ESSENTLS_012/ESSENTLS_012-11.html"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/018b9103-b56b-49f0-848c-5806d78d6935?n=8"
+   }
+  ]
+ }
+}

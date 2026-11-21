@@ -1,0 +1,172 @@
+{
+ "rank": 28,
+ "part": "rhythm",
+ "researchedAt": 1795279317637,
+ "original": {
+  "song": {
+   "title": "Hysteria",
+   "artist": "Muse",
+   "album_or_year": "Absolution (2003)",
+   "tone_character": "Fuzz ve yüksek kazançla doygunlaşmış, kalın ve parlak ritim tonu. Hızlı 16'lık bas riffinin üstünde tremolo picking ile çalınan akorlar ve power chord'lar duvar gibi bir ses oluşturuyor. Uzun sustain ve hafif bir delay/reverb kuyruğuyla mix içinde öne çıkıyor.",
+   "tone_tags": [
+    "fuzz karakterli",
+    "yüksek kazanç",
+    "doygun",
+    "orta frekans öne çıkık",
+    "parlak üst",
+    "uzun sustain",
+    "hafif delay/reverb"
+   ],
+   "bpm": "94 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1962 Gibson SG (Les Paul/SG tipi, Roland GK-2 MIDI manyetiği takılı)",
+    "pickup": "Köprü manyetiği (humbucker, büyük olasılıkla orijinal Gibson PAF tipi). Manyetik seçimi tahmine dayanıyor.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Diezel VH4",
+     "channel": "Yüksek kazançlı kanal (Channel 3/4)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Mixdown'a göre Bellamy albümün tamamında Diezel VH4 kullandı. Sound on Sound'a göre Costey stüdyoya sevdiği bir Diezel kafasını getirdi. Bu şarkıya özel ayar bilgisi yok."
+    },
+    {
+     "model": "Custom Marshall kafa",
+     "channel": "Distorsiyon",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Sound on Sound'a göre Bellamy kendi custom Marshall'ını da çaldı ve gitarlar çoğunlukla Diezel ile Marshall amfilere kaydedildi. Hysteria'da iki amfinin blend edilip edilmediği belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 / Diezel 4x12 (çeşitli kabinler)",
+    "speakers": "Bilinmiyor; Celestion (V30/G12T-75) olması muhtemel",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Cap kenarı",
+      "distance": "1–2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Sound on Sound yalnızca 'çeşitli kabinler' diyor. Mixdown'a göre amfilerin farklı noktalarına birden fazla mikrofon kondu ve Bellamy parçadan parçaya mikrofon değiştirdi. Hysteria'ya ait mikrofon bilgisi yok."
+   },
+   "pedals": [
+    {
+     "model": "Fuzz pedalı (Z.Vex Fuzz Factory ya da benzeri; Bellamy'nin elinde yaklaşık 50 fuzz vardı)",
+     "purpose": "Ana doygunluk ve fuzz karakteri",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Maestro Echoplex",
+     "purpose": "Hafif teyp eko ve doku (Costey'nin dediğine göre neredeyse her şeyde kullanıldı)",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss DD-3 Digital Delay",
+     "purpose": "Delay (canlı performanslarda Hysteria ile ilişkilendiriliyor; asıl kullanım solo/lead bölümleri)",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktörler Rich Costey ve Muse. Şarkı 2002 sonunda AIR Studios'ta (Londra) overdub edildi, 2003 başında Livingston Studios'ta tamamlandı. Albümde temel kanallar grup halinde canlı alındı, gitarlar sonradan overdub edildi. Bas sesi Wolstenholme'un üç Marshall'a (biri temiz, ikisi distorsiyonlu; Big Muff ve bir Japon distorsiyon pedalı) bölünmüş sinyalinden ve Costey'nin Kyma'da programladığı synth katmanından oluşuyor. Gitar tonu bu kalın basın üstüne oturacak şekilde orta-tiz ağırlıklı. Gitarın double-track edildiği belgelenmemiş; stereo genişlik bunun olası olduğunu düşündürüyor (tahmin)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "16'lık tremolo picking (akorlarda hızlı alternate picking)",
+    "bas riffiyle sıkı senkron",
+    "palm muting ile dinamik kontrol",
+    "fuzz altında akorları temiz tutmak için susturma"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (bas riffi)",
+    "description": "Girişte ana riff bastan geliyor (fuzz'lı bas ve synth katmanı). Gitar ya yok ya da çok az; ritim tonunun gerekmediği bölüm."
+   },
+   {
+    "name": "Kıta",
+    "description": "Aynı distorsiyonlu ton, daha hafif dinamikle çalınıyor: palm mute ya da kısa akor vuruşları. İstenirse gain biraz kısılabilir."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ritim tonunun asıl bölümü: tam fuzz/high-gain ile tremolo picking akorlar ve power chord'lar. En yüksek doygunluk burada."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı distorsiyonlu temel ton, delay (Boss DD-3/Echoplex tarzı) ve reverb artırılmış; geniş bendler ve vibrato var. Köprü manyetiği; daha fazla orta ve sustain gerekiyor."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Nakarat tonu sürüyor. Distorsiyonlu akorlar ve feedback/sustain ile kapanıyor."
+   }
+  ],
+  "warnings": [
+   "Hysteria'daki gitar zinciri (fuzz modeli, amfi ayarları, mikrofon) hiçbir birincil kaynakta açıkça belgelenmemiş. Bellamy albümde 'yaklaşık 50 fuzz pedalı' kullanıldığını ve neyin nerede kullanıldığını bilmenin zor olduğunu söylüyor.",
+   "Gitar modeli için kaynaklar çelişiyor: Mixdown '1962 Gibson SG' diyor, Equipboard ise 'kırmızı Gibson SG Standard' diyor.",
+   "Wikipedia'daki 'üç Marshall amfiye bölünmüş sinyal' bilgisi gitara değil, Wolstenholme'un basına ait.",
+   "Diezel VH4'ün bu şarkıda kullanıldığı, albüm geneli için verilen bilgiden çıkarım.",
+   "Tonalite kaynaklarda genelde A minör, bir kaynakta C majör; tempo 93–94 BPM. Tunebat sayfasına ulaşılamadı.",
+   "Boss DD-3 bilgisi stüdyoya değil, canlı performanslara dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mixdown – Gear Rundown: Muse Absolution",
+    "url": "https://mixdownmag.com.au/features/columns/gear-rundown-muses-absolution/"
+   },
+   {
+    "title": "Sound on Sound – Rich Costey: Producer",
+    "url": "https://www.soundonsound.com/people/rich-costey-producer"
+   },
+   {
+    "title": "Wikipedia – Hysteria (Muse song)",
+    "url": "https://en.wikipedia.org/wiki/Hysteria_(Muse_song)"
+   },
+   {
+    "title": "Wikipedia – Absolution (album)",
+    "url": "https://en.wikipedia.org/wiki/Absolution_(album)"
+   },
+   {
+    "title": "Equipboard – Matthew Bellamy",
+    "url": "https://equipboard.com/pros/matthew-bellamy"
+   },
+   {
+    "title": "Kuassa – Hysteria Tone Recreation",
+    "url": "https://www.kuassa.com/?p=7991"
+   },
+   {
+    "title": "Reverb – Potent Pairings: How to Sound Like Muse",
+    "url": "https://reverb.com/news/potent-pairings-how-to-sound-like-muse"
+   },
+   {
+    "title": "MusicRadar – 12 reasons why Matt Bellamy is a 21st century guitar hero",
+    "url": "https://www.musicradar.com/news/guitars/12-reasons-why-matt-bellamy-is-a-21st-century-guitar-hero-599979"
+   },
+   {
+    "title": "SongBPM – Muse Hysteria",
+    "url": "https://songbpm.com/@muse/hysteria"
+   },
+   {
+    "title": "Musicnotes – Hysteria",
+    "url": "https://www.musicnotes.com/sheetmusic/muse/hysteria/MN0114380"
+   },
+   {
+    "title": "Klang.io – Muse Hysteria",
+    "url": "https://songs.klang.io/en/s/Muse/Hysteria/3dm_5qWWDV8"
+   },
+   {
+    "title": "Gearspace – Rich Costey thread",
+    "url": "https://gearspace.com/board/showthread.php?p=17263037"
+   }
+  ]
+ }
+}

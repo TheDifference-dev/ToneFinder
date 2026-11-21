@@ -1,0 +1,210 @@
+{
+ "rank": 79,
+ "part": "rhythm",
+ "researchedAt": 1795281402709,
+ "original": {
+  "song": {
+   "title": "Nightmare",
+   "artist": "Avenged Sevenfold",
+   "album_or_year": "Nightmare (2010)",
+   "tone_character": "Yüksek gainli, sıkı ve kalın modern metal ritim tonu. Birden fazla amfi ve kanalın üst üste kaydıyla oluşmuş geniş bir duvar var. Orta frekans gövdeli, alt kısım sıkı, tiz yumuşatılmış. Andy Wallace miksi sayesinde tutarlı, kompresli ve odaklı duyuluyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "orta frekans gövdeli",
+    "çoklu kanal / double-tracked",
+    "kompresli",
+    "Drop D chug",
+    "hafif yumuşatılmış tiz"
+   ],
+   "bpm": "130 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Schecter ZV (Zacky Vengeance imza modeli, ör. ZV 6661) / Schecter Synyster Gates Custom",
+    "pickup": "Köprü humbucker. Zacky'nin gitarlarında Seymour Duncan JB, Synyster'ın Custom'ında Seymour Duncan imza/Invader tipi yüksek çıkışlı manyetik olduğu bildiriliyor.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Bogner Uberschall (prototip Rev 1 sürümü olduğu iddia ediliyor)",
+     "channel": "Uber (yüksek gain)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Waking the Fallen'dan Nightmare'a kadar grubun ana ritim amfisi olarak anılıyor. Çoğu hayran ve ton sitesi bu amfide birleşiyor, ancak birincil bir stüdyo kaynağı bulunamadı."
+    },
+    {
+     "model": "Diezel VH4",
+     "channel": "Channel 3 (yüksek gain)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Synner forumuna göre Andy Wallace'ın aynı albümden 'Natural Born Killer' miks dersinde ritimlerin iki amfiyle, her amfiden iki take olmak üzere toplam dört kanal kaydedildiği söyleniyor. İddia ikinci elden."
+    },
+    {
+     "model": "Marshall JCM800 / Marshall JVM",
+     "channel": "Lead / OD",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Bir forum gönderisi, Guitar World'e atıfla Nightmare'ın JCM800, Uberschall, JVM ve VH4 karışımı olduğunu iddia ediyor. Synyster 2009'da Marshall endorsement'ı aldığını ve JCM800 kullandığını söylemiş (UberProAudio'daki aktarım)."
+    }
+   ],
+   "cab": {
+    "model": "4x12 kabin (muhtemelen Bogner, Diezel veya Marshall 4x12)",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Bilinmiyor; muhtemelen cap ile kenar arası",
+      "distance": "Yakın mikrofon (~2-3 cm, tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Bu albüm için kabin ve mikrofon bilgisi hiçbir kaynakta yok. SM57'nin A7X tonundaki rolü yalnızca bir hayran forumunda geçiyor."
+   },
+   "pedals": [
+    {
+     "model": "Noise gate (model bilinmiyor)",
+     "purpose": "Drop D chug'lar arasındaki susmaları temizlemek",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Overdrive/boost (ör. Maxxon/Ibanez Tube Screamer tipi veya MXR boost)",
+     "purpose": "Amfinin girişini sıkılaştırmak",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "0",
+       "note": "Boost olarak, düşük drive"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D (DADGBE)",
+   "recording_notes": "Kayıtlar Kasım 2009 ile 21 Nisan 2010 arasında The Pass (Los Angeles) ve Phantom (Westlake Village) stüdyolarında yapıldı. Prodüktör Mike Elizondo, kayıt mühendisi Adam Hawkins. Miks Andy Wallace (New York), mastering Ted Jensen. Albüm kredilerinde ritim gitarı Zacky Vengeance'a, lead gitar Synyster Gates'e yazılı. Ritimlerin iki farklı amfiyle her biri iki kez kaydedildiği (toplam 4 kanal, sol/sağ double-tracking) bildiriliyor, ama bu ikinci elden bir bilgi. Davul Mike Portnoy'a ait; şarkıda yaylılar, piyano ve synth katmanları da var."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "130 BPM'de sıkı palm muting ve gallop ritimleri",
+    "Drop D açık tel chug ile power chord geçişleri",
+    "Kromatik ve tritone ağırlıklı riff kalıpları",
+    "Senkoplu durmalar ve sessizlik kontrolü",
+    "İki gitarın birbirine sıkı oturması"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (melodik lead riff)",
+    "description": "Aynı distorsiyonlu ton kullanılıyor; tek nota ve harmonili kromatik/korku temalı riff çalınıyor. Arka planda müzik kutusu ve synth/yaylı katmanları var. Ritimden farkı: palm muting daha az, notalar daha uzun sürülüyor, hafif delay veya reverb eklenebilir (tahmin)."
+   },
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "Raporun ana tonu bu bölüm: yüksek gain, köprü manyetiği, Drop D chug ve power chord'lar. Sol ve sağ kanalda double-tracked."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı ton; palm muting daha az, açık çalınan power chord'lar sürülüyor. Daha geniş ve dolgun bir duvar oluşuyor."
+   },
+   {
+    "name": "Solo (Synyster Gates)",
+    "description": "Lead tonu: aynı yüksek gain, köprü manyetiği, daha fazla orta frekans ve sustain. Delay ekli (tahminen 300–460 ms civarı, 130 BPM'de sekizlik veya noktalı sekizlik). Tek kanal, ortada miksli. Hızlı alternate picking, sweep, legato ve harmonili lead'ler içeriyor. Ritimden daha zor (4–5/5)."
+   },
+   {
+    "name": "Ara kısım / breakdown",
+    "description": "Ağır ve senkoplu Drop D chug'lar; ritim tonu aynı, sıkı gate gerektiriyor."
+   }
+  ],
+  "warnings": [
+   "Nightmare albümü için amfi, kabin ve mikrofon bilgisi veren birincil bir kaynak (röportaj, stüdyo dökümü) bulunamadı. Amfi bilgileri hayran forumlarına ve otomatik üretilmiş ton sitelerine dayanıyor.",
+   "Amfi konusunda kaynaklar çelişiyor: Bogner Uberschall en sık anılan amfi. Diezel VH4, Marshall JCM800/JVM, Mesa Dual Rectifier ve Bogner Ecstasy de farklı kaynaklarda geçiyor.",
+   "'İki amfi × iki take = 4 ritim kanalı' bilgisi, Andy Wallace'ın 'Natural Born Killer' miks dersine yapılan ikinci elden bir atıf; ders sayfasına erişilemedi (403).",
+   "Akort tartışmalı: tabların çoğu Drop D diyor, bazıları Standart E diyor. Tonalitenin D minör olması Drop D'yi destekliyor.",
+   "Tonalite konusunda SongBPM 'D majör', Musicnotes ve AcousticBrainz 'D minör' diyor. Şarkının karakteri minör.",
+   "Albüm kredilerinde ritim gitarı Zacky Vengeance'a yazılı, ancak Synyster Gates de ritim kayıtlarına katılmış olabilir.",
+   "Pedal, kabin, mikrofon ve solo delay ayarları tamamen tahmin."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Wikipedia – Nightmare (Avenged Sevenfold album)",
+    "url": "https://en.wikipedia.org/wiki/Nightmare_(Avenged_Sevenfold_album)"
+   },
+   {
+    "title": "Wikipedia – Nightmare (Avenged Sevenfold song)",
+    "url": "https://en.wikipedia.org/wiki/Nightmare_(Avenged_Sevenfold_song)"
+   },
+   {
+    "title": "Equipboard – Avenged Sevenfold Nightmare album",
+    "url": "https://equipboard.com/albums/avenged-sevenfold-nightmare"
+   },
+   {
+    "title": "Synner – The Real Nightmare Tone",
+    "url": "https://www.synner.com/discuss/t/2193609081334274645"
+   },
+   {
+    "title": "UberProAudio – Synyster Gates gear",
+    "url": "https://www.uberproaudio.com/who-plays-what/188-avenged-sevenfold-synyster-gates-guitar-gear-rig-and-equipment"
+   },
+   {
+    "title": "Equipboard – Zacky Vengeance",
+    "url": "https://equipboard.com/pros/zacky-vengeance"
+   },
+   {
+    "title": "Premier Guitar Rig Rundown – Avenged Sevenfold",
+    "url": "https://www.premierguitar.com/videos/rig-rundown/avenged-sevenfold"
+   },
+   {
+    "title": "Guitar World – Synyster Gates Talks Chops and A7X's New Nightmare",
+    "url": "https://www.guitarworld.com/features/synyster-gates-talks-chops-and-a7xs-new-nightmare"
+   },
+   {
+    "title": "Guitar World – Avenged Sevenfold Guitarists Discuss Their Wicked Playing Styles",
+    "url": "https://guitarworld.com/gw-archive/avenged-sevenfold-guitarists-discuss-their-wicked-playing-styles"
+   },
+   {
+    "title": "Tone-Twin – Nightmare amp settings",
+    "url": "https://tone-twin.com/community/nightmare-avenged-sevenfold-amp-settings-10c9077f"
+   },
+   {
+    "title": "Tonesmatch – Nightmare Solo",
+    "url": "https://tonesmatch.com/tones/nightmare-avenged-sevenfold-solo-distorted-13152"
+   },
+   {
+    "title": "Guitar Chalk – Avenged Sevenfold Amp Settings",
+    "url": "https://www.guitarchalk.com/avenged-sevenfold-amp-settings/"
+   },
+   {
+    "title": "SongBPM – Nightmare",
+    "url": "https://songbpm.com/@avenged-sevenfold/nightmare"
+   },
+   {
+    "title": "AcousticBrainz – Nightmare",
+    "url": "https://acousticbrainz.org/402d3408-2680-4605-a4c7-a177ce1c0fd8"
+   },
+   {
+    "title": "Musicnotes – Nightmare",
+    "url": "https://www.musicnotes.com/sheet-music/album/avenged-sevenfold---nightmare"
+   },
+   {
+    "title": "PaidTabs – Nightmare",
+    "url": "https://paidtabs.com/search/nightmare_avenged_sevenfold_chords_tabs_sheet_music"
+   },
+   {
+    "title": "GuitarTabsExplorer – Nightmare intro",
+    "url": "https://www.guitartabsexplorer.com/avenged-sevenfold/nightmare-intro"
+   },
+   {
+    "title": "Mix With The Masters – Andy Wallace, Natural Born Killer",
+    "url": "https://mixwiththemasters.com/videos/andy-wallace-avenged-sevenfold-natural-born-killer"
+   }
+  ]
+ }
+}

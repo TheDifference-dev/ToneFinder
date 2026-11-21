@@ -1,0 +1,202 @@
+{
+ "rank": 71,
+ "part": "rhythm",
+ "researchedAt": 1795280982319,
+ "original": {
+  "song": {
+   "title": "Raining Blood",
+   "artist": "Slayer",
+   "album_or_year": "Reign in Blood (1986)",
+   "tone_character": "Reverb'süz, kuru ve doğrudan duyulan, yüksek gain'li ama aşırı sıkıştırılmamış bir Marshall JCM800 distorsiyonu. Palm mute'lu galoplar ve açık notalar net ayrışıyor; alt taraf dolgun, tiz agresif, orta frekanslar 80'lerin thrash geleneğine göre korunmuş.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "kuru (reverb yok)",
+    "Marshall crunch/yüksek gain",
+    "agresif tiz",
+    "dolgun alt",
+    "orta frekans korunmuş",
+    "yarım ses pes"
+   ],
+   "bpm": "155–180 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Jeff Hanneman: B.C. Rich Bich (Kahler Pro tremolo); Kerry King: B.C. Rich Mockingbird",
+    "pickup": "Köprü manyetiği, DiMarzio Super Distortion (DP100) humbucker",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (100W)",
+     "channel": "Tek kanal, high-input",
+     "settings": [
+      {
+       "name": "Pre-Amp Volume (Gain)",
+       "value": "7",
+       "note": "Mixdown'ın önerdiği tahmini ayar, bant doğrulamadı"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmini"
+      },
+      {
+       "name": "Middle",
+       "value": "2",
+       "note": "Tahmini; Guitar World EQ pedalıyla orta boost'tan söz ediyor, bu yüzden çelişebilir"
+      },
+      {
+       "name": "Bass",
+       "value": "9",
+       "note": "Tahmini"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Master Volume",
+       "value": "7",
+       "note": "Tahmin; stüdyoda yüksek ses"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Mixdown'a göre iki gitarist aynı JCM800 2203 kafayı kullandı (confirmed). Knob değerleri kaynaktan değil, Mixdown'ın ton önerisinden alındı (guess)."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960A/B, stok)",
+    "speakers": "Celestion G12T-75 (dönemin stok 1960'ı için)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Cap kenarı, hafif off-axis",
+      "distance": "1–2 in"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabinin 'stok Marshall 4x12' olduğu belirtiliyor (Mixdown, zzounds 1960 diyor). Hoparlör ve mikrofon bilgisi kaynakta yok, dönemin standart kurulumuna göre yapılmış bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Boss GE-10 / 10-band EQ",
+     "purpose": "Orta frekans boost'u ve ton şekillendirme, amfi girişinden önce",
+     "settings": [
+      {
+       "name": "Mid bands (≈500 Hz–1 kHz)",
+       "value": "+ boost",
+       "note": "Kesin değer bilinmiyor"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez TS808 Tube Screamer",
+     "purpose": "Gain boost / sıkılaştırma",
+     "settings": [
+      {
+       "name": "Overdrive",
+       "value": "5–6",
+       "note": "Saat 12'nin ötesi (Mixdown önerisi)"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Hit City West'te (Los Angeles/Hollywood) yaklaşık 3 haftada kaydedildi. Prodüktör Rick Rubin, mühendis Andy Wallace. Rubin önceki albümlerdeki gitar reverb'ünü kaldırdı ve sound kuru, 'yüzüne çarpan' bir hale geldi (confirmed). Ritim gitarlar büyük ihtimalle King ve Hanneman tarafından ayrı ayrı çalınıp sola ve sağa panlandı (likely). Konsol ve kompresör bilgileri belgelenmemiş."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Hızlı alternate ve down-picking",
+    "Palm mute ile açık notalar arasında geçiş",
+    "Galop (aşağı-yukarı-aşağı) ritmi",
+    "Davulla sıkı senkron",
+    "Hızlı tremolo picking bölümleri",
+    "Uzun süre dayanıklılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (yağmur/gök gürültüsü sonrası)",
+    "description": "Aynı distorsiyonlu ton. Tom davullarının eşliğinde ağır, palm mute'suz açık notalar çalınıyor; ses tonu değişmiyor."
+   },
+   {
+    "name": "Ana riff",
+    "description": "Bu rapordaki referans ton: köprü manyetiği, tam gain, palm mute'lu galop ve tremolo picking."
+   },
+   {
+    "name": "Solo",
+    "description": "King ve Hanneman'ın kaotik, whammy bar ağırlıklı soloları. Aynı amfi kullanılıyor; dönemin King rig'ine göre wah olabilir (guess). Ortaya ya da tek tarafa panlanmış, hafif daha öne çıkarılmış olabilir."
+   },
+   {
+    "name": "Final/çıkış",
+    "description": "Hızlanan kaotik bölüm, ardından yağmur efektiyle bitiş. Gitar tonu aynı."
+   }
+  ],
+  "warnings": [
+   "Amfi knob değerleri kaynakta belgelenmiş değil, Mixdown'ın öneri ayarları.",
+   "Mixdown, Mid 2 (scoop) öneriyor; Guitar World/zzounds ise Hanneman'ın Boss EQ ile orta boost yaptığını söylüyor. Bu iki bilgi çelişiyor.",
+   "Tube Screamer kullanımı doğrulanmadı.",
+   "Mikrofon ve hoparlör bilgisi tamamen tahmin.",
+   "BPM kaynaklarda çok farklı veriliyor (90, 178, 207...). Bölümlere göre de değişiyor.",
+   "Hanneman'ın 1986'da başka bir gitar (ör. ESP/Jackson) kullanmış olması mümkün."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mixdown - Gear Rundown: Slayer's Reign In Blood",
+    "url": "https://mixdownmag.com.au/features/gear-rundown-slayers-reign-in-blood/"
+   },
+   {
+    "title": "zzounds - Legends of Tone: Slayer",
+    "url": "https://blog.zzounds.com/2017/05/20/legends-tone-slayer/"
+   },
+   {
+    "title": "Guitar World - Making of Reign in Blood",
+    "url": "https://guitarworld.com/news/slayer-making-reign-blood"
+   },
+   {
+    "title": "MusicRadar - Reign in Blood retrospektif",
+    "url": "https://www.musicradar.com/artists/bands/if-it-sounds-like-im-standing-over-a-body-thats-just-been-stabbed-to-death-then-its-perfect-the-brutal-heavy-metal-masterpiece-that-had-producer-rick-rubin-yelling-more-satan"
+   },
+   {
+    "title": "MusicRadar - Weekend riff: Raining Blood",
+    "url": "https://www.musicradar.com/tuition/guitars/weekend-riff-slayer-raining-blood-613813"
+   },
+   {
+    "title": "Guitar World - Slayer: Reign Date",
+    "url": "https://guitarworld.com/features/slayer-reign-date"
+   },
+   {
+    "title": "Wikipedia - Reign in Blood",
+    "url": "https://Wikipedia.com/wiki/Reign_in_Blood"
+   },
+   {
+    "title": "Ultimate Guitar - Raining Blood Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/slayer/raining_blood_tabs_29266"
+   },
+   {
+    "title": "Klang.io - Raining Blood",
+    "url": "https://songs.klang.io/en/s/Slayer/Raining%20Blood/d3-ITn0e00U"
+   },
+   {
+    "title": "GuitarTabsExplorer - Raining Blood bass",
+    "url": "https://www.guitartabsexplorer.com/slayer-Tabs/raining-blood-btab.php"
+   }
+  ]
+ }
+}

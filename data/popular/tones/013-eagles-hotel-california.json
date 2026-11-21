@@ -1,0 +1,141 @@
+{
+ "rank": 13,
+ "part": "full",
+ "researchedAt": 1795278831721,
+ "original": {
+  "song": {
+   "title": "Hotel California",
+   "artist": "Eagles",
+   "album_or_year": "Hotel California (1976)",
+   "tone_character": "Edge of breakup ile hafif crunch arası bir ton: sonuna kadar açılmış küçük bir Tweed Deluxe'ün sıcak, orta frekansları öne çıkan, doğal kompresyonlu sesi. Felder'in humbucker'lı Les Paul'ü ile Walsh'un tek bobinli Telecaster'ı birbirini tamamlıyor; overdrive pedaldan değil, amfinin kendisinden geliyor.",
+   "tone_tags": [
+    "edge of breakup",
+    "sıcak orta frekanslar",
+    "doğal amfi kompresyonu",
+    "vintage tweed",
+    "az gain",
+    "dinamik",
+    "katmanlı ikili gitar"
+   ],
+   "bpm": "74–75 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1959 Gibson Les Paul Standard (sunburst) – Don Felder; Fender Telecaster – Joe Walsh",
+    "pickup": "Felder: PAF humbucker, lead kısımlarında büyük ihtimalle köprü manyetiği (likely); Walsh: Telecaster tek bobin, büyük ihtimalle köprü manyetiği (guess)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Tweed Deluxe (narrow panel, ~1955–56)",
+     "channel": "Tek kanal",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "Felder'in sözüyle 'just kind of cranked up', hafifçe kırılacak kadar açık; kesin değer tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Felder'in Les Paul'ü bu amfiye gidiyordu. Felder, '59 Les Paul + Tweed Deluxe ikilisinin en sık kullandığı ses olduğunu söylüyor."
+    },
+    {
+     "model": "Roland Cube (Walsh'un hatırladığına göre)",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Walsh 'I think' diyerek Tele'yi Roland Cube'a bağladığını söylemiş. Ancak Cube serisi 1978'de çıktığı için 1976 kaydıyla çelişiyor. Felder, Walsh'un hangi amfiyi kullandığını bilmediğini söylüyor. Felder, Walsh'un cevap cümleleri için 'farklı bir amfi' kullandı."
+    }
+   ],
+   "cab": {
+    "model": "Fender Tweed Deluxe combo'nun dahili kabini",
+    "speakers": "1x12 (o döneme ait Jensen P12R/P12Q; likely)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (Shure SM57 ya da Neumann U67/U87 tahmin)",
+      "position": "Bilinmiyor",
+      "distance": "Yakın mikrofon (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Elektro gitarlarda hangi mikrofonun kullanıldığına dair kaynak bulunamadı. Szymczyk'in akustik için Neumann KM84 kullandığı biliniyor."
+   },
+   "pedals": [
+    {
+     "model": "Maestro Echoplex",
+     "purpose": "Bant eko (12 telli girişte kesin; elektro lead'lerde tartışmalı)",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Leslie (dönen hoparlör)",
+     "purpose": "12 telli girişte dalgalanan stereo efekt",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Bill Szymczyk. Temel kayıt önce E minörde alındı, Henley'nin vokali için B minöre geçilip yeniden kaydedildi. Gitar overdub'ları Miami'deki Criteria Studios'ta yapıldı (albümün bir kısmı LA'deki Record Plant'te de kaydedildi). Felder ve Walsh ritim gitarları, nakaratları ve sondaki solo/armoni bölümlerini üst üste kaydetti. Henley sondaki atışmalı soloların Felder'in demosuyla birebir aynı olmasını istedi. Demo kaseti telefon üzerinden çalınıp dinlenerek parçalar yeniden oluşturuldu. Felder, Walsh'un çalacağı cevap cümlelerini gösterirken farklı bir tını için Strat ve başka bir amfi kullandı. Szymczyk'e göre ses duvarına dönüşmesin diye tek bobinli ve humbucker'lı gitarlar bilerek karıştırıldı (Les Paul + Tele). 12 telli girişte zincir şöyleydi: DeArmond manyetik → Echoplex → Leslie, ardından stereo mikrofonlanan iki küçük Orange amfi; akustik ses ayrıca Neumann KM84 ile alındı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "melodik, tam adımlı ve geniş bend'ler",
+    "kontrollü vibrato",
+    "iki gitarlı armoni sololarda tam senkron",
+    "arpej tabanlı akor geçişleri",
+    "dinamik, yumuşak pena kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "12 telli giriş",
+    "description": "Felder, Takamine 12 telli akustikte DeArmond manyetik kullanıyor. Sinyal Echoplex ve Leslie üzerinden iki küçük Orange amfiye gidiyor, stereo dalgalanan chorus benzeri bir ses var; akustik ayrıca KM84 ile mikrofonlanmış. Temiz ve distorsiyonsuz."
+   },
+   {
+    "name": "Kıta ritim/arpej gitarları",
+    "description": "Clean'e yakın ya da edge of breakup bir ton, daha az volume ve pena atağı. Les Paul ile Tele katmanlı; hafif ambiyans var."
+   },
+   {
+    "name": "Orta solo ve son atışmalı/armonili solo",
+    "description": "Lead ton: '59 Les Paul köprü manyetiği ile sonuna kadar açılmış Tweed Deluxe, daha fazla crunch ve sustain. Walsh'un cevapları Telecaster ile daha parlak ve keskin. Sondaki armoni kısımları üst üste kaydedilmiş ve stereo dağıtılmış."
+   }
+  ],
+  "warnings": [
+   "Echoplex konusunda kaynaklar çelişiyor: MusicRadar röportajında Felder o dönem Echoplex'in loop'ta olduğunu söylüyor; Guitar World'deki 'Dear Guitar Hero' röportajında ise 'no echoes or fuzzes' diyor.",
+   "Walsh'un Roland Cube'u kendi 'sanırım' ifadesine dayanıyor ve Cube'un çıkış yılıyla (1978) uyuşmuyor; Walsh'un amfisi belirsiz.",
+   "Amfi düğme değerleri ve kabin mikrofonları kaynaklarda yok, hepsi tahmin.",
+   "Hangi manyetiğin kullanıldığı açıkça belirtilmemiş.",
+   "BPM yaklaşık 74–75; bazı sitelerde iki katı (~147) olarak görünebilir."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – The Eagles Hotel California guitar gear",
+    "url": "https://www.guitarworld.com/artists/guitarists/the-eagles-hotel-california-guitar-gear"
+   },
+   {
+    "title": "MusicRadar – Don Felder Hotel California interview",
+    "url": "https://www.musicradar.com/news/eagles-hotel-california-don-felder-guitar-interview"
+   },
+   {
+    "title": "Guitar World – Dear Guitar Hero: Don Felder",
+    "url": "https://www.guitarworld.com/artists/dear-guitar-hero-don-felder-answers-readers-questions-about-gear-eagles-and-more"
+   },
+   {
+    "title": "Reverb – The Gear of the Eagles",
+    "url": "https://reverb.com/news/the-gear-of-the-eagles"
+   },
+   {
+    "title": "Equipboard – Don Felder",
+    "url": "https://equipboard.com/pros/don-felder"
+   }
+  ]
+ }
+}

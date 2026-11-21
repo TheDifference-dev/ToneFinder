@@ -1,0 +1,148 @@
+{
+ "rank": 27,
+ "part": "intro",
+ "researchedAt": 1795279295177,
+ "original": {
+  "song": {
+   "title": "Johnny B. Goode",
+   "artist": "Chuck Berry",
+   "album_or_year": "1958 single (Chess 1691); later on Chuck Berry Is on Top (1959)",
+   "tone_character": "Temiz ile hafif kırılma arasında duran bir hollowbody tonu: orta frekansları öne çıkık, parlak ve sert vuruşlu. Küçük tüplü bir amfinin yüksek seste çalınmasından gelen doğal, hafif crunch'lı saturasyonu ve 1950'lerin mono, oda yankılı Chess sesini taşıyor.",
+   "tone_tags": [
+    "kırılma eşiğinde",
+    "orta frekans öne çıkık",
+    "parlak üst",
+    "hollowbody rezonansı",
+    "yuvarlak alt",
+    "doğal tüp kompresyonu",
+    "mono oda yankısı",
+    "efektsiz"
+   ],
+   "bpm": "166–168 BPM",
+   "key": "B♭ majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson ES-350T (thinline hollowbody, 1957 civarı); alternatifi 1956 Gibson ES-350TN",
+    "pickup": "Büyük ihtimalle köprü manyetiği ya da iki manyetik birlikte. Gitarın yılına göre P.A.F. humbucker veya P-90 olabilir, kesin değil.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Bilinmiyor; 1950'lerden küçük/orta güçte tüplü bir kombo (Fender tweed Bassman/Super ya da Gibson GA serisi olduğu tahmin ediliyor)",
+     "channel": "Tek kanal (master volume yok). Hafif crunch, amfinin sesi yüksek açılarak elde edilmiş.",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6.5",
+       "note": "Tahmin: tweed amfinin kırılmaya başladığı nokta"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin: parlak ve keskin atak için"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin: hollowbody gövdesinin uğultusunu sınırlamak için"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Hiçbir kaynak kayıtta kullanılan amfiyi kesin olarak belirtmiyor. Berry uzun süre Fender amfilerle anıldı ve sonraki yıllarda sahnede Fender Showman Reverb ya da Bassman istedi. Showman 1960'ta çıktığı için bu kayıtta kullanılmış olamaz."
+    }
+   ],
+   "cab": {
+    "model": "Kombo amfinin kendi kabini (bilinmiyor)",
+    "speakers": "Bilinmiyor; 1950'lerden Jensen alnico hoparlör olabilir (tahmin)",
+    "mics": [
+     {
+      "model": "Bilinmiyor; dönemin dinamik ya da ribbon mikrofonlarından biri olabilir (tahmin)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor; kayıttaki oda sesine bakılırsa mikrofon kabinden biraz uzakta olmalı (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon kurulumuyla ilgili hiçbir belge bulunamadı."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt 6 Ocak 1958'de Chicago'daki Chess Studios'ta yapıldı. Prodüktörler Leonard ve Phil Chess. Kadro: kontrbasta Willie Dixon, piyanoda Lafayette Leake ya da Johnnie Johnson (kaynaklar kesin değil), davulda Fred Below ya da Jasper Thomas. Kayıt mono ve tek gitar izi, double-tracking yok. Gitar, grupla birlikte canlı kaydedildi. Sesteki ortam büyük ihtimalle Chess'in oda ya da yankı odasından geliyor; bu bir tahmin. Sinyal zincirinde pedal yok: gitar doğrudan amfiye bağlı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Çift nota (double-stop) bendleri: G ve B tellerinde, B♭ pozisyonunda",
+    "Hızlı ve tutarlı alternate picking ile tremolo picking",
+    "Swing ve shuffle hissi, iki notanın birlikte vurulduğu ritmik çalım",
+    "Unison bendler ve çift nota slide'ları",
+    "Giriş temposunu gruba kilitlemek (yaklaşık 168 BPM)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ritim (verse)",
+    "description": "Chuck Berry'nin klasik boogie kalıbı: alt tellerde 5-6 (akor 5'li ve 6'lı) shuffle çalımı. Aynı ton ve aynı amfi ayarıyla çalınır, vuruş biraz daha yumuşaktır, yer yer palm muting yapılır. Gain değişikliği yok."
+   },
+   {
+    "name": "Solo / ara bölümler",
+    "description": "Girişteki çift nota dilinin devamı: double-stop bendleri ve tekrar eden lickler. Ton aynı kalır; daha sert vuruşla amfi biraz daha kırılır. Efekt eklenmez."
+   },
+   {
+    "name": "Bitiş",
+    "description": "Girişteki double-stop motiflerine benzer bir kapanış. Aynı ton."
+   }
+  ],
+  "warnings": [
+   "Kayıtta kullanılan amfi hiçbir kaynakta belirtilmiyor; amfi, kabin ve mikrofonla ilgili her bilgi tahmin.",
+   "Gitar ES-350T mi ES-350TN mi, ve P.A.F. mı P-90 mı, kesin değil. Bazı kaynaklar bunun yerine ES-355 ya da ES-335 diyor; bu gitarlar daha sonraki bir döneme ait.",
+   "Bazı kaynaklar kayıt yılını farklı veriyor (1955 ya da 1957). Doğrusu: 1955'te yazıldı, 6 Ocak 1958'de kaydedildi.",
+   "BPM bazı sitelerde yarım tempoyla 83–84 olarak geçiyor; gerçek tempo yaklaşık 166–168.",
+   "Kayıttaki perde, standart akorttan biraz sapmış olabilir (tape hızından dolayı). Bu doğrulanmadı.",
+   "Piyano ve davulda kimin çaldığı kaynaklarda tartışmalı."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar World – Johnny B. Goode (100 Greatest Solos)",
+    "url": "https://www.guitarworld.com/artists/100-greatest-guitar-solos-no-12-johnny-b-goode-chuck-berry"
+   },
+   {
+    "title": "Killer Guitar Rigs – Chuck Berry Johnny B Goode",
+    "url": "https://killerguitarrigs.com/chuck-berry-guitar-rig/"
+   },
+   {
+    "title": "zZounds Iconic Rigs: Chuck Berry",
+    "url": "https://blog.zzounds.com/2016/12/17/iconic-rigs-chuck-berry/"
+   },
+   {
+    "title": "Met Museum ES-350T",
+    "url": "https://www.metmuseum.org/art/collection/search/752087"
+   },
+   {
+    "title": "American Songwriter – Chuck Berry guitars",
+    "url": "https://americansongwriter.com/the-three-guitars-you-didnt-know-chuck-berry-loved-most"
+   },
+   {
+    "title": "Musicstrive – Chuck Berry tone",
+    "url": "https://musicstrive.com/chuck-berry-guitar-tone"
+   },
+   {
+    "title": "Surf Guitar 101 forum",
+    "url": "https://surfguitar101.com/forums/post/396601/"
+   },
+   {
+    "title": "GetSongBPM",
+    "url": "https://getsongbpm.com/song/johnny-bpoint-goode-single-version/57Pg2K"
+   },
+   {
+    "title": "AudioKeychain",
+    "url": "https://www.audiokeychain.com/track/QgM/chuck-berry-johnny-b-goode"
+   },
+   {
+    "title": "Karaoke Version",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/chuck-berry/johnny-b-goode.html"
+   }
+  ]
+ }
+}

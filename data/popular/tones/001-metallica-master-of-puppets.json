@@ -1,0 +1,207 @@
+{
+ "rank": 1,
+ "part": "rhythm",
+ "researchedAt": 1795278488308,
+ "original": {
+  "song": {
+   "title": "Master of Puppets",
+   "artist": "Metallica",
+   "album_or_year": "Master of Puppets (1986)",
+   "tone_character": "Sıkı, kuru ve agresif yüksek kazançlı bir ritim tonu. Mesa/Boogie Mark IIC+ preamp'ı Marshall güç katı ve 4x12 kabinlerle birleşiyor. Bas kısık, orta frekanslar hafif oyuk ama net; tiz parlak ve keskin. Palm mute'lu açık E vuruşları çok sıkı geliyor. Kalınlık, 4–8 kanala varan çoklu kayıttan geliyor.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "sıkı alt",
+    "hafif oyuk orta",
+    "parlak tiz",
+    "kuru (reverb yok)",
+    "çoklu kayıt / geniş stereo",
+    "Mesa Mark IIC+",
+    "palm mute odaklı"
+   ],
+   "bpm": "212 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (beyaz) / ESP Explorer tipi; kaynaklar Gibson Flying V ve Jackson King V \"Kill Bon Jovi\" da gösteriyor",
+    "pickup": "Köprü manyetiği; humbucker (ESP için EMG 81 sık anılıyor, doğrulanmadı)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (preamp olarak), 100W Marshall güç amfisine (modifiyeli JCM800 / 2203 olarak anılıyor) slave edilmiş",
+     "channel": "Lead (yüksek kazanç) kanalı",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "7.5",
+       "note": "Pull Bright kapalı; Rasmussen notlarına dayalı plugin yeniden yapımından"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Pull Shift açık"
+      },
+      {
+       "name": "Bass",
+       "value": "2",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Master 1",
+       "value": "5",
+       "note": "Pull Deep açık"
+      },
+      {
+       "name": "Lead Drive",
+       "value": "3.75",
+       "note": ""
+      },
+      {
+       "name": "Lead Master",
+       "value": "4.5",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "4.5",
+       "note": ""
+      },
+      {
+       "name": "Graphic EQ",
+       "value": "V şekli",
+       "note": "Mark IIC+ 5 bantlı EQ kullanıldı (Rasmussen: hepimiz 5 bantlı EQ ile çaldık); kesin slider değerleri bilinmiyor"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Mesa + Marshall kombinasyonu Rasmussen tarafından doğrulanıyor. Ayarlar, Mixdown'un Rasmussen'in seans notlarına dayanarak yaptığı Neural DSP yeniden yapımından alındı; orijinal amfinin birebir değerleri olmayabilir. Efekt döngüsüne BBE/Aphex EQF-1 ekolayzır takılmıştı (bugün Master Effects \"Puppet Master EQ\" olarak satılıyor)."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (iki kabin, seans sırasında rastgele denenip seçildi)",
+    "speakers": "Bilinmiyor; muhtemelen Celestion G12T-75 veya Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Alt hoparlörlerden birinde koninin merkezi (cap)",
+      "distance": "Yakın"
+     },
+     {
+      "model": "B&K (DPA) 4006 omni",
+      "position": "Başka bir hoparlörde koninin merkezi",
+      "distance": "Yakın"
+     },
+     {
+      "model": "AKG tüplü (\"gold\" tube) kondansatör",
+      "position": "Kabin kenarına 45° açıyla, oda mikrofonu",
+      "distance": "Yaklaşık 4 ft (~1,2 m)"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Her mikrofon ayrı bir bant kanalına kaydedildi. Mix Online, SM57'lerin hem yakın hem oda mikrofonu olarak kullanıldığını yazıyor. Hoparlör modeli kayıtlı değil."
+   },
+   "pedals": [
+    {
+     "model": "Yok (gitar doğrudan amfiye)",
+     "purpose": "Hetfield'ın ritim tonunda pedal kullanmadığı bildiriliyor",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "BBE/Aphex EQF-1 (stüdyo ekolayzırı)",
+     "purpose": "Mesa'nın efekt döngüsünde ton ince ayarı",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Quantec QRS Room Simulator",
+     "purpose": "Mikste gitarlara çok kısa, hafif oda ambiyansı",
+     "settings": [
+      {
+       "name": "Room",
+       "value": "Short",
+       "note": "çok az miktarda"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Eylül 1985'te başladı. Stüdyo Sweet Silence Studios (Kopenhag); prodüktörler Flemming Rasmussen ve Metallica, miks Michael Wagener. Kayıt 24 kanal analog banda, 1976 Trident A-Range konsolu ve UREI 1176 üzerinden yapıldı. Rasmussen'e göre tüm ritim gitarlarını James Hetfield çaldı. Ritim hiçbir yerde dörtten az gitar değil, yer yer sekiz katman. Katmanlar hard L/R ve ara pozisyonlara panlandı. Palm mute'lu düşük E 'chunk'ları ayrıca iki kanala hard L/R kaydedilip alt frekansı sağladı. Wagener gitarlara kompresör uygulamadı. Grubun ilkesi kuru ve 'yüzüne çarpan' bir sesti (\"reverb yok\"); yalnızca çok kısa bir oda efekti var. Mesa ile endorsement anlaşması yeni yapılmıştı ve tonu oturtmak birkaç gün sürdü."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Yaklaşık 212 BPM'de hızlı aşağı vuruş (downpicking) dayanıklılığı",
+    "Sıkı palm mute ve açık E 'chunk'ları",
+    "Kromatik power chord geçişleri ve hızlı pozisyon kaymaları",
+    "Tek nota ile palm mute arasında hassas geçiş",
+    "5/8 ve 7/8 kayan ölçülerle tempo/vurgu değişimleri",
+    "Tutarlı kayıt için çok sıkı zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz orta bölüm (arpej)",
+    "description": "Yavaş orta bölümdeki Hetfield arpejleri temiz tonda çalınıyor. Mesa'nın Rhythm/clean kanalı, Lead Drive kapalı. Temiz bir ses için Volume 1 düşük (~4), hafif chorus/oda efekti var. Köprü ya da sap manyetiği; kesin değil (tahmin)."
+   },
+   {
+    "name": "Melodik orta tema / harmonili lead",
+    "description": "Temiz bölümün ardından Hetfield'ın melodik solosu ve harmonili tema geliyor. Ritim tonuyla aynı distorsiyonlu ses, daha fazla sustain ve hafif delay. Kazanç aynı ya da biraz yüksek."
+   },
+   {
+    "name": "Kirk Hammett solosu",
+    "description": "Aynı Mesa+Marshall zinciri. Buna Ibanez Tube Screamer boost'u ve Dunlop Cry Baby wah ekleniyor, solo mikste hafif delay ile duyuluyor. Mid daha öne çıkık ve sustain daha uzun."
+   },
+   {
+    "name": "Ana riff / kıtalar / nakarat",
+    "description": "İncelenen ritim tonunun kendisi: yüksek kazanç, köprü manyetiği, palm mute, 4–8 katman. Verse, nakarat ve köprü için ayrı kanal grupları kaydedildi."
+   }
+  ],
+  "warnings": [
+   "Gitar modeli tartışmalı: Gearnews beyaz Gibson Explorer, Mixdown Gibson Flying V diyor; Jackson King V 'Kill Bon Jovi' de sıkça anılıyor. ESP Explorer ve EMG 81 iddiası yaygın ama doğrulanmadı.",
+   "Amp ayar değerleri orijinal amfiden değil; Mixdown'un Rasmussen'in notlarına dayanan Neural DSP plugin yeniden yapımından alındı.",
+   "Marshall güç katının tam modeli (modifiyeli JCM800 / 2203) ve hoparlör tipi kesin değil.",
+   "Mikrofon bilgisinde çelişki var: Mix Online yakın ve oda mikrofonu olarak SM57 diyor, Mixdown SM57 + B&K 4006 + AKG tüp mikrofonu sayıyor.",
+   "BPM kaynaklara göre 212 ya da yarı tempoda 106 olarak görünüyor; orta bölüm daha yavaş.",
+   "Hammett'in kendi kayıtları da ritim katmanlarına karışmış olabilir, çünkü tonlar çapraz olarak çift kaydedildi; Rasmussen ise tüm ritimleri Hetfield'ın çaldığını söylüyor.",
+   "Temiz bölüm ayarları ve solodaki pedal modelleri kaynaklarda doğrulanmadı; tahmin niteliğinde."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mix Online – Classic Track: Master of Puppets",
+    "url": "https://www.mixonline.com/recording/classic-track-master-of-puppets-metallica"
+   },
+   {
+    "title": "Gearnews – The Master of Puppets guitar tone",
+    "url": "https://www.gearnews.com/the-master-of-puppets-guitar-tone-guitar/"
+   },
+   {
+    "title": "Mixdown – How to get the Metallica Master of Puppets tone",
+    "url": "https://mixdownmag.com.au/features/how-to-get-the-metallica-master-of-puppets-tone/"
+   },
+   {
+    "title": "MusicRadar – How Flemming Rasmussen produced Master of Puppets",
+    "url": "https://www.musicradar.com/artists/producers-engineers/all-the-albums-i-did-with-metallica-were-recorded-on-24-track-analogue-tape-theres-not-a-computer-in-sight-how-flemming-rasmussen-produced-metallicas-classic-master-of-puppets"
+   },
+   {
+    "title": "Guitar World – Master of Puppets feature",
+    "url": "https://www.guitarworld.com/features/metallica-master-of-puppets"
+   },
+   {
+    "title": "Tape Op – Flemming Rasmussen interview",
+    "url": "https://new.tapeop.com/interviews/172/flemming-rasmussen-riding-the-sweet-silence"
+   },
+   {
+    "title": "Equipboard – Master of Puppets",
+    "url": "https://equipboard.com/albums/metallica-master-of-puppets-remastered"
+   }
+  ]
+ }
+}

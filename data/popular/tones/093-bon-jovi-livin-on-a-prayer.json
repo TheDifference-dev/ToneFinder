@@ -1,0 +1,213 @@
+{
+ "rank": 93,
+ "part": "rhythm",
+ "researchedAt": 1795281865841,
+ "original": {
+  "song": {
+   "title": "Livin' On A Prayer",
+   "artist": "Bon Jovi",
+   "album_or_year": "Slippery When Wet (1986)",
+   "tone_character": "80'lerin parlak, kalın ve yoğun prodüksiyonlu hard rock ritim tonu: Marshall tarzı, orta-yüksek gain'li bir crunch/distortion. Çift kayıtla genişletilmiş, üstüne bolca stüdyo reverb'ü ve büyük ihtimalle hafif chorus/ambiyans eklenmiş.",
+   "tone_tags": [
+    "orta-yüksek gain",
+    "Marshall tarzı crunch",
+    "orta frekanslar öne çıkık",
+    "parlak üst bölge",
+    "geniş stereo double-track",
+    "80'ler stüdyo reverb'ü",
+    "sıkı palm mute"
+   ],
+   "bpm": "122–123 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Kramer Richie Sambora modeli (Floyd Rose'lu süperstrat). Alternatif olarak Hamer ya da üç humbucker'lı özel bir Les Paul kopyası da öne sürülüyor",
+    "pickup": "Köprü humbucker'ı. Modeli kesin değil: forumlarda DiMarzio PAF Pro, DiMarzio Super Distortion ve Seymour Duncan önerileri var",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (Marshall ya da Marshall tarzı bir head)",
+     "channel": "Tek kanal, master volume ile yüksek gain",
+     "settings": [
+      {
+       "name": "Preamp",
+       "value": "7",
+       "note": "Tahmin; ikincil kaynakların verdiği gain ~7 değeri"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin (prosoundhq)"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin (prosoundhq)"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "Tahmin (prosoundhq)"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Sambora, o dönemde 'iki gitar ve tek bir amfisi' olduğunu ve Slippery When Wet/New Jersey'de 'iki gitar, iki ton' kullandığını söylüyor (doğrulanmış). Amfinin modeli hiçbir birincil kaynakta geçmiyor. MusicRadar yalnızca 'Marshall ya da Marshall tarzı' diyor. JCM800 2203 dönemine bakarak yapılmış bir tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion G12T-75 ya da G12M/G12H (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Cap ile edge arası, hafif off-axis",
+      "distance": "2–3 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi hiçbir kaynakta yok. Mikrofon kurulumu dönemin standart stüdyo pratiğine dayanan bir tahmin. Little Mountain'daki büyük oda ambiyansı da tona katkı yapmış olabilir."
+   },
+   "pedals": [
+    {
+     "model": "Boss SD-1 Super OverDrive",
+     "purpose": "Amfiyi itmek, sıkılık ve sustain için boost",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "2",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Heil Talk Box",
+     "purpose": "Ritim partisinde değil, intro/ara talk box riff'inde kullanılıyor",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo rack chorus/reverb (ör. Lexicon/EMT plate). Kesin model bilinmiyor",
+     "purpose": "80'ler ambiyansı ve genişlik. Büyük ihtimalle mix aşamasında eklendi",
+     "settings": [
+      {
+       "name": "Reverb Decay",
+       "value": "2 s",
+       "note": "Tahmin; plate/hall tipi"
+      },
+      {
+       "name": "Mix",
+       "value": "%20",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Little Mountain Sound Studios, Vancouver. Prodüktör Bruce Fairbairn, kayıt ve mix Bob Rock (doğrulanmış). Sambora'nın sözleriyle albümde iki elektro gitar ve iki ton kullanıldı (doğrulanmış). Ritim gitarlar büyük ihtimalle double-track edilip sağa-sola açıldı (likely; dönemin Fairbairn prodüksiyonlarına özgü). Mix'te bol reverb ve parlak, sıkıştırılmış bir sonuç var. Talk box fikri Sambora'nın; Bob Rock kaydetti."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Pre-chorus'ta sıkı palm muting ile sekizlik nota chug'ları",
+    "Nakaratta açık, uzayan power chord'lar (Em–C–D, G)",
+    "Senkoplu ritim vurguları",
+    "Son nakaratta Em'den Gm'ye modülasyon",
+    "Double-track için tutarlı çalış"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Talk box intro/riff",
+    "description": "Ritim tonuyla aynı distorted amfiden geçen sinyal, talk box hortumuyla şekilleniyor. Gain benzer, yine köprü manyetiği. Asıl fark talk box'ın vokal formant etkisi."
+   },
+   {
+    "name": "Kıta",
+    "description": "Kıtayı bas riff'i ve talk box taşıyor. Gitar seyrek, susturulmuş vuruşlar ve vurgular çalıyor. Ritim tonu aynı kalıyor, yalnızca dinamik düşük."
+   },
+   {
+    "name": "Pre-chorus",
+    "description": "Aynı ton, palm mute'lu sekizlik chug'lar. Gerilim yükseldikçe vuruşlar açılıyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı distorted ton, açık ve uzayan power chord'lar, double-track. Son nakaratta Gm'ye modülasyon var; ton değişmiyor."
+   },
+   {
+    "name": "Solo",
+    "description": "Kabaca 5. ve 12. perdelerde E minör pentatonik. Muhtemelen aynı amfi, daha fazla gain/sustain ve belirgin bir delay ile (tahmin). Köprü manyetiği; geniş bend ve vibrato, sonlara doğru tapping/hızlı pasajlar."
+   }
+  ],
+  "warnings": [
+   "Kayıtta kullanılan amfi modeli hiçbir birincil kaynakta geçmiyor. JCM800 2203 dönemine bakarak yapılmış bir tahmin.",
+   "Kabin, hoparlör ve mikrofon bilgileri tamamen tahmin.",
+   "Gitar modeli tartışmalı: Kramer, Hamer ve özel bir Les Paul kopyası öne sürülüyor. Manyetik modeli de belirsiz (DiMarzio PAF Pro, Super Distortion ya da Duncan).",
+   "Pedal ve rack zinciri doğrulanmamış. Boss SD-1 iddiası kaynaksız bir forum yazısından geliyor.",
+   "Talk box modeli belirsiz: Heil olması muhtemel, Framptone daha sonraki dönemde kullanıldı.",
+   "Tonalite verileri çelişiyor: otomatik araçlar C majör diyor, oysa şarkı E minörde ve son nakaratta G minöre modüle oluyor. Tunebat'tan doğrulama yapılamadı.",
+   "Amfi ayar değerleri ikincil bir ton rehberinden (prosoundhq) alındı, orijinal ayarlar değil."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "MusicRadar – How Bon Jovi created their signature rock anthem (talk box)",
+    "url": "https://musicradar.com/artists/when-i-brought-up-the-talk-box-everybody-in-the-band-started-laughing-at-me-but-when-it-actually-worked-it-became-an-integral-part-of-that-hit-song-how-bon-jovi-created-their-signature-rock-anthem-with-a-hit-doctor-and-a-goofy-guitar-effect"
+   },
+   {
+    "title": "Vintage Guitar – Richie Sambora interview",
+    "url": "https://vintageguitar.com/2911/richie-sambora"
+   },
+   {
+    "title": "Seymour Duncan Forum – Richie Sambora Slippery When Wet",
+    "url": "https://forum.seymourduncan.com/threads/richie-sambora-slippery-when-wet.303859"
+   },
+   {
+    "title": "Sound On Sound – Bon Jovi",
+    "url": "https://www.soundonsound.com/node/4933172"
+   },
+   {
+    "title": "ProSoundHQ – How to Sound Like Bon Jovi",
+    "url": "https://prosoundhq.com/how-to-sound-like-bon-jovi-amp-settings-guide/"
+   },
+   {
+    "title": "GuitarChalk – Livin' On a Prayer amp settings",
+    "url": "https://www.guitarchalk.com/livin-on-a-prayer-amp-settings/"
+   },
+   {
+    "title": "Music Gateway – Livin' on a Prayer key & BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/bon-jovi/livin-on-a-prayer"
+   },
+   {
+    "title": "Wikipedia – Livin' on a Prayer",
+    "url": "https://en.wikipedia.org/wiki/Livin%27_on_a_Prayer"
+   },
+   {
+    "title": "Equipboard – Bon Jovi",
+    "url": "https://equipboard.com/band/bon-jovi"
+   }
+  ]
+ }
+}

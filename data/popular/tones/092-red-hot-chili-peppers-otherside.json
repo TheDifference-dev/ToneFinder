@@ -1,0 +1,176 @@
+{
+ "rank": 92,
+ "part": "clean",
+ "researchedAt": 1795281786739,
+ "original": {
+  "song": {
+   "title": "Otherside",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "Californication (1999)",
+   "tone_character": "Hollow-body (Gretsch White Falcon) gitarın Fender Showman'den geçen temiz, hafif bodur ama parlak, tok orta frekanslı sesi. Çok kuru ve yakından mikrofonlanmış, 1176 ile sıkıştırılmış, neredeyse mono, amfi sesi yüksek çalındığı için de doğal bir amfi kompresyonu var.",
+   "tone_tags": [
+    "temiz",
+    "kuru (efektsiz)",
+    "kompresli",
+    "orta frekans öne çıkık",
+    "hollow-body tınısı",
+    "parlak ama yumuşak tepe",
+    "mono/ortada"
+   ],
+   "bpm": "123 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gretsch White Falcon (1950'ler; kaynaklarda 1955/1957/1958 olarak geçiyor)",
+    "pickup": "Gretsch White Falcon üzerindeki orijinal manyetikler (yılına göre DeArmond/Dynasonic tek bobin ya da Filter'Tron humbucker). Hangi manyetik seçicinin kullanıldığı bilinmiyor; köprü ya da iki manyetik birlikte olması tahmin",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Showman (Blackface olduğu söyleniyor)",
+     "channel": "Normal/Vibrato kanalı (hangisi olduğu bilinmiyor), temiz",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin; Frusciante yüksek sesle çaldı, amfi doğal olarak sıkışıyordu ama ses temiz kalıyor"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin; hollow-body gitarın boomy alt frekansını dizginlemek için"
+      },
+      {
+       "name": "Bright",
+       "value": "Off",
+       "note": "tahmin"
+      },
+      {
+       "name": "Reverb/Vibrato",
+       "value": "Off",
+       "note": "kayıt çok kuru; tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Ground Guitar, Guitar Player (Eylül 1999) röportajına dayanarak Otherside'ın neredeyse tamamının White Falcon + Fender Showman + Marshall kabinle çalındığını yazıyor. Ayarlar hiçbir kaynakta yok, hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12",
+    "speakers": "Bilinmiyor (o dönemin Marshall 4x12'lerinde genellikle Celestion G12 serisi hoparlörler var; tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kabine yakın; tam pozisyon belirtilmemiş",
+      "distance": "Yakın (close-mic), mesafe bilinmiyor"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Aynı kabinde; pozisyon belirtilmemiş",
+      "distance": "Yakın, mesafe bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabinin Marshall olduğu Ground Guitar'da geçiyor. Mikrofonlar Jim Scott'ın Sound on Sound röportajında albümün geneli için doğrulanmış: her kabine bir SM57 ve bir U87 konmuş, dört mikrofon da tek kanala toplanmış. Otherside için ayrıca belirtilmemiş."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok (doğrudan amfi)",
+     "purpose": "Temiz bölümde efekt duyulmuyor; Jim Scott, Frusciante'nin 'bir gitar, bir kablo ve bir amfiyle' başladığını söylüyor",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss CE-1 Chorus Ensemble (preamp olarak)",
+     "purpose": "Ground Guitar'a göre dönem rig'inde chorus efekti için değil, preamp/stereo çıkış için kullanılmış. Otherside'da kullanıldığı doğrulanmadı",
+     "settings": [
+      {
+       "name": "Effect",
+       "value": "Off",
+       "note": "yalnızca preamp/buffer olarak; tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Cello Studios'ta (eski adıyla Western Recorders, Los Angeles), Studio 2'de yapıldı. Prodüktör Rick Rubin, kayıt ve miks mühendisi Jim Scott. Grup canlı çaldı. Frusciante'nin amfisi Flea'nin amfisiyle aynı izolasyon kabinindeydi. Kayıtta 70'lerden bir Neve 8038 konsol ve 1073 EQ kullanıldı. Gitar kayıt sırasında Urei 1176 ile sıkıştırıldı, EQ ile 1–2 kHz civarı öne çıkarıldı ve gitarın ince kalmaması için ~100 Hz civarına alt frekans eklendi. Albümün büyük kısmı mono, gitarlar ortada. Bazı şarkılarda 2–3 gitar overdub'ı var, ara sıra da pan'lı bir overdub. Temiz bölüm kuru; reverb ya da delay yok denecek kadar az (kaynaklarda bir şey belirtilmemiş)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "tek nota melodik riff'te temiz ve eşit tuşe",
+    "akorlarda arpej ve hafif strum",
+    "Flea'nin bas hattıyla sıkı zamanlama",
+    "yumuşak dinamik kontrol (hollow-body gitarda feedback'i önlemek)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff ve kıtalar",
+    "description": "Bu rapordaki temiz ton: White Falcon, Showman ve Marshall kabin, efektsiz. A minör tek nota riff'i ve hafif arpejli akorlar."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı temiz zincir. Daha dolu bir akor çalımı ve biraz daha sert pena vuruşu var, ama ton kanalı değişmiyor. Overdub katmanlar olabilir (doğrulanmadı)."
+   },
+   {
+    "name": "Köprü / breakdown ('Pour my life into a paper cup' civarı) ve solo benzeri kısım",
+    "description": "Ground Guitar'a göre burada gitar 1961 Gibson SG/Les Paul Custom'a (humbucker, muhtemelen köprü manyetiği) geçiyor ve sonuna kadar açılmış bir Marshall JCM800'e giriyor. Ağır distorsiyonlu, yüksek kazançlı ve sustain'li bir ton. Ayrıca bir distorsiyon pedalı (Boss DS-2 gibi) kullanılıp kullanılmadığı doğrulanmadı."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Tekrar temiz ana tona dönüş. Değişiklik yok."
+   }
+  ],
+  "warnings": [
+   "Gretsch White Falcon'un yılı kaynaklar arasında tutarsız (1955 / 1957 / 1958). Bu yüzden takılı manyetik tipi de belirsiz (DeArmond/Dynasonic ya da Filter'Tron).",
+   "Showman ayarları hiçbir kaynakta yok, tümü tahmin. Showman'ın Blackface olduğu iddiası da yalnızca Ground Guitar'dan geliyor.",
+   "SM57 + U87 mikrofonlama, 1176 ve EQ bilgileri albümün geneli için; Sound on Sound makalesi Otherside'ı ayrıca anmıyor.",
+   "Köprü bölümündeki gitar Ground Guitar'da 'SG/Les Paul Custom' olarak geçiyor; kesin model belirsiz.",
+   "Tonalite için bazı siteler C majör, bazıları A minör diyor (paralel tonlar). BPM kaynaklara göre 123–125 arasında; Tunebat sayfası doğrudan doğrulanamadı.",
+   "Ground Guitar ikincil bir hayran kaynağı; Guitar Player 1999 röportajının asıl metnine ulaşılamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Ground Guitar – John Frusciante's Gear on Californication",
+    "url": "https://www.groundguitar.com/tone-breakdown/john-frusciante-californication-rig/"
+   },
+   {
+    "title": "Ground Guitar – John Frusciante's Fender Blackface Showman",
+    "url": "https://www.groundguitar.com/john-frusciante-gear/john-frusciantes-fender-blackface-showman-head/"
+   },
+   {
+    "title": "Sound on Sound – Jim Scott: Recording Red Hot Chili Peppers' Californication",
+    "url": "https://www.soundonsound.com/people/jim-scott-recording-red-hot-chili-peppers-californications"
+   },
+   {
+    "title": "SongBPM – Otherside",
+    "url": "https://songbpm.com/@red-hot-chili-peppers/otherside"
+   },
+   {
+    "title": "AcousticBrainz – Otherside",
+    "url": "https://acousticbrainz.org/7a3e8796-a0b3-4999-b268-4e2d47912e3c?n=2"
+   },
+   {
+    "title": "Klang – Otherside",
+    "url": "https://songs.klang.io/en/s/Red%20Hot%20Chili%20Peppers/Otherside/rn_YodiJO6k"
+   },
+   {
+    "title": "MusicRadar – Book excerpt: John Frusciante on being a guitar antihero",
+    "url": "https://musicradar.com/news/guitars/book-excerpt-john-frusciante-on-being-a-guitar-antihero-546530"
+   },
+   {
+    "title": "Mixdown – Gear Rundown: RHCP Californication",
+    "url": "https://mixdownmag.com.au/features/rig-rundown-red-hot-chili-peppers-californication/"
+   }
+  ]
+ }
+}

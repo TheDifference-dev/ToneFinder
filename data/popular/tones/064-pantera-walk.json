@@ -1,0 +1,232 @@
+{
+ "rank": 64,
+ "part": "rhythm",
+ "researchedAt": 1795280723987,
+ "original": {
+  "song": {
+   "title": "Walk",
+   "artist": "Pantera",
+   "album_or_year": "Vulgar Display of Power (1992)",
+   "tone_character": "Solid-state Randall'ın sıkı, kuru ve çok dişli yüksek gain distortion'ı. Alt frekanslar dolgun ama çamursuz, ortalar oyuk olsa da üst-ortada keskin bir ısırık var. Gate'li ve aralarında tam sessizlik olan, ağır ve 'yürüyen' bir 12/8 groove'u.",
+   "tone_tags": [
+    "sıkı alt",
+    "oyuk ortalar (scoop)",
+    "keskin üst-orta ısırık",
+    "yüksek gain",
+    "kuru / az oda",
+    "gate'li",
+    "solid-state karakter"
+   ],
+   "bpm": "117 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Dean ML (\"Dean from Hell\"); bu dönem için Washburn iddiaları da var",
+    "pickup": "Köprü manyetiği – Bill Lawrence L-500XL humbucker",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Randall Century 200 (solid-state kafa)",
+     "channel": "Lead / distortion kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "8",
+       "note": "tahmini başlangıç ayarı (Guitar Chalk), orijinal değil"
+      },
+      {
+       "name": "Bass",
+       "value": "7",
+       "note": "tahmini"
+      },
+      {
+       "name": "Middle",
+       "value": "3",
+       "note": "tahmini; asıl mid şekillendirmesi EQ'larla yapılıyordu"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmini"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Master",
+       "value": "4",
+       "note": "tahmini"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Birçok kaynak Vulgar Display of Power ve Far Beyond Driven için Century 200 diyor; RG100ES daha çok Cowboys from Hell ve Trendkill dönemine bağlanıyor. EQ eğrisi esas olarak önündeki MXR ve loop'taki Furman ile verilmiş. Amfi düğme ayarları belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Randall 4x12 kabin",
+    "speakers": "Celestion 12\" (muhtemelen Vintage 30 / G12 serisi – belgelenmemiş)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "kapak ile kenar arası, on-axis (tahmin)",
+      "distance": "yaklaşık 1 in, yakın mikrofon (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Terry Date'in bu albümdeki mikrofon kurulumuna dair kaynak bulunamadı. Miks kuru ve yakın mikrofonlu duyuluyor, belirgin bir oda mikrofonu karakteri yok."
+   },
+   "pedals": [
+    {
+     "model": "MXR 6 Band Graphic Equalizer",
+     "purpose": "Amfinin önünde, ortaları yükselten boost/ön kazanç şekillendirme",
+     "settings": [
+      {
+       "name": "Mid bantları",
+       "value": "yükseltilmiş",
+       "note": "forum anlatımı; kesin değer yok"
+      },
+      {
+       "name": "Level",
+       "value": "yükseltilmiş",
+       "note": "ön kazanç artırımı"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Furman PQ-3 / PQ-4 parametric EQ (efekt loop'u)",
+     "purpose": "Son ton şekillendirme: altları ve tizleri yükseltip ortaları oyar",
+     "settings": [
+      {
+       "name": "Low",
+       "value": "boost",
+       "note": "frekans belgelenmemiş"
+      },
+      {
+       "name": "Mid",
+       "value": "cut",
+       "note": "MXR'ın yükselttiği ortaları kısma"
+      },
+      {
+       "name": "High",
+       "value": "boost",
+       "note": ""
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Rocktron Hush (noise gate)",
+     "purpose": "Riff aralarında kesin sessizlik, yüksek gain gürültüsünü kesme",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "orta-yüksek",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Flanger (M117)",
+     "purpose": "Bazı kaynaklara göre loop'ta hafif flanger var; ritimdeki etkisi belirsiz",
+     "settings": [
+      {
+       "name": "Manual/Width",
+       "value": "düşük",
+       "note": "tahmin; kaynaklar tutarsız"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Eb'den yaklaşık çeyrek ses pes (D standarda yakın)",
+   "recording_notes": "Kayıt 1991-92'de Pantego Sound'da (Texas) yapıldı. Prodüktör Terry Date; kayıt ve miks Terry Date ile Vinnie Paul (Wikipedia). Mastering Howie Weinberg yaptı. Albümde tek gitarist Dimebag var; röportajda bazı ritimleri doubling ile kaydettiğini ama canlı hissini korumak istediğini söylüyor. Ritimler büyük olasılıkla sol ve sağa açılmış iki kanal. Solo bölümünde arkada ritim gitarı yok. Terry Date'e göre sololar 3 take alınıp comp yapılarak kaydedildi. Riff 12/8 shuffle hissinde."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "12/8 shuffle hissinde, geriden gelen (laid-back) zamanlama",
+    "Kalın telde boş tel ağırlıklı ve hızlı olmayan bir riff",
+    "Riff araları için palm muting ve sol elle tam susturma",
+    "Kromatik kaydırmalar ve bend'li vurgu notaları",
+    "Nakarat ve breakdown'da sıkı, palm-mute'lu power chord'lar",
+    "Ara ara pinch harmonic vurguları"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / kıta",
+    "description": "Bu tonun ta kendisi: köprü manyetiği, yüksek gain, gate açık. Vokal altında da aynı ton sürüyor."
+   },
+   {
+    "name": "Nakarat ('Re-spect... walk')",
+    "description": "Ton aynı kalıyor. Daha uzun tutulan, açık bırakılan akorlar var; doubling'in genişliği burada daha çok hissediliyor."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı amfi, ama daha fazla sustain ve muhtemelen ek boost var. Wah ve harmonik squeal'lar kullanılmış olabilir (tahmin). Arkada ritim gitarı yok, yalnızca bas ve davul eşlik ediyor. Delay az ya da hiç yok."
+   },
+   {
+    "name": "Outro / ağır breakdown",
+    "description": "Aynı distortion tonu. Daha yavaş ve ağır palm-mute'lu çalınıyor, gate'li durmalar daha belirgin."
+   }
+  ],
+  "warnings": [
+   "Amfi modeli tartışmalı: çoğu kaynak Vulgar için Randall Century 200 diyor, bazıları RG100ES diyor. Stüdyo kaydına dair birincil bir belge bulunamadı.",
+   "Akort net değil: Guitar World 'D G C F A D, çeyrek ses pes' yazıyor. Yaygın tab'lar ise Eb'den çeyrek ses pes diyor. Kayıt Eb ile D arasında bir yerde. Analiz siteleri tonaliteyi D minör olarak veriyor.",
+   "BPM kaynaklara göre 114 ile 125 arasında değişiyor. 12/8 hissi nedeniyle bazı araçlar farklı sayıyor. Tunebat sayfasına ulaşılamadı.",
+   "Amfi düğme ayarları orijinal değil, Guitar Chalk'un önerdiği başlangıç değerleri.",
+   "Kabin hoparlörü ve mikrofon kurulumu belgelenmemiş, tamamen tahmin.",
+   "MXR flanger kullanımı ve gitarın Dean ML mi Washburn mu olduğu kaynaklarda tutarsız.",
+   "Solodaki efektler (wah vb.) doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – 10 Commandments of Playing in the Style of Dimebag, Part 2",
+    "url": "https://www.guitarworld.com/lessons/guitar-strength-10-commandments-playing-guitar-style-dimebag-darrell-part-2"
+   },
+   {
+    "title": "Guitar World – Terry Date on Dimebag's unconventional approach to tone",
+    "url": "https://guitarworld.com/music-industry/producers-engineers/terry-date-on-dimebag-darrell-unconventional-approach-to-tone"
+   },
+   {
+    "title": "Guitar World – Dimebag Darrell's guitar gear",
+    "url": "https://guitarworld.com/features/dimebag-darrells-guitar-gear-everything-you-need-to-nail-the-game-changing-pantera-guitarists-sound"
+   },
+   {
+    "title": "Wikipedia – Walk (Pantera song)",
+    "url": "https://en.wikipedia.org/wiki/Walk_(Pantera_song)"
+   },
+   {
+    "title": "Guitar Chalk – Tone Settings for Walk by Pantera",
+    "url": "https://www.guitarchalk.com/amp-settings-walk-pantera/"
+   },
+   {
+    "title": "Equipboard – Dimebag Darrell",
+    "url": "https://equipboard.com/dimebag-darrell"
+   },
+   {
+    "title": "Equipboard – Vulgar Display of Power",
+    "url": "https://equipboard.com/albums/pantera-vulgar-display-of-power"
+   },
+   {
+    "title": "Harmony Central – DimeBag Amps",
+    "url": "https://www.harmonycentral.com/forums/topic/1484786-dimebag-amps/"
+   },
+   {
+    "title": "AcousticBrainz – Walk",
+    "url": "https://acousticbrainz.org/58eba616-2b87-4f96-8049-b6d1f29ba6b9"
+   },
+   {
+    "title": "Mixgraph – Pantera",
+    "url": "https://www.mixgraph.io/artists/pantera"
+   }
+  ]
+ }
+}

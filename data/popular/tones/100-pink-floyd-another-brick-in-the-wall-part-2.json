@@ -1,0 +1,141 @@
+{
+ "rank": 100,
+ "part": "lead",
+ "researchedAt": 1795282125089,
+ "original": {
+  "song": {
+   "title": "Another Brick In The Wall, Part 2",
+   "artist": "Pink Floyd",
+   "album_or_year": "The Wall (1979)",
+   "tone_character": "Doğrudan konsola kaydedilip sert kompresyon ve gate'ten geçen, ardından mikrofonlanmış bir amfiye yeniden gönderilerek (reamp) 'et' kazandırılmış P-90 Les Paul solo tonu. Sonuç: temiz-krank sınırında, yoğun sustain'li, hafif pürüzlü, orta frekansları dolgun ve kuru (az efektli) bir ses.",
+   "tone_tags": [
+    "hafif kırılma (edge of breakup)",
+    "yoğun kompresyon",
+    "uzun sustain",
+    "dolgun orta frekans",
+    "P-90 sıcaklığı",
+    "kuru, yakın",
+    "direkt + amfi karışımı"
+   ],
+   "bpm": "104 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Goldtop (1955, wraparound tailpiece)",
+    "pickup": "Gibson P-90 (tek bobinli soapbar); Gilmourish sap manyetiği diyor",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark I (reamp)",
+     "channel": "Tek kanal, hafif overdrive",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Solo önce DI olarak konsola kaydedildi; Gilmour/Ezrin tonu 'daha etli' istediği için kayıt mikrofonlanmış bir amfiye geri gönderildi ve DI ile amfi sinyali karıştırıldı (MusicRadar, confirmed). Amfinin Mesa/Boogie olduğunu Gilmourish ve Roland makalesi söylüyor; Gilmour'un The Wall döneminde Mesa Mark I kullandığı biliniyor. Ayarlar belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Belirsiz (Mesa/Boogie combo veya Hiwatt/WEM kabini olabilir)",
+    "speakers": "Bilinmiyor (Mesa Mark I combo ise 1x12)",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Reamp amfisinin mikrofonlandığı biliniyor, ancak mikrofon modeli/pozisyonu hiçbir kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo limiter/kompresör (konsol outboard, model belirsiz)",
+     "purpose": "Sert limitleme + ikinci kompresör ile 'double compression', yoğunluk ve sustain",
+     "settings": [
+      {
+       "name": "Compression",
+       "value": "Agresif",
+       "note": "Ezrin: önce çok agresif bir limiting amplifier, sonra çıkış tekrar kompresyonlanıp overdrive edildi"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Noise gate (stüdyo, model belirsiz)",
+     "purpose": "DI sinyalinde gürültü kontrolü",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktörler: Bob Ezrin, David Gilmour, Roger Waters; ortak prodüktör/mühendis James Guthrie. Kayıtlar Britannia Row (Londra), Super Bear (Fransa) ve Producers Workshop (LA) arasında yapıldı. Solo DI olarak konsola girildi, ağır kompresyon/gate uygulandı, sonra mikrofonlanmış amfiye reamp edildi ve iki sinyal karıştırıldı. Ezrin'e göre ilk take'ti. Lee Ritenour'un sonunda yardım için alternatif takeler çaldığı, ama bunların sadece ilham olarak kullanıldığı aktarılıyor. Belirgin delay/reverb yok, kuru ve öne çıkık miks."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "D minör pentatonik/blues kalıpları",
+    "tam ve buçuk ses bendingler, pre-bend ve release",
+    "kontrollü geniş vibrato",
+    "melodik fraze ve zamanlama (Gilmour hissi)",
+    "double-stop ve slide geçişleri",
+    "hızlı arka arkaya hammer-on/pull-off pasajları (son bölümde)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana ritim (funk/disko riff)",
+    "description": "Les Paul yerine Fender Stratocaster (Gilmourish: 1954 #0001), köprü manyetiği; amfisiz, temiz sinyal doğrudan konsola, sert kompresyonlu, double-track. Solodan çok daha temiz, ince ve perküsif; muted 16'lık funk vuruşları."
+   },
+   {
+    "name": "Melodi/dolgu gitarları",
+    "description": "Strat köprü manyetiği, Electro-Harmonix Big Muff (sustain ~%70, tone %30–40) + MXR Phase 90 (rate ~%10). Solodan daha fuzz'lı ve fazlı (Gilmourish, likely)."
+   },
+   {
+    "name": "Çıkış (outro)",
+    "description": "Solo sonrası tekrar temiz, kompresyonlu Strat ritmine dönülür; ses temiz DI ritim tonu ile aynı."
+   }
+  ],
+  "warnings": [
+   "Gitarın yılı tartışmalı: 1955 (MusicRadar, Christie's satışı) en güvenilir; forumlarda 1959, '54 veya '56 deniyor. 1959'da P-90'lı Les Paul olmadığı için 1959 iddiası zayıf.",
+   "Bazı forum kullanıcıları solonun Strat ile çalındığını iddia ediyor; ana kaynaklar Les Paul diyor.",
+   "Kullanılan manyetik (sap mı köprü mü) yalnızca Gilmourish'te geçiyor (sap); doğrulanmış değil.",
+   "Reamp amfisinin Mesa/Boogie olduğu Gilmour'un kendisinden değil ikincil kaynaklardan; kabin, hoparlör ve mikrofon bilgisi yok.",
+   "Ezrin'in 'Dave direct, with a little compression' sözü şarkı sonu gitar sesi için; ritim mi solo mu kastettiği tam net değil.",
+   "BPM 103–108 arasında değişen ölçümler; ~104 en sık değer. Tunebat sayfası bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Gilmourish - The Wall settings and setups",
+    "url": "https://www.gilmourish.com/?page_id=50"
+   },
+   {
+    "title": "Gilmourish - The Wall 1979-81",
+    "url": "https://www.gilmourish.com/?page_id=20"
+   },
+   {
+    "title": "MusicRadar - Another Brick in the Wall feature",
+    "url": "https://www.musicradar.com/artists/guitarists/man-this-is-a-hit-roger-waters-vision-david-gilmours-classic-solo-and-a-disco-groove-the-magic-combination-in-pink-floyds-freak-christmas-no-1"
+   },
+   {
+    "title": "Guitar World - Pink Floyd: Wall of Sound",
+    "url": "https://www.guitarworld.com/features/pink-floyd-wall-sound"
+   },
+   {
+    "title": "Seymour Duncan forum - David Gilmour The Wall solo",
+    "url": "https://forum.seymourduncan.com/threads/david-gilmore-the-wall-solo.15695"
+   },
+   {
+    "title": "Roland - Another Brick in the Wall Part II guitar tone dissected",
+    "url": "https://rolandindonesia.com/pink-floyds-another-brick-in-the-wall-part-ii-guitar-tone-dissected"
+   },
+   {
+    "title": "GetSongBPM - Another Brick in the Wall Part 2",
+    "url": "https://getsongbpm.com/song/another-brick-in-the-wall-part-2/wjVRm"
+   },
+   {
+    "title": "Song Information (Mixmeister BPM/key)",
+    "url": "https://www.cs.ubc.ca/~davet/music/track/PINKFLYD_WLA/PINKFLYD_WLA-05.html"
+   },
+   {
+    "title": "Karaoke Version - Another Brick in the Wall (Part 2)",
+    "url": "https://www.karaoke-version.com/custombackingtrack/pink-floyd/another-brick-in-the-wall-part-2.html"
+   }
+  ]
+ }
+}

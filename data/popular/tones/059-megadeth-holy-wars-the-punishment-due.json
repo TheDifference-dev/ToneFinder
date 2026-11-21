@@ -1,0 +1,189 @@
+{
+ "rank": 59,
+ "part": "rhythm",
+ "researchedAt": 1795280485684,
+ "original": {
+  "song": {
+   "title": "Holy Wars... The Punishment Due",
+   "artist": "Megadeth",
+   "album_or_year": "Rust in Peace (1990)",
+   "tone_character": "Çok sıkı, kuru ve orta-tiz frekansları öne çıkan, aşırı doymamış bir Marshall tipi yüksek kazançlı thrash ritim tonu. Sert palm mute'lu chug'lar ve hızlı alternate picking net, ayrık duyuluyor; alt frekanslar sıkı ama şişkin değil, sağ ve solda double-track'li.",
+   "tone_tags": [
+    "sıkı alt",
+    "yüksek orta öne çıkık",
+    "aşırı doymamış distorsiyon",
+    "kuru",
+    "double-track",
+    "parlak atak",
+    "Marshall karakteri"
+   ],
+   "bpm": "180 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Jackson King V (sabit Kahler köprülü)",
+    "pickup": "Köprü manyetiği – Seymour Duncan SH-4 JB (sapta SH-2N Jazz)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 (2203/2204 tipi 100W/50W head, hangi model olduğu belirtilmemiş)",
+     "channel": "Tek kanal, high-gain girişi",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": "Mustaine: 'her düğme sonuna kadar açık' – kaynakta genel ifade"
+      },
+      {
+       "name": "Bass",
+       "value": "10",
+       "note": "aynı genel ifade; kesin değil"
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": "aynı genel ifade; kesin değil"
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": "aynı genel ifade; kesin değil"
+      },
+      {
+       "name": "Master Volume",
+       "value": "10",
+       "note": "aynı genel ifade; amfi armoniklerle 'inliyor'"
+      },
+      {
+       "name": "Pre-amp Volume",
+       "value": "10",
+       "note": "aynı genel ifade"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar World röportajında Mustaine amfilerinin 'çoğunlukla Marshall JCM800' olduğunu ve her düğmeyi sonuna kadar açtığını söylüyor. MusicRadar'da da 'Marshall işleri; VHT amfiler ve Bogner preamp'ler ortalıkta duruyordu ama ben hep Marshall'cıyım' diyor. Forumlarda ise Bogner Fish / Hafler Triple Giant preamp + VHT 2150 power amp iddiası var. Muhtemelen bir tube screamer benzeri boost kullanılmıştır, bu yüzden 'her şey 10' ifadesine rağmen ton fazla doymuş değil."
+    },
+    {
+     "model": "Bogner Fish preamp / Hafler Triple Giant (Bogner tasarımı) + VHT 2150 power amp",
+     "channel": "Lead/high gain",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Yalnızca forumlarda, başka bir forumdan aktarılan bilgi olarak geçiyor. Mustaine stüdyoda bu cihazların bulunduğunu doğruluyor ama Marshall kullandığını vurguluyor. Marty Friedman'ın Bogner Triple Giant kullandığı daha güvenilir şekilde biliniyor (o da ağırlıklı olarak solo için)."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (straight kabinler)",
+    "speakers": "Forum iddiası: bir kabin Celestion G12M Greenback 25W, bir kabin Celestion Vintage 30, bir kabin Celestion G12T-75",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kon'a yakın; cap ile edge arası olduğu varsayılıyor",
+      "distance": "1–2 in (tahmin)"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Kon'a yakın",
+      "distance": "1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi yalnızca Seymour Duncan forumundaki ikinci el bir aktarıma dayanıyor. Marshall 4x12 kullanılmış olması o dönemin rig'ine bakınca güçlü ihtimal (likely)."
+   },
+   "pedals": [
+    {
+     "model": "Bradshaw RSB-12 switcher",
+     "purpose": "Rack switching",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Ritim tonunda belirgin delay/modülasyon yok",
+     "purpose": "Ritim kuru kaydedilmiş; miksajda hafif reverb/oda ambiyansı",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "1990'da Rumbo Recorders'ta (Canoga Park, CA) kaydedildi. Prodüktör kredisi Mike Clink ve Dave Mustaine'e ait; ancak Mustaine'e göre Clink, Guns N' Roses'la çalıştığı için çoğu zaman yoktu ve kaydı asıl olarak mühendis Micajah Ryan, miksajı yapan Max Norman ve Mustaine yaptı. Ritim partilerinin büyük kısmını Mustaine çaldı. Ritimler double-track'lendi (Mustaine bu konuda ısrarcıydı) ve sağ-sol panlandı. Friedman'ın soloları bitmiş ritimlerin üzerine eklendi. 2004'te Mustaine'in yaptığı remix/remaster'da gitar tonu ve miksaj orijinalden farklı; orijinal 1990 miksajı esas alınmalı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "çok hızlı alternate picking (tremolo benzeri tek nota riffler)",
+    "sıkı palm muting ve gallop ritmi",
+    "hızlı power chord geçişleri",
+    "tek vuruşluk, tek sayılık ritim değişimleri ve tuhaf ölçü geçişleri",
+    "uzun süre dayanıklılık",
+    "Punishment Due bölümündeki ağır chug riffler"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / Ana riff (Holy Wars)",
+    "description": "İstenen ritim tonunun kendisi: köprü manyetiği, yüksek kazanç, sıkı palm mute'lu hızlı E minör riffler. Double-track'li."
+   },
+   {
+    "name": "Akustik / flamenko ara bölüm",
+    "description": "Friedman'ın çaldığı akustik (naylon/çelik telli) İspanyol tarzı pasaj. Distorsiyon yok; elektrikle yapılacaksa temiz kanala geç, kazancı tamamen kapat, sap manyetiğini seç ve biraz reverb ekle."
+   },
+   {
+    "name": "The Punishment Due (ağır bölüm)",
+    "description": "Daha yavaş ve ağır chug riffler. Aynı distorsiyonlu ton; tempo düşüyor, palm mute ve alt frekans daha belirgin. Ayar değişikliği gerekmiyor."
+   },
+   {
+    "name": "Mustaine solosu",
+    "description": "Aynı Marshall tonu, köprü manyetiği; açılıştaki armonik feedback/'inleme' tamamen açık amfiden geliyor (Guitar World). Biraz daha fazla sustain ve hafif delay/reverb."
+   },
+   {
+    "name": "Friedman soloları",
+    "description": "Jackson Kelly (köprüde SH-4) ve muhtemelen Bogner Triple Giant. Daha yumuşak ve vokal karakterli lead tonu: biraz daha fazla kazanç ve orta frekans, ayrıca miksajda delay/reverb var."
+   }
+  ],
+  "warnings": [
+   "Amfi zinciri tartışmalı: Mustaine Guitar World'de 'çoğunlukla Marshall JCM800' dediği halde, forumlarda Bogner Fish/Hafler Triple Giant preamp ve VHT 2150 power amp iddiası var.",
+   "'Her düğme sonuna kadar açık' sözü Mustaine'in genel bir anısı; kayıtta kesin ayarlar böyle olmayabilir. Kayıttaki ton bu kadar doymuş duyulmuyor.",
+   "Kabin hoparlörleri ve mikrofonlar (SM57 + MD421) yalnızca ikinci el forum aktarımına dayanıyor.",
+   "Manyetikler kaynaklar arasında çelişkili: MusicRadar köprüde SH-4 JB, sapta Jazz diyor (bir arama özeti SH-4'ü 'Jeff Beck' diye adlandırıyor). Equipboard JB + '59 diyor. Köprüde JB olması en olası seçenek.",
+   "BPM kaynaklara göre değişiyor (klang.io 182, karaoke-version yaklaşık 157, AcousticBrainz 134 ve 172); şarkıda tempo değişimleri de var. Ana riff yaklaşık 180 BPM; Punishment Due bölümü daha yavaş. Tunebat sayfası bulunamadı.",
+   "Bu kısa araştırmada Equipboard, GuitarGeek ve Tunebat sayfaları doğrudan açılmadı; bilgiler arama özetleri, MusicRadar, Guitar World ve Seymour Duncan forumundan.",
+   "2004 remaster/remix'in tonu orijinal 1990 miksajından farklı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Megadeth: Rust Never Sleeps",
+    "url": "https://www.guitarworld.com/features/megadeth-rust-never-sleeps"
+   },
+   {
+    "title": "MusicRadar – Megadeth Hangar 18 (Mustaine & Friedman gear)",
+    "url": "https://www.musicradar.com/news/megadeth-hangar-18-dave-mustaine-marty-friedman-beatles-zeppelin"
+   },
+   {
+    "title": "Seymour Duncan Forum – What amps on Rust in Peace and Countdown?",
+    "url": "https://forum.seymourduncan.com/threads/what-amps-on-rust-in-peace-and-countdown.90065"
+   },
+   {
+    "title": "Louder – Rust In Peace inside story",
+    "url": "https://www.loudersound.com/features/megadeth-rust-in-peace-story-behind-the-album"
+   },
+   {
+    "title": "Equipboard – Megadeth Rust In Peace",
+    "url": "https://equipboard.com/albums/megadeth-rust-in-peace"
+   },
+   {
+    "title": "klang.io – Holy Wars (2004 Remix) BPM/key",
+    "url": "https://songs.klang.io/en/s/Megadeth/Holy%20Wars...The%20Punishment%20Due%20-%202004%20Remix/J5o8Daw1ZsY"
+   },
+   {
+    "title": "Karaoke Version – Holy Wars",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/megadeth/holy-wars-the-punishment-due.html"
+   },
+   {
+    "title": "Rig-Talk – Rust in Peace guitars only",
+    "url": "https://www.rig-talk.com/forum/threads/megadeth-rust-in-peace-guitars-only.255892/"
+   }
+  ]
+ }
+}

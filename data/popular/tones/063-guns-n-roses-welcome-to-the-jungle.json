@@ -1,0 +1,197 @@
+{
+ "rank": 63,
+ "part": "intro",
+ "researchedAt": 1795280704863,
+ "original": {
+  "song": {
+   "title": "Welcome To The Jungle",
+   "artist": "Guns N' Roses",
+   "album_or_year": "Appetite for Destruction (1987)",
+   "tone_character": "Giriş, kuru bir Marshall crunch'ının üzerine eklenen belirgin, birkaç kez tekrarlayan dijital delay ile çalınan kıvrak bir arpejdir. Ardından gelen ana riff kuru, orta frekansı öne çıkık, ağzı açık Les Paul + modifiyeli Marshall Super Lead distorsiyonudur. Ton fazla gainli değil; diri, kapanmamış ve sıkıştırmasız bir sound.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "kuru (riffte efektsiz)",
+    "girişte belirgin delay",
+    "orta-yüksek gain crunch",
+    "parlak üst orta",
+    "dinamik / az kompresli",
+    "Les Paul humbucker kalınlığı"
+   ],
+   "bpm": "122–124 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Kris Derrig yapımı '59 Les Paul Standard replikası (1980'lerin ortası)",
+    "pickup": "Köprü manyetiği: Seymour Duncan Alnico II Pro humbucker",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead 100W (Frank Levi / Glenn Buckley modifiyeli, S.I.R. kiralık; 'Stock #36' ya da tremololu 1959T 'Stock #39')",
+     "channel": "Channel 1 (High Treble), üst giriş",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "8",
+       "note": "Guitar World'ün verdiği yeniden yaratım ayarları"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "8.5",
+       "note": "orta frekans öne çıkık karakterin kaynağı"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Volume 1",
+       "value": "10",
+       "note": "gain tamamen amfiden geliyor, overdrive pedalı yok"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kiralık, modifiyeli Super Lead olduğu Mike Clink tarafından doğrulanmıştır. Hangi seri numaralı kafanın (#36 ya da #39) kullanıldığı tartışmalıdır. Düğme değerleri Guitar World'ün ton analizinden alındı; bunlar stüdyo belgesi değil, yeniden yaratım ayarlarıdır. Clink overdrive pedalı hatırlamadığını söylüyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Guitar World'e göre Celestion Vintage 30; dönemine bakılırsa Celestion G12T-75 ya da Greenback de olabilir",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "belirtilmemiş; büyük olasılıkla cap-edge'e yakın, on-axis",
+      "distance": "belirtilmemiş; muhtemelen hoparlöre yakın (2–5 cm)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "SM57 kullanıldığını Clink doğruluyor. Hoparlör modeli ve mikrofonun pozisyonu/mesafesi kaynaklarda net değil. Oda mikrofonu bilgisi yok."
+   },
+   "pedals": [
+    {
+     "model": "Roland SRV-2000 Digital Reverb (gizli delay modunda)",
+     "purpose": "Giriş arpejindeki tekrarlayan delay. Mike Clink stüdyoda rack efekti olarak ekledi, büyük olasılıkla send/return ya da miks aşamasında",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "318 ms",
+       "note": "giriş için; ~124 BPM'de noktalı sekizliğe yakın"
+      },
+      {
+       "name": "Feedback",
+       "value": "30",
+       "note": "yaklaşık 4–6 duyulur tekrar"
+      },
+      {
+       "name": "Output",
+       "value": "50",
+       "note": "belirgin ıslak sinyal"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Roland SRV-2000 (ikinci ünite, Plate A reverb)",
+     "purpose": "Stab ve slide efektlerinde 425 ms delay ile birlikte kullanılan plate reverb",
+     "settings": [
+      {
+       "name": "Delay Time (birinci ünite)",
+       "value": "425 ms",
+       "note": "stab/slide bölümleri için"
+      },
+      {
+       "name": "Reverb Type",
+       "value": "Plate A",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör Mike Clink. Temel kayıtlar Rumbo Recorders'ta (Canoga Park), gitar overdub'ları Take One Studio'da (Burbank) yapıldı. Miksi Steve Thompson ve Michael Barbiero, Media Sound'da (New York) yaptı (genel bilgi, likely). Slash'in tonu şarkının büyük bölümünde kuru; SRV-2000 delay yalnızca girişte ve stab/slide efektlerinde var. Izzy Stradlin ritim gitarı çaldı (Gibson ve Marshall tabanlı, guess). Slash'in partileri muhtemelen overdub ile katmanlandı; şarkıya özgü double-tracking bilgisi bulunamadı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "girişte delay ile senkron, temiz ve eşit çalınması gereken hızlı arpej",
+    "ana riffte sıkı ritim ve susturma (muting)",
+    "ara bölümdeki temiz kısım için volume düğmesini kısma kontrolü",
+    "stab ve slide efektlerinde slide/tremolo picking",
+    "solo bölümlerinde wah, bending ve vibrato"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / verse",
+    "description": "Aynı amfi ve köprü manyetiği kullanılıyor, ama delay kapalı ve ton tamamen kuru. Power chord ve tek nota karışımı riffler, crunch gain."
+   },
+   {
+    "name": "Stab / slide efektleri",
+    "description": "Delay 425 ms'ye çıkarılıyor, ikinci bir SRV-2000 ile Plate A reverb ekleniyor. Islak ve atmosferik efekt sesleri."
+   },
+   {
+    "name": "Temiz ara bölüm",
+    "description": "Ayrı bir kanal kullanılmıyor; gitarın volume düğmesi kısılarak temize yakın ton elde ediliyor. Düşük çıkışlı Alnico II Pro bu yüzden önemli."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı Marshall tonu, köprü manyetiği. Slash bazı yerlerde wah (Dunlop Cry Baby) kullanıyor (likely). Gain ve orta frekans biraz daha öne çıkık algılanır."
+   },
+   {
+    "name": "Izzy Stradlin ritim gitarı",
+    "description": "Ayrı kanalda ritim desteği veriyor; daha az gainli, daha ham crunch (guess)."
+   }
+  ],
+  "warnings": [
+   "Amfinin kimliği tartışmalı. Kafanın S.I.R.'den kiralanmış, Frank Levi modifiyeli bir Super Lead olduğu kesin; ama 'Stock #36' (tremolosuz) mı yoksa 1959T 'Stock #39' mu olduğu tartışılıyor. Bazı siteler yanlış olarak JCM800 diyor.",
+   "Gitarın Kris Derrig replikası olduğu yaygın kabul görse de bazı kaynaklar bunun tartışmalı olduğunu belirtiyor.",
+   "Amfi düğme değerleri ve delay parametreleri Guitar World'ün ton yeniden yaratım makalesinden geliyor; orijinal stüdyo notu olarak doğrulanmış değiller.",
+   "Kabin hoparlörü (Vintage 30) kaynakta yazıyor ama 1987 dönemi için kuşkulu; mikrofonun pozisyonu ve mesafesi bilinmiyor.",
+   "BPM kaynağa göre 122 ile 124 arasında değişiyor; tonalite Eb minör / D# minör olarak geçiyor (Eb akortta E merkezli çalınıyor). Tunebat sayfası bulunamadı.",
+   "Stüdyo adları (Rumbo, Take One, Media Sound) incelenen kaynaklarda doğrulanmadı; genel bilgiye dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – The secrets behind Slash's guitar tone on Welcome to the Jungle",
+    "url": "https://guitarworld.com/artists/tone-secrets-behind-welcome-jungle-guns-roses-slash-gnr-appetite-destruction"
+   },
+   {
+    "title": "Guitar World – Mike Clink on Slash and Appetite for Destruction",
+    "url": "https://www.guitarworld.com/features/mike-clink-slash-and-guns-n-roses-appetite-for-destruction-producer"
+   },
+   {
+    "title": "Pensado's Place – Mike Clink interview transcript",
+    "url": "https://a-4-d.com/t2865-2012-11-08-pensado-s-place-interview-with-mike-clink"
+   },
+   {
+    "title": "Guitar Pro – Welcome to the Jungle lesson",
+    "url": "https://blog.guitar-pro.com/2016/04/welcome-to-the-jungle-by-guns-n-roses/"
+   },
+   {
+    "title": "Guitarchalk – Welcome To The Jungle amp settings",
+    "url": "https://www.guitarchalk.com/welcome-to-the-jungle-amp-settings/"
+   },
+   {
+    "title": "Equipboard – Appetite For Destruction",
+    "url": "https://equipboard.com/albums/guns-n-roses-appetite-for-destruction"
+   },
+   {
+    "title": "klang.io – Welcome To The Jungle",
+    "url": "https://songs.klang.io/en/s/Guns%20N'%20Roses/Welcome%20To%20The%20Jungle/o1tj2zJ2Wvg"
+   },
+   {
+    "title": "audiokeychain – Welcome to the Jungle",
+    "url": "https://www.audiokeychain.com/track/Feg/guns-n-roses-welcome-to-the-jungle"
+   }
+  ]
+ }
+}

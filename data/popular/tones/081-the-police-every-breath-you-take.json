@@ -1,0 +1,188 @@
+{
+ "rank": 81,
+ "part": "clean",
+ "researchedAt": 1795281385763,
+ "original": {
+  "song": {
+   "title": "Every Breath You Take",
+   "artist": "The Police",
+   "album_or_year": "Synchronicity (1983)",
+   "tone_character": "Temiz, camsı ve parlak bir Telecaster tonu. Roland JC-120'nin stereo chorus'uyla geniş ve hafif detune bir parıltı kazanıyor. Arpejler kenardan susturulmuş, kontrollü ve ritmik, distorsiyon hiç yok.",
+   "tone_tags": [
+    "tamamen temiz",
+    "stereo chorus",
+    "camsı tiz",
+    "solid-state netlik",
+    "dar alt frekans",
+    "hafif susturulmuş arpej",
+    "geniş stereo"
+   ],
+   "bpm": "117 BPM",
+   "key": "A♭ majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Modifiyeli 1963 Fender Telecaster (Custom gövde, bazı kaynaklara göre 1961–63 arası hibrit)",
+    "pickup": "Köprü tek bobin manyetiği (Tele). Gitarda sap konumunda bir humbucker (Gibson PAF tipi), iki manyetiği birleştirme imkânı, faz dışı anahtarı ve dahili preamp/overdrive var. Bu parçada büyük olasılıkla köprü manyetiği ya da köprü+sap birlikte kullanıldı.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Roland JC-120 Jazz Chorus",
+     "channel": "Chorus kanalı (stereo)",
+     "settings": [
+      {
+       "name": "Chorus",
+       "value": "On",
+       "note": "SOS: chorus her zaman açıktı; bir hoparlör kuru, öbürü chorus'lu"
+      },
+      {
+       "name": "Speed",
+       "value": "3",
+       "note": "tahmin: yavaş-orta modülasyon"
+      },
+      {
+       "name": "Depth",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Distortion",
+       "value": "0",
+       "note": "tamamen temiz"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmin: parlak, 'buz gibi' tiz"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin: alt frekansı sıkı tutmak için"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Sound on Sound'un Classic Tracks yazısında, Synchronicity oturumlarında Summers'ın ana gitar amfisi JC-120 olarak geçiyor. Bazı yazılar (Guitar World, blog'lar) Fender Twin Reverb diyor. Buna Summers'ın genel rigi açısından 'likely' derim, ama bu kayıt için en sağlam kaynak SOS. Ayar değerleri tahmin."
+    },
+    {
+     "model": "Fender Twin Reverb (alternatif iddia)",
+     "channel": "Normal/Vibrato, temiz",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Guitar World ve bazı blog'larda bu şarkı için anılıyor. SOS ile çelişiyor."
+    }
+   ],
+   "cab": {
+    "model": "JC-120 dahili 2x12 kabin",
+    "speakers": "2 x 12\" Roland (JC-120 orijinal hoparlörleri)",
+    "mics": [
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Sol hoparlöre yakın (kuru sinyal); kapak/kenar konumu belirtilmemiş",
+      "distance": "Yakın mikrofonlama (yaklaşık 2–5 cm, tahmin)"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Sağ hoparlöre yakın (chorus'lu sinyal)",
+      "distance": "Yakın mikrofonlama (yaklaşık 2–5 cm, tahmin)"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "SOS'a göre iki hoparlörün her biri ayrı bir 421 ile yakından alınmış ve sola/sağa pan edilmiş. Bazen chorus tarafı yer değiştirilerek double-track yapılmış. Kayıt AIR Montserrat'ın canlı odasında yapılmış."
+   },
+   "pedals": [
+    {
+     "model": "Pete Cornish pedalboard (MXR Dyna Comp / Electro-Harmonix Electric Mistress içeren dönem rigi)",
+     "purpose": "Summers'ın genel efekt sistemi. Bu kayıtta ana efekt JC-120'nin dahili chorus'u, kompresör kullanımı olası.",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Echoplex (bant eko)",
+     "purpose": "Summers'ın imza ritmik delay'i. Bu şarkıda belirgin bir delay duyulmuyor, varsa çok düşük seviyede.",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "düşük/kapalı",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E (A♭'da çalınıyor)",
+   "recording_notes": "Kayıt 1982–83'te AIR Studios Montserrat'ta yapıldı, prodüksiyon Hugh Padgham ve The Police'e ait. Sting'in demosunda gitar yoktu, Hammond tarzı bir org vardı. Sting, Summers'a 'kendi parçan yap' dedi. Summers arpej figürünü stüdyoda son anda, tek çekimde kaydetti. Bartók'un keman düetlerinden esinlenerek üçlü yerine 9'lu (add9) eklemiş. Summers canlı odada tek başına çaldı, Sting kontrol odasındaydı, Copeland üst kattaydı ve hepsi kulaklıkla çalıştı. Sinyal JC-120 üzerinden kuru ve chorus'lu olarak ikiye ayrılıp L/R pan edildi. Bazen chorus tarafı değiştirilerek double-track yapıldı (SOS). Miks reverb'ü ve kompresyonuyla ilgili gitara özel bir bilgi yok."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Geniş parmak açıklığı gerektiren add9 akor şekilleri (4. perdeden 1–2 perde ötesine uzanma)",
+    "Sürekli, eşit 8'lik arpej (alternate/hibrit tutarlılığı)",
+    "Hafif palm mute ve sol el ile notaların süresini kontrol etme",
+    "Uzun süre sabit tempoda temiz ve hatasız çalma (dinamik tutarlılık)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana arpej riffi (giriş/kıtalar)",
+    "description": "Araştırılan ton bu: temiz JC-120 stereo chorus, Telecaster, add9 arpejler."
+   },
+   {
+    "name": "Köprü / orta bölüm (\"Since you've gone...\")",
+    "description": "Ses değişiyor, gitar daha seyrek ve uzun tutulan akorlar/dyad'lar çalıyor, piyano ve synth öne çıkıyor. Ton büyük olasılıkla aynı temiz chorus'lu ses, belki biraz daha fazla sustain ve daha az palm mute ile (tahmin)."
+   },
+   {
+    "name": "Son kıta ve outro",
+    "description": "Ana arpej riffine dönülüyor ve ton aynı kalıyor. Kayıtta ayrı bir gitar solosu yok."
+   }
+  ],
+  "warnings": [
+   "Amfi konusunda kaynaklar çelişiyor: Sound on Sound Roland JC-120 diyor (stereo, iki 421), Guitar World ve bazı blog'lar Fender Twin Reverb diyor. SOS'u esas aldım.",
+   "Reverb'deki bir yazı parçanın '61 Strat ile kaydedildiğini söylüyor. Guitar Player ve Summers'ın kendisi ise modifiyeli '63 Telecaster diyor ('pretty sure').",
+   "Bu parçada hangi manyetiğin kullanıldığını söyleyen bir kaynak yok. Köprü manyetiği ya da köprü+sap kombinasyonu bir çıkarım.",
+   "Tonalite: kayıt A♭ majör (A♭–Fm–D♭–E♭) olarak duyuluyor. Guitar Player ise akorları A–F#m–D–E olarak veriyor. Bazı tablar yarım ses pes akort öneriyor. Otomatik analizler 117–118 BPM, C#/D♭ ya da F minör gibi farklı sonuçlar veriyor.",
+   "Tüm amfi düğme değerleri ve mikrofon mesafeleri tahmin. Pedal zinciri Summers'ın dönem riginden çıkarıldı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Sound on Sound – Classic Tracks: The Police 'Every Breath You Take'",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-police-every-breath-you-take"
+   },
+   {
+    "title": "Guitar World – Andy Summers on The Police greatest hits",
+    "url": "https://www.guitarworld.com/features/andy-summers-the-police-greatest-hits"
+   },
+   {
+    "title": "Guitar Player – Andy Summers on the Telecaster behind The Police's greatest hits",
+    "url": "https://www.guitarplayer.com/guitarists/andy-summers-on-the-telecaster-behind-the-police-s-greatest-hits"
+   },
+   {
+    "title": "Guitar Player – Andy Summers on The Police hit Every Breath You Take",
+    "url": "https://www.guitarplayer.com/music/albums-singles/andy-summers-on-the-police-hit-every-breath-you-take"
+   },
+   {
+    "title": "MusicRadar – The Police: making of Every Breath You Take",
+    "url": "https://www.musicradar.com/news/the-police-making-of-every-breath-you-take"
+   },
+   {
+    "title": "Reverb – Potent Pairings: Andy Summers",
+    "url": "https://reverb.com/news/potent-pairings-the-polices-andy-summers"
+   },
+   {
+    "title": "Guitar Chalk – Every Breath You Take amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-every-breath-you-take-the-police/"
+   },
+   {
+    "title": "audiokeychain – The Police Every Breath You Take",
+    "url": "https://www.audiokeychain.com/track/Pfy/the-police-every-breath-you-take"
+   }
+  ]
+ }
+}

@@ -1,0 +1,224 @@
+{
+ "rank": 85,
+ "part": "lead",
+ "researchedAt": 1795281602288,
+ "original": {
+  "song": {
+   "title": "Cemetery Gates",
+   "artist": "Pantera",
+   "album_or_year": "Cowboys from Hell (1990)",
+   "tone_character": "Transistörlü Randall RG100 kafasının EQ'larla sürülmüş, yüksek kazançlı ama sıkı, keskin solo tonu. Orta frekanslar oyulmuş gibi duyulsa da ince bir orta bant geri eklendiği için solo mixin içinden çıkıyor. Pinch harmonik ve tremolo kolu çığlıkları için bol sustain ve hafif bir modülasyon/doubling hissi var.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "transistör amfi doygunluğu",
+    "dar orta tepe",
+    "parlak / presence öne çıkık",
+    "bol sustain",
+    "sıkı alt",
+    "hafif flanger/doubler rengi"
+   ],
+   "bpm": "140 BPM",
+   "key": "F# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Dean ML (1981 mavi 'Dean From Hell', Floyd Rose tarzı kilitli tremolo)",
+    "pickup": "Köprü manyetiği – Bill Lawrence L-500 (L-500XL/L-500L olarak geçiyor)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Randall RG100 (RG100ES / 'carpeted' RG-100 transistörlü kafa)",
+     "channel": "Lead (distorted) kanal",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "8",
+       "note": "tahmin; yüksek kazanç, transistör doygunluğu"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "3",
+       "note": "tahmin; ortalar EQ ile oyuluyor"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "7",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Dimebag 1996 Guitar World röportajında Cowboys From Hell'i 'eski, halı kaplı Randall RG-100 kafasıyla' kaydettiğini söylüyor (Equipboard alıntısı). Rack'e monteli RG100HT de anılıyor. Düğme ayarlarıyla ilgili kaynak yok; değerlerin hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Randall 4x12 kabin",
+    "speakers": "Muhtemelen Celestion 12\" hoparlörler (kesin değil)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kapak kenarına yakın, hafif açılı (tahmin)",
+      "distance": "1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Line 6 tur rig'i Randall 412 kabin gösteriyor ama bu sahne düzeni. Stüdyoda kullanılan kabin ve mikrofonlar hiçbir kaynakta yok; 1990 Terry Date pratiğine göre tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Furman PQ-3 / PQ-4 Parametric EQ",
+     "purpose": "Geniş bir orta frekans bandını oymak ve amfinin girişini sürerek kazancı artırmak",
+     "settings": [
+      {
+       "name": "Mid band",
+       "value": "geniş Q, cut",
+       "note": "Warhead geçmişi anlatımı; kesin frekans bilinmiyor"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR 6-Band Graphic EQ (mavi)",
+     "purpose": "Dar bir orta bandı geri eklemek, solo için presence ve seviye artışı sağlamak",
+     "settings": [
+      {
+       "name": "Mid sliders",
+       "value": "dar bir bantta boost",
+       "note": "tahmin; V şeklinin içine tek bir orta tepe"
+      },
+      {
+       "name": "Level",
+       "value": "boost",
+       "note": "amfiyi sürmek için"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR M-126 Flanger/Doubler",
+     "purpose": "Rack'te 'sürekli açık' duran hafif doubling/flanger rengi",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Doubler / hafif ayar",
+       "note": "tahmin; 1995 röportajı rack'teki kullanımı anlatıyor"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Bilinmeyen eski pedallar ('paslı pedallarla dolu market poşeti')",
+     "purpose": "Terry Date'e göre bir solo sesi için hepsi birlikte zincire bağlandı ve sonuç 'mükemmel' oldu",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Pantego Sound'da (Pantego, Teksas) kaydedildi. Stüdyonun sahibi Dimebag ile Vinnie Paul'un babası Jerry Abbott. Prodüktör Terry Date; Max Norman son anda çekilince geldi. Önce davullar, ardından gitarlar kaydedildi. Terry Date'in anlattığı solo yöntemi: solo dört kanala alınıyor, en iyi üç tam take'in parçaları dördüncü kanalda birleştiriliyor (comp). Finaldeki çığlıklar sadece tremolo kolu ve doğal harmoniklerle yapıldı; Dimebag harmonizer ya da Whammy pedalı kullanmadığını açıkça söylüyor. Soloda duyulan hafif yankı/delay muhtemelen mix aşamasında eklendi (tahmin)."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "hızlı alternate picking ve legato koşuları",
+    "F# harmonik minör pasajları",
+    "geniş bend'ler ve yoğun vibrato",
+    "pinch harmonikler",
+    "tremolo kolu dalışları ve harmonik çığlıklar (kilitli tremolo gerekir)",
+    "iki elle tapping (final kısmı)",
+    "melodik ve duygusal ifade, uzun soloda tutarlılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Akustik giriş",
+    "description": "Akustik gitarları Rex Brown çalıyor (Wikipedia personel listesi). Elektro solo tonuyla ilgisi yok; distorsiyon yok, akustik gitar kaydı."
+   },
+   {
+    "name": "Temiz arpej / kıtalar",
+    "description": "Randall'ın clean kanalı kullanılıyor; gain çok düşük. Chorus/flanger benzeri modülasyon daha belirgin (MXR Flanger/Doubler, likely) ve hafif yankı var. Muhtemelen köprü ya da sap manyetiği, tonu yumuşatmak için tone düğmesi biraz kısık (tahmin)."
+   },
+   {
+    "name": "Distorted nakarat / ana riff",
+    "description": "Solo ile aynı Randall lead kanalı ve köprü manyetiği, fakat ortalar biraz daha oyuk ve solo boost'u yok. Akorlar ve palm mute basılmış riffler için kazanç bir tutam daha düşük; ritim gitarlar double-track (tahmin)."
+   },
+   {
+    "name": "Final çığlıkları (outro)",
+    "description": "Solo tonuyla aynı distorted köprü manyetiği sesi. Phil Anselmo'nun çığlıklarına tremolo kolu dalışı ve 4. ile 5. perdedeki doğal harmoniklerle cevap veriliyor; pedal ya da harmonizer kullanılmıyor (confirmed). LickLibrary'e göre tapping'li harmonikler ve iki elle tapping de var."
+   }
+  ],
+  "warnings": [
+   "Tonâlite kaynaklar arasında tartışmalı: LickLibrary solo için F# harmonik minör / F# minör diyor; AcousticBrainz F minör, Karaoke-Version A minör, bir tab sitesi E minör veriyor. Solo için F# minör seçildi. Kaydın akordu kabaşıkı standarttan biraz sapmış olabilir, bu da analizleri şaşırtıyor olabilir.",
+   "BPM belirsiz: AcousticBrainz 140, Karaoke-Version yaklaşık 141 veriyor; diğer kaynaklar 120–170 arasında dağınık. Bir ballad olduğu için 70 BPM yarım-zaman hissi de mümkün; delay senkronu kulakla doğrulanmalı.",
+   "Randall modelinin adı kaynaklarda RG100ES, RG100HT ve 'carpeted RG-100' olarak farklı geçiyor.",
+   "Amfi düğme ayarları, kabin, hoparlör ve mikrofon bilgileri tamamen tahmin; hiçbir kaynak stüdyo mikrofonlamasını anlatmıyor.",
+   "Terry Date'in 'paslı pedallar' anısının hangi soloya ait olduğu belirtilmiyor; Cemetery Gates olduğu kanıtlanmadı.",
+   "Soloda delay olduğu kulak izlenimine dayanıyor; kullanılan cihaz ya da süre bilinmiyor.",
+   "Manyetik modeli farklı adlarla geliyor: Guitar World L-500L diyor, yaygın kanı ise L-500XL."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Wikipedia – Cemetery Gates (Pantera song)",
+    "url": "https://en.wikipedia.org/wiki/Cemetery_Gates_(Pantera_song)"
+   },
+   {
+    "title": "Guitar World – Riffer Madness: Dimebag Darrell harmonic screams",
+    "url": "https://www.guitarworld.com/lessons/riffer-madness-dimebag-darrell-harmonics-part-2-harmonic-screams"
+   },
+   {
+    "title": "Guitar World – Riffer Madness harmonics part 3",
+    "url": "https://www.guitarworld.com/lessons/riffer-madness-dimebag-darrell-harmonics-part-3"
+   },
+   {
+    "title": "Guitar World – Dimebag Darrell's guitar gear",
+    "url": "https://guitarworld.com/features/dimebag-darrells-guitar-gear-everything-you-need-to-nail-the-game-changing-pantera-guitarists-sound"
+   },
+   {
+    "title": "Guitar World – Terry Date on Dimebag's unconventional approach to tone",
+    "url": "https://guitarworld.com/music-industry/producers-engineers/terry-date-on-dimebag-darrell-unconventional-approach-to-tone"
+   },
+   {
+    "title": "Equipboard – Pantera Cowboys from Hell gear",
+    "url": "https://equipboard.com/albums/pantera-cowboys-from-hell"
+   },
+   {
+    "title": "Equipboard – Dimebag Darrell",
+    "url": "https://equipboard.com/dimebag-darrell"
+   },
+   {
+    "title": "Ground Guitar – Dimebag Darrell gear",
+    "url": "https://www.groundguitar.com/dimebag-darrell-gear/"
+   },
+   {
+    "title": "Line 6 – Cowboys From Hell Tour Rig",
+    "url": "https://line6.com/tone-templates-diagrams/dimebag-darrell--cowboys-from-hell-tour-rig.html"
+   },
+   {
+    "title": "Wikipedia – Cowboys from Hell",
+    "url": "https://en.wikipedia.org/wiki/Cowboys_from_Hell"
+   },
+   {
+    "title": "LickLibrary – Cemetery Gates lesson",
+    "url": "https://licklibrary.com/learn/lessons/pantera/cemetery-gates"
+   },
+   {
+    "title": "AcousticBrainz – Cemetery Gates analysis",
+    "url": "https://acousticbrainz.org/35e69887-b906-42f7-9eb6-e1e7cb94a49b"
+   },
+   {
+    "title": "Karaoke-Version – Cemetery Gates",
+    "url": "https://www.karaoke-version.com/custombackingtrack/pantera/cemetery-gates.html"
+   }
+  ]
+ }
+}

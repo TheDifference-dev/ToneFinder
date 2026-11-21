@@ -1,0 +1,106 @@
+{
+ "rank": 89,
+ "part": "clean",
+ "researchedAt": 1795281678111,
+ "original": {
+  "song": {
+   "title": "Blackbird",
+   "artist": "The Beatles",
+   "album_or_year": "The Beatles (White Album), 1968",
+   "tone_character": "Tek bir akustik gitarla (Martin D-28) yakından mikrofonlanmış, tamamen temiz, doğal ve sıcak bir ton. Bas telde dolgun bir gövde, tiz tellerde net ve parlak bir parmak saldırısı var. Yanında yalnızca McCartney'nin ayak vuruşu ile sonradan eklenen kuş sesleri duyuluyor.",
+   "tone_tags": [
+    "tamamen temiz",
+    "akustik",
+    "doğal dinamik",
+    "yakın mikrofon",
+    "kuru (çok az reverb)",
+    "sıcak gövde",
+    "parlak parmak saldırısı"
+   ],
+   "bpm": "92–96 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Martin D-28 (akustik)",
+    "pickup": "Yok. Akustik gitar mikrofonla kaydedildi, manyetiği yok.",
+    "certainty": "confirmed"
+   },
+   "amps": [],
+   "cab": {
+    "model": "Yok (kabin kullanılmadı, akustik gitar doğrudan mikrofonla kaydedildi)",
+    "speakers": "Yok",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönemin Abbey Road kondansatörlerinden biri olabilir, ör. Neumann KM56 veya U67; bu bir tahmin)",
+      "position": "Gitarın önünde, büyük olasılıkla 12. perde ile ses deliği arasında",
+      "distance": "Yakın, tahminen 15–30 cm"
+     },
+     {
+      "model": "Bilinmiyor",
+      "position": "Ayak vuruşu için yere yakın ayrı bir mikrofon (stereo mikste sol kanalda)",
+      "distance": "Yakın"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin yok. Emerick'e göre ayak vuruşu ayrı bir mikrofonla alındı (kesin). Gitar mikrofonlarının modeli ve konumu kaynaklarda geçmiyor."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "11 Haziran 1968, EMI Abbey Road Studio 2. Prodüktör George Martin, ses mühendisi Geoff Emerick. McCartney gitarı ve vokali tek başına, aynı anda kaydetti. 32 alım yapıldı, 11'i tamdı ve en son alım kullanıldı (kesin). Ritmi tutan tıkırtı metronom değil, McCartney'nin ayak vuruşu; ayrı bir mikrofonla alındı ve stereo mikste sol kanalda duyuluyor (kesin). Kuş sesleri Abbey Road'un ses efekti arşivinden alındı ve miks sırasında eklendi (kesin). Gitar double-track edilmedi, distorsiyon ya da modülasyon yok. Aynı gün Lennon, Studio 3'te 'Revolution 9' üzerinde çalışıyordu. Anthology 3'te Take 4 etiketiyle çıkan kayıt aslında Take 23; 50. yıl kutu setinde Take 28 ve Esher demosu yer alıyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Parmakla çalma: başparmak bas teli, işaret parmağı üst teli aynı anda vuruyor (Bach'ın E minör Bourrée'sinden esinli)",
+    "Ara bir teli atlayarak çalınan onlu (tenth) çift ses kalıpları",
+    "Boş G telini drone olarak çaldırırken sapta yukarı aşağı kayan akor şekilleri",
+    "Sık değişen ölçü (3/4, 2/4, 4/4 geçişleri)",
+    "Temiz tonda dinamik ve eşit vuruş gerekiyor, hata hemen duyuluyor"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş ve kıtalar",
+    "description": "Şarkının tamamı tek bir temiz akustik partisyon. İstenen 'Temiz bölüm' bu. Kıtalarda G majörde onlu çift sesler ve boş G teli drone olarak çalıyor."
+   },
+   {
+    "name": "Köprü ('Blackbird fly...')",
+    "description": "Ton aynı. Akorlar F, C ve D bölgesine geçiyor ve dinamik biraz artıyor. Ayrı bir gitar partisyonu ya da efekt yok."
+   },
+   {
+    "name": "Bitiş",
+    "description": "Ton aynı. Kuş sesleri öne çıkıyor ve gitar yavaşça sönüyor."
+   }
+  ],
+  "warnings": [
+   "Orijinal kayıt elektro gitar değil, akustik bir Martin D-28. Amfi, kabin ve pedal yok. Elektro gitara uyarlarken temiz ve kompresyonsuz bir amfi kanalı, sap ya da orta manyetik ve gerekirse akustik simülasyonu düşünülmeli; bu bir öneri, orijinal bilgi değil.",
+   "Gitar mikrofonunun modeli, konumu ve mesafesi kaynaklarda geçmiyor; verilen değerler tahmin.",
+   "Tempo kayıt boyunca serbest akıyor ve ölçü değişiyor; BPM değeri yaklaşık (tahmin).",
+   "Alım numaraları kaynaklar arasında farklı (Anthology'deki 'Take 4' aslında Take 23)."
+  ],
+  "research_confidence": "high",
+  "sources": [
+   {
+    "title": "Blackbird (Beatles song) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Blackbird_(Beatles_song)"
+   },
+   {
+    "title": "The Paul McCartney Project - Blackbird",
+    "url": "https://www.the-paulmccartney-project.com/song/blackbird/amp/"
+   },
+   {
+    "title": "Beatles Bible - Recording, mixing: Blackbird, Revolution 9",
+    "url": "https://beatlesbible.com/1968/06/11/recording-mixing-blackbird-revolution-9"
+   },
+   {
+    "title": "Douglas Niedt - Blackbird",
+    "url": "https://douglasniedt.com/Blackbird-Guitar-Sheet-Music-Guitar-Tab.html"
+   },
+   {
+    "title": "Guitar World - Acoustic tracks on the White Album",
+    "url": "https://guitarworld.com/artists/acoustic-nation-guide-12-acoustic-guitar-based-tracks-beatles-white-album"
+   }
+  ]
+ }
+}

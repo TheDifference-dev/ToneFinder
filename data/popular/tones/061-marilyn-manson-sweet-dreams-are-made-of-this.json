@@ -1,0 +1,144 @@
+{
+ "rank": 61,
+ "part": "rhythm",
+ "researchedAt": 1795280586101,
+ "original": {
+  "song": {
+   "title": "Sweet Dreams (Are Made of This)",
+   "artist": "Marilyn Manson",
+   "album_or_year": "Smells Like Children (EP, 1995)",
+   "tone_character": "Yavaş, ağır ve kirli bir endüstriyel rock/metal ritim tonu. Yüksek gainli ama aşırı sıkıştırılmamış, biraz 'çamurlu' ve kaba bir distortion; gitar daha çok nakaratlarda power chord duvarı olarak giriyor, kıtalarda ise bas, synth ve davul öne çıkıyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "kaba/kirli distortion",
+    "kalın alt-orta",
+    "karanlık",
+    "endüstriyel",
+    "yavaş ve ağır",
+    "ortaya oturan tek kanal his"
+   ],
+   "bpm": "92 BPM",
+   "key": "C minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Jackson JDR-94 (siyah) ya da Jackson Dinky serisi",
+    "pickup": "Köprü manyetiği (humbucker), model bilinmiyor",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2204 (ya da benzeri bir Marshall head)",
+     "channel": "Tek kanal, yüksek gain (input high)",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Equipboard'a göre Berkowitz, Portrait of an American Family kayıtlarında bir Marshall kullandığını söylemiş; model JCM800 2204 olarak doğrulanmamış. Sweet Dreams için amfi bilgisi yok."
+    },
+    {
+     "model": "Peavey Bandit 65",
+     "channel": "Lead/distortion kanalı",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Berkowitz'in kendi sözü: 'nine years' sahip olduğu Bandit 65 'still my favorite thing to record with'. Bu sözün hangi döneme ait olduğu ve Sweet Dreams'te kullanılıp kullanılmadığı belli değil. Nothing Studios'ta Reznor'un ekibi (Sean Beavan, Dave Ogilvie) re-amp ya da plug-in/rack işleme de yapmış olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12",
+    "speakers": "Muhtemelen Celestion G12T-75 (1960B'nin o dönemdeki standart hoparlörü)",
+    "mics": [
+     {
+      "model": "SM57 (tahmin)",
+      "position": "Hoparlör konisinin kenarına yakın (tahmin)",
+      "distance": "1-2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Equipboard, Marshall 1960B'yi Berkowitz'in 'eski rig'inin bir parçası olarak listeliyor. Mikrofon bilgisine dair hiçbir kaynak bulunamadı."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop JH-1 Jimi Hendrix Signature Wah",
+     "purpose": "Şarkıdaki wah'lı lead/gürültü kısımları. Ritimde kullanıldığı belli değil; ritim muhtemelen wah'sız.",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E ya da Drop D (tartışmalı)",
+   "recording_notes": "1994–1995 yıllarında New Orleans'taki Nothing Studios'ta kaydedildi. Prodüksiyon: Marilyn Manson ve Trent Reznor. Mühendis: Sean Beavan. Dave Ogilvie ve Charlie Clouser da katkıda bulundu; programlama Chris Vrenna'ya ait. Gitar kredisi albümde Daisy Berkowitz'e (Scott Putesky) veriliyor. Bas Twiggy Ramirez'de, synth/loop'lar Madonna Wayne Gacy'de. Şarkının taşıyıcı riffi büyük ölçüde bas ve synth'ten geliyor; gitarlar endüstriyel dokuyu tamamlıyor. Double-tracking ve post-prodüksiyon hakkında kaynak yok. NIN/Nothing ekolüne bakılırsa gitarların L/R çift kayıt ve yoğun miks işlemi görmüş olması muhtemel, ancak bu bir tahmin."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "yavaş tempoda power chord'lar",
+    "palm muting ve tutulan akorlar",
+    "dinamik giriş-çıkışlar (kıta ve nakarat arası)",
+    "temel zamanlama ve sıkılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta",
+    "description": "Kıtalarda gitar seyrek ve geri planda; bas, synth ve davul taşıyor. Gitar susuyor ya da aynı distortion ile düşük seviyede, gürültü/feedback dokusu olarak çalıyor. Aynı ton üzerinde volume biraz kısılabilir."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ritim tonunun asıl yeri: aynı yüksek gainli ses, tam ses power chord'lar ('Some of them want to use you...'). Ton değişikliği yok, sadece dinamik artıyor."
+   },
+   {
+    "name": "Wah'lı lead / solo bölümü",
+    "description": "Aynı distortion ile Dunlop JH-1 wah devreye giriyor (Berkowitz'in kendi doğrulaması). Wah açıklığı değişken; tiz ağırlıklı çığlık atan notalar, bendingler ve gürültü. Daha belirgin olması için köprü manyetiğinde kalınıp hafif bir volume artışı yapılabilir."
+   }
+  ],
+  "warnings": [
+   "Bu kayda özel amfi, kabin ve mikrofon bilgisi bulunamadı. Amfi ve kabin bilgileri Berkowitz'in genel dönem rig'ine dayanan tahminlerdir.",
+   "Gitar kredisi tartışmalı: albüm notları Daisy Berkowitz'i gösteriyor, ama Lick Library dersi gitar işini Twiggy Ramirez'e atfediyor.",
+   "Akort tartışmalı: Lick Library Drop D diyor; Ultimate Guitar tab'larının biri Standart E, diğeri Drop D gösteriyor.",
+   "Tempo ve tonalite kaynakları çelişiyor: Karaoke-Version ve AcousticBrainz yaklaşık 92 BPM diyor, Musiciwant ise 120 BPM. Tonalite için Musicnotes ve Karaoke-Version C minör diyor, AcousticBrainz F minör tespit etmiş. Bu raporda C minör esas alındı.",
+   "Equipboard'daki JDR-94 bilgisi bir koleksiyoncu/satıcı mektubuna dayanıyor; ikinci elden bir kaynak.",
+   "Wah'ın Sweet Dreams'te kullanıldığı Berkowitz'in kendi Facebook paylaşımına dayanıyor (Equipboard alıntısı). Wah'ın ritim kısmında mı yoksa sadece lead kısmında mı kullanıldığı belli değil."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Equipboard – Scott Putesky (Daisy Berkowitz) Gear",
+    "url": "https://equipboard.com/pros/scott-putesky"
+   },
+   {
+    "title": "Equipboard – Marilyn Manson band gear",
+    "url": "https://equipboard.com/band/marilyn-manson"
+   },
+   {
+    "title": "Wikipedia – Smells Like Children",
+    "url": "https://en.wikipedia.org/wiki/Smells_Like_Children"
+   },
+   {
+    "title": "Manson Wiki – Sweet Dreams (Are Made of This)",
+    "url": "https://manson.wiki/Sweet_Dreams_(Are_Made_of_This)"
+   },
+   {
+    "title": "Wikipedia – Scott Putesky",
+    "url": "https://wikipedia.com/wiki/Scott_Putesky"
+   },
+   {
+    "title": "Karaoke-Version – Sweet Dreams (Marilyn Manson)",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/marilyn-manson/sweet-dreams-are-made-of-this.html"
+   },
+   {
+    "title": "Musicnotes – Sweet Dreams (Are Made of This) sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/marilyn-manson/sweet-dreams-are-made-of-this/MN0086059"
+   },
+   {
+    "title": "AcousticBrainz analysis",
+    "url": "https://acousticbrainz.org/b123feea-8ae8-4932-b090-4cea1a185858"
+   },
+   {
+    "title": "Lick Library – Sweet Dreams lesson",
+    "url": "https://www.licklibrary.com/learn/lessons/marilyn-manson/sweet-dreams-are-made-of-this"
+   },
+   {
+    "title": "Ultimate Guitar – Sweet Dreams tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/marilyn-manson/sweet-dreams-are-made-of-this-tabs-7467"
+   }
+  ]
+ }
+}

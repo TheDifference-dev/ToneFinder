@@ -1,0 +1,261 @@
+{
+ "rank": 9,
+ "part": "intro",
+ "researchedAt": 1795278736400,
+ "original": {
+  "song": {
+   "title": "Crazy Train",
+   "artist": "Ozzy Osbourne",
+   "album_or_year": "Blizzard of Ozz (1980)",
+   "tone_character": "Sonuna kadar açılmış 100W Marshall JMP, önünde MXR Distortion+ ve orta frekansları yükselten MXR 10 bantlı EQ ile sürülüyor. Sonuç Randy Rhoads'un ortası öne çıkık, ısırıklı ve doygun hard rock tonu. Ritim katları sola ve sağa panlı; AMS delay'den gelen hafif chorus/flanger ve odanın doğal ambiyansı tona genişlik veriyor.",
+   "tone_tags": [
+    "orta frekans öne çıkık (500 Hz civarı)",
+    "doygun ama net",
+    "ısırıklı üst orta",
+    "sıkı, kontrollü alt",
+    "hafif chorus/flanger genişliği",
+    "oda ambiyansı",
+    "stereo çift ritim"
+   ],
+   "bpm": "138 BPM",
+   "key": "F# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1974 Gibson Les Paul Custom (beyaz)",
+    "pickup": "Köprü manyetiği (stok Gibson humbucker), Volume 10, Tone 10",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP 1959 Super Lead MKII 100W (1975-76, kayıt için kiralanmış, master volume yok)",
+     "channel": "Channel I (High Treble), Input I (üst giriş)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Bass",
+       "value": "2",
+       "note": "Alt düşük tutulmuş, Distortion+ önündeyken çamurlaşmayı önlüyor"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Volume I",
+       "value": "6",
+       "note": "Guitar World'e göre; Owsinski amfinin sonuna kadar açık olduğunu yazıyor"
+      },
+      {
+       "name": "Volume II",
+       "value": "0",
+       "note": "Kullanılmayan kanal"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Rhoads'un modifiyeli beyaz Marshall'ı o sırada henüz gelmemişti, bu yüzden stok bir JMP kiralandı (Guitar World). Kayıtta iki kabinli tam stack kullanıldı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960A + 1960B 4x12 (tam stack)",
+    "speakers": "Altec 417-8H 12 inç (Guitar World'e göre)",
+    "mics": [
+     {
+      "model": "Shure SM58",
+      "position": "Kabine yakın (tam pozisyonu bilinmiyor)",
+      "distance": "Yakın mikrofon"
+     },
+     {
+      "model": "AKG 451",
+      "position": "Amfi odasının dışında, birkaç feet geride",
+      "distance": "Birkaç feet (~1 m)"
+     },
+     {
+      "model": "Shure SM87 (x2)",
+      "position": "Oda mikrofonları",
+      "distance": "Odada, mesafesi bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mikrofon bilgisi Bobby Owsinski'nin Max Norman'a dayandırdığı aktarımdan geliyor. Norman'a göre gitar ambiyansının çoğu odadan geliyor."
+   },
+   "pedals": [
+    {
+     "model": "MXR Distortion+",
+     "purpose": "Amfiyi ek kazançla sürmek; neredeyse sürekli açık",
+     "settings": [
+      {
+       "name": "Output",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Distortion",
+       "value": "4",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "MXR Ten Band Graphic EQ",
+     "purpose": "Orta frekansları güçlendirmek (500 Hz merkezli tümsek)",
+     "settings": [
+      {
+       "name": "31.2 Hz",
+       "value": "-2 dB",
+       "note": ""
+      },
+      {
+       "name": "62.5 Hz",
+       "value": "0 dB",
+       "note": ""
+      },
+      {
+       "name": "125 Hz",
+       "value": "+3 dB",
+       "note": ""
+      },
+      {
+       "name": "250 Hz",
+       "value": "+7 dB",
+       "note": ""
+      },
+      {
+       "name": "500 Hz",
+       "value": "+10 dB",
+       "note": ""
+      },
+      {
+       "name": "1 kHz",
+       "value": "+6 dB",
+       "note": ""
+      },
+      {
+       "name": "2 kHz",
+       "value": "+3 dB",
+       "note": ""
+      },
+      {
+       "name": "4 kHz",
+       "value": "-2 dB",
+       "note": ""
+      },
+      {
+       "name": "8 kHz",
+       "value": "0 dB",
+       "note": ""
+      },
+      {
+       "name": "16 kHz",
+       "value": "+3 dB",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "AMS DMX 15-80S Digital Delay (miks aşamasında, rack)",
+     "purpose": "Ritim katlarında hafif chorus/flanger etkisi; sol ve sağ için biraz farklı kısa gecikme ve detune",
+     "settings": [
+      {
+       "name": "Delay",
+       "value": "Kısa (birkaç ms - onlarca ms)",
+       "note": "Kesin değer bilinmiyor; tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "Düşük",
+       "note": "İnce bir efekt olarak tarif ediliyor"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Ridge Farm Studio (İngiltere), 1980. Kayda Chris Tsangarides ile başlandı, ardından prodüktör ve mühendis Max Norman devraldı. 24 kanallı bant kullanıldı, bir kanal timecode'a gitti. Owsinski'nin dinlediği izole kanallara göre ritim gitarları iki ayrı çalım; sola ve sağa panlı ve elektronik double değil. Norman ortada üçüncü bir kat olduğunu söylüyor. Ambiyansın çoğu oda mikrofonlarından geliyor, AMS 15-80S ile hafif flanger/chorus eklendi. Tel olarak GHS Boomers .010-.046 kullanıldı, pena Fender Medium 351."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Ana riffte F# pedal notasına karşı hızlı ve temiz 16'lık alternate picking",
+    "Riff boyunca tutarlı palm muting ve sıkı sağ el zamanlaması",
+    "Açılıştaki F#5 chug'larında notaları tam zamanında susturmak",
+    "F# minör / A majör hattında akıcı pozisyon geçişleri",
+    "Kayıttaki sıkılığı yakalamak için ritmi katlar halinde aynen tekrar çalabilmek"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta ve nakarat ritmi",
+    "description": "Ton aynı (köprü manyetiği, Distortion+ açık, aynı amfi). Daha çok açık çalınan güç akorları ve palm-mute'lu chug'lar var. Katlar sola ve sağa panlı, AMS chorus/flanger burada da hafifçe duyuluyor."
+   },
+   {
+    "name": "Ara bölüm ('Mental wounds...')",
+    "description": "Temel ton aynı. Daha melodik, uzatılan akorlar ve dolgular var. Ayrı bir efekt kullanıldığına dair kaynak yok."
+   },
+   {
+    "name": "Ana solo (~2:49)",
+    "description": "Aynı temel zincir: köprü manyetiği, Distortion+, EQ ve Marshall. Owsinski'ye göre solo hafifçe sola panlı tek gitar ve sağ tarafta kısa bir AMS delay var. Norman ise solonun üç kat çalındığını söylüyor: ortada ana kat, sağda ve solda birkaç dB geride iki double. Tapping, hızlı triplet koşuları, geniş bend'ler ve vibrato içeriyor."
+   },
+   {
+    "name": "Çıkış solosu",
+    "description": "Ton aynı. Norman'a göre çıkış soloları genelde ilk çekimde, prova yapılmadan kaydedildi. Kat ve delay kullanımı ana soloya benzer."
+   }
+  ],
+  "warnings": [
+   "Volume I ayarı tartışmalı: Guitar World 6 diyor, Owsinski ise amfinin sonuna kadar açık olduğunu söylüyor.",
+   "Hoparlörün Altec 417-8H olduğunu yalnızca Guitar World söylüyor; başka kaynakla doğrulanmadı.",
+   "Mikrofon bilgisi (SM58, AKG 451, SM87'ler) tek bir ikincil kaynaktan geliyor. Başka bir referans tablosu Neumann U87 ve SM57 diyor.",
+   "Ritimde iki mi üç mü kat olduğu tartışmalı: Owsinski izole kanallarda yalnızca iki kat duyduğunu yazıyor, Norman ortada üçüncü bir kat olduğunu söylüyor.",
+   "Solonun panlaması kaynaklar arasında çelişiyor (tek kat hafif solda mı, yoksa üç kat mı).",
+   "AMS DMX 15-80S'in ayarları bilinmiyor, verilen değerler tahmin.",
+   "Tonalite çoğunlukla F# minör olarak geçiyor, AcousticBrainz ise A majör diyor (göreceli majör). Tunebat'ta orijinal kaydın sayfası bulunamadı; tempo 137-138 BPM aralığında."
+  ],
+  "research_confidence": "high",
+  "sources": [
+   {
+    "title": "Guitar World - The secrets behind Randy Rhoads' guitar tone on Crazy Train",
+    "url": "https://www.guitarworld.com/features/randy-rhoads-crazy-train-tone-secrets"
+   },
+   {
+    "title": "Guitar World - Max Norman on Randy Rhoads",
+    "url": "https://guitarworld.com/features/max-norman-randy-rhoads"
+   },
+   {
+    "title": "Bobby Owsinski - Crazy Train isolated guitar",
+    "url": "https://bobbyowsinskiblog.com/ozzy-osbourne-crazy-train-isolated-guitar/"
+   },
+   {
+    "title": "Guitar World - Recording of Blizzard of Ozz",
+    "url": "https://www.guitarworld.com/features/ozzy-osbourne-randy-rhoads-recording-of-blizzard-of-ozz"
+   },
+   {
+    "title": "Guitar.com - Gear used by Randy Rhoads on Blizzard of Ozz",
+    "url": "https://guitar.com/features/artist-rigs/gear-used-by-randy-rhoads-blizzard-of-ozz-ozzy-osbourne"
+   },
+   {
+    "title": "AcousticBrainz - Crazy Train",
+    "url": "https://acousticbrainz.org/04c89e17-246b-4bbe-a72a-551d6f5d892d?n=3"
+   },
+   {
+    "title": "Musicnotes - Crazy Train sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/ozzy-osbourne/crazy-train/MN0302409"
+   },
+   {
+    "title": "Karaoke Version - Crazy Train",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/ozzy-osbourne/crazy-train.html"
+   }
+  ]
+ }
+}

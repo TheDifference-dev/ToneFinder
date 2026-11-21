@@ -1,0 +1,178 @@
+{
+ "rank": 99,
+ "part": "intro",
+ "researchedAt": 1795282052279,
+ "original": {
+  "song": {
+   "title": "Carry On Wayward Son",
+   "artist": "Kansas",
+   "album_or_year": "Leftoverture (1976)",
+   "tone_character": "70'lerin klasik Marshall crunch'ı: master volume'süz 100 W Super Lead'in orta frekansı dolgun, orta gainli, net distorsiyonu; iki gitarın unison doubling'i ile kalın, geniş riff sesi.",
+   "tone_tags": [
+    "orta gain crunch",
+    "orta frekans öne çıkık",
+    "güç katı distorsiyonu",
+    "doubled/kalın",
+    "kuru, efektsiz",
+    "humbucker sıcaklığı"
+   ],
+   "bpm": "127 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson L6-S (Rich Williams); Kerry Livgren için Gibson ES-335 veya Hagstrom Swede",
+    "pickup": "Köprü manyetiği (L6-S stok humbucker, 6 konumlu ton seçici) – parça için kesin pozisyon belgelenmemiş",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP 1959 Super Lead 100W",
+     "channel": "High Treble girişi (belgelenmemiş)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume I",
+       "value": "7",
+       "note": "tahmin; master volume yok, gain güç katından"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Vintage Guitar ve Equipboard Leftoverture dönemi amfisini 100 W Marshall Super Lead olarak veriyor; Williams Guitar World'de 'gitarım 100 watt Marshall'ıma giriyordu' diyor. Ayarlar kulak tahmini. Livgren'in amfisi belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Univox 6x12 kabin",
+    "speakers": "6 x 12\" (model belirsiz)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Koni kenarına yakın, hafif off-axis (tahmin)",
+      "distance": "2-5 cm (tahmin)"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Kabin Vintage Guitar'da geçiyor; mikrofonlama bilgisi yok, tamamen tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Doğrudan amfi (efekt yok)",
+     "purpose": "Riff kuru, doğrudan Marshall'a",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Maestro Phase Shifter",
+     "purpose": "Williams'ın dönemdeki tek pedalı; bu riffte muhtemelen kapalı",
+     "settings": [
+      {
+       "name": "Power",
+       "value": "Off",
+       "note": "riffte faz duyulmuyor"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Leftoverture (1976), Studio in the Country, Bogalusa, Louisiana (Aralık 1975'ten itibaren). Prodüktör Jeff Glixman, mühendis Bill 'Bleu' Evans. Şarkı kayıtlardan iki gün önce getirildi, büyük ölçüde stüdyoda öğrenildi. Williams: 'Kerry ile girişteki riff'i doubling yapıyoruz.' Owsinski'nin izole kanal analizine göre giriş riff'i ve köprü lead hattı iki gitarla sıkı biçimde doubled, üstünde bir oktav yukarıda vurgular çalan üçüncü gitar var; giriş ve finalde armonize lead'ler. Stereo panlama belgelenmemiş (muhtemelen sağ/sol)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "İki gitarın birebir unison çaldığı riff'te sıkı zamanlama ve senkop vurgular",
+    "Power chord ve tek nota geçişleri",
+    "Girişin sonundaki armonize lead hatları",
+    "Crunch distorsiyonda temiz artikülasyon ve tel susturma",
+    "Prog tarzı ani duruşlar ve vurgular"
+   ]
+  },
+  "sections": [
+   {
+    "name": "A cappella açılış",
+    "description": "Gitarsız vokal armonileri; riff ardından tüm grupla giriyor."
+   },
+   {
+    "name": "Giriş armonize lead",
+    "description": "Girişin sonunda iki gitarlı armonize lead; aynı crunch ton, biraz daha sustain."
+   },
+   {
+    "name": "Kıta",
+    "description": "Williams elektro yerine akustik gitar (muhtemelen Martin D-28) çalıyor, piyanoyu takip eden kontrpuan; distorsiyon yok."
+   },
+   {
+    "name": "Nakarat temiz arpej",
+    "description": "Temiz elektro arpej; Owsinski'ye göre DI gibi ve hoş bir oda sesiyle. Gain tamamen düşük, hafif oda/reverb."
+   },
+   {
+    "name": "Enstrümantal ara ve solo",
+    "description": "Doubled lead hattı ve üstte oktav vurgular; aynı crunch, lead için biraz daha gain, köprü manyetiği."
+   },
+   {
+    "name": "Outro",
+    "description": "Riff ve armonize lead'lerin dönüşü; giriş tonuyla aynı."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya özel mikrofon, amfi ayarı ve manyetik pozisyonu kaynaklarda yok; ayarlar kulak tahmini.",
+   "Williams'ın gitarı Vintage Guitar'a göre Gibson L6-S; bazı tab siteleri Les Paul Custom/Standard diyor, güvenilir değil.",
+   "Livgren'in amfisi belgelenmemiş; gitarı için ES-335 ve Hagstrom Swede geçiyor ama bu şarkıda hangisi belirsiz.",
+   "Tonalite: songbpm (Spotify verisi) stüdyo versiyonu için G, radyo edit için C diyor; şarkı modal yapıda, kesin değil. Tunebat'a ulaşılamadı.",
+   "Maestro Phase Shifter dönemin tek pedalıydı ama bu riffte kullanılmadığı tahmin ediliyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Vintage Guitar - Kansas Leftoverture",
+    "url": "https://vintageguitar.com/56680/kansas-leftoverture"
+   },
+   {
+    "title": "Equipboard - Rich Williams",
+    "url": "https://equipboard.com/pros/rich-williams"
+   },
+   {
+    "title": "Guitar World - Kansas Rich Williams",
+    "url": "https://www.guitarworld.com/features/kansas-rich-williams-another-fork-in-the-road"
+   },
+   {
+    "title": "Bobby Owsinski - Isolated Guitar Tracks",
+    "url": "https://bobbyowsinskiblog.com/?p=186"
+   },
+   {
+    "title": "ProSoundWeb - Isolated guitar tracks",
+    "url": "https://www.prosoundweb.com/in-the-studio-kansas-carry-on-my-wayward-son-isolated-guitar-tracks/"
+   },
+   {
+    "title": "Louder - Kansas Carry On Wayward Son",
+    "url": "https://www.loudersound.com/features/kansas-carry-on-wayward-son"
+   },
+   {
+    "title": "Wikipedia - Carry On Wayward Son",
+    "url": "https://en.wikipedia.org/wiki/Carry_On_Wayward_Son"
+   },
+   {
+    "title": "SongBPM - Carry On Wayward Son",
+    "url": "https://songbpm.com/@kansas/carry-on-wayward-son"
+   }
+  ]
+ }
+}

@@ -1,0 +1,174 @@
+{
+ "rank": 94,
+ "part": "intro",
+ "researchedAt": 1795281870382,
+ "original": {
+  "song": {
+   "title": "Breaking The Law",
+   "artist": "Judas Priest",
+   "album_or_year": "British Steel (1980)",
+   "tone_character": "Orta kazançlı, orta frekansları öne çıkan, kuru ve sıkı bir 1980 İngiliz Marshall tonu. Modern metal gibi aşırı distortion değil; sonuna kadar açılmış non-master Marshall'dan gelen crunch/overdrive, kısa ama belirgin oda ambiyansıyla.",
+   "tone_tags": [
+    "distorted (orta kazanç)",
+    "orta frekans öne çıkık",
+    "kuru, efektsiz",
+    "Marshall crunch",
+    "sıkı alt",
+    "hafif oda ambiyansı",
+    "çift gitar"
+   ],
+   "bpm": "164 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Glenn Tipton: Gibson SG (albümün çoğunda SG kullandığını söylüyor); K.K. Downing: 1964 Gibson Flying V ve Fender Stratocaster",
+    "pickup": "Köprü manyetiği (SG ve V'de stok Gibson humbucker; Strat'ta köprü single-coil); parça bazında belgelenmemiş",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 100W/50W non-master volume head (JMP Super Lead 1959 / 1987 dönemi)",
+     "channel": "Tek kanal, High Treble + Normal girişler jumper'lı (tipik kullanım)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume I",
+       "value": "8",
+       "note": "tahmin; non-master amfi yüksek seviyede"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Tipton 'aşağı kattaki oturma odasında bir sürü Marshall stack vardı' diyor (onaylı, Metal Gods bağlamında). Downing'in EL34'lü 50W non-master Marshall kullandığı fan kaynaklarında geçiyor (zayıf kaynak). Ayarların hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960A/B)",
+    "speakers": "Celestion G12 serisi (dönem itibarıyla G12M/G12H-30/G12-65 olabilir)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Koni kenarına yakın, hafif off-axis (tahmin)",
+      "distance": "2-5 cm (tahmin)"
+     },
+     {
+      "model": "Oda mikrofonu (tahmin)",
+      "position": "Odada, kabinden uzak",
+      "distance": "Birkaç metre (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Amfiler evin farklı odalarına (oturma odası, kütüphane, fayanslı banyolar) yerleştirildi; oda sesi tonun parçası. Mikrofon detayı hiçbir kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Rangemaster tipi treble booster",
+     "purpose": "Marshall'ın girişini sürmek (Downing için)",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Ringo Starr'ın Ascot'taki malikânesi Tittenhurst Park'ta, stüdyo yerine evin odalarında kaydedildi; her üye ayrı odadaydı. Prodüktör Tom Allom (onaylı); mühendis Louis Austin (olası). Albüm yaklaşık 28 günde yazılıp kaydedildi. Riffi Tipton bir öğleden sonra yazdı. Cam kırılma sesi gerçek süt şişeleri. Siren sesinin Downing'in Stratocaster'ındaki tremolo kolu mu yoksa kaydedilmiş bir polis arabası mı olduğu tartışmalı. İki gitar sol-sağ panlanmış çift gitar dokusu (olası)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Tek notalı riff ile A5 power chord arasında geçiş",
+    "164 BPM'de düzgün sekizlik downpicking/alternate picking",
+    "Açık telleri susturma ve temiz nota ayrımı",
+    "Tremolo kolu ile siren efekti (isteğe bağlı)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta",
+    "description": "Aynı distorted ton; power chord ve kısa susturmalı vuruşlar, riffin varyasyonları. Ton değişikliği yok."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı ton, daha açık çalınan power chord'lar; çift gitarla dolgun."
+   },
+   {
+    "name": "Ara bölüm (siren/cam efektleri)",
+    "description": "Kısa breakdown. Siren muhtemelen Strat'ın köprü manyetiği ve tremolo kolu dalışlarıyla yapıldı; ton aynı, belki biraz daha fazla kazanç/sustain. Gerçek bir gitar solosu yok."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Ana riff tekrarlanarak fade-out; ton değişmez."
+   }
+  ],
+  "warnings": [
+   "Bu parçaya özel amfi, kabin, mikrofon veya ayar bilgisi hiçbir kaynakta bulunamadı; rig dönemin genel bilgisinden çıkarıldı.",
+   "Tipton'ın SG ifadesi Metal Gods bağlamında ve 'albümün çoğunda' şeklinde; Breaking The Law için kesin değil.",
+   "Klipte Flying V'ler görülüyor ama bu kayıtta kullanıldıklarını kanıtlamaz.",
+   "Siren sesi: Downing'in Strat tremolosu mu, kaydedilmiş polis arabası mı, kaynaklar çelişiyor.",
+   "Tonalite tartışmalı: çoğu kaynak A minör diyor; Musicnotes C majör, AcousticBrainz F minör (düşük güven), bir site D diyor.",
+   "Tempo 164 BPM (bazı kaynaklar 167); Tunebat sayfası bulunamadı.",
+   "Rangemaster ve 50W Marshall bilgisi fan sitelerinden geliyor, zayıf kaynak.",
+   "Mühendisin Louis Austin olduğu doğrulanmadı."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "MusicRadar - Judas Priest's Glenn Tipton and KK Downing talk British Steel",
+    "url": "https://www.musicradar.com/news/guitars/judas-priests-glenn-tipton-and-kk-downing-talk-british-steel-248758"
+   },
+   {
+    "title": "Louder - Judas Priest: The making of British Steel",
+    "url": "https://www.loudersound.com/features/judas-priest-the-making-of-british-steel"
+   },
+   {
+    "title": "MusicRadar - The smashing glass, the police sirens...",
+    "url": "https://www.musicradar.com/artists/the-smashing-glass-the-police-sirens-its-telling-a-story-with-sound-youre-seeing-a-movie-running-through-your-head-in-a-house-that-was-home-to-two-beatles-a-heavy-metal-masterpiece-was-born"
+   },
+   {
+    "title": "Wikipedia - British Steel (album)",
+    "url": "https://en.wikipedia.org/wiki/British_Steel_(album)"
+   },
+   {
+    "title": "Dinosaur Rock Guitar - KK Downing",
+    "url": "https://www.dinosaurrockguitar.com/node/19"
+   },
+   {
+    "title": "GuitarGangsters - KK Downing Guitars & Gear",
+    "url": "https://guitargangsters.net/kk-downing-guitars-gear/"
+   },
+   {
+    "title": "K.K. Downing's Steel Mill - K.K.'s Gear",
+    "url": "http://kkdowning.net/steelmill/k-k-downing/k-k-s-gear/"
+   },
+   {
+    "title": "Hooktheory - Breaking The Law",
+    "url": "https://hooktheory.com/theorytab/view/judas-priest/breaking-the-law"
+   },
+   {
+    "title": "Lawshun - What tempo is Breaking the Law",
+    "url": "https://lawshun.com/article/what-tempo-is-breaking-the-law-by-judas-priest"
+   },
+   {
+    "title": "Musicnotes - Breaking the Law",
+    "url": "https://www.musicnotes.com/sheetmusic/judas-priest/breaking-the-law/MN0067720"
+   }
+  ]
+ }
+}

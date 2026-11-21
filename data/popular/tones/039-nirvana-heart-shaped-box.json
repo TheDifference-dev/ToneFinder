@@ -1,0 +1,242 @@
+{
+ "rank": 39,
+ "part": "full",
+ "researchedAt": 1795279733510,
+ "original": {
+  "song": {
+   "title": "Heart-Shaped Box",
+   "artist": "Nirvana",
+   "album_or_year": "In Utero (1993)",
+   "tone_character": "Kıtalar boyunca kuru, hafif kirli ve Polychorus ile hafifçe titreşen/modülasyonlu, ince ve 'tıkırtılı' tek bobinli bir ton var; nakaratlarda ise SansAmp ile sürülen yıpranmış Fender Quad Reverb'den gelen kaba, orta frekansı öne çıkık, oda hissi taşıyan bir distorsiyona geçiliyor. Genel karakter cilalı değil; ham, havadar ve canlı bir oda sesi.",
+   "tone_tags": [
+    "ham",
+    "orta frekans öne çıkık",
+    "tek bobin tınısı",
+    "oda hissi",
+    "kaba distorsiyon (nakarat)",
+    "hafif modülasyon (kıta/solo)",
+    "az kompresyon"
+   ],
+   "bpm": "100–102 BPM",
+   "key": "G# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Veleno alüminyum gitar (Steve Albini'nin; solak çalışa göre yeniden tellenmiş) / alternatif: Univox Hi-Flier ya da 1969 Fender Competition Mustang",
+    "pickup": "Köprü manyetiği (Veleno'da tek humbucker; Univox'ta orijinal tek bobinler) – hangi pozisyon kullanıldığı kesin değil",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Quad Reverb (1970'ler)",
+     "channel": "Tek kanal (temiz kanal; kirlilik pedaldan geliyor)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Tahmin; amfi yorgun lambalar yüzünden erken kırılıyordu"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin; kayıtta orta frekans öne çıkık"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Reverb",
+       "value": "0",
+       "note": "Kayıtta belirgin yay reverb yok; tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Bob Weston ve Albini'ye göre Cobain bir gün amfi denedikten sonra In Utero'nun çoğunu bu amfiyle kaydetti; yalnızca bir güç lambası düzgün çalışıyordu ve bir hoparlör muhtemelen patlamıştı. Turne rigi (Mesa/Boogie Studio Preamp + Crown güç amfisi + 4x12) stüdyoda sert ve kırılgan bulunup reddedildi. Ayar değerlerinin tamamı tahmindir."
+    },
+    {
+     "model": "Randall solid-state combo (Commander II olabilir)",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Albümde az kullanıldığı söyleniyor; bu şarkıdaki rolü bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Fender Quad Reverb'in kendi gövdesi (harici kabin yok)",
+    "speakers": "4x12 Utah hoparlör (biri muhtemelen patlak)",
+    "mics": [
+     {
+      "model": "RCA BK5 (ribbon)",
+      "position": "Konide tam merkez (cap)",
+      "distance": "Yakın; ton mesafeyle ayarlandı (tam değer bilinmiyor)"
+     },
+     {
+      "model": "Beyerdynamic M130 / STC 4038 (ribbon)",
+      "position": "Merkez",
+      "distance": "Yakın / biraz geri"
+     },
+     {
+      "model": "Oda mikrofonu (Neumann vb. büyük Alman kondansatörler)",
+      "position": "Oda",
+      "distance": "Birkaç metre"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Albini, harici kabin kullanılmadığını, yalnızca dahili hoparlörlerin mikrofonlandığını doğruladı. Mikrofonları genelde koni merkezine koyup mesafeyle tonu ayarlar, en fazla iki yakın mikrofon + bir oda mikrofonu kullanırdı. Bu şarkı özelinde hangi mikrofonların kullanıldığı belgelenmemiş."
+   },
+   "pedals": [
+    {
+     "model": "Tech 21 SansAmp Classic",
+     "purpose": "Nakarat/riff distorsiyonu – albümün ana gain kaynağı",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Amplifier",
+       "value": "Lead",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Output",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Electro-Harmonix Polychorus",
+     "purpose": "Kıtalardaki ve solodaki modülasyon/flanger-chorus dalgalanması",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Chorus/Flange",
+       "note": "Cobain'in bu şarkı için el yazısı ayar notu var ama içeriği metin olarak yayımlanmamış"
+      },
+      {
+       "name": "Rate",
+       "value": "3",
+       "note": "Tahmin; yavaş"
+      },
+      {
+       "name": "Width",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Feedback",
+       "value": "3",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss DS-2 Turbo Distortion",
+     "purpose": "Ara sıra kullanılan distorsiyon",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "'Pedal X' / 'Mr X' (Mr Bill yapımı ring modulator + overdrive)",
+     "purpose": "Albini miksindeki çılgın, kırılgan solo sesi",
+     "settings": [
+      {
+       "name": "On/Off",
+       "value": "On",
+       "note": "Tek anahtar; ayrı düğme yok"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Yarım ses pes Drop D (Db Ab Db Gb Bb Eb)",
+   "recording_notes": "Şubat 1993, Pachyderm Studio (Cannon Falls, Minnesota); kayıt mühendisi Steve Albini. 'Heart-Shaped Box' ve 'All Apologies' singlelar için sonradan Scott Litt tarafından yeniden miks edildi (ek gitar/vokal ve kapanışta çello eklendi). Albini, Pedal X ile solonun ham halini kaydetti; Krist Novoselic itiraz etti, albüm versiyonunda bu sert solo bastırıldı/değiştirildi; ham hali Super Deluxe baskıdaki Albini miksinde duyulabiliyor. Kıta ve nakarat partileri muhtemelen farklı gitar/zincirlerle overdub edildi."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Drop akortta tek parmak power chord riffi",
+    "Kıtalarda arpej benzeri tek nota/ikili ses çalımı",
+    "Dinamik geçiş (sessiz kıta – yüksek nakarat)",
+    "Soloda vokal melodisini izleyen bending ve vibrato",
+    "Feedback/gürültü kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta (verse)",
+    "description": "Daha sakin, az gain'li ya da hafif kırılan ton; Polychorus açık, SansAmp kapalı veya çok düşük. Muhtemelen Veleno ile çalındı."
+   },
+   {
+    "name": "Nakarat / ana riff",
+    "description": "SansAmp açık, belirgin distorsiyon; modülasyon kapalı ya da çok az; daha dolgun orta ve yüksek ses. Univox veya Mustang olabilir."
+   },
+   {
+    "name": "Solo",
+    "description": "Vokal melodisini izleyen solo; albüm (Litt) versiyonunda distorsiyon + Polychorus flanger/chorus dalgalanması. Albini'nin orijinal miksinde Pedal X ring modulator/overdrive ile çok sert, tıkırtılı bir ses."
+   },
+   {
+    "name": "Kapanış",
+    "description": "Nakarat tonuyla devam; feedback ve gürültü ön planda, Litt miksinde çello eşlik ediyor."
+   }
+  ],
+  "warnings": [
+   "Şarkı bazında gitar ataması (Veleno vs Univox vs Mustang) spekülatif; Albini'nin AMA'sı Veleno'nun bu şarkıda kullanıldığını söylüyor ama kıta/nakarat ayrımı belgelenmemiş.",
+   "Bazı rehberler ana amfiyi '60'lar Fender Twin Reverb olarak veriyor; en güçlü kanıt Fender Quad Reverb yönünde.",
+   "Amfi ve pedal ayar değerlerinin tamamı tahmindir; Cobain'in Polychorus ayar notunun içeriği bulunamadı.",
+   "Solo: albüm versiyonunda Polychorus mu Pedal X mi duyulduğu konusunda kaynaklar çelişiyor; Pedal X'in ham hali Albini miksinde.",
+   "Tonalite kaynaklara göre A minör (yazılı, akort referanslı), G# minör (duyulan) ve C# minör arasında değişiyor; akort Drop D'nin yarım ses pesi olarak tab sitelerinden alındı.",
+   "Bu şarkıya özgü mikrofon düzeni belgelenmemiş; Albini'nin albüm geneline dair anlatımına dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar – Steve Albini & Aaron Rash on recording In Utero",
+    "url": "https://www.musicradar.com/news/steve-albini-aaron-rash-nirvana-recording-in-utero-kurt-cobain"
+   },
+   {
+    "title": "Ground Guitar – Kurt Cobain's In Utero Guitars and Gear",
+    "url": "https://www.groundguitar.com/tone-breakdown/kurt-cobains-in-utero-guitars-and-gear/"
+   },
+   {
+    "title": "Guitar World – Kurt Cobain's mystery In Utero amp",
+    "url": "https://www.guitarworld.com/gear/amps/kurt-cobains-mystery-in-utero-amp"
+   },
+   {
+    "title": "Guitar.com – The gear used on Nirvana In Utero",
+    "url": "https://www.guitar.com/features/artist-rigs/the-gear-used-on-nirvana-in-utero/"
+   },
+   {
+    "title": "MusicRadar – Albini happy accident with distortion pedal",
+    "url": "https://musicradar.com/news/steve-albini-reveals-nirvanas-in-utero-album-features-a-happy-accident-with-kurt-cobain-and-a-distortion-pedal-in-the-studio"
+   },
+   {
+    "title": "Equipboard – Nirvana In Utero",
+    "url": "https://equipboard.com/albums/nirvana-in-utero"
+   },
+   {
+    "title": "Ultimate Guitar – Heart Shaped Box Chords",
+    "url": "https://tabs.ultimate-guitar.com/n/nirvana/heart_shaped_box_crd.htm"
+   },
+   {
+    "title": "Musicnotes – Heart-Shaped Box",
+    "url": "https://www.musicnotes.com/sheetmusic/nirvana/heart-shaped-box/MN0067115"
+   },
+   {
+    "title": "Wikipedia – In Utero",
+    "url": "https://en.wikipedia.org/wiki/In_Utero"
+   }
+  ]
+ }
+}

@@ -1,0 +1,152 @@
+{
+ "rank": 48,
+ "part": "rhythm",
+ "researchedAt": 1795280085321,
+ "original": {
+  "song": {
+   "title": "Chop Suey!",
+   "artist": "System of a Down",
+   "album_or_year": "Toxicity (2001)",
+   "tone_character": "Doygun ama aşırı sıkıştırılmamış, Marshall gövdesiyle Mesa Rectifier dişini birleştiren Drop C ritim tonu. Riffler hızlı ve kesik, orta frekanslar belirgin, alt frekanslar sıkı. Çok katmanlı overdub'lar duvar gibi geniş bir ses veriyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "orta frekanslar öne çıkık",
+    "Marshall gövdesi + Mesa dişi",
+    "çok katmanlı overdub",
+    "hafif 1176 kompresyonu",
+    "kuru, efektsiz"
+   ],
+   "bpm": "127 BPM",
+   "key": "G minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG / Gibson Les Paul Standard / Ibanez Iceman (stüdyoda hangisinin kullanıldığı tartışmalı)",
+    "pickup": "Köprü humbucker (manyetik modeli bilinmiyor; muhtemelen stok Gibson humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead (Plexi, 100W)",
+     "channel": "Tek kanal, jumper'lı ya da yüksek volume (tahmin)",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Mix dergisine göre Marshall ve Mesa kafalarıyla kabinleri birlikte kullanılmış. Mühendis Dave Schiffman: 'The Mesa gave us the teeth, and the Marshall gave us the body.' Plexi modelini Equipboard bir Sylvia Massy video/çizimine dayandırıyor. Ayarlar yayımlanmamış."
+    },
+    {
+     "model": "Mesa/Boogie Triple Rectifier (ya da Dual Rectifier)",
+     "channel": "Lead/Modern high gain kanalı (tahmin)",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Mesa kullanıldığı Mix'te doğrulanıyor. Triple Rectifier olduğu Guitar Player Ocak 2002 sayısına dayanıyor (Equipboard aktarımı); bazı kaynaklar Dual Rectifier diyor. Ayarlar bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 ve Mesa/Boogie 4x12 kabinler",
+    "speakers": "Bilinmiyor; muhtemelen Celestion (Marshall) ve Celestion Vintage 30 (Mesa Rectifier kabin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Her kabinde; konum açıklanmamış (muhtemelen hoparlöre yakın, cap–edge arası)",
+      "distance": "Belirtilmemiş (muhtemelen yakın mikrofon, 1–2 in)"
+     },
+     {
+      "model": "Neumann U87 (Mix'te yalnızca '87' diye geçiyor)",
+      "position": "Her kabinde, SM57 ile faz hizalı",
+      "distance": "Belirtilmemiş"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Mikrofonlar ve faz hizalaması Mix'e göre doğrulanmış. Hoparlör modelleri ve mikrofon mesafeleri kaynaklarda yok."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok (gitar doğrudan amfiye)",
+     "purpose": "Distorsiyonun tamamı amfiden geliyor",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Universal Audio/UREI 1176 (blackface), çift",
+     "purpose": "Kayıt zincirinde kompresyon ve limitleme (stüdyo ekipmanı)",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Drop C (C G C F A D)",
+   "recording_notes": "Kayıt Cello Studios'ta (Los Angeles) yapıldı. Prodüktörler Rick Rubin ve Daron Malakian, kayıt mühendisi Dave Schiffman. Kayıt Ampex ATR-24 bant makinesine alındı; punch ve overdub'lar Studer A800'de yapıldı. Miks Andy Wallace tarafından The Enterprise'da (Burbank) SSL G-Plus konsolda yapıldı. Malakian 'çamurlu', 'rock' ve 'heavy metal' gitar gibi birçok katman üst üste kaydetti ve her şarkıyı yaklaşık 50 kez çaldı. Kayıtta yoğun çift kayıt ve katmanlama var. Sakin bölümlerde çok sayıda akustik katman bulunuyor. Sinyal pedalsız, doğrudan amfiye gidiyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Yaklaşık 127 BPM'de hızlı alternate picking ve 16'lık palm mute chug'lar",
+    "Riff ile kesik susmalar arasında sıkı zamanlama",
+    "Drop C'de tek parmakla power chord geçişleri",
+    "Nakarattaki hızlı açık akor tarama (Gm–Am–F–Eb hissi)",
+    "Ani dinamik geçişler"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Akustik giriş",
+    "description": "Gm–Am–F–Eb hissinde hızlı 16'lık akustik tarama, üst üste birkaç akustik katmanla kaydedilmiş. Elektrikle ritim tonundan tamamen farklı: distorsiyon yok, akustik gitar mikrofonla alınmış. Elektrik gitarla taklit için temiz kanal ve piezo/akustik simülasyonu kullanılabilir."
+   },
+   {
+    "name": "Ana riff / kıtlalar",
+    "description": "İstenen ritim tonu: Drop C, köprü humbucker, Marshall+Mesa high gain. Palm mute'lu hızlı chug'lar ve kesik durmalar var."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı distorsiyonlu ton; akustik girişteki akor yürüyüşü açık akorlarla ve hızlı taramayla distorsiyonlu çalınıyor. Akustik katmanların da eşlik ettiği düşünülüyor (muhtemel)."
+   },
+   {
+    "name": "Köprü ('Father into your hands')",
+    "description": "Daha yavaş ve dramatik bir bölüm; hafif/akustik doku ile başlayıp aynı distorsiyonlu tonla geniş, uzun tutulan akorlara geçiyor. Gain aynı, palm mute daha az, akorlar sürdürülüyor."
+   }
+  ],
+  "warnings": [
+   "Kayıtta hangi gitarın kullanıldığı belirsiz: Gearnews Ibanez Iceman IC300 diyor (klipte görünen gitar). Equipboard ise Toxicity seansları için Gibson Les Paul Standard ve Jackson Randy Rhoads V gösteriyor; Gibson SG de sıkça anılıyor.",
+   "Mesa modeli tartışmalı: Triple Rectifier (Guitar Player 2002, Equipboard aktarımı) ya da Dual Rectifier (Gearnews/rehberler).",
+   "Amfi ayarları, hoparlör modelleri ve mikrofon mesafeleri yayımlanmış kaynaklarda yok; bu alanlardaki bilgiler tahmin.",
+   "Gearnews temiz sesler için Boss DD-6 ve MXR Phase 90 anıyor; ancak Mix'e göre stüdyoda pedal kullanılmamış. Ritim tonu için pedalsız zincir esas alındı.",
+   "Mix'teki '87' ifadesinin Neumann U87 olduğu çıkarım.",
+   "Tempo kaynaklara göre 126–130 BPM arasında değişiyor; Tunebat sayfasına ulaşılamadı. Tonalite çoğu kaynakta G minör."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mix - System of a Down (Toxicity kaydı)",
+    "url": "https://www.mixonline.com/recording/system-down-372602"
+   },
+   {
+    "title": "Equipboard - Toxicity",
+    "url": "https://equipboard.com/albums/system-of-a-down-toxicity"
+   },
+   {
+    "title": "Equipboard - Daron Malakian",
+    "url": "https://equipboard.com/daron-malakian"
+   },
+   {
+    "title": "Gearnews - The guitar sound of Chop Suey",
+    "url": "https://www.gearnews.com/the-guitar-sound-of-chop-suey-guitar/"
+   },
+   {
+    "title": "Louder - The story of Chop Suey",
+    "url": "https://www.loudersound.com/music/tracks-singles/the-story-of-chop-suey-system-of-a-down"
+   },
+   {
+    "title": "AudioKeychain - Chop Suey",
+    "url": "https://www.audiokeychain.com/track/YPv/system-of-a-down-chop-suey"
+   },
+   {
+    "title": "Melodics - Chop Suey",
+    "url": "https://melodics.com/learn-to-play/chop-suey-by-system-of-a-down-on-drums"
+   },
+   {
+    "title": "Thomann - System Of A Down Guitars, Amps & the SOAD Sound",
+    "url": "https://www.thomannmusic.com/blog/gear/system-of-a-down-guitars-amps-the-soad-sound/"
+   }
+  ]
+ }
+}

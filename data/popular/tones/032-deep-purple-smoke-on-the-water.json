@@ -1,0 +1,184 @@
+{
+ "rank": 32,
+ "part": "intro",
+ "researchedAt": 1795279486259,
+ "original": {
+  "song": {
+   "title": "Smoke On The Water",
+   "artist": "Deep Purple",
+   "album_or_year": "Machine Head (1972)",
+   "tone_character": "Orta frekansı öne çıkan, treble booster ile ısırgan üst uç kazanmış, hafif-orta crunch seviyesinde kırılan bir Strat + Marshall/Vox tonu; amfiler mesafeli mikrofonlandığı için ortam (room) karakteri belirgin. Modern ölçülere göre düşük gainli, dinamik ve 'havalı' bir distorsiyon.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "treble booster ısırığı",
+    "hafif-orta crunch",
+    "odalı/ambiyanslı",
+    "tek manyetikli netlik",
+    "dinamik"
+   ],
+   "bpm": "114 BPM",
+   "key": "G minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (CBS dönemi, büyük kafa; Blackmore'un 1968 civarı siyah Strat'ı olduğu belirtiliyor)",
+    "pickup": "Riff için manyetik belirtilmiyor; köprü manyetiği tahmini (Blackmore orta manyetiği genelde kullanmazdı). Solo: sap manyetiği (confirmed - Guitar Player)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 100W / Marshall Major 200W (modifiyeli)",
+     "channel": "Tek kanal (high treble girişi muhtemel)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "Tahmin: dönemin Marshall kullanımı gibi yüksek ses, güç katı kırılması"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Blackmore Vintage Guitar'a Machine Head için '4x12 kabinli 100 watt Marshall' kullandığını söylemiş; canlıda fabrika modifiyeli 200W Marshall Major. Ian Gillan ise 'Vox AC30 ve/veya Marshall' hatırlıyor. Ayarlar hiçbir kaynakta yok, değerler tamamen tahmin."
+    },
+    {
+     "model": "Vox AC30",
+     "channel": "Top Boost / Brilliant (tahmin)",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Gillan'ın hatırası ve Vintage Guitar'ın 'muhtemelen Vox da kullandı' yorumu; özellikle solo için Vox kullanılmış olabileceği belirtiliyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12",
+    "speakers": "Celestion G12H / G12M (25W/30W dönem Celestion'ları – tahmin)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönem için Neumann U67/U87 veya Shure SM57 tahmini)",
+      "position": "Mesafeli, oda içinde",
+      "distance": "Bilinmiyor; tona göre birkaç fit (mesafeli mikrofonlama)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "4x12 bilgisi Blackmore'dan (confirmed). Vintage Guitar riffteki Marshall sesinin ambiyanslı olduğunu ve kabinin mesafeli mikrofonlandığını düşündüğünü yazıyor. Amfiler Grand Hotel'in ayrı yatak odalarına yerleştirilmiş, battaniye ve şiltelerle bölmeler yapılmış."
+   },
+   "pedals": [
+    {
+     "model": "Hornby Skewes Treble Booster (germanyum)",
+     "purpose": "Amfinin girişini zorlayıp üst-orta frekansta ısırık ve hafif ekstra distorsiyon katmak",
+     "settings": [
+      {
+       "name": "Boost",
+       "value": "Açık",
+       "note": "Tek düğmeli/anahtarlı masa üstü kutu; Blackmore 'zemin pedalı değil, masa üstü bir kutuydu' demiş"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Revox tape echo / tape recorder",
+     "purpose": "Soloda eko (riffte yok)",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "yaklaşık 100-150 ms",
+       "note": "Tahmin; kısa tekrarlı tape eko"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Aralık 1971'de Montreux'de Rolling Stones Mobile Studio ile kaydedildi, teknisyen/prodüktör Martin Birch (prodüksiyon Deep Purple). Casino yanınca backing track Pavilion tiyatrosunda ekipman dengelemek için yapılan bir jamden alındı; gürültü şikâyetiyle oradan çıkarıldılar, vokal ve solo kapalı Grand Hotel'de overdub edildi. Amfiler ayrı odalarda, kablolar koridorlardan geçirilerek. Riff albümü doldurmak için son anda şarkıya dönüştü. Riffin belirgin bir double-track'i bilinmiyor; giriş tek gitar ile başlıyor."
+  },
+  "difficulty": {
+   "score": 1,
+   "factors": [
+    "Dörtlü aralıkla (G-D tellerinde) çift ses",
+    "Pena yerine parmaklarla iki teli aynı anda çekme",
+    "Zamanlama ve senkop hissi",
+    "Dörtlüleri beşli power chord gibi değil doğru aralıkta çalmak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta",
+    "description": "Riff tonuyla aynı amfi ayarı; G5–F5 civarı kısa akorlar ve riff tekrarı, biraz daha arka planda, org ile birlikte. Ton değişikliği gerekmez."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı ton; daha geniş açılan power chord'lar (C, Ab vb.). Değişiklik yok."
+   },
+   {
+    "name": "Solo",
+    "description": "Sap manyetiğine geç (confirmed). Grand Hotel'de ayrı odada izole amfiyle kaydedildi; Vox AC30 olmuş olabilir. Biraz daha sustain/gain, kısa tape eko (Revox) ekle. Teknik: geniş bükmeler, hızlı vibrato, pentatonik/dorian koşular, legato ve hızlı alternatif pena."
+   },
+   {
+    "name": "Çıkış (outro)",
+    "description": "Riff tonuyla jam; org ve gitar birlikte, ton aynı kalır."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı: Blackmore 100W Marshall + 4x12 diyor, Gillan 'Vox AC30 ve/veya Marshall' diyor; bazı kaynaklar 200W/280W modifiyeli Marshall Major yazıyor.",
+   "Gitar ayrıntıları çelişkili: Guitar Player akçaağaç klavyeli CBS Strat diyor, başka bir kaynak siyah 1968 Strat diyor.",
+   "Riffte hangi manyetiğin kullanıldığı hiçbir kaynakta yok; köprü manyetiği tahmini.",
+   "Amfi düğme ayarları ve mikrofon modelleri hiçbir kaynakta yok, tamamen tahmin.",
+   "Tonalite tartışmalı: riff G minör (G-Bb-C), bazı analiz araçları C majör/C minör veriyor. BPM 112–115 arası raporlanıyor (Music Gateway/Shazam 114).",
+   "Tunebat'ta stüdyo versiyonunun sayfası bulunamadı; tunebat sonucu LSO canlı versiyonuna ait.",
+   "Solodaki Revox ekosunun bilgisi tek ve zayıf bir kaynaktan geliyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar Player – Classic Tones: Smoke On the Water",
+    "url": "https://www.guitarplayer.com/players/classic-tones-smoke-on-the-water-deep-purple"
+   },
+   {
+    "title": "Vintage Guitar – Pop 'N Hiss: Deep Purple's Machine Head",
+    "url": "https://vintageguitar.com/73283/pop-n-hiss-deep-purples-machine-head"
+   },
+   {
+    "title": "MusicRadar – Smoke On The Water at 50",
+    "url": "https://www.musicradar.com/news/smoke-on-the-water-at-50-the-story-of-deep-purple-mk-ii-and-the-most-famous-guitar-riff-of-all-time"
+   },
+   {
+    "title": "Gearnews – Smoke on the Water gear",
+    "url": "https://www.gearnews.com/?p=254453"
+   },
+   {
+    "title": "Wikipedia – Smoke on the Water",
+    "url": "https://en.wikipedia.org/wiki/Smoke_on_the_Water"
+   },
+   {
+    "title": "Music Gateway – Smoke on the Water key/BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/deep-purple/smoke-on-the-water-remastered-2012"
+   },
+   {
+    "title": "Karaoke Version – Smoke on the Water (Gm)",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/deep-purple/smoke-on-the-water.html?aff=278"
+   },
+   {
+    "title": "Equipboard – Machine Head",
+    "url": "https://equipboard.com/albums/deep-purple-machine-head"
+   }
+  ]
+ }
+}

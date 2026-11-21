@@ -1,0 +1,179 @@
+{
+ "rank": 7,
+ "part": "intro",
+ "researchedAt": 1795278632585,
+ "original": {
+  "song": {
+   "title": "Come As You Are",
+   "artist": "Nirvana",
+   "album_or_year": "Nevermind (1991)",
+   "tone_character": "Temize yakın, hafif sıcak, çok belirgin analog chorus/flanger dalgalanması olan 'sulu' bir riff tonu. Double-track edilerek geniş bir stereo alana yayılmış; kalın, yumuşak tizli ve hafif bulanık.",
+   "tone_tags": [
+    "temiz / hafif kırılma eşiği",
+    "yoğun analog chorus",
+    "sulu, dalgalı",
+    "double-track geniş stereo",
+    "yumuşak tizler",
+    "pes akort kalınlığı"
+   ],
+   "bpm": "120 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Mustang / Fender Jaguar / Univox Hi-Flier (Nevermind dönemi sol el gitarları; bir kaynak Mosrite diyor)",
+    "pickup": "Köprü manyetiği (humbucker'lı köprü pozisyonu tahmini)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Fender Bassman veya Vox AC30",
+     "channel": "Clean (temiz / hafif crunch)",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Butch Vig, Nevermind'da temel amfilerin Mesa Boogie, Fender Bassman ve 'temiz, hafif overdrive sesler için' Vox AC30 olduğunu söylüyor (doğrulandı, albüm geneli). Bu riff için hangi amfinin kullanıldığı kaynakta yok; temiz riff için Bassman/AC30 tahmini. Amfiler çoğunlukla üst üste kaydedilip karıştırıldı."
+    },
+    {
+     "model": "Mesa/Boogie (Studio .22 preamp gibi, kesin model belirsiz)",
+     "channel": "Lead/distorsiyon (nakarat bölümleri için)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Nakaratlardaki distorsiyonlu gitarlar için olası amfi; riff için değil."
+    }
+   ],
+   "cab": {
+    "model": "Amfinin kendi kabini / combo (bilinmiyor)",
+    "speakers": "Bilinmiyor (AC30 ise Celestion Blue/Silver; Bassman ise 4x10 Jensen tarzı — tahmin)",
+    "mics": [
+     {
+      "model": "Neumann U87",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "AKG 414",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "Shure SM57",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "İkincil kaynağa göre amfiler aynı anda U87, 414, 421 ve SM57 ile mikrofonlanıp her şarkı için en iyi mikrofon seçildi; bu şarkıda hangisinin kullanıldığı bilinmiyor. Cobain'in amfileri küçük bir izolasyon odasındaydı."
+   },
+   "pedals": [
+    {
+     "model": "Electro-Harmonix Small Clone",
+     "purpose": "Riff/verse ve pre-chorus'taki sulu, dalgalı chorus",
+     "settings": [
+      {
+       "name": "Depth",
+       "value": "Yukarı (yoğun) veya aşağı — kaynaklar çelişiyor",
+       "note": "Orijinal ayar belgelenmemiş"
+      },
+      {
+       "name": "Rate",
+       "value": "Saat 11–12 civarı",
+       "note": "Blog önerisi; orijinal değil"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss DS-1 Distortion",
+     "purpose": "Nakaratlarda distorsiyon (riff'te kapalı)",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Bir tam ses pes (D standart: D G C F A D)",
+   "recording_notes": "Sound City Studios (Van Nuys, CA), 1991 başı; prodüktör Butch Vig (Nirvana ile birlikte), miks Andy Wallace. Vig'e göre şarkıdaki 'washy' efekt Small Clone'dan geliyor ve gitarlar double-track edilerek daha da genişletildi. İşlem minimum tutuldu; Neve konsol. Solo iki take'te kaydedildi."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "tek nota riff, düşük tellerde",
+    "temiz ve eşit picking (sustain korunarak)",
+    "pes akortta tel gevşekliğine rağmen doğru entonasyon",
+    "tutarlı ritim / zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Verse / Pre-chorus",
+    "description": "Giriş riffinin aynısı devam ediyor; aynı temiz + Small Clone tonu, bas da riffi birebir takip ediyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Small Clone kapalı (ya da daha az belirgin), distorsiyonlu ton: Mesa Boogie ve/veya DS-1 ile yüksek gain, kalın power-chord'lar; double-track."
+   },
+   {
+    "name": "Solo",
+    "description": "Riff melodisini takip eden solo; chorus'lu ve daha fazla overdrive/distorsiyonlu ton, bending ve vibrato içeriyor. İki take'te kaydedildi; Vig'e göre solo bölümlerinde genelde temiz ve distorsiyonlu overdub'lar karıştırıldı."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıda kullanılan gitar modeli ve amfi kaynaklarda belirtilmiyor; Bassman/AC30 ve Mustang/Jaguar dönem bilgisine dayalı tahmin.",
+   "Akort: çoğu kaynak bir tam ses pes (D standart) diyor; Guitar.com yarım ses pes diyor.",
+   "Tonalite kaynaklarda E minör (yazılı tab'a göre) olarak geçiyor; D standart akortta duyulan perde daha pes olabilir — delay/akort senkronu için kulakla kontrol edin.",
+   "Small Clone ayarları belgelenmemiş; bloglardaki Depth/Rate önerileri birbiriyle çelişiyor.",
+   "Mikrofon listesi (U87, 414, 421, SM57) albüm geneli için ikincil kaynak; bu şarkıda hangisinin seçildiği bilinmiyor.",
+   "Mesa Boogie'nin kesin modeli (Studio .22) kaynakta yok."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Sound On Sound – Butch Vig: Nevermind",
+    "url": "https://www.soundonsound.com/people/butcvig-nevermind-garbage"
+   },
+   {
+    "title": "Wikipedia – Come as You Are (Nirvana song)",
+    "url": "https://en.wikipedia.org/wiki/Come_as_You_Are_(Nirvana_song)"
+   },
+   {
+    "title": "Guitar World – The story of Nirvana's Nevermind",
+    "url": "https://www.guitarworld.com/artists/bands/the-story-of-nirvanas-nevermind"
+   },
+   {
+    "title": "Guitar Recording in Grunge/Alt (mikrofon bilgisi)",
+    "url": "https://sites.google.com/lipasixthformcollege.org/project3matt/research/the-production-of-grungealt"
+   },
+   {
+    "title": "Hooktheory – Come As You Are",
+    "url": "https://hooktheory.com/theorytab/view/nirvana/come-as-you-are"
+   },
+   {
+    "title": "AcousticBrainz – Come As You Are",
+    "url": "https://acousticbrainz.org/13cafb9a-3379-4472-97df-298b6d8220d3?n=11"
+   },
+   {
+    "title": "Woodbrass – Study of a riff: Come As You Are",
+    "url": "https://woodbrass.com/en/blogs/legend/study-of-a-riff-come-as-you-are-by-nirvana"
+   },
+   {
+    "title": "Guitar World – How to play Come As You Are",
+    "url": "https://www.guitarworld.com/lessons/how-to-play-come-as-you-are-on-guitar"
+   },
+   {
+    "title": "Guitar.com – Nirvana's 10 greatest guitar moments",
+    "url": "https://guitar.com/guides/essential-guide/nirvana-10-greatest-guitar-moments-ranked/"
+   },
+   {
+    "title": "Equipboard – Kurt Cobain amplifiers",
+    "url": "https://equipboard.com/pros/kurt-cobain/gear/amplifiers"
+   },
+   {
+    "title": "zZounds – Legends of Tone: Nirvana",
+    "url": "https://blog.zzounds.com/2017/10/21/legends-of-tone-kurt-cobain"
+   }
+  ]
+ }
+}

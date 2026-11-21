@@ -1,0 +1,199 @@
+{
+ "rank": 15,
+ "part": "rhythm",
+ "researchedAt": 1795278907129,
+ "original": {
+  "song": {
+   "title": "Killing in the Name",
+   "artist": "Rage Against the Machine",
+   "album_or_year": "Rage Against the Machine (1992)",
+   "tone_character": "Kuru, odası az, yüksek kazançlı ama aşırı doymamış bir Marshall JCM800 crunch tonu. Telecaster'ın köprü tınısı sıkı ve vurucu, drop D'de net bir alt ve öne çıkan orta frekanslar var.",
+   "tone_tags": [
+    "kuru (reverb yok)",
+    "orta frekans öne çıkık",
+    "sıkı alt",
+    "yüksek kazançlı crunch",
+    "vurucu atak",
+    "Marshall karakteri",
+    "çok az kompresyon"
+   ],
+   "bpm": "89 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1982 Fender Telecaster \"Sendero Luminoso\" (drop D Tele); bindirme kanalında Gibson Les Paul Standard \"Del Taco\"",
+    "pickup": "Büyük olasılıkla köprü manyetiği (stok Telecaster single-coil); Les Paul overdub'ında köprü humbucker (tahmin)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2205 (50W, split-channel)",
+     "channel": "Boost (overdrive) kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "10",
+       "note": "Boost kanalı"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Boost kanalı"
+      },
+      {
+       "name": "Bass",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "1",
+       "note": "Master bölümü"
+      },
+      {
+       "name": "Master Volume",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Reverb",
+       "value": "0",
+       "note": "Dahili reverb kapalı"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Morello'nun 1988 civarından beri hiç değiştirmediğini söylediği ayarlar (killerguitarrigs). Bu ayarlar onun genel kalıcı ayarı; bu şarkı için ayrıca doğrulanmış değil, ama başka bir ayar olduğuna dair kanıt da yok."
+    }
+   ],
+   "cab": {
+    "model": "Peavey VTM 4x12 (Peavey 412 kabin)",
+    "speakers": "4x Celestion G12K-85",
+    "mics": [
+     {
+      "model": "Bilinmiyor (SM57 tahmini)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Kabin ve hoparlör kaynaklarda doğrulanıyor. Mikrofon detayları hiçbir kaynakta yok. Amfiler arka odalardaydı; son derece kuru, oda sesi neredeyse yok."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby (wah)",
+     "purpose": "Bu şarkının ritim kısmında kullanılmıyor; Morello'nun pedalboard'unda var",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "DigiTech WH-1 Whammy",
+     "purpose": "Yalnızca solo: +2 oktav. Ritimde kapalı",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "2 OCT UP",
+       "note": "Solo için"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Ibanez DFL Flanger",
+     "purpose": "Bir kaynağa göre şarkıda kullanılıyor; muhtemelen yalnızca belirli efekt anlarında, ana ritimde değil",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss DD-2 Digital Delay",
+     "purpose": "Morello'nun rig'inde var; ritimde duyulur bir delay yok",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "Sound City Studios (Van Nuys) ve Industrial Recording'de kaydedildi. Prodüktör Garth \"GGGarth\" Richardson, mix Andy Wallace. Grup canlı çaldı: davul ana odada, amfiler arka odalarda, overdub çok az. Albüme giren take canlı kayıt (Richardson'ın 2020'de paylaştığı video). Morello'ya göre Les Paul \"Del Taco\" ana overdub gitarıydı ve bu şarkıda Telecaster'ı destekliyor, yani bazı yerlerde ikinci bir gitar katmanı var. Ton çok kuru, reverb ya da ambiyans yok."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "drop D'de palm mute'lu chug",
+    "sıkı ve tutarlı sağ el zamanlaması",
+    "tek parmakla power chord geçişleri",
+    "giriş riffinde bend ve slide",
+    "final bölümünde dayanıklılık gerektiren yoğun crescendo"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritim tonunun aynısı. Drop D'de vurucu power chord'lar ve açık D chug'ları; ses tam ve palm mute'suz/yarı mute'lu."
+   },
+   {
+    "name": "Verse",
+    "description": "Aynı amfi ayarı. Daha seyrek ve palm mute'lu, funk etkili kısa bir figür; dinamiği sağ el ve volume ile biraz kısın."
+   },
+   {
+    "name": "Pre-chorus / kıta geçişleri",
+    "description": "Aynı ton. Kreşendo yapan, sustain'li akorlar ve geçişler."
+   },
+   {
+    "name": "Solo",
+    "description": "DigiTech Whammy +2 oktav açık; Telecaster ve aynı JCM800 ayarı. Toggle/vibrato ile synth benzeri, çığlık gibi çizgiler. Bir kaynak Les Paul ve Ibanez DFL flanger kullanıldığını söylüyor."
+   },
+   {
+    "name": "Final (\"F*** you, I won't do what you tell me\")",
+    "description": "Aynı distorted ton, Les Paul overdub katmanıyla daha yoğun. Giderek sertleşen chug'lar ve power chord'lar; efekt yok."
+   }
+  ],
+  "warnings": [
+   "Gitar konusunda kaynaklar çelişiyor. Guitar World ve Morello'nun kendisi drop D şarkılarının 1982 Telecaster ile çalındığını ve Les Paul \"Del Taco\"nun overdub için kullanıldığını söylüyor. Gearnews ise EMG'li \"Arm the Homeless\" Strat'tan bahsediyor; bu muhtemelen yanlış ya da canlı performanslardan kalan bir bilgi.",
+   "Amfi ayarları Morello'nun genel ve kalıcı JCM800 ayarı; bu şarkıya özel bir kayıt notu değil.",
+   "Hangi manyetiğin seçildiği doğrulanmadı. Köprü manyetiği olması tür ve tondan çıkarılan bir tahmin.",
+   "Kabin mikrofonu ve mikrofonun konumu hiçbir kaynakta yok.",
+   "Tonalite tartışmalı: Tunebat G majör, AcousticBrainz D majör/minör diyor. Müzikal olarak drop D'de D merkezli, minör/blues karakterli bir yapı var.",
+   "Ibanez DFL flanger'ın bu şarkıda nerede kullanıldığı belirsiz."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Tom Morello used a Les Paul on RATM's debut",
+    "url": "https://guitarworld.com/news/turns-out-tom-morello-used-a-les-paul-on-rage-against-the-machines-debut-album"
+   },
+   {
+    "title": "Killer Guitar Rigs – RATM debut gear",
+    "url": "https://killerguitarrigs.com/rage-against-the-machine-debut-guitar-gear/"
+   },
+   {
+    "title": "Gearnews – The guitar tone of Killing in the Name",
+    "url": "https://gearnews.com/the-guitar-tone-of-killing-in-the-name-guitar/"
+   },
+   {
+    "title": "Guitar World – How to sound like your heroes: Tom Morello",
+    "url": "https://www.guitarworld.com/uncategorized/how-sound-your-heroes-tom-morello"
+   },
+   {
+    "title": "Tunebat – Killing In The Name",
+    "url": "https://tunebat.com/Info/Killing-In-The-Name-Rage-Against-The-Machine/59WN2psjkt1tyaxjspN8fp"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/2107aac0-151f-4783-987f-acc8c8a32a94"
+   },
+   {
+    "title": "Equipboard – Tom Morello",
+    "url": "https://equipboard.com/pros/tom-morello"
+   }
+  ]
+ }
+}

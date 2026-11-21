@@ -1,0 +1,171 @@
+{
+ "rank": 75,
+ "part": "rhythm",
+ "researchedAt": 1795281080148,
+ "original": {
+  "song": {
+   "title": "Holiday",
+   "artist": "Green Day",
+   "album_or_year": "American Idiot (2004)",
+   "tone_character": "Kalın, sıkı ve orta frekansları öne çıkık bir Marshall crunch'ı: high-gain değil, sıcak ve yoğun bir britanya distorsiyonu. Çok kanallı, sağ ve sol olarak double-track edilmiş güç akorlarından oluşan geniş, duvar gibi bir punk-rock ritmi.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "kalın crunch",
+    "orta-yüksek gain",
+    "double-track geniş stereo",
+    "sıkı alt",
+    "P-90 hamlığı",
+    "parlak üst-orta"
+   ],
+   "bpm": "146–149 BPM",
+   "key": "F minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Junior (1950'ler, tek manyetikli); bazı katmanlarda Les Paul Standard \"Boobie\"",
+    "pickup": "Köprü manyetiği, P-90 (Junior'da tek manyetik var)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall modifiyeli head (\"Idiot Amp\", ek gain katı eklenmiş; kaynaklara göre Super Lead tabanlı)",
+     "channel": "Tek kanal (high treble girişi, ek gain katı ile)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin; orijinal ayar yayımlanmamış"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekansın öne çıkması için"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "7",
+       "note": "tahmin; amfi güç katında da sürülüyor"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World, albümün ana kalın crunch amfisi olarak ek gain katlı modifiyeli Marshall'ı ('Idiot Amp') gösteriyor. Bu amfinin özellikle Holiday'de kullanıldığı açıkça yazılmıyor. Düğme ayarları tamamen tahmin."
+    },
+    {
+     "model": "Park 75 (50 W, 'Dookie' modunun bir versiyonuyla)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Guitar World, Park 75'i American Idiot'un ikinci temel amfisi olarak anıyor. Ritim katmanlarında Marshall ile karıştırılmış olabilir (tahmin)."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 tipi)",
+    "speakers": "Celestion (büyük olasılıkla G12M/G12T-75 tipi, doğrulanmadı)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kenara yakın cap / hafif off-axis",
+      "distance": "1–2 in"
+     },
+     {
+      "model": "Royer R-121 veya Neumann U87/414 (ikinci mikrofon)",
+      "position": "Cap ile kenar arası",
+      "distance": "2–6 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "American Idiot için mikrofon zinciri hiçbir kaynakta yazmıyor. Buradaki iki mikrofonlu 4x12 düzeni, aynı ekibin (Cavallo) 21st Century Breakdown'da kullandığı yönteme (57+121 / 57+414, iki 4x12) dayanan bir tahmin."
+   },
+   "pedals": [],
+   "tuning": "Standart E (Eb'ye pes değil)",
+   "recording_notes": "Prodüktörler Rob Cavallo ve Green Day; kayıt mühendisi Doug McKean, miks Chris Lord-Alge (confirmed). Kayıtlar 2003–2004'te Oakland'daki Studio 880 ve Hollywood'daki Ocean Way'de yapıldı; Capitol Studios'ta da çalışıldığı belirtiliyor (confirmed). Ritim gitarlar çok katmanlı ve sağ-sol double-track (likely; Green Day/Cavallo'nun standart yöntemi). CLA miksi kompresyonlu, parlak ve yoğun. Gitarlarda belirgin reverb ya da delay yok, ton kuru (likely). Pedal kullanımına dair somut bilgi yok: Billie Joe 'farklı pedallarla uğraştığını' söylüyor ama model vermiyor. Distorsiyon esas olarak amfiden geliyor (likely)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "hızlı aşağı vuruşlu sekizlik güç akorları (down-picking, ~147 BPM)",
+    "dörtlüklerde palm muting ile açık akorlar arasında dinamik geçiş",
+    "güç akoru pozisyon değişimleri (F5–Db5–Ab5–Eb5)",
+    "uzun süre sabit sağ el dayanıklılığı"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritimle aynı ton; davul girişinin ardından tam distorsiyonlu açık güç akorları (Fm–Db–Ab–Eb) çalınıyor. Fark yok, sadece daha açık ve vurgulu çalınıyor."
+   },
+   {
+    "name": "Kıta",
+    "description": "Aynı distorsiyonlu ton; ağırlıklı olarak palm-mute'lu sekizlikler, bazen açık akor vurguları var. Gain ve ayarlar aynı, dinamik sağ elle kontrol ediliyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı ton; palm mute olmadan açık güç akorları çalınıyor, katman sayısı artmış olabilir (tahmin). Daha geniş ve yüksek bir duvar etkisi var."
+   },
+   {
+    "name": "Köprü ('Zieg heil' konuşma bölümü)",
+    "description": "Daha seyrek; vurgulu akorlar ve aralarda boşluklar var, ton aynı distorsiyon. Kısmen daha düşük yoğunlukla çalınıyor."
+   },
+   {
+    "name": "Solo",
+    "description": "Kısa melodik solo, büyük olasılıkla aynı Les Paul Junior/Marshall tonuyla; hafif daha fazla sustain için gain biraz artırılabilir. Bending ve vibrato içeriyor (likely)."
+   }
+  ],
+  "warnings": [
+   "Holiday'e özel ekipman bilgisi yok. Gitar ve amfi bilgisi American Idiot albümünün genel rig'inden çıkarıldı.",
+   "Ground Guitar'daki 'Floyd Les Paul Junior → Park, Marshall ile ağır katmanlar' bilgisi Butch Vig'den alıntılanıyor ve aslında 21st Century Breakdown (2009) kayıtlarına ait (Mix Online). Bu bilgi doğrudan American Idiot'a uygulanmamalı.",
+   "Equipboard, albüm için Orange OD120, Victoria ve Fender Deluxe Reverb gibi başka amfiler de listeliyor. Bu amfilerin Holiday'de kullanılıp kullanılmadığı belirsiz.",
+   "Amfi düğme ayarları ve mikrofon düzeni tamamen tahmin.",
+   "BPM kaynaklara göre 146–149 arasında değişiyor; Tunebat sayfası bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Billie Joe Armstrong on the making of American Idiot",
+    "url": "https://guitarworld.com/features/green-day-billie-joe-armstrong-on-the-making-of-american-idiot"
+   },
+   {
+    "title": "Ground Guitar – Billie Joe Armstrong's Park 75",
+    "url": "https://www.groundguitar.com/billie-joe-armstrong-guitars-and-gear/billie-joe-armstrongs-park-75/"
+   },
+   {
+    "title": "Equipboard – Green Day American Idiot (Deluxe)",
+    "url": "https://equipboard.com/albums/green-day-american-idiot-deluxe"
+   },
+   {
+    "title": "Mix Online – Green Day 21st Century Breakdown recording",
+    "url": "https://www.mixonline.com/?p=69004"
+   },
+   {
+    "title": "Seymour Duncan forum – American Idiot tone",
+    "url": "https://forum.seymourduncan.com/threads/american-idiot-tone.23469/"
+   },
+   {
+    "title": "Hooktheory – Green Day Holiday",
+    "url": "https://www.hooktheory.com/theorytab/view/green-day/holiday"
+   },
+   {
+    "title": "Audiokeychain – Green Day Holiday",
+    "url": "https://www.audiokeychain.com/track/bTL/green-day-holiday"
+   },
+   {
+    "title": "Karaoke Version – Holiday",
+    "url": "https://www.karaoke-version.com/custombackingtrack/green-day/holiday.html"
+   },
+   {
+    "title": "Wikipedia – American Idiot",
+    "url": "https://mobileapps.wikiwand.com/en/American_Idiot"
+   }
+  ]
+ }
+}

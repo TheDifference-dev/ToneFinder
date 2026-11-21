@@ -1,0 +1,205 @@
+{
+ "rank": 18,
+ "part": "intro",
+ "researchedAt": 1795278989448,
+ "original": {
+  "song": {
+   "title": "Seek & Destroy",
+   "artist": "Metallica",
+   "album_or_year": "Kill 'Em All (1983)",
+   "tone_character": "Erken 80'ler thrash'inin ham, orta frekansları öne çıkan, cızırtılı Marshall distorsiyonu: modern metal kadar oyuk ya da sıkışık değil, biraz 'kutu gibi' ve kuru, az odalı bir kayıt. Palm mute'lu E pedal notaları yumruk gibi, açık akorlar ise kaba ve parlak bir saturasyonla çınlıyor.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "orta frekans öne çıkık",
+    "ham/kuru",
+    "parlak tiz",
+    "orta-yüksek gain",
+    "hafif gevşek alt",
+    "80'ler Marshall cızırtısı"
+   ],
+   "bpm": "142 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Electra Flying V kopyası (Japon yapımı, 'Flying Wedge' 2236 olarak geçiyor), beyaz",
+    "pickup": "Köprü manyetiği – Seymour Duncan Invader (yüksek çıkışlı humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP 2203 (100W Master Volume), Jose Arredondo modlu",
+     "channel": "Tek kanal (Master Volume tasarımı), lead/high input",
+     "settings": [
+      {
+       "name": "Pre-amp Volume",
+       "value": "8",
+       "note": "tahmin; amfinin yüksek kazançlı kullanıldığı biliniyor, değer belgelenmemiş"
+      },
+      {
+       "name": "Master Volume",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin; kayıtta orta frekanslar belirgin"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Hammett bu amfiyi 'büyülü, efsanevi Marshall' diye anlatıyor; Hetfield'ın amfisiydi ve albümden sonra (Ocak 1984) Boston'da kamyondan çalındı. Bonedo bunu Arredondo'nun master volume eklediği JMP 2203 olarak veriyor, bazı kaynaklar ise hot-rod yapılmış 1959 Super Lead diyor. Modu yapan, EVH'nin Marshall'larını da modlayan L.A.'li teknisyen (Arredondo) olarak geçiyor. Hammett de solo kanallarını aynı amfiyle kaydetti."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (muhtemelen 1960A/B)",
+    "speakers": "Celestion G12-65 / G12T-75 (dönemin Marshall standardı) – belgelenmemiş",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Hoparlör konisine yakın, kenara doğru (tahmin)",
+      "distance": "1–3 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon ayrıntısı bulunan kaynaklarda yok. Düşük bütçeli bir stüdyo olduğundan tek dinamik close mic en olası seçenek."
+   },
+   "pedals": [
+    {
+     "model": "Pro Co RAT",
+     "purpose": "Kazancı artırmak/sıkılaştırmak için amfinin önünde boost/distorsiyon (Hetfield'ın ritmi)",
+     "settings": [
+      {
+       "name": "Distortion",
+       "value": "3",
+       "note": "tahmin; düşük-orta, amfiyi itmek için"
+      },
+      {
+       "name": "Filter",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "7",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez Tube Screamer (TS-808/TS9)",
+     "purpose": "Hammett'in soloları için boost; ritim kanalında kullanıldığı kesin değil",
+     "settings": [
+      {
+       "name": "Overdrive",
+       "value": "2",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Mayıs 1983'te Music America Studios'ta (Rochester, NY) yaklaşık 17 günde yapıldı. Prodüktör Paul Curcio, mühendis Chris Bubacz, yapımcı Jon Zazula (Megaforce). Az ekipmanlı bir stüdyo olduğu belirtiliyor. Hetfield'ın ritim gitarları büyük olasılıkla katlanarak (double-track) sol/sağa kaydedildi; bu, döneme ve dinleyerek varılan bir çıkarım. Hammett'in soloları için 4–5 günü vardı ve ilk çekimler kabul edildi. Belirgin bir reverb ya da delay yok, ton kuru."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Palm mute'lu E pedal notasıyla orta tempoda alternate/downpicking",
+    "A ve D tellerinde hammer-on/pull-off süslemeleri",
+    "Mute'lu ve açık notalar arasında ritmik doğruluk",
+    "~142 BPM'de sağ el dayanıklılığı (Metallica ölçüsüyle kolay)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta ve nakarat riffleri",
+    "description": "Ton giriş riffiyle aynı: köprü manyetiği, aynı Marshall distorsiyonu. Nakaratta daha çok açık power chord var, palm mute azalıyor."
+   },
+   {
+    "name": "Ara bölüm (hızlanan kısım)",
+    "description": "Tempo ikiye katlanmış hissi veriyor ve hızlı downpicking/alternate picking gerektiriyor. Ton aynı; alt frekansı biraz daha sıkı tutmak için Bass hafif kısılabilir."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "Siyah Gibson Flying V ('74 ya da '78), aynı modlu Marshall. Amfinin önünde Ibanez Tube Screamer boost ve Cry Baby wah kullanıldı (kaynaklarda geçiyor). Daha fazla sustain ve orta frekans gerekiyor; solo pentatonik/blues kalıplarında, hızlı legato ve wah süpürmeleriyle çalınıyor."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Ana riffe dönülüyor, ton giriş/riff ile aynı."
+   }
+  ],
+  "warnings": [
+   "Amfi modeli tartışmalı: Bonedo ve Guitar.com Arredondo modlu Marshall Master Volume (JMP 2203) diyor; Guitar World ve bazı kaynaklar hot-rod yapılmış 1959 Super Lead diyor.",
+   "Hetfield'ın gitarı: Hetfield kendisi 'beyaz Flying V' diyor ve Electra kopyası en güçlü kanıt. Yine de bir Louder kaynağı ritim gitarını Gibson Flying V olarak veriyor. Invader manyetiği tek bir kaynağa (Bonedo) dayanıyor.",
+   "RAT'in ritim kayıtlarında kullanıldığı ikincil kaynaklara dayanıyor. Tüm düğme değerleri tahmin.",
+   "Kabin, hoparlör ve mikrofon bilgisi hiçbir kaynakta yok; hepsi tahmin.",
+   "Tonalite: analiz siteleri A minör de gösteriyor. Ancak riff E pedal/E minör pentatonik üzerine kurulu olduğundan E minör alındı. BPM 138–143 arasında veriliyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Prime Cuts: Hetfield & Hammett critique key songs",
+    "url": "https://www.guitarworld.com/magazine/prime-cuts-metallicas-james-hetfield-and-kirk-hammett-critique-key-songs-band-s-harsh-noble-history"
+   },
+   {
+    "title": "Bonedo – Metallica: Das Gitarren und Bass Equipment der ersten drei Alben",
+    "url": "https://www.bonedo.de/artikel/metallica-das-gitarren-und-bass-equipment-der-ersten-drei-alben"
+   },
+   {
+    "title": "Guitar.com – Metallica gear facts",
+    "url": "https://guitar.com/features/artist-rigs/metallica-gear-facts/"
+   },
+   {
+    "title": "MusicRadar – Kirk Hammett on Kill 'Em All",
+    "url": "https://www.musicradar.com/news/guitars/kirk-hammett-on-metallicas-kill-em-all-173297"
+   },
+   {
+    "title": "Louder – The story of Kill 'Em All",
+    "url": "https://www.loudersound.com/features/metallica-kill-em-all-story-behind-the-album"
+   },
+   {
+    "title": "Equipboard – James Hetfield",
+    "url": "https://equipboard.com/pros/james-hetfield"
+   },
+   {
+    "title": "Klangio – Seek & Destroy (BPM/key)",
+    "url": "https://songs.klang.io/en/s/Metallica/Seek%20%26%20Destroy/FLTchCiC0T0"
+   },
+   {
+    "title": "AcousticBrainz – Seek & Destroy analysis",
+    "url": "https://acousticbrainz.org/2926c126-464c-4a5b-a5ac-c72ba22bdc59"
+   },
+   {
+    "title": "Karaoke-Version – Seek & Destroy",
+    "url": "https://www.karaoke-version.com/custombackingtrack/metallica/seek-and-destroy.html"
+   }
+  ]
+ }
+}

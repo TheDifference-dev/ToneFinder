@@ -1,0 +1,274 @@
+{
+ "rank": 76,
+ "part": "rhythm",
+ "researchedAt": 1795281207671,
+ "original": {
+  "song": {
+   "title": "Wherever I May Roam",
+   "artist": "Metallica",
+   "album_or_year": "Metallica (Black Album), 1991",
+   "tone_character": "Ağır distorsiyonlu ama Justice dönemine göre daha dolgun ortalı, kalın ve sıkı bir ritim tonu. Birden çok amfi ve kabinden gelen katmanlar sol, sağ ve ortaya yerleştirilmiş; alt telleri vurgulayan güçlü bir 'crunch' ve hafif oda ambiyansı var.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "kesik ama Justice'e göre daha dolgun orta",
+    "parlak üst",
+    "çok katmanlı (sol/sağ/orta)",
+    "hafif oda ambiyansı",
+    "palm mute vurgulu"
+   ],
+   "bpm": "131 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP Explorer (EMG'li); bazı kaynaklara göre siyah ESP MX-220 da kullanıldı",
+    "pickup": "Köprü manyetiği, EMG 81 (aktif)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (Simul-Class; bazı kaynaklara göre Mesa tarafından modifiye edilmiş IIC++)",
+     "channel": "Lead",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "9.5",
+       "note": "Sad But True için yayımlanan ayarlar; WIMR için doğrulanmadı"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "Pull Shift"
+      },
+      {
+       "name": "Bass",
+       "value": "2",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "Master 1",
+       "value": "4",
+       "note": "Pull Deep"
+      },
+      {
+       "name": "Lead Drive",
+       "value": "6",
+       "note": "Pull Lead"
+      },
+      {
+       "name": "Lead Master",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "3",
+       "note": ""
+      },
+      {
+       "name": "GEQ 80 Hz",
+       "value": "+2 dB",
+       "note": ""
+      },
+      {
+       "name": "GEQ 240 Hz",
+       "value": "0 dB",
+       "note": ""
+      },
+      {
+       "name": "GEQ 750 Hz",
+       "value": "-12 dB",
+       "note": "V şeklinde orta kesme"
+      },
+      {
+       "name": "GEQ 2.2 kHz",
+       "value": "0 dB",
+       "note": ""
+      },
+      {
+       "name": "GEQ 6.6 kHz",
+       "value": "+3 dB",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Hetfield 1991'de Guitar World'e 'son üç albümde kullandığım Mesa Boogie Simul-Class Mark II'yi kullandım' dedi; bu kısım doğrulanmış. Ayarlar ise Guitar World'ün Sad But True analizinden alındı, aynı oturumlardan olduğu için yalnızca güçlü bir ipucu sayılmalı."
+    },
+    {
+     "model": "Modifiye Marshall JCM800 (Jose Arredondo modu, Bob Rock'ın getirdiği söyleniyor)",
+     "channel": "Yüksek gain",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Mesa'nın kestiği ortaları geri kazandırmak için katman olarak kullanıldı. Bob Rock, Hetfield'a biraz orta frekansın tonu iyileştirdiğini gösterdi (bu kısım doğrulanmış)."
+    },
+    {
+     "model": "Mesa/Boogie Mark IV, ADA MP-1 preamp + Mesa/Boogie Strategy 400 power amp, birkaç vintage amfi",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Ek katmanlar ve doku için kullanıldı. Hetfield 'doku için birkaç vintage amfi kullandık' diyor (doğrulanmış); hangi modeller olduğu bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Çeşitli Marshall 1960B 4x12 kabinler (9–11 kabin)",
+    "speakers": "Celestion Vintage 30",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönemin standardı Shure SM57 / Sennheiser MD 421 olabilir; bu bir tahmin)",
+      "position": "Çeşitli pozisyonlar, kabin başına farklı",
+      "distance": "Yakın"
+     },
+     {
+      "model": "Ambiyans/oda mikrofonları",
+      "position": "Uzak, perdeyle çevrili küçük oda",
+      "distance": "Birkaç feet"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Vintage King'e göre Hetfield'ın ritmi 9 ya da 11 kabinle kaydedildi; kabinlerin bir kısmı üst üste, bir kısmı yerdeydi ve bazıları bölmelerle ayrılmıştı. Alt tellerde daha fazla 'crunch' için kabinlerin etrafı perdeyle küçük bir odaya çevrildi, ambiyans için de bazı mikrofonlar uzağa kondu. Mikrofon modelleri hiçbir kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Aphex EQF-2 parametrik EQ (x2)",
+     "purpose": "Amfinin efekt döngüsünde ton şekillendirme",
+     "settings": [
+      {
+       "name": "EQ1 High Shelf",
+       "value": "+6 dB @ 4.2 kHz",
+       "note": ""
+      },
+      {
+       "name": "EQ1 Mid",
+       "value": "-6 dB @ 1.2 kHz",
+       "note": ""
+      },
+      {
+       "name": "EQ1 Low Shelf",
+       "value": "+4 dB @ 120 Hz",
+       "note": ""
+      },
+      {
+       "name": "EQ1 HPF",
+       "value": "100 Hz",
+       "note": ""
+      },
+      {
+       "name": "EQ2 High Shelf",
+       "value": "+6 dB @ 6 kHz",
+       "note": ""
+      },
+      {
+       "name": "EQ2 Mid",
+       "value": "-6 dB @ 900 Hz",
+       "note": ""
+      },
+      {
+       "name": "EQ2 Low-Mid",
+       "value": "-4 dB @ 240 Hz",
+       "note": "peaking"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Aphex CX-1 Compressor/Expander",
+     "purpose": "Efekt döngüsünde dinamik kontrol ve gürültü kapısı/expander",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt One on One Studios'ta (Los Angeles) yapıldı; şarkı Nisan 1991'de kaydedildi. Prodüktör Bob Rock, mühendisler Randy Staub ve Mike Tacci. Ritim gitarlar üç kanalda katmanlandı (sol, sağ, orta); farklı amfi/kabin kombinasyonları ve farklı ayarlarda overdub'lar kullanıldı, ayrıca dış EQ uygulandı. Miks SSL 4000 konsolda yapıldı. Bob Rock davul ve bası kompresledi ama gitarları miks aşamasında kompreslemedi. Riffin keskin, reverb'lü vuruşları 12 telli Warwick bas ile çalındı; intro'da elektrik sitar ve gong var."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Orta-hızlı, sıkı palm mute'lu alternate picking (131 BPM'de 8'lik ve 16'lık notalar)",
+    "E pedal tonu üzerinde kromatik/frig riffler",
+    "Akorlar arasında temiz susturma",
+    "Hetfield tarzı sert downpicking dayanıklılığı",
+    "Uzun şarkı (6:44) boyunca tutarlı ritim"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Sitar/12 telli intro",
+    "description": "Elektrik sitar (Coral/Danelectro tipi sitar-gitar), gong ve 12 telli bas içeren doğu esintili giriş. Distorsiyon yok; sitar sesi akustik/temiz. Hammett S&M'de Danelectro elektrik sitar kullandı. Uyarlarken ritim tonundan tamamen ayrı, temiz bir preset gerekir: köprü manyetiği veya sitar simülasyonu, gain sıfır, hafif reverb."
+   },
+   {
+    "name": "Intro yükselişi / ana riff girişi",
+    "description": "Ana ritim tonuyla aynı. Ağır gitarlar, katmanlı distorsiyonla E pedal riffine giriyor."
+   },
+   {
+    "name": "Verse ve chorus ritmi",
+    "description": "Bu raporun konusu olan ana ritim tonu. Köprü manyetiği, yüksek gain, palm mute; chorus'ta açık çalınan akorlar."
+   },
+   {
+    "name": "Köprü / ara bölüm (melodik)",
+    "description": "Daha melodik, harmonili gitar bölümü. Ton büyük ölçüde aynı distorsiyon, ama lead katmanlarda daha fazla orta ve sustain var."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "Hammett'in tonu: Bradshaw preamp (alt ve orta frekanslar) ile temiz tizler için Marshall'lar, ESP Strat tipi veya EMG'li '89 Les Paul Deluxe. Wah kullanılmış olabilir. Ritme göre daha ortalı, daha kompresli ve sustainli; delay/reverb miksten geliyor. Değişiklik olarak: orta frekansı yükselt, gain'i biraz artır, wah ve hafif delay ekle."
+   },
+   {
+    "name": "Outro",
+    "description": "Ana riff tonuna dönülüyor; sitar motifi tekrar duyulabilir."
+   }
+  ],
+  "warnings": [
+   "Amfi ayarları ve Aphex EQ değerleri Guitar World'ün 'Sad But True' analizinden alındı; aynı oturumlardan olsalar da WIMR için ayrıca doğrulanmadı. Sad But True D standart akortta, WIMR ise standart E'de.",
+   "Bazı kaynaklar amfiyi Mark IIC+, bazıları Mesa modifiyeli IIC++ olarak veriyor. Hetfield'ın kendisi 'Simul-Class Mark II' diyor.",
+   "Modifiye Marshall'ın Black Album'da kullanıldığını bazı kaynaklar söylüyor; GroundGuitar ise Arredondo modlu JCM800'ü Master of Puppets dönemine bağlıyor.",
+   "Gitar konusunda kaynaklar ayrışıyor: Hetfield 1991'de ESP Explorer (EMG) diyor, Guitar World ise ESP MX-220 diyor. WIMR'de hangisinin kullanıldığı belirsiz.",
+   "Kabin mikrofonlarının modeli ve pozisyonu hiçbir kaynakta yok.",
+   "Tonalite için kaynaklar çelişiyor: otomatik analizler A minör veya B veriyor, kulakla ve tablarla E (E minör/Frig) çıkıyor. E minör tercih edildi.",
+   "Intro'daki sitarı stüdyoda kimin çaldığı (Hetfield mi Hammett mi) ve hangi model olduğu doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Wikipedia - Wherever I May Roam",
+    "url": "https://en.wikipedia.org/wiki/Wherever_I_May_Roam"
+   },
+   {
+    "title": "Guitar World - Metallica Black Album 1991 interview",
+    "url": "https://www.guitarworld.com/features/metallica-black-album-1991-interview"
+   },
+   {
+    "title": "Guitar World - Secrets behind Sad But True",
+    "url": "https://www.guitarworld.com/gear/secrets-behind-metallica-sad-but-true"
+   },
+   {
+    "title": "Vintage King - Making of Metallica The Black Album",
+    "url": "https://vintageking.com/blogs/making-of/metallica-the-black-album"
+   },
+   {
+    "title": "GroundGuitar - James Hetfield's Mesa Boogie Mark IIC+",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-mesa-boogie-mark-iic/"
+   },
+   {
+    "title": "SongBPM - Wherever I May Roam",
+    "url": "https://songbpm.com/@metallica/wherever-i-may-roam"
+   },
+   {
+    "title": "Klang - Wherever I May Roam",
+    "url": "https://songs.klang.io/en/s/Metallica/Wherever%20I%20May%20Roam/cwPg8gJq_Kw"
+   },
+   {
+    "title": "Wikipedia - Mesa/Boogie Mark IIC+",
+    "url": "https://en.wikipedia.org/wiki/Mesa/Boogie_Mark_IIC%2B"
+   },
+   {
+    "title": "Equipboard - James Hetfield",
+    "url": "https://equipboard.com/pros/james-hetfield"
+   }
+  ]
+ }
+}

@@ -1,0 +1,188 @@
+{
+ "rank": 17,
+ "part": "rhythm",
+ "researchedAt": 1795278931444,
+ "original": {
+  "song": {
+   "title": "For Whom The Bell Tolls",
+   "artist": "Metallica",
+   "album_or_year": "Ride the Lightning (1984)",
+   "tone_character": "Orta-yüksek gainli, Marshall karakterli, kalın ve biraz kumlu bir 80'ler thrash ritim tonu. Master of Puppets kadar sıkı ve modern değil. Ortalar hafifçe geri çekik ama Marshall'ın üst-orta ısırığı yerinde, kayıt geniş ve biraz odalı.",
+   "tone_tags": [
+    "Marshall crunch/yüksek gain",
+    "Tube Screamer ile itilmiş",
+    "üst-orta ısırık",
+    "hafif kısık orta",
+    "kalın palm mute",
+    "geniş stereo double-track",
+    "hafif oda ambiyansı"
+   ],
+   "bpm": "118 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (Hetfield, 1984). Alternatif olarak Electra 2236 Flying V",
+    "pickup": "Köprü manyetiği. Explorer'daki manyetiğin Dirty Fingers olduğu söyleniyor. Electra kullanıldıysa stok ya da Seymour Duncan Invader SH-8 olabilir",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (100W; bazı kaynaklarda JMP 2203 diye geçiyor)",
+     "channel": "Tek kanal (Master Volume tasarımı), High input",
+     "settings": [
+      {
+       "name": "Pre-amp Volume",
+       "value": "8",
+       "note": "Tahmin: yüksek preamp gain, TS ile itiliyor"
+      },
+      {
+       "name": "Master Volume",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": "Tahmin: hafif kısık"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Hetfield'ın modifiyeli Marshall'ı Boston'da çalınınca Kopenhag'daki bir müzik mağazasından krediyle yeni bir JCM800 satın aldı. Bu amfi başta modifiye değildi. Önce Danimarkalı grupların (Mercyful Fate dahil) amfileri denendi. Bazı kaynaklarda Mesa/Boogie Mark II kullanıldığı da geçiyor ama doğrulanmadı. Kirk Hammett albümün tamamını Marshall'larla kaydettiğini söylüyor. Ayarlar hiçbir kaynakta yok, verilen değerler tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12 (yarım stak)",
+    "speakers": "Celestion G12-65 (bonedo'ya göre)",
+    "mics": [
+     {
+      "model": "Shure SM7",
+      "position": "Bilinmiyor (muhtemelen cap ile edge arası, on-axis)",
+      "distance": "Yakın mikrofonlama (bilinmiyor)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "SM7 bilgisi tek kaynağa (bonedo) dayanıyor. Sweet Silence'ın odası da kayıtta duyuluyor."
+   },
+   "pedals": [
+    {
+     "model": "Ibanez TS9 Tube Screamer",
+     "purpose": "Amfinin önünde boost/overdrive. Çalınan modifiyeli amfinin ekstra gain'ini taklit etmek için",
+     "settings": [
+      {
+       "name": "Overdrive",
+       "value": "2",
+       "note": "Tahmin: düşük drive"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "Tahmin: yüksek seviye ile amfiyi itme"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt 20 Şubat 1984'te Sweet Silence Studios'ta (Kopenhag, Danimarka) başladı. Prodüktör/mühendis Flemming Rasmussen'di ve 24 kanallı analog teyp kullanıldı. Hetfield'ın ritim gitarları büyük ihtimalle çoklu kanal olarak kaydedilip (en az çift) sağa sola panlandı. Girişteki çan sesi gitar değil: stüdyoda bir örsün reverb ile kaydedilmiş hali. Girişteki wah'lı, fuzz'lı melodik figür de gitar değil, Cliff Burton'ın basından (Morley wah ve Big Muff) geliyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "palm mute ile sekizlik chug",
+    "kromatik power chord kaydırmaları",
+    "ağır orta tempoda sıkı ritim (118 BPM)",
+    "tutarlı downpicking"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (örs/çan ve bas melodisi)",
+    "description": "Çan sesi örs, distorsiyonlu melodik figür ise Cliff Burton'ın wah ve fuzz'lı bası. Gitar tarafında aynı ritim tonuyla uzun tutulan akorlar ve kromatik inen power chord'lar var."
+   },
+   {
+    "name": "Giriş harmoni lead'leri",
+    "description": "Kirk Hammett'in Gibson Flying V (köprü manyetiği) ve Tube Screamer'la itilmiş Marshall'la çaldığı melodik lead hatları. Ritim tonundan daha fazla sustain ve orta frekans var, hafif reverb veya delay hissi var. Muhtemelen double-track edilmiş."
+   },
+   {
+    "name": "Verse ve nakarat ritmi",
+    "description": "İstenen bölüm: Hetfield'ın köprü manyetiği, JCM800 ve TS9'la çaldığı palm mute'lu ritim tonu. Nakaratta daha açık akorlar çalınıyor ama ton değişmiyor."
+   }
+  ],
+  "warnings": [
+   "Amfi kaynaklara göre değişiyor: JCM800 2203 mü JMP 2203 mü, Mesa/Boogie Mark II kullanıldı mı, kesin değil. Mesa Mark IIC+ asıl olarak Master of Puppets dönemiyle ilişkilendiriliyor.",
+   "Gitar kesin değil: bonedo ve Guitar World'deki Hetfield sözü Gibson Explorer'ı gösteriyor, Ground Guitar ise Electra Flying V'yi gösteriyor. Riffology'deki 'yedek ESP' bilgisi ise şüpheli.",
+   "TS9'un Hetfield'ın ritim gitarında mı yoksa yalnızca Kirk'ün lead'lerinde mi kullanıldığı kaynaklarda farklı anlatılıyor.",
+   "SM7 mikrofon ve G12-65 hoparlör bilgisi tek kaynağa (bonedo) dayanıyor.",
+   "Tonalite tartışmalı: E minör en yaygın görüş, ama Am, D minör ve A# analizleri de var. Tunebat sayfası bulunamadı.",
+   "Amfi ve pedal ayarlarının hepsi tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Ground Guitar – James Hetfield's Marshall JMP 2203",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-marshall-jmp-2203/"
+   },
+   {
+    "title": "Riffology – Metallica Ride the Lightning",
+    "url": "https://riffology.co/posts/metallica-ride-the-lightning/"
+   },
+   {
+    "title": "Bonedo – Metallica: Das Gitarren- und Bass-Equipment der ersten drei Alben",
+    "url": "https://www.bonedo.de/artikel/metallica-das-gitarren-und-bass-equipment-der-ersten-drei-alben"
+   },
+   {
+    "title": "Guitar World – Prime Cuts: Hetfield & Hammett",
+    "url": "https://www.guitarworld.com/magazine/prime-cuts-metallicas-james-hetfield-and-kirk-hammett-critique-key-songs-band-s-harsh-noble-history"
+   },
+   {
+    "title": "Ground Guitar – Electra 2236 Flying Wedge",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-electra-2236-flying-wedge/"
+   },
+   {
+    "title": "MusicRadar – Ride the Lightning tone with JCM800 and Tube Screamer",
+    "url": "https://musicradar.com/news/metallica-fan-recreates-james-hetfields-ride-the-lightning-guitar-tone-with-a-marshall-jcm-800-and-tube-screamer"
+   },
+   {
+    "title": "Louder – Ride the Lightning story",
+    "url": "https://www.loudersound.com/features/metallica-ride-the-lightning-story-behind-the-album"
+   },
+   {
+    "title": "Equipboard – James Hetfield",
+    "url": "https://equipboard.com/pros/james-hetfield"
+   },
+   {
+    "title": "AcousticBrainz – For Whom the Bell Tolls",
+    "url": "https://acousticbrainz.org/771ab043-8821-44f9-b8e0-2733c3126c6d"
+   },
+   {
+    "title": "Hooktheory – For Whom the Bell Tolls",
+    "url": "https://hooktheory.com/theorytab/view/metallica/for-whom-the-bell-tolls"
+   },
+   {
+    "title": "Karaoke Version – For Whom the Bell Tolls",
+    "url": "https://www.karaoke-version.com/custombackingtrack/metallica/for-whom-the-bell-tolls.html"
+   }
+  ]
+ }
+}

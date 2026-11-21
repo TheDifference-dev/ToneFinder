@@ -1,0 +1,146 @@
+{
+ "rank": 41,
+ "part": "lead",
+ "researchedAt": 1795279799964,
+ "original": {
+  "song": {
+   "title": "Wish You Were Here",
+   "artist": "Pink Floyd",
+   "album_or_year": "Wish You Were Here (1975)",
+   "tone_character": "Stüdyo kaydındaki solo elektro gitarla değil, akustik gitarla çalınmış (Martin D-35, mikrofonla kaydedilmiş). Tamamen temiz, parlak, doğal kompresyonlu, oda hissi az, yakın mikrofonlu bir akustik ton; elektro gitarda bunun karşılığı distorsiyonsuz, hafif kompresörlü, parlak bir temiz tondur.",
+   "tone_tags": [
+    "temiz",
+    "akustik",
+    "parlak",
+    "doğal kompresyon",
+    "yakın mikrofon",
+    "sıcak orta frekans",
+    "distorsiyon yok"
+   ],
+   "bpm": "60–62 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1969 Martin D-35 (6 telli akustik)",
+    "pickup": "Yok: akustik gitar, manyetik yok, mikrofonla kaydedildi",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Amfi yok (akustik gitar doğrudan mikrofonla kaydedildi)",
+     "channel": "Yok",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Solo akustik gitar olduğu için amfi kullanılmadı. Elektro gitarla taklit edilecekse: temiz kanal, düşük gain, parlak EQ, hafif kompresör (tahmin). Şarkıdaki pedal steel ara nağmeleri muhtemelen Gilmour'un o dönemki Hiwatt DR103 amfisinden geçti (likely)."
+    }
+   ],
+   "cab": {
+    "model": "Yok (akustik kayıt)",
+    "speakers": "Yok",
+    "mics": [
+     {
+      "model": "Bilinmiyor; muhtemelen Abbey Road'daki Neumann kondansatör mikrofonlardan biri (U67/U87), ama bu bir tahmin",
+      "position": "Klavye ile ses deliği arası (tahmin)",
+      "distance": "Yakın, yaklaşık 15–30 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Akustik kaydın mikrofon detayları hiçbir kaynakta yayımlanmamış."
+   },
+   "pedals": [
+    {
+     "model": "Konsol kompresörü / EMI kanal işlemcisi",
+     "purpose": "Akustiğin seviyesini dengelemek; Abbey Road'da o dönem standart bir uygulamaydı",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Ocak–Temmuz 1975 arasında Abbey Road Studios'ta yapıldı. Prodüktör Pink Floyd, kayıt mühendisi Brian Humphries. Girişte 12 telli riff (Martin D12-28) AM radyo sesine benzeyecek şekilde işlendi; radyo sesi Gilmour'un araba radyosundan kaydedilmiş. Ardından daha dolgun bir 6 telli akustik solo overdub olarak eklendi. Gilmour 'scat' vokali sololarla birlikte söylüyor. Şarkıda Gilmour'un çaldığı pedal steel de var (Fender 1000 twin neck). Master bantta final miksinde kullanılmamış pedal steel ve elektro gitar soloları bulunuyor. Stéphane Grappelli'nin kemanı miksten büyük ölçüde çıkarılmış, sadece yaklaşık 5:21'de duyuluyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Pentatonik tek nota melodiler",
+    "Çekiç ve çekme (hammer-on/pull-off)",
+    "Akustikte yarım ve tam ses bending",
+    "Bas notası ile melodiyi karıştırma (G/Em7 akorları üzerinde)",
+    "Zamanlama ve dinamik kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Radyo efektli giriş",
+    "description": "Martin D12-28 ile çalınan 12 telli Em7–G–A7sus4 riffi. Alçak ve yüksek frekanslar kesilip AM radyo sesi gibi bant genişliği daraltılmış, lo-fi ve kulağa küçük gelen bir ses. Elektroda temiz tona ek olarak sert bir high-pass/low-pass EQ veya telefon filtresi gerekir."
+   },
+   {
+    "name": "Giriş solosu (overdub)",
+    "description": "Radyo riffinin üstüne gelen 6 telli akustik lead (D-35). İstenen solo tonuyla aynı: tam frekanslı, temiz ve parlak."
+   },
+   {
+    "name": "Kıta ritmi",
+    "description": "12 telli ve 6 telli akustik ritim, piyano ile birlikte. Temiz akustik ton, akor çalımı, distorsiyon yok."
+   },
+   {
+    "name": "Pedal steel ara nağmeleri",
+    "description": "Gilmour'un Fender 1000 pedal steel'i ile çalınan elektrik kayma nağmeleri. Muhtemelen Hiwatt'tan geçen temiz, hafif sustain'li bir ton. Elektro gitarda slide veya volume swell ile taklit edilebilir."
+   },
+   {
+    "name": "Kapanış solosu ve scat",
+    "description": "Final solosu, Gilmour'un melodiyi aynı anda scat ile söylemesiyle devam edip rüzgar efektlerine karışıyor. Ton aynı temiz akustik; arkaya Minimoog ve kısa bir keman ekleniyor."
+   }
+  ],
+  "warnings": [
+   "Kullanıcı 'elektro gitar solosu' diyor, ama stüdyo kaydındaki sololar akustik gitarla çalınmış. Tonu elektro gitara uyarlamak gerekecek (temiz, parlak, kompresörlü; istenirse akustik simülatörü).",
+   "Hangi Martin'in hangi parçayı çaldığı kaynaklar arasında tartışmalı: Ground Guitar'a göre solo D-35, giriş D12-28. Guitar Player ise girişi 1971 tarihli bir 'D-28-12' ile ilişkilendiriyor.",
+   "Mikrofon, mikrofon pozisyonu ve kompresör detayları kaynaklarda yok; bunlar tamamen tahmin.",
+   "BPM kaynağa göre değişiyor: otomatik analizler 121–125 BPM veriyor, yani yarım zamanda yaklaşık 60–62 BPM. Delay senkronu için ikisinden birini seçin.",
+   "Tonalite için otomatik analizler Em, F#m ve G majör arasında farklı sonuç veriyor. Akor yapısı (G, C, D, Am, Em) G majörü işaret ediyor.",
+   "Pedal steel ekipmanı (Fender 1000) yalnızca bir fan sitesinin oturum listesine dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Gilmourish – Wish You Were Here 1975 gear",
+    "url": "https://www.gilmourish.com/?page_id=17"
+   },
+   {
+    "title": "Wikipedia – Wish You Were Here (Pink Floyd song)",
+    "url": "https://en.wikipedia.org/wiki/Wish_You_Were_Here_(Pink_Floyd_song)"
+   },
+   {
+    "title": "Ground Guitar – David Gilmour's 1969 Martin D-35",
+    "url": "https://www.groundguitar.com/david-gilmour-gear/david-gilmours-1969-martin-d-35/"
+   },
+   {
+    "title": "Ground Guitar – David Gilmour's 1971 Martin D12-28",
+    "url": "https://www.groundguitar.com/david-gilmour-gear/david-gilmours-1971-martin-d12-28/"
+   },
+   {
+    "title": "Guitar Player – Gilmour favorite solo / guitar behind biggest songs",
+    "url": "https://www.guitarplayer.com/guitarists/how-the-hell-did-i-actually-do-that-david-gilmour-revealed-his-favorite-solo-and-the-guitar-behind-pink-floyds-biggest-songs-its-not-the-black-strat"
+   },
+   {
+    "title": "Last.fm – Wish You Were Here wiki",
+    "url": "https://last.fm/music/Pink+Floyd/_/Wish+You+Were+Here/+wiki"
+   },
+   {
+    "title": "Far Out – The mistake in Wish You Were Here",
+    "url": "https://faroutmagazine.co.uk/mistake-pink-floyd-wish-you-were-here-that-saved-david-gilmour-career/"
+   },
+   {
+    "title": "BPM data (Mixmeister/Traktor)",
+    "url": "https://www.cs.ubc.ca/~davet/music/track/PINKFLYD_WWH/PINKFLYD_WWH-04.html"
+   },
+   {
+    "title": "klang.io – Wish You Were Here",
+    "url": "https://songs.klang.io/en/s/Pink%20Floyd/Wish%20You%20Were%20Here/01izSmWzgeI"
+   },
+   {
+    "title": "Equipboard – Wish You Were Here album",
+    "url": "https://equipboard.com/albums/pink-floyd-wish-you-were-here"
+   }
+  ]
+ }
+}

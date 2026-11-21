@@ -1,0 +1,221 @@
+{
+ "rank": 91,
+ "part": "rhythm",
+ "researchedAt": 1795281758865,
+ "original": {
+  "song": {
+   "title": "Sonne",
+   "artist": "Rammstein",
+   "album_or_year": "Mutter (2001)",
+   "tone_character": "Çok katmanlı ve kuru, yüksek gain'li bir metal ritim duvarı. Mesa Rectifier'ın kalın, sıkı distorsiyonunun yanında SansAmp'in daha dijital, ileri itilmiş orta frekanslı ve sert karakteri var; reverb ya da delay yok denecek kadar az, ton ağır ve baskın.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "orta frekans belirgin",
+    "kuru",
+    "çok katmanlı duvar",
+    "palm mute vuruşu",
+    "endüstriyel",
+    "kompresli"
+   ],
+   "bpm": "75 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Richard Z. Kruspe: ESP (Kirk Hammett tarzı / ESP M serisi), Paul Landers: Ernie Ball Music Man Axis",
+    "pickup": "Köprü humbucker (Kruspe'nin ESP'lerinde muhtemelen aktif EMG 81, Axis'te fabrika DiMarzio humbucker); ritim için köprü manyetiği",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Dual Rectifier (Kruspe)",
+     "channel": "Red / Modern (yüksek gain kanalı)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6",
+       "note": "tahmin; layering yüzünden aşırı gain gerekmez"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mid",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kaynaklar Kruspe'nin favori amfisinin Dual Rectifier olduğunu söylüyor. Hellner Herzeleid'de Rectifier ile SansAmp'i aynı anda kaydettiklerini anlatıyor; Mutter'da da aynı yöntemi kullandıkları kuvvetli bir ihtimal. Ayar değerlerinin hepsi tahmin."
+    },
+    {
+     "model": "Tech 21 SansAmp (GT2 / rack SansAmp) (Landers)",
+     "channel": "Distorsiyonlu, doğrudan konsola (amfisiz)",
+     "settings": [
+      {
+       "name": "Amp",
+       "value": "California",
+       "note": "guitarguitar yazarının kendi tahmini"
+      },
+      {
+       "name": "Mod",
+       "value": "Hi-Gain",
+       "note": "tahmin"
+      },
+      {
+       "name": "Drive",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Low",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "High",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Landers kendisini 'no-amp guy' olarak tanımlıyor ve SansAmp kullanıyor. Hellner'a göre karışımın yaklaşık 2/3'ü Rectifier, 1/3'ü SansAmp ve iki sinyal çapraz panlanıyor."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie Rectifier 4x12 (Kruspe'nin Rectifier'ı için)",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Neumann U 67 / M 149 / U 47 (büyük diyaframlı kondansatör)",
+      "position": "Bilinmiyor; muhtemelen hoparlöre yakın",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin modeli belgelenmemiş. Mikrofon bilgisi Herzeleid kayıtlarından geliyor: Hellner SM57/MD421 değil, Neve preamp üzerinden Neumann kondansatörler kullandıklarını söylüyor. Mutter için doğrulanmadı. SansAmp kanalı kabinsiz, doğrudan kaydediliyor."
+   },
+   "pedals": [
+    {
+     "model": "Tech 21 SansAmp GT2 / SansAmp rack",
+     "purpose": "Landers'ın amfisiz distorsiyon kanalı (DI)",
+     "settings": [
+      {
+       "name": "Amp",
+       "value": "California",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "Kayıt Mayıs–Haziran 2000'de Studio Miraval'de (Correns, Fransa) yapıldı. Prodüktör Jacob Hellner ve Rammstein, mühendis Ulf Kruckenberg (Wikipedia). Ön prodüksiyon Heiligendamm'da yapıldı. Kaynaklara göre Mutter'da gitaristlerin her biri şarkı başına 14'e kadar gitar kanalı kaydetti, ritimde toplam yaklaşık 28 kanal var. Hellner yöntemi: her riff 2–4 kez çalınıyor (kopyala-yapıştır yok), Rectifier ve SansAmp eşzamanlı kaydedilip çapraz panlanıyor, sonuç bir duvar sesi. Reverb ve delay neredeyse yok. Arka plan dokularını gitar yerine Flake'in synth'leri sağlıyor; şarkıda 'Symphony of Voices' örnekleri kullanılmış. Şarkı başta boksör Vitali Klitschko'nun giriş müziği olarak yazıldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Drop D'de tek parmakla power chord",
+    "Sıkı, dinamik palm mute",
+    "Davul ve bas ile kusursuz senkron (endüstriyel 'makine' hissi)",
+    "Riffler arası slide geçişleri",
+    "Çok katmanlı kayıtta temiz ve tutarlı vuruş"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (sayım / synth)",
+    "description": "Synth ve koro örnekleri öne çıkıyor. 'Eins, hier kommt die Sonne' sayımıyla birlikte gitar ya susuyor ya da az katmanlı ve ağır palm mute'lu vuruşlar çalıyor. Ton aynı, sadece katman sayısı az."
+   },
+   {
+    "name": "Kıta",
+    "description": "Aynı distorsiyonlu ton, daha sıkı palm mute ve boşluklu ritim. Synth ve vokale yer kalsın diye gitar daha seyrek. Gain aynı, istenirse Bass biraz azaltılabilir."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Tam vurulan, sustain'li açık power chord'lar ve en kalabalık katman duvarı (iki gitarist, çok take, çapraz panlı Rectifier + SansAmp). Ton değişmiyor; algılanan kalınlık overdub sayısından geliyor."
+   },
+   {
+    "name": "Köprü / ara bölüm ve çıkış",
+    "description": "Ana riff ve nakarat tonunun tekrarı. Klasik bir solo yok, lead daha çok synth ve orkestral katmanlarda. Gitar tonu ritimdeki distorsiyonlu tonla aynı."
+   }
+  ],
+  "warnings": [
+   "Sonne'ye özel bir ekipman röportajı bulunamadı. Amfi, SansAmp ve mikrofon bilgileri gitaristlerin dönem riglerinden ve Hellner'ın Herzeleid (1995) anlatımından çıkarıldı.",
+   "Akortu kaynaklar çoğunlukla Drop D olarak veriyor, ama tab'lar topluluk kaynaklı. Bir bas tab'ı BEAD diyor. Kaydı dinleyerek doğrulamak lazım.",
+   "Tempo: 75 BPM (klang.io, karaoke-version); AcousticBrainz 150 BPM ölçüyor (çift zaman). Delay senkronunda iki değer de kullanılabilir.",
+   "Tonalite çoğu kaynakta B minör, ama otomatik analizler farklı değerler de veriyor.",
+   "Kabin, hoparlör ve tüm düğme ayarları tahmin. Mutter'ın mix mühendisi doğrulanmadı (Wikipedia'da mixer listelenmemiş, Ronald Prent'in kullanılmadığı biliniyor).",
+   "guitarguitar'ın SansAmp 'California' ayarı yazarın kendi tahmini olarak belirtilmiş.",
+   "Kruspe'nin Mutter stüdyo kaydında hangi ESP'yi ve hangi manyetiği kullandığı belgelenmemiş."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "guitarguitar – How to Play and Sound Like RAMMSTEIN",
+    "url": "https://www.guitarguitar.co.uk/news/142485/"
+   },
+   {
+    "title": "Guitar World – Jacob Hellner details the making of Herzeleid",
+    "url": "https://www.guitarworld.com/features/rammstein-producer-jacob-hellner-details-the-making-of-the-industrial-metal-icons-1995-debut-herzeleid"
+   },
+   {
+    "title": "Wikipedia – Mutter (album)",
+    "url": "https://en.wikipedia.org/wiki/Mutter_(album)"
+   },
+   {
+    "title": "Louder – 20 things you didn't know about Rammstein's Mutter",
+    "url": "https://www.loudersound.com/features/20-things-you-didnt-know-about-rammsteins-mutter"
+   },
+   {
+    "title": "Equipboard – Rammstein Mutter",
+    "url": "https://equipboard.com/albums/rammstein-mutter"
+   },
+   {
+    "title": "MusicRadar – Paul Landers: I've always been the no-amp guy",
+    "url": "https://www.musicradar.com/news/rammsteins-paul-landers-ive-always-been-the-no-amp-guy-i-have-never-really-bothered-with-them"
+   },
+   {
+    "title": "Lick Library – Sonne lesson",
+    "url": "https://www.licklibrary.com/learn/lessons/rammstein/sonne-1"
+   },
+   {
+    "title": "Ultimate Guitar – Sonne tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/rammstein/sonne_tabs_25417"
+   },
+   {
+    "title": "guitartabs.cc – Sonne tab",
+    "url": "https://guitartabs.cc/tabs/r/rammstein/sonne_tab_ver_7.html"
+   },
+   {
+    "title": "Klang.io – Sonne",
+    "url": "https://songs.klang.io/en/s/Rammstein/Sonne/sU_wwaxfalE"
+   },
+   {
+    "title": "Karaoke Version – Sonne",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/rammstein/sonne.html"
+   },
+   {
+    "title": "Hooktheory – Sonne",
+    "url": "https://hooktheory.com/theorytab/view/rammstein/sonne"
+   },
+   {
+    "title": "AcousticBrainz – Sonne",
+    "url": "https://acousticbrainz.org/af314bff-1539-468c-bd76-d051a7c5757b?n=2"
+   }
+  ]
+ }
+}

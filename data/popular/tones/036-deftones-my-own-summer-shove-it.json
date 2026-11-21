@@ -1,0 +1,191 @@
+{
+ "rank": 36,
+ "part": "rhythm",
+ "researchedAt": 1795279643714,
+ "original": {
+  "song": {
+   "title": "My Own Summer (Shove It)",
+   "artist": "Deftones",
+   "album_or_year": "Around the Fur (1997)",
+   "tone_character": "Akordu çok pes edilmiş, tüp preamp ile doyurulmuş, kalın ve basık bir distorsiyon. Altı ağır, ortası tok, tizi kumlu; gain aşırı değil, ağırlığı pes akort ve sert pena vuruşu veriyor.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "ağır ve kalın alt",
+    "tok orta frekans",
+    "pes akort",
+    "hafif kumlu tiz",
+    "rack preamp karakteri",
+    "geniş stereo duvar"
+   ],
+   "bpm": "143 BPM",
+   "key": "C# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP Stephen Carpenter imza modeli (6 telli, dönemin ESP custom/imza gövdesi)",
+    "pickup": "Köprü manyetiği – Seymour Duncan JB (SH-4)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "A/DA MP-1 (tüp MIDI preamp) + Marshall 9200 stereo power amfi",
+     "channel": "MP-1 distorsiyon (yüksek gain) programı",
+     "settings": [
+      {
+       "name": "Gain/Drive",
+       "value": "7",
+       "note": "tahmin; aşırı değil, doymuş ama net"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin; Terry Date albümde daha ağır alt istedi"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin; oyuk değil, tok orta"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Carpenter, Guitar World röportajında Around the Fur'da ADA MP-1 kullandığını ve ilk kez ayrı power amfi olarak Marshall 9200'e geçtiğini söylüyor; daha önce iki adet 100W JCM800 kafa kullanıyormuş. Albüm geneli için doğrulanmış bir bilgi bu, şarkıya özel bir kaynak yok. Knob değerleri hiçbir kaynakta yok, hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (muhtemelen 1960A/B ya da 1960AV)",
+    "speakers": "Celestion (G12T-75 ya da Vintage 30 olabilir – tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Hoparlör başına bir mikrofon, kon kenarına yakın (tahmin)",
+      "distance": "Izgaraya yakın, yaklaşık 1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "1997 kayıtlarındaki kabin hiçbir kaynakta belgelenmemiş. Marshall power amfi ve dönemin alışkanlıkları Marshall 4x12'yi akla getiriyor; bir hayran NAM capture'ı da 1960AV IR'si kullanıyor. Terry Date, Tape Op röportajında genel yöntemini 'her hoparlöre bir 57' diye anlatıyor ama bu, bu albüme özgü doğrulanmış bir bilgi değil."
+   },
+   "pedals": [
+    {
+     "model": "Rocktron Intellifex",
+     "purpose": "Rack efekt: delay ve modülasyon (albümdeki işlerin çoğu bununla yapılmış). Ritim riffinde büyük olasılıkla kapalı ya da çok az; sakin verse kısımlarında kullanılmış olabilir.",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss octave pedalı (muhtemelen OC-2)",
+     "purpose": "Albüm rack'inde bulunan oktav efekti; bu şarkının ritminde kullanıldığına dair bir kanıt yok",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Boss FZ-2 Hyper Fuzz",
+     "purpose": "Albüm rack'inde bulunan fuzz/ek gain; bu şarkıda kullanılıp kullanılmadığı bilinmiyor",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Reverb pedalı (model belirtilmemiş)",
+     "purpose": "Ortam",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Drop C# (Db Ab Db Gb Bb Eb)",
+   "recording_notes": "Studio Litho, Seattle; prodüktör/mühendis Terry Date (1997). Albümün çoğu kaydedildikten sonra Date grubu yeni şarkı yazmaya yönlendirmiş ve 'My Own Summer' stüdyoda yazılmış (Carpenter, Guitar World). Date albümde daha ağır bir alt frekans önermiş. Chino Moreno, Date'in mikrofon yerleşimi ve EQ'da çok aktif olduğunu söylüyor. Ritim gitarının sol-sağ double-track edilmiş olması büyük olasılık (dönemin Date prodüksiyon tarzı; doğrulanmadı). Albümde ikinci gitarist yok, Chino o dönemde gitarı çok az çalıyordu."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "pes akortta tek parmakla power chord / oktav kaydırmaları",
+    "kromatik slide'lar",
+    "sert ve vurgulu aşağı vuruş",
+    "sessizlik ile ağır riff arasındaki dinamik geçişler",
+    "palm mute az, açık ve tınlayan akorlar"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Davul girişinin ardından gelen ağır, kaydırmalı ana riff. Ritim tonuyla aynı: köprü manyetiği, MP-1'in distorsiyonu, büyük olasılıkla double-track."
+   },
+   {
+    "name": "Verse (sakin kısımlar)",
+    "description": "Gitar seyrekleşiyor, tiz ve uyumsuz tek notalar ya da tınlamaya bırakılan sesler çalıyor. Ses biraz kısılmış, gain düşürülmüş ya da daha hafif bir program kullanılmış olabilir; Intellifex'ten delay veya modülasyon eklenmiş olabilir (tahmin)."
+   },
+   {
+    "name": "Nakarat / 'Shove it' kısmı",
+    "description": "Tam ağır ritim tonu; ana riffle aynı ayar, en yoğun ve geniş stereo duvar."
+   }
+  ],
+  "warnings": [
+   "Akort kaynaklara göre değişiyor: tab sitelerinin çoğu Drop C#/Db diyor, Kerrang ise Around the Fur için genel olarak 'drop-D akortlar' diyor. Kulakla doğrulanmalı.",
+   "Tempo, karaoke sitelerine ve Mixmeister'a göre yaklaşık 143 BPM; bazı tab'lar yarım zamanla 72 BPM yazıyor. Tunebat sayfası bulunamadı.",
+   "Tonalite C#m ya da F#m olarak veriliyor; riffin merkezi pes C#.",
+   "MP-1 ve Marshall 9200 albüm geneli için doğrulanmış, ama bu şarkıya özel bir belge yok. Bazı blog yazıları Mesa Dual Rectifier önerse de Rectifier asıl olarak White Pony döneminde kullanıldı.",
+   "Kabin, hoparlör ve mikrofon bilgileri tamamen tahmin.",
+   "Ampli knob değerleri hiçbir kaynakta yok.",
+   "Rack efektlerinin (Intellifex, oktav, Hyper Fuzz) bu şarkıda nerede kullanıldığı bilinmiyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Stephen Carpenter Looks Back on Around the Fur",
+    "url": "https://www.guitarworld.com/artists/stephen-carpenter-looks-back-deftones-breakthrough-album-around-fur"
+   },
+   {
+    "title": "Equipboard – Deftones Around the Fur",
+    "url": "https://equipboard.com/albums/deftones-around-the-fur"
+   },
+   {
+    "title": "Equipboard – Stephen Carpenter",
+    "url": "https://equipboard.com/stephen-carpenter"
+   },
+   {
+    "title": "Louder – How we made Around The Fur",
+    "url": "https://www.loudersound.com/features/deftones-how-we-made-around-the-fur"
+   },
+   {
+    "title": "Tape Op – Terry Date",
+    "url": "https://tapeop.com/interviews/123/terry-date"
+   },
+   {
+    "title": "Tape Op – Chino Moreno",
+    "url": "https://tapeop.com/interviews/123/chino-moreno-deftones-and-team-sleep"
+   },
+   {
+    "title": "Guitar Chalk – My Own Summer amp settings",
+    "url": "https://www.guitarchalk.com/my-own-summer-shove-it-amp-settings/"
+   },
+   {
+    "title": "Ultimate Guitar tab",
+    "url": "https://pt.ultimate-guitar.com/tab/deftones/my-own-summer-shove-it-tabs-28999"
+   },
+   {
+    "title": "Karaoke Version – key/BPM",
+    "url": "https://www.karaoke-version.com/custombackingtrack/deftones/my-own-summer-shove-it.html"
+   },
+   {
+    "title": "UWaterloo music DB – BPM",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/MATRX____ST1/MATRX____ST1-09.html"
+   },
+   {
+    "title": "TONE3000 – ADA MP-1 Stephen Carpenter capture",
+    "url": "https://www.tone3000.com/tones/ada-mp-1-stephen-carpenter-guitar-rig-48520"
+   },
+   {
+    "title": "Kerrang – Terry Date / Deftones",
+    "url": "https://kerrang.com/how-terry-date-captured-the-magic-of-deftones-on-ohms"
+   }
+  ]
+ }
+}

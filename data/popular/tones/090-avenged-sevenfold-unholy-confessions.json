@@ -1,0 +1,232 @@
+{
+ "rank": 90,
+ "part": "rhythm",
+ "researchedAt": 1795281759696,
+ "original": {
+  "song": {
+   "title": "Unholy Confessions",
+   "artist": "Avenged Sevenfold",
+   "album_or_year": "Waking the Fallen (2003)",
+   "tone_character": "Erken 2000'lerin metalcore tonu: Rectifier tarzı, yoğun ama fazla bastırılmamış yüksek gain distorsiyon. Drop D chug'larda sıkı, kuru bir alt var; tiz-orta bölge parlak ve isırgan. Ritimler sağ ve sol kanala ayrılıp double-track edilmiş.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "parlak tiz-orta",
+    "kuru (efektsiz)",
+    "double-track geniş stereo",
+    "keskin atak",
+    "noise gate'li"
+   ],
+   "bpm": "195 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Schecter (S-1 / Avenger tipi; 2003'te prodüktör Mudrock'un Schecter sponsorluğu vardı)",
+    "pickup": "Köprü manyetiği; humbucker (Seymour Duncan SH-4 JB olabilir, kesin değil)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Dual Rectifier (100W 3-Channel Solo Head)",
+     "channel": "Kırmızı (Modern high gain) kanal",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin; 2003 metalcore ritimleri için tipik"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin; Drop D'de sıkı alt için abartılmamış"
+      },
+      {
+       "name": "Mid",
+       "value": "5.5",
+       "note": "tahmin; ritimlerin miksin içinden çıkması için hafif orta"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Equipboard'a göre Zacky Vengeance 2003 Vans Warped Tour'da Dual Rectifier kullandı; aynı dönemde stüdyoda da kullanılmış olması güçlü bir dolaylı kanıt. Waking the Fallen seanslarına ait amfi kredisi bulunamadı. Synyster Gates'in o dönem Mesa, Marshall ve Peavey kullandığı biliniyor; Bogner Uberschall daha çok City of Evil dönemine ait. Ayarlar tamamen tahmin."
+    },
+    {
+     "model": "Peavey 5150 (alternatif / ek)",
+     "channel": "Lead",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Seymour Duncan ve Riffhard grubun kullandığı amfiler arasında 5150/6505'i sayıyor ama bu albümle bağını doğrulayan bir kaynak yok."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie Rectifier 4x12 (Standard/Traditional Slant)",
+    "speakers": "Celestion Vintage 30",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Cap ile edge arası, hafif off-axis",
+      "distance": "1–2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Uberproaudio, Zacky'nin rig'inde Mesa Rectifier kabin olduğunu söylüyor (tarih yok). Mikrofon bilgisi yok; SM57 standart stüdyo uygulamasına dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Overdrive boost (Boss SD-1 / Tube Screamer tipi)",
+     "purpose": "Amfi girişini sıkılaştırmak (Drive düşük, Level yüksek)",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "1",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Noise gate (ör. ISP Decimator ya da stüdyo gate'i)",
+     "purpose": "Senkoplu stop-start riffler arasında sessizliği sağlamak",
+     "settings": [
+      {
+       "name": "Threshold",
+       "value": "Orta-yüksek",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "Nisan–Haziran 2003'te Hollywood'da Third Stone ve Mates Inc. stüdyolarında kaydedildi (bir kaynak NRG'yi de anıyor). Prodüktör, mühendis ve miksaj Andrew 'Mudrock' Murdock; ortak prodüktör Fred Archambault; kayıt kredisi 'The Gatekeepers'; asistan mühendis Ai Fujisaki; mastering Tom Baker; gitar teknisyeni Stephen Ferrara. Bütçe yaklaşık 30.000 $'dı. Ana riffi Zacky Vengeance yazdı. Synyster Gates'e göre solo kayıtlarında ağırlıkla Schecter kullanıldı. Ritim gitarlarda, döneme uygun olarak iki gitaristin sağ ve sol kanala ayrıldığı double-tracking var. Bu dinlemeye dayanan bir çıkarım. Belirgin modülasyon ya da delay yok; ritim tonu kuru."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Hızlı alternate picking ve senkoplu, palm mute'lu metalcore riffleri",
+    "Davulun senkoplu kick kalıplarıyla sıkı senkron (yaklaşık 190–195 BPM)",
+    "Boş D teli pedal notası ile üst tellerdeki melodik notalar arasında hızlı geçişler",
+    "Breakdown bölümlerinde ağır palm mute ve chug",
+    "İkinci gitarla armonili hatlarda tam zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / giriş",
+    "description": "Zacky'nin yazdığı melodik ana riff. Ritimle aynı distorsiyonlu ton kullanılıyor; iki gitar armoni ya da unison çalıyor. Fark: tek nota hatlarının daha net duyulması için Gain biraz daha düşük olabilir (tahmin)."
+   },
+   {
+    "name": "Solo",
+    "description": "Synyster Gates'in solosu; Schecter ile köprü manyetiğinde çalınıyor (Schecter'in solo kayıtlarında kullanıldığı doğru). Fark: Gain biraz daha yüksek ya da önünde boost, Mid hafif artırılmış, mikste kısa bir delay ve reverb (tahmin). Teknikler: legato, hızlı alternate picking, geniş bend ve vibrato."
+   },
+   {
+    "name": "Breakdown / köprü",
+    "description": "Ritimle aynı ton; yalnızca ağır palm mute ve Drop D chug var. Gate daha sıkı olabilir."
+   },
+   {
+    "name": "Sakin / temiz pasajlar",
+    "description": "Varsa temiz kanal, sap manyetiği ya da köprü manyetiği ve hafif reverb kullanılıyor. Bu bölümün varlığı ve tonu doğrulanmadı (tahmin)."
+   }
+  ],
+  "warnings": [
+   "Waking the Fallen seanslarına ait amfi, kabin, mikrofon ya da pedal bilgisi veren birincil bir kaynak bulunamadı. Mesa Dual Rectifier, Equipboard'daki 2003 Warped Tour bilgisine dayanan dolaylı bir çıkarım.",
+   "Bogner Uberschall sık anılıyor ama City of Evil ve sonrasına ait; bu albüm için doğrulanmış değil.",
+   "Akort: bir tab sitesi Drop D veriyor, ton D minör ile uyumlu. Yine de resmi bir kaynak yok.",
+   "BPM: Hooktheory 195 (kıta 187) veriyor; AcousticBrainz'in otomatik analizleri 92–103 arası (yarım zaman algısı).",
+   "Kayıt stüdyosu kaynaklara göre değişiyor: Wikipedia Third Stone ve Mates Inc. diyor, Progarchives NRG diyor.",
+   "Amfi ayarları, pedal zinciri ve diğer bölümlerin ton farkları tahmin.",
+   "Ritim gitarların kimin çaldığı ve hangi kanalda olduğu doğrulanmadı."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Wikipedia – Unholy Confessions",
+    "url": "https://en.wikipedia.org/wiki/Unholy_Confessions"
+   },
+   {
+    "title": "Wikipedia – Waking the Fallen",
+    "url": "https://en.wikipedia.org/wiki/Waking_the_Fallen"
+   },
+   {
+    "title": "Progarchives – Waking the Fallen",
+    "url": "https://www.progarchives.com/album.asp?id=81391"
+   },
+   {
+    "title": "Yahoo – How Waking The Fallen turned Avenged Sevenfold into rising stars",
+    "url": "https://www.yahoo.com/entertainment/music/articles/waking-fallen-turned-avenged-sevenfold-155846537.html"
+   },
+   {
+    "title": "Barnes & Noble – Waking the Fallen credits",
+    "url": "https://www.barnesandnoble.com/w/waking-the-fallen-avenged-sevenfold/7836749"
+   },
+   {
+    "title": "Musician's Friend – Avenged Sevenfold Interview",
+    "url": "https://www.musiciansfriend.com/avenged-sevenfold"
+   },
+   {
+    "title": "Equipboard – Zacky Vengeance",
+    "url": "https://equipboard.com/pros/zacky-vengeance"
+   },
+   {
+    "title": "Equipboard – Avenged Sevenfold",
+    "url": "https://equipboard.com/band/avenged-sevenfold"
+   },
+   {
+    "title": "Guitar World – Dear Guitar Hero: Avenged Sevenfold",
+    "url": "https://guitarworld.com/features/dear-guitar-hero-avenged-sevenfold"
+   },
+   {
+    "title": "Seymour Duncan – The Sound of Synyster Gates",
+    "url": "https://www.seymourduncan.com/?p=33839"
+   },
+   {
+    "title": "Riffhard – How to Get an Avenged Sevenfold Guitar Tone",
+    "url": "https://www.riffhard.com/?p=36969"
+   },
+   {
+    "title": "Uberproaudio – Zacky Vengeance rig",
+    "url": "https://www.uberproaudio.com/who-plays-what/193-avenged-sevenfold-zacky-vengeance-guitar-gear-rig-and-equipment"
+   },
+   {
+    "title": "Guitar.com – Zacky Vengeance interview",
+    "url": "https://guitar.com/news/music-news/zacky-vengeance-on-being-put-through-his-paces-by-synyster-gates-on-avenged-sevenfolds-latest-album/"
+   },
+   {
+    "title": "Premier Guitar – Waking the Fallen tag",
+    "url": "https://www.premierguitar.com/tag/waking-the-fallen"
+   },
+   {
+    "title": "Hooktheory – Unholy Confessions",
+    "url": "https://www.hooktheory.com/theorytab/view/avenged-sevenfold/unholy-confessions"
+   },
+   {
+    "title": "AcousticBrainz – Unholy Confessions",
+    "url": "https://acousticbrainz.org/04e5e986-40c9-4c59-83a6-bd804fe4989a?n=0"
+   },
+   {
+    "title": "Chords-and-Tabs – Unholy Confessions",
+    "url": "https://www.chords-and-tabs.net/song/name/avenged-sevenfold-unholy-confessions-5"
+   }
+  ]
+ }
+}

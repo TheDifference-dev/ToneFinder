@@ -1,0 +1,165 @@
+{
+ "rank": 31,
+ "part": "lead",
+ "researchedAt": 1795279424192,
+ "original": {
+  "song": {
+   "title": "Bohemian Rhapsody",
+   "artist": "Queen",
+   "album_or_year": "A Night at the Opera (1975)",
+   "tone_character": "Orta frekansı öne çıkık, nazal ve 'şarkı söyleyen' bir lead tonu. Faz dışı sap+orta manyetik alt frekansları azaltıyor; treble booster ile tam açık çalışan AC30 ise sıvı gibi akan, sustainli ama aşırı olmayan bir doygunluk veriyor.",
+   "tone_tags": [
+    "nazal",
+    "orta frekans öne çıkık",
+    "incelmiş alt",
+    "pürüzsüz doygunluk",
+    "uzun sustain",
+    "vokal benzeri",
+    "hafif ambiyans"
+   ],
+   "bpm": "72 BPM",
+   "key": "E♭ majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Red Special (Brian May ve babası Harold May'in el yapımı gitarı; 24 inç skala, 24 perde)",
+    "pickup": "Sap + orta manyetik (Burns Tri-Sonic), seri bağlı, orta manyetik faz dışı (out of phase). Alt frekanslar iptal olur; nazal, 'çığlık atan' bir ton kalır.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Vox AC30 (1960'lar, Top Boost)",
+     "channel": "Brilliant / Top Boost girişi (tahmin); treble booster ile sürülüyor",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "May AC30'ları tam açık kullanır (genel pratik, likely)"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Cut",
+       "value": "3",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "May'e göre temel ton 'gitar + treble booster + AC30'. Amfi onaylı, düğme ayarları kaynakta yok. Deacy amfisi bu soloda değil, katmanlı 'gitar orkestrası' bölümlerinde kullanıldı (likely)."
+    }
+   ],
+   "cab": {
+    "model": "Vox AC30 kombo (dahili kabin)",
+    "speakers": "2x12 Celestion G12 Alnico 'Blue'",
+    "mics": [
+     {
+      "model": "Bilinmiyor (ör. Shure SM57 / Neumann U87; tahmin)",
+      "position": "Hoparlöre yakın, koni ile kenar arası (tahmin)",
+      "distance": "Yakın mikrofon, birkaç cm (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin olarak AC30 kombo kesin. Blue hoparlör dönemin AC30'larına göre likely. Mikrofon detayları hiçbir kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Treble booster (Dallas Rangemaster tipi / el yapımı kopya)",
+     "purpose": "AC30'u tiz ağırlıklı sürerek sıvı gibi, sustainli lead doygunluğu almak",
+     "settings": [
+      {
+       "name": "Boost",
+       "value": "10",
+       "note": "tam açık; May 'tam açtım ve midemi eritti' diyor"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Stüdyo delay / yankı (tape delay ya da plate reverb; ayrıntı bilinmiyor)",
+     "purpose": "Hafif ambiyans; temel ton kuru",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%15",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "A Night at the Opera (1975). Prodüktör: Roy Thomas Baker ve Queen; mühendis: Mike Stone. Kayıt ağırlıklı olarak Rockfield Studios'ta (Galler) yapıldı; ek kayıtlar SARM East, Roundhouse, Scorpio ve Wessex'te alındı. Solonun hangi stüdyoda kaydedildiği belirsiz. May, Freddie'nin bir solo planlamadığını, serbestlik istediğini ve 'bir verse'ü gitarla söylemek' istediğini anlatıyor. Solo az take ile kaydedildi; ilk take neredeyse istediği gibiydi, sadece biraz kesilip parlatıldı. Ritim gitarı solo kaydından önce bantta zaten vardı. Pena yerine sixpence madeni para kullanıyor. Solo tek gitar olarak duyuluyor (likely)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Melodik, 'şarkı söyleyen' cümleleme; ifade ve zamanlama kritik",
+    "Geniş, ses perdesi tam yerinde bending'ler",
+    "Yavaş ve geniş vibrato",
+    "Madeni parayla (sixpence) çalma",
+    "Sonda opera bölümüne bağlanan hızlı, inen koşu"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Balad bölümü ritim gitarı",
+    "description": "Solodan önce bantta olan, piyanoya eşlik eden gitar. Daha az kazançla çalınıyor, daha yumuşak ve temiz; muhtemelen sap manyetiği ağırlıklı (likely)."
+   },
+   {
+    "name": "Opera bölümü",
+    "description": "Gitar az; vokal ve piyano ağırlıklı. Tiz, kısa gitar vurguları var."
+   },
+   {
+    "name": "Rock bölümü (\"So you think you can stone me...\")",
+    "description": "Freddie'nin şarkı söyleyerek gösterdiği riff, stüdyoda canlı çalındı. Muhtemelen köprü ağırlıklı manyetik, faz içi; daha kalın ve daha agresif AC30+booster doygunluğu; double-track ve üst üste kayıtlar var (likely)."
+   },
+   {
+    "name": "Outro / armonili gitarlar",
+    "description": "Çok katmanlı armoni gitarları (gitar orkestrası tarzı) ve sakin kapanış. Kazanç daha düşük, ton daha yumuşak; bazı katmanlarda Deacy amfisi kullanılmış olabilir (guess)."
+   }
+  ],
+  "warnings": [
+   "Sap+orta manyetik ve ortanın faz dışı olması May'in anlatımına ve Guitar World manyetik tablosuna dayanıyor.",
+   "AC30 ayarları, mikrofon modeli, mikrofon konumu ve delay/reverb parametreleri kaynaklarda yok; hepsi tahmin.",
+   "1975'teki treble booster'ın kimliği (orijinal Rangemaster mı, el yapımı kopya mı) tartışmalı. Pete Cornish TB-83 sonraki döneme ait.",
+   "Bazı kaynaklar kayıtta Deacy amfisinden ve birden çok AC30'lu wet/dry/wet düzenden söz ediyor. Bu düzen sonraki canlı rig'lere ait olabilir.",
+   "Balad bölümü genelde B♭ majör olarak listeleniyor; solo E♭ merkezli ve sonda A majör opera bölümüne geçiyor. BPM yaklaşık 72; tempo bölümden bölüme değişiyor.",
+   "Diğer bölümlerde hangi manyetiğin kullanıldığı kaynaklarda net değil."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Brian May goes deep on Bohemian Rhapsody",
+    "url": "https://www.guitarworld.com/features/brian-may-goes-deep-on-bohemian-rhapsody-the-gear-the-solo-and-the-magic-of-freddie-mercurys-finest-hour"
+   },
+   {
+    "title": "Guitar Player – Brian May reveals the studio secrets of his Bohemian Rhapsody solo",
+    "url": "https://guitarplayer.com/players/i-said-i-would-like-to-effectively-sing-a-verse-on-the-guitar-brian-may-reveals-the-studio-secrets-of-his-legendary-bohemian-rhapsody-solo"
+   },
+   {
+    "title": "Guitar World – Brian May TV presenter Bohemian Rhapsody solo",
+    "url": "https://www.guitarworld.com/features/brian-may-bohemian-rhapsody-tv-presenter"
+   },
+   {
+    "title": "Guitar World – How to get Brian May's Red Special tones",
+    "url": "https://guitarworld.com/lessons/how-to-get-brian-mays-red-special-tones-from-a-strat-or-les-paul"
+   },
+   {
+    "title": "Here Comes The Flood – Brian May using Vox AC30s for Bohemian",
+    "url": "https://herecomestheflood.com/2022/01/brian-may-using-vox-ac30s-for-bohemian.html"
+   },
+   {
+    "title": "Total Guitar (PressReader)",
+    "url": "https://www.pressreader.com/australia/total-guitar/20200605/281603832680237"
+   }
+  ]
+ }
+}

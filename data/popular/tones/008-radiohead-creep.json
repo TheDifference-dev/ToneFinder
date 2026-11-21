@@ -1,0 +1,194 @@
+{
+ "rank": 8,
+ "part": "full",
+ "researchedAt": 1795278633087,
+ "original": {
+  "song": {
+   "title": "Creep",
+   "artist": "Radiohead",
+   "album_or_year": "Pablo Honey (single: Eylül 1992, albüm: 1993)",
+   "tone_character": "Kıtalarda temiz, hafif tınlayan arpejler; nakaratlarda ise solid-state bir amfinin önündeki Marshall ShredMaster pedalından gelen kaba, vızıltılı, orta frekansları öne çıkan crunch/distortion. Jonny Greenwood'un nakarattan önceki 'chk-chk' patlamaları davul odasında mikrofonlandığı için hem yumruklu hem de odalı duyuluyor. Albümde reverb kullanılmadığı için ton kuru.",
+   "tone_tags": [
+    "temiz-distorted kontrastı",
+    "pedal kaynaklı fuzz benzeri distortion",
+    "orta frekanslar öne çıkık",
+    "kaba ve vızıltılı",
+    "kuru (reverb yok)",
+    "oda ambiyansı (patlamalarda)",
+    "single-coil parlaklığı"
+   ],
+   "bpm": "92 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Telecaster Plus (1990)",
+    "pickup": "Köprü manyetiği: Lace Sensor (Red Lace çiftinden oluşan dual/humbucker konfigürasyonu); sap manyetiği Blue Lace Sensor. Distorted patlamalar ve nakarat için köprü manyetiği kullanılmış olması muhtemel.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Eighty-Five (solid-state, 1x12 combo)",
+     "channel": "Clean kanal (distortion pedaldan geliyor)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "5",
+       "note": "tahmin; amfi temiz ve yüksek headroom'lu kullanılmış"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Pablo Honey dönemindeki Jonny Greenwood rig'i birçok kaynakta Telecaster Plus > Marshall ShredMaster > Fender Eighty-Five olarak geçiyor. Mix'teki Kolderie röportajında yalnızca 'elektro gitar > pedal > amfi' deniyor, model adı verilmiyor. Ayarlar hakkında birincil kaynak yok."
+    }
+   ],
+   "cab": {
+    "model": "Fender Eighty-Five dahili kabini (combo)",
+    "speakers": "1x12\" (Fender stok hoparlör)",
+    "mics": [
+     {
+      "model": "Neumann U47 FET ('Fet 47')",
+      "position": "Davul odasında amfiye yönelik; kesin pozisyon bilinmiyor",
+      "distance": "bilinmiyor; oda tınısı duyulduğuna göre büyük olasılıkla birkaç feet"
+     },
+     {
+      "model": "Sennheiser MD 441 (x2, davul odası tavanına gömülü)",
+      "position": "Tavan/oda mikrofonu",
+      "distance": "tavan yüksekliği"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mix Classic Tracks'e göre 'büyük gitar gürültüsü' overdub'ı davul odasına konmuş amfiden Fet 47 ile alınmış (confirmed). Taş duvarlı oda düzensiz ve yansıtıcı bir akustiğe sahip. 441'lerin gitar overdub'ında açık olup olmadığı belli değil. Temel parçalardaki gitar kabinlerinin mikrofon düzeni bilinmiyor; muhtemelen standart bir yakın dinamik mikrofon (SM57 vb.) kullanıldı, bu bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Marshall ShredMaster",
+     "purpose": "Ana distortion: nakaratlar ve nakarat öncesi patlamalar",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Contour",
+       "value": "6",
+       "note": "tahmin; orta frekans kesme/yükseltme kontrolü"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Chipping Norton Recording Studios'ta (Oxfordshire) 1992'de yapıldı; prodüktörler Sean Slade ve Paul Q. Kolderie. Konsol Trident TSM. Temel parça click kullanılmadan, canlı ve tek take'te kaydedildi. Üç overdub var: Thom Yorke'un vokali (Telefunken U47), Jonny Greenwood'un piyanosu ve Jonny'nin 'gürültü' gitar overdub'ı (davul odasında amfi + Fet 47). İlk take'te patlamalar yoktu, Kolderie bunların ayrıca kaydedilmesini istedi. Gitarlarda belirgin double-tracking yok; kalınlık üç gitaristten geliyor: Thom ritim, Ed dokular, Jonny patlamalar ve lead. Albümde bilinçli olarak reverb kullanılmadı. Piyano miksaja yanlışlıkla geç alındı ve son nakarattan önce coda gibi girdi. Thom için 90'lar Gibson SG, Ed için Rickenbacker 360 albüm genelinde anılıyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "G–B–C–Cm akor geçişleri (barre akorlar)",
+    "Kıtada temiz arpej / parmak kontrolü",
+    "Nakarat öncesi sert vuruşlu susturulmuş 'dead note' patlamaları (ritim zamanlaması)",
+    "Nakaratta distorted güçlü strum",
+    "Köprüde (bridge) yüksek, uzun tutulan lead notaları"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz kıta",
+    "description": "Gitar sesi temiz. ShredMaster kapalı, amfi clean kanalda. Temiz G–B–C–Cm arpejleri ve hafif strum çalınıyor (Thom/Ed). Sap ya da ara pozisyon manyetik kullanılmış olabilir (tahmin). Reverb yok, kuru ve yakın bir ses."
+   },
+   {
+    "name": "Nakarat öncesi patlamalar ('The Noise')",
+    "description": "Jonny Greenwood'un overdub'ı. ShredMaster açık, köprü manyetiği seçili, çok sert vuruşla susturulmuş tellerden 'chk-chk' sesi çıkıyor. Amfi davul odasında Fet 47 ile alındığı için ana tona göre daha odalı ve yumruklu."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ana distorted ton: ShredMaster yüksek gain'de, açık strum edilen güçlü akorlar, orta frekanslar öne çıkık ve kaba. Ritim gitarları da crunch/distortion çalıyor."
+   },
+   {
+    "name": "Köprü ('She's running out the door')",
+    "description": "Aynı distorted ton, Jonny ve Thom yükselen, uzun tutulan notalar çalıyor. Sustain için gain biraz daha yüksek tutulabilir."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Gitar kıtadaki temiz arpeje dönüyor, üstüne Jonny'nin piyano codası geliyor."
+   }
+  ],
+  "warnings": [
+   "Kolderie birincil kaynakta (Mix) gitar, pedal ve amfi modelini vermiyor. ShredMaster'ı MusicRadar ve diğer ikincil kaynaklar doğruluyor, Fender Eighty-Five ise yalnızca ikincil kaynaklarda (rehberler, Reverb) geçiyor.",
+   "Telecaster Plus'ın manyetik konfigürasyonunu kaynaklar farklı anlatıyor: bazıları yalnızca 'Lace Sensor single-coil' diyor, bazıları köprüde dual Red Lace humbucker olduğunu söylüyor.",
+   "Amfi, pedal ve EQ ayarlarının hepsi tahmin; hiçbir kaynak ayar vermiyor.",
+   "Kıtadaki temiz arpejleri Thom'un mu Ed'in mi çaldığı ve hangi gitarla çalındığı net değil.",
+   "Patlamaların take'i sabote etme girişimi olduğu hikâyesi zayıf kaynaklı bir anekdot.",
+   "Tempo canlı ve click'siz kaydedildiği için hafifçe oynuyor (~92 BPM)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mix - Classic Tracks: Radiohead's Creep",
+    "url": "https://www.mixonline.com/recording/classic-tracks/classic-tracks-radioheads-creep"
+   },
+   {
+    "title": "Mixdown - 30 years of Pablo Honey and Creep",
+    "url": "https://mixdownmag.com.au/features/30-years-of-pablo-honey-radiohead-creep/"
+   },
+   {
+    "title": "MusicRadar - John Leckie The Bends interview",
+    "url": "https://www.musicradar.com/news/radiohead-the-bends-john-leckie-fake-plastic-trees-interview"
+   },
+   {
+    "title": "Reverb - Potent Pairings: The Guitar Sounds of Radiohead",
+    "url": "https://reverb.com/news/potent-pairings-the-sound-of-radiohead"
+   },
+   {
+    "title": "Guitar Chalk - Creep amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-creep-radiohead/"
+   },
+   {
+    "title": "Equipboard - Jonny Greenwood",
+    "url": "https://equipboard.com/jonny-greenwood"
+   },
+   {
+    "title": "Wikipedia - Creep (Radiohead song)",
+    "url": "https://en.wikipedia.org/wiki/Creep_(Radiohead_song)"
+   },
+   {
+    "title": "Wikipedia - Pablo Honey",
+    "url": "https://en.wikipedia.org/wiki/Pablo_Honey"
+   },
+   {
+    "title": "zZounds - Legends of Tone: Radiohead",
+    "url": "https://blog.zzounds.com/2017/11/29/legends-tone-radiohead/"
+   }
+  ]
+ }
+}

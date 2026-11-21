@@ -1,0 +1,204 @@
+{
+ "rank": 14,
+ "part": "clean",
+ "researchedAt": 1795278825071,
+ "original": {
+  "song": {
+   "title": "Fade to Black",
+   "artist": "Metallica",
+   "album_or_year": "Ride the Lightning (1984)",
+   "tone_character": "Verse'lerin arkasındaki temiz elektrik gitarlar parlak, çınlayan, hafif yumuşak bir clean ton; Kirk Hammett'in deyişiyle 'Dire Straits tarzı'. Akustik gitarla katmanlanmış, distorsiyonsuz ve muhtemelen hafif chorus/oda etkili bir arpej dokusu.",
+   "tone_tags": [
+    "temiz",
+    "çınlayan",
+    "parlak ama sert değil",
+    "akustikle katmanlı",
+    "hafif chorus (olası)",
+    "düşük gain",
+    "arpej odaklı"
+   ],
+   "bpm": "140 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Akustik: James Hetfield (model belirsiz); temiz elektrik arpejler: Kirk Hammett (Gibson Flying V ya da o dönemki Fernandes Strat kopyası) + James Hetfield (Gibson Explorer)",
+    "pickup": "Temiz elektrik için muhtemelen sap manyetiği ya da ara pozisyon; Kirk solo için Flying V'de sap manyetiğini kullandığını açıkça söylüyor",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Roland JC-120 Jazz Chorus",
+     "channel": "Clean (tek kanal), Chorus açık olabilir",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin; temiz headroom"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin; çınlama için"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Chorus",
+       "value": "On",
+       "note": "tahmin; hafif genişlik"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Hetfield'in temiz tonları için JC-120 kullandığı yaygın biliniyor ve bazı kaynaklar bu albümde de bazı temiz partilerde kullanıldığını iddia ediyor; ama 'Fade to Black' için birincil kaynakta onay yok."
+    },
+    {
+     "model": "Marshall JCM800 (2203 / 100W) half-stack",
+     "channel": "Tek kanal, düşük Preamp Volume ile temiz/ince crunch",
+     "settings": [
+      {
+       "name": "Preamp Volume",
+       "value": "2",
+       "note": "tahmin; temiz kalmak için"
+      },
+      {
+       "name": "Master Volume",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Sessions'ın ana amfisi, çalınan Marshall'ın yerine alınan JCM800 idi (bonedo). Temiz partiler bu amfiyle düşük gain'de de alınmış olabilir; alternatif olasılık."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (JCM800 half-stack ile eşleşen)",
+    "speakers": "Celestion G12-65",
+    "mics": [
+     {
+      "model": "Shure SM7",
+      "position": "bilinmiyor",
+      "distance": "bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Bonedo'ya göre albümdeki ana gitar kaydında Marshall half-stack (G12-65) ve SM7 kullanıldı; temiz partiler JC-120 ile alındıysa kabin onun dahili 2x12'si olur (tahmin)."
+   },
+   "pedals": [
+    {
+     "model": "Chorus (JC-120 dahili chorus ya da stüdyo chorus)",
+     "purpose": "Temiz arpejlere genişlik/çınlama",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "3",
+       "note": "tahmin, yavaş"
+      },
+      {
+       "name": "Depth",
+       "value": "4",
+       "note": "tahmin, hafif"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo reverb (oda/plate)",
+     "purpose": "Mekân hissi",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%20",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sweet Silence Studios, Kopenhag; prodüktör/mühendis Flemming Rasmussen; 24 kanal analog teyp. Hetfield akustik partiyi çaldı ve her gıcırtının duyulduğunu, dikkatli çalmak zorunda kaldığını söyledi. Kirk Hammett: 'Verse'in arkasındaki temiz gitar partilerini sonradan ben kaydettim. James arpejli bir figür çalarken ben üç notalı akorları arpejledim; sonuçta çok Dire Straits tarzı bir ses elde ettik.' Yani temiz bölüm en az iki elektrik katmanı (Hetfield arpejleri + Kirk üç notalı akor arpejleri) ve akustik gitardan oluşuyor. Bazı kaynaklar temiz partilerin 12 telli akustikle katlandığını söylüyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "temiz ve eşit arpej (parmak/pena ile tek tek tel)",
+    "akorlar arası temiz geçiş, notaların birbirine taşması",
+    "çalarken gıcırtı ve gürültüyü kontrol etmek",
+    "iki gitarlı partide zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Akustik giriş",
+    "description": "Akustik gitar (Hetfield) arpejleri; elektrik clean ton yerine akustik. Elektrikle uyarlanırsa: köprü/sap ara pozisyonu, daha az bas, chorus kapalı ya da çok hafif, reverb biraz daha fazla."
+   },
+   {
+    "name": "Giriş/ilk solo (Kirk)",
+    "description": "Flying V sap manyetiği, wah pedalı tamamen 'up' (topuk kapalı değil, burun ileri sabit) konumda; Marshall JCM800 üzerinden kompresli, sıcak distorsiyonlu lead. Temiz tona göre: gain belirgin artar, wah sabit açık tiz-orta vurgusu, delay/reverb hafif. Solo double-track edildi."
+   },
+   {
+    "name": "Ağır bölümler ve outro riffleri",
+    "description": "Hetfield Gibson Explorer, köprü manyetiği; Marshall JCM800 yüksek gain (muhtemelen boost ile), sıkı palm-mute'lu ritim; çift kanal rhythm. Temiz tona göre: kanal/gain tamamen distorsiyona geçer, chorus kapalı."
+   },
+   {
+    "name": "Orta ve final solo",
+    "description": "Ortadaki yavaş solo minör/majör üçlü ve beşlilerle armonize edildi; final uzun solo double-track edilmedi, G-A-B üzerine arpejler. Lead ton: sap manyetiği, wah up, distorsiyon."
+   }
+  ],
+  "warnings": [
+   "Temiz partiler için kullanılan amfi hiçbir birincil kaynakta açıkça belirtilmiyor; Roland JC-120 iddiası ikincil kaynaklara (ton rehberleri) dayanıyor, Marshall JCM800'ün düşük gain'le kullanılmış olması da mümkün.",
+   "Temiz elektrik partilerde hangi gitar ve manyetiğin kullanıldığı belgelenmemiş; Kirk'ün sap manyetiği açıklaması solo için.",
+   "Chorus kullanımı kesin değil; 'Dire Straits tarzı' tarif temiz, çınlayan, belki hafif modülasyonlu bir tona işaret ediyor.",
+   "12 telli akustikle katlama iddiası tek bir ikincil kaynaktan.",
+   "BPM kaynaklarda ~140 olarak geçiyor; şarkı hissi olarak ~70 BPM yarım tempo da okunabilir. Tonalite tartışmalı: A minör, E minör ve B minör arasında bölümlere göre değişiyor (Total Guitar).",
+   "SM7 mikrofon ve G12-65 hoparlör bilgisi albümün genel distorsiyonlu ritim kaydı için; temiz partilere uygulanıp uygulanmadığı bilinmiyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Prime Cuts: Hetfield & Hammett critique key songs",
+    "url": "https://www.guitarworld.com/magazine/prime-cuts-metallicas-james-hetfield-and-kirk-hammett-critique-key-songs-band-s-harsh-noble-history"
+   },
+   {
+    "title": "Bonedo – Metallica: Gitarren- und Bass-Equipment der ersten drei Alben",
+    "url": "https://www.bonedo.de/artikel/metallica-das-gitarren-und-bass-equipment-der-ersten-drei-alben"
+   },
+   {
+    "title": "Wikipedia – Fade to Black (Metallica song)",
+    "url": "https://en.wikipedia.org/wiki/Fade_to_Black_(Metallica_song)"
+   },
+   {
+    "title": "Killer Rig – Metallica Amp Settings",
+    "url": "https://killerrig.com/metallica-amp-settings/"
+   },
+   {
+    "title": "Guitar.com – Metallica gear facts",
+    "url": "https://guitar.com/features/artist-rigs/metallica-gear-facts/"
+   },
+   {
+    "title": "Tape Op – Flemming Rasmussen",
+    "url": "https://tapeop.com/interviews/172/flemming-rasmussen-riding-the-sweet-silence"
+   },
+   {
+    "title": "Klangio – Fade To Black BPM/Key",
+    "url": "https://songs.klang.io/en/s/Metallica/Fade%20To%20Black%20-%20Remastered/9HZ_tx8aWuA"
+   },
+   {
+    "title": "AcousticBrainz – Fade to Black",
+    "url": "https://acousticbrainz.org/46cbc71d-e99f-4e6d-a67a-300706e0fb01"
+   },
+   {
+    "title": "Total Guitar – Metallica Fade to Black (Pocketmags)",
+    "url": "https://pocketmags.com/pt/total-guitar-magazine/october-2020/articles/831875/metallica-fade-to-black"
+   }
+  ]
+ }
+}

@@ -1,0 +1,192 @@
+{
+ "rank": 60,
+ "part": "rhythm",
+ "researchedAt": 1795280599446,
+ "original": {
+  "song": {
+   "title": "Boulevard Of Broken Dreams",
+   "artist": "Green Day",
+   "album_or_year": "American Idiot (2004)",
+   "tone_character": "Kalın, doymuş, Marshall karakterli bir humbucker distorsiyonu. Orta frekanslar öne çıkıyor, power chord'lar uzun ve dolgun çınlıyor. Girişte aynı distorsiyonlu gitar tempoya kilitli, sert ve 'doğranmış' bir tremoloyla kesiliyor. Nakaratta çift kanal kaydedilmiş geniş bir duvar oluşuyor.",
+   "tone_tags": [
+    "doymuş distorsiyon",
+    "orta frekans öne çıkık",
+    "kalın alt-orta",
+    "uzun sustain",
+    "çift kanal (double-tracked) geniş stereo",
+    "sert, tempoya kilitli tremolo (giriş)",
+    "parlak atak"
+   ],
+   "bpm": "84 BPM",
+   "key": "F minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Junior (\"Floyd\") veya Gibson Les Paul Standard (\"Boobie\")",
+    "pickup": "Köprü manyetiği (Junior'da tek P-90; Standard'da köprü humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Modifiyeli Marshall (\"Idiot Amp\", ek kazanç katı eklenmiş, Plexi/JCM800 tabanlı)",
+     "channel": "Tek kanal / yüksek kazanç (modifiye gain stage)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "Tahmin. Kalın ve aşırı doymuş crunch"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "Tahmin. Orta frekans öne çıkık karakter"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World, American Idiot'taki ana amfileri modifiyeli Marshall \"Idiot Amp\", 'Dookie' modlu 50 W Park 75 ve temiz tonlar için tweed Fender Tremolux olarak sıralıyor. Bu şarkıya özel bir amfi ataması kaynakta yok. Ayar değerleri tamamen tahmin."
+    },
+    {
+     "model": "Park 75 (50 W, 'Dookie' modu)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Albümün ritim katmanlarında kullanılan ikinci ana amfi. Bu şarkıdaki ritim çiftinin bir tarafı olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 tipi)",
+    "speakers": "Celestion (büyük olasılıkla Greenback / G12T-75; doğrulanmadı)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kon kenarına yakın (cap-edge), tahmin",
+      "distance": "1–2 in, tahmin"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "American Idiot için yayımlanmış bir mikrofon dökümü bulunamadı. 21st Century Breakdown oturumlarındaki (Mix dergisi) iki 4x12 ve SM57 + Royer 121 / Neumann 414 düzeni yalnızca grubun genel alışkanlığını gösteriyor, bu albüme ait değil."
+   },
+   "pedals": [
+    {
+     "model": "Tremolo: Pro Tools'ta ses dilimleme/düzenleme (pedal değil)",
+     "purpose": "Girişte distorsiyonlu akorları tempoya kilitli 16'lık notalarla doğramak",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "1/16 nota (~84 BPM'e senkron)",
+       "note": "Kare dalga gibi sert aç-kapa"
+      },
+      {
+       "name": "Depth",
+       "value": "%100",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Boss TR-2 Tremolo",
+     "purpose": "Canlıda/alternatif olarak tremolo",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Final kayıt Ocean Way Recording (Los Angeles). Prodüktörler Rob Cavallo ve Green Day, kayıt mühendisi Doug McKean, miks Chris Lord-Alge. Şarkı, \"Holiday\"in son notasının feedback'iyle açılıyor; kapo 1'de akustik gitar (Em-G-D-A şekilleri, Fm-Ab-Eb-Bb olarak duyuluyor) temeli oluşturuyor. Girişteki tremolonun Pro Tools'ta kaydın dijital olarak doğranmasıyla elde edildiği bildiriliyor (ikincil kaynak). Ritim gitarlar büyük olasılıkla sol-sağ çift kanal kaydedildi; şarkıya özel teyit yok."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Basit power chord geçişleri (F5-Ab5-Eb5-Bb5)",
+    "Orta tempoda (~84 BPM) tutarlı aşağı vuruşlar",
+    "Nakaratta açık bırakılan, sustain'li akorlar",
+    "Tremolo bölümünde tempoya tam oturma",
+    "Dinamik: kıtada hafif, nakaratta tam vuruş"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (tremolo'lu elektro)",
+    "description": "Ritimle aynı distorsiyonlu ton; üstüne 1/16 senkronlu, %100 derinlikte, kare dalga benzeri sert tremolo ekleniyor. Akorlar uzun çınlatılıyor. Öncesinde \"Holiday\"den gelen feedback var."
+   },
+   {
+    "name": "Kıta",
+    "description": "Ana zemini kapo 1'deki akustik gitar taşıyor. Elektro gitar daha geride ya da düşük seviyede; aynı ton, daha az vuruş."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ana ritim tonu: tam doymuş Marshall distorsiyonu, çift kanal kaydedilmiş geniş power chord duvarı."
+   },
+   {
+    "name": "Solo",
+    "description": "Vokal melodisini izleyen melodik solo. Aynı distorsiyonlu ton, muhtemelen köprü manyetiği, biraz daha fazla sustain. Bend ve vibrato var. Özel bir solo efektine dair kaynak yok."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Distorsiyonlu akorlar giderek uyumsuzlaşıyor; uzun çınlayan son akor ve feedback dokusu."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya özel amfi, kabin veya mikrofon belgesi bulunamadı. Ekipman bilgisi Guitar World'ün albüm geneli için verdiği listeye dayanıyor.",
+   "Groundguitar'ın Park 75 / Floyd alıntısı aslında 21st Century Breakdown oturumlarına ait Mix makalesinden. Mikrofon detayları American Idiot için geçerli olmayabilir.",
+   "Girişteki tremolonun Pro Tools'ta düzenlemeyle yapıldığı bilgisi yalnızca fan wiki ve forum kaynaklı. Equipboard'da Boss TR-2 ilişkilendirmesi de var.",
+   "BPM kaynaklara göre ~84 (yayımlanmış nota) ya da ~167-172 (algoritmalar); fark yarı/çift tempo sayımından kaynaklanıyor.",
+   "Akort için doğrudan kaynak yok. Şarkı F minörde; elektro partisi standart akortta çalınabiliyor.",
+   "Amfi ayar değerlerinin tamamı tahmin."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Guitar World – Billie Joe Armstrong on the making of American Idiot",
+    "url": "https://guitarworld.com/features/green-day-billie-joe-armstrong-on-the-making-of-american-idiot"
+   },
+   {
+    "title": "Wikipedia – Boulevard of Broken Dreams (Green Day song)",
+    "url": "https://en.wikipedia.org/wiki/Boulevard_of_Broken_Dreams_(Green_Day_song)"
+   },
+   {
+    "title": "Culture Fandom – Boulevard of Broken Dreams",
+    "url": "https://culture.fandom.com/wiki/Boulevard_of_Broken_Dreams_(Green_Day_song)"
+   },
+   {
+    "title": "Harmony Central – Green Day Boulevard of Broken Dreams effects thread",
+    "url": "https://www.harmonycentral.com/forums/topic/1632871-green-day-boulevard-of-broken-dreams/"
+   },
+   {
+    "title": "Bonedo – Sound Workshop Gitarre 8: Boulevard of Broken Dreams",
+    "url": "https://www.bonedo.de/artikel/sound-workshop-gitarre-8-green-day-boulevard-of-broken-dreams"
+   },
+   {
+    "title": "Mix Online – Green Day (21st Century Breakdown recording)",
+    "url": "https://www.mixonline.com/?p=69004"
+   },
+   {
+    "title": "Equipboard – Billie Joe Armstrong",
+    "url": "https://equipboard.com/billie-joe-armstrong"
+   },
+   {
+    "title": "AudioKeychain – Boulevard of Broken Dreams",
+    "url": "https://www.audiokeychain.com/track/YGg/green-day-boulevard-of-broken-dreams"
+   },
+   {
+    "title": "Radio promo log – Published BPM 84",
+    "url": "https://cs.uwaterloo.ca/~dtompkin/music/track/RADIO205_02A/RADIO205_02A-19.html"
+   }
+  ]
+ }
+}

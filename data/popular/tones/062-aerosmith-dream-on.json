@@ -1,0 +1,128 @@
+{
+ "rank": 62,
+ "part": "full",
+ "researchedAt": 1795280578646,
+ "original": {
+  "song": {
+   "title": "Dream On",
+   "artist": "Aerosmith",
+   "album_or_year": "Aerosmith (1973)",
+   "tone_character": "Kuru, odası az, 70'lerin başına özgü vintage bir rock tonu. Girişte ve kıtalarda tek manyetikli gitarla çalınan, hafif kırılmanın eşiğinde, temize yakın arpejler var. Nakarat ve final bölümünde ise lamba amfinin doğal sürüşünden gelen orta yoğunlukta, orta frekansları öne çıkık bir crunch duyuluyor. İki gitar sağa ve sola tam panlanmış.",
+   "tone_tags": [
+    "temize yakın / kırılma eşiği",
+    "orta frekans öne çıkık",
+    "tek manyetik parlaklığı",
+    "kuru, az efektli",
+    "hard L/R panlı iki gitar",
+    "70'ler lamba doygunluğu",
+    "dinamik (pena gücüne duyarlı)"
+   ],
+   "bpm": "78–82 BPM",
+   "key": "F minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (Joe Perry); Brad Whitford için muhtemelen bir Gibson (Les Paul Junior/Les Paul)",
+    "pickup": "Strat tek bobinli manyetik; pozisyon bilinmiyor (arpejler için büyük ihtimalle köprü/orta ya da sap manyetiği). Perry'nin anlatımında 50 W'lık bir Ampeg ile kullanılan P-90'dan da söz ediliyor.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Ampeg V4 (Perry'nin ilk albüm için verdiği isim)",
+     "channel": "Tek kanal (V-4 head), doğal lamba sürüşü",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Perry, Guitar World'e 'For the first Aerosmith album, I used an Ampeg V4' dedi. Bu cümle albümün tamamı için söylendi; Dream On için ayrıca bir teyit yok. Başka bir Guitar World röportajında '50 watt Ampeg' geçiyor, oysa V-4 100 W'lık bir head. Perry ayrıca 'amfiyi buldum, sevdim, onunla kaydettim' diyor; kendisi ve Whitford erken dönemde pedal kullanmadan doğrudan amfiye giriyordu. Düğme ayarları hiçbir kaynakta yok."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (Ampeg V-4 için tipik eşleşme Ampeg V-4 4x12 kabin)",
+    "speakers": "Bilinmiyor",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisine ulaşılamadı. Dönemin stüdyo pratiği yakın tek dinamik mikrofon (ör. SM57) olurdu; bu yalnızca bir tahmin."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt 1972 sonbaharında (Ekim) Boston'daki Intermedia Studios'ta yapıldı; prodüktör Adrian Barber. Tyler şarkıyı piyanoda yazdı ve RMI klavyeyle geliştirdi; yaylı partileri Mellotron'da kendisi çaldı. Gitara uyarlanırken 'sağ eli Joe, sol eli Brad çaldı': iki gitar piyanonun iki elini paylaşıyor ve sağa/sola tam panlanmış. Grup sonucu 'garip biçimde cılız' buldu; Perry 'keşke gitarım daha iyi sesseydi' diyor. 2026'daki Legendary Expanded Edition remiksinde gitarlar daha gövdeli ve birbirinden daha net ayrışıyor."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Fm arpejlerinde temiz ve eşit tuşe",
+    "Zil gibi açık kalan notalar (let ring)",
+    "Nakarat ve finalde dinamik güç akorları",
+    "Pena gücüyle sürüşü kontrol etmek"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş ve kıta arpejleri",
+    "description": "Temize yakın, hafif kırılmalı ton. Bu raporun temel tonu bu. İki gitar sağ/sol panlanmış ve piyanonun iki elini ikiye bölüyor. Amfi düşük-orta gain'de, pena hafif."
+   },
+   {
+    "name": "Nakarat / köprü ('Dream on, dream on...')",
+    "description": "Aynı amfi daha sert çalınıyor ya da gain biraz artıyor. Orta yoğunlukta crunch ve güç akorları, Mellotron yaylılarıyla birlikte."
+   },
+   {
+    "name": "Final yükselişi ve outro",
+    "description": "Şarkının en yüksek sürüşlü bölümü. Dolu crunch ve güç akorları, araya giren kısa lead ve dolgu (fill) cümleleri. Vibrato ve bend kullanılıyor, ses daha doygun."
+   }
+  ],
+  "warnings": [
+   "Dream On'da Strat kullanıldığı bilgisi Guitar Player ve Guitar World'ün çıkarımı. Perry bunu bu şarkı için doğrudan söylemedi; Les Paul kullandığı şarkıları sayınca geriye kalanlardan biri olarak varsayılıyor.",
+   "Amfi konusunda kaynaklar çelişiyor: bir röportajda 'Ampeg V4', başka bir röportajda '50 watt Ampeg + P-90' geçiyor. Hangi gitaristin hangi kanalda olduğu da belirsiz.",
+   "Kabin, hoparlör, mikrofon ve amfi ayarları hakkında kaynak bulunamadı.",
+   "Whitford'un kayıttaki gitarı belgelenmedi; 1974 TV performansında Les Paul Junior çalıyordu.",
+   "BPM kaynaklara göre 77–82 arasında değişiyor; otomatik analizler 156 gibi çift tempo da veriyor.",
+   "Tunebat, Equipboard ve GuitarGeek sayfalarına doğrudan erişilmedi veya bu sayfalarda şarkıya özel veri bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Louder - Dream On story behind the song",
+    "url": "https://www.loudersound.com/music/tracks-singles/aerosmith-dream-on-story-behind-the-song"
+   },
+   {
+    "title": "Guitar World - Joe Perry Fender Strats in studio 70s",
+    "url": "https://guitarworld.com/news/joe-perry-fender-strats-studio-70s"
+   },
+   {
+    "title": "Guitar Player - Perry recorded early material with Strats",
+    "url": "https://guitarplayer.com/news/joe-perry-says-he-recorded-the-majority-of-aerosmiths-early-material-with-fender-stratocasters"
+   },
+   {
+    "title": "Guitar World - Joe Perry amps through the decades",
+    "url": "https://www.guitarworld.com/artists/guitarists/joe-perry-amps-through-the-decades"
+   },
+   {
+    "title": "Guitar World - Joe Perry debut album dislike",
+    "url": "https://www.guitarworld.com/news/joe-perry-aerosmith-debut-album-dislike"
+   },
+   {
+    "title": "Spin - Aerosmith debut album remix 2026",
+    "url": "https://www.spinmagazine.com/2026/06/for-joe-perry-aerosmiths-debut-album-just-got-a-whole-lot-better/"
+   },
+   {
+    "title": "Guitar Player - 1974 TV performance",
+    "url": "https://www.guitarplayer.com/players/watch-aerosmith-perform-their-first-major-hit-live-on-tv-in-1974"
+   },
+   {
+    "title": "Wikipedia - Aerosmith (album)",
+    "url": "https://www.wikipedia.org/wiki/Make_It"
+   },
+   {
+    "title": "Klang.io - Dream On key/BPM",
+    "url": "https://songs.klang.io/en/s/Aerosmith/Dream%20On/iJDtukGW79Y"
+   },
+   {
+    "title": "Audiokeychain - Dream On",
+    "url": "https://www.audiokeychain.com/track/YLb/aerosmith-dream-on"
+   },
+   {
+    "title": "Musicnotes - Dream On",
+    "url": "https://www.musicnotes.com/sheetmusic/aerosmith/dream-on/MN0100053"
+   }
+  ]
+ }
+}

@@ -1,0 +1,179 @@
+{
+ "rank": 29,
+ "part": "rhythm",
+ "researchedAt": 1795279364523,
+ "original": {
+  "song": {
+   "title": "Symphony Of Destruction",
+   "artist": "Megadeth",
+   "album_or_year": "Countdown to Extinction (1992)",
+   "tone_character": "Sıkı, kuru ve kontrollü bir yüksek kazançlı ton. Rust in Peace'e göre daha az gain'li ve daha 'radyo dostu'. Orta frekanslar belirgin, alt uç palm mute'larda sıkı ve vurucu, üst uç parlak ama sert değil. Mustaine'in palm-mute ritmini öne çıkaran, net bir distorsiyon.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "sıkı alt",
+    "orta frekans öne çıkık",
+    "kuru (az efekt)",
+    "net/artikülasyonlu",
+    "orta-yüksek gain",
+    "parlak üst"
+   ],
+   "bpm": "140 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Jackson King V ('Number One', 1980'ler) ya da onun kopyası DM002-92 Custom King V",
+    "pickup": "Köprü manyetiği, yüksek çıkışlı Seymour Duncan humbucker (model kesin değil)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Bogner preamp (1992 röportajına göre) / alternatif iddia: Custom Audio Electronics 3+ SE preamp",
+     "channel": "Yüksek kazanç (distorsiyon) kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "Fan/ayar sitelerinden tahmin, orijinal değil"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "tahmin; UG wiki 8 diyor"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar for the Practicing Musician dergisinin Eylül 1992 sayısında (Lee Sherman) Bogner preamp + VHT power amp geçiyor (ikinci elden aktarım, UG wiki'de). Equipboard ve forumlar ise Countdown ve Youthanasia için CAE 3+ SE preamp'i veriyor. 1992 tur rack'i CAE 3+SE + VHT 2150 + Rocktron Bradshaw olarak anılıyor. Stüdyoda hangisinin kullanıldığı tartışmalı."
+    },
+    {
+     "model": "VHT G-2150 (2150) tüp power amp",
+     "channel": "Power amp (6550 lambalı)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Hem 1992 röportajı hem forum kaynakları VHT power amp konusunda hemfikir."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 kabin (röportajda 'Marshall 300 cabinets' geçiyor)",
+    "speakers": "Celestion (büyük ihtimalle Vintage 30 ya da G12T-75; kesin değil)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Koni kenarına yakın, hafif açılı (tahmin)",
+      "distance": "1-2 in (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin markası 1992 röportajından ikinci elden aktarılıyor. Hoparlör ve mikrofon detayları belgelenmiş değil; SM57 genel stüdyo pratiğine dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "BBE 441 Sonic Maximizer",
+     "purpose": "Röportajda 'parametrik EQ'lu delay ünitesi' diye geçiyor ama aslında bir enhancer/EQ işlemcisi. Parlaklık ve netlik veriyor.",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Rocktron/Bradshaw RSB-12R/F anahtarlama sistemi",
+     "purpose": "Rack anahtarlaması (canlıda anılıyor, stüdyoda belirsiz)",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Tubeworks preamp",
+     "purpose": "Röportaja göre lead (solo) partilerinde. Ritimde kullanılmıyor.",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıtlar 6 Ocak – 28 Nisan 1992 arasında The Enterprise'da (Burbank, California) yapıldı. Prodüksiyon Max Norman ve Dave Mustaine'e ait, miksaj ve mühendislik Max Norman'da. Seans 1992 LA ayaklanmaları ve sokağa çıkma yasakları yüzünden aksadı. Ritim gitarları muhtemelen Mustaine ve Marty Friedman tarafından çift kaydedilip sola/sağa açılmış (tipik Megadeth prodüksiyonu; doğrulanmadı). Reverb az, ton kuru ve önde."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "palm mute'lu tek nota chug'lar",
+    "palm mute'lu notadan açık power chord'a geçişte dinamik kontrol",
+    "orta tempoda (140 BPM) sıkı down-picking",
+    "riff boşluklarında net susturma"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritim tonuyla aynı. Palm mute'lu E chug'ları ve aksanlı power chord'lar. Tek gitarla başlayıp sonra diğer gitar giriyor; aynı distorsiyon, köprü manyetiği."
+   },
+   {
+    "name": "Nakarat / köprü",
+    "description": "Aynı ton. Daha açık çalınan, sürdürülen power chord'lar olduğu için daha geniş duyuluyor. Ayar değişikliği gerekmiyor."
+   },
+   {
+    "name": "Solo (Marty Friedman)",
+    "description": "Ritme göre daha fazla gain ve sustain, orta frekanslar biraz daha önde. Hafif delay/reverb eklenmiş olmalı (tahmin). Röportaja göre lead partilerinde Tubeworks preamp kullanılmış ama bu Mustaine için söylenmiş olabilir. Friedman'ın 1992 gitarı kesin değil (Jackson tahmin). Ritim tonundan fark: gain +1-2, mid'ler hafif önde, kısa delay (yaklaşık 350-430 ms, %15-20 mix; tahmin)."
+   }
+  ],
+  "warnings": [
+   "Stüdyo preamp'i tartışmalı: 1992 Guitar for the Practicing Musician röportajında (ikinci elden aktarım) Bogner preamp geçiyor, Equipboard ve forumlar ise CAE 3+ SE diyor. Power amp'in VHT olduğu konusunda kaynaklar daha çok hemfikir.",
+   "Amfi ayar değerleri (Gain 7 / Treble 7 / Mid 5 / Bass 6-8) fan sitelerinden geliyor, orijinal stüdyo ayarı değil.",
+   "Manyetik modeli, hoparlör tipi ve mikrofon yerleşimi için güvenilir bir kaynak bulunamadı.",
+   "Riffology sayfası 1992'de var olmayan ya da başka döneme ait cihazları (JVM410H, Diezel VH4) listeliyor. Bu bilgiler güvenilmez sayılıp kullanılmadı.",
+   "Tonalite kaynaklarda E minör ve A minör arasında değişiyor; riff E merkezli.",
+   "BBE 441 röportajda 'delay' olarak geçiyor, aslında bir enhancer/sonic maximizer.",
+   "Solo bölümündeki delay değerleri tamamen tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Equipboard - Dave Mustaine",
+    "url": "https://equipboard.com/pros/dave-mustaine"
+   },
+   {
+    "title": "Ultimate Guitar wiki - Megadeth gear (1992 GFTPM röportaj aktarımı)",
+    "url": "https://www.ultimate-guitar.com/wiki/manage/version/compare?wiki_article_id=731&revision_id_from=2&revision_id_to=3&language=en"
+   },
+   {
+    "title": "Harmony Central - What amps did Megadeth use on Countdown To Extinction",
+    "url": "https://www.harmonycentral.com/forums/topic/1458781-what-amps-did-megadeth-use-on-countdown-to-extinction/page/2/"
+   },
+   {
+    "title": "Riffology - The making of Countdown to Extinction",
+    "url": "https://riffology.co/2025/02/24/the-making-of-countdown-to-extinction-by-megadeth/"
+   },
+   {
+    "title": "Wikipedia - Countdown to Extinction",
+    "url": "https://en.wikipedia.org/wiki/Countdown_to_Extinction"
+   },
+   {
+    "title": "SongBPM - Symphony of Destruction",
+    "url": "https://songbpm.com/@megadeth/symphony-of-destruction"
+   },
+   {
+    "title": "Klang.io - Symphony Of Destruction",
+    "url": "https://songs.klang.io/en/s/Megadeth/Symphony%20Of%20Destruction/h2LG7JXK5mQ"
+   },
+   {
+    "title": "Guitar Chalk - Megadeth amp settings",
+    "url": "https://www.guitarchalk.com/megadeth-dave-mustaine-amp-settings/"
+   },
+   {
+    "title": "MusicRadar - Dave Mustaine Symphony of Destruction lesson",
+    "url": "https://www.musicradar.com/news/dave-mustaine-guitar-lesson"
+   }
+  ]
+ }
+}

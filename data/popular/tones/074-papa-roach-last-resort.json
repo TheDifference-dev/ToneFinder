@@ -1,0 +1,157 @@
+{
+ "rank": 74,
+ "part": "rhythm",
+ "researchedAt": 1795281087254,
+ "original": {
+  "song": {
+   "title": "Last Resort",
+   "artist": "Papa Roach",
+   "album_or_year": "Infest (2000)",
+   "tone_character": "Orta frekansları öne çıkan, sıkı ve agresif bir distortion. Dönemin ağır, 'Rectifier' tarzı kalın nu-metal duvarından daha az kazançlı. Hızlı 16'lık arpej riffinin her notası ayrı ayrı duyulur. Temiz kayıt anlayışıyla yapılmış, net, çift kanal ritim sesi.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "orta-yüksek kazanç",
+    "nota ayrımı net",
+    "sıkı alt",
+    "agresif atak",
+    "kuru (efektsiz)",
+    "double-track geniş stereo"
+   ],
+   "bpm": "91 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Schecter (dönemin Omen/erken Schecter modeli) veya Carvin; Infest kaydında kesin model belgelenmemiş",
+    "pickup": "Köprü humbucker (muhtemelen Seymour Duncan JB SH-4 tarzı yüksek çıkışlı)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP-1 tüp MIDI preamp + Marshall EL34 100/100 power amp",
+     "channel": "OD 1 (overdrive kanalı)",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "OD 1",
+       "note": "Grokipedia/Equipboard: ağır ton için OD 1 kullanıyordu (canlı rig bağlamında)"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Horton 2000 civarı röportajlarda JMP-1 + EL34 100/100 kullandığını söylüyor. Ancak bu bilgi stüdyo değil, sahne rig'i bağlamında geçiyor. Dönemin GuitarGeek diyagramında Marshall JCM900 4100 kafa da var. Doğrulanmamış bir sitede Infest'in büyük kısmının Mesa/Boogie Dual Rectifier ile kaydedildiği iddia ediliyor."
+    },
+    {
+     "model": "Mesa/Boogie Dual Rectifier",
+     "channel": "Red/Orange (yüksek kazanç)",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Bu iddia yalnızca güvenilirliği düşük guitarzone.pages.dev'de geçiyor. Prodüktör Jay Baumgardner'ın NRG'deki nu-metal prodüksiyonlarında Rectifier yaygındı. BOSS makalesi ise tonun 'tipik Rectifier sesi olmadığını' söylüyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12",
+    "speakers": "Celestion (muhtemelen G12T-75 veya Vintage 30)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kapak kenarı (cap edge)",
+      "distance": "1–2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "1960B, Horton'un rig listelerinde var. Kayıttaki mikrofon tercihleri belgelenmemiş; SM57 stüdyo standardı olduğu için tahmin edildi."
+   },
+   "pedals": [
+    {
+     "model": "Rocktron HUSH Super C",
+     "purpose": "Noise gate: palm mute ve duruşlarda sessizlik",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Maxon OD-820 Overdrive Pro",
+     "purpose": "Olası boost (sıkılaştırma)",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "NRG Recording Studios (Hollywood/North Hollywood), 1999 sonbahar–kış. Prodüktör ve mikser Jay Baumgardner. DreamWorks A&R'ı Ron Handler, aşırı prodüksiyon istemediğini ve gitar-bas-davul-vokal odaklı, grubun enerjisini yakalayan bir ses istediğini söylemiş (Louder). Ritim gitarlar büyük olasılıkla double-track edilip sağa ve sola paylaştırıldı (likely; dönemin Baumgardner prodüksiyon standardı). Riff aslında piyanoda yazılmış ve sonradan gitara aktarılmış (Loudwire)."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Sürekli 16'lık alternate picking (91 BPM)",
+    "Tel atlamalı arpej riffi",
+    "Açık tellerle hareketli bas notası",
+    "Hafif palm mute",
+    "Uzun süre dayanıklılık ve zamanlama",
+    "Doğru parmak pozisyonu (Horton: çoğu kişi yanlış pozisyonda çalıyor, serçe parmağını fazla kullanıyor)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / giriş arpeji",
+    "description": "İstenen ritim tonu: tel atlamalı, 16'lık sekiz notalı arpej, köprü manyetiği ve orta-yüksek kazanç. Nota ayrımı için kazanç aşırı açılmamalı."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı amfi kanalında, Drop D'de açık ve güç akorlarıyla daha dolu bir ritim. Kazanç aynı kalabilir. Double-track kalınlığı burada daha belirgin."
+   },
+   {
+    "name": "Köprü / breakdown",
+    "description": "Aynı distortion tonunda, Drop D'nin alt teliyle ağır palm mute chug'lar. Bu bölümde noise gate daha önemli hale gelir."
+   }
+  ],
+  "warnings": [
+   "Infest'in stüdyo amfisi birincil bir kaynakla doğrulanamadı. JMP-1/JCM900 bilgisi 2000 civarındaki sahne rig'inden geliyor. Mesa Dual Rectifier iddiası yalnızca güvenilirliği düşük bir sitede geçiyor.",
+   "Gitar modeli belgelenmemiş. Carvin DC727 Infest öncesine ait, Les Paul ise sonraki albümlere bağlanıyor.",
+   "Tonalite tartışmalı: Musicnotes/klang E minör diyor, AcousticBrainz farklı bir sonuç veriyor. Drop D akortla E minör merkezli kabul edildi.",
+   "Tempo 91 BPM. Riff 16'lık olduğu için 182 BPM olarak da algılanabilir.",
+   "Mikrofon ve kabin hoparlörü bilgileri tamamen tahmin."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "BOSS Patch Work: Last Resort",
+    "url": "https://articles.boss.info/?p=42249"
+   },
+   {
+    "title": "Loudwire - Horton explains guitarists play Last Resort wrong",
+    "url": "https://loudwire.com/papa-roach-jerry-horton-explains-guitarists-play-last-resort-wrong/"
+   },
+   {
+    "title": "Louder - Story behind Infest",
+    "url": "https://www.loudersound.com/features/papa-roach-infest-story-behind-the-album"
+   },
+   {
+    "title": "Equipboard - Jerry Horton",
+    "url": "https://equipboard.com/pros/jerry-horton"
+   },
+   {
+    "title": "Uberproaudio - Jerry Horton rig",
+    "url": "https://www.uberproaudio.com/who-plays-what/549-papa-roach-jerry-horton-guitar-rig-gear-and-equipment"
+   },
+   {
+    "title": "Guitarzone - Last Resort lesson",
+    "url": "https://guitarzone.pages.dev/guitar-lesson/papa-roach-last-resort/"
+   },
+   {
+    "title": "Wikipedia - Infest (album)",
+    "url": "https://en.wikipedia.org/wiki/Infest_(album)"
+   },
+   {
+    "title": "Grokipedia - Jerry Horton",
+    "url": "https://grokipedia.com/page/Jerry_Horton"
+   },
+   {
+    "title": "Chordintel - Last Resort",
+    "url": "https://chordintel.com/songs/last-resort-album-version-explicit-papa-roach/?lang=en"
+   },
+   {
+    "title": "Musicnotes - Last Resort",
+    "url": "https://api.musicnotes.com/sheetmusic/papa-roach/last-resort/MN0097766"
+   }
+  ]
+ }
+}

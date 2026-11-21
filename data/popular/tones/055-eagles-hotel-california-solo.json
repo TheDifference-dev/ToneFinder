@@ -1,0 +1,147 @@
+{
+ "rank": 55,
+ "part": "lead",
+ "researchedAt": 1795280391025,
+ "original": {
+  "song": {
+   "title": "Hotel California",
+   "artist": "Eagles",
+   "album_or_year": "Hotel California (1976)",
+   "tone_character": "İki ayrı gitar sesi var. Felder'in sonuna kadar açılmış tweed Deluxe'e bağlı '59 Les Paul'u sıcak ve orta frekansları dolgun, doğal lamba overdrive'lı bir ton veriyor. Walsh'un Telecaster'ı daha ince, parlak ve ısırgan. Distorsiyon orta seviyede, solo için pedal kaydı yok, hafif stüdyo reverb'ü var.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "lamba overdrive",
+    "orta kazanç",
+    "sıcak",
+    "dinamik",
+    "iki gitar kontrastı",
+    "hafif stüdyo reverb"
+   ],
+   "bpm": "74–75 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Don Felder: 1959 Gibson Les Paul Standard (sunburst); Joe Walsh: Fender Telecaster",
+    "pickup": "Felder: orijinal PAF humbucker, büyük olasılıkla köprü manyetiği (likely). Walsh: Telecaster köprü single-coil manyetiği (guess)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Tweed Deluxe (narrow-panel, 5E3 dönemi; Felder'e göre muhtemelen '55 ya da '56)",
+     "channel": "Tek kanal (büyük olasılıkla Instrument girişi)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "Felder 'just kinda cranked up' diyor; sayı tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Felder'e göre gitar doğrudan amfiye girmiş ('just the guitar into the amp'). Model kesin, ayarlar tahmin. Kazanç lambanın kendi overdrive'ından geliyor."
+    },
+    {
+     "model": "Walsh'un amfisi bilinmiyor (Guitar World Roland Cube diyor; tur rigi: Fender Tweed Deluxe, Black Panel Deluxe Reverb, Mesa/Boogie Mark I)",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Felder: 'Joe played a Telecaster, but I'm not sure what amp he was using.' Roland Cube iddiası tarih açısından şüpheli."
+    }
+   ],
+   "cab": {
+    "model": "Tweed Deluxe combo'nun kendi kabini",
+    "speakers": "1x12 Jensen (P12R/P12Q dönemi; tahmin)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönem için SM57 ya da Neumann kondenser olası)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Solo kaydındaki mikrofonlama belgelenmemiş. Szymczyk'in akustik gitarlarda Neumann KM84 kullandığı biliniyor."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok (gitar doğrudan amfiye)",
+     "purpose": "Felder'in ifadesine göre solo sinyal zincirinde efekt yok",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Bill Szymczyk. Kayıtlar 1976'da Criteria Studios (Miami) ve Record Plant (Los Angeles) stüdyolarında yapıldı (likely). Solo Felder ile Walsh arasında soru-cevap şeklinde ilerliyor, Felder başlıyor. Finaldeki armonili arpejleri ikisi birlikte çalıyor. Felder ve Walsh'un seanslara çok sayıda gitar ve amfi getirdiği aktarılıyor. Kasıtlı kontrast için Les Paul ile Telecaster seçilmiş. Henley'nin isteğiyle solo, Felder'in demosundaki partiye sadık kalınarak çalındı (sık anlatılan hikâye). Miksteki reverb/eko büyük olasılıkla stüdyo plate'i."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Çok sayıda geniş bending, pre-bend ve release",
+    "Soru-cevap yapısındaki melodik cümleleri notası notasına çalmak",
+    "Finaldeki armonili triad arpejleri, pozisyon geçişleri ve senkron alternate picking",
+    "Kontrollü vibrato, yavaş tempoda zamanlama ve feel",
+    "Hızlı triplet/16'lık pasajlar ve double-stop'lar"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş",
+    "description": "DeArmond manyetikli Takamine 12 telli akustik, capo 7. perdede (yaygın kabul). Akustik mikrofonla çekilip ortaya yerleştirilmiş. Manyetik çıkışı Echoplex ve Leslie'den geçirilip stereo mikrofonlanmış ve direkt sesle karıştırılmış. Solo tonundan tamamen farklı, distorsiyon yok."
+   },
+   {
+    "name": "Kıtalar ve nakarat ritmi",
+    "description": "Akustik 12 telli ve temiz ya da hafif crunch elektrik ritim partileri. Solodan çok daha düşük kazanç ve arka planda kalan dolgular."
+   },
+   {
+    "name": "Final armonili arpejler",
+    "description": "Felder ve Walsh birlikte çalıyor. Ton solodaki gibi ama ikili armoni nedeniyle her biri biraz daha az kazançla, net nota ayrışmasıyla çalınabilir. Fade-out'a kadar sürüyor."
+   }
+  ],
+  "warnings": [
+   "Walsh'un amfisi tartışmalı: Felder bilmediğini söylüyor. Guitar World Roland Cube diyor, ancak Cube serisi genellikle 1978 sonrasına tarihleniyor; 1976 kaydı için şüpheli.",
+   "Bazı kaynaklar albümde Echoplex ve Boss Chorus kullanıldığını söylüyor. Felder ise solo için 'no effects' diyor; Echoplex girişteki akustikte kullanılmış.",
+   "Amfi ayarları ve mikrofon bilgileri tahmin.",
+   "Hangi Les Paul manyetiğinin kullanıldığı açıkça belgelenmemiş; köprü manyetiği tahmin.",
+   "Tonalite çoğu kaynakta B minör, ama bazı analizler D majör ya da E minör veriyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Don Felder Dear Guitar Hero 2013",
+    "url": "https://www.guitarworld.com/features/don-felder-eagles-dear-guitar-2013"
+   },
+   {
+    "title": "Guitar World – The Eagles Hotel California guitar gear",
+    "url": "https://www.guitarworld.com/artists/guitarists/the-eagles-hotel-california-guitar-gear"
+   },
+   {
+    "title": "Guitar World – Felder signature Hotel California guitars",
+    "url": "https://www.guitarworld.com/gear/interview-don-felder-discusses-his-signature-hotel"
+   },
+   {
+    "title": "Equipboard – Don Felder",
+    "url": "https://equipboard.com/pros/don-felder"
+   },
+   {
+    "title": "Reverb – The Gear of the Eagles",
+    "url": "https://reverb.com/news/the-gear-of-the-eagles"
+   },
+   {
+    "title": "Woodytone – Welcome To the Hotel California Rigs",
+    "url": "https://www.woodytone.com/?p=2663"
+   },
+   {
+    "title": "Audiokeychain – Hotel California",
+    "url": "https://www.audiokeychain.com/track/PKk/eagles-hotel-california"
+   },
+   {
+    "title": "Hooktheory – Hotel California",
+    "url": "https://hooktheory.com/theorytab/view/eagles/hotel-california"
+   }
+  ]
+ }
+}

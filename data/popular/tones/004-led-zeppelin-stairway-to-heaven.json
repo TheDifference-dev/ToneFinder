@@ -1,0 +1,147 @@
+{
+ "rank": 4,
+ "part": "lead",
+ "researchedAt": 1795278533038,
+ "original": {
+  "song": {
+   "title": "Stairway to Heaven",
+   "artist": "Led Zeppelin",
+   "album_or_year": "Led Zeppelin IV (Untitled), 1971",
+   "tone_character": "Kısılmış küçük bir Supro amfiden gelen, tamamen amfi kaynaklı, sıcak ama ısırıklı, doğal kompresyonlu orta gainli overdrive; Telecaster'ın köprü manyetiği parlaklığı ve tiz 'bite'ı öne çıkıyor, pedal yok, kuru bir miks.",
+   "tone_tags": [
+    "orta gain amfi overdrive'ı",
+    "doğal kompresyon",
+    "parlak ve ısırıklı tizler",
+    "orta frekans öne çıkık",
+    "pedalsız / kuru",
+    "vintage küçük amfi karakteri"
+   ],
+   "bpm": "98 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1959 Fender Telecaster (Jeff Beck'in hediyesi, 'Dragon' Tele; o dönemde boyası sökülmüş naturel hali)",
+    "pickup": "Köprü manyetiği (orijinal Fender single-coil)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Supro 1690T Coronado (modifiye, 1959)",
+     "channel": "Tek kanal / normal giriş, sonuna yakın açık",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "9",
+       "note": "Tahmin: 'kısılmış/cranked' olduğu biliniyor, doğal kompresyonlu overdrive için"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Wikipedia ve Louder kaynakları Supro diyor; Page bir röportajda 'Marshall da olabilir, hatırlamıyorum' demiş. Supro'nun orijinal 2x10 hoparlörü yerine tek 12\" konmuş. Ayarlar hiçbir kaynakta yok."
+    }
+   ],
+   "cab": {
+    "model": "Supro 1690T Coronado dahili kabini (kombo)",
+    "speakers": "Orijinal 2x10 yerine takılmış tek 12\" hoparlör (model bilinmiyor)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (Andy Johns'un dönemindeki tipik seçim: Neumann U67/U87 veya Shure SM57 — tahmin)",
+      "position": "Bilinmiyor; muhtemelen cap'e yakın, hafif off-axis",
+      "distance": "Bilinmiyor (yakın mikrofonlama tahmini, ~2–6 in)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin/hoparlör bilgisi Louder makalesinden; mikrofon bilgisi hiçbir kaynakta yok, tamamen tahmin."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Temel kayıtlar Aralık 1970'te Island Studios (Basing Street, Londra)'da başladı, Headley Grange'de (Rolling Stones Mobile/Ronnie Lane Mobile) devam etti; solo en son, overdub'lardan sonra Island Studios'ta kaydedildi (bir kaynak Headley Grange diyor). Mühendis Andy Johns, prodüktör Jimmy Page. Page sadece ilk birkaç notayı planlayıp gerisini doğaçlama çaldı; üç solo kaydedildi, biri seçildi. Solo tek iz (double-track değil). İlk miks Sunset Sound (LA), Page beğenmeyince final miks Island Studios'ta yapıldı. Solo'da Tone Bender veya başka efekt kullanılmadığı belirtiliyor; parça miksindeki hafif oda/plaka reverb'ü olası."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "geniş ve hızlı bending (tam ton ve üzeri)",
+    "melodik vibrato",
+    "hızlı pentatonik tekrar figürleri (sonuna doğru triplet/legato runlar)",
+    "pull-off/hammer-on legato",
+    "doğaçlama hissi ve zamanlama (tempo hızlanıyor)",
+    "Telecaster ile bending'de tel kontrolü"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Akustik giriş",
+    "description": "Harmony Sovereign H1260 akustik gitar, parmakla çalınan arpej; elektrik ton yok, blok flüt ve Mellotron eşliği. Elektrikte taklit için tamamen temiz ton, sap manyetiği, gain kapalı."
+   },
+   {
+    "name": "Orta bölüm (12 telli ritim)",
+    "description": "Fender Electric XII 12 telli elektrik doğrudan konsola (DI) bağlanmış; parlak, temiz, chimey arpej/strum. Solo tonundan: gain tamamen kapalı, amfi karakteri yok, hafif kompresyon; ~2:39'da akustik bir temiz elektrikle double-track. Temiz elektrik için muhtemelen Les Paul (kaynakta öneri)."
+   },
+   {
+    "name": "Solo",
+    "description": "Bu rapordaki ana ton: Telecaster köprü + kısılmış Supro, orta gain overdrive, efekt yok."
+   },
+   {
+    "name": "Final hard rock bölümü",
+    "description": "Ağır akorlar ve vokal arkası riffler; birden çok katmanlı elektrik gitar (12 telli dahil). Solodan biraz daha kalın ve akor odaklı, benzer veya biraz daha yüksek overdrive; kesin ekipman kaynaklarda belirtilmiyor."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı: çoğu kaynak Supro (1690T Coronado) diyor ama Page bir röportajda 'Marshall da olabilir, hatırlamıyorum' demiş.",
+   "Telecaster yılı 1958 veya 1959 olarak farklı veriliyor.",
+   "Kullanılan manyetiğin köprü olduğu açıkça belirtilmiyor; Page'in istediği 'bite' ve dinleme ile güçlü çıkarım.",
+   "Mikrofon modeli/konumu ve amfi ayarları hiçbir kaynakta yok; verilen değerler tahmin.",
+   "Solonun kayıt yeri: çoğu kaynak Island Studios, AllSolos ise Headley Grange diyor.",
+   "BPM tutarsız: şarkı yavaş başlayıp hızlanıyor (giriş ~72, solo bölümü ~98 BPM civarı); sitelerde 82/97/98 gibi farklı değerler var. Tunebat sayfası bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Louder - Led Zeppelin and Stairway To Heaven: Anatomy of a Guitar Classic",
+    "url": "https://www.loudersound.com/features/jimmy-page-and-stairway-to-heaven-anatomy-of-a-guitar-classic"
+   },
+   {
+    "title": "Wikipedia - Stairway to Heaven",
+    "url": "https://en.wikipedia.org/wiki/Stairway_to_Heaven"
+   },
+   {
+    "title": "Ultimate Classic Rock - Jimmy Page Stairway to Heaven session",
+    "url": "https://ultimateclassicrock.com/jimmy-page-stairway-to-heaven-session/"
+   },
+   {
+    "title": "Louder - Jimmy Page reveals how he conjured his solo",
+    "url": "https://www.loudersound.com/news/jimmy-page-reveals-how-he-conjured-his-solo-to-stairway-to-heaven-from-a-magical-guitar"
+   },
+   {
+    "title": "Far Out - How Jimmy Page recorded the Stairway solo",
+    "url": "https://faroutmagazine.co.uk/how-jimmy-page-led-zeppelin-created-stairway-to-heaven-solo/"
+   },
+   {
+    "title": "Guitar.com - The gear used by Jimmy Page on Led Zeppelin IV",
+    "url": "https://guitar.com/features/artist-rigs/the-gear-used-by-jimmy-page-on-led-zeppelin-iv"
+   },
+   {
+    "title": "AllSolos - Stairway to Heaven",
+    "url": "https://www.allsolos.com/recording/195/stairway-to-heaven"
+   },
+   {
+    "title": "Klang.io - Stairway to Heaven Remaster (BPM/key)",
+    "url": "https://songs.klang.io/en/s/Led%20Zeppelin/Stairway%20to%20Heaven%20-%20Remaster/ovFSEHH_yJw"
+   },
+   {
+    "title": "SongBPM - Stairway to Heaven",
+    "url": "https://songbpm.com/@robert-plant/stairway-to-heaven"
+   }
+  ]
+ }
+}

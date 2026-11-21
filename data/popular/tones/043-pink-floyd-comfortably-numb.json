@@ -1,0 +1,243 @@
+{
+ "rank": 43,
+ "part": "lead",
+ "researchedAt": 1795279860370,
+ "original": {
+  "song": {
+   "title": "Comfortably Numb",
+   "artist": "Pink Floyd",
+   "album_or_year": "The Wall (1979)",
+   "tone_character": "Black Strat'ın köprü manyetiğinden Ram's Head Big Muff ile beslenen, yoğun ama sıcak ve şarkı söyler gibi uzun sustain'li bir fuzz-lead tonu. Arkada çok düşük miksajlı Yamaha RA-200 dönen hoparlörün hareketi, ADT ile çift kanal etkisi ve mikste eklenen uzun delay/oda ambiyansıyla geniş ve epik bir tını.",
+   "tone_tags": [
+    "fuzz/distorted",
+    "uzun sustain",
+    "orta frekanslar dolgun",
+    "pürüzsüz tiz",
+    "geniş ve ambiyanslı",
+    "hafif rotary modülasyon",
+    "uzun delay",
+    "kompresli"
+   ],
+   "bpm": "63–64 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster 'Black Strat' (1969 siyah alder gövde, Charvel flamed maple sap; 1971 Fender sap ve orta manyetikler)",
+    "pickup": "Köprü manyetiği: DiMarzio FS-1 (stoktan daha sıcak). İlk soloda ek mini switch ile köprü+sap birlikte kullanıldığı belirtiliyor; final solo için tek başına köprü yaygın kabul.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Hiwatt DR103 (100W, 4xEL34, 4xECC83)",
+     "channel": "Normal ve Brilliant kanallar köprülü (custom linked inputs, paralel)",
+     "settings": [
+      {
+       "name": "Normal Volume",
+       "value": "4",
+       "note": "tahmin – Gilmour'un tipik Hiwatt ayarı; kaynakta şarkıya özel ayar yok"
+      },
+      {
+       "name": "Brilliant Volume",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "8",
+       "note": "tahmin – amfi temiz headroom'lu, distorsiyon pedallardan geliyor"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Amfi modeli onaylı; ayarlar kaynaklarda yok, dönem bilgisine dayalı tahmin. Hiwatt yüksek headroom'lu temiz platform; fuzz Big Muff'tan geliyor."
+    },
+    {
+     "model": "Yamaha RA-200 rotating speaker sistemi (Alembic F-2B tüp preamp ile beslenip Yamaha'nın iç preamp'ı devre dışı)",
+     "channel": "Hiwatt'a paralel, ayrı sinyal hattı",
+     "settings": [
+      {
+       "name": "Rotor speed",
+       "value": "Slow",
+       "note": "tahmin – mikste çok düşük seviyede, hafif hareket katıyor"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar World ve Ezrin onaylıyor. Reverb'e göre mikste çok düşük ama çıkarıldığında ton boş kalıyor."
+    }
+   ],
+   "cab": {
+    "model": "WEM Super Starfinder 200 kabinler (+ Yamaha RA-200 dönen hoparlör kabini)",
+    "speakers": "4x12 Fane Crescendo (WEM); RA-200'ün kendi dönen hoparlörleri",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "bilinmiyor (muhtemelen cap ile edge arası)",
+      "distance": "yakın (bilinmiyor)"
+     },
+     {
+      "model": "Oda mikrofonları",
+      "position": "uzak oda",
+      "distance": "bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Gilmourish, The Wall dönemi rig'inde WEM/Fane kabinleri ve genel kurulumda SM57 listeliyor; şarkıya özgü mikrofon pozisyonu belgelenmemiş. Guitar World 'distant room miking' kullanıldığını belirtiyor."
+   },
+   "pedals": [
+    {
+     "model": "MXR Dyna Comp",
+     "purpose": "Sinyali öne çıkarmak, sustain ve kompresyon",
+     "settings": [
+      {
+       "name": "Output",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Sensitivity",
+       "value": "4",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Electro-Harmonix Big Muff Pi (Ram's Head)",
+     "purpose": "Ana fuzz/distorsiyon ve sustain kaynağı",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin – orta civarı"
+      },
+      {
+       "name": "Sustain",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "MXR Digital Delay System I (veya mikste stüdyo delay'i)",
+     "purpose": "Uzun, düşük seviyeli delay ile alan",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~450–500 ms",
+       "note": "tahmin; Guitar World uzun delay'in mikste eklendiğini söylüyor"
+      },
+      {
+       "name": "Mix",
+       "value": "%15–20",
+       "note": "tahmin – düşük seviye"
+      },
+      {
+       "name": "Feedback",
+       "value": "2–3 tekrar",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "The Wall (1979) için kaydedildi. Prodüktörler Bob Ezrin, David Gilmour ve Roger Waters; ortak prodüktör/mühendis James Guthrie. Ezrin'e göre final solo, kendisi ve Waters başka bir stüdyodayken James Guthrie ile kaydedildi (likely: Super Bear Studios, Fransa; bu bilgi taranan kaynaklarda doğrulanmadı). Gilmour 5–6 solo çaldığını ve iyi bölümleri bir tabloya işaretleyip birleştirerek kompozit yaptığını söylüyor; Ezrin ise erken bir take'in kullanıldığını söylüyor. Son performansta ADT (automatic double tracking), mikste uzun delay ve uzak oda mikrofonları var (Guitar World)."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Çok geniş ve kontrollü bending'ler (tam ve 1,5 ses, pre-bend/release)",
+    "Yavaş, geniş ve duygusal vibrato",
+    "Final soloda hızlı tremolo picking ve hızlı B minör pentatonik kalıpları",
+    "Fuzz altında muting ve dinamik kontrolü",
+    "Zamanlama ve boşluk bırakan, nefes alan fraseleme",
+    "Hammer-on/pull-off legato pasajları",
+    "Tiz tellerde yüksek pozisyon (17.–22. perde)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Birinci solo (orta bölüm)",
+    "description": "Aynı rig ama Guitar World'e göre köprü+sap manyetiği birlikte; daha melodik, arpej ağırlıklı, daha az agresif çalım. Fuzz seviyesi benzer, dinamik olarak daha yumuşak."
+   },
+   {
+    "name": "Final/outro solo",
+    "description": "Ana araştırılan bölüm: köprü manyetiği, Big Muff, Hiwatt + RA-200, uzun delay. Daha yoğun, hızlı ve doruğa çıkan çalım; Ezrin ve Waters'tan ayrı olarak James Guthrie ile kaydedildi."
+   },
+   {
+    "name": "Nakarat ritm/akorlar",
+    "description": "Fuzz kapalı, temiz ya da hafif kompresli Strat; arka planda akustik (Ovation, yüksek oktav akort) ve orkestra. Daha az gain; delay ve ambiyans aynı karakterde."
+   }
+  ],
+  "warnings": [
+   "Amfi, pedal ve delay ayarlarının hiçbiri şarkıya özel bir kaynakta yok; verilen değerler tahmin.",
+   "Kayıt yöntemi tartışmalı: Gilmour 5–6 take'ten kompozit yaptığını, Ezrin erken bir take'in kullanıldığını söylüyor; başka bir kaynak 3 take diyor.",
+   "Pedal sırası Gilmourish'teki Şubat 1979 Pete Cornish stüdyo board'undan (Fuzz Face, Big Muff, Electric Mistress, Dyna Comp, Phase 90...); orada Dyna Comp Big Muff'tan sonra geliyor, Guitar World ise kompresörü önde ima ediyor. Sıra kesin değil.",
+   "Reverb'ün TC Electronic 2290 önerisi dönem açısından hatalı (2290 1979'dan sonra çıktı); 1979'da MXR Digital Delay veya stüdyo delay'i daha muhtemel.",
+   "BPM kaynakları farklı: Musicnotes/Karaoke-Version ~63–64 BPM, AcousticBrainz/Klang 125–127 BPM (çift zaman). Tonalite B minör; bazı otomatik analizler farklı veriyor.",
+   "Final solonun kaydedildiği stüdyo (Super Bear) ve mikrofon modeli/pozisyonu taranan kaynaklarda şarkıya özel olarak doğrulanmadı.",
+   "Final soloda tek başına köprü manyetiği kullanıldığı yaygın kabul görüyor ama net bir birincil kaynakla doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – The secrets behind David Gilmour's tone on Comfortably Numb",
+    "url": "https://www.guitarworld.com/features/the-secrets-behind-david-gilmours-tone-on-pink-floyds-comfortably-numb"
+   },
+   {
+    "title": "Gilmourish – The Wall 1979-81",
+    "url": "https://www.gilmourish.com/?page_id=20"
+   },
+   {
+    "title": "Guitar Player – Bob Ezrin on Comfortably Numb solo",
+    "url": "https://guitarplayer.com/news/bob-ezrin-on-david-gilmour-comfortably-numb-solo"
+   },
+   {
+    "title": "Reverb – How to Nail Gilmour's Comfortably Numb Solo",
+    "url": "https://reverb.com/news/how-to-nail-gilmours-comfortably-numb-solo"
+   },
+   {
+    "title": "Mixdown – How to get the Comfortably Numb tone",
+    "url": "https://mixdownmag.com.au/features/how-to-get-comfortably-numb-pink-floyd-guitar-tone/"
+   },
+   {
+    "title": "Musicnotes – Comfortably Numb",
+    "url": "https://www.musicnotes.com/sheetmusic/pink-floyd/comfortably-numb/MN0068913"
+   },
+   {
+    "title": "Karaoke-Version – Comfortably Numb",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/pink-floyd/comfortably-numb.html?aff=70"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/9ffabbe4-e078-4906-80a7-3a02b537e251"
+   }
+  ]
+ }
+}

@@ -1,0 +1,176 @@
+{
+ "rank": 34,
+ "part": "rhythm",
+ "researchedAt": 1795279575750,
+ "original": {
+  "song": {
+   "title": "Highway To Hell",
+   "artist": "AC/DC",
+   "album_or_year": "Highway to Hell (1979)",
+   "tone_character": "Gain'i yüksek açılmış, master volume'süz bir Marshall'ın verdiği orta yoğunlukta crunch: bugünün standartlarına göre az distorsiyonlu, açık akorların tek tek tını verdiği, orta frekansları öne çıkan, kuru ve vurucu bir ritim tonu. Mutt Lange'ın 'kuru, vurucu rock' anlayışı miksajda Tony Platt'in eklediği yapay oda ambiyansıyla birleşiyor.",
+   "tone_tags": [
+    "crunch (orta gain)",
+    "orta frekans öne çıkık",
+    "kuru ve vurucu",
+    "akorlar net ayrışıyor",
+    "pena ataklarına duyarlı dinamik",
+    "hafif oda ambiyansı",
+    "sıkı alt"
+   ],
+   "bpm": "116 BPM",
+   "key": "A majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Malcolm Young: 1963 Gretsch Jet Firebird \"The Beast\" (sap ve orta manyetikleri sökülmüş, ton kontrolleri bypass) – Angus Young ana riffi SG ile ikiler",
+    "pickup": "Köprü Gretsch Filter'Tron (tek manyetik; çıkış yolu: manyetik → volume → jak). Angus'un SG'sinde köprü humbucker (bir kaynağa göre ana riff sap manyetiğiyle çalınmış olabilir)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall Super Bass 100W (1971) – Malcolm",
+     "channel": "Tek kanal, non-master volume; giriş kanalları köprülü olabilir (tahmin)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "7",
+       "note": "Tahmin; kaynak 'gain/treble ~7' ballpark veriyor"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Guitar World ballpark önerisi"
+      },
+      {
+       "name": "Middle",
+       "value": "3",
+       "note": "Guitar World ballpark (bas ve mid ~3); kayıtta mid daha dolgun duyuluyor, 5'e kadar çıkılabilir"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": "Guitar World ballpark"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Malcolm'un 1 numaralı kafası 1971 Super Bass; ancak bu albüm için amfi ataması kaynaklı değil. Sound on Sound'a göre bu albümde her şarkı için farklı Marshall kafa/kabin kombinasyonları kullanıldı. Ayarlar kayda özgü değil, genel 'Malcolm tonu' önerisi."
+    },
+    {
+     "model": "Marshall Super Lead 100W (1959) veya 2203/2204 master volume – Angus",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Angus'un genel olarak Super Lead kullandığı biliniyor; SoloDallas yazarı bu şarkıda 2204 olduğundan 'emin' olduğunu söylüyor ama bu hobi çıkarımı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion G12-65 (fan kaynağı, AC/DC In The Studio kitabına atıfla) – alternatif olarak Celestion G12H/Greenback",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönem için muhtemelen Shure SM57 / Neumann U87 tarzı kombinasyon – tahmin)",
+      "position": "Bilinmiyor; kabin başına üç mikrofon iddiası var",
+      "distance": "Bilinmiyor; yakın mikrofonlama (Roundhouse çok ölü bir oda)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Her kardeş için bir kabin, kabin başına üç mikrofon iddiası ikinci el kaynaklı. Oda çok ölü olduğu için kayıtta oda mikrofonu etkisi azdı; ambiyans miksajda eklendi."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Roundhouse Studios, Chalk Farm, Londra; 24 Mart – 14 Nisan 1979. Prodüktör Robert John 'Mutt' Lange, kayıt mühendisi Mark Dearnley, miksaj Tony Platt (Basing Street Studios, Helios konsol, F760 kompresörler az kullanıldı). Platt, oda çok ölü olduğu için gitarları ve davulları Altec hoparlörlerle Basing Street Studio 2'ye çalıp yeniden mikrofonlayarak 'oda' hissi yarattı; EMT 140 plate, EMT DDL, bant delay, Eventide ve 1176 mevcuttu. Bu albümde Back in Black'e göre daha fazla gitar overdub'ı yapıldı. Klasik stereo yerleşim: Malcolm ve Angus ana riffi birlikte çalar (genelde Malcolm sol, Angus sağ). Efekt pedalı kullanılmadı; distorsiyon tamamen yüksek sesli Marshall'dan."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Zamanlama/groove hassasiyeti (riffin arasındaki boşluklar ve sıkı susturma)",
+    "Açık akor ve D/F#, G/B tipi inversion akorlar",
+    "Akorlar arası sessizlikte susturma kontrolü",
+    "Ağır tel (12-56) ile güçlü, eşit pena atakları",
+    "Palm muting'siz, tam akor vuruşları"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş riffi",
+    "description": "Ritimle aynı ton; A – D/F# – G figürü önce tek gitarla açıkta çalınır, sonra ikinci gitar ve davul girer. Akorlar arasındaki susturmalar tonun kuru karakterini ortaya koyar."
+   },
+   {
+    "name": "Kıta",
+    "description": "Aynı ton; gitarlar daha seyrek, akorları çalıp bırakarak (çalma-sus) vokale yer açar. Gain değişmez, dinamik pena gücüyle verilir."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı ton; daha dolu, sürekli akor vuruşları. Ek overdub katmanlarıyla kalınlaşmış olabilir."
+   },
+   {
+    "name": "Solo",
+    "description": "Angus Young, Gibson SG köprü humbucker, Marshall (Super Lead ya da 2203/2204); ritimden daha fazla gain ve sustain, geniş bend'ler ve hızlı vibrato. Mutt Lange nota nota yönlendirdi. SoloDallas'a göre solo off-axis mikrofonlanmış gibi duyuluyor; miksajda biraz daha fazla ambiyans/plate var. Ritim tonundan: gain +1–2, köprü manyetiği, biraz daha ambiyans."
+   },
+   {
+    "name": "Final",
+    "description": "Ritim tonuyla aynı; 'Highway to hell' tekrarları üzerinde riff ve akor vuruşları, kapanış akoru uzun süre çınlatılır."
+   }
+  ],
+  "warnings": [
+   "Bu albüm için şarkıya özgü amfi, kabin, mikrofon ve ayar bilgisi birincil kaynakta yok; amfi ayarları Malcolm'un genel tonuna yönelik ballpark tahminler.",
+   "Sound on Sound: gitar mikrofonlaması ve Marshall kombinasyonları şarkıdan şarkıya değişmiş; bu yüzden Super Bass/Super Lead ataması kesin değil.",
+   "Kabin başına üç mikrofon ve G12-65 hoparlör iddiası, 'AC/DC In The Studio' kitabına atıf yapan bir fan kaynağından geliyor; doğrulanmadı.",
+   "Malcolm'un ana gitarı Gretsch Jet 'The Beast' olarak kabul görüyor; bir kaynak 1977/78'de yapılan JayDee 'White Arrow'un Powerage/Highway to Hell turnelerinde öne çıktığını söylüyor, White Falcon ise daha çok Back in Black dönemiyle ilişkilendiriliyor.",
+   "Otomatik analiz siteleri tonaliteyi C# minör/F# minör gibi yanlış veriyor; riff A – D/F# – G (A miksolidyen) olduğu için A majör olarak verildi. BPM kaynaklarda 115–117 arası.",
+   "SoloDallas'ın 'ana riff sap manyetiğiyle çalındı' ve '2204 kullanıldı' iddiaları kişisel kanaat."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Louder Sound – AC/DC: The Making Of Highway To Hell",
+    "url": "https://www.loudersound.com/features/ac-dc-the-making-of-highway-to-hell"
+   },
+   {
+    "title": "Wikipedia – Highway to Hell",
+    "url": "https://en.wikipedia.org/wiki/Highway_to_Hell"
+   },
+   {
+    "title": "Guitar World – Malcolm Young's guitar gear",
+    "url": "https://guitarworld.com/features/malcolm-youngs-guitar-gear-how-the-acdc-great-perfected-high-voltage-rock-n-roll-tone"
+   },
+   {
+    "title": "Equipboard – Malcolm Young",
+    "url": "https://equipboard.com/malcolm-young"
+   },
+   {
+    "title": "Ground Guitar – Malcolm Young's Guitars and Gear",
+    "url": "https://www.groundguitar.com/malcolm-young-gear/"
+   },
+   {
+    "title": "The AC/DC sound – Tony Platt (guitars, amps, mics)",
+    "url": "https://roef.folk.ntnu.no/tonyplat.html"
+   },
+   {
+    "title": "Sound on Sound – Classic Tracks: AC/DC Back In Black",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-acdc-back-black"
+   },
+   {
+    "title": "SoloDallas – AC/DC's Highway to Hell (new series)",
+    "url": "https://solodallas.com/blogs/performance-videos/ac-dc-s-highway-to-hell-new-series"
+   },
+   {
+    "title": "SoloDallas – Walk All Over You recording details",
+    "url": "https://solodallas.com/blogs/performance-videos/ac-dc-s-walk-all-over-you-the-schaffer-replica-series-a-solodallas-cover-now-with-eq-settings-and-recording-details"
+   },
+   {
+    "title": "Ultimate Classic Rock – How AC/DC Recorded Highway To Hell",
+    "url": "https://ultimateclassicrock.com/ac-dc-highway-to-hell-creation/"
+   },
+   {
+    "title": "AcousticBrainz – Highway to Hell analysis",
+    "url": "https://acousticbrainz.org/5935ec91-8124-42ff-937f-f31a20ffe58f?n=1"
+   }
+  ]
+ }
+}

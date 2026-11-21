@@ -1,0 +1,192 @@
+{
+ "rank": 26,
+ "part": "lead",
+ "researchedAt": 1795279203619,
+ "original": {
+  "song": {
+   "title": "Sultans Of Swing",
+   "artist": "Dire Straits",
+   "album_or_year": "Dire Straits (1978)",
+   "tone_character": "Temiz, ama kompresörün ve yüksek ses seviyesinin hafif doygunluk kattığı, Strat'ın ara konumundan gelen burnu açık, 'quack'li, parlak, net bir ton. Hiç pena kullanılmadan parmakla çalındığı için atak yumuşak ama net. Az miktarda reverb var.",
+   "tone_tags": [
+    "temiz / kırılmanın eşiğinde",
+    "ara konum quack",
+    "parlak tiz",
+    "kompresli",
+    "hafif reverb",
+    "orta frekansta hafif burunlu",
+    "parmakla çalınmış dinamik atak"
+   ],
+   "bpm": "148–149 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1961 Fender Stratocaster (gül ağacı klavye, kırmızı)",
+    "pickup": "Ara konum. Büyük olasılıkla köprü + orta (5'li seçicide 2. konum); orijinal 3 konumlu anahtar 'ortaya sıkıştırılmış'. Orta manyetiğin DiMarzio FS-1 olduğu teorisi var. Köprü ve sap manyetikleri stok Fender.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Vibrolux (Illsley'nin brown/blackface amfisi) ya da Fender Twin Reverb",
+     "channel": "Tek kanal / Normal-Vibrato kanalı, temiz",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "5",
+       "note": "tahmin: kırılmanın hemen eşiğinde, temiz ama sıkışmış"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin (Twin'de)"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Reverb",
+       "value": "2",
+       "note": "tahmin: reverb miksajda da eklenmiş olabilir"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Kaynaklar çelişiyor. Knopfler, Guitar World'de 'Fender Twin and the Strat' diyor. MusicRadar/Winwood röportajında şarkının Illsley'nin Fender Vibrolux'ü ile 'canlandığı' anlatılıyor, ama kayıtta hangi amfinin kullanıldığına dair 'net bir kayıt yok' deniyor. O dönem sahnede Music Man HD-130 kullanıyordu. Stüdyoya kiralık şirketten amfiler ve efektler getirilip denenmiş. Bonedo'ya göre Twin Reverb, Vibrolux ya da Concert olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Amfinin dahili kabini (Vibrolux: 2x10 combo / Twin: 2x12 combo)",
+    "speakers": "Vibrolux için 2x10 Jensen/Oxford, Twin için 2x12 Jensen/JBL (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 veya Neumann U87 (tahmin)",
+      "position": "Kona yakın, merkezden biraz kenara",
+      "distance": "2–5 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mikrofon kullanımına dair hiçbir kaynak bulunamadı. Kabin bilgisi amfi tahminine bağlı."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo kompresörü (model bilinmiyor)",
+     "purpose": "Atağı düzleştirmek ve sustain sağlamak. Tonun 'pop'lu net karakterini veriyor.",
+     "settings": [
+      {
+       "name": "Ratio",
+       "value": "4:1",
+       "note": "tahmin"
+      },
+      {
+       "name": "Gain Reduction",
+       "value": "3–6 dB",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Stüdyo reverb'ü (plate/chamber, model bilinmiyor)",
+     "purpose": "Hafif ambiyans",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%15",
+       "note": "tahmin, kısa-orta decay"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Şubat 1978'de Londra'da Island Records'un Basing Street Studios'unda kaydedildi. Prodüktör Muff Winwood, mühendis büyük olasılıkla Rhett Davies. Winwood'a göre Knopfler'in gitarına yalnızca kompresyon ve reverb uygulandı. Grup şarkıyı bir yıldır sahnede çaldığı için kayıt büyük ölçüde canlı performans şeklinde yapıldı. Knopfler'e göre solo 'aşağı yukarı her gece çaldığım şey'. Ritim gitarını David Knopfler çaldı. Pena yok, parmakla (fingerstyle) çalındı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Pena kullanmadan parmakla çalma (başparmak + işaret/orta parmak)",
+    "Hızlı arpej ve triplet geçişleri (özellikle outro solo)",
+    "Parmak vibratosu ve bendingler",
+    "Hızlı pozisyon kaymaları ve pull-off/hammer-on'lar",
+    "148 BPM'de hassas zamanlama ve dinamik kontrol"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ritim / verse dolguları",
+    "description": "Aynı temiz ara konum tonu. Knopfler verse'lerde akorlara cevap veren kısa dolgular çalar. Ritim gitarı (David Knopfler) temiz ve daha az belirgin, büyük olasılıkla köprü+orta ya da orta manyetikte."
+   },
+   {
+    "name": "İlk solo (orta bölüm)",
+    "description": "Ana tonun aynısı: ara konum, temiz/kırılma eşiğinde, kompresli. Daha ölçülü, melodik skala cümleleri. Yaklaşık yarım dakika sürer."
+   },
+   {
+    "name": "Outro solo",
+    "description": "Ton temelde aynı. Daha yüksek atakla çalındığı için doğal hafif doygunluk artar. Hızlı arpej/triplet kaskadları var, yaklaşık 40 sn sürer. Sahnede bazen daha sıcak manyetiğe (FS-1) geçtiği iddia ediliyor ama stüdyo kaydı için bu doğrulanmadı."
+   }
+  ],
+  "warnings": [
+   "Kayıtta kullanılan amfi tartışmalı: Knopfler'in kendi sözü Fender Twin. Başka kaynaklar Vibrolux diyor, MusicRadar ise net kayıt olmadığını söylüyor.",
+   "Manyetik konumu tartışmalı: köprü+orta (5'li seçicide 2. konum) en çok destek gören seçenek. Bazı kaynaklar ise sap+orta ya da '4. konum' diyor (numaralandırma da karışık).",
+   "Orta manyetiğin DiMarzio FS-1 olduğu teorisi mk-guitar.com'a ait ve dolaylı kanıta dayanıyor.",
+   "Bazı kaynaklar albümde maple klavyeli '62 Strat kullanıldığını öne sürüyor. Ancak Knopfler '61'i ilk albümde çaldığı neredeyse tek gitar olarak anıyor.",
+   "Mikrofon, kabin ve amfi ayarları tamamen tahmin.",
+   "Mühendisin Rhett Davies olduğu kaynaklarda doğrulanmadı (likely).",
+   "BPM/tonalite için Tunebat sayfası bulunamadı. Değerler Audiokeychain/Wikipedia/Karaoke-Version'dan alındı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Mark Knopfler Discusses His '61 Strat and Sultans of Swing",
+    "url": "https://guitarworld.com/artists/mark-knopfler-discusses-his-61-strat-and-sultans-swing"
+   },
+   {
+    "title": "MusicRadar – Muff Winwood interview, Sultans of Swing",
+    "url": "https://www.musicradar.com/news/dire-straits-mark-knopfler-muff-winwood-interview-sultans-of-swing"
+   },
+   {
+    "title": "Ground Guitar – Mark Knopfler's 1961 Fender Stratocaster",
+    "url": "https://www.groundguitar.com/mark-knopfler-gear/mark-knopflers-1961-fender-stratocaster/"
+   },
+   {
+    "title": "mk-guitar.com – DiMarzio FS-1 middle position theory",
+    "url": "https://www.mk-guitar.com/?p=4063"
+   },
+   {
+    "title": "Fender – One Track Mind: Sultans of Swing",
+    "url": "https://www.fender.com/articles/fender-performances/one-track-mind-mark-knopflers-fingerstyle-mastery-on-sultans-of-swing"
+   },
+   {
+    "title": "Bonedo – Sultans of Swing workshop",
+    "url": "https://www.bonedo.de/artikel/die-besten-gitarren-soli-dire-straits-sultans-of-swing-workshop/"
+   },
+   {
+    "title": "TDPRI – Early Knopfler tone: position 2 or 4?",
+    "url": "https://www.tdpri.com/goto/post?id=1813541"
+   },
+   {
+    "title": "Guitar Chalk – Sultans of Swing amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-sultans-of-swing-dire-straits/"
+   },
+   {
+    "title": "Audiokeychain – Sultans of Swing",
+    "url": "https://www.audiokeychain.com/track/tJNB/dire-straits-sultans-of-swing"
+   },
+   {
+    "title": "Wikipedia – Sultans of Swing",
+    "url": "https://en.wikipedia.com/wiki/Sultans_of_Swing"
+   },
+   {
+    "title": "Guitar World – isolated guitar",
+    "url": "https://www.guitarworld.com/artists/hear-mark-knopflers-isolated-guitar-sultans-swing"
+   }
+  ]
+ }
+}

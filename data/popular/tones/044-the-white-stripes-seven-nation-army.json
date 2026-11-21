@@ -1,0 +1,196 @@
+{
+ "rank": 44,
+ "part": "intro",
+ "researchedAt": 1795279890712,
+ "original": {
+  "song": {
+   "title": "Seven Nation Army",
+   "artist": "The White Stripes",
+   "album_or_year": "Elephant (2003)",
+   "tone_character": "Riff, hollowbody bir gitarın tek sap manyetiğiyle çalınıp DigiTech Whammy'nin bir oktav pes ayarından geçmesiyle elde edilen, bas gitar gibi duyulan bir ton. Hafif kırılan, vintage bir Silvertone amfiden geliyor. Ton kuru, kalın ve hafif kirli; oktav pes efektinin sentetik, hafif 'boğuk' dokusu da duyuluyor. Bas gitar yok.",
+   "tone_tags": [
+    "oktav pes (Whammy)",
+    "bas gibi kalın alt",
+    "hafif kırılan (edge of breakup)",
+    "vintage, low-fi",
+    "kuru, reverbsiz",
+    "sap manyetiği yuvarlaklığı",
+    "analog teyp sıcaklığı"
+   ],
+   "bpm": "120–124 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1960'ların başından Kay K6533 (Value Leader serisi) archtop hollowbody",
+    "pickup": "Tek Kay single-coil sap manyetiği (\"cheese grater\" tipi)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Sears Silvertone 1485 (1960'ların ortası, lambalı head)",
+     "channel": "Channel 2",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Guitar World'e göre; hafif kırılma"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Reverb",
+       "value": "Off",
+       "note": ""
+      },
+      {
+       "name": "Tremolo",
+       "value": "Off",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Ayarlar Guitar World'ün 'secrets behind' yazısından geliyor. Bunlar gerçek seans kaydı değil, yazarın yaptığı bir yeniden üretim olabilir."
+    },
+    {
+     "model": "Fender Twin Reverb",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Liam Watson, Jack'in gitarının iki amfiye aynı anda verilip her amfinin ayrı kanala kaydedildiğini söylüyor. Elephant seanslarında kullanılan amfiler Fender Twin Reverb ve Silvertone olarak anılıyor. Twin'in bu şarkıda kullanıldığı kesin değil."
+    }
+   ],
+   "cab": {
+    "model": "Sears Silvertone 1485 6x10 kabin",
+    "speakers": "6 adet Jensen C10Q (seramik, 10\")",
+    "mics": [
+     {
+      "model": "Shure dinamik (muhtemelen SM57) / AKG dinamik",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin ve hoparlör bilgisini Guitar World veriyor. Liam Watson iki amfinin AKG ve Shure dinamik mikrofonlarla alındığını söylüyor; mikrofonların kesin modeli, konumu ve mesafesi yayınlanmamış."
+   },
+   "pedals": [
+    {
+     "model": "DigiTech Whammy (WH-4)",
+     "purpose": "Bir oktav pes; bas gitar etkisi veren riffin ana kaynağı",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "1 OCT DOWN (Whammy/Harmony bölümü, bir oktav pes)",
+       "note": "Pedal ayak ucu tam basılı (toe down) durumda sabit tutulur, sonuna kadar pes"
+      },
+      {
+       "name": "Treadle",
+       "value": "Toe down sabit",
+       "note": "Riff boyunca pedal hareket ettirilmez"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Electro-Harmonix Big Muff Pi",
+     "purpose": "Fuzz; riff/giriş kısmında KAPALI, yalnızca slide solo ve büyük nakaratlarda açık",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Tone",
+       "value": "7",
+       "note": ""
+      },
+      {
+       "name": "Sustain",
+       "value": "9",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Open A (E A E A C# E) – tartışmalı, Standart E de olabilir",
+   "recording_notes": "Albüm 2002'de Londra'daki Toe Rag Studios'ta yaklaşık 10–14 günde kaydedildi. Mühendis Liam Watson, prodüktör Jack White. 8 kanallı analog teyp ve Calrec mikser kullanıldı; bilgisayar kullanılmadı, stüdyoda 1963 sonrası ekipman yoktu. Watson'ın anlattığına göre bu şarkının track sheet'inde 'live guitar amp 1', 'live guitar amp 2' ve iki ayrı overdub kanalı var: gitar iki amfiye bölünerek kaydedildi, sonra overdub'lar eklendi. Bas gitar yok; riffin bas sesi tamamen Whammy'nin oktav pes efektinden geliyor. Jack bu riffi ilk olarak 2002'de Melbourne'daki bir soundcheck'te bulmuş."
+  },
+  "difficulty": {
+   "score": 1,
+   "factors": [
+    "Tek telde (A teli) basit nota dizisi",
+    "Sabit ritim ve zamanlama",
+    "Notaları legato bağlama ve Whammy oktav pes takibi için temiz tek nota çalma",
+    "Kaydırma (E-G arası) yok, pozisyon değişimi az"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta (vokal altı riff)",
+    "description": "Giriş riffi aynı tonla, Whammy oktav pes açık halde sürer. Bazı bölümlerde kısa, durgun aralar var."
+   },
+   {
+    "name": "Nakarat / büyük riff (slide akorlar)",
+    "description": "Aynı riff slide ile power chord/akor olarak çalınıyor. Whammy kapalı, Big Muff açık (Volume 6, Tone 7, Sustain 9). Ses çok daha yüksek, distorsiyonlu ve dolgun. Kaynaklar burada 'hafif overdrive'dan da söz ediyor; amfi kırılması ve fuzz birlikte kullanılmış olabilir."
+   },
+   {
+    "name": "Slide solo",
+    "description": "Ayrı bir overdub. Big Muff tam açık, slide ile tek notalar, yüksek sustain. Whammy kapalı. Kalın, ağır fuzz tonu; sap manyetiği korunuyor."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: klipte kırmızı 1964 Airline 'JB Hutto' görünüyor, ancak kaynakların çoğu riffin kayıtta Kay hollowbody ile çalındığını söylüyor.",
+   "Akort tartışmalı: Guitar World Open A diyor, ama tabların çoğu standart akort veriyor. Riff A telinde (7. perde E) çalındığı için iki akortta da aynı sesi verir.",
+   "Silvertone 1485 ve Big Muff ayarları Guitar World'ün yeniden üretim makalesinden alındı; gerçek seans ayarları belgelenmiş değil.",
+   "Kabin mikrofonlarının konumu ve mesafesi bilinmiyor; yalnızca 'AKG ve Shure dinamik' bilgisi var. BMI röportajına doğrudan erişilemedi, bilgiler arama özetinden alındı.",
+   "Riff kısmında Twin Reverb'ün kullanılıp kullanılmadığı belli değil; ikinci amfi olarak varsayıldı.",
+   "BPM kaynaklara göre 120–124 arasında değişiyor; Tunebat sayfası doğrulanamadı.",
+   "Bazı kaynaklar Whammy'yi Big Muff'tan sonra gösteriyor, ama çoğu Whammy → Big Muff sırasını veriyor."
+  ],
+  "research_confidence": "high",
+  "sources": [
+   {
+    "title": "Guitar World – The secrets behind Jack White's guitar tone on Seven Nation Army",
+    "url": "https://www.guitarworld.com/gear/secrets-behind-jack-white-guitar-sound-white-stripes-seven-nation-army"
+   },
+   {
+    "title": "Happy Mag – Engineering the sound: The White Stripes Elephant",
+    "url": "https://happymag.tv/engineering-the-sound-the-white-stripes-elephant/"
+   },
+   {
+    "title": "BMI – Tips from the Top: Liam Watson of Toerag Studios",
+    "url": "https://bmi.com/news/entry/Tips_from_the_Top_Liam_Watson_of_Toerag_Studios"
+   },
+   {
+    "title": "Guitar.com – The gear used by Jack White on Elephant",
+    "url": "https://guitar.com/features/artist-rigs/the-gear-used-by-jack-white-on-the-white-stripes-elephant"
+   },
+   {
+    "title": "Far Out – How Jack White created the bass on Seven Nation Army",
+    "url": "https://faroutmagazine.co.uk/how-jack-white-created-the-bass-on-seven-nation-army/"
+   },
+   {
+    "title": "Wikipedia – Seven Nation Army",
+    "url": "https://en.wikipedia.org/wiki/Seven_Nation_Army"
+   },
+   {
+    "title": "AudioKeychain – Seven Nation Army",
+    "url": "https://www.audiokeychain.com/track/Fst/the-white-stripes-seven-nation-army"
+   },
+   {
+    "title": "Tape Op – Liam Watson interview",
+    "url": "https://tapeop.com/interviews/88/liam-watson"
+   }
+  ]
+ }
+}

@@ -1,0 +1,163 @@
+{
+ "rank": 82,
+ "part": "full",
+ "researchedAt": 1795281440230,
+ "original": {
+  "song": {
+   "title": "Come Together",
+   "artist": "The Beatles",
+   "album_or_year": "Abbey Road (1969)",
+   "tone_character": "Kuru, yakın mikrofonlanmış, sıcak ve yuvarlak 'swampy' bir ton. Kıtalarda gitar seyrek ve hafif kırılan (edge of breakup) bluesy dolgular çalıyor, nakaratlarda Harrison'ın gitarı belirgin biçimde distorsiyonlu; kapanıştaki Les Paul solosu orta frekansı öne çıkık, hafif overdrive'lı.",
+   "tone_tags": [
+    "sıcak",
+    "yuvarlak orta frekans",
+    "kuru (az reverb)",
+    "hafif kırılma",
+    "nakaratta kalın distorsiyon",
+    "vintage tüp amfi",
+    "yumuşak tiz"
+   ],
+   "bpm": "82–88 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul 'Lucy' (1957 Les Paul Standard, cherry red refinish; Harrison). Lennon: Epiphone Casino (muhtemel)",
+    "pickup": "Harrison: humbucker (PAF dönemi); solo için muhtemelen köprü manyetiği. Lennon Casino: P-90",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Twin Reverb (silverface, 1968)",
+     "channel": "Normal/Vibrato kanalı (bilinmiyor)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Tahmin; hafif kırılma için. Nakaratta daha yüksek veya ek overdrive"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Reverb",
+       "value": "0",
+       "note": "Kuru ton; tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World, Abbey Road dönemi için silverface Twin Reverb'leri ve bir Bassman'i olası amfiler olarak listeliyor. Bu şarkı için kesin amfi kaynağı bulunamadı."
+    }
+   ],
+   "cab": {
+    "model": "Fender Twin Reverb kombo (dahili)",
+    "speakers": "2x12 (JBL D120F veya Fender/Oxford stok hoparlör, kesin değil)",
+    "mics": [
+     {
+      "model": "Neumann U67 veya U87 (EMI standardı; tahmin)",
+      "position": "Hoparlöre yakın, cap-edge arası",
+      "distance": "yaklaşık 2–6 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Emerick'in Abbey Road dönemi yakın mikrofon tekniğine dayanan tahmin; şarkıya özgü belge yok."
+   },
+   "pedals": [
+    {
+     "model": "Bilinmeyen fuzz/overdrive veya amfi/konsol saturasyonu",
+     "purpose": "Nakaratlardaki 'heavily distorted' gitar",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "orta-yüksek",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "EMI Studios (Abbey Road), Studio Three'de kaydedildi, Studio Two'da miks yapıldı. Prodüktör George Martin, mühendisler Geoff Emerick ve Phil McDonald. Temel parça 21 Temmuz 1969'da 4 kanala alındı (8 take'ten 6. take seçildi) ve sonra 8 kanala aktarıldı. Overdub'lar 22, 25, 29 ve 30 Temmuz'da yapıldı, miks 7 Ağustos'ta bitti. Lennon 29 Temmuz'da orta klimaksa bir gitar ekledi. Harrison Les Paul ile koda solosunu 30 Temmuz'da çaldı. TG12345 solid-state konsol, Emerick'in sözleriyle 'daha yumuşak ve yuvarlak' bir ritim sesi verdi. Vokal ve el çırpmalarında bant gecikmesi ve ADT kullanıldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "groove ve zamanlama (geride oturan swampy his)",
+    "pentatonik blues dolguları",
+    "orta genişlikte bendler ve vibrato",
+    "nakaratta sustain'li distorsiyonlu akorlar"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıtalar / ana groove",
+    "description": "Esas riffi bas ve davul taşıyor. Gitar seyrek, hafif kırılan bluesy dolgular çalıyor: gain düşük, ses temiz ile kırılma arasında."
+   },
+   {
+    "name": "Nakarat (refrain)",
+    "description": "Harrison'ın 'heavily distorted' gitarı: gain belirgin biçimde artırılır, akorlar sürdürülür, orta frekans kalın."
+   },
+   {
+    "name": "Orta klimaks / solo bölümü",
+    "description": "Lennon'ın 29 Temmuz'da eklediği gitar. Muhtemelen Casino, P-90 ile daha ham ve kaba overdrive."
+   },
+   {
+    "name": "Koda solosu",
+    "description": "Harrison, Les Paul ile muhtemelen köprü manyetiğinde çalıyor. Orta frekansı öne çıkık, hafif-orta overdrive'lı, vokal gibi melodik bendler ve vibrato var."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya özgü amfi, kabin, mikrofon ve pedal bilgisi kaynaklarda yok. Bunlar dönem rig'ine dayanan tahminler.",
+   "Lennon'ın Epiphone Casino kullandığı yalnızca dönem genelinden çıkarım; şarkı için doğrulanmadı.",
+   "Kim hangi gitar bölümünü çaldı konusunda forumlarda anlaşmazlık var.",
+   "Tempo ve tonalite kaynaklara göre değişiyor: AcousticBrainz yaklaşık 85 ya da 165 BPM veriyor, Musicnotes'un yayımlanmış düzenlemesi A minör ve 88 BPM. 'D minör' benim kendi tahminim; hiçbir kaynakta geçmiyor ve yalnız şarkının Dm merkezli algılanmasına dayanıyor. Tunebat'ta Beatles orijinali için sayfa bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Come Together - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Come_Together"
+   },
+   {
+    "title": "Guitar World - Abbey Road gear guide",
+    "url": "https://guitarworld.com/artists/guide-recording-equipment-songs-and-instruments-featured-beatles-abbey-road-album"
+   },
+   {
+    "title": "Beatles Bible - Recording: Come Together",
+    "url": "https://beatlesbible.com/1969/07/21/recording-come-together"
+   },
+   {
+    "title": "Beatles Bible - 29 July 1969",
+    "url": "https://beatlesbible.com/1969/07/29/recording-come-together-sun-king-mean-mr-mustard"
+   },
+   {
+    "title": "Lucy (George Harrison guitar) - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Lucy_(George_Harrison_guitar)"
+   },
+   {
+    "title": "The Paul McCartney Project - Recording Come Together",
+    "url": "https://www.the-paulmccartney-project.com/session/recording-come-together"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/82eda381-2e04-4ee8-b195-9cb7e948a614"
+   },
+   {
+    "title": "Musicnotes - Come Together",
+    "url": "https://www.musicnotes.com/sheetmusic/the-beatles/come-together/MN0136045"
+   }
+  ]
+ }
+}

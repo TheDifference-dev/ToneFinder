@@ -1,0 +1,230 @@
+{
+ "rank": 25,
+ "part": "intro",
+ "researchedAt": 1795279195493,
+ "original": {
+  "song": {
+   "title": "The Trooper",
+   "artist": "Iron Maiden",
+   "album_or_year": "Piece of Mind (1983)",
+   "tone_character": "Orta kazançlı, orta frekansları öne çıkık klasik Marshall crunch'ı; modern standartlara göre az distorsiyonlu, net ve odalı, iki gitarın armonisiyle geniş bir stereo tablo.",
+   "tone_tags": [
+    "orta kazanç",
+    "orta frekans öne çıkık",
+    "Marshall crunch",
+    "odalı",
+    "net nota ayrımı",
+    "humbucker köprü",
+    "stereo ikiz gitar"
+   ],
+   "bpm": "162 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Dave Murray: 1957 Fender Stratocaster (humbucker modifiyeli) / Adrian Smith: Ibanez Destroyer (DT-serisi) veya Gibson SG Standard",
+    "pickup": "Murray: köprüde DiMarzio Super Distortion (DP100), sapta DiMarzio PAF; giriş/riff için köprü manyetiği. Smith: stok humbucker'lar, köprü manyetiği",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 50 W lead head (JMP/erken JCM800 dönemi; 1987 / 2204 tipi)",
+     "channel": "Tek kanal (High input)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "tahmin; FET booster/Tube Screamer ile itildiği için"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık karakter"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master Volume",
+       "value": "7",
+       "note": "tahmin; güç lambası doygunluğu"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "1983 Guitar World röportajında 'dört adet 50 watt Marshall ve Marshall kabinler' açıkça geçiyor ve stüdyoda sahne setinin aynısının kullanıldığı söyleniyor (confirmed). Kesin model numarası ve düğme ayarları kaynaklarda yok; ayarlar tahmindir."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 serisi)",
+    "speakers": "Celestion (dönem itibarıyla muhtemelen G12-65 / G12T-75); Murray'in setinde bir kabin EV hoparlörlü (sahne FOH için)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (muhtemelen Shure SM57 tipi dinamik yakın mikrofon)",
+      "position": "Cap kenarı, on-axis'e yakın (tahmin)",
+      "distance": "1–3 cm (tahmin)"
+     },
+     {
+      "model": "Bilinmiyor (oda mikrofonları, muhtemelen kondansatör)",
+      "position": "Büyük ahşap odada çeşitli noktalar",
+      "distance": "Birkaç metre (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Röportajda amfilerin büyük ahşap bir odaya konduğu ve farklı noktalardan mikrofonlandığı açıkça söyleniyor (confirmed). Mikrofon modelleri ve mesafeleri belgelenmemiş."
+   },
+   "pedals": [
+    {
+     "model": "Pete Cornish pedalboard: FET power booster (Murray)",
+     "purpose": "Marshall'ı overdrive'a itmek için ön boost",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Distortion+ (Murray)",
+     "purpose": "Ek kazanç; riffte kullanımı belirsiz",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Graphic EQ (Murray, Cornish board içinde)",
+     "purpose": "Sürekli açık ton şekillendirme",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez Tube Screamer (Smith)",
+     "purpose": "Amfiyi itmek / orta frekans boost",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "2",
+       "note": "tahmin; boost olarak"
+      },
+      {
+       "name": "Tone",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Micro Amp (Smith)",
+     "purpose": "Sololarda seviye artışı; giriş riffinde muhtemelen kapalı",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Piece of Mind (1983), Compass Point Studios, Nassau (Bahamalar); prodüktör/mühendis Martin Birch; miks Electric Lady Studios, New York (confirmed – Guitar World 1983). İki gitar ayrı kaydedilmiş, sahne setiyle aynı ekipman, değişen tek şey mikrofonlama; büyük ahşap odada çok noktalı mikrofonlama oda karakteri katıyor. Giriş/riff iki gitarın armonize ikiz lead'i (ana melodi + üçlü armoni), stereo'da sol/sağa ayrık. Bazı dinleyicilerin duyduğu hafif chorus/genişlik büyük olasılıkla oda mikrofonlarının faz etkisi (forum spekülasyonu). 1998 ve 2015 remasterları parlaklık/dinamik açısından farklı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Hızlı triyole dayalı hammer-on/pull-off figürleri (giriş melodisi)",
+    "~162 BPM'de gallop ritim kalıbında sağ el dayanıklılığı",
+    "İkinci gitarla armonik uyum ve tam senkron",
+    "Kısa slide ve vibrato ile cümle bitişleri",
+    "Hafif palm muting ile gallop akorları"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta ritmi",
+    "description": "Aynı amfi tonu; gallop power chord/çift nota ritim, köprü manyetiği, daha fazla palm muting. Kazanç aynı veya biraz düşük; efekt yok."
+   },
+   {
+    "name": "Nakarat / ara armoni",
+    "description": "Giriş riffindeki ikiz armoni teması geri döner; ton giriştekiyle aynı."
+   },
+   {
+    "name": "Birinci solo (Adrian Smith)",
+    "description": "Smith'in ilk soloyu çaldığı confirmed. Köprü manyetiği; seviye için MXR Micro Amp boost (likely), biraz daha fazla sustain; geniş bend ve vibrato."
+   },
+   {
+    "name": "İkinci solo (Dave Murray)",
+    "description": "Murray'in ikinci solosu (likely); legato ağırlıklı akıcı stil, FET booster ile daha kremsi ve sustainli ton; sap manyetiği (PAF) kullanımı mümkün (guess)."
+   },
+   {
+    "name": "Final",
+    "description": "Ana armonik riff tekrarlanır, sonunda açık akor tınlaması/feedback; ton aynı."
+   }
+  ],
+  "warnings": [
+   "Amfi modeli kesin değil: 1983 röportajı '50 watt Marshall' diyor; ikincil kaynaklar JCM800 2204, Super Lead 100 W veya JMP 2203 diyor.",
+   "Tüm amfi ve pedal ayarları tahmindir; hiçbir kaynakta düğme değerleri yok.",
+   "Hangi gitaristin hangi kanalda (sol/sağ) ve hangi armoni sesini çaldığı doğrulanmadı.",
+   "Smith'in bu kayıtta Ibanez Destroyer mi SG mi kullandığı belirsiz; Total Guitar Destroyer II DT-300 diyor.",
+   "Mikrofon modelleri/pozisyonları belgelenmemiş; yalnızca büyük ahşap oda ve çok noktalı mikrofonlama doğrulanmış.",
+   "Tonalite kaynaklarda E minör ile D arasında değişiyor; çoğunluk E minör. Tunebat sayfası bulunamadı; BPM diğer veritabanlarından (162)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Adrian Smith and Dave Murray first Guitar World feature (1983)",
+    "url": "https://www.guitarworld.com/artists/interview-iron-maidens-adrian-smith-and-dave-murray-their-first-guitar-world-feature-1983"
+   },
+   {
+    "title": "Total Guitar – Get The Sound (The Trooper) – PressReader",
+    "url": "https://www.pressreader.com/australia/total-guitar/20210924/282707640195368"
+   },
+   {
+    "title": "Ultimate Metal – Classic Metal Guitar Production thread",
+    "url": "https://ultimatemetal.com/threads/classic-metal-guitar-production.1610694"
+   },
+   {
+    "title": "Guitar World – Adrian Smith on making Powerslave",
+    "url": "https://www.guitarworld.com/features/iron-maiden-adrian-smith-on-powerslave"
+   },
+   {
+    "title": "Equipboard – Adrian Smith",
+    "url": "https://equipboard.com/pros/adrian-smith"
+   },
+   {
+    "title": "Guitar Gangsters – Adrian Smith gear",
+    "url": "https://guitargangsters.net/adrian-smith/"
+   },
+   {
+    "title": "Guitar Lobby – Adrian Smith gear",
+    "url": "https://www.guitarlobby.com/adrian-smith-guitars-and-gear/"
+   },
+   {
+    "title": "Line 6 – Dave Murray Piece of Mind Tour",
+    "url": "https://line6.com/tone-templates-diagrams/dave-murray--piece-of-mind-tour.html"
+   },
+   {
+    "title": "Premier Guitar – Iron Maiden Out of Thin Air",
+    "url": "https://www.premierguitar.com/articles/23207-iron-maiden-out-of-thin-air"
+   },
+   {
+    "title": "AcousticBrainz – The Trooper analysis",
+    "url": "https://acousticbrainz.org/89ffef26-e4ca-4c53-bcd3-e434d7295c00"
+   },
+   {
+    "title": "songs.klang.io – The Trooper",
+    "url": "https://songs.klang.io/en/s/Iron%20Maiden/The%20Trooper%20(2015%20Remaster)/X4bgXH3sJ2Q"
+   },
+   {
+    "title": "Karaoke Version – The Trooper",
+    "url": "https://www.karaoke-version.com/custombackingtrack/iron-maiden/the-trooper.html"
+   }
+  ]
+ }
+}

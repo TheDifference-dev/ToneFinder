@@ -1,0 +1,190 @@
+{
+ "rank": 67,
+ "part": "lead",
+ "researchedAt": 1795280857580,
+ "original": {
+  "song": {
+   "title": "November Rain",
+   "artist": "Guns N' Roses",
+   "album_or_year": "Use Your Illusion I (1991)",
+   "tone_character": "Sıcak, kalın ve şarkı söyler gibi uzun sustain'li, orta seviyede overdrive'lı bir Les Paul–Marshall solo tonu. Distorsiyon var ama aşırı değil; orta frekanslar öne çıkık ve vokal gibi, üstüne orkestra/piyano miksine oturan hafif bir reverb ve oda ambiyansı eklenmiş.",
+   "tone_tags": [
+    "overdrive'lı (orta-yüksek gain)",
+    "orta frekanslar öne çıkık",
+    "sıcak / kalın",
+    "uzun sustain",
+    "vokal gibi",
+    "hafif reverb/ambiyans",
+    "efektsiz yalın amfi"
+   ],
+   "bpm": "79–80 BPM",
+   "key": "B majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Kris Derrig yapımı 1959 Gibson Les Paul Standard replikası (stüdyodaki ana gitarı)",
+    "pickup": "Seymour Duncan Alnico II Pro humbucker. İlk (melodik) soloda büyük ihtimalle sap manyetiği ve ton düğmesi biraz kısık; son (outro) soloda köprü manyetiği",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 2555 Silver Jubilee (100W) – rakip görüş: Marshall JCM800 2203",
+     "channel": "Lead / yüksek gain modu (tek kanallı master volume)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6",
+       "note": "tahmin; Slash rhythm ayarını solo için 'biraz yükselttiğini' söylüyor"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekanslar öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "7",
+       "note": "tahmin; güç lambası doygunluğu"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "UYI dönemiyle ilgili ana kaynaklarda amfi modeli adıyla geçmiyor. Forumlarda en çok Silver Jubilee anılıyor, bazıları ise modifiyeli bir JCM800 diyor. Slash, solo tonunu rhythm ayarının biraz 'goose' edilmiş hali olarak tarif etmiş. Ayarların hepsi kulakla yapılmış tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion G12T-75 veya Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "cap'e yakın, merkezde (on-axis)",
+      "distance": "yakın mikrofon, yaklaşık 2–3 cm"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mike Clink'in gitarları tek bir SM57 ile merkezden yakın mikrofonla kaydettiği bilgisi Gearspace'teki ikinci elden bir hatıraya dayanıyor ve doğrulanmadı. Oda ambiyansı da miksin bir parçası."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok (gitar → amfi doğrudan)",
+     "purpose": "Slash'in klasik yaklaşımı: tonu amfi ve gitar veriyor; bu solo için wah ya da delay kullanıldığına dair kaynak yok",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo reverb/delay (miks aşaması, model bilinmiyor)",
+     "purpose": "Solonun orkestra miksi içinde geniş ve havadar duyulması için",
+     "settings": [
+      {
+       "name": "Reverb",
+       "value": "hall/plate, orta uzunlukta",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Prodüktör Mike Clink. Temel parçalar A&M Studios'ta kaydedildi; Slash gitar overdub'larını yaklaşık üç hafta boyunca Record Plant'ta (LA), kulaklık yerine kontrol odasında çaldı. Mikslerin çoğunu Bill Price yaptı (Bob Clearmountain kovulmuştu). Yaylıları Axl synth ile ekledi. Solo, 1986 versiyonundaki melodilerin neredeyse aynısı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "geniş ve tam ses bending'ler, bend-release",
+    "ifadeli, yavaş vibrato",
+    "melodik phrasing ve dinamik kontrolü",
+    "outro soloda hızlı pentatonik/minör koşular ve tekrarlı lick'ler",
+    "yüksek perdelerde temiz entonasyon"
+   ]
+  },
+  "sections": [
+   {
+    "name": "İlk solo (orta bölüm)",
+    "description": "Melodik ve yavaş bir solo. Muhtemelen sap manyetiğiyle ve ton düğmesi biraz kısıkken çalınıyor, bu yüzden daha yumuşak ve yuvarlak duyuluyor. Gain aynı ya da hafifçe daha düşük; reverb daha belirgin."
+   },
+   {
+    "name": "Outro solo (final)",
+    "description": "Ana ve en ağır solo. Köprü manyetiğiyle (muhtemelen) daha parlak ve agresif bir ton; gain biraz daha yüksek, hızlı koşular ve uzun bend'ler var. Aynı Marshall tonunda kalıyor, wah yok."
+   },
+   {
+    "name": "Ritim / ara bölümler ve akor vuruşları",
+    "description": "Aynı amfi ve gitarla köprü manyetiğinde çalınıyor; gain solodan biraz düşük ve reverb daha az. Orkestranın arkasında geniş akorlar ve power chord'lar var."
+   },
+   {
+    "name": "Kısık ses ara fill'leri ve kapanış",
+    "description": "Gitar volume'u biraz kısılarak daha yumuşak, hafif overdrive'lı fill'ler çalınıyor. Tonun geri kalanı aynı."
+   }
+  ],
+  "warnings": [
+   "UYI dönemine ait amfi modeli kesin değil: forumlarda Marshall Silver Jubilee ile modifiyeli bir JCM800 arasında görüş ayrılığı var, Slash'in GN'R ile Jubilee kullanarak kayıt yapmadığını öne süren iddialar da mevcut.",
+   "Kabin ve mikrofon bilgileri (SM57, merkez) ikinci elden forum hatırasına dayanıyor.",
+   "Solo için hangi manyetiğin kullanıldığı hiçbir kaynakta doğrudan belirtilmiyor; sap ve köprü ayrımı kulakla yapılmış bir tahmin.",
+   "Amfi ayarlarının hepsi tahmin.",
+   "Tempo kaynaklarda 79–82 BPM arasında değişiyor; bazı otomatik analizler yanlış olarak 2 katı veya 1,5 katı değer veriyor.",
+   "Yarım ses pes akort (Eb) Slash'in GN'R dönemindeki bilinen pratiğine dayanıyor; bu şarkıya özel bir doğrulama bulunamadı. Gitarda akorlar C şekliyle çalınıp B majör olarak duyuluyor.",
+   "Videoda görülen gitarlar (ör. 1991 Goldtop gibi turne gitarları) stüdyo kaydıyla aynı değil."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar – Classic interview: Slash on the story of Use Your Illusion I & II",
+    "url": "https://musicradar.com/news/slash-guns-n-roses-use-your-illusion"
+   },
+   {
+    "title": "Gearspace – slash guitar tone on Use Your Illusion albums",
+    "url": "https://gearspace.com/threads/slash-guitar-tone-on-use-your-illusion-albums.65063/"
+   },
+   {
+    "title": "Fractal Audio Forum – Slash Use Your Illusion-era tone?",
+    "url": "https://forum.fractalaudio.com/threads/slash-use-your-illusion-era-tone.171386/"
+   },
+   {
+    "title": "Line 6 Community – A challenge.... Slash UYI tone",
+    "url": "https://line6.com/support/topic/22003-a-challenge-slash-uyi-tone/"
+   },
+   {
+    "title": "Guitar World – Slash's guitar gear",
+    "url": "https://www.guitarworld.com/features/slashs-guitar-gear-everything-you-need-to-nail-the-guns-n-roses-legends-sound"
+   },
+   {
+    "title": "Equipboard – Slash",
+    "url": "https://equipboard.com/slash"
+   },
+   {
+    "title": "Marshall – 1987 Slash Marshall",
+    "url": "https://marshall.com/backstage/eighties/1987-slash-marshall-appetite-for-amplification"
+   },
+   {
+    "title": "zZounds – Slash interview",
+    "url": "https://www.zzounds.com/lp/slash-interview"
+   },
+   {
+    "title": "Music Gateway – November Rain key/BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/guns-n-roses/november-rain"
+   },
+   {
+    "title": "Klang.io – November Rain",
+    "url": "https://songs.klang.io/en/s/Guns%20N'%20Roses/November%20Rain/8SbUC-UaAxE"
+   },
+   {
+    "title": "Mike Clink – Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Mike_Clink"
+   }
+  ]
+ }
+}

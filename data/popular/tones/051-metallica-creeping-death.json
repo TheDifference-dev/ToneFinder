@@ -1,0 +1,201 @@
+{
+ "rank": 51,
+ "part": "rhythm",
+ "researchedAt": 1795280225371,
+ "original": {
+  "song": {
+   "title": "Creeping Death",
+   "artist": "Metallica",
+   "album_or_year": "Ride the Lightning (1984)",
+   "tone_character": "Doğrudan amfiden gelen, çok kazançlı bir Marshall distorsiyonu. Orta frekanslar biraz oyuk ama hâlâ sert ve parlak, aşağı vuruşlu palm mute'larda alt frekanslar sıkı. İki kabine konan yakın mikrofonlar ve oda mikrofonları, 80'ler analog bant kaydına özgü hafif bir odasallık katıyor.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "Marshall crunch'ı doymuş",
+    "sıkı alt",
+    "hafif oyuk orta",
+    "parlak tiz atak",
+    "oda mikrofonuyla hafif ambiyans",
+    "analog bant kompresyonu",
+    "double-track ritim"
+   ],
+   "bpm": "200 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (1984, Alpine White)",
+    "pickup": "Köprü manyetiği, büyük olasılıkla fabrika çıkışlı/Dirty Fingers pasif humbucker (EMG 81/60 sonradan, 1987 civarında takıldı)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JCM800 2203 (100W) — çalınan modifiyeli JMP 2203'ün yerine, Rasmussen'in Kopenhag'daki metal gruplarından ödünç toplayıp denediği Marshall'lardan biri",
+     "channel": "Tek kanal (High input), Master Volume",
+     "settings": [
+      {
+       "name": "Pre-amp (Gain)",
+       "value": "9",
+       "note": "Tahmin: dime'a yakın; kaynaklar 'tamamen açık' diyor (fan rekreasyonu)"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "Tahmin; hafif oyuk orta"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Marshall kullanıldığı kesin (Hammett: 'tüm albümü Marshall'larla kaydettim'; Rasmussen ödünç Marshall'ları denedi). Tam olarak JCM800 olduğu Bonedo ve MusicRadar'da geçiyor ama birincil kaynak değil. Bazı kaynaklar Mesa/Boogie Mark II'den de söz ediyor; Boogie+Marshall birleşimi asıl Master of Puppets dönemine ait. Ayarlar kaynakta yok."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960 tipi) — kayıtların çoğunda iki kabin",
+    "speakers": "Celestion G12-65 (Bonedo'ya göre)",
+    "mics": [
+     {
+      "model": "Shure SM7",
+      "position": "Hoparlör konisinin merkezine (cap)",
+      "distance": "Yakın, ızgaraya dayalı"
+     },
+     {
+      "model": "Neumann U 87",
+      "position": "İkinci kabinde hoparlör konisinin merkezine",
+      "distance": "Yakın"
+     },
+     {
+      "model": "AKG The Tube",
+      "position": "Kabin köşesinden 45° açıyla, ambiyans",
+      "distance": "3–6 ft"
+     },
+     {
+      "model": "Brüel & Kjær 4006 (omni)",
+      "position": "Oda mikrofonu",
+      "distance": "10–15 ft"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mikrofon düzenini Rasmussen Tape Op röportajında genel olarak, ilk iki albüm için anlatıyor; sadece bu şarkıya özel bir açıklama değil. MusicRadar'daki aktarımda yakın mikrofon olarak SM57 geçiyor, Tape Op ve Equipboard ise SM7 diyor. G12-65 hoparlör bilgisi yalnızca Bonedo'dan."
+   },
+   "pedals": [
+    {
+     "model": "Ibanez Tube Screamer (TS-808/TS9)",
+     "purpose": "Amfinin önünde boost: daha sıkı alt ve daha fazla doyum",
+     "settings": [
+      {
+       "name": "Overdrive",
+       "value": "1",
+       "note": "Tahmin: düşük"
+      },
+      {
+       "name": "Tone",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "Tahmin: yüksek"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sweet Silence Studios, Kopenhag, 20 Şubat – 14 Mart 1984. Prodüktörler Flemming Rasmussen ve Metallica, yardımcı Mark Whitaker. 24 kanallı analog bant (Ampex 456) kullanıldı, Trident A Range konsolunun preamp'leri ve EQ'su devredeydi. Hetfield ritimleri Ulrich'in davuluyla birlikte temel kanal olarak kaydetti, ardından üst üste (double/triple) ritim kanalları ekledi. Grubun ekipmanı (Hetfield'ın en sevdiği modifiyeli Marshall dahil) 13 Ocak 1984'te Boston'da çalındığı için Rasmussen yerel metalcilerden (ör. Mercyful Fate) Marshall kafa ve kabinler toplayıp denedi. Hetfield'ın sesi büyük ölçüde doğrudan amfiden geliyor, efekt yok denecek kadar az."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "~200 BPM'de sürekli aşağı vuruş (downpicking)",
+    "Hızlı gallop figürleri",
+    "Sıkı palm mute ile açık akorlar arasında hızlı geçiş",
+    "Kesin susturma ve senkron (double-track uyumu)",
+    "Uzun süre dayanıklılık gerektirmesi"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritimle aynı distorsiyonlu ton. Hammett (Gibson Flying V, Marshall) aynı figürleri katlıyor ve ikinci gitar armonilerini çalıyor. Ton değişmiyor, açık akorlarda biraz daha fazla sustain var."
+   },
+   {
+    "name": "Koprü ('Die by my hand' bölümü)",
+    "description": "Aynı amfi ayarıyla ağır, sıkı palm mute'lu yarı tempo hissi. Ton aynı; daha yoğun susturma ve aşağı vuruş gerekiyor."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "Hammett: siyah Gibson Flying V, Boss distortion pedalı ve TC Electronic EQ ile Marshall (doğrulandı). Rasmussen'in önerisiyle solo double-track kaydedildi. Ritme göre daha fazla kazanç ve sustain var, orta frekanslar öne çıkık; muhtemelen köprü manyetiği kullanıldı. Wah ve delay için kaynak yok."
+   },
+   {
+    "name": "Bitiş",
+    "description": "Ana riffin tekrarı; ritim tonu değişmiyor."
+   }
+  ],
+  "warnings": [
+   "Amfinin tam modeli (JCM800 mü, ödünç alınmış başka bir Marshall mı) birincil kaynakta geçmiyor. Mesa/Boogie Mark II iddiası çelişkili ve muhtemelen Master of Puppets dönemiyle karıştırılıyor.",
+   "Amfi ve pedal ayarlarının hepsi tahmin, hiçbir kaynakta ayar değeri yok.",
+   "Tube Screamer kullanımı yalnızca forum ve fan rekreasyonlarına dayanıyor. Bonedo ise harici overdrive'ı Kill 'Em All dönemine bağlıyor.",
+   "Yakın mikrofon konusunda kaynaklar çelişiyor: Tape Op'ta SM7 ve U 87, MusicRadar aktarımında SM57.",
+   "Hetfield'ın bu kayıtta Explorer mı Flying V mi kullandığı tam net değil (Bonedo 'büyük ölçüde Explorer' diyor). Manyetik modeli doğrulanmadı.",
+   "BPM ve tonalite Tunebat'tan doğrulanmadı. ~200 BPM ve E minör ikincil kaynaklardan; bazı siteler yarı tempoyla ~100 BPM gösteriyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Tape Op – Flemming Rasmussen: Riding the Sweet Silence",
+    "url": "https://tapeop.com/interviews/172/flemming-rasmussen-riding-the-sweet-silence"
+   },
+   {
+    "title": "Guitar World – Prime Cuts: Hetfield & Hammett critique key songs",
+    "url": "https://www.guitarworld.com/magazine/prime-cuts-metallicas-james-hetfield-and-kirk-hammett-critique-key-songs-band-s-harsh-noble-history"
+   },
+   {
+    "title": "Bonedo – Metallica: Das Gitarren- und Bass-Equipment der ersten drei Alben",
+    "url": "https://www.bonedo.de/artikel/metallica-das-gitarren-und-bass-equipment-der-ersten-drei-alben"
+   },
+   {
+    "title": "MusicRadar – Fan recreates Ride the Lightning tone with JCM 800 and Tube Screamer",
+    "url": "https://musicradar.com/news/metallica-fan-recreates-james-hetfields-ride-the-lightning-guitar-tone-with-a-marshall-jcm-800-and-tube-screamer"
+   },
+   {
+    "title": "MusicRadar – How Flemming Rasmussen produced Master of Puppets",
+    "url": "https://www.musicradar.com/artists/producers-engineers/all-the-albums-i-did-with-metallica-were-recorded-on-24-track-analogue-tape-theres-not-a-computer-in-sight-how-flemming-rasmussen-produced-metallicas-classic-master-of-puppets"
+   },
+   {
+    "title": "Louder – Ride the Lightning: story behind the album",
+    "url": "https://www.loudersound.com/features/metallica-ride-the-lightning-story-behind-the-album"
+   },
+   {
+    "title": "Wikipedia – Ride the Lightning",
+    "url": "https://en.wikipedia.org/wiki/Ride_the_Lightning"
+   },
+   {
+    "title": "Equipboard – James Hetfield",
+    "url": "https://equipboard.com/pros/james-hetfield"
+   },
+   {
+    "title": "Karaoke Version – Creeping Death (tempo)",
+    "url": "https://www.karaoke-version.com/custombackingtrack/metallica/creeping-death.html"
+   }
+  ]
+ }
+}

@@ -1,0 +1,144 @@
+{
+ "rank": 37,
+ "part": "clean",
+ "researchedAt": 1795279646421,
+ "original": {
+  "song": {
+   "title": "The House Of The Rising Sun",
+   "artist": "The Animals",
+   "album_or_year": "1964 single (Columbia UK DB 7301 / MGM US); The Animals (US LP, 1964)",
+   "tone_character": "Gretsch Tennessean'ın HiLo'Tron single-coil manyetiklerinden gelen, parlak ama yuvarlak, ince orta frekanslı, neredeyse tamamen temiz bir arpej tonu. Selmer lambalı amfi hafif kompresyon ve pena sertleştiğinde küçük bir çatlama veriyor; 1964 mono kayıttaki stüdyo odası ve plate/oda yankısı tona hafif bir derinlik katıyor.",
+   "tone_tags": [
+    "temiz",
+    "hafif lamba kompresyonu",
+    "parlak tizler",
+    "ince/hafif alt",
+    "twangy hollowbody",
+    "oda/plate yankısı",
+    "vintage mono"
+   ],
+   "bpm": "117 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gretsch 6119 Tennessean (1962), hollowbody/semi-hollow",
+    "pickup": "Gretsch HiLo'Tron single-coil; seçici konumu bilinmiyor, büyük olasılıkla köprü manyetiği ya da iki manyetik birlikte (tahmin)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Selmer Truvoice Selectortone (Twin Selectortone 30)",
+     "channel": "Normal/tek kanal, temiz",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin: temiz ama pena sertleşince hafif çatlama sınırı"
+      },
+      {
+       "name": "Selectortone",
+       "value": "Treble/bright butonu",
+       "note": "tahmin: kayıttaki parlak karaktere göre"
+      },
+      {
+       "name": "Tremolo",
+       "value": "Off",
+       "note": "kayıtta gitarda belirgin tremolo duyulmuyor"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Tom Guerra röportajı ve uniqueguitar blogu Selmer amfiyi belirtiyor; Equipboard Selmer Twin Selectertone 30'u listeliyor. Valentine sonradan Vox AC30'a geçti; bazı modern ton rehberleri yanlış biçimde AC30 öneriyor."
+    }
+   ],
+   "cab": {
+    "model": "Selmer combo dahili hoparlörleri",
+    "speakers": "Muhtemelen 2x12 Goodmans/Celestion (dönemin Selmer comboları) – tahmin",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönem için Neumann/STC/Reslo tipi bir dinamik veya kondenser olası)",
+      "position": "Bilinmiyor; muhtemelen kabin önünde, eksen dışı",
+      "distance": "Bilinmiyor; 1964 pratiğine göre ~30 cm civarı (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon hakkında kaynak bulunamadı."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "18 Mayıs 1964 (bazı kaynaklarda 8 Mayıs), Londra, De Lane Lea Studios (Kingsway, 129 Kingsway adresinde; bu yüzden kaynaklar 'Kingsway Studios' da diyor). Prodüktör Mickie Most, balance engineer Dave Siddle. Tek take ile kaydedildi, canlı grup performansı; mono. Gitar üzerinde overdub/double-tracking yok. Hafif oda/yankı stüdyo kaynaklı. Alan Price'ın Vox Continental orgu düzenlemede baskın."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "A minör–C–D–F–E akorları üzerinde parmak/pena ile 6/8 arpej",
+    "Akor değişimlerinde arpej akıcılığını korumak",
+    "Dinamik kontrol: girişte yumuşak, sonlara doğru daha sert vuruş",
+    "Basit kalıp ama 4,5 dakika tutarlılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş ve kıtalar (temiz arpej)",
+    "description": "Araştırılan ana ton: Am–C–D–F / Am–C–E akorlarında arpej, temiz Selmer tonu, düşük-orta pena gücü."
+   },
+   {
+    "name": "Org solosu ve sonraki kıtalar (yükselen bölüm)",
+    "description": "Aynı rig, ama Valentine arpejleri daha sert ve yer yer akor vuruşlarıyla çalıyor; lamba amfi hafif çatlamaya yaklaşıyor. Ayar değişikliği yok, yalnızca dinamik artışı (girişe göre +1–2 Volume hissi)."
+   },
+   {
+    "name": "Final",
+    "description": "Yavaşlayan son ve Am tremolo/arpej bitişi; yine temiz, sustain'i bırakılan akorlar."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı: röportaj ve bloglar Selmer (Truvoice Selectortone) diyor; bazı ton siteleri Vox AC30 öneriyor ama bu kayıtla ilgili belgelenmiş değil.",
+   "Kayıt tarihi kaynaklarda 18 Mayıs veya 8 Mayıs 1964 olarak değişiyor; Grammy'deki sözlü tarih Mickie Most'un kayıtta bulunmadığını öne sürüyor.",
+   "Manyetik seçimi, amfi ayarları, hoparlör ve mikrofon bilgileri kaynaksız tahmin.",
+   "BPM kaynaklara göre 116,7–120 arasında değişiyor; şarkı 6/8 hissiyle çalınıyor (Tunebat sayfası bulunamadı)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Tom Guerra interviews Hilton Valentine",
+    "url": "https://tomguerra.com/tom-guerra-interviews-hilton-valentine/"
+   },
+   {
+    "title": "Unique Guitar Blog Feb 2021",
+    "url": "https://uniqueguitar.blogspot.com/2021/02"
+   },
+   {
+    "title": "Equipboard – Hilton Valentine",
+    "url": "https://equipboard.com/pros/hilton-valentine"
+   },
+   {
+    "title": "Gulf News obituary",
+    "url": "https://gulfnews.com/entertainment/music/animals-guitarist-hilton-valentine-dies-at-77-1.76872286"
+   },
+   {
+    "title": "Skidmore – House of the Rising Sun notes",
+    "url": "https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/13-BritBlues/Newcastle/Animals/HouseoftheRisingSun.html"
+   },
+   {
+    "title": "Far Out – songs recorded in one take",
+    "url": "https://faroutmagazine.co.uk/classic-songs-the-animals-recorded-in-one-take/"
+   },
+   {
+    "title": "Grammy – Making of House of the Rising Sun",
+    "url": "https://cms.grammy.com/the-making-of-the-animals-the-house-of-the-rising-sun/"
+   },
+   {
+    "title": "Track BPM data (Mixmeister)",
+    "url": "https://www.cs.ubc.ca/~davet/music/track/POWERTRK_049/POWERTRK_049-04.html"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/a079e7de-c94b-4859-9ca2-37e0c940bdaa?n=8"
+   },
+   {
+    "title": "GuitarChalk amp settings",
+    "url": "https://www.guitarchalk.com/house-of-the-rising-sun-amp-settings/"
+   }
+  ]
+ }
+}

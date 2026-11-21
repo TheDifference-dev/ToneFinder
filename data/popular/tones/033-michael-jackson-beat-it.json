@@ -1,0 +1,192 @@
+{
+ "rank": 33,
+ "part": "lead",
+ "researchedAt": 1795279530452,
+ "original": {
+  "song": {
+   "title": "Beat It",
+   "artist": "Michael Jackson",
+   "album_or_year": "Thriller (1982)",
+   "tone_character": "Sıcak, orta frekansları öne çıkan, doygun bir 'brown sound' lead tonu. Bu dönem Van Halen tonlarında olduğu gibi gain çok yüksek değil; tapping, kol (whammy) dalışları ve harmonikler net duyuluyor. Hafif bir tape echo izi ve oda/plate reverb'üyle mikste öne taşınmış.",
+   "tone_tags": [
+    "distorted",
+    "orta frekans öne çıkık",
+    "sıcak, kahverengi doygunluk",
+    "dinamik / pick'e duyarlı",
+    "hafif tape echo",
+    "mikste öne çıkık lead"
+   ],
+   "bpm": "139 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Eddie Van Halen 'Frankenstrat' (Frankenstein; kırmızı-beyaz-siyah, kendi yaptığı Strat tipi gitar, Floyd Rose tremolo)",
+    "pickup": "Tek köprü humbucker'ı (modifiye/potlanmış Gibson PAF; bu dönem için kesin model belgelenmemiş)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Hartley Thompson (HT45 combo + HT45S kabin, Allan Holdsworth'tan ödünç alınmış, modifiye)",
+     "channel": "Tek kanal (lead/doygun)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "MusicRadar ve VHND, Allan Holdsworth'tan ödünç alınan modifiye bir Hartley Thompson'dan söz ediyor. Ancak VHND bunu Eddie'den alıntı olarak değil, kendi anlatımı olarak veriyor. Bonedo'ya göre amfi Marshall Plexi, JCM800 ya da Hartley Thompson olabilir ve kesin değil. Kullanılan amfi hakkında bilinen bir ayar yok."
+    },
+    {
+     "model": "Marshall 1959 Super Lead 'Plexi' (Eddie'nin klasik amfisi; bazı kaynaklarda kiralık bir Marshall olarak geçiyor)",
+     "channel": "High Treble girişi",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": "Eddie'nin genel Plexi alışkanlığı; bu şarkı için belgelenmemiş"
+      },
+      {
+       "name": "Bass",
+       "value": "10",
+       "note": "genel alışkanlık, tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": "genel alışkanlık, tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": "genel alışkanlık, tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "Variac ile düşürülmüş şebeke voltajı, tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Alternatif anlatı: Line 6 şablonu ve bazı makaleler (Frankenstrat + kiralık Marshall + Echoplex) bundan söz ediyor. Ayarlar şarkıya özgü değil, EVH'nin genel Plexi pratiğinden alındı."
+    }
+   ],
+   "cab": {
+    "model": "Hartley Thompson HT45S kabin (Hartley Thompson anlatısı) ya da Marshall 4x12 (Marshall anlatısı)",
+    "speakers": "Bilinmiyor. Marshall anlatısında Celestion G12M Greenback (Line 6 şablonu)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönemin standardı: Shure SM57 ve/veya Sennheiser MD421)",
+      "position": "Bilinmiyor; muhtemelen konuya yakın, cap ile kenar arası",
+      "distance": "Bilinmiyor (yakın mikrofon, ~2-5 cm, tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon detayları hiçbir kaynakta belgelenmemiş. Kaydı Van Halen'in mühendisi Donn Landee yaptı. Eddie Westlake Studio B'de çalarken Bruce Swedien ve Quincy Jones Studio A'daydı."
+   },
+   "pedals": [
+    {
+     "model": "Maestro Echoplex EP-3",
+     "purpose": "Hafif tape echo, preamp/boost rengi",
+     "settings": [
+      {
+       "name": "Echo Delay",
+       "value": "Kısa (~100-300 ms, tahmin)",
+       "note": "Solodaki echo izi belirgin değil; preamp etkisi daha önemli"
+      },
+      {
+       "name": "Echo Volume",
+       "value": "Düşük",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Phase 90",
+     "purpose": "Line 6 şablonunda listeleniyor; solodaki kullanımı belirgin değil",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "MXR M117 Flanger",
+     "purpose": "Line 6 şablonunda listeleniyor; solodaki kullanımı belirgin değil",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Yarım ses pes (Eb)",
+   "recording_notes": "Westlake Studios (West Hollywood), Studio B, 4 Ekim 1982 (bir Guitar Player kaynağı Sunset Sound diyor). Prodüktör Quincy Jones, ana mühendis Bruce Swedien. Solo mühendisi Donn Landee. Eddie, solo yapacağı bölümün altında akor değişimi olmadığı için bölümü yeniden düzenledi. Landee 2 inçlik masteri jiletle kesip bir verse kopyası ekledi, bu da SMPTE senkronunu bozdu. Eddie iki take çaldı ve final bu ikisinden oluştu (oturum yaklaşık 20-30 dakika). Sonrasında Steve Lukather ve Jeff Porcaro, Sunset Sound'da altyapıyı solonun altına yeniden kaydetti. Masterdan yalnızca vokaller, EVH solosu ve davul kutusu vuruşları korundu. 'Hoparlör alev aldı' hikâyesi efsane: Quincy Jones mix sırasında bir monitörün yandığını anlatıyor, ancak bunu solonun kendisine bağlamıyor."
+  },
+  "difficulty": {
+   "score": 5,
+   "factors": [
+    "iki elli tapping (iki teli geçen tapping koşusu dahil)",
+    "tremolo kolu dalışları ve kol vibratosu",
+    "perde teline tap ile harmonik",
+    "tap parmağıyla slide",
+    "hızlı alternate/tremolo picking (bitiş)",
+    "geniş bending ve vibrato",
+    "Floyd Rose kontrolü ve yüksek gain'de sessizlik"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / ritim gitarları (Steve Lukather)",
+    "description": "Lukather çaldı; ritimler önce dört kat kaydedilip sonra çift kata indirildi. Önce Marshall stack kullanıldı, Quincy daha az ağır bir ses istediği için Fender '68 Deluxe ile kaydedildi. Solodan çok daha az gain var, orta seviyede overdrive. Daha sıcak ve kompakt bir ses; kol, tapping ya da echo yok. Line 6 şablonu Les Paul ve Princeton diyor; bu kaynaklarla çelişiyor."
+   },
+   {
+    "name": "Funk ritim / ek gitarlar (Paul Jackson Jr. ve diğerleri)",
+    "description": "Temiz ya da çok hafif crunch, palm-mute'lu kısa funk ritimleri. Gain neredeyse sıfır, kompresyon belirgin."
+   },
+   {
+    "name": "Solo sonrası / outro",
+    "description": "Solodan sonra şarkı Lukather'in ritim riffleriyle devam ediyor. EVH tonu yalnızca solo bölümünde var."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı. Bir anlatıda Holdsworth'tan ödünç alınmış modifiye bir Hartley Thompson var (MusicRadar, VHND); VHND bunu Eddie'den doğrudan alıntı olarak vermiyor. Diğer anlatılarda kiralık bir Marshall, Plexi ya da 800 geçiyor (Line 6, Bonedo).",
+   "Bir Fractal forum iddiasına göre solo, DS-1/HM-2 üzerinden doğrudan konsola kaydedildi. Bu iddia kaynaksız ve güvenilmez.",
+   "Kayıt yeri çelişkili: çoğu kaynak Westlake Studio B diyor, bir Guitar Player anlatısı Sunset Sound diyor. Lukather ise kesme işinin Eddie'nin evinde yapıldığını söylüyor.",
+   "MXR Phase 90 ve Flanger yalnızca Line 6 şablonunda geçiyor; kayıtta belirgin bir modülasyon duyulmuyor.",
+   "Mikrofonlar, kabin ve amfi ayarları için hiçbir belge yok. Verilen değerler EVH'nin genel pratiğine dayanan tahminler.",
+   "Bonedo gitarın Kramer olabileceğini söylüyor. 'Hırpalanmış kırmızı gitar' ifadesi ve çoğu kaynak Frankenstrat'ı işaret ediyor.",
+   "Tonalite: analizlere göre Eb minör, 139 BPM. Notalar E minörde yazılmış (yarım ses pes akort)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar – The incredible story of Eddie Van Halen's Beat It solo",
+    "url": "https://www.musicradar.com/news/eddie-van-halen-beat-it-solo-story"
+   },
+   {
+    "title": "Guitar Player – Eddie Van Halen Beat It solo",
+    "url": "https://www.guitarplayer.com/guitarists/eddie-van-halen-beat-it-solo"
+   },
+   {
+    "title": "Line 6 Tone Template – Eddie Van Halen Beat It",
+    "url": "https://line6.com/tone-templates-diagrams/eddie-van-halen--beat-it.html"
+   },
+   {
+    "title": "VHND – Allan Holdsworth tribute",
+    "url": "https://www.vhnd.com/2017/04/17/allan-holdsworth-tribute/"
+   },
+   {
+    "title": "Bonedo – Beat It Solo Workshop",
+    "url": "https://www.bonedo.de/artikel/einzelansicht/die-besten-gitarren-soli-michael-jackson-beat-it-workshop.html"
+   },
+   {
+    "title": "Fractal Audio Forum – Van Halen Beat It solo",
+    "url": "https://forum.fractalaudio.com/threads/van-halen-beat-it-solo.29901/"
+   },
+   {
+    "title": "Guitar World – The story of Beat It",
+    "url": "https://guitarworld.com/features/the-story-of-michael-jackson-beat-it-eddie-van-halen-steve-lukather"
+   },
+   {
+    "title": "SongBPM – Beat It",
+    "url": "https://songbpm.com/michael-jackson/beat-it"
+   },
+   {
+    "title": "Music Gateway – Beat It key/BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/michael-jackson/beat-it"
+   }
+  ]
+ }
+}

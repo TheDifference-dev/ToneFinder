@@ -1,0 +1,203 @@
+{
+ "rank": 35,
+ "part": "clean",
+ "researchedAt": 1795279616950,
+ "original": {
+  "song": {
+   "title": "Under the Bridge",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "Blood Sugar Sex Magik (1991)",
+   "tone_character": "İnce, cam gibi çınlayan, tiz ağırlıklı temiz bir Strat tonu. Hafif kompresyonla notalar düzgün ve sustain'li, distorsiyon yok; vintage tek bobinli manyetiklerin 'quack' karakteri ve hafif bir oda havası duyuluyor.",
+   "tone_tags": [
+    "temiz",
+    "parlak",
+    "çınlayan",
+    "hafif kompresli",
+    "ince alt",
+    "tek bobinli Strat karakteri",
+    "dinamik"
+   ],
+   "bpm": "84–85 BPM",
+   "key": "E majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (vintage; Frusciante'ye göre '58, fotoğraflara göre gülağacı klavyeli ve muhtemelen '60'ların başı modeli)",
+    "pickup": "Stok vintage tek bobinli manyetikler; temiz bölüm için büyük olasılıkla sap manyetiği ya da sap+orta (4. pozisyon) — kaynakta doğrulanmadı",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall gitar kafası (model tartışmalı: JCM800 / Silver Jubilee 25/50 öne sürülüyor)",
+     "channel": "Temiz / düşük gain",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "2",
+       "note": "Tahmin; tamamen temize yakın, çok hafif sıcaklık"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin; parlak, çınlayan üst"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Frusciante BSSM için 'temel kayıtların çoğunda iki Marshall: kenar için bir gitar kafası, vurgu ve alt için bir bas kafası' kullandığını söylemiş (doğrulanmış). Under the Bridge için hangisinin kullanıldığı belirtilmemiş. Funky Monks belgeselinde bir JCM800 görülüyor."
+    },
+    {
+     "model": "Marshall bas kafası (Marshall Major 200W ya da 'Marshall 60w bass head' olarak anılıyor)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Sinyal DOD stereo chorus pedalıyla iki amfiye bölünmüş (doğrulanmış, albüm geneli). Model tam belli değil; bir röportajda '60w bass head', sonraki bir röportajda '200-watt bass head' deniyor."
+    },
+    {
+     "model": "Fender H.O.T. (küçük transistörlü pratik amfisi)",
+     "channel": "Tek",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Frusciante overdub'ların çoğunun 12W'lık bir pratik amfisiyle, bazı partilerin ise doğrudan mikser masasına girilerek kaydedildiğini söylemiş. Under the Bridge'in ince, çınlayan intro'su için bu küçük amfinin ya da doğrudan masaya girmenin kullanılmış olması mümkün ama doğrulanmadı."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (büyük olasılıkla Marshall 4x12)",
+    "speakers": "Bilinmiyor (muhtemelen Celestion)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (tipik tercih SM57)",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofonlar için hiçbir kaynak bilgi vermiyor. The Mansion'daki kayıtlar odalarda yapılmış, doğal oda karakteri muhtemel."
+   },
+   "pedals": [
+    {
+     "model": "MXR M102 Dyna Comp",
+     "purpose": "İntro'daki temiz tonu sıkıştırmak ve sustain vermek",
+     "settings": [
+      {
+       "name": "Output",
+       "value": "5",
+       "note": "Tahmin; birlik kazancı civarı"
+      },
+      {
+       "name": "Sensitivity",
+       "value": "4",
+       "note": "Tahmin; hafif-orta kompresyon, atak korunuyor"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "DOD stereo chorus (FX65)",
+     "purpose": "Sinyali iki Marshall'a bölmek (albüm geneli); chorus efekti belirgin değil",
+     "settings": [
+      {
+       "name": "Effect",
+       "value": "Off/minimum",
+       "note": "Tahmin; kayıtta belirgin chorus duyulmuyor"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Blood Sugar Sex Magik (1991). Kayıt Mayıs-Haziran 1991'de Laurel Canyon'daki The Mansion'da yapıldı; prodüktör Rick Rubin, kayıt ve miks Brendan O'Brien. Gitar tonu ince, çınlayan, tiz ağırlıklı ve hafifçe sağa pan edilmiş olarak tarif ediliyor (Guitar.com). Frusciante overdub'ların bir kısmını küçük bir pratik amfisiyle ya da doğrudan masaya girerek kaydettiğini söylemiş. Rubin başta şarkıyı çok kişisel bulan Kiedis'i grupla paylaşmaya ikna etti. Outro'daki koroda John'un annesi Gail Frusciante ve arkadaşları var."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Hendrix/Curtis Mayfield tarzı akor süslemeleri (akor içinde hammer-on/pull-off)",
+    "Bas tellerde başparmakla susturma/akor tutma",
+    "Double-stop ve kısa melodik dolgular",
+    "Yavaş tempoda temiz ton nedeniyle her hatanın duyulması; dinamik ve hassas sağ el kontrolü",
+    "Arpej ile vurgulu tek tel notalar arasında akıcı geçiş",
+    "Akor pozisyonları arasında slide"
+   ]
+  },
+  "sections": [
+   {
+    "name": "İntro (solo gitar)",
+    "description": "Temiz bölümün kendisi: Dyna Comp'lu, parlak temiz Strat (doğrulanmış kompresör). Akor süslemeli, Hendrix tarzı arpejler ve double-stop'lar."
+   },
+   {
+    "name": "Kıtalar",
+    "description": "Aynı temiz ton; gitar vokalin arkasında daha seyrek, hafif akor/arpej dolguları çalıyor. Kompresyon daha az belirgin olabilir, dinamik biraz düşük."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Grup giriyor; ton yine temiz ama akorlar daha dolu ve güçlü vuruluyor. Hafif bir sıcaklık ya da amfi doygunluğu duyulabilir (tahmin)."
+   },
+   {
+    "name": "Outro / koro bölümü ('Under the bridge downtown...')",
+    "description": "Yoğunluk artıyor: davul ve bas ağırlaşırken gitar daha kalın, daha güçlü vurulan akorlar ve riff'lerle hafif crunch'a doğru gidiyor. Gain biraz artırılmış, kompresör kapalı ya da önemsiz (tahmin; ayrıntılı kaynak yok). Koro ile katmanlı."
+   }
+  ],
+  "warnings": [
+   "Under the Bridge için kullanılan amfi kesin olarak belgelenmemiş. Frusciante albüm genelinde iki Marshall (gitar + bas kafası) kullandığını, overdub'ların bir kısmını küçük bir pratik amfiyle ya da doğrudan masaya girerek kaydettiğini söylemiş. Hangisinin bu şarkıda kullanıldığı bilinmiyor.",
+   "Bazı siteler Marshall Jubilee 25/50, Boss DS-1 ve Fender Silverface Showman listeliyor. Bunlar sonraki dönemlere (Californication ve sonrası) ait, 1991 kaydı için güvenilir değil.",
+   "Videodaki gitar bir Fender Jaguar ('62 ya da '66 olarak anılıyor). Mixdown bunun kayıttaki intro'da da kullanıldığını söylüyor, GroundGuitar ise kanıt olmadığını belirtiyor. Albümdeki ana gitar vintage Stratocaster.",
+   "Manyetik seçimi (sap / sap+orta) kaynaklarda doğrulanmadı, kulak tahmini.",
+   "Dyna Comp'un intro'da kullanıldığı bilgisi Equipboard'dan geliyor (kullanıcı katkılı site). Kaynağı ayrıca doğrulanmadı.",
+   "Tunebat sayfası bulunamadı. Tonalite çoğu kaynakta E majör, bazı algoritmalar A diyor. Tempo 84–85 BPM civarında (70 BPM aykırı bir değer).",
+   "Kabin, hoparlör ve mikrofon bilgisi hiçbir kaynakta yok. Verilen amfi ve pedal ayarlarının tamamı tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mixdown - Gear Rundown: Red Hot Chili Peppers' Blood Sugar Sex Magik",
+    "url": "https://mixdownmag.com.au/features/columns/gear-rundown-red-hot-chili-peppers-blood-sugar-sex-magik/"
+   },
+   {
+    "title": "GroundGuitar - John Frusciante Gear (chronological)",
+    "url": "https://www.groundguitar.com/john-frusciante-gear"
+   },
+   {
+    "title": "GroundGuitar - John Frusciante's Marshall Bass Head (BSSM)",
+    "url": "https://www.groundguitar.com/john-frusciante-gear/john-frusciantes-marshall-bass-head-bssm/"
+   },
+   {
+    "title": "Equipboard - Blood Sugar Sex Magik",
+    "url": "https://equipboard.com/albums/red-hot-chili-peppers-blood-sugar-sex-magik"
+   },
+   {
+    "title": "Equipboard - John Frusciante",
+    "url": "https://equipboard.com/pros/john-frusciante"
+   },
+   {
+    "title": "Guitar.com - The genius of Blood Sugar Sex Magik",
+    "url": "https://guitar.com/features/opinion-analysis/the-genius-of-blood-sugar-sex-magik-red-hot-chili-peppers-rhcp/"
+   },
+   {
+    "title": "Wikiwand - Under the Bridge",
+    "url": "https://www.wikiwand.com/en/articles/Under_The_Bridge"
+   },
+   {
+    "title": "AudioKeychain - Under the Bridge",
+    "url": "https://www.audiokeychain.com/track/FrY/red-hot-chili-peppers-under-the-bridge"
+   },
+   {
+    "title": "GuitarChalk - Under the Bridge amp settings",
+    "url": "https://www.guitarchalk.com/under-the-bridge-amp-settings/"
+   }
+  ]
+ }
+}

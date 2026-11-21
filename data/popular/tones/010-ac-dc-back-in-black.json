@@ -1,0 +1,182 @@
+{
+ "rank": 10,
+ "part": "intro",
+ "researchedAt": 1795278712847,
+ "original": {
+  "song": {
+   "title": "Back In Black",
+   "artist": "AC/DC",
+   "album_or_year": "Back in Black (1980)",
+   "tone_character": "İki gitarın (Malcolm solda, Angus sağda) unison çaldığı, düşük-orta gainli, açık ve dinamik Marshall crunch'ı. Distorsiyondan çok amfinin çalışmasıyla gelen bir satürasyon var; akorlar net ayrışıyor, orta frekanslar güçlü, efekt neredeyse hiç yok ve oda neredeyse kuru.",
+   "tone_tags": [
+    "orta gain crunch",
+    "orta frekans öne çıkık",
+    "açık ve dinamik",
+    "kuru, efektsiz",
+    "parlak ama sert olmayan",
+    "sıkı alt",
+    "iki gitar stereo"
+   ],
+   "bpm": "94 BPM",
+   "key": "E majör (Mixolydian)"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Angus Young: Gibson SG (1970'ler, siyah/vişne). Malcolm Young: Gretsch (1963 Jet Firebird 'The Beast' ya da 1959 White Falcon)",
+    "pickup": "Angus: köprü humbucker. Malcolm: köprü manyetiği (Gretsch Filter'Tron tipi)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead 100W (ve/veya 50W Marshall kafalar)",
+     "channel": "Tek kanal, High Treble girişi",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin, orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Platt: kabin 'doğru miktarda ısırana' kadar açıldı, sonuna kadar değil"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Platt, tüm amfilerin Marshall olduğunu ve şarkıdan şarkıya 50W/100W kafa ile kabin kombinasyonlarının değiştiğini söylüyor (onaylı). Bu şarkıda tam olarak hangi kafanın kullanıldığı bilinmiyor. Super Lead olması kuvvetle muhtemel; Malcolm'un Super Bass ya da JTM45 kullandığı da iddia ediliyor. Knob ayarları tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (eğimli ve düz kabinler denendi)",
+    "speakers": "Celestion G12 (G12-65 iddiası var; Platt 50W'lık hoparlörlerin daha az crunch verdiğini söylüyor)",
+    "mics": [
+     {
+      "model": "Neumann U67",
+      "position": "Bir hoparlörde; pattern cardioid/figure-8/omni olarak şarkıya göre değişiyor",
+      "distance": "Yakın, tam mesafe bilinmiyor"
+     },
+     {
+      "model": "Neumann U87 (ya da ikinci bir U67)",
+      "position": "Aynı kabinin başka bir hoparlöründe",
+      "distance": "Yakın, tam mesafe bilinmiyor"
+     },
+     {
+      "model": "Neumann stereo oda mikrofonu",
+      "position": "Odada, davul ile gitarlar arasında yeri değiştirildi",
+      "distance": "Oda"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Her gitar için tek kabine iki condenser mikrofon kullanıldı. Platt SM57 yerine condenser mikrofonları tercih ediyor. Panlama: bir mikrofon hard sol/sağda, diğeri merkeze yakın (ör. 7–1 ve 5–11 saat). Hoparlör modeli tartışmalı."
+   },
+   "pedals": [
+    {
+     "model": "Schaffer-Vega Diversity System (kablosuz)",
+     "purpose": "Angus'un sololarında kullandığı telsiz verici. Sinyale orta frekans ısırığı ve hafif bir boost katıyordu.",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Compass Point Studios'ta (Nassau, Bahamalar) 1980'de yapıldı. Prodüktör Robert John 'Mutt' Lange, mühendis Tony Platt; miks Electric Lady'de (New York). Kayıt düzeni: MCI konsol ve 24 kanallı MCI teyp. Temel kanallar iki gitar, bas ve davulla canlı çalındı, bazı yerlerde edit yapıldı; tek overdub Angus'un sololarıydı. Gitar rigleri paravanla ayrıldı: Malcolm solda, Angus sağda. Grup reverb ve eko istemedi; Platt yalnızca gitarları ayırmak için çok hafif bir delay ekledi. Kayıtta kompresör kullanılmadığı bildiriliyor (Vintage King). Riff iki gitarın unison çalmasıyla 'tek büyük gitar' gibi duyuluyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "E-D-A power chord'larıyla kısa susturmalar (stop-start)",
+    "Hızlı inen E minör pentatonik dolgu (hammer-on/pull-off, açık teller)",
+    "Sıkı ritim zamanlaması ve sol elle susturma",
+    "Groove ve dinamik kontrolü",
+    "Pick saldırısının sertliğiyle gain'i kontrol etme"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Hi-hat girişi ve ana riff",
+    "description": "Araştırılan ton bu. İki gitar unison çalıyor, köprü manyetiği ve Marshall crunch kullanılıyor."
+   },
+   {
+    "name": "Verse",
+    "description": "Ton aynı. Akorlar daha kısa ve staccato çalınıyor, A–G/B dolguları var; Angus zaman zaman küçük süslemeler ekliyor."
+   },
+   {
+    "name": "Nakarat / pre-chorus",
+    "description": "Ton aynı. Açık akorlar daha uzun tutuluyor; dinamik yalnızca daha sert pena vuruşuyla artıyor."
+   },
+   {
+    "name": "Solo (Angus)",
+    "description": "Sonradan overdub edildi. SG köprü manyetiği ve Schaffer-Vega kablosuz sistemle çalındığı için ortalar daha yoğun, sinyal hafif boost'lu ve biraz daha kompresli; geniş bend'ler ve hızlı vibrato var. Ritimdeki tona göre Middle'ı +1 açıp bir booster eklemek yaklaşık sonucu verir."
+   }
+  ],
+  "warnings": [
+   "Malcolm'un bu şarkıda Jet Firebird mi yoksa White Falcon mu çaldığı tartışmalı; klipte White Falcon görünüyor.",
+   "Hangi Marshall kafasının kullanıldığı bilinmiyor (Super Lead, Super Bass, JTM45). Knob ayarları tamamen tahmin.",
+   "Hoparlörün G12-65 olduğu iddiası forum ve Equipboard kaynaklı; zayıf.",
+   "Schaffer-Vega'nın ritim kanallarında da kullanıldığı kesin değil; Platt yalnızca sololarda telsizden söz ediyor.",
+   "Tonalite kaynaklarda A majör, B minör ve E minör olarak geçiyor; müzikal olarak riff E (Mixolydian/blues) merkezli. BPM 93–94 aralığında.",
+   "Tunebat'ta stüdyo versiyonunun sayfası bulunamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Premier Guitar – The Making of Back in Black: A Conversation with Tony Platt",
+    "url": "https://www.premierguitar.com/the-making-of-back-in-black-a-conversation-with-tony-platt"
+   },
+   {
+    "title": "Sound on Sound – Classic Tracks: AC/DC Back in Black",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-acdc-back-black"
+   },
+   {
+    "title": "Vintage King – Making of Back in Black",
+    "url": "https://vintageking.com/blogs/making-of/acdc-back-in-black"
+   },
+   {
+    "title": "Woodytone – More AC/DC Deets",
+    "url": "https://www.woodytone.com/2011/07/29/more-acdc-deets-recording-amps-gear/"
+   },
+   {
+    "title": "Equipboard – AC/DC Back in Black",
+    "url": "https://equipboard.com/albums/ac-dc-back-in-black"
+   },
+   {
+    "title": "Equipboard – Malcolm Young",
+    "url": "https://equipboard.com/malcolm-young"
+   },
+   {
+    "title": "Wikipedia – Malcolm Young",
+    "url": "https://wikipedia.com/wiki/Malcolm_Young"
+   },
+   {
+    "title": "Thomann – AC/DC Guitars and Amps",
+    "url": "https://www.thomann.de/blog/en/gear/ac-dc-guitars-and-amps"
+   },
+   {
+    "title": "Mixdown – Gear Rundown: Angus Young",
+    "url": "https://mixdownmag.com.au/features/gear-rundown-angus-young"
+   },
+   {
+    "title": "Klang.io – Back In Black",
+    "url": "https://songs.klang.io/en/s/AC%2FDC/Back%20In%20Black/pAgnJDJN4VA"
+   },
+   {
+    "title": "audiokeychain – Back in Black",
+    "url": "https://www.audiokeychain.com/track/YhI/acdc-back-in-black"
+   }
+  ]
+ }
+}

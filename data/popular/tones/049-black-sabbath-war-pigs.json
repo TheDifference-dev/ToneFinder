@@ -1,0 +1,175 @@
+{
+ "rank": 49,
+ "part": "rhythm",
+ "researchedAt": 1795280057280,
+ "original": {
+  "song": {
+   "title": "War Pigs",
+   "artist": "Black Sabbath",
+   "album_or_year": "Paranoid (1970)",
+   "tone_character": "Ham, orta frekansı öne çıkık, Rangemaster ile itilmiş tam güçlü Laney'nin verdiği kalın ama bugünkü ölçüye göre orta seviyede bir distorsiyon. P-90'ın sert ve havadar atağı, bas tarafı kısık amfi ve tiz booster sayesinde çamurlaşmayan, odanın da hissedildiği vintage bir heavy rock tonu.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "tiz boost ile itilmiş",
+    "orta-yüksek gain",
+    "ham/vintage",
+    "alt frekans sınırlı",
+    "odalı",
+    "P-90 atağı"
+   ],
+   "bpm": "90–92 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG Special (1964/65, solak, Iommi'nin 'Monkey' SG'si)",
+    "pickup": "Köprü manyetiği, P-90 (single-coil)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Laney Supergroup 100W (LA100BL / Supergroup MK1)",
+     "channel": "Bass input (yüksek gain girişi), master volume yok, amfi tam açık",
+     "settings": [
+      {
+       "name": "Gain 1 / Volume",
+       "value": "10",
+       "note": "Guitar World'ün Paranoid-dönemi (Iron Man) tarifi"
+      },
+      {
+       "name": "Bass",
+       "value": "0",
+       "note": "Rangemaster ile birlikte çamuru önlemek için"
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Ayarlar Guitar World'ün aynı albümdeki 'Iron Man' için verdiği tariften; War Pigs için ayrı ayar belgelenmemiş. Equipboard Paranoid'de LA100BL, Guitar World Supergroup MK1 diyor."
+    }
+   ],
+   "cab": {
+    "model": "Laney Supergroup 4x12",
+    "speakers": "Celestion G12-25M (bazı kabinlerde Goodmans Audiom 61)",
+    "mics": [
+     {
+      "model": "Belgelenmemiş (muhtemelen dinamik mikrofon, ör. Shure SM57 veya dönemin Neumann/AKG kondansatörü)",
+      "position": "Bilinmiyor",
+      "distance": "Yakın mikrofon + oda sesi tahmini"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin/hoparlör Guitar World'ün Paranoid dönemi tarifine dayanıyor; mikrofonlama hakkında kaynak yok (tahmin)."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Rangemaster Treble Booster (modifiyeli)",
+     "purpose": "Amfinin önünde tiz boost; amfiyi doyuma sokmak ve bası kesmek",
+     "settings": [
+      {
+       "name": "Boost",
+       "value": "Tam açık",
+       "note": "Genel kabul; kesin değer belgelenmemiş"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Haziran 1970, Londra Regent Sound ve Island Studios; prodüktör Rodger Bain, mühendis Tom Allom (likely). Grup büyük ölçüde canlı, az overdub ile kaydetti; ritim gitarı muhtemelen tek ya da sınırlı overdub'lı, soloda çift kayıt (doubling) var. Şarkının sonundaki 'Luke's Wall' outrosu bant hızlandırma efektiyle bitiyor. Şarkının çalışma adı 'Walpurgis'. Intro'daki siren sesi sonradan eklenmiş efekt."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Uzun süre çınlayan power chord/akorlar ve aralarda sessizlik (zamanlama)",
+    "Hızlı tremolo/alternate picking ile çalınan tek nota riff geçişleri",
+    "Kontrollü vibrato ve küçük bendler",
+    "Ani akor vuruşları ve susturma (muting)",
+    "Yavaş tempoda groove'u tutmak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (siren bölümü)",
+    "description": "Aynı distorsiyonlu ton; yavaş, uzun çınlayan akorlar (E5, G, A bölgesi) ve aralarında boşluk. Ritimle aynı rig, çalış dinamiği daha geniş; gitar volüm düğmesiyle hafifçe kısılmış hissi verir."
+   },
+   {
+    "name": "Kıta (vokal altı)",
+    "description": "Vokal satırları sırasında gitar neredeyse susar; satır sonlarında kısa akor vuruşları ve hızlı tek nota dolgular. Ton aynı."
+   },
+   {
+    "name": "Ana riff / ara geçişler",
+    "description": "Daha sürekli, palm mute'suz power chord ve tremolo picking'li riff; aynı gain."
+   },
+   {
+    "name": "Solo",
+    "description": "Köprü P-90, aynı Laney+Rangemaster; çift kayıtlı (iki solo izi üst üste). Daha fazla vibrato ve bend, biraz daha öne mikslenmiş."
+   },
+   {
+    "name": "Outro (Luke's Wall)",
+    "description": "Akustik/temiz gitar katmanları ve distorsiyonlu lead ile çok katmanlı bölüm; sonunda bant hızlandırma efekti."
+   }
+  ],
+  "warnings": [
+   "War Pigs'e özel amfi ayarı yok; ayarlar Guitar World'ün aynı albümdeki 'Iron Man' tarifinden alındı.",
+   "Amfi modeli tartışmalı: Equipboard Paranoid'de Laney LA100BL, Guitar World Supergroup MK1 diyor (ikisi de 100W Laney Supergroup ailesinden).",
+   "SG'nin yılı kaynaklara göre 1964 ya da 1965.",
+   "Mikrofon ve mikrofon konumu hiçbir kaynakta belgelenmemiş (tahmin).",
+   "Tonalite tartışmalı: Hooktheory E Mixolydian, Musicnotes E majör diyor; algoritmik analizler A majör/F# minör veriyor. Riff E5 merkezli, pratikte E minör/blues hissi var.",
+   "BPM 90–91 civarında algoritmik tahmin; Tunebat sayfası doğrulanamadı. Kayıt tempo açısından hafifçe dalgalanıyor.",
+   "Tom Allom'un mühendis olarak katkısı hafızaya dayanıyor (likely)."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Tonal Recall Part 1 (Iron Man / Paranoid rig)",
+    "url": "https://www.guitarworld.com/artists/tonal-recall-part-1"
+   },
+   {
+    "title": "Equipboard – Black Sabbath Paranoid",
+    "url": "https://equipboard.com/albums/black-sabbath-paranoid"
+   },
+   {
+    "title": "Thomann – Hit the Tone! Black Sabbath's Paranoid",
+    "url": "https://www.thomannmusic.com/blog/gear/hit-the-tone-black-sabbaths-paranoid/"
+   },
+   {
+    "title": "Guitar.com – 5 facts about Black Sabbath's gear",
+    "url": "https://guitar.com/guides/essential-guide/5-facts-black-sabbaths-gear/"
+   },
+   {
+    "title": "zZounds – Iconic rigs on a budget: Tony Iommi",
+    "url": "https://blog.zzounds.com/2016/04/28/iconic-rigs-on-a-budget-tony-iommi/"
+   },
+   {
+    "title": "Reverb – How Tony Iommi Built the Blueprint for Heavy Metal",
+    "url": "https://reverb.com/news/video-how-tony-iommi-built-the-blueprint-for-heavy-metal-potent-pairings"
+   },
+   {
+    "title": "Hooktheory – War Pigs",
+    "url": "https://hooktheory.com/theorytab/view/black-sabbath/war-pigs"
+   },
+   {
+    "title": "Audiokeychain – War Pigs",
+    "url": "https://www.audiokeychain.com/track/PqK/black-sabbath-war-pigs"
+   },
+   {
+    "title": "AcousticBrainz – War Pigs",
+    "url": "https://acousticbrainz.org/32cff84e-3d80-4805-82fb-dcaa882f6e60?n=1"
+   }
+  ]
+ }
+}

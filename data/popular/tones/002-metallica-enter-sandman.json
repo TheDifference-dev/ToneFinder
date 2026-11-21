@@ -1,0 +1,197 @@
+{
+ "rank": 2,
+ "part": "intro",
+ "researchedAt": 1795278442914,
+ "original": {
+  "song": {
+   "title": "Enter Sandman",
+   "artist": "Metallica",
+   "album_or_year": "Metallica (The Black Album), 1991",
+   "tone_character": "Sıkı ama kalın alt frekanslı, orta frekansları oyulmuş ama Marshall katmanıyla 'punch'ı geri kazandırılmış, yüksek kazançlı Mesa/Boogie distorsiyonu; üç kanallı (sol-orta-sağ) duvar gibi geniş bir ritim tonu. Giriş, temiz/hafif arpej ile başlayıp ağır distorsiyonlu ana riff'e geçer.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "orta frekans oyuk (scooped)",
+    "sıkı ve kalın alt",
+    "katmanlı/çok amfili",
+    "geniş stereo duvar",
+    "palm mute vurgulu",
+    "kompresörsüz doğal dinamik"
+   ],
+   "bpm": "123 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP MX-220 / MX-250 (Explorer tipi; Hetfield)",
+    "pickup": "Köprü manyetiği, EMG 81 (aktif)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark II (Simul-Class; çoğu kaynakta Mark IIC+/IIC++ olarak geçer)",
+     "channel": "Lead (yüksek kazanç)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7.5",
+       "note": "Tahmin; Lead drive yüksek"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "3",
+       "note": "Tahmin; oyuk mid asıl olarak grafik EQ'dan"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Graphic EQ",
+       "value": "V şekli",
+       "note": "Mark serisinin 5 bantlı EQ'su; klasik 'V' — tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Hetfield: 'son üç albümde kullandığım aynı Mesa Boogie Simul-Class Mark II'. Kesin alt model (IIC+ / IIC++) kaynaklar arasında tartışmalı. Kesin ayarlar yayımlanmamıştır."
+    },
+    {
+     "model": "Modifiyeli Marshall (Jose Arredondo modu; JCM800 civarı)",
+     "channel": "Lead",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Bob Rock, Mesa'nın eksik orta frekanslarını tamamlamak için Jose modlu Marshall'ı Mesa ile harmanladı. Mühendis Randy Staub 'muhtemelen eski bir Marshall kafa' diyor."
+    },
+    {
+     "model": "Ek amfiler (Mesa Mark IV, ADA MP-1 + Mesa Strategy 400 power amp vb.)",
+     "channel": "",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Staub 'sesi doldurmak için başka amfiler' diyor; Guitar World/Guitar.com dönem rig'inde ADA MP-1 ve Strategy 400 sayıyor; bu şarkıda tam hangilerinin olduğu belirsiz."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12 (çoklu kabin dizisi; 9–11 kabin)",
+    "speakers": "Celestion Vintage 30",
+    "mics": [
+     {
+      "model": "Belirtilmemiş (yakın mikrofonlar; SM57 tipi tahmin)",
+      "position": "Kabin önü, perdeli bölme içinde",
+      "distance": "Yakın"
+     },
+     {
+      "model": "Belirtilmemiş oda mikrofonları",
+      "position": "Uzak / oda",
+      "distance": "Birkaç metre"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Staub: 9 ya da 11 kabin, bazıları istiflenmiş, bazıları birbirinden izole, yansımaları kontrol için perdeli bir alanda; bazı mikrofonlar oda ambiyansı için uzağa konmuş. Mikrofon modelleri kaynaklarda yok. 1960B + V30 bilgisi Guitar World'ün genel Black Album dökümünden."
+   },
+   "pedals": [
+    {
+     "model": "Aphex EQF-2 (x2) parametrik EQ",
+     "purpose": "Effects loop'ta tonu şekillendirme / mid oyma",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Aphex CX-1 compressor/gate",
+     "purpose": "Loop'ta kompresör/gate, sıkı palm mute",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Eventide H3000",
+     "purpose": "Stereo genişletme / hafif detune",
+     "settings": [
+      {
+       "name": "Detune",
+       "value": "±5–10 cent",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "One on One Studios, North Hollywood, 1990–91. Prodüktör Bob Rock, mühendis Randy Staub; SSL konsol, Neve preamp'ler. Ritim gitarları üç kanal (sol, sağ, orta) olarak kaydedildi—tek bir 'gitar duvarı'. Hetfield ritimleri davullardan sonra, bas ve vokalden önce kaydetti; telleri taze tutmak için bölüm bölüm kaydedip tel değiştirdi. Miksajda Hetfield'ın gitarlarına kompresör uygulanmadı. Ana riff fikri Kirk Hammett'ten; Lars Ulrich riff'i kesip tekrarlattı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Sıkı palm mute ile alternate/downpicking",
+    "Riff tekrarlarında zamanlama ve sıkılık",
+    "Temiz arpej ile distorsiyonlu riff arasında geçiş",
+    "E-F-Bb (tritone) kalıbında akıcı pozisyon değişimi"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş arpeji",
+    "description": "Açılıştaki E–G–F#/Bb arpej motifi temiz tonda (Hammett), tek manyetik yerine köprü/sap karışımı olabilir; gain çok düşük, distorsiyon yok, hafif chorus/hafif wah süzmesi ile; bas ile çiftlenmiş. Riff tonuna göre kanal temiz, kazanç ~2, bas biraz az."
+   },
+   {
+    "name": "Ana riff / Kıta ritimleri",
+    "description": "Bu raporun temel tonu: Mesa Lead + Marshall katmanı, köprü EMG 81, palm mute; üç kanal ritim."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "ESP KH-2 / Gibson Les Paul Custom, köprü manyetiği; Mesa Mark IIC++ (ve Bradshaw preamp + Marshall'lar), Dunlop Cry Baby wah yoğun kullanılır, daha fazla orta frekans ve sustain, hafif delay; tek kanal, ortada."
+   },
+   {
+    "name": "Köprü / 'Now I lay me down to sleep' bölümü",
+    "description": "Temiz/arpejli gitar dokuları, düşük gain; distorsiyonlu ritim azaltılmış."
+   }
+  ],
+  "warnings": [
+   "Amfi modeli tartışmalı: Hetfield 'Simul-Class Mark II' diyor, diğer kaynaklar Mark IIC+ veya IIC++ diyor.",
+   "Amfi ayarları ve EQ değerleri hiçbir birincil kaynakta yok; verilen değerler tahmindir.",
+   "Mikrofon modelleri ve mesafeleri yayımlanmamış; yalnızca çoklu kabin, perdeli bölme ve oda mikrofonları doğrulanmış.",
+   "Aphex EQ/compressor, ADA MP-1, Eventide H3000 bilgisi genel Black Album dökümlerinden; Enter Sandman'e özgü teyit yok.",
+   "Guitar World dökümündeki D standart akort Sad But True içindir; Enter Sandman standart E'dir.",
+   "BPM 123–125 arasında, tonalite bazı veri tabanlarında E majör olarak görünüyor; müzikal olarak riff E minör/frigyen-tritone karakterlidir.",
+   "Temiz girişte wah/chorus kullanımı kaynakla doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mix – Classic Tracks: Metallica's Enter Sandman",
+    "url": "https://www.mixonline.com/recording/classic-tracks-metallicas-enter-sandman-366232"
+   },
+   {
+    "title": "MusicRadar – Enter Sandman, Hetfield & Bob Rock",
+    "url": "https://www.musicradar.com/news/metallica-enter-sandman-james-hetfield-bob-rock"
+   },
+   {
+    "title": "Guitar World – Secrets behind Sad But True (Black Album gear)",
+    "url": "https://www.guitarworld.com/gear/secrets-behind-metallica-sad-but-true"
+   },
+   {
+    "title": "Guitar.com – The genius of the Black Album",
+    "url": "https://guitar.com/reviews/album/the-genius-of-the-black-album-by-metallica/"
+   },
+   {
+    "title": "Reverb – Bob Rock looks back on recording the Black Album",
+    "url": "https://reverb.com/news/producer-bob-rock-looks-back-on-recording-metallicas-black-album"
+   },
+   {
+    "title": "GuitarChalk – Enter Sandman amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-enter-sandman-metallica/"
+   },
+   {
+    "title": "Ground Guitar – Hetfield's Mesa Boogie Mark IIC+",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-mesa-boogie-mark-iic/"
+   },
+   {
+    "title": "Songdata / BPM bilgisi",
+    "url": "https://songdata.io/track/2b1dtQbCEItVOF45SD2Sar/Enter-Sandman-by-Atlantic-String-Machine"
+   }
+  ]
+ }
+}

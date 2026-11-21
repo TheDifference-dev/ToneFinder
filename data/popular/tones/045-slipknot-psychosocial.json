@@ -1,0 +1,182 @@
+{
+ "rank": 45,
+ "part": "rhythm",
+ "researchedAt": 1795279981241,
+ "original": {
+  "song": {
+   "title": "Psychosocial",
+   "artist": "Slipknot",
+   "album_or_year": "All Hope Is Gone (2008)",
+   "tone_character": "Yüksek gainli, sıkı ve kuru bir modern metal ritim tonu. İki gitarist (Mick Thomson ve Jim Root) sol/sağ kanallara ayrılmış, alt frekanslar sıkı, orta frekanslar belirgin, aktif manyetiklerin sıkıştırılmış ve çok net palm-mute tepkisi var.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "aktif manyetik kompresyonu",
+    "orta frekans belirgin",
+    "kuru, efektsiz",
+    "stereo çift gitar",
+    "pes akort"
+   ],
+   "bpm": "135–136 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Mick Thomson: Ibanez MTM1 signature (gövde içinden geçen maun sap, ebony klavye, sabit köprü). Jim Root: Fender Jim Root Telecaster prototipi (maun gövde, beyaz ve siyah örnekler)",
+    "pickup": "Köprü manyetiği. Mick: aktif Seymour Duncan Blackout. Jim: EMG 81 (köprü), sapta EMG 60",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Rivera KR7 (Mick Thomson signature)",
+     "channel": "Yüksek gainli kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Guitar World, Mick'in o dönem KR7 imza kafasını kullandığını yazıyor (Paul Rivera ile frekans analizörü yardımıyla geliştirilmiş). Equipboard bunu AHIG dönemine bağlıyor. Equipboard ayrıca bir Premier Guitar videosuna dayanarak Marshall JCM800 2203 + Maxon overdrive kombinasyonundan söz ediyor, ancak bunun stüdyoya mı sahneye mi ait olduğu belli değil. Ayarlar bilinmiyor."
+    },
+    {
+     "model": "Orange Rockerverb 100",
+     "channel": "Dirty kanal",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Jim Root'un kendi sözü: 'On this album it was an Orange Rockerverb 100'. Sinyal Little Labs PCP Instrument Distro ile bölünüp Diezel Herbert ile karıştırılmış. Ayarlar bilinmiyor."
+    },
+    {
+     "model": "Diezel Herbert",
+     "channel": "Muhtemelen Ch2 veya Ch3 (yüksek gain)",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Jim Root'ta Rockerverb ile karıştırılmış (blend). Hangi kanalın kullanıldığı tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Rivera Silent Sister izolasyon kabini (Mick) / Orange 4x12 (Jim, tahmin)",
+    "speakers": "Mick: Celestion G12K-100 (B akortunda G12T-75'ler gücü kaldıramadığı için kör testten sonra seçilmiş). Jim: muhtemelen Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kapak kenarına yakın, hafif off-axis (tahmin)",
+      "distance": "1-2 cm (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "G12K-100 ve Silent Sister bilgisi Equipboard'da Mick'in video röportajına dayanıyor; stüdyo kaydı için kesin olup olmadığı belirsiz. Mikrofon bilgisine hiçbir kaynakta rastlanmadı."
+   },
+   "pedals": [
+    {
+     "model": "Maxon OD-820 Overdrive Pro",
+     "purpose": "Amfinin önünde sıkılaştırma ve boost (Mick)",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "0",
+       "note": "Tipik boost kullanımı, tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Little Labs PCP Instrument Distro",
+     "purpose": "Jim Root'un sinyalini Orange Rockerverb 100 ve Diezel Herbert arasında bölmek için",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Noise gate (model bilinmiyor)",
+     "purpose": "Kesik palm-mute'lar ve stop'lar için sessizlik",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop B (B F# B E G# C#)",
+   "recording_notes": "Kayıt Sound Farm Studios'ta (Jamaica, Iowa; sahibi Matt Sepanic) yapıldı, prodüktör Dave Fortman. Davullar önce tek başına kaydedildi, gitarlar bunun üstüne çalındı. Jim Root, prodüktör ve mühendisin miksajda davul sample'ları ve bazı gitar re-amp'ları kullandığını söyledi ve buna karşı olduğunu belirtti. Mick ve Jim'in ritimleri klasik Slipknot düzeninde sol/sağ kanallara ayrılmış. Her gitaristin kendi partisini double-track yapması muhtemel."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Açık 6. tel üzerinde sıkı palm-mute'lu chug'lar (yaklaşık 135 BPM)",
+    "Kromatik geçişler ve power chord'lar",
+    "Ritmik senkop ve davulla tam kilitlenme",
+    "Ani stop/start'lar (gate'li sessizlikler)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / Verse",
+    "description": "Bu ton: yüksek gain, köprü manyetiği, efektsiz, palm-mute ağırlıklı."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı distorsiyonlu amfi tonu. Palm-mute daha az, akorlar açık ve uzun tutuluyor. Ek efekt yok."
+   },
+   {
+    "name": "Solo (Jim Root)",
+    "description": "Root, albümdeki tüm sololarında amfinin önünde Maxon TS808 kullandığını söylüyor. Ritim tonuna TS808 boost eklenmiş, orta frekanslar daha öne çıkık. Az miktarda delay olabilir (tahmin). Köprü manyetiği."
+   },
+   {
+    "name": "Bridge / Breakdown",
+    "description": "Aynı ritim tonu. Daha ağır chug'lar, sıkı gate."
+   }
+  ],
+  "warnings": [
+   "Kaynaklarda Psychosocial'a özgü bir gear bilgisi yok. Amfi ve gitar bilgileri albümün genel stüdyo rig'inden alındı.",
+   "Akort tartışmalı. Drop B yaygın kabul görüyor, ama bazı tab'lar Drop A veya A E A D F# B veriyor. Kulakla doğrulayın.",
+   "Tonalite belirsiz: Klangio G minör, AcousticBrainz D minör, AudioKeychain 10B diyor. 'B minör', riffin açık B teli merkezli olmasına dayanan bir tahmin. BPM 135–136 aralığında tutarlı.",
+   "Mick Thomson'ın stüdyo amfisi kaynaklara göre değişiyor: Rivera KR7 mi, yoksa Marshall JCM800 2203 + Maxon mu?",
+   "Mikrofon, kabin ve amfi düğme değerleri hiçbir kaynakta yok. Verilenler tahmin.",
+   "Jim Root'a göre miksajda gitar re-amp'ı kullanıldı. Bu yüzden duyulan ton kısmen re-amp zincirinden geliyor olabilir."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Slipknot: The Futility of Hope",
+    "url": "https://www.guitarworld.com/features/slipknot-futility-hope"
+   },
+   {
+    "title": "Equipboard – Slipknot All Hope Is Gone",
+    "url": "https://equipboard.com/albums/slipknot-all-hope-is-gone"
+   },
+   {
+    "title": "Equipboard – Mick Thomson",
+    "url": "https://equipboard.com/mick-thomson"
+   },
+   {
+    "title": "MusicRadar – Slipknot talk new album, Paul Gray and overhauling their tones",
+    "url": "https://www.musicradar.com/news/guitars/slipknot-talk-new-album-paul-gray-and-overhauling-their-tones-610064"
+   },
+   {
+    "title": "Mix Online – Slipknot tour",
+    "url": "https://www.mixonline.com/?p=70072"
+   },
+   {
+    "title": "Klangio – Psychosocial",
+    "url": "https://songs.klang.io/en/s/Slipknot/Psychosocial/5abamRO41fE"
+   },
+   {
+    "title": "AudioKeychain – Psychosocial",
+    "url": "https://www.audiokeychain.com/track/tdo/slipknot-psychosocial"
+   },
+   {
+    "title": "AcousticBrainz – Psychosocial",
+    "url": "https://acousticbrainz.org/99eafe91-a43c-4adc-b3ea-8b6f8e0e4966?n=2"
+   },
+   {
+    "title": "Ultimate Guitar – Psychosocial Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/slipknot/psychosocial-tabs-1867842"
+   },
+   {
+    "title": "Guitar World – ESP School of Metal Guitar: Slipknot",
+    "url": "https://www.guitarworld.com/news/esp-school-of-metal-guitar-how-to-play-guitar-like-slipknot"
+   },
+   {
+    "title": "Wikiwand – All Hope Is Gone",
+    "url": "https://www.wikiwand.com/en/articles/All_Hope_is_Gone"
+   }
+  ]
+ }
+}

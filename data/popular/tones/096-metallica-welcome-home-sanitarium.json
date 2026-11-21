@@ -1,0 +1,231 @@
+{
+ "rank": 96,
+ "part": "clean",
+ "researchedAt": 1795282035840,
+ "original": {
+  "song": {
+   "title": "Welcome Home (Sanitarium)",
+   "artist": "Metallica",
+   "album_or_year": "Master of Puppets (1986)",
+   "tone_character": "Temiz, cam gibi parlak ve hafif chorus'lu, ürkütücü bir ton. Akorlar açık tellerde çınlayarak arpej çalınıyor, üstünde tek notalı, armoniklerle süslü yumuşak bir melodi var. Sesin yapısı sıkı ve kompresli, odasından biraz reverb alıyor.",
+   "tone_tags": [
+    "temiz",
+    "parlak",
+    "hafif chorus/modülasyon",
+    "çınlayan arpej",
+    "yumuşak atak",
+    "hafif oda reverb'ü",
+    "stereo çift kanal"
+   ],
+   "bpm": "94 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Ritim/arpej için James Hetfield'in beyaz Gibson Explorer'ı veya 1985 Jackson King V; melodi ve armonikler için Kirk Hammett'in Gibson Flying V'si ya da Jackson Randy Rhoads V'si",
+    "pickup": "Temiz bölümde büyük olasılıkla sap manyetiği kullanıldı. Explorer'da stok seramik humbucker'lar vardı (EMG 81'e 1987'de geçildi), King V'de ise muhtemelen Seymour Duncan Invader. Kirk'ün gitarlarında stok Gibson humbucker veya EMG vardı.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Roland JC-120 Jazz Chorus",
+     "channel": "Tek kanal (Chorus kanalı / dahili Chorus açık)",
+     "settings": [
+      {
+       "name": "Chorus",
+       "value": "On",
+       "note": "Dahili stereo chorus. Hız ve derinlik bilinmiyor, kayıtta hafif duyuluyor (tahmin)."
+      },
+      {
+       "name": "Distortion",
+       "value": "0",
+       "note": "Tamamen temiz (tahmin)"
+      },
+      {
+       "name": "Bright",
+       "value": "On",
+       "note": "Parlak karakter için (tahmin)"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Roland'ın makalesine göre Hetfield bu amfiye 'my go-to forever' diyor ve onu Sanitarium ile One'ın ürkütücü temiz tonları için kullanmış. Ancak Ground Guitar, JC-120'nin ana temiz amfi oluşu …And Justice for All seanslarına denk getiriyor. Equipboard ise 'Master of Puppets'tan beri' diyor. Bu yüzden 1985 kaydı için güçlü ama çelişkili bir kanıt var."
+    },
+    {
+     "model": "Mesa/Boogie Mark IIC+ (Marshall 100W power amp'e preamp olarak bağlı)",
+     "channel": "Clean (Rhythm 1) kanalı",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "4",
+       "note": "Temiz kalması için düşük (tahmin)"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "JC-120'ye alternatif olasılık. Albümdeki distorsiyonlu partilerin tamamı bu zincirle çalındı. Bazı ton siteleri (ToneMirror) temiz bölüm için Mesa'nın clean kanalını veriyor ama kaynak göstermiyor."
+    }
+   ],
+   "cab": {
+    "model": "JC-120 kullanıldıysa amfinin kendi 2x12 kabini; distorsiyonlu partiler için Marshall 4x12",
+    "speakers": "JC-120: 2x12 Roland stok hoparlör. Marshall 4x12: muhtemelen Celestion G12T-75 / Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kona yakın, merkezden hafif kenara",
+      "distance": "2–5 cm"
+     },
+     {
+      "model": "Neumann U87 (oda/ikinci mikrofon)",
+      "position": "Kabine çapraz",
+      "distance": "30 cm–1 m"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Bu şarkının temiz kanalındaki mikrofon düzenini belgeleyen bir kaynak bulamadım. Mikrofon bilgileri dönemin tipik stüdyo pratiğine dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "JC-120 dahili Chorus (ya da harici chorus)",
+     "purpose": "Temiz arpej ve melodiye geniş, hafif dalgalı bir stereo his vermek",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "3",
+       "note": "tahmin, yavaş"
+      },
+      {
+       "name": "Depth",
+       "value": "4",
+       "note": "tahmin, hafif"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo reverb'ü (plate/oda)",
+     "purpose": "Temiz partilerde mekân hissi; miks aşamasında eklenmiş olabilir",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "1.5 s",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%15",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Eylül–Aralık 1985'te Kopenhag'daki Sweet Silence Studios'ta yapıldı. Prodüktör Metallica ve Flemming Rasmussen, miks Michael Wagener. 24 kanallı analog banda kaydedildi. Rasmussen'e göre Hetfield bir partiyi çok kez üst üste kaydediyordu ('eight tracks and it'll sound like one guitar'), bazı şarkılarda 52 kanala kadar gitar katmanı var. Temiz arpej büyük olasılıkla çift kayıtlı ve sağ-sol panlı (likely). Kirk'ün temiz melodisi/armonikleri ayrı bir kanalda. Hetfield bu albümde distorsiyon pedalı kullanmadı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "açık tellerin çınladığı temiz arpej (sol el parmaklarının komşu telleri susturmaması)",
+    "natural armonikler",
+    "4/4 ile 6/4 arasında değişen ölçüler",
+    "temiz tonda yumuşak ve dengeli pena ataklı tek nota melodi",
+    "hafif bend ve vibrato"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (temiz armonik/melodi)",
+    "description": "Kirk'ün tek nota melodisi ve armonikleri, Hetfield'in arpejinin üstünde. Aynı temiz ton, chorus ve reverb biraz daha belirgin. Melodi için köprü manyetiği veya ara konum biraz daha parlak olabilir."
+   },
+   {
+    "name": "Nakarat (distorsiyonlu)",
+    "description": "Mesa/Boogie Mark IIC+ preamp'i Marshall 100W power amp'e ve oradan 4x12 kabine gidiyor. Lead kanalı yüksek gain'de, orta frekanslar oyuk değil, sıkı bir ses. Köprü manyetiği kullanılıyor, palm mute'lu power chord'lar çalınıyor, chorus kapalı."
+   },
+   {
+    "name": "Solo'lar (Kirk Hammett)",
+    "description": "Aynı distorsiyonlu Mesa/Marshall zinciri, önüne Ibanez Tube Screamer ve Dunlop Cry Baby wah ekleniyor. Köprü manyetiği çalışıyor, ton sert ve parlak. Hızlı legato, geniş bend ve vibrato var."
+   },
+   {
+    "name": "Final / hızlı outro",
+    "description": "Tamamen distorsiyonlu: hızlı alternate picking ile çalınan thrash riffleri ve armonize lead'ler. Gain yüksek, ritim çift kayıtlı ve sağ-sol panlı."
+   }
+  ],
+  "warnings": [
+   "Temiz bölümün amfisi tartışmalı: Roland'ın makalesi JC-120'yi Sanitarium'la doğrudan ilişkilendiriyor. Ancak Ground Guitar JC-120'nin Hetfield'in ana temiz amfisi oluşunu …And Justice for All dönemine koyuyor, ToneMirror ise kaynak göstermeden Mesa'nın clean kanalını veriyor.",
+   "Gitar ve manyetik çelişkili: MusicRadar, Gibson Flying V'yi (Kirk) şarkının gitarı olarak gösteriyor. Hetfield için Explorer mı King V mi kullanıldığı ve manyetiklerin Invader mı stok Gibson mı olduğu kesin değil. EMG'ye 1987'de geçildiği bildiriliyor.",
+   "ToneMirror'ın 'Eb Standart' akort iddiası öteki kaynaklarla çelişiyor. Ultimate Guitar ve Guitar-Zone standart E diyor, standart E daha güvenilir.",
+   "Amfi ayarları, chorus/reverb değerleri ve mikrofonlama tahmin, bu kayıt için belgelenmiş değil.",
+   "BPM kaynağa göre çok değişiyor (AcousticBrainz 94, Karaoke-Version ~100, başka bir yer 170). Şarkıda tempo değişimleri var, 94 BPM temiz bölüme yaklaşık uyuyor. Tunebat sayfası doğrulanamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Wikipedia – Welcome Home (Sanitarium)",
+    "url": "https://en.wikipedia.org/wiki/Welcome_Home_(Sanitarium)"
+   },
+   {
+    "title": "Roland – JC-120: The Clean Sound Revolution",
+    "url": "https://articles.roland.com/?p=65163"
+   },
+   {
+    "title": "Ground Guitar – James Hetfield's Roland JC-120",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-roland-jc-120-jazz-chorus/"
+   },
+   {
+    "title": "MusicRadar – Metallica Week: tone tips for 5 classic tracks",
+    "url": "https://musicradar.com/news/guitars/metallica-week-tone-tips-for-5-classic-tracks-172815"
+   },
+   {
+    "title": "MusicRadar – The making of Metallica's Master of Puppets",
+    "url": "https://www.musicradar.com/news/guitars/the-making-of-metallicas-master-of-puppets-635250"
+   },
+   {
+    "title": "MusicRadar – Flemming Rasmussen on Master of Puppets",
+    "url": "https://www.musicradar.com/artists/producers-engineers/all-the-albums-i-did-with-metallica-were-recorded-on-24-track-analogue-tape-theres-not-a-computer-in-sight-how-flemming-rasmussen-produced-metallicas-classic-master-of-puppets"
+   },
+   {
+    "title": "Equipboard – Master of Puppets album",
+    "url": "https://equipboard.com/albums/metallica-master-of-puppets-remastered"
+   },
+   {
+    "title": "Ground Guitar – Hetfield 1985 Jackson King V",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-1985-jackson-king-v-kill-bon-jovi/"
+   },
+   {
+    "title": "ToneMirror – Welcome Home (Sanitarium)",
+    "url": "https://www.tonemirror.so/tones/metallica-welcome-home-sanitarium"
+   },
+   {
+    "title": "Ultimate Guitar – Welcome Home Sanitarium tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/metallica/welcome-home-sanitarium-tabs-75014"
+   },
+   {
+    "title": "AcousticBrainz – Welcome Home (Sanitarium)",
+    "url": "https://acousticbrainz.org/5c46bc92-1cc7-40c3-9437-9b8eabdfb99c?n=2"
+   },
+   {
+    "title": "Kemper forum – Metallica clean tone (One, Sanitarium)",
+    "url": "https://www.kemper-amps.com/forum/thread/28694-please-help-me-get-metallicas-clean-tone-on-one-sanitarium-enter-sandman-intro-e/"
+   }
+  ]
+ }
+}

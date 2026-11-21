@@ -1,0 +1,129 @@
+{
+ "rank": 84,
+ "part": "clean",
+ "researchedAt": 1795281493978,
+ "original": {
+  "song": {
+   "title": "Billie Jean",
+   "artist": "Michael Jackson",
+   "album_or_year": "Thriller (1982)",
+   "tone_character": "Çok temiz, kuru, kompresli ve parlak bir Strat tipi tek bobin tonu. Kısa, susturulmuş, perküsif 16'lık funk vuruşları ve ghost note'lar bas ve davul grubuna oturuyor. Distorsiyon yok, modülasyon ya da reverb pek duyulmuyor.",
+   "tone_tags": [
+    "temiz",
+    "kuru",
+    "kompresli",
+    "parlak",
+    "perküsif",
+    "ince orta frekans",
+    "az oda sesi",
+    "tek bobin"
+   ],
+   "bpm": "117 BPM",
+   "key": "F# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Strat tipi gitar; kesin model belirsiz (James Tyler yapımı Strat tipi bir gitar iddiası var, genel olarak Fender Stratocaster deniyor)",
+    "pickup": "Tek bobin; büyük olasılıkla orta ya da köprü+orta ara konum (kulağa göre tahmin, kaynak yok)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Amfi yok, doğrudan mikser masasına (DI) bağlantı iddiası",
+     "channel": "Temiz",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Gearnews'te anekdot olarak geçiyor: Strat amfi ve efekt olmadan doğrudan mikser masasına takılmış. Kanıtlanmış değil. Alternatif olarak Fender blackface tipi temiz bir amfi (Twin vb.) de olabilir, bu da tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (DI iddiası doğruysa kabin yok)",
+    "speakers": "Bilinmiyor",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Kayıtta kabine dair hiçbir belge bulunamadı. Tonun kuru, yakın ve odasız olması DI ya da yakın mikrofonlu temiz bir kayda işaret ediyor."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo kompresörü (model bilinmiyor; sound-alike için MXR Dyna Comp / Boss CS-3 öneriliyor)",
+     "purpose": "Atağı keskinleştirmek ve ghost note'ları öne çıkarmak",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Hafif chorus (Bonedo sound-alike önerisi, Boss CE-5)",
+     "purpose": "Hafif genişlik",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Westlake Recording Studios'ta (Los Angeles) yapıldı. Prodüktör Quincy Jones ve Michael Jackson, kayıt ve miks Bruce Swedien (şarkının 91 ayrı miksi yapıldığı biliniyor). Swedien'e göre David Williams gitarı şarkı yazıldıktan hemen sonra Jackson'ın ev stüdyosunda demoya çaldı. Westlake'te tekrar kaydetme denemeleri demonun hissini yakalayamadı, bu yüzden albümde demo gitarının kullanıldığı aktarılıyor. Quincy ve Swedien'in doğru gitar tonunu bulmak için haftalarca uğraştığı da söyleniyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Sıkı 16'lık funk ritmi ve tutarlı zamanlama",
+    "Sol ve sağ elle susturma, ghost note'lar",
+    "Kısa staccato vuruşlar (her notayı kesmek)",
+    "Uzun süre aynı kalıbı hiç sapmadan tekrarlamak"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana ritim figürü (verse/nakarat)",
+    "description": "İstenen temiz bölüm budur. F# minör/Dorian üzerinde susturulmuş, kesik akor ve çift nota vuruşları. Ton kuru ve kompresli."
+   },
+   {
+    "name": "Köprü / ara bölümdeki dört notalık minör figür",
+    "description": "Wikipedia'ya göre köprüde dört notalık minör bir gitar figürü var ve vokal çığlıkları üzerine ekleniyor. Ton aynı temiz ses. Bonedo, kısa 'solo'nun da aynı tonla, canlıda yaklaşık 5 dB temiz boost ile çalınabileceğini söylüyor."
+   }
+  ],
+  "warnings": [
+   "Orijinal stüdyo ekipmanı (gitar, amfi, mikrofon) hiçbir güvenilir kaynakta belgelenmemiş. Ekipman bilgilerinin çoğu tahmin.",
+   "Gitar modeli tartışmalı: Mixdown bir James Tyler gitar diyor, Gearnews ve Bonedo bir Strat diyor. MusicRadar dersindeki Ibanez, POD XT ve wah modern bir demo rig'i, orijinal kayıt değil.",
+   "Doğrudan masaya (DI) bağlantı bir anekdot, kanıtlanmış değil.",
+   "Bir forumda Steve Lukather'in sitesine dayanarak gitarı Michael'ın kendisinin çaldığı iddia ediliyor. Resmi kredi ise David Williams.",
+   "Kompresör ve chorus kayıttan duyulana ve sound-alike rehberlerine dayanıyor, kayıt belgesi yok."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "MusicRadar – Michael Jackson: the 7 guitarists who shaped his sound",
+    "url": "https://www.musicradar.com/news/guitars/michael-jackson-the-7-guitarists-who-shaped-his-sound-256844"
+   },
+   {
+    "title": "MusicRadar – Michael Jackson's guitarist: funk guitar lesson",
+    "url": "https://www.musicradar.com/tuition/guitars/michael-jacksons-guitarist-how-to-play-funk-guitar-video-lesson-212178"
+   },
+   {
+    "title": "Gearnews – Billie Jean guitar",
+    "url": "https://www.gearnews.com/?p=253069"
+   },
+   {
+    "title": "Bonedo – Sound-alike Michael Jackson",
+    "url": "https://www.bonedo.de/artikel/sound-alike-11-michael-jackson/5"
+   },
+   {
+    "title": "Wikipedia – Billie Jean",
+    "url": "https://en.wikipedia.org/wiki/Billie_Jean"
+   },
+   {
+    "title": "Mixdown – In Focus: James Tyler Guitars",
+    "url": "https://mixdownmag.com.au/features/in-focus-james-tyler-guitars/"
+   },
+   {
+    "title": "Vintage King – Michael Jackson Thriller",
+    "url": "https://vintageking.com/blog/michael-jackson-thriller/"
+   },
+   {
+    "title": "MJJCommunity – The Making Of Billie Jean",
+    "url": "https://mjjcommunity.com/threads/the-making-of-billie-jean-song.64509"
+   },
+   {
+    "title": "The Fretboard – forum discussion",
+    "url": "https://www.thefretboard.co.uk/discussion/comment/166225/"
+   }
+  ]
+ }
+}

@@ -1,0 +1,267 @@
+{
+ "rank": 65,
+ "part": "rhythm",
+ "researchedAt": 1795280692394,
+ "original": {
+  "song": {
+   "title": "Sad But True",
+   "artist": "Metallica",
+   "album_or_year": "Metallica (Black Album), 1991",
+   "tone_character": "Akortu bir tam ses pes edilmiş, çok katmanlı, ağır ve geniş bir yüksek gain ritim tonu. Mesa'nın oyuk ortaları, modifiye Marshall'ın orta frekans katkısıyla doldurulmuş. Bariton gitar katmanı ve bas da altı iyice ağırlaştırıyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "oyuk ama dolgun ortalar",
+    "ağır ve uzun alt",
+    "sıkı palm mute",
+    "çok katmanlı/stereo",
+    "parlak üst atak",
+    "kompressörsüz gitar bus'ı"
+   ],
+   "bpm": "88–90 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP MX-220 (siyah, Explorer tipi); oktav altı katman için Jerry Jones Danelectro Longhorn bariton",
+    "pickup": "Köprü manyetiği EMG 81 (sapta EMG 60)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (Guitar World'de 'IIC++' modifiyesi olarak geçiyor)",
+     "channel": "Lead (Lead Drive pull)",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "9.5",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "Pull Shift açık"
+      },
+      {
+       "name": "Bass",
+       "value": "2",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "Master 1",
+       "value": "4",
+       "note": "Pull Deep açık"
+      },
+      {
+       "name": "Lead Drive",
+       "value": "6",
+       "note": "Pull Lead"
+      },
+      {
+       "name": "Lead Master",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "3",
+       "note": ""
+      },
+      {
+       "name": "GEQ 80 Hz",
+       "value": "+2",
+       "note": ""
+      },
+      {
+       "name": "GEQ 240 Hz",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "GEQ 750 Hz",
+       "value": "-12",
+       "note": "Klasik V şekli"
+      },
+      {
+       "name": "GEQ 2.2 kHz",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "GEQ 6.6 kHz",
+       "value": "+3",
+       "note": ""
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Ana ritim tonu bu amfiden geliyor. Ayarlar Guitar World'ün sonradan yaptığı rekonstrüksiyondan alındı, gerçek oturum notu olmayabilir. 'Crunch Berries' adlı IIC+ Hetfield'ın uzun süredir kullandığı ana amfi."
+    },
+    {
+     "model": "Modifiye Marshall JCM800 (Jose Arredondo modu)",
+     "channel": "Lead/yüksek gain",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Bob Rock, Mesa'nın oyduğu orta frekansları geri kazanmak için bunu eklemiş. Guitar World JCM800'ü onaylıyor. Arredondo modu ve 'eski Marshall' bilgisi diğer kaynaklardan geliyor. Ayarları bilinmiyor."
+    },
+    {
+     "model": "Mesa/Boogie Mark IV + ADA MP-1 preamp + Mesa/Boogie Strategy 400 power amp",
+     "channel": "",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Guitar World ek katman kaynakları olarak listeliyor. Bunların bu şarkıda ne kadar kullanıldığı belirsiz."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12 (birden fazla). Staub'un anlatımına göre 9–11 kabin üst üste dizilip birbirinden paravanla ayrılmış.",
+    "speakers": "Celestion Vintage 30",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dinamik yakın mikrofonlar tahmini, ör. SM57)",
+      "position": "Bilinmiyor, birden fazla pozisyon kullanılmış",
+      "distance": "Yakın"
+     },
+     {
+      "model": "Bilinmiyor (oda mikrofonları)",
+      "position": "Kabinlerden uzakta, ambiyans için",
+      "distance": "Uzak"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin ve hoparlör bilgisi Guitar World'den. Kabinlerin perdeyle ayrıldığı küçük oda ve uzak ambiyans mikrofonları Vintage King/Staub'dan. Mikrofon modelleri hiçbir kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Aphex EQF-2 (EQ 1)",
+     "purpose": "Efekt döngüsünde/outboard ton şekillendirme",
+     "settings": [
+      {
+       "name": "High Shelf 4.2 kHz",
+       "value": "+6 dB",
+       "note": ""
+      },
+      {
+       "name": "1.2 kHz",
+       "value": "-6 dB",
+       "note": "Tonun anahtar kesimi"
+      },
+      {
+       "name": "Low Shelf 120 Hz",
+       "value": "+4 dB",
+       "note": ""
+      },
+      {
+       "name": "High-pass",
+       "value": "100 Hz",
+       "note": ""
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Aphex EQF-2 (EQ 2)",
+     "purpose": "İkinci EQ katmanı",
+     "settings": [
+      {
+       "name": "High Shelf 6 kHz",
+       "value": "+6 dB",
+       "note": ""
+      },
+      {
+       "name": "900 Hz",
+       "value": "-6 dB",
+       "note": ""
+      },
+      {
+       "name": "240 Hz Peak",
+       "value": "-4 dB",
+       "note": ""
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Aphex CX-1 Compressor/Expander",
+     "purpose": "Dinamik kontrol ve gürültü kapısı/expander",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "D standart (bir tam ses pes, DGCFAD)",
+   "recording_notes": "Kayıt 1990–91'de One on One Recording'de (Hollywood) yapıldı, miks A&M Studios'ta. Prodüktör Bob Rock, mühendisler Randy Staub ve Mike Tacci. Bob Rock şarkının bir tam ses pes çalınmasını önerdi, şarkı aslında E standartta yazılmıştı. Ritim birçok farklı amfi/kabin ve mikrofon pozisyonuyla çok katmanlı kaydedildi ve stereoya yayıldı. Bir oktav altı Jerry Jones bariton katmanı ve perküsif susturulmuş tel 'chuk' overdub'ları var. Jason Newsted'in bası unison çalıyor. Rock gitarları kompreslemedi, SSL bus kompresörünü yalnızca davul ve basa uyguladı. Hetfield 'crunch' derken alt frekansları ve kalın tellerdeki sustain'i kastediyordu. Ernie Ball Power Slinky .011–.048 tel ve Dunlop Tortex .88 mm pena kullanıldı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Sıkı ve tutarlı palm mute",
+    "Downpicking (ağır ve orta tempo)",
+    "Ritmik kesinlik ve susturma (staccato boşluklar)",
+    "Davul ve basla tam senkron"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff / kıtalar",
+    "description": "Bu rapordaki ton. Köprü manyetiği, yüksek gain, palm mute edilmiş E-şekilli (D sesli) riff. Bariton katmanı ve katlanmış ritimler var."
+   },
+   {
+    "name": "Nakarat/ara bölüm (açık akorlar)",
+    "description": "Aynı distorsiyon tonu. Daha çok açık çalınan akorlar ve uzatılan notalar var. Katmanlar aynı, yalnızca çalış dinamiği değişiyor."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "Kirk'ün lead tonu. Muhtemelen Mesa Mark IIC+ lead kanalı ve ESP (EMG) köprü manyetiği kullanıldı. Wah (Dunlop Cry Baby tipi) ve daha fazla orta frekans/sustain var, hafif delay/reverb eklenmiş. Ritim tonuna göre daha az oyuk ve daha kompresli. Bilgi tahmin/olası düzeyinde."
+   }
+  ],
+  "warnings": [
+   "Mark IIC+ ayarları ve Aphex EQ değerleri Guitar World'ün rekonstrüksiyonu. Gerçek oturum notları olduğu doğrulanmadı.",
+   "Fractal forumunda bazı kullanıcılar bu şarkıda Mark IIC+ kullanılmadığını ileri sürüyor. Kaynaklar arasında Mark IIC+, Mark IV ve modifiye Marshall'ın payı konusunda belirsizlik var.",
+   "Marshall'ın Arredondo modlu olduğu ve 'eski Marshall head' bilgisi farklı kaynaklardan geliyor. Guitar World 'modified JCM800' diyor.",
+   "Kabin mikrofonlarının modeli, pozisyonu ve mesafesi hiçbir kaynakta belirtilmiyor.",
+   "BPM kaynağa göre 87–92 arasında değişiyor. Tonalite çoğunlukla D (D minör/Frigyen) olarak veriliyor.",
+   "Solo ekipmanı kaynaklarla doğrulanmadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Secrets behind Metallica's Sad But True",
+    "url": "https://www.guitarworld.com/gear/secrets-behind-metallica-sad-but-true"
+   },
+   {
+    "title": "Reverb – Producer Bob Rock Looks Back on Recording the Black Album",
+    "url": "https://reverb.com/news/producer-bob-rock-looks-back-on-recording-metallicas-black-album"
+   },
+   {
+    "title": "Vintage King – Making of Metallica The Black Album",
+    "url": "https://vintageking.com/blogs/making-of/metallica-the-black-album"
+   },
+   {
+    "title": "Mix – Classic Tracks: Enter Sandman",
+    "url": "https://www.mixonline.com/recording/classic-tracks-metallicas-enter-sandman-366232"
+   },
+   {
+    "title": "Fractal Audio forum – Sad But True",
+    "url": "https://forum.fractalaudio.com/threads/sad-but-true.44734"
+   },
+   {
+    "title": "Ground Guitar – James Hetfield's Mesa Boogie Mark IIC+",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-mesa-boogie-mark-iic/"
+   },
+   {
+    "title": "Wikipedia – Sad but True",
+    "url": "https://en.wikipedia.org/wiki/Sad_but_True"
+   },
+   {
+    "title": "Hooktheory – Sad But True",
+    "url": "https://hooktheory.com/theorytab/view/metallica/sad-but-true"
+   },
+   {
+    "title": "Rig-Talk – Metallica Black Album tones",
+    "url": "https://www.rig-talk.com/forum/threads/metallica-black-album-tones.82398"
+   }
+  ]
+ }
+}

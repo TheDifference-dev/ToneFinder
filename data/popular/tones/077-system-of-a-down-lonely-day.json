@@ -1,0 +1,180 @@
+{
+ "rank": 77,
+ "part": "full",
+ "researchedAt": 1795281171104,
+ "original": {
+  "song": {
+   "title": "Lonely Day",
+   "artist": "System of a Down",
+   "album_or_year": "Hypnotize (2005); single, 2006",
+   "tone_character": "A thick, saturated Marshall-style distorted tone with plenty of mids, warmer and less sharp than SOAD's earlier albums. A humbucker SG sits in a wide stereo spread with a room-resonance layer, and P-90 doubles thicken it further.",
+   "tone_tags": [
+    "distortion (medium-high gain)",
+    "mids up front",
+    "warm and thick",
+    "Marshall crunch",
+    "roomy (room mic)",
+    "double-tracked / wide stereo",
+    "sustaining lead"
+   ],
+   "bpm": "76 BPM",
+   "key": "G# minor"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1962 Gibson SG (main distorted-tone guitar); 1964 Gibson SG Special (P-90) used for doubles",
+    "pickup": "Humbucker, bridge pickup most likely for rhythm (PAF-style, model unknown); P-90 on the doubles",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP100 (100 W)",
+     "channel": "Modified high-gain channel (one channel is stock, the other is modded for more gain)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7",
+       "note": "guess; medium-high distortion, not over-saturated"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "guess"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "guess; the mids are up front"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "guess"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "guess"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "guess; power tubes being pushed at studio volume"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World confirms this was the main distorted amp for the Mezmerize/Hypnotize sessions; there is no song-specific source for Lonely Day. One forum post claims a Marshall DSL was used, but that is weakly sourced. No settings have been published; all values are guesses."
+    },
+    {
+     "model": "Divided by 13 FTR-37 / W.E.M. Watkins Dominator",
+     "channel": "Clean",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Confirmed for the album's clean, harmonized and arpeggio parts (Jazzmaster into the FTR-37, Dominator for drones/arpeggios). No source confirms use on Lonely Day; only relevant if the song has clean layers."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (single cab)",
+    "speakers": "Probably Celestion G12T-75 or Greenback-style 12-inch speakers (unknown)",
+    "mics": [
+     {
+      "model": "SM57 (guess)",
+      "position": "Near the cap edge (guess)",
+      "distance": "1–2 in (guess)"
+     },
+     {
+      "model": "Room mic (model unknown)",
+      "position": "In the room, picking up the wall of acoustic guitars",
+      "distance": "Room distance (unknown)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Confirmed: one 4x12 cab faced a wall covered floor to ceiling in acoustic guitars, and a room mic recorded those guitars' body resonance. The close-mic model and position are not documented."
+   },
+   "pedals": [
+    {
+     "model": "None (guitar plugged straight into the amp)",
+     "purpose": "Malakian says he uses no compressor and goes straight into the amp; the distortion comes from the amp",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Drop C# (C# G# C# F# A# D#)",
+   "recording_notes": "Recorded at Rick Rubin's house in the Hollywood Hills (the 'haunted mansion'). Producers: Rick Rubin and Daron Malakian. Engineer: David Schiffman, with John O'Mahony. Mix: Andy Wallace. Mastering: Vlado Meller. Heavy rhythm parts were often doubled with a humbucker SG plus a P-90 SG Special, and the result was panned wide. The acoustic-guitar wall and room mic added a natural resonance and reverb. Daron played about 90% of the album's bass himself, but Wikipedia credits Shavo for bass on this song. Tuning per Guitar World: the album is in D# with the low string dropped to C#."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "slow-tempo power chords and open chord shapes",
+    "sustain control on held chords",
+    "melodic solo: bends (whole step), vibrato",
+    "clean intonation on the bends in the solo"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Intro / verse",
+    "description": "Probably the same distorted amp, with softer picking dynamics and more open chords; in places the guitar volume may be backed off a little to clean up the tone. Song-specific information is missing."
+   },
+   {
+    "name": "Chorus",
+    "description": "The main tone: full distortion, double-tracked guitars panned wide, possibly with the P-90 SG Special on the doubles. It should sound thicker and wider than the verse."
+   },
+   {
+    "name": "Solo",
+    "description": "A melodic, singing lead with lots of sustain: the same Marshall distortion with gain up slightly, mids up front, and possibly a light delay or room reverb in the mix. The pickup is unknown (bridge or neck); a mono lead track sitting in the middle is likely."
+   }
+  ],
+  "warnings": [
+   "No source documents gear specifically for Lonely Day. Everything given is the album-level rig for the Mezmerize/Hypnotize sessions.",
+   "Tab sources disagree on the tuning (Drop C, Drop C#, Drop D a half step down, standard). Guitar World says the album is in D# with the low string at C#, and that fits the G# minor key.",
+   "BPM estimates range from 75–77 to 113–114 (half time vs. full time); 76 BPM is the counting most sites use. Key is G# minor (Musicnotes gives A minor, probably a transposed arrangement).",
+   "A 2025 forum post claims the album was recorded with an SG + RR5 into a Marshall DSL; this conflicts with Guitar World's JMP100 information and is weakly sourced.",
+   "No amp settings, mic models or mic positions have been published; those values are guesses.",
+   "The arrangement details in the sections (clean layers, solo pickup and effects) are based on listening and inference, not confirmed by a source."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Daron Malakian: 21st Century Schizoid Man",
+    "url": "https://www.guitarworld.com/features/daron-malakian-21st-century-schizoid-man"
+   },
+   {
+    "title": "Equipboard – Daron Malakian's Gear",
+    "url": "https://equipboard.com/daron-malakian"
+   },
+   {
+    "title": "Equipboard – Hypnotize album",
+    "url": "https://equipboard.com/albums/system-of-a-down-hypnotize"
+   },
+   {
+    "title": "Wikipedia – Lonely Day",
+    "url": "https://en.wikipedia.org/wiki/Lonely_Day"
+   },
+   {
+    "title": "Rig-Talk – Daron Malakian Rig Rundown 2025",
+    "url": "https://www.rig-talk.com/forum/threads/system-of-a-downs-daron-malakian-rig-rundown-2025.334132/"
+   },
+   {
+    "title": "Thomann – System Of A Down Guitars, Amps & the SOAD Sound",
+    "url": "https://www.thomannmusic.com/blog/gear/system-of-a-down-guitars-amps-the-soad-sound/"
+   },
+   {
+    "title": "Karaoke-Version – Lonely Day (tempo)",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/system-of-a-down/lonely-day.html"
+   },
+   {
+    "title": "Musicnotes – Lonely Day sheet music",
+    "url": "https://api.musicnotes.com/sheetmusic/system-of-a-down/lonely-day/MN0058077"
+   },
+   {
+    "title": "Ultimate Guitar – Lonely Day Solo Tab",
+    "url": "https://pt.ultimate-guitar.com/tab/system-of-a-down/lonely-day-tabs-729642"
+   },
+   {
+    "title": "chords-and-tabs.net – Lonely Day",
+    "url": "https://www.chords-and-tabs.net/song/name/system-of-a-down-lonely-day-32"
+   }
+  ]
+ }
+}

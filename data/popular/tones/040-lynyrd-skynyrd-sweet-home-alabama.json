@@ -1,0 +1,153 @@
+{
+ "rank": 40,
+ "part": "intro",
+ "researchedAt": 1795279710654,
+ "original": {
+  "song": {
+   "title": "Sweet Home Alabama",
+   "artist": "Lynyrd Skynyrd",
+   "album_or_year": "Second Helping (1974)",
+   "tone_character": "Parlak, cam gibi Strat tınısı; temiz ama amfinin yüksek sesle çalınmasından gelen hafif bir kırılma ve doğal kompresyon var. Riff akor arpejleri ve hammer-on'larla dolu, net ve tiz ağırlıklı, efektsiz bir ton.",
+   "tone_tags": [
+    "parlak",
+    "temiz / kırılma eşiği",
+    "hafif doğal kompresyon",
+    "single-coil çıngırağı",
+    "efektsiz",
+    "kuru, yakın mikrofon"
+   ],
+   "bpm": "98 BPM",
+   "key": "D Mixolidyen"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (Ed King'in 1972/1973 Strat'ı; mühendis Rodney Mills 'geç 60'lar Strat' diyor)",
+    "pickup": "Stok single-coil manyetikler (King 'manyetikler zayıftı, ton o yüzden temiz' diyor); riff için sap manyetiği veya sap+orta ara konum tahmini",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Twin Reverb",
+     "channel": "Vibrato/Normal kanal (temiz)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Tahmin; Twin'de kırılma eşiğine yakın, yüksek ses"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Reverb",
+       "value": "1.5",
+       "note": "Tahmin; çok az ya da hiç"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Kayıt mühendisi Rodney Mills (woodytone blogu üzerinden aktarılan) riff'in Strat > Fender Twin ile çalındığını söylüyor; Line 6 tone template de Fender Twin listeliyor. Ayarlar tahmindir."
+    },
+    {
+     "model": "Marshall 50 watt (muhtemelen JMP 50W head)",
+     "channel": "Tek kanal, sonuna kadar açık",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "King: 'all the way up'"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Ed King, guitar-muse röportajında '50-watt Marshall turned all the way up' diyor; bu ifade özellikle solo için de olabilir. Mühendisin anlatımıyla çelişiyor."
+    }
+   ],
+   "cab": {
+    "model": "Fender Twin Reverb kombosunun kendi kabini (Twin senaryosunda)",
+    "speakers": "2x12 (dönem Twin'leri için tipik JBL D120F veya Fender/Oxford stok hoparlör – tahmin)",
+    "mics": [
+     {
+      "model": "Neumann U87",
+      "position": "Hoparlöre yakın, konum (merkez/kenar) bilinmiyor",
+      "distance": "Yakın (birkaç cm–15 cm, tahmin); pad devrede"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mills tek mikrofon (U87) kullandığını, pad'i açıp kabine yakın koyduğunu söylüyor. Marshall kullanıldıysa muhtemelen 4x12 Celestion kabin (tahmin)."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Studio One, Doraville, Georgia; prodüktör Al Kooper, mühendis Rodney Mills; 1973 yılında kaydedildi. Temel kayıt King (gitar), Leon Wilkeson (bas) ve Bob Burns (davul) ile alındı. Gary Rossington kıta altında ritim deseni çalıyor, King onun üstüne kontrpuan olarak kendi partisini ekliyor. Soloları King overdub olarak ilk kayıtta çaldı. Efekt yok, belki biraz reverb. Kayıt hafif tiz ve kuru, sol-sağ panlanmış birden çok gitar katmanı var."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "D–Cadd9–G akor arpejleri (hibrit/flatpick)",
+    "hammer-on ve pull-off süslemeleri",
+    "temiz tonda net ve eşit tuşe",
+    "shuffle olmayan ama hafif swing'li groove",
+    "akor geçişlerinde zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta ritmi (Rossington)",
+    "description": "Gary Rossington'ın kıta altındaki ritim partisi; benzer temiz/hafif kırılmış ton, muhtemelen humbucker'lı Les Paul ile biraz daha kalın ve orta frekanslı; aynı D-C-G deseni."
+   },
+   {
+    "name": "Kısa ve uzun solo (Ed King)",
+    "description": "Aynı Strat; King zayıf manyetikler yüzünden solo için amfiyi açtığını söylüyor: daha fazla gain ve sustain, daha öne çıkan ses. Bending, vibrato ve pentatonik/majör pentatonik cümleler; G tonu civarında çalınıyor (Kooper 'yanlış tonda' demişti)."
+   },
+   {
+    "name": "Outro / doldurmalar",
+    "description": "Riff ve solo cümleleri tekrar ediliyor; piyano ve vokal arkasında birden çok gitar katmanı, ton girişle aynı ya da solo tonuna yakın."
+   }
+  ],
+  "warnings": [
+   "Amfi tartışmalı: Ed King '50 watt Marshall sonuna kadar açık' diyor, mühendis Rodney Mills ise 'Fender Twin' diyor. Marshall ifadesi solo için olabilir.",
+   "Gitarın yılı tutarsız: 1972, 1973 veya geç 60'lar Strat olarak geçiyor.",
+   "Riff için hangi manyetiğin kullanıldığı kaynaklarda yok; sap/ara konum tahmindir.",
+   "Amfi ayarları tamamen tahmindir.",
+   "Woodytone sayfası kontrol sırasında açılmadı; Mills alıntısı arama özetine dayanıyor.",
+   "Tonalite tartışmalı: Tunebat gibi siteler G majör der; akor dizisi D-C-G olduğu için D Mixolidyen olarak da yorumlanır."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Lynyrd Skynyrd’s Ed King on “Sweet Home Alabama” (Guitar Muse)",
+    "url": "https://guitar-muse.com/lynyrd-skynyrds-ed-king-sweet-home-alabama-8150"
+   },
+   {
+    "title": "Gear Used on ‘Sweet Home Alabama’ (Woodytone)",
+    "url": "https://www.woodytone.com/?p=2682"
+   },
+   {
+    "title": "The story behind the song Sweet Home Alabama (Louder)",
+    "url": "https://www.loudersound.com/features/the-story-behind-the-song-sweet-home-alabama-by-lynyrd-skynyrd"
+   },
+   {
+    "title": "Line 6 Tone Template – Sweet Home Alabama",
+    "url": "https://line6.com/tone-templates-diagrams/gary-rossington--sweet-home-alabama.html"
+   },
+   {
+    "title": "Gary James' Interview With Ed King",
+    "url": "https://www.classicbands.com/EdKingInterview.html"
+   },
+   {
+    "title": "American Songwriter – solos in Sweet Home Alabama",
+    "url": "https://americansongwriter.com/why-the-guitar-solos-in-sweet-home-alabama-were-almost-taken-out-and-the-superstitious-reason-they-weren't"
+   }
+  ]
+ }
+}

@@ -1,0 +1,195 @@
+{
+ "rank": 58,
+ "part": "rhythm",
+ "researchedAt": 1795280452970,
+ "original": {
+  "song": {
+   "title": "Animal I Have Become",
+   "artist": "Three Days Grace",
+   "album_or_year": "One-X (2006)",
+   "tone_character": "Drop C akortta, yüksek kazançlı ama aşırı fuzzy olmayan, sıkı ve kalın alt frekanslı modern post-grunge/alternatif metal ritim tonu. Çok katmanlı double-track kayıt ve Chris Lord-Alge miksiyle kompresli, öne çıkan bir duvar etkisi verir.",
+   "tone_tags": [
+    "yüksek kazanç",
+    "sıkı alt",
+    "kalın low-mid",
+    "kompresli",
+    "double-track geniş stereo",
+    "hafif scooped ama orta frekansı kesik değil",
+    "modern Rectifier tarzı"
+   ],
+   "bpm": "122 BPM",
+   "key": "C minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Firebird V (Adam Gontier). Barry Stock'un ikinci ritim/lead katmanlarında Ibanez veya PRS kullanmış olabileceği sanılıyor.",
+    "pickup": "Köprü manyetiği (Firebird V mini-humbucker); ritim için köprü pozisyonu tahmin",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Dual Rectifier (3-channel Solo Head)",
+     "channel": "Kanal 3 (Modern/Red)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6.5",
+       "note": "tahmin; aşırı fuzzy olmayan sıkı yüksek kazanç"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin; drop C'de çamurlaşmayı önlemek için"
+      },
+      {
+       "name": "Mid",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Equipboard, Gontier'in Dual Rectifier'ı 'I Hate Everything About You' klibinde ve canlı performanslarda kullandığını söylüyor (2003 dönemi). One-X stüdyo seanslarında kullanılan amfi hiçbir kaynakta doğrulanmadı. Howard Benson prodüksiyonlarında genelde birden fazla amfi karıştırılıyor."
+    },
+    {
+     "model": "Diezel VH4",
+     "channel": "Kanal 3",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Barry Stock'un uzun süreli ana distortion amfisi, ancak 2015 tarihli röportajlardan biliniyor. One-X'te kullanıldığı doğrulanmadı."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie Rectifier 4x12 (tahmin)",
+    "speakers": "Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kapak ile kenar arası, hafif off-axis",
+      "distance": "1-2 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisine dair hiçbir kaynak bulunamadı. Benson, gitarların hem amfiden hem DI olarak kaydedildiğini, mikserin gerekirse re-amp yapabildiğini söylüyor (sonraki bir albüm için)."
+   },
+   "pedals": [
+    {
+     "model": "Noise gate (tür bilinmiyor)",
+     "purpose": "Drop C palm-mute ve duraklamalı riff kesintilerinde sessizlik sağlamak",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Ibanez Tube Screamer tarzı overdrive (boost)",
+     "purpose": "Amfinin önünde sıkılaştırma",
+     "settings": [
+      {
+       "name": "Drive",
+       "value": "0",
+       "note": "tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "8",
+       "note": "tahmin"
+      },
+      {
+       "name": "Tone",
+       "value": "5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop C (C G C F A D)",
+   "recording_notes": "Kayıt Bay 7 Studios (Valley Village, CA) ve Sparky Dark Studios'ta (Calabasas, CA) yapıldı. Prodüktör Howard Benson, kayıt mühendisi Mike Plotnikoff, Pro Tools editi Paul DeCarli, miks Chris Lord-Alge (Resonate Music, Burbank), mastering Ted Jensen (Sterling Sound). Kredilere göre ritim gitar Adam Gontier, lead gitar Barry Stock (gruptaki ilk albümü). Benson tarzı prodüksiyonda nakaratlarda üç gitar katmanı, sağa-sola double-track ritim ve DI yedek kaydı tipiktir (bu Benson'ın sonraki bir albüm için yaptığı açıklama). CLA miksi yoğun kompresyon ve öne çıkan gitar duvarı sağlar."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "palm muting",
+    "drop C power chord'lar (tek parmak)",
+    "duraklamalı/staccato riff kesmeleri ve sıkı susturma",
+    "122 BPM'de sekizlik alternate/downpicking"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritim tonuyla aynı. Drop C'de palm-mute ve açık power chord'lu riff, aradaki boşluklarda sıkı susturma. Stereo double-track."
+   },
+   {
+    "name": "Kıta",
+    "description": "Gitar seyrekleşiyor. Daha az katman, palm-mute'lu kısa vuruşlar ve gerilim notaları, aynı distorsiyonlu ton. Kazanç biraz düşük ya da çalış daha hafif olabilir."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Açık çalınan power chord'larla tam distorsiyon duvarı. Benson'ın üçlü gitar katmanı yaklaşımı ve üstte melodik ikinci bir gitar (Barry Stock), ton aynı."
+   },
+   {
+    "name": "Köprü / ara kısım",
+    "description": "Ritim tonu korunuyor. Daha yoğun palm-mute'lu ağır kısım, belirgin bir solo yok."
+   }
+  ],
+  "warnings": [
+   "One-X seanslarında kullanılan amfi, kabin, mikrofon ve pedallara dair doğrudan kaynak bulunamadı. Amfi ve efekt bilgilerinin hepsi dönem/sanatçı kanıtına dayalı tahmin.",
+   "Firebird V'in One-X'te kullanıldığını yalnızca Equipboard söylüyor ve kaynağı belirtilmemiş. Bu gitarın özellikle bu şarkıda kullanıldığı doğrulanmadı.",
+   "Akort: tabların çoğu Drop C diyor, ancak bir tab Drop C# veriyor. Wikipedia'ya göre basılı nota D minör ve 123 BPM (muhtemelen Drop D notasyonu). SongBPM ise G#/Ab diyor. Duyulan ses ve tabların çoğu C minör ve Drop C'yi destekliyor.",
+   "Tunebat sayfası bulunamadı. BPM için 122 (SongBPM) ile 123 (Wikipedia) arasında küçük bir fark var.",
+   "Diezel VH4 bilgisi Barry Stock'un 2015 dönemi rig'inden geliyor ve 2006'ya uymayabilir."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "One-X - Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/One-X"
+   },
+   {
+    "title": "Animal I Have Become - Wikipedia",
+    "url": "https://www.wikiwand.com/en/articles/Animal_I_Have_Become"
+   },
+   {
+    "title": "Adam Gontier's Gear - Equipboard",
+    "url": "https://equipboard.com/pros/adam-gontier"
+   },
+   {
+    "title": "Three Days Grace - Equipboard",
+    "url": "https://equipboard.com/band/three-days-grace"
+   },
+   {
+    "title": "Guitar World - Barry Stock gear (Human)",
+    "url": "https://www.guitarworld.com/artists/three-days-grace-guitarist-barry-stock-discusses-gear-and-new-album-human"
+   },
+   {
+    "title": "Sonic Scoop - Howard Benson, The Mountain",
+    "url": "https://sonicscoop.com/?p=77303"
+   },
+   {
+    "title": "SongBPM - Animal I Have Become",
+    "url": "https://songbpm.com/@three-days-grace/animal-i-have-become"
+   },
+   {
+    "title": "Ultimate Guitar - One-X Album Tab",
+    "url": "https://tabs.ultimate-guitar.com/tab/three-days-grace/one-x-tabs-378170"
+   },
+   {
+    "title": "Chords-and-tabs - Animal I Have Become",
+    "url": "https://www.chords-and-tabs.net/song/name/three-days-grace-animal-i-have-become-3"
+   },
+   {
+    "title": "Big Bass Tabs - Animal I Have Become",
+    "url": "https://www.bigbasstabs.com/three_days_grace_bass_tabs/animal_i_have_become.html"
+   }
+  ]
+ }
+}

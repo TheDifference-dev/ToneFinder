@@ -1,0 +1,164 @@
+{
+ "rank": 80,
+ "part": "intro",
+ "researchedAt": 1795281326095,
+ "original": {
+  "song": {
+   "title": "Layla",
+   "artist": "Derek and the Dominos",
+   "album_or_year": "Layla and Other Assorted Love Songs (1970)",
+   "tone_character": "Sonuna kadar açılmış küçük tweed Fender Champ amfilerin doğal kompresyonlu, orta frekansı yoğun, hafif kırık ama hâlâ net crunch tonu. Strat ve Les Paul'ün üst üste bindirilmiş, harmonili ve oktavlı riff katmanları sayesinde kalın, parlak ve 'şarkı söyleyen' bir duvar oluşuyor.",
+   "tone_tags": [
+    "küçük amfi crunch",
+    "orta frekans öne çıkık",
+    "doğal tüp kompresyonu",
+    "katmanlı/harmonili",
+    "parlak üst",
+    "hafif oda ambiyansı",
+    "fuzz/pedal yok"
+   ],
+   "bpm": "115–117 BPM",
+   "key": "D minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Eric Clapton: 1956 Fender Stratocaster 'Brownie' (sunburst); Duane Allman: 1957 Gibson Les Paul Goldtop (riff dublajı ve slide)",
+    "pickup": "Clapton: Strat'ın stok single-coil manyetikleri, büyük olasılıkla köprü manyetiği ya da köprü/orta arası konum (tahmin). Allman: Les Paul Goldtop'un P-90 manyetikleri; riffte hangisinin kullanıldığı belgelenmemiş",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Tweed Champ (5 W, 1x8)",
+     "channel": "Tek kanal (iki girişli); Wikipedia'ya göre iki gitarist aynı Champ'in iki girişini kullandı",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "10",
+       "note": "Tahmin: küçük amfi tam açık, breakup için. Champ'te tek Volume düğmesi var, ton düğmesi yok"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "SOS Classic Tracks: Clapton ve Allman için tweed Champ'ler kullanılmış, ses sızıntısını azaltmak için kapalı piyano kapağının üstüne konmuşlar. Tom Dowd'un Alan Paul'a anlatımında ise Princeton ve Deluxe geçiyor; Clapton'ın bir Champ ve bir Princeton getirdiği söyleniyor. Çalarken amfiler değiş tokuş edilmiş."
+    },
+    {
+     "model": "Fender Princeton / Fender Deluxe (küçük kombolar)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Dowd'un anlatımına göre Allman Deluxe'e alışkındı ve iki gitarist parçaya göre amfi değiştirdi. Riffin hangi katmanının hangi amfide çalındığı bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Kombo içi kabin (Champ 1x8, Princeton 1x10, Deluxe 1x12)",
+    "speakers": "Orijinal Fender kombo hoparlörleri (Champ için 8 inç; muhtemelen Jensen/Oxford tipi)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kaynakta yok; muhtemelen hoparlöre yakın, on-axis ile kenar arası",
+      "distance": "Yakın mikrofonlama (birkaç cm), tahmin"
+     },
+     {
+      "model": "Electro-Voice 635",
+      "position": "Kaynakta yok",
+      "distance": "Yakın, tahmin"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "SOS, gitar amfileri için SM57 ve EV 635 kullanıldığını belirtiyor; kesin pozisyon ve mesafe verilmemiş. Amfiler piyano kapağının üstünde, düşük seste çalınmış; oda sızıntısı en aza indirilmiş."
+   },
+   "pedals": [
+    {
+     "model": "Yok (gitar doğrudan amfiye)",
+     "purpose": "Riff tonu tamamen amfinin sürülmesinden geliyor; fuzz/overdrive pedalı belgelenmemiş",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "EMT plate echo (miks aşamasında)",
+     "purpose": "Hafif ambiyans/reverb",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Fender guitar Leslie (Variac hız kontrollü)",
+     "purpose": "Yalnızca şarkının ilerisindeki bir gitar katmanında (yaklaşık 5:25), riffte kullanılmamış",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Criteria Studios (Studio B), Miami. Prodüktör Tom Dowd; mühendisler Ron ve Howard Albert, Mack Emerman, Chuck Kirkpatrick, Karl Richardson. Kayıt 9 Eylül 1970 (albüm seansları Ağustos–Ekim 1970). Özel MCI konsol ve 16 kanallı MCI JH16 teyp kullanılmış. Birinci bölümde 6 gitar kanalı var: bir Clapton ritim kanalı; Clapton'ın ana power-chord riffi iki kanalda, artı biri sağda biri solda iki harmoni kanalı; Allman'ın solo/slide kanalı; ve iki gitaristin imza riffini birlikte çaldığı bir kanal (7 notalık figür iki oktavda, 12 notalık figür unison). Allman 12 notalık riffin ilk 7 notasını perdeli, son 5'ini slide ile çaldı. Riff, Allman'ın Albert King'in 'As the Years Go Passing By' şarkısından (bazı kaynaklara göre T-Bone Walker'dan) uyarladığı bir motiften doğdu. Piyano kodası yaklaşık bir hafta sonra kaydedildi ve Dowd tarafından birleştirildi; koda miksinde teyp hızı biraz artırıldı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Hızlı D minör pentatonik riff (çekiç/çekme ve kaydırmalar)",
+    "Tam ses bendingler ve vibrato",
+    "Oktav ve unison katmanlarını tek gitarla temsil etmek",
+    "Akorlu riff ile tek nota riffi arasında hızlı geçiş",
+    "Dinamik kontrolü (amfi breakup'ını çalış gücüyle yönetme)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıtalar (C# minör)",
+    "description": "Aynı Champ crunch tonu ile Clapton'ın ritmi ve vokal arasında Allman'ın perdeli, bendingli dolgu/solo cümleleri var. Gain biraz daha düşük hissediliyor; riffteki çoklu harmoni katmanları yok."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Giriş riffinin harmonili katmanları geri dönüyor, ton aynı. Clapton'ın vokali dublajlı."
+   },
+   {
+    "name": "Piyano kodası (Bölüm 2)",
+    "description": "Allman Les Paul ile bottleneck slide çalıyor; piyano melodisini bir oktav yukarıdan dublajlıyor, sonda 'kuş sesi' var. Daha kompresli ve uzun sustain'li, şarkı söyleyen bir lead tonu. Clapton akustik ve slide gitar ekliyor; yaklaşık 5:25'te Leslie'den geçen bir gitar katmanı dönen, chorus benzeri bir doku katıyor. Koda hızlandırılmış teypte, C ile C# arasında bir yerde."
+   }
+  ],
+  "warnings": [
+   "Amfi kaynakları çelişiyor: SOS ve Wikipedia tweed Champ diyor (Wikipedia'ya göre tek Champ'in iki girişi). Tom Dowd'un Alan Paul'a anlatımında ise Princeton ve Deluxe geçiyor; amfiler parçaya göre değiştirilmiş.",
+   "Clapton'ın riffte hangi Strat manyetiğini kullandığı belgelenmemiş; köprü/orta tahmini sese dayanıyor.",
+   "Clapton ve Allman gitarları zaman zaman değiş tokuş etmiş; hangi riff katmanının hangi gitarla çalındığı kesin değil.",
+   "Tunebat sayfası bulunamadı. BPM analizleri 115–117 arasında (bir kaynak 125 diyor). Tonalite riff ve nakaratta D minör, kıtalarda C# minör; bazı otomatik analizler farklı ton veriyor.",
+   "Mikrofon pozisyonu ve mesafesi kaynaklarda yok; yalnızca SM57 ve EV 635 modelleri teyitli.",
+   "Riffin kökeni tartışmalı: Albert King mi, T-Bone Walker mı?"
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Sound On Sound – Classic Tracks: Derek & The Dominos 'Layla'",
+    "url": "https://www.soundonsound.com/techniques/classic-tracks-derek-dominos-layla"
+   },
+   {
+    "title": "Wikipedia – Layla",
+    "url": "https://en.wikipedia.org/wiki/Layla"
+   },
+   {
+    "title": "Alan Paul – The Inside Story of Layla",
+    "url": "https://alanpaul.substack.com/p/the-inside-story-of-layla"
+   },
+   {
+    "title": "Guitar World – Isolated guitar tracks from Layla",
+    "url": "https://guitarworld.com/artists/eric-clapton-and-duane-allmans-isolated-guitar-tracks-layla"
+   },
+   {
+    "title": "Guitar Player – An Oral History of Layla",
+    "url": "https://www.guitarplayer.com/players/an-oral-history-of-derek-and-the-dominos-layla"
+   },
+   {
+    "title": "American Songwriter – Layla Behind the Song",
+    "url": "https://americansongwriter.com/layla-eric-clapton-behind-the-song/"
+   },
+   {
+    "title": "Vintage Digital – Classic Track: Layla",
+    "url": "https://www.vintagedigital.com.au/classic-track/layla"
+   },
+   {
+    "title": "Wikipedia – Layla and Other Assorted Love Songs",
+    "url": "https://en.wikipedia.org/wiki/Layla_and_Other_Assorted_Love_Songs"
+   },
+   {
+    "title": "AcousticBrainz – Layla analysis",
+    "url": "https://acousticbrainz.org/2c16e475-8ab8-403d-8623-9077526f78bb"
+   }
+  ]
+ }
+}

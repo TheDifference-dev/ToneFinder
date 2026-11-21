@@ -1,0 +1,174 @@
+{
+ "rank": 24,
+ "part": "intro",
+ "researchedAt": 1795279227231,
+ "original": {
+  "song": {
+   "title": "Do I Wanna Know?",
+   "artist": "Arctic Monkeys",
+   "album_or_year": "AM (2013)",
+   "tone_character": "Kuru, odası yakın, orta frekansları öne çıkan ve fuzz'a yakın bir distorsiyonla 'homurdanan' bir riff tonu. 12 telli gitarın oktav telleri tona hafif bir koro ve genişlik katıyor, üstüne yavaş ve hafif bir analog tremolo dalgalanması var. Tuşlar arasındaki boşluklar ve sessizlikler tonun parçası.",
+   "tone_tags": [
+    "fuzz'a yakın distorsiyon",
+    "orta frekans öne çıkık",
+    "kuru, az reverb",
+    "12 telli oktav parıltısı",
+    "hafif tremolo",
+    "küçük amfi karakteri",
+    "vintage, lo-fi doku",
+    "sıkı ama yuvarlak alt"
+   ],
+   "bpm": "85 BPM",
+   "key": "G minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Vox Starstream 12-string (Vox 12 telli, vintage)",
+    "pickup": "Kendi orijinal single-coil manyetiği; büyük olasılıkla köprü manyetiği ya da köprü+sap karışımı (pozisyon kaynakta yok)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Eski Rickenbacker küçük siyah combo (tam modeli bilinmiyor; düğmesiz ve iki girişli olarak anlatılıyor)",
+     "channel": "Tek kanal (düğme yok, sadece iki giriş jakı)",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "Sabit",
+       "note": "Turner'a göre amfide hiç düğme yok; ses ve gain gitar volümü ve pedallarla ayarlanıyor"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Turner NME'ye AM'in neredeyse 'The New Black' adını alacağını, çünkü adın 'çok fazla kayıt yaptığımız eski bir Rickenbacker' küçük siyah amfiden geldiğini söylemiş. Bu albüm genelinde doğrulanmış ama bu şarkıda kullanıldığına dair açık kaynak yok. Grup Suck It and See döneminde vintage Selmer ve Magnatone amfiler de kullanmıştı."
+    }
+   ],
+   "cab": {
+    "model": "Combo amfinin kendi hoparlörü (Rickenbacker combo)",
+    "speakers": "Bilinmiyor (küçük, muhtemelen tek hoparlörlü bir combo)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (SM57 ya da ribbon tahmin)",
+      "position": "Bilinmiyor",
+      "distance": "Yakın mikrofonlama tahmini"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi hiçbir kaynakta yok. Kuru, yakın ve orta frekansları öne çıkan ses yakın mikrofonlu küçük bir combo izlenimi veriyor."
+   },
+   "pedals": [
+    {
+     "model": "Coopersonic Valveslapper Dual-Valve Distortion",
+     "purpose": "Riffin fuzz'a yakın distorsiyonu (Turner'ın canlı pedalboardunda; Equipboard bu şarkının tonuyla ilişkilendiriyor)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "Yüksek (tahmin)",
+       "note": "Kaynakta ayar yok"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Gretsch/Valco 6144 tipi vintage reverb/tremolo ünitesi (ya da amfi tremolosu)",
+     "purpose": "Hafif, yavaş tremolo dalgalanması",
+     "settings": [
+      {
+       "name": "Speed",
+       "value": "Yavaş-orta (tahmin)",
+       "note": ""
+      },
+      {
+       "name": "Depth",
+       "value": "Düşük (tahmin)",
+       "note": "Çok belirgin değil, hafif bir dalgalanma"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sage & Sound Recording (Los Angeles) ve Rancho De La Luna'da (Joshua Tree) kaydedildi. Wikipedia'ya göre 1. ve 2. parçaların prodüktörü Ross Orton, albümün geneli James Ford. Kayıt mühendisi Ian Shea. Miks Tchad Blake (Full Mongrel, Galler), mastering Brian Lucey. Turner riffi 'şaka olsun diye' aldığı Vox 12 telli Star Stream ile yazdı. Şarkının tohumu 2009'daki Humbug seanslarında 4 kanallı kayıtla atıldı. Albümde önce davul ve bas kaydedildi, groove öne çıkarıldı. Bir eğitim kaynağına göre riffte iki gitar katmanı var: biri daha temiz ve tremololu, diğeri yoğun fuzz'lı (doğrulanmadı). Tchad Blake'in tipik paralel saturasyon ve kuru, yakın miks tarzı tonun lo-fi karakterine katkı sağlamış olabilir (tahmin)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "kalın tellerde tek nota riff",
+    "slaytlar ve hammer-on",
+    "pauslarda kesin susturma (string muting)",
+    "ağır, geride kalan groove ve tempo kontrolü",
+    "kontrollü vibrato",
+    "parmak açıklığı (stretch)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Kıta",
+    "description": "Aynı riff vokalin altında devam ediyor. Ton aynı, aranjman daha seyrek. Gitar riffi bas ile birlikte çalıyor."
+   },
+   {
+    "name": "Nakarat / 'Crawling back to you'",
+    "description": "Daha çok gitar katmanı ve daha dolu bir ses var. Aynı fuzz tonu kalın akorlar ve riff varyasyonlarıyla çift kayıt gibi duyuluyor (Jamie Cook'un ikinci gitarı, tahmin). Gain biraz daha fazla ya da katman sayısı artmış."
+   },
+   {
+    "name": "Köprü / doruk",
+    "description": "Daha yoğun distorsiyonlu, sustain'li akor vuruşları ve tutulan notalar. Tremololu, daha temiz katman ile fuzz katmanının karışımı belirginleşiyor."
+   },
+   {
+    "name": "Çıkış",
+    "description": "Riff tekrar ediyor ve fade out ile bitiyor. Ton girişle aynı."
+   }
+  ],
+  "warnings": [
+   "Bu şarkı için stüdyoda kullanılan amfi, kabin ve mikrofon açıkça belgelenmemiş. Rickenbacker amfi yalnızca albümün genelinde 'çok kullanıldı' diye geçiyor.",
+   "Coopersonic Valveslapper bilgisi Equipboard'a ve gear rehberlerine dayanıyor ve canlı pedalboarddan geliyor olabilir. Stüdyo kaydında kullanıldığı doğrulanmadı.",
+   "Tremolo kaynağı (Gretsch/Valco ünitesi) Equipboard'da 'muhtemelen' diye geçiyor ve TBHC turuna ait. Ürün listesi de karışık (6144 ile 6150T).",
+   "Vox 12 telli gitarın riffin yazımında kullanıldığı doğrulanmış. Albüm kaydında da onunla çalındığı güçlü bir olasılık ama açıkça belirtilmemiş. Jamie Cook'un riffteki rolü (Gibson SG, Hiwatt) belirsiz.",
+   "Tonalite kaynakları çelişiyor: çoğu G minör diyor (Wikipedia, Hooktheory), ama Music Gateway F majör, Audiokeychain E minör veriyor. Tunebat sayfasına ulaşılamadı. BPM'de kaynaklar 85'te birleşiyor.",
+   "Prodüktör bilgisi tutarsız: Wikipedia'nın albüm sayfası 1. ve 2. parçaları Ross Orton'a veriyor, şarkı sayfası Ford ve Orton diyor.",
+   "İki katmanlı gitar (temiz+tremolo ve fuzz) iddiası tek bir eğitim sitesine dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar - How Arctic Monkeys created their biggest ever single",
+    "url": "https://www.musicradar.com/artists/how-arctic-monkeys-created-their-biggest-ever-single-inspired-by-r-and-b-and-hip-hop-grooves-i-feel-like-that-song-was-a-ghost-within-the-walls-of-this-old-guitar-that-i-bought"
+   },
+   {
+    "title": "Equipboard - Do I Wanna Know?",
+    "url": "https://equipboard.com/albums/arctic-monkeys-do-i-wanna-know"
+   },
+   {
+    "title": "Wikipedia - AM (Arctic Monkeys album)",
+    "url": "https://en.wikipedia.org/wiki/AM_(Arctic_Monkeys_album)"
+   },
+   {
+    "title": "Wikipedia - Do I Wanna Know?",
+    "url": "https://en.wikipedia.org/wiki/Do_I_Wanna_Know%3F"
+   },
+   {
+    "title": "Musicstrive - Arctic Monkeys guitar tone",
+    "url": "https://musicstrive.com/arctic-monkeys-guitar-tone"
+   },
+   {
+    "title": "Andy Guitar - Do I Wanna Know tutorial",
+    "url": "https://andyguitar.co.uk/videos/arctic-monkeys-do-i-wanna-know"
+   },
+   {
+    "title": "Music Gateway - key/BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/arctic-monkeys/do-i-wanna-know"
+   },
+   {
+    "title": "Hooktheory - Do I Wanna Know",
+    "url": "https://hooktheory.com/theorytab/view/arctic-monkeys/do-i-wanna-know"
+   },
+   {
+    "title": "Sound On Sound - James Ford producing Arctic Monkeys",
+    "url": "https://www.soundonsound.com/people/james-ford-producing-arctic-monkeys"
+   },
+   {
+    "title": "Guitar Chalk - Amp settings Do I Wanna Know",
+    "url": "https://www.guitarchalk.com/amp-settings-do-i-wanna-know-arctic-monkeys/"
+   }
+  ]
+ }
+}

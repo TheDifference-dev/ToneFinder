@@ -1,0 +1,173 @@
+{
+ "rank": 87,
+ "part": "clean",
+ "researchedAt": 1795281596373,
+ "original": {
+  "song": {
+   "title": "Tears In Heaven",
+   "artist": "Eric Clapton",
+   "album_or_year": "Rush (Music from the Motion Picture Soundtrack), 1991; single 1992",
+   "tone_character": "Stüdyo versiyonu esas olarak naylon telli akustik gitar üzerine kurulu. Plak notlarında geçen elektro gitar, düşük gainli, yumuşak ve sıcak temiz bir ton olmalı. Hafif kompresyonlu, odalı ve reverb'lü; arka planda dolgu ve armoni katmanı veriyor, öne çıkmıyor.",
+   "tone_tags": [
+    "temiz",
+    "sıcak",
+    "yumuşak atak",
+    "hafif kompresyon",
+    "reverb'lü",
+    "arka plan dolgusu",
+    "düşük gain"
+   ],
+   "bpm": "77–80 BPM",
+   "key": "A majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Eric Clapton Signature Stratocaster (1991 dönemi)",
+    "pickup": "Lace Sensor Gold manyetikler; temiz dolgu için muhtemelen sap ya da sap+orta pozisyon",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Soldano SLO-100 ya da Fender tipi temiz amfi (dönemin stüdyo amfisi)",
+     "channel": "Clean / Normal",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "3",
+       "note": "tahmini; distorsiyonsuz temiz ton"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Middle",
+       "value": "5",
+       "note": "tahmini"
+      },
+      {
+       "name": "Treble",
+       "value": "5.5",
+       "note": "tahmini; Lace Sensor parlaklığı göz önüne alınarak"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Bu kayıttaki elektro gitar için amfi bilgisi veren bir kaynak bulunamadı. Clapton 1989–1991 döneminde (Journeyman, 24 Nights) sahnede ve stüdyoda Soldano SLO-100 kullanıyordu. Kayıt Los Angeles'ta yapıldığı için stüdyonun kendi amfisi de kullanılmış olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (Soldano/Marshall 4x12 ya da Fender kombo olabilir)",
+    "speakers": "Bilinmiyor",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmini)",
+      "position": "Kenar / kapak arası (tahmini)",
+      "distance": "2–5 cm (tahmini)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofonla ilgili hiçbir belge yok. Değerler genel stüdyo pratiğine göre tahmin edildi."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo reverb'ü (plate/hall, mix aşamasında)",
+     "purpose": "Odalı, yumuşak bir kuyruk",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "1.8–2.5 s",
+       "note": "tahmini"
+      },
+      {
+       "name": "Mix",
+       "value": "%20",
+       "note": "tahmini"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Stüdyo kompresörü",
+     "purpose": "Dolgu notalarını dengelemek",
+     "settings": [
+      {
+       "name": "Ratio",
+       "value": "3:1",
+       "note": "tahmini, hafif"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Russ Titelman. Kayıt 1991'de Rush film müziği için yapıldı; bazı kaynaklara göre Los Angeles'taki Village Recorder'da (doğrulanmadı). Plak notları Clapton'ı vokal, akustik ve elektro gitar ve dobro olarak listeliyor (confirmed, Wikipedia). Ana gitar 1991 yapımı bir José Ramírez III naylon telli gitar (confirmed, MusicRadar). Klipte 1977 Juan Alvarez klasik gitar kullanıldı. Diğer müzisyenler: JayDee Maness pedal steel, Randy Kerber synthesizer, Nathan East fretless Yamaha bas (kısa solo dahil), Gayle Levant Celtic harp, Lenny Castro perküsyon, Jimmy Bralower drum programming. Clapton kendi partisini kaydederken stüdyoda yalnızca prodüktör, mühendis ve söz yazarı Will Jennings kaldı. Elektro gitarın kesin rolü (dolgu, armoni ya da tremolo/ambient katman) ve teçhizatı belgelenmemiş."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "parmakla ya da hafif penayla arpej ve dolgu",
+    "dinamik kontrol (yumuşak atak)",
+    "akorlar arasında temiz geçişler",
+    "hafif vibrato"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana naylon telli akustik partisi",
+    "description": "Şarkının omurgası. José Ramírez III naylon telli gitarla parmakla arpej ve akor çalınıyor; elektro ton yok. Elektro gitarla taklit için sap manyetiği, tonu biraz kısık, kompresör ve reverb kullanılabilir."
+   },
+   {
+    "name": "Enstrümantal ara / solo",
+    "description": "Stüdyo versiyonunda öne çıkan melodik katmanlar Nathan East'in fretless bas solosu ve JayDee Maness'in pedal steel'i. Gitarla taklit edilecekse temiz tona biraz daha fazla reverb ve sustain eklenebilir; distorsiyon yok."
+   },
+   {
+    "name": "Unplugged versiyonu (1992)",
+    "description": "Ayrı bir kayıt. Clapton 1939 Martin 000-42 çelik telli akustik kullanıyor, Andy Fairweather Low parmakla lead dolgular çalıyor; elektro gitar yok."
+   }
+  ],
+  "warnings": [
+   "Stüdyo versiyonundaki elektro gitar partisinin teçhizatı (gitar, amfi, kabin, mikrofon, efekt) hiçbir kaynakta belgelenmemiş. Bu alanların tamamı Clapton'ın 1991 dönemi rigine ve genel stüdyo pratiğine dayalı tahminler.",
+   "Şarkı aslında akustik ve naylon telli bir parça. Elektro gitar plak notlarında geçiyor ama mixte arka planda kalıyor. 'Temiz bölüm' için tonun tamamen temiz olması gerektiği kayda dayanarak söylenebilir.",
+   "Kaynakların bir kısmı Unplugged versiyonuyla stüdyo versiyonunu karıştırıyor.",
+   "BPM tahminleri 77 ile 88 arasında değişiyor, 153 değeri double-time okuması. Tunebat'te stüdyo versiyonuna ait bir sayfa bulunamadı.",
+   "Kayıt stüdyosu (Village Recorder) kaynaklarda net olarak doğrulanmadı.",
+   "İnternetteki bazı 'Stratocaster amp settings' sayfaları güvenilir değil, kullanılmadı."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Wikipedia – Tears in Heaven",
+    "url": "https://en.wikipedia.org/wiki/Tears_in_Heaven"
+   },
+   {
+    "title": "Equipboard – Rush soundtrack",
+    "url": "https://equipboard.com/albums/eric-clapton-rush-music-from-the-motion-picture-soundtrack"
+   },
+   {
+    "title": "MusicRadar – Clapton and the song he said he'd never play live again",
+    "url": "https://musicradar.com/news/eric-clapton-and-the-song-he-said-hed-never-play-live-again-i-got-at-least-150-letters-a-day-directly-from-people-who-were-dealing-with-their-own-grief-and-not-really-having-the-tools-to-deal-with-it"
+   },
+   {
+    "title": "Guitar World – Nathan East on recording Tears in Heaven",
+    "url": "https://www.guitarworld.com/artists/bassists/nathan-east-on-recording-eric-clapton-tears-in-heaven"
+   },
+   {
+    "title": "Sessiondays – Tears In Heaven",
+    "url": "https://sessiondays.com/?p=64716"
+   },
+   {
+    "title": "Wikipedia – Rush (1991 soundtrack)",
+    "url": "https://en.wikipedia.org/wiki/Rush_(1991_soundtrack)"
+   },
+   {
+    "title": "GetSongBPM – Tears in Heaven",
+    "url": "https://getsongbpm.com/song/tears-in-heaven-eric-clapton/r0JDW6"
+   },
+   {
+    "title": "Hooktheory – Tears in Heaven",
+    "url": "https://hooktheory.com/theorytab/view/eric-clapton/tears-in-heaven"
+   }
+  ]
+ }
+}

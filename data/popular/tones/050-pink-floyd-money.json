@@ -1,0 +1,253 @@
+{
+ "rank": 50,
+ "part": "lead",
+ "researchedAt": 1795280107962,
+ "original": {
+  "song": {
+   "title": "Money",
+   "artist": "Pink Floyd",
+   "album_or_year": "The Dark Side of the Moon (1973)",
+   "tone_character": "Solo üç bölümlü. 1. ve 3. bölümler fuzz/boost ile doygun ve şarkı söyler gibi ses veren, bol reverb ve delay'li, ADT ya da çift kayıtla kalınlaştırılmış lead tonlar. 2. bölüm ise efektsiz, kuru ve küçük oda hissi veren, tek gitarlı ve daha az yoğun çalınan bir bölüm. Ton orta frekansta güçlü, sustain'i uzun bir Hiwatt temiz tabanı üzerine kurulu bir fuzz/boost sesi.",
+   "tone_tags": [
+    "doygun fuzz/boost",
+    "uzun sustain",
+    "orta frekans öne çıkık",
+    "geniş reverb/delay (1. ve 3. bölüm)",
+    "kuru ve yakın (2. bölüm)",
+    "çift kayıt/ADT",
+    "Hiwatt temiz tabanı"
+   ],
+   "bpm": "120–126 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1. ve 2. bölüm: Fender Stratocaster ('Black Strat', 1969 gövde, '63 sap). 3. bölüm: 24 perdeli, maun gövdeli, abanoz klavyeli özel Bill Lewis gitar (Vancouver)",
+    "pickup": "Strat'ta büyük olasılıkla köprü manyetiği (fabrika single-coil). Lewis'te çift humbucker var, büyük olasılıkla köprü humbucker kullanıldı.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Hiwatt DR103 All Purpose 100W",
+     "channel": "Normal/Brilliant kanallar köprülü ya da tek kanal, temiz ayar",
+     "settings": [
+      {
+       "name": "Normal Volume",
+       "value": "4",
+       "note": "tahmin; temiz taban, distortion pedaldan geliyor"
+      },
+      {
+       "name": "Brilliant Volume",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin; orta frekans dolgun"
+      },
+      {
+       "name": "Presence",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Master",
+       "value": "6",
+       "note": "tahmin; yüksek headroom"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "DSOTM döneminde Gilmour'un ana amfisi Hiwatt DR103 (Mullard EL34). Daha temiz tonlarda silverface Fender Twin Reverb de kullanıldı, ama Money solosu için belgelenmiş değil. Ayar değerleri tahmin."
+    }
+   ],
+   "cab": {
+    "model": "WEM 4x12 (Super Starfinder tipi)",
+    "speakers": "Fane Crescendo 12\" (dönemin WEM kabinleri)",
+    "mics": [
+     {
+      "model": "Neumann U67 / U87 ya da Shure SM57 (tahmin)",
+      "position": "cap ile edge arası",
+      "distance": "yakın, 2–5 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Abbey Road'da hangi kabinin ve hangi mikrofonların kullanıldığı belgelenmemiş. Bilgi Gilmour'un 1972–73 sahne rig'inden çıkarıldı."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Arbiter Fuzz Face",
+     "purpose": "Ana distortion; Money ve Time'da kullanıldığı belirtiliyor",
+     "settings": [
+      {
+       "name": "Fuzz",
+       "value": "8",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Colorsound Power Boost",
+     "purpose": "Solo için boost/overdrive. Gilmourish'e göre ritimde fuzz, soloda CPB açılıyor",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Drive",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Binson Echorec II",
+     "purpose": "1. ve 3. bölümde delay/yankı; 2. bölümde kapalı",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~300–400 ms",
+       "note": "tahmin; tempoya yakın"
+      },
+      {
+       "name": "Swell",
+       "value": "3",
+       "note": "tahmin; az tekrar"
+      },
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mode",
+       "value": "tek kafa",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo plate reverb (EMT 140, Abbey Road) ve ADT",
+     "purpose": "1. ve 3. bölümde yoğun reverb ve çiftleme; 2. bölümde kuru",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "~2–3 s",
+       "note": "tahmin"
+      },
+      {
+       "name": "ADT",
+       "value": "On",
+       "note": "1. ve/veya 3. bölüm"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt EMI/Abbey Road Studios'ta, 7 Haziran 1972 – 9 Ocak 1973 arasında yapıldı. Mühendis Alan Parsons, miks süpervizörü Chris Thomas. Solo kısmında şarkı 7/4'ten 4/4'e geçiyor; solo, iki katına çıkarılmış 12 ölçülük blues yapısında, üç koruslu. 1. korus iki neredeyse aynı geçişle gerçek çift kayıt (Gilmour'a göre ADT). 2. korus Gilmour'un fikriyle tamamen kuru: reverb ve echo yok, tek gitar, grup sessiz çalıyor. 3. korusta efektler geri geliyor, Lewis gitarla en tiz notalara (E6) çıkılıyor, ek ritim gitarları ve ADT var. Gilmour efektleri amfi zincirinde kayda basmış. Solo sonundaki inen riff Chris Thomas'ın önerisiyle çift kayıt."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "geniş ve ifadeli bending'ler (1–1,5 ton)",
+    "yavaş, geniş vibrato",
+    "melodik blues pentatonik frazlama (B minör)",
+    "3. bölümde 22–24. perde civarında çok tiz pozisyon",
+    "dinamik kontrol: kuru bölümde hafif ve az nota çalmak",
+    "çift kayıt için aynı solonun tutarlı tekrarı"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ana riff (7/4)",
+    "description": "Bas riffini katlayan gitar. Black Strat, büyük olasılıkla fuzz ile ama gitar volume kısık; soloya göre çok daha az gain, daha temiz ve tremololu/vibe'lı bir doku. Reverb orta düzeyde."
+   },
+   {
+    "name": "Solo 1. korus",
+    "description": "Referans ton: Strat, fuzz/boost, yoğun reverb ve delay, çift kayıt/ADT ile kalın ve geniş."
+   },
+   {
+    "name": "Solo 2. korus (kuru)",
+    "description": "Aynı gain, ama reverb ve delay tamamen kapalı. Tek gitar, çiftleme yok, daha az nota ve daha sessiz çalınıyor; küçük oda hissi."
+   },
+   {
+    "name": "Solo 3. korus",
+    "description": "Lewis 24 perdeli gitar (humbucker); efektler geri geliyor, reverb, delay ve ADT ağır. Ek ritim gitarlarıyla daha yoğun; humbucker yüzünden biraz daha kalın ve doygun."
+   },
+   {
+    "name": "Solo sonu inen riff ve ritim gitarları",
+    "description": "Çift kayıtlı, crunch/fuzz ritim gitarları; lead'e göre daha az sustain."
+   },
+   {
+    "name": "Saksofon bölümü altı",
+    "description": "Daha hafif, temiz-crunch ritim ve dolgu çalımı."
+   }
+  ],
+  "warnings": [
+   "Lewis gitarın hangi bölümde kullanıldığı kaynaklar arasında farklı: Gilmour/Songfacts ve Wikipedia'ya göre son (3.) solo, Gilmourish'e göre 1. ve 3. solo.",
+   "ADT'nin yeri de tartışmalı: Gilmour 1. solonun ADT'li olduğunu söylüyor; Wikipedia 1. korusun gerçek çift kayıt, 3. korusun ADT olduğunu yazıyor.",
+   "Fuzz Face mi, Colorsound Power Boost mu, yoksa ikisi birden mi kullanıldı, net değil. Gilmourish soloda CPB öneriyor ve albümdeki overdrive kayıt yönteminin belgelenmediğini belirtiyor.",
+   "Amfi, kabin, mikrofon ve tüm düğme ayarları dönem rig'inden çıkarılmış tahminler.",
+   "Tempo kayıt boyunca hızlanıyor (Alan Parsons'a göre); 4/4 solo bölümü 7/4 kısımdan daha hızlı hissedilebilir. BPM için Tunebat doğrulanmadı.",
+   "Kepex tremolo Money'de anılıyor, ama büyük olasılıkla Wurlitzer elektrik piyano için; gitar solosuyla ilgisi yok."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Songfacts – Pink Floyd Money (Gilmour Guitar World alıntıları)",
+    "url": "https://www.songfacts.com/facts/pink-floyd/money/"
+   },
+   {
+    "title": "Wikipedia mirror – Money (Pink Floyd song)",
+    "url": "https://kaweah.freedombox.rocks/kiwix/wikipedia_en_all_maxi_2023-10/Money_(Pink_Floyd_song)"
+   },
+   {
+    "title": "Mixdown – Gear Rundown: Pink Floyd's The Dark Side Of The Moon",
+    "url": "https://mixdownmag.com.au/features/rig-rundown-pink-floyd-dark-side-of-the-moon/"
+   },
+   {
+    "title": "Gilmourish – Dark Side of the Moon gear/tone",
+    "url": "https://www.gilmourish.com/?p=1320"
+   },
+   {
+    "title": "Far Out – Gilmour isolated guitar Money",
+    "url": "https://faroutmagazine.co.uk/david-gilmour-pink-floyd-money-isolated-guitar/"
+   },
+   {
+    "title": "MusicRadar – How Pink Floyd made Money",
+    "url": "https://www.musicradar.com/artists/the-only-way-to-keep-it-in-time-was-to-take-a-piece-of-tape-with-the-sound-on-it-and-measure-it-with-a-ruler-you-would-take-the-exact-length-of-tape-and-then-splice-the-next-exact-length-of-tape-to-it-how-pink-floyd-made-money"
+   }
+  ]
+ }
+}

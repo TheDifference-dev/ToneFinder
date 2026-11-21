@@ -1,0 +1,170 @@
+{
+ "rank": 19,
+ "part": "intro",
+ "researchedAt": 1795278992521,
+ "original": {
+  "song": {
+   "title": "Iron Man",
+   "artist": "Black Sabbath",
+   "album_or_year": "Paranoid (1970)",
+   "tone_character": "Ham, orta frekansları öne çıkan, 'kutu gibi' boğuk ama kalın bir crunch. Bu ton yüksek gain'den değil, sonuna kadar açılmış 100 W'lık bir lambalı amfinin çıkış lambalarının doymasından ve Rangemaster tiz yükselticisinden geliyor. Distorsiyon orta seviyede, modern metale göre oldukça az ve akorlar arasında oda/amfi gürültüsü duyuluyor.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "boğuk/kutu gibi mid",
+    "çıkış lambası doyumu",
+    "orta gain",
+    "az bas",
+    "kuru (efektsiz)",
+    "double-track stereo",
+    "vintage ham"
+   ],
+   "bpm": "76–78 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1965 Gibson SG Special (kırmızı; 'Monkey' adı da geçer)",
+    "pickup": "Köprü manyetiği, P-90 (kaynağa göre John Birch tarafından takılmış Simplux/sarılmış manyetik)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Laney Supergroup LA100BL (MK1, 100 W)",
+     "channel": "Bass input (Gain 1)",
+     "settings": [
+      {
+       "name": "Gain 1",
+       "value": "10",
+       "note": "Guitar World'e göre tamamen açık"
+      },
+      {
+       "name": "Bass",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Presence",
+       "value": "10",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Amfi modeli Iommi'nin kendi sözleriyle doğrulanıyor ('On Paranoid I basically used an SG and the Laney'). Ayarlar ise Guitar World'ün 'Tonal Recall' tahmini, stüdyo kaydı değil."
+    }
+   ],
+   "cab": {
+    "model": "Laney 4x12",
+    "speakers": "Muhtemelen Celestion G12-25M (bazı dönem Laney kabinlerinde Goodman Audiom 61)",
+    "mics": [],
+    "certainty": "likely",
+    "notes": "Kabine konan mikrofonlara dair bir kaynak bulunamadı. O dönem İngiliz stüdyolarında yakın mikrofon olarak dinamik mikrofon (ör. Shure SM57 / Beyer M201) ya da Neumann U67/U87 kullanmak yaygındı; bu kısım tamamen tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Dallas Rangemaster Treble Booster (modifiyeli)",
+     "purpose": "Amfinin girişini zorlamak, bası kısıp orta/tiz frekansları itmek",
+     "settings": [
+      {
+       "name": "Boost",
+       "value": "10",
+       "note": "Tahmin: tam açık"
+      }
+     ],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Haziran 1970'te Regent Sound ve Island Studios'ta (Londra) birkaç gün içinde yapıldı. Prodüktör Rodger Bain, mühendis Tom Allom. Grup büyük ölçüde canlı çaldı, metronom kullanılmadı. Iommi riff'leri sık sık double-track yapıp sağa ve sola pan'lardı. Girişteki 'I am Iron Man' vokali Ozzy'nin sesinin ring modulator'dan geçirilmesiyle elde edildi; bu bir gitar efekti değil."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Yavaş tempoda power chord'lar (kök ses 5. ve 6. telde)",
+    "Kaydırmalar (slide) ve tutulan notalar",
+    "Ana riffte kromatik F#-G salınımı",
+    "Girişte yavaş ve geniş bend'ler, ses düşürme",
+    "Grubun geri kalanıyla gevşek ama ağır bir zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (feedback / bend'li uzun nota)",
+    "description": "Davul girişinin üzerinde tutulan, yavaşça bend'lenip pitch'i düşürülen bir nota çalınıyor. Ton aynı amfi tonu; sustain ve feedback için ses yüksek çalınıyor, efekt yok."
+   },
+   {
+    "name": "Ana riff (B–D–E–G–F#)",
+    "description": "Bu araştırmanın referans tonu: köprü manyetiği, Rangemaster + Laney tam açık, double-track yapılmış power chord'lar."
+   },
+   {
+    "name": "Kıta",
+    "description": "Vokalin altında aynı riff'i takip eden ritim. Ton aynı kalıyor."
+   },
+   {
+    "name": "Hızlı ara bölüm ve sololar",
+    "description": "Tempo yükseliyor. Sololar için muhtemelen yine köprü manyetiği kullanılıyor; birden fazla gitar katmanı ve armonili/üst üste kaydedilmiş gitarlar var. Belirgin bir efekt kaydı yok (tahmin). Thomann, Iommi'nin bazı sololarda Fender amfi kullandığını söylüyor, ama bunun Iron Man için geçerli olduğu doğrulanmadı."
+   },
+   {
+    "name": "Çıkış (hızlı outro riff'i ve solo)",
+    "description": "Hızlı bir shuffle/gallop riff'inin üzerinde solo çalınıyor. Ton aynı crunch; solo katmanı biraz daha öne mikslenmiş."
+   }
+  ],
+  "warnings": [
+   "Amfi ayarları (her şey 10, Bass 0) Guitar World'ün yeniden yaratma tahmini; 1970 stüdyo kaydından belgelenmiş değil.",
+   "Gitarın yılı (1964 mü 1965 mi) ve manyetik geçmişi (orijinal P-90 mı, John Birch/Simplux değişimi mi) kaynaklar arasında farklı. 'Monkey' adlı SG'nin Paranoid'de kullanıldığı söyleniyor, ama hangi manyetiğin ne zaman takıldığı belirsiz.",
+   "Kabin hoparlörleri kesin değil: Celestion G12-25M ya da Goodman Audiom 61.",
+   "Mikrofon ve mikrofon pozisyonu bilgisi bulunamadı.",
+   "BPM tartışmalı: otomatik analizler ~155 ya da ~104 veriyor; ana riff'in algılanan temposu ~76–78 BPM (155'in yarısı).",
+   "Tonalite tartışmalı: veritabanları E minör/A majör diyor, ama ana riff B kök sesli, bu yüzden B minör yazıldı.",
+   "Rangemaster ayarı tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Tonal Recall Part 1 (Iron Man)",
+    "url": "https://www.guitarworld.com/artists/tonal-recall-part-1"
+   },
+   {
+    "title": "Thomann – Hit the Tone! Black Sabbath's Paranoid",
+    "url": "https://www.thomannmusic.com/blog/gear/hit-the-tone-black-sabbaths-paranoid/"
+   },
+   {
+    "title": "Equipboard – Black Sabbath Paranoid",
+    "url": "https://equipboard.com/albums/black-sabbath-paranoid"
+   },
+   {
+    "title": "zZounds – Iconic Rigs on a Budget: Tony Iommi",
+    "url": "https://blog.zzounds.com/2016/04/28/iconic-rigs-on-a-budget-tony-iommi/"
+   },
+   {
+    "title": "Reverb – How Tony Iommi Built the Blueprint for Heavy Metal",
+    "url": "https://reverb.com/news/video-how-tony-iommi-built-the-blueprint-for-heavy-metal-potent-pairings"
+   },
+   {
+    "title": "Gearnews – Tony Iommi tone",
+    "url": "https://www.gearnews.com/?p=258351"
+   },
+   {
+    "title": "AcousticBrainz – Iron Man",
+    "url": "https://acousticbrainz.org/71dbb07a-e6d4-40e4-bf2d-15c2f5c1795b?n=4"
+   },
+   {
+    "title": "Hooktheory – Iron Man",
+    "url": "https://hooktheory.com/theorytab/view/black-sabbath/iron-man"
+   },
+   {
+    "title": "Wikipedia – Iron Man (song)",
+    "url": "https://Www.wikipedia.org/wiki/Iron_Man_(song)"
+   }
+  ]
+ }
+}

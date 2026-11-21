@@ -1,0 +1,155 @@
+{
+ "rank": 69,
+ "part": "lead",
+ "researchedAt": 1795280919853,
+ "original": {
+  "song": {
+   "title": "Free Bird",
+   "artist": "Lynyrd Skynyrd",
+   "album_or_year": "(Pronounced 'Lĕh-'nérd 'Skin-'nérd), 1973",
+   "tone_character": "Sert çalınan bir Gibson'ın köprü manyetiğinden çıkan, doğal amfi overdrive'ı ile orta frekansları öne çıkmış, ısırgan ama fazla doymamış 70'ler southern rock lead tonu. Solo büyük olasılıkla Collins'in üst üste kaydettiği iki gitardan (dublaj) oluşuyor; bu da sesi kalın ve geniş yapıyor.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "doğal amfi overdrive'ı",
+    "ısırgan üst-orta",
+    "orta gain",
+    "pena dinamiğine duyarlı",
+    "dublajlı/katmanlı lead",
+    "az efekt, kuru"
+   ],
+   "bpm": "148–152 BPM",
+   "key": "G majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1964 Gibson Firebird I (manyetikleri ve sapı değiştirilmiş); bazı kaynaklara göre 1958 Gibson Explorer",
+    "pickup": "Köprü manyetiği (Firebird mini-humbucker ya da değiştirilmiş humbucker; tam modeli bilinmiyor)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Twin Reverb (Silverface, '70s)",
+     "channel": "Vibrato/normal kanal, sesi yüksekte, doğal overdrive",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "tahmin: amfiyi zorlayarak elde edilen breakup"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin: orta frekans öne çıkık"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Kaynaklar 1972–76 arasında Twin Reverb kullanıldığını, Peavey anlaşmasından önce Marshall'lar (ör. 1959T Super Tremolo) olduğunu ve 1965'ten kalma bir Super Reverb'ü sayıyor (Equipboard, topluluk derlemesi). Solo kaydında hangi amfinin kullanıldığını söyleyen bir kaynak yok. Peavey Mace / JBL düzeni daha sonraki bir döneme ait."
+    }
+   ],
+   "cab": {
+    "model": "Amfinin kendi kombo kabini (Twin Reverb 2x12) ya da Marshall 4x12",
+    "speakers": "Bilinmiyor (Twin için JBL D120 ya da Fender'ın standart hoparlörleri olabilir; Marshall 4x12 içinde JBL hoparlörden söz ediliyor)",
+    "mics": [
+     {
+      "model": "Bilinmiyor (dönemin tipik seçimi: Shure SM57 ya da Neumann U67/U87)",
+      "position": "Hoparlöre yakın, hafif kenarda (tahmin)",
+      "distance": "2–5 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Mikrofon düzeniyle ilgili belge bulunamadı. Mühendis Bob Langford'un Tape Op röportajında (#137) ayrıntı olabilir ama metin ücretli erişimin arkasında."
+   },
+   "pedals": [
+    {
+     "model": "Yok (doğrudan amfiye)",
+     "purpose": "Solo için belgelenmiş bir pedal yok. Collins'in Vox wah'ları vardı ama Free Bird solosunda wah duyulmuyor.",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "3 Nisan 1973'te Doraville, Georgia'daki Studio One'da kaydedildi. Prodüktör Al Kooper, mühendis Bob Langford. Rossington'a göre uzun jam'in tamamını Allen Collins tek başına çaldı: 'Bir kez çaldı, sonra bir kez daha, ve bitti.' Bu söz solonun dublaj ya da ikinci bir lead olarak üst üste kaydedildiğine işaret ediyor (likely). Rossington ritimde Les Paul 'Bernice' çaldı, slayt dolgularını SG ile yaptı. Kooper'a göre tüm solo önceden kurgulanmıştı ve her seferinde aynı çalınıyordu. Stüdyonun reverb'ü ve bandın doğal kompresyonu dışında belirgin bir post-prodüksiyon efekti bilinmiyor."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Yüksek tempoda hızlı alternate picking ile tekrarlanan pentatonik kalıplar",
+    "G majör/minör pentatonik ile blues kalıpları arasında geçişler",
+    "Hızlı triole run'lar",
+    "Geniş bendler ve sert vibrato",
+    "Kalıplar arasında hızlı pozisyon kaydırma",
+    "Yaklaşık 4–5 dakikalık dayanıklılık"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Slayt girişi / ballad bölümü",
+    "description": "Gary Rossington 1961 Gibson SG ile Coricidin şişesi kullanarak slayt çalıyor, akort E-A-D-G-G-E (B teli G'ye indirilmiş). Hafif crunch ya da temize yakın, solodan daha az gain'li ve daha yumuşak bir ton. Collins bu bölümde akustik gitar ve ritim çalıyor."
+   },
+   {
+    "name": "Ballad ritmi",
+    "description": "Rossington Les Paul ile clean ya da hafif crunch akorlar çalıyor. Solo tonundan daha az gain'li, sap ya da her iki manyetik birlikte olabilir (tahmin)."
+   },
+   {
+    "name": "Hızlı bölüm ritmi (G–Bb–C)",
+    "description": "Rossington Les Paul ile orta gain'de crunch ritim çalıyor. Gain solodaki kadar ya da biraz düşük, köprü manyetiği."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: uDiscover solonun 1964 Firebird I ile çalındığını söylüyor. Guitar World ve Equipboard ise Explorer diyor, ama Equipboard'a göre Collins Explorer'ı 1976 civarında kullanmaya başladı. Bu da 1973 kaydı için Firebird'ü daha olası kılıyor.",
+   "Solo kaydında hangi amfinin kullanıldığını söyleyen bir kaynak yok. Twin Reverb, Marshall ve Super Reverb seçenekleri topluluk derlemelerinden geliyor. Amfi ayarları tamamen tahmin.",
+   "Solonun dublaj mı yoksa ikinci bir lead mi olduğu Rossington'ın sözünden çıkarıldı, açıkça doğrulanmış değil.",
+   "BPM ve ton kaynaklara göre çok farklı: 118–155 BPM, G / C / D minör. Hızlı bölüm kulakla yaklaşık 148–152 BPM, akorlar G–Bb–C. Giriş çok daha yavaş.",
+   "Mikrofon ve kabin bilgisi belgelenmemiş."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "uDiscover – Gear Guide: Lynyrd Skynyrd's (Pronounced)",
+    "url": "https://www.udiscovermusic.com/stories/lynyrd-skynyrd-pronounced-gear-feature"
+   },
+   {
+    "title": "Guitar World – Allen Collins isolated Free Bird solo",
+    "url": "https://guitarworld.com/artists/hear-allen-collins-isolated-guitar-solo-lynyrd-skynyrds-free-bird"
+   },
+   {
+    "title": "Equipboard – Allen Collins",
+    "url": "https://equipboard.com/pros/allen-collins"
+   },
+   {
+    "title": "Guitar Player – Gary Rossington Free Bird slide",
+    "url": "https://www.guitarplayer.com/lessons/i-wanted-to-do-something-a-little-different-from-the-same-old-slide-guitar-sound-gary-rossington-reveals-the-unlikely-tricks-behind-free-bird"
+   },
+   {
+    "title": "Wikipedia – Free Bird",
+    "url": "https://en.wikipedia.org/wiki/Free_Bird"
+   },
+   {
+    "title": "Tape Op – Bob Langford interview",
+    "url": "https://tapeop.com/interviews/137/bob-langford"
+   },
+   {
+    "title": "Louder – Free Bird story behind the song",
+    "url": "https://www.loudersound.com/bands-artists/lynyrd-skynyrd-free-bird-story-behind-the-song"
+   },
+   {
+    "title": "Audiokeychain – Free Bird",
+    "url": "https://www.audiokeychain.com/track/YXs/lynyrd-skynyrd-free-bird"
+   },
+   {
+    "title": "Karaoke Version – Free Bird album version",
+    "url": "https://www.karaoke-version.com/custombackingtrack/lynyrd-skynyrd/free-bird-album-version.html"
+   }
+  ]
+ }
+}

@@ -1,0 +1,227 @@
+{
+ "rank": 73,
+ "part": "lead",
+ "researchedAt": 1795281191608,
+ "original": {
+  "song": {
+   "title": "Still Loving You",
+   "artist": "Scorpions",
+   "album_or_year": "Love at First Sting (1984)",
+   "tone_character": "Solo, sıcak ve sustain'i bol, orta frekansları öne çıkan, doygun ama fazla gain'e kaçmayan klasik 80'ler Marshall lead tonu. Üzerinde Dieter Dierks prodüksiyonuna özgü geniş reverb/hafif delay ambiyansı var; şarkı söyler gibi, vokal karakterli bir ton.",
+   "tone_tags": [
+    "doygun lead",
+    "orta frekans öne çıkık",
+    "uzun sustain",
+    "sıcak",
+    "reverb/ambiyanslı",
+    "80'ler Marshall",
+    "şarkı söyleyen ton"
+   ],
+   "bpm": "103–106 BPM",
+   "key": "G minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (Matthias Jabs'in 1976 Limited Edition Explorer'ı, beyaza boyanmış) — alternatif: '63 Fender Stratocaster",
+    "pickup": "Köprü humbucker (lead tonu için; manyetik modeli doğrulanmadı)",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Marshall 100W head (JMP/Super Lead 1959 ya da 1987 tipi, master volume'süz; olası JCM800)",
+     "channel": "Tek kanal, high-treble girişi (olası)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "tahmin; güç katı doygunluğu"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Scorpions'ın 80'ler başı stüdyo/sahne tonu Marshall merkezlidir; Schenker o dönem kayıtta hep Marshall kullandığını söyler, Jabs da stüdyoda Marshall kullandığını belirtir. Bu şarkıya özel amfi kaydı bulunamadı; bir tab sitesindeki 'JCM800' iddiası kaynaksız. Ayarlar tamamen tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 (1960/1982 tipi)",
+    "speakers": "Celestion G12 (G12M/G12-65/G12T-75 olası)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "koni kenarına yakın, eksen üzeri",
+      "distance": "2-3 cm"
+     },
+     {
+      "model": "Oda mikrofonu (tahmin)",
+      "position": "stüdyo odası",
+      "distance": "birkaç metre"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi için kaynak bulunamadı; dönemin Dierks Studios pratiğine dayalı tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Stüdyo reverb (plate/oda) — mikste",
+     "purpose": "Solo etrafında geniş ambiyans",
+     "settings": [
+      {
+       "name": "Decay",
+       "value": "2 s",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%20",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Stüdyo delay (tape/dijital) — mikste",
+     "purpose": "Hafif yankı, uzunluk",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "~430 ms",
+       "note": "tahmin; 104 BPM için yaklaşık 3/4 nota ya da 1/4 nota ≈ 577 ms"
+      },
+      {
+       "name": "Feedback",
+       "value": "%15",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mix",
+       "value": "%12",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E (kayıt Gm ile G#m arasında bir perdede duyulur)",
+   "recording_notes": "Prodüktör Dieter Dierks; kayıt 1983 sonu – 1984 başı, Dierks Studios (Stommeln/Pulheim, Almanya), kısmen Polar Studios, Stockholm. Grup temel parçaları aynı odada canlı kaydettiğini söyler. Orijinal kayıt Gm ile G#m arasında bir perdede duyulur; bu bant hızındaki küçük bir farkı düşündürür (Comeblack 2011 yeniden kaydı yarım ses pes, F#m). Müzik Rudolf Schenker'in, sözler Klaus Meine'nin. Songfacts'te Schenker, 'Matthias Jabs gitar partisiyle geldi ve his hemen doğru oldu' der."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "melodik, vokal gibi frazlama",
+    "geniş tam/bir buçuk ses bending'ler",
+    "kontrollü, geniş vibrato",
+    "uzun tutulan notalarda sustain kontrolü",
+    "yer yer hızlı pentatonik/minör koşular",
+    "güçlü bir 'his' ve dinamik gerektirir"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Temiz giriş arpejleri",
+    "description": "Gm arpejleri; temiz kanal ya da gain tamamen kısık, hafif chorus/reverb ile parlak temiz ton; distorsiyon yok. Solo tonundan: gain sıfıra yakın, sap ya da ara manyetik, reverb biraz daha fazla."
+   },
+   {
+    "name": "Kıtalar (verse)",
+    "description": "Temiz arpej/ince dolgular devam eder; dinamik düşük, gain yok."
+   },
+   {
+    "name": "Nakarat / ağır power chord bölümü",
+    "description": "Köprü humbucker, Marshall crunch/distorsiyonu ile ağır power chord'lar; solodan biraz daha az gain ve daha az delay, kalın double-track edilmiş ritim."
+   },
+   {
+    "name": "Solo öncesi lead melodi/riff",
+    "description": "Solo ile aynı doygun lead tonu; melodik ana tema."
+   },
+   {
+    "name": "Outro",
+    "description": "Distorsiyonlu ritim ve lead dolguları; solo tonuna benzer, final kısmında tekrar temiz arpejlere dönüş olabilir."
+   }
+  ],
+  "warnings": [
+   "Studio solosunu kimin çaldığı kesin değil: tab siteleri (Songsterr) Matthias Jabs'i gösterir; bazı YouTube kaynakları Rudolf Schenker'i gösterir; Wikipedia şarkı sayfası her iki gitaristi de 'lead ve ritim' olarak listeler; World Wide Live'da ikisi de lead olarak kayıtlı.",
+   "Bu şarkıya özel amfi, kabin, mikrofon veya efekt bilgisi veren birincil kaynak bulunamadı; amfi 'likely' (dönem rig'i), diğer her şey tahmin.",
+   "Gitar modeli belirsiz: Songsterr bir sekmede Gibson Explorer, başka yerde Flying V yazar; bir forum Jabs'in Blackout/Love at First Sting'de '63 Strat kullandığını iddia eder.",
+   "Tonalite/akort çelişkili: Hooktheory/Musicnotes G minör, klang.io G#m, karaoke-version F#m (orijinalde değil, Comeblack versiyonunda), bazı tab'lar yarım ses pes akort gösterir. Orijinal kayıt Gm ile G#m arasında; standart akortla çalınıp bant hızının farklı olduğu düşünülüyor.",
+   "BPM, otomatik analizlere göre 103–106 arasında değişiyor; Tunebat sayfası bulunamadı.",
+   "Bir tab sitesindeki 'Marshall JCM800' iddiası kaynaksız."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Still Loving You – Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Still_Loving_You"
+   },
+   {
+    "title": "Songfacts – Still Loving You",
+    "url": "https://www.songfacts.com/facts/scorpions/still-loving-you"
+   },
+   {
+    "title": "Songsterr – Still Loving You Solo Tab (Jabs, Explorer)",
+    "url": "https://www.songsterr.com/a/wsa/scorpions-still-loving-you-solo-tab-s86t2"
+   },
+   {
+    "title": "World Wide Live – Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/World_Wide_Live"
+   },
+   {
+    "title": "Guitar Player – Schenker & Jabs interview",
+    "url": "https://www.guitarplayer.com/players/weve-been-on-a-very-long-encore-rudolf-schenker-and-matthias-jabs-testify-to-the-power-of-electric-guitar"
+   },
+   {
+    "title": "MusicRadar – Matthias Jabs interview",
+    "url": "https://www.musicradar.com/news/scorpions-matthias-jabs-your-solos-dont-have-to-be-easy-to-play-but-they-have-to-be-easy-to-listen-to"
+   },
+   {
+    "title": "Equipboard – Matthias Jabs",
+    "url": "https://equipboard.com/matthias-jabs"
+   },
+   {
+    "title": "Seymour Duncan forum – What pickup does Matthias Jabs use",
+    "url": "https://forum.seymourduncan.com/threads/what-pickup-does-mattias-jabs-use.335308/latest"
+   },
+   {
+    "title": "MusicBrainz release",
+    "url": "https://musicbrainz.org/release/8b6f8328-3b7d-4a8f-858b-cd41766e4c66"
+   },
+   {
+    "title": "Hooktheory – Still Loving You",
+    "url": "https://hooktheory.com/theorytab/view/scorpions/still-loving-you"
+   },
+   {
+    "title": "klang.io – Still Loving You",
+    "url": "https://songs.klang.io/en/s/Scorpions/Still%20Loving%20You/7pOr3dBFAeY"
+   },
+   {
+    "title": "Karaoke-version – Still Loving You",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/scorpions/still-loving-you.html"
+   },
+   {
+    "title": "Tab (half-step down version)",
+    "url": "https://pg.zachmanson.com/tab/scorpions/still-loving-you-chords-702609"
+   },
+   {
+    "title": "Musicnotes – Still Loving You (G minor)",
+    "url": "https://www.musicnotes.com/sheetmusic/scorpions/still-loving-you/MN0064151"
+   }
+  ]
+ }
+}

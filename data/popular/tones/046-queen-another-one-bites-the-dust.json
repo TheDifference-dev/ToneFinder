@@ -1,0 +1,126 @@
+{
+ "rank": 46,
+ "part": "rhythm",
+ "researchedAt": 1795279973464,
+ "original": {
+  "song": {
+   "title": "Another One Bites the Dust",
+   "artist": "Queen",
+   "album_or_year": "The Game (1980)",
+   "tone_character": "Çok temiz, kuru, ince ve tiz ağırlıklı funk ritim gitarı. Kısa, sıkı kesilmiş akor vuruşları (chank), neredeyse hiç sustain ve oda yok. Bas ile davul loop'unun arasındaki boşluğu perküsif biçimde doldurur.",
+   "tone_tags": [
+    "temiz",
+    "kuru",
+    "parlak / tiz",
+    "ince alt frekans",
+    "perküsif",
+    "kompresli",
+    "az reverb"
+   ],
+   "bpm": "110 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (John Deacon)",
+    "pickup": "Bilinmiyor. Tona göre büyük ihtimalle tek bobinli köprü manyetiği ya da köprü+orta ara konumu (tahmin).",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Bilinmiyor; doğrudan konsola DI ya da küçük bir amfinin temiz kanalı",
+     "channel": "Temiz",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "2",
+       "note": "Tahmin: distorsiyonsuz, tamamen temiz"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin: parlak, keskin atak"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": "Tahmin: alt frekans basa bırakılmış"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Hiçbir kaynakta Deacon'ın ritim partisinde kullanılan amfi geçmiyor. Kuru ve ince karakter, DI ya da yakından mikrofonlanmış küçük bir amfiyi akla getiriyor (tahmin). Brian May'in AC30'ları sadece onun distorsiyonlu araya giren partileri için geçerli olabilir (likely)."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor",
+    "speakers": "Bilinmiyor",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Kayıtta oda sesi yok gibi; DI ise kabin hiç kullanılmamış olabilir. Doğrulanmadı."
+   },
+   "pedals": [
+    {
+     "model": "Kompresör (stüdyo, bilinmiyor)",
+     "purpose": "Kısa vuruşları eşitlemek ve perküsif atak vermek",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "1980'de Münih'teki Musicland Studios'ta, prodüktör Reinhold Mack ile Queen birlikte kaydetti (confirmed). Şarkı, Roger Taylor'ın battaniye ve bantla boğuklaştırılmış davulundan yapılan bir loop'un üzerine kuruldu (confirmed). Bas, piyano, ritim gitarı ve el çırpmaları John Deacon'a ait (confirmed). Brian May: 'it's his rhythm guitar playing – it's not mine', Deacon'ın Strat çaldığından 'pretty sure' olduğunu söylüyor (confirmed, ama May'in hafızasına dayanıyor). Brian May, Red Special ile 'grungy' distorsiyonlu araya giren parçalar ve Eventide Harmonizer ile ilk dizeden önceki dönen efekt seslerini ekledi (confirmed). Şarkıda synthesizer yok; ters çalınmış ve farklı hızlarda oynatılmış bant efektleri var (confirmed). Ritim gitarının double-track yapıldığına dair kaynak yok."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "kısa staccato akor vuruşları (chank) ve sol elle susturma",
+    "sıkı zamanlama ve loop'a oturmak",
+    "16'lık funk sağ el hareketi",
+    "bir perde aşağıdan kayarak akora girme (slide)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Brian May'in distorsiyonlu araya giren partileri",
+    "description": "Red Special ile çalınmış, 'grungy' ve kirli, distorsiyonlu kısa vuruşlar ve cevap riffleri (confirmed). Ritim tonuna göre değişiklik: gain çok daha yüksek, sap yerine köprü tarafı daha dolgun ve orta frekansı öne çıkan bir ton. Muhtemelen Vox AC30 ile treble booster kullanıldı (May'in o dönemki rig'i, likely)."
+   },
+   {
+    "name": "Efekt / geçiş sesleri",
+    "description": "Ana ritim gitarı partisi değil. Brian May'in gitarı Eventide Harmonizer'dan geçirilerek dönen, pitch-shift edilmiş efekt sesleri, ayrıca ters bant ve hız değiştirme yapıldı (confirmed). Ritim tonundan tamamen farklı, efekt ağırlıklı."
+   }
+  ],
+  "warnings": [
+   "Ritim gitarının amfisi, kabini, mikrofonu ve ayarları için hiçbir kaynak bulunamadı. Bunlar dinlemeye dayalı tahmin.",
+   "Deacon'ın Stratocaster çaldığı yalnızca Brian May'in 'pretty sure' ifadesine dayanıyor. Bazı forumlar Telecaster'dan da bahsediyor.",
+   "Tonalite kaynaklara göre değişiyor: E minör (Musicnotes, Klang) ile F / A#m (SongBPM, Mixmeister) arasında. Kayıt hafif tiz akortlu ya da bant hızı farklı olabilir. Çalınan akorlar Em ve Am.",
+   "BPM kaynaklarda 110 ile 112 arasında. Musicnotes'ta yaklaşık 120 yazıyor.",
+   "Bazı kaynaklar davul loop'unu Mack'e, bazıları Deacon'a atfediyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar – Brian May: it's his rhythm guitar playing, not mine",
+    "url": "https://www.musicradar.com/artists/this-track-is-very-much-john-deacon-world-i-dont-think-i-was-on-it-at-all-to-start-off-with-he-was-much-more-into-funk-than-we-were-so-its-his-rhythm-guitar-playing-not-mine-brian-may-on-the-no-1-hit-that-made-queen-the-biggest-band-in-the-world"
+   },
+   {
+    "title": "Wikipedia – Another One Bites the Dust",
+    "url": "https://en.wikipedia.org/wiki/Another_One_Bites_the_Dust"
+   },
+   {
+    "title": "brianmay.com – Behind Queen's Dance Floor-Detonating Hit",
+    "url": "https://brianmay.com/queen-news/2026/08/another-one-bites-the-dust-behind-queens-dance-floor-detonating-hit/"
+   },
+   {
+    "title": "SongBPM",
+    "url": "https://songbpm.com/@queen/another-one-bites-the-dust"
+   },
+   {
+    "title": "Klang.io",
+    "url": "https://songs.klang.io/en/s/Queen/Another%20One%20Bites%20The%20Dust%20-%20Remastered%202011/rY0WxgSXdEE"
+   },
+   {
+    "title": "Musicnotes sheet music",
+    "url": "https://www.musicnotes.com/sheetmusic/MN0064174"
+   }
+  ]
+ }
+}

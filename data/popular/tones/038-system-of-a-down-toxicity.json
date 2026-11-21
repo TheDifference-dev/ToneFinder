@@ -1,0 +1,238 @@
+{
+ "rank": 38,
+ "part": "rhythm",
+ "researchedAt": 1795279737473,
+ "original": {
+  "song": {
+   "title": "Toxicity",
+   "artist": "System of a Down",
+   "album_or_year": "Toxicity (2001)",
+   "tone_character": "Çok katmanlı, yüksek gainli ama aşırı sıkıştırılmamış Drop C ritim tonu: Mesa Rectifier'ın agresif, dişli üst-orta frekansı ile Marshall Plexi'nin kalın orta gövdesi üst üste bindirilmiş. Odası geniş, analog banda kaydedilmiş, Andy Wallace miksiyle sıkı ve vurucu.",
+   "tone_tags": [
+    "yüksek gain",
+    "Drop C",
+    "Mesa + Marshall katmanı",
+    "dolgun orta frekans",
+    "sıkı alt",
+    "dişli üst-orta",
+    "1176 kompresyonu",
+    "çok katmanlı overdub"
+   ],
+   "bpm": "117 BPM",
+   "key": "C minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG / Gibson Les Paul Standard (siyah) / Jackson Randy Rhoads V; dönemin Ibanez Iceman'leri de stüdyoda",
+    "pickup": "Köprü manyetiği, humbucker (stok Gibson humbucker tahmini; Jackson'da humbucker)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Triple Rectifier (bazı kaynaklarda Dual Rectifier)",
+     "channel": "Modern yüksek gain kanalı (Red/Modern)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "7.5",
+       "note": "tahmin; kaynaklarda kesin ayar yok"
+      },
+      {
+       "name": "Bass",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Mid",
+       "value": "4",
+       "note": "tahmin; Marshall katmanı orta frekansı dolduruyor"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "5.5",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Mix dergisine göre Mesa ve Marshall kafalar ile kabinler birlikte kullanıldı; mühendis Dave Schiffman: 'The Mesa gave us the teeth, and the Marshall gave us the body.' Triple Rectifier'ı Daron Ocak 2002 Guitar Player röportajında stüdyo ve sahne için anmış (Equipboard aktarımı). Ayarlar tahmindir."
+    },
+    {
+     "model": "Marshall 1959SLP Plexi Super Lead 100W (ya da JMP 100W)",
+     "channel": "Tek kanal, yüksek volume (muhtemelen jumper'lı ya da önde boost olmadan çok açık)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; 'gövde' rolü"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "8",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Marshall kullanımı Mix tarafından teyitli; model (1959SLP) Equipboard'da Sylvia Massy video/çizimine ve Mix'e dayandırılıyor. Guitar World alıntısı 1962 SG + Marshall JMP100 + tek 4x12'yi ana distorsiyon rigi olarak veriyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12 ve Mesa/Boogie 4x12 (her kafa kendi kabininde)",
+    "speakers": "Marshall'da muhtemelen Celestion G12T-75/Greenback, Mesa'da Celestion Vintage 30 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Her kabinde bir adet; konum belirtilmemiş (muhtemelen kon kenarına yakın, on-axis)",
+      "distance": "Yakın mikrofon (~1-2 in, tahmin)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Her kabinde bir adet, SM57 ile faz hizalı",
+      "distance": "Belirtilmemiş (yakın, tahmin)"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Mix: 'a 57 and an 87 on each cabinet', fazları doğru hizalanmış. Hoparlör tipleri kaynakta yok."
+   },
+   "pedals": [
+    {
+     "model": "Pedal yok – gitar doğrudan amfiye",
+     "purpose": "Daron efekt pedalı kullanmayı sevmiyor; sinyal doğrudan amfilere",
+     "settings": [],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Universal Audio/UREI 1176LN 'Blackface' (stüdyo, çift)",
+     "purpose": "Kayıt zincirinde gitar kompresyonu/limitleme",
+     "settings": [
+      {
+       "name": "Ratio",
+       "value": "4:1",
+       "note": "tahmin"
+      },
+      {
+       "name": "Attack",
+       "value": "Orta-yavaş",
+       "note": "tahmin"
+      },
+      {
+       "name": "Release",
+       "value": "Hızlı",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Drop C (C G C F A D)",
+   "recording_notes": "Kayıt: Cello Studios (eski Ocean Way, Hollywood), 2. oda, 2001 baharı. Prodüktör: Rick Rubin ve Daron Malakian; mühendis: Dave Schiffman. Ampex ATR-24 analog banda, overdub/punch Studer A800; Neve 8038 konsol, 1073 preamplar. Daron gitarları yoğun katmanladı ('çamurlu', 'rock' ve 'heavy metal' gitar üst üste); şarkıları defalarca tekrar çaldı. Miks: Andy Wallace, The Enterprise (Burbank), SSL G-Plus. Mastering: Oasis Mastering."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "3/4–6/8 hissinde sıkı ritim",
+    "palm muting ile Drop C chug'lar",
+    "tek parmak power chord geçişleri",
+    "tremolo/hızlı alternate picking pasajları",
+    "dinamik geçişler (sessiz köprü – ağır patlama)",
+    "davul ile senkron aksanlar"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş riffi",
+    "description": "Distorsiyonlu ama tiz tellerde çalınan tek nota/oktav riffi; ritimle aynı yüksek gain tonu, köprü manyetiği. Daha az alt frekans hissi için alt teller çalınmıyor; ek değişiklik gerekmez ya da gain hafif azaltılabilir."
+   },
+   {
+    "name": "Kıta",
+    "description": "Vokal altında daha seyrek, palm-mute ağırlıklı aynı distorsiyonlu ton; katman sayısı azalıyor. Gitar volümü hafif kısılarak dinamik verilebilir."
+   },
+   {
+    "name": "Nakarat / ağır bölüm",
+    "description": "İstenen ritim tonu: tam katmanlı Mesa+Marshall, açık power chord'lar, maksimum gövde."
+   },
+   {
+    "name": "Sakin köprü ('Somewhere between the sacred silence')",
+    "description": "Belirgin şekilde daha yumuşak: temiz ya da hafif kırılmış ton, arpej/tek nota; muhtemelen gain kısık ya da temiz kanal, sap manyetiği olabilir (tahmin). Mix'e göre sakin bölümlerde akustik katmanlar da kullanıldı."
+   },
+   {
+    "name": "Final / 'When I became the sun' patlaması",
+    "description": "Yeniden tam gain ritim tonu, ağır chug ve uzun çalan akorlar; ek efekt yok."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıda hangi gitarın kullanıldığı kaynaklarda belirtilmiyor; SG, siyah Les Paul, Jackson RR V ve Iceman'ler o oturumlarda vardı.",
+   "Mesa modeli tartışmalı: Equipboard/Guitar Player Triple Rectifier diyor, forumlar Dual Rectifier diyor. Marshall modeli de tartışmalı: 1959SLP Plexi mi, JMP100 mü belli değil.",
+   "Amfi ve kompresör ayarlarının hepsi tahmin; hiçbir kaynakta knob değeri yok. GuitarChalk'taki ayarlar ve HM-2 önerileri kendi içinde çelişkili ve orijinal kayda dayanmıyor.",
+   "Tempo ve tonalite belirsiz: Tunebat/SongBPM 117 BPM ve Ab majör veriyor (otomatik analiz), Hooktheory/Klang C minör ve ~81 BPM veriyor. Şarkı 3/4–6/8 hissinde olduğu için BPM yarım ya da iki kat okunabilir. Drop C riffleri C merkezli olduğundan C minör tercih edildi.",
+   "Mikrofon konumu ve mesafesi kaynakta yok; yalnızca SM57 ve 87'nin her kabinde faz hizalı kullanıldığı biliniyor.",
+   "Bölüm tonlarındaki farklar (özellikle sakin köprü) kayıttan çıkarım; kaynakla teyit edilmedi."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Mix Online – System of a Down (Toxicity kayıt makalesi)",
+    "url": "https://www.mixonline.com/recording/system-down-372602"
+   },
+   {
+    "title": "Equipboard – System of a Down: Toxicity",
+    "url": "https://equipboard.com/albums/system-of-a-down-toxicity"
+   },
+   {
+    "title": "Equipboard – Daron Malakian's Gear",
+    "url": "https://equipboard.com/pros/daron-malakian"
+   },
+   {
+    "title": "Thomann Blog – System Of A Down Guitars, Amps & the SOAD Sound",
+    "url": "https://www.thomannmusic.com/blog/gear/system-of-a-down-guitars-amps-the-soad-sound/"
+   },
+   {
+    "title": "GuitarChalk – Toxicity Amp Settings",
+    "url": "https://www.guitarchalk.com/toxicity-system-of-a-down-amp-settings/"
+   },
+   {
+    "title": "Seymour Duncan Forum – Daron Malakian's amp choices",
+    "url": "https://forum.seymourduncan.com/threads/daron-malakians-amp-choices-wtf.29030"
+   },
+   {
+    "title": "Variety – Toxicity Turns 20",
+    "url": "https://variety.com/2021/music/news/system-of-a-down-toxicity-album-oral-history-1235054344"
+   },
+   {
+    "title": "Tunebat – Toxicity",
+    "url": "https://tunebat.com/Info/Toxicity-System-Of-A-Down/0snQkGI5qnAmohLE7jTsTn"
+   },
+   {
+    "title": "SongBPM – Toxicity",
+    "url": "https://songbpm.com/@system-of-a-down/toxicity"
+   },
+   {
+    "title": "Hooktheory – Toxicity",
+    "url": "https://hooktheory.com/theorytab/view/system-of-a-down/toxicity"
+   },
+   {
+    "title": "Klang – Toxicity",
+    "url": "https://songs.klang.io/en/s/System%20Of%20A%20Down/Toxicity/iywaBOMvYLI"
+   }
+  ]
+ }
+}

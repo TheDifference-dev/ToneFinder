@@ -1,0 +1,160 @@
+{
+ "rank": 47,
+ "part": "full",
+ "researchedAt": 1795279980546,
+ "original": {
+  "song": {
+   "title": "Feel Good Inc.",
+   "artist": "Gorillaz (feat. De La Soul)",
+   "album_or_year": "Demon Days (2005)",
+   "tone_character": "Gainsiz, temiz ve ince, 'weedy' bir elektro gitar. Teller tek tek çekiliyor (pluck), kompresli; bas riffiyle birlikte ve ondan bir oktav yukarıda duyuluyor. Danger Mouse'un lo-fi hip-hop prodüksiyonu içinde dar bantlı, kuru ve öne yakın oturuyor. Nakaratta yumuşak, sürekli tıngırdatılan bir akustik gitar var.",
+   "tone_tags": [
+    "temiz",
+    "ince/dar bantlı",
+    "kompresli",
+    "kuru",
+    "parlak üst-orta",
+    "lo-fi",
+    "az alt frekans"
+   ],
+   "bpm": "138–139 BPM",
+   "key": "Eb minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Bilinmiyor; kayıtta 'additional guitar' olarak Simon Tong kredilidir",
+    "pickup": "Bilinmiyor; ince ve parlak karakter tek bobinli bir manyetiği (köprü ya da orta) düşündürüyor",
+    "certainty": "guess"
+   },
+   "amps": [
+    {
+     "model": "Bilinmiyor; temiz bir amfi ya da doğrudan hat (DI/amfi simülasyonu) olabilir",
+     "channel": "Clean",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "2",
+       "note": "Tahmin: kırılma yok, tamamen temiz"
+      },
+      {
+       "name": "Bass",
+       "value": "3.5",
+       "note": "Tahmin: alt frekansı bas taşıyor, gitarın altı kısık"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "Tahmin: ince, öne çıkan orta"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess",
+     "notes": "Hiçbir kaynakta amfi bilgisi yok. Ses tamamen temiz; miksajda yoğun kompresyon ve alçak frekans kesme (high-pass) uygulanmış gibi duyuluyor."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor",
+    "speakers": "Bilinmiyor",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon bilgisi bulunamadı. Kuru, odasız karakter yakın mikrofonlamayı ya da DI kaydı düşündürüyor (tahmin)."
+   },
+   "pedals": [
+    {
+     "model": "Kompresör (model bilinmiyor; stüdyo kompresörü de olabilir)",
+     "purpose": "Atakları düzleştirip pluck karakterini belirginleştirmek",
+     "settings": [
+      {
+       "name": "Sustain",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "5",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Harmonizer/pitch shifter (model bilinmiyor)",
+     "purpose": "Nakaratta gitar ya da klavye partisine parıltılı bir katman eklemek",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E (verse'teki ikinci gitar alternatif akortta olabilir)",
+   "recording_notes": "Kayıt yerleri: Kong Studios (Essex) ve 13 (Londra). Miksaj Pierce Rooms'ta (Londra), mastering Masterdisk'te (Howie Weinberg). Prodüksiyon Gorillaz ve Danger Mouse; ek prodüksiyon, miksaj ve mühendislik Jason Cox, ek prodüksiyon ve programlama James Dring. Ek gitar Simon Tong. MusicRadar'a göre baştaki 'gitar+bas oktav' riffi aslında bas üzerinde oktav pitch-shift efekti olabilir. Verse'te iki gitar var: biri basın üstünde 6'lılar çekiyor (Gb yerine G kullanılarak), diğeri alternatif akortta. Nakaratta akustik gitar var. Davullarda yoğun gate ve düşük örnekleme hızı duyuluyor (SP-1200 olabilir). Genel olarak lo-fi bir hip-hop miksajı."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "tek tek tel çekme (pluck) ve 6'lı aralıklar",
+    "basla tam senkron, temiz zamanlama",
+    "verse'te hafif bükülmüş (bent) G teli",
+    "nakaratta sürekli akustik tıngırdatma"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Verse / ana riff",
+    "description": "Temel ton budur: temiz, ince ve kompresli. Bas riffiyle birlikte 6'lılar çekiliyor, ikinci bir gitar alternatif akortta çalıyor."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Ağırlık akustik gitara geçiyor: sakin, sürekli tıngırdatma. Bir harmonizer gitar ya da klavye partisine parıltılı bir katman ekliyor. Elektroyla taklit edilecekse temizi daha yumuşak tutun, chorus veya hafif pitch-shift ekleyin."
+   },
+   {
+    "name": "Rap bölümü / outro (De La Soul)",
+    "description": "Gitar büyük ölçüde geri çekiliyor. Bas ve davul ön planda, ton ana riffle aynı kalıyor."
+   }
+  ],
+  "warnings": [
+   "Bu şarkının gitar ekipmanına (gitar, amfi, kabin, mikrofon) dair hiçbir doğrulanmış kaynak bulunamadı. Ekipman alanlarının neredeyse tamamı tahmindir.",
+   "Kong Studios, Gorillaz'ın kurgusal stüdyosu olarak da kullanılıyor. Gerçek kayıt yeri kredilerde '13 (London)' olarak geçiyor.",
+   "Ana riffteki yüksek partinin gitar mı, yoksa basa uygulanmış oktav efekti mi olduğu tartışmalı. MusicRadar oktav efektini daha olası görüyor; TalkBass'ta bas ile unison çalan ince bir gitar olduğu da söyleniyor.",
+   "Tonalite kaynaklara göre değişiyor: Eb/D# minör (MusicRadar, AcousticBrainz), A# minör, Gb majör ve E minör. Eb minör en güvenilir analiz.",
+   "Klipteki ve canlı performanslardaki gitarlar (ör. Equipboard'daki Noodle Les Paul'ü; Total Guitar'ın sözünü ettiği Travis Bean ve Fender Mustang) stüdyo kaydını yansıtmıyor."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Feel Good Inc. – Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/Feel_Good_Inc."
+   },
+   {
+    "title": "MusicRadar – How Gorillaz deployed sublime music theory (Feel Good Inc.)",
+    "url": "https://www.musicradar.com/artists/it-was-like-panning-for-gold-amongst-the-brown-murky-waters-i-saw-this-track-all-shiny-and-glimmery-shining-like-a-big-rock-of-gold-it-said-play-me-play-me-how-gorillaz-deployed-some-sublime-music-theory-to-build-their-most-beloved-tune"
+   },
+   {
+    "title": "MusicRadar – The inside story of Feel Good Inc.",
+    "url": "https://www.musicradar.com/artists/its-an-arcane-18th-century-german-form-of-rap-i-really-enjoy-it-because-its-an-opportunity-to-say-some-quite-bizarre-things-that-i-wouldnt-necessarily-be-able-to-sing-about-the-inside-story-of-the-gorillaz-classic-feel-good-inc"
+   },
+   {
+    "title": "TalkBass – feel good inc.",
+    "url": "https://www.talkbass.com/threads/feel-good-inc.598839/"
+   },
+   {
+    "title": "Equipboard – Noodle",
+    "url": "https://equipboard.com/pros/noodle"
+   },
+   {
+    "title": "Audiokeychain – Gorillaz Feel Good Inc",
+    "url": "https://www.audiokeychain.com/track/YQP/gorillaz-feel-good-inc"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/416b0e1a-3bb5-4bf4-b01b-0183995e48ed"
+   },
+   {
+    "title": "Total Guitar – Get the tone (PressReader)",
+    "url": "https://www.pressreader.com/australia/total-guitar/20220701/281762747934745"
+   }
+  ]
+ }
+}

@@ -1,0 +1,223 @@
+{
+ "rank": 56,
+ "part": "rhythm",
+ "researchedAt": 1795280346159,
+ "original": {
+  "song": {
+   "title": "Cowboys From Hell",
+   "artist": "Pantera",
+   "album_or_year": "Cowboys From Hell (1990)",
+   "tone_character": "Transistörlü (solid-state) Randall amfinin önüne konan grafik EQ ile itilmiş, çok kazançlı, kuru ve sıkı bir ritim tonu. Orta frekanslar oyuk ama 'cızırtılı' üst-orta ve sert pick atağı öne çıkıyor; alt sıkı ve gate ile kesilmiş, geniş ses yok.",
+   "tone_tags": [
+    "distorted",
+    "solid-state cızırtısı",
+    "oyuk orta",
+    "sıkı alt",
+    "parlak üst",
+    "noise gate'li, kesik susmalar",
+    "kuru, az oda"
+   ],
+   "bpm": "115 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1981 Dean ML (mavi, Kiss çıkartmalı; albüm kapağındaki gitar)",
+    "pickup": "Köprü manyetiği – Bill Lawrence L-500 (genelde L-500XL olarak anılır), yüksek çıkışlı",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Randall RG100ES (\"halı kaplı\" eski RG-100 kafa)",
+     "channel": "Lead (distortion) kanalı",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "8.5",
+       "note": "Topluluk tahmini (GuitarChalk/KillerRig), onaylı değil"
+      },
+      {
+       "name": "Bass",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "3.5",
+       "note": "tahmin; oyuk orta"
+      },
+      {
+       "name": "Treble",
+       "value": "7.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin (KillerRig)"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Dime 1995 röportajında Cowboys From Hell'i 'eski, halı kaplı Randall RG-100 kafa' ile kaydettiğini söylüyor (Equipboard/Groundguitar). Groundguitar alıntıyı Trendkill bağlamına koyuyor, bu yüzden kesin model (RG100ES ya da RG100HT) tartışmalı. IK Multimedia, Grady Champion ile birlikte CFH rigini modellerken RG100ES'i esas almış. Düğme ayarlarının hiçbiri birincil kaynakta geçmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Randall 412JB (4x12)",
+    "speakers": "Celestion (muhtemelen G12T-75 / Vintage 30 karışımı; belgelenmemiş)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Kapak-kenar arası, eksen üzerinde (tahmin)",
+      "distance": "1–2 in (tahmin)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "IK CFH Collection'daki kabin modeli Randall 412JB'ye dayanıyor. Hoparlör tipi ve mikrofon düzeni için bir kaynak bulunamadı; mikrofon bilgisi dönemin standart pratiğine dayanan bir tahmin."
+   },
+   "pedals": [
+    {
+     "model": "MXR 6 Band Graphic EQ",
+     "purpose": "Amfinin önünde ton şekillendirme ve boost; giriş katını itiyor",
+     "settings": [
+      {
+       "name": "100 Hz",
+       "value": "+",
+       "note": "Bir rehber 100 Hz ve 200 Hz'i yukarıda gösteriyor; onaylı değil"
+      },
+      {
+       "name": "800 Hz",
+       "value": "-",
+       "note": "tahmin; oyuk ortayı amfiyle birlikte oluşturur"
+      }
+     ],
+     "certainty": "confirmed"
+    },
+    {
+     "model": "Furman PQ-3 Parametric EQ",
+     "purpose": "Ek parametrik EQ/boost; Dime tonunun karakteristik parçası",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "MXR Flanger/Doubler",
+     "purpose": "Çoğunlukla 'doubler' modunda tonu kalınlaştırmak",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Doubler",
+       "note": "IK açıklamasına göre"
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Rocktron Hush IIB",
+     "purpose": "Noise gate; yüksek kazançta kesik, sessiz duruşlar",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Dunlop Cry Baby GCB95",
+     "purpose": "Wah (ritimde kullanılmıyor; solo/vurgularda)",
+     "settings": [],
+     "certainty": "likely"
+    }
+   ],
+   "tuning": "Standart E, yaklaşık çeyrek ses pes (≈ Eb+40 cent)",
+   "recording_notes": "Kayıt Pantego Sound'da (Pantego, Teksas) yapıldı; prodüktörler Terry Date ve Pantera (Vinnie Paul) (likely, genel bilgi). Terry Date, Dime'ın alışılmadık ton yaklaşımını anlatıyor; bir solo için evden 'paslı pedallarla dolu bir torba' getirdiğini söylüyor. Sololar dört kanala kaydedilip üç iyi take'ten derlenmiş (confirmed, GW). Tek gitarist olduğu için ritmin sol-sağ olarak çift kaydedildiği (double-tracking) düşünülüyor (likely). Akort düşüklüğü, grubun referans perdesine uymak için yapılmış, yaklaşık çeyrek ses (Dime'ın kendi ifadesi, confirmed)."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Sıkı, hızlı alternate picking",
+    "Açık E üzerinde palm mute'lu chug'lar",
+    "Kromatik, bluesy pull-off ve hammer-on lick'leri",
+    "Sağ el ile gate'in uyumunu gerektiren kesik susmalar (staccato)",
+    "Groove ve swing hissi, Vinnie Paul'un davuluyla kilitlenme",
+    "Yer yer pinch harmonic'ler"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş riffi",
+    "description": "Ritimle aynı ton: kromatik, bluesy tek nota lick ve açık E vuruşları. Değişiklik gerekmiyor; bazı kısımlar tek gitarla çalınıyor olabilir."
+   },
+   {
+    "name": "Ana riff / Kıta",
+    "description": "Esas ritim tonu: köprü manyetiği, Lead kanalı, EQ boost açık, gate açık."
+   },
+   {
+    "name": "Yarı tempolu ara bölüm (breakdown)",
+    "description": "Aynı ton. Daha ağır palm mute ve uzun tutulan akorlar çalınıyor, gate'in kesişi daha belirgin."
+   },
+   {
+    "name": "Solo",
+    "description": "Aynı amfi zinciri üzerine muhtemelen daha fazla boost/EQ, Floyd Rose ile dive-bomb'lar, armonik squeal'lar ve wah vurguları geliyor. Dört kanaldan derlenmiş bir kayıt. Daha belirgin orta ve hafif delay olabilir (tahmin)."
+   }
+  ],
+  "warnings": [
+   "Amfi modeli tartışmalı: Dime 'halı kaplı RG-100' diyor, IK ise RG100ES'i modellemiş. Ayrıca alıntı bazı kaynaklarda Trendkill bağlamında veriliyor.",
+   "Amfi ve EQ düğme ayarlarının hepsi topluluk tahminleri (GuitarChalk, KillerRig); birincil kaynak yok.",
+   "Kabin mikrofonu, mikrofon pozisyonu ve hoparlör modelleri için kaynak bulunamadı; bunlar tahmin.",
+   "Akort çeyrek ses pes olarak belirtiliyor, ancak kesin cent değeri (D#+40 cent) forum ve teknisyen aktarımlarına dayanıyor.",
+   "BPM kaynaklara göre 111–115 arasında değişiyor; tonalite de E minör, E majör ve A olarak farklı veriliyor. Riff E bluesy/minör karakterde.",
+   "Pickup modeli L-500 / L-500L / L-500XL olarak farklı adlandırılıyor.",
+   "Line 6 şablonu turne rigini anlatıyor, stüdyo zincirini değil."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – Terry Date on Dimebag's unconventional approach to tone",
+    "url": "https://guitarworld.com/music-industry/producers-engineers/terry-date-on-dimebag-darrell-unconventional-approach-to-tone"
+   },
+   {
+    "title": "Groundguitar – Dimebag Darrell's Randall RG100ES",
+    "url": "https://www.groundguitar.com/dimebag-darrell-gear/dimebag-darrells-randall-rg100es/"
+   },
+   {
+    "title": "Guitar World – Dimebag Darrell's guitar gear",
+    "url": "https://guitarworld.com/features/dimebag-darrells-guitar-gear-everything-you-need-to-nail-the-game-changing-pantera-guitarists-sound"
+   },
+   {
+    "title": "MusicRadar – IK Multimedia captures Dimebag's CFH tone",
+    "url": "https://www.musicradar.com/news/ik-multimedia-captures-dimebag-darrells-iconic-cowboys-from-hell-tone-for-new-amplitube-collection"
+   },
+   {
+    "title": "Equipboard – Cowboys From Hell album",
+    "url": "https://equipboard.com/albums/pantera-cowboys-from-hell"
+   },
+   {
+    "title": "Line 6 – Cowboys From Hell Tour Rig",
+    "url": "https://line6.com/tone-templates-diagrams/dimebag-darrell--cowboys-from-hell-tour-rig.html"
+   },
+   {
+    "title": "GuitarChalk – Cowboys from Hell amp settings",
+    "url": "https://www.guitarchalk.com/cowboys-from-hell-amp-settings/"
+   },
+   {
+    "title": "KillerRig – Dimebag amp settings",
+    "url": "https://killerrig.com/sound-like-pantera-dimebag-darrell-amp-settings/"
+   },
+   {
+    "title": "Sweetwater – How to play 3 famous Pantera riffs",
+    "url": "https://www.sweetwater.com/insync/how-to-play-3-famous-pantera-riffs-the-dimebag-way/"
+   },
+   {
+    "title": "Guitar World – 10 Commandments of Dimebag style Part 2",
+    "url": "https://guitarworld.com/lessons/guitar-strength-10-commandments-playing-guitar-style-dimebag-darrell-part-2"
+   },
+   {
+    "title": "Rig-Talk – Was Dimebag tuned to 430 or 425Hz?",
+    "url": "https://www.rig-talk.com/forum/threads/was-dimebag-tuned-to-430-or-425hz.330642/"
+   },
+   {
+    "title": "Karaoke Version – Cowboys from Hell (tempo)",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/pantera/cowboys-from-hell.html"
+   },
+   {
+    "title": "Wikipedia – Cowboys from Hell (song)",
+    "url": "https://www.wikipedia.com/wiki/Cowboys_From_Hell_(song)"
+   }
+  ]
+ }
+}

@@ -1,0 +1,208 @@
+{
+ "rank": 52,
+ "part": "full",
+ "researchedAt": 1795280238628,
+ "original": {
+  "song": {
+   "title": "Orion",
+   "artist": "Metallica",
+   "album_or_year": "Master of Puppets (1986)",
+   "tone_character": "Mesa/Boogie Mark IIC+ ön amfisinin Marshall güç katı ve 4x12 kabinlerle birleştiği, pedalsız, yüksek gainli ama sıkı ve kuru bir 80'ler thrash ritim tonu. Ritimler 4 ila 8 kat üst üste kaydedildiği için geniş, duvar gibi bir stereo görüntü veriyor.",
+   "tone_tags": [
+    "yüksek gain",
+    "sıkı alt",
+    "hafif oyuk orta",
+    "parlak tiz",
+    "kuru",
+    "çok katlı double-tracking",
+    "geniş stereo"
+   ],
+   "bpm": "128 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Explorer (beyaz, 80'lerin başı), Hetfield ritimleri için. Hammett: Gibson Flying V / Jackson Randy Rhoads V / Fernandes Strat kopyası",
+    "pickup": "Köprü manyetiği; stok pasif seramik Gibson humbucker (EMG 81'e geçiş 1987'de)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark IIC+ (ön amfi olarak; bazı kaynaklara göre IIC++ modlu)",
+     "channel": "Lead (drive) kanalı",
+     "settings": [
+      {
+       "name": "Volume 1",
+       "value": "7.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin; Rasmussen'e göre Boogie'de tiz düğmesi beklenenin tersine davranıyordu"
+      },
+      {
+       "name": "Bass",
+       "value": "2.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Lead Drive",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Lead Master",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Graphic EQ",
+       "value": "V şekli",
+       "note": "tahmin; 750 Hz aşağıda, uçlar yukarıda"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "IIC+'ın ön amfi olarak 100 W Marshall güç katını sürdüğü Guitar World ve Gearnews'te geçiyor. Hammett'e göre albümün çoğu Boogie ve Marshall kafalar birlikte kullanılarak kaydedildi. Bir amfiye Aphex stüdyo EQ'su insert edildi. Düğme değerleri doğrulanmadı."
+    },
+    {
+     "model": "Marshall JMP/JCM800 2203 (100 W)",
+     "channel": "Güç katı / paralel kafa",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Güç amfisi olarak ya da Boogie ile karışık kullanıldı. Ride the Lightning'deki modifiyeli Marshall çalınmıştı; yerine stok 2203 alındığı söyleniyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12",
+    "speakers": "Celestion G12-65 veya G12-75 (tahmin/tartışmalı)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Alt hoparlörlerden birinde koni (cap) bölgesinde",
+      "distance": "Izgaraya yakın"
+     },
+     {
+      "model": "B&K (DPA) 4006 omni",
+      "position": "Başka bir hoparlörün konisinde",
+      "distance": "Yakın"
+     },
+     {
+      "model": "AKG (Gold-Tube veya 412, kaynaklar çelişiyor)",
+      "position": "Kabin kenarından yaklaşık 45° açıyla, oda mikrofonu",
+      "distance": "Yaklaşık 4 ft (başka kaynakta 10-15 ft)"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Gitar başına 6 mikrofon ve iki kabin, aynı mikrofonlamayla tam stereo kurulum. Ayrıntılar Rasmussen notlarının forum aktarımlarından geliyor. Kabinlerin stüdyoya mı ait olduğu tartışmalı."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby",
+     "purpose": "Hammett sololarında wah",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Ibanez Tube Screamer (model belirsiz)",
+     "purpose": "Hammett lead tonunda boost",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Aphex EQ (rack/stüdyo)",
+     "purpose": "Amfi tonunun ince ayarı",
+     "settings": [],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sweet Silence Studios (Kopenhag), Eylül-Aralık 1985. Prodüktör/mühendis Flemming Rasmussen; miks Michael Wagener. Kayıt 1976 Trident A-Range konsol ve UREI 1176 üzerinden iki senkron 24 kanallı teybe yapıldı. Ritimler hiçbir yerde 4 gitardan az değil, bazen 8. Wagener gitarda neredeyse hiç kompresör kullanmadı; AMS/Lexicon delay ve UREI 530/Orban EQ kullandı. Hetfield ritimlerde pedal kullanmadı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Hızlı downpicking palm mute riffleri (~128 BPM)",
+    "Tempo ve bölüm değişimleri",
+    "Çok sesli armoni lead hatları",
+    "Wah, geniş bend ve vibrato içeren sololar",
+    "Yavaş orta bölümde dinamik kontrol"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (fade-in)",
+    "description": "Ağırlıkla Cliff Burton'ın efektli, orkestra gibi işlenmiş bası. Gitarlar sonradan ana distorsiyonlu tonla girer."
+   },
+   {
+    "name": "Ana riffler",
+    "description": "Temel ton budur: IIC+ lead kanalı, köprü manyetiği, sıkı palm mute, 4 kat double-track."
+   },
+   {
+    "name": "Yavaş orta bölüm",
+    "description": "Burton'ın melodik bası üzerine çok sesli gitar armonileri. Ses aynı distorsiyonlu ton ama daha yumuşak çalınmış olabilir; gain bir miktar düşük olabilir (tahmin). Hetfield'ın solosu bu bölgede."
+   },
+   {
+    "name": "Hammett sololar",
+    "description": "Aynı Boogie/Marshall zinciri; önüne Tube Screamer boost ve Cry Baby wah eklenir. Daha fazla orta ve sustain var. Miksajda delay ihtimali bulunuyor."
+   },
+   {
+    "name": "Final",
+    "description": "Tempo hızlanır ve şarkı fade-out ile biter; ana distorsiyonlu ritim tonu."
+   }
+  ],
+  "warnings": [
+   "Amp düğme değerleri tahmin; Rasmussen'in el yazısı notları doğrudan okunamadı.",
+   "Ses mühendisi Rasmussen'e göre Hetfield Flying V'yi doğrudan IIC+'a taktı, başka kaynaklar beyaz Explorer diyor.",
+   "IIC+ ile IIC++ adlandırması ve Marshall'ın rolü (güç katı mı, paralel kafa mı) tartışmalı.",
+   "Hoparlör tipi (G12-65/G12-75) ve oda mikrofonu modeli/mesafesi kaynaklar arasında çelişiyor.",
+   "Solo dağılımı belirsiz: Hetfield 1, Hammett 3 solo, Burton 2 bas solosu.",
+   "Tempo kaynaklara göre değişiyor (128 Musicnotes, 85 başka site); yavaş bölüm çok daha yavaş. Tunebat sayfası bulunamadı.",
+   "Orion'a özgü gitar ekipmanı belgesi yok; bilgiler albüm genelinden."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World - Master of Puppets",
+    "url": "https://www.guitarworld.com/features/metallica-master-of-puppets"
+   },
+   {
+    "title": "Guitar World Prime Cuts",
+    "url": "https://www.guitarworld.com/magazine/prime-cuts-metallicas-james-hetfield-and-kirk-hammett-critique-key-songs-band-s-harsh-noble-history"
+   },
+   {
+    "title": "Mix Classic Track",
+    "url": "https://www.mixonline.com/recording/classic-tracks/classic-track-master-of-puppets-metallica"
+   },
+   {
+    "title": "Gearnews",
+    "url": "https://www.gearnews.com/the-master-of-puppets-guitar-tone-guitar/"
+   },
+   {
+    "title": "MusicRadar Rasmussen notes",
+    "url": "https://musicradar.com/news/guitarist-uses-master-of-puppets-producer-flemming-rasmussens-studio-notes-and-neural-dsp-mesa-mkiic-plugin-to-try-and-nail-metallicas-tone"
+   },
+   {
+    "title": "Mixdown",
+    "url": "https://mixdownmag.com.au/features/how-to-get-the-metallica-master-of-puppets-tone/"
+   },
+   {
+    "title": "Wikipedia Orion",
+    "url": "https://en.wikipedia.org/wiki/Orion_(Metallica_song)"
+   },
+   {
+    "title": "Musicnotes Orion",
+    "url": "https://api.musicnotes.com/sheetmusic/metallica/orion/MN0076360"
+   },
+   {
+    "title": "Ultimate Metal forum",
+    "url": "https://ultimatemetal.com/threads/master-of-puppets-flemming-settings.229139"
+   }
+  ]
+ }
+}

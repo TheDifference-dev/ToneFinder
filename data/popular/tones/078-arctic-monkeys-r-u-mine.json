@@ -1,0 +1,148 @@
+{
+ "rank": 78,
+ "part": "rhythm",
+ "researchedAt": 1795281279559,
+ "original": {
+  "song": {
+   "title": "R U Mine?",
+   "artist": "Arctic Monkeys",
+   "album_or_year": "Single, Şubat 2012 (sonra AM albümüne girdi, 2013)",
+   "tone_character": "Kalın, kirli, fuzz'a yakın bir distorsiyon. Orta frekanslar öne çıkmış, alt taraf dolgun. Josh Homme / stoner-rock esintili, kuru ve yüze vuran bir ritim tonu. Gretsch Duo Jet'in tiz ve 'twang' karakteri, ağır saturasyonun altında bile sert ve ısırgan bir atak bırakıyor.",
+   "tone_tags": [
+    "distorsiyonlu",
+    "fuzz karakterli",
+    "orta frekans öne çıkık",
+    "dolgun alt",
+    "kuru",
+    "ısırgan atak",
+    "vintage"
+   ],
+   "bpm": "97 BPM",
+   "key": "F# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1962 Gretsch G6128T Duo Jet (Alex Turner)",
+    "pickup": "Köprü manyetiği (DynaSonic/Filter'Tron tipi tek bobin karakteri; hangi manyetiğin kullanıldığı kaynaklarda geçmiyor, köprü olduğu tahmin)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Selmer Zodiac Twin 30",
+     "channel": "Tek kanal (sürülmüş, distorsiyon büyük olasılıkla pedallardan)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Equipboard ve diğer rehberlere göre Turner'ın AM döneminde ana amfisi. Bu şarkıya özel teyit yok. İkinci amfi olarak Magnatone Custom 410 da anılıyor."
+    }
+   ],
+   "cab": {
+    "model": "Combo amfinin kendi kabini (Selmer Zodiac Twin 30, 2x12)",
+    "speakers": "Bilinmiyor (orijinal Selmer combo'larda genellikle Goodmans/Celestion tipi 12\" hoparlör var)",
+    "mics": [],
+    "certainty": "guess",
+    "notes": "Mikrofon bilgisi yayımlanmamış. Ross Orton'un Sheffield stüdyosunda kaydedildi, miksi Tchad Blake yaptı."
+   },
+   "pedals": [
+    {
+     "model": "Cornell The First Fuzz (Fuzz Face türevi)",
+     "purpose": "Ana fuzz/saturasyon",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Coopersonic Valveslapper",
+     "purpose": "Overdrive / ek gain",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "Boss DM-1 Delay Machine",
+     "purpose": "Ritimde belirgin değil; muhtemelen kapalı ya da çok az",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Ocak 2012'de Sheffield'da, Ross Orton'un stüdyosunda kaydedildi. Prodüktör ve mühendis Ross Orton, miks Tchad Blake, mastering Brian Lucey. Ana riff'i basçı Nick O'Malley, B-side 'Evil Twin' kaydı sırasında buldu. Gitarlarda Alex Turner ve Jamie Cook var; Cook'un bu dönemde Gibson SG / Les Paul Custom ve Hiwatt / Simms-Watts amfi kullandığı aktarılıyor. Riff büyük olasılıkla iki gitar ve bas tarafından unison (aynı notalarla) çalınıyor. Tchad Blake miksinde yoğun paralel saturasyon ve harmonik zenginleştirme kullandı (Mix With The Masters workshop'ları); kirli tonun bir kısmı miksten geliyor."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Kalın teller üzerinde tek notalık senkoplu riff",
+    "Ani durup kalkmalar (stop-start) ve sıkı ritim senkronu",
+    "Kayan (slide) notalar ve hafif bend'ler",
+    "Palm mute ile akorlu vuruşları dengelemek",
+    "Sondaki solo/freak-out'ta geniş bend'ler ve gürültülü doğaçlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritimle aynı fuzz tonu. Kalın tellerde unison riff, bas ve iki gitar birlikte. Ayarda değişiklik yok."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Akorlu (F#m–D–Bm civarı) daha açık vuruşlar, aynı distorsiyon. Daha açık bir ses için palm mute azaltılıyor."
+   },
+   {
+    "name": "Köprü ('And I go crazy...')",
+    "description": "Daha seyrek, alçak dinamik bir bölüm; gitar geri çekiliyor. Volume düğmesini biraz kısmak ya da hafif çalmak yeter."
+   },
+   {
+    "name": "Solo / sondaki kaos",
+    "description": "Sona doğru dağınık, gürültülü bir lead. Daha yüksek gain/fuzz, geniş bend'ler, belki hafif delay. Ritim tonuna göre gain ve sustain biraz artırılmalı."
+   }
+  ],
+  "warnings": [
+   "Bu şarkının amfi, pedal ve mikrofon zinciri için birinci elden bir kaynak bulunamadı. Selmer amfi ve Cornell/Valveslapper pedallar Turner'ın AM dönemi genel rig'inden çıkarım.",
+   "Equipboard Duo Jet'i bu şarkıyla ilişkilendiriyor, ama GuitarChalk Jazzmaster + Fender Deluxe Reverb + Big Muff öneriyor. GuitarChalk'unki yeniden üretim önerisi, belgelenmiş ekipman değil.",
+   "Jamie Cook'un bu kayıttaki gitar ve amfisi belli değil.",
+   "Akort için açık bir teyit yok. Tab siteleri standart akort gösteriyor.",
+   "Tonalite kaynaklarda F# minör / Gb minör olarak geçiyor (ikisi aynı ton). Eski bir analizde B minör yazıyor; akorlar B minör / F# minör ekseninde.",
+   "Şarkı Sheffield'daki single kaydı. AM albümünün geri kalanı Sage & Sound (LA) ve Rancho De La Luna'da kaydedildi, o yüzden albümün genel ekipmanı bu kayda birebir uymayabilir."
+  ],
+  "research_confidence": "low",
+  "sources": [
+   {
+    "title": "Wikipedia - R U Mine?",
+    "url": "https://en.wikipedia.org/wiki/R_U_Mine%3F"
+   },
+   {
+    "title": "Equipboard - Arctic Monkeys AM",
+    "url": "https://equipboard.com/albums/arctic-monkeys-am"
+   },
+   {
+    "title": "Guitar.com - The genius of AM",
+    "url": "https://guitar.com/reviews/album/the-genius-of-am-by-arctic-monkeys/"
+   },
+   {
+    "title": "GuitarChalk - R U Mine? amp settings",
+    "url": "https://www.guitarchalk.com/amp-settings-r-u-mine-arctic-monkeys/"
+   },
+   {
+    "title": "Music Gateway - R U Mine key/BPM",
+    "url": "https://www.musicgateway.com/song-key-bpm/arctic-monkeys/r-u-mine"
+   },
+   {
+    "title": "Hooktheory - R U Mine",
+    "url": "https://hooktheory.com/theorytab/view/arctic-monkeys/r-u-mine"
+   },
+   {
+    "title": "Mix With The Masters - Tchad Blake R U Mine",
+    "url": "https://www.mixwiththemasters.com/videos/tchad-blake-arctic-monkeys-r-u-mine"
+   },
+   {
+    "title": "Equipboard - Jamie Cook",
+    "url": "https://equipboard.com/jamie-cook"
+   },
+   {
+    "title": "PMT - Arctic Monkeys gear guide",
+    "url": "https://www.pmtonline.co.uk/blog/how-to-sound-like-the-arctic-monkeys-a-complete-gear-guide/"
+   },
+   {
+    "title": "Ross Orton podcast",
+    "url": "https://www.listennotes.com/podcasts/people-music/ross-orton-producer-creating-jKxYCNRU7PO/"
+   }
+  ]
+ }
+}

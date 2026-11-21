@@ -1,0 +1,197 @@
+{
+ "rank": 68,
+ "part": "rhythm",
+ "researchedAt": 1795280883324,
+ "original": {
+  "song": {
+   "title": "Ride The Lightning",
+   "artist": "Metallica",
+   "album_or_year": "Ride the Lightning (1984)",
+   "tone_character": "Kuru ve agresif bir erken 80'ler Marshall crunch tonu: Tube Screamer ile itilmiş JMP/JCM800 2203. Orta frekanslar hafifçe oyulmuş, üst-orta frekanslar keskin, alt uç sıkı. Master of Puppets'taki daha kalın Boogie tonuna göre daha ince ve daha çiğ.",
+   "tone_tags": [
+    "distorted",
+    "Marshall crunch",
+    "sıkı alt",
+    "hafif oyuk orta",
+    "parlak üst-orta",
+    "kuru",
+    "hafif oda ambiyansı",
+    "çoklu kanal ritim"
+   ],
+   "bpm": "150–152 BPM",
+   "key": "E minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Electra 2236 Flying Wedge (Flying V kopyası); 1984 beyaz Gibson Explorer de anılıyor",
+    "pickup": "Köprü humbucker (manyetik modeli belgelenmedi)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall JMP/JCM800 2203 (100W Master Volume, Kopenhag'da bulunan/ödünç alınan kafa)",
+     "channel": "Tek kanal, High input",
+     "settings": [
+      {
+       "name": "Pre-Amp Volume",
+       "value": "10",
+       "note": "Kaynaklarda 'dimed' deniyor; kesin değil"
+      },
+      {
+       "name": "Master Volume",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "4",
+       "note": "Tahmin; hafif oyuk orta"
+      },
+      {
+       "name": "Treble",
+       "value": "7",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Hetfield'ın Marshall'ı Ocak 1984'te Boston'da çalındı. Rasmussen, Danimarkalı metal gruplarından 10-11 Marshall stack topladı ve en iyi sesi vereni seçti. Groundguitar bu kafanın JMP 2203 olduğunu söylüyor, Guitar.com ise yeni bir JMP 2203 alındığını. Mesa Boogie Mark IIC+ bu albümde yok, Master of Puppets'a ait (confirmed)."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12 (Sweet Silence'ta çoğunlukla iki kabin kullanıldı)",
+    "speakers": "Celestion G12T-75 veya G12-65 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM7",
+      "position": "Tek bir konin merkezine (cap) doğru",
+      "distance": "Yakın (yaklaşık 1-2 in, tahmin)"
+     },
+     {
+      "model": "Neumann U 87",
+      "position": "Konin merkezine doğru",
+      "distance": "Yakın"
+     },
+     {
+      "model": "B&K 4006 (omni oda mikrofonu)",
+      "position": "Oda",
+      "distance": "10-15 ft"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Mikrofonlar Rasmussen'in Metallica'daki genel yöntemi olarak anlatılıyor (Tape Op), bu şarkıya özel bir belge yok. 1960B kabin bilgisi Groundguitar'dan geliyor. Hoparlör modeli tahmin."
+   },
+   "pedals": [
+    {
+     "model": "Ibanez TS-9 Tube Screamer (bazı kaynaklarda yalnızca Tube Screamer)",
+     "purpose": "Amfiyi itmek için boost/overdrive; Hetfield ortaları azaltacak şekilde ayarlamış",
+     "settings": [
+      {
+       "name": "Overdrive",
+       "value": "3",
+       "note": "Tahmin; düşük drive, boost amaçlı"
+      },
+      {
+       "name": "Tone",
+       "value": "6",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Level",
+       "value": "7",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıt Sweet Silence Studios'ta (Kopenhag) 20 Şubat-14 Mart 1984 arasında yapıldı. Prodüktör Flemming Rasmussen ve Metallica, yardımcı Mark Whitaker. Analog 24 kanal kullanıldı (Ampex 456 bant, Trident A Range konsol, EQ konsoldan). Temel kanallar davul ve ritim gitarla birlikte kaydedildi. Ritim gitarların hepsini Hetfield çaldı, Hammett soloları sonradan ekledi. Wikipedia'ya göre Hetfield bu şarkıda gitar partilerini hızlı kaydetti ve iki ek take daha ekledi, yani birden fazla ritim katmanı var ve bunlar muhtemelen sağa-sola panlandı. Kayıtlar gece yapıldı."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Yaklaşık 150 BPM'de sürekli hızlı aşağı vuruş (downpicking)",
+    "Palm-mute ile açık akorlar arasında hızlı geçişler",
+    "Kromatik power chord geçişleri ve açık E pedal notası",
+    "Tempo ve fikir değişen orta bölüm",
+    "6,5 dakika boyunca sağ el dayanıklılığı"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / ana riff",
+    "description": "Ritimle aynı distorted ton. Palm-mute E pedal notası ve power chord'lar çalınıyor, ton değişikliği yok."
+   },
+   {
+    "name": "Orta enstrümantal bölüm ve Solo",
+    "description": "Soloyu Kirk Hammett çalıyor: Gibson Flying V, Marshall ve Tube Screamer, wah ile. Daha fazla gain, köprü manyetiği, hafif delay ve reverb kullanılıyor. Hetfield'ın altındaki ritim tonu aynı kalıyor."
+   },
+   {
+    "name": "Armoni / ara melodi gitarları",
+    "description": "Aynı Marshall tonu, köprü manyetiği. Biraz daha sustain için gain bir tık artırılabilir."
+   }
+  ],
+  "warnings": [
+   "Amfinin kesin modeli tartışmalı: JMP 2203 mü, JCM800 2203 mü belli değil (aynı devre). Hangi Danimarkalı müzisyenin kafası olduğu da bilinmiyor.",
+   "Gitar tartışmalı: Groundguitar Electra Flying V diyor, bazı kaynaklar 1984 Gibson Explorer diyor. Explorer'ın 1984 Şubat'ta henüz üretimde olup olmadığı şüpheli.",
+   "Riffhard, Mesa Boogie Mark IIC+ ve Explorer diyor. Bu bilgi büyük olasılıkla Master of Puppets ile karıştırılmış.",
+   "Bütün amfi ve pedal ayarları tahmin, belgelenmiş bir ayar yok.",
+   "AcousticBrainz şarkıyı D# minör ölçüyor (güven yaklaşık %81). Bant hızı nedeniyle kayıt biraz pes olabilir, ama nota kaynaklarına göre ton E minör ve akort standart E.",
+   "Mikrofon bilgileri Rasmussen'in genel yöntemi, bu şarkıya özel bir belge yok.",
+   "Tunebat sayfasına ulaşılamadı. BPM değeri AcousticBrainz ve Karaoke Version'dan alındı ve tempo değişken."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Wikipedia - Ride the Lightning",
+    "url": "https://en.wikipedia.org/wiki/Ride_the_Lightning"
+   },
+   {
+    "title": "Louder - Ride the Lightning story behind the album",
+    "url": "https://www.loudersound.com/features/metallica-ride-the-lightning-story-behind-the-album"
+   },
+   {
+    "title": "MusicRadar - JCM800 ve Tube Screamer ile RTL tonu",
+    "url": "https://musicradar.com/news/metallica-fan-recreates-james-hetfields-ride-the-lightning-guitar-tone-with-a-marshall-jcm-800-and-tube-screamer"
+   },
+   {
+    "title": "Tape Op - Flemming Rasmussen",
+    "url": "https://tapeop.com/interviews/172/flemming-rasmussen-riding-the-sweet-silence"
+   },
+   {
+    "title": "Ground Guitar - James Hetfield Guitars and Gear",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/"
+   },
+   {
+    "title": "Ground Guitar - Electra Flying Wedge",
+    "url": "https://www.groundguitar.com/james-hetfield-guitars-and-gear/james-hetfields-electra-2236-flying-wedge/"
+   },
+   {
+    "title": "Guitar.com - Metallica gear facts",
+    "url": "https://guitar.com/features/opinion-analysis/metallica-gear-facts/"
+   },
+   {
+    "title": "Riffhard - Ride the Lightning tone",
+    "url": "https://www.riffhard.com/?p=36019"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/03a52b83-0732-4eee-893f-0eb4e3412199?n=3"
+   },
+   {
+    "title": "Karaoke Version",
+    "url": "https://www.karaoke-version.com/mp3-backingtrack/metallica/ride-the-lightning.html"
+   }
+  ]
+ }
+}

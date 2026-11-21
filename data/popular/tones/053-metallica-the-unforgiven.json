@@ -1,0 +1,210 @@
+{
+ "rank": 53,
+ "part": "full",
+ "researchedAt": 1795280233742,
+ "original": {
+  "song": {
+   "title": "The Unforgiven",
+   "artist": "Metallica",
+   "album_or_year": "Metallica (Black Album), 1991",
+   "tone_character": "Hetfield'in katmanlı ritim gitarlarından oluşuyor. Dizelerde temiz, odalı arpejler var, nakaratlarda ise alt ve orta frekansları dolu, gitarlara kompresör uygulanmamış yoğun bir Mesa crunch'ı. Thrash dönemine göre daha az scoop'lu, mid'i daha önde, geniş stereo bir duvar sound'u.",
+   "tone_tags": [
+    "sıkı ve uzun alt",
+    "orta frekans önde",
+    "katmanlı çoklu kabin",
+    "orta-yüksek gain crunch",
+    "temiz dizeler odalı",
+    "geniş stereo"
+   ],
+   "bpm": "70 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "ESP Explorer (Hetfield, ana ritim gitarı); Kirk Hammett: ESP Strat tipi veya 1989 Gibson Les Paul Deluxe (EMG)",
+    "pickup": "Köprü manyetiği, EMG aktif (Hetfield'de muhtemelen EMG 81). Temiz kısımlarda sap manyetiği olabilir",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Mark II-C+ (Simul-Class)",
+     "channel": "Lead (distorsiyonlu) kanal nakaratlar için, Rhythm/clean kanal dizeler için",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "6",
+       "note": "tahmin; Black Album crunch'ı tam doygun değil"
+      },
+      {
+       "name": "Master",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": "tahmin; Mark serisinde bas düşük tutulur"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin; Bob Rock'ın mid'i öne çıkarma tavsiyesi"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Graphic EQ",
+       "value": "V-şekli hafif",
+       "note": "tahmin; önceki albümlere göre daha az scoop"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Guitar World 1991 röportajında Hetfield, önceki üç albümde kullandığı Mesa/Boogie Simul-Class Mark II'yi söylüyor. Ayarlar hiçbir kaynakta yok, hepsi tahmin."
+    },
+    {
+     "model": "Marshall (Jose Arredondo modlu)",
+     "channel": "Yüksek gain / modlu kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Bob Rock mid'i doldurmak için Arredondo modlu bir Marshall'ı karışıma ekledi (Reverb/Guitar.com özetleri). Hetfield ayrıca doku için birkaç vintage '60'lar ve '70'ler amfisi kullanmış."
+    },
+    {
+     "model": "Bradshaw preamp + Marshall (Kirk Hammett)",
+     "channel": "Lead",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Hammett'in solo sinyali: altlar ve ortalar için Bradshaw preamp, tizler için Marshall'lar, üzerine konsolda hafif EQ."
+    }
+   ],
+   "cab": {
+    "model": "Birden fazla kabin (9–11 adet) karışımı, büyük olasılıkla Mesa/Boogie ve Marshall 4x12",
+    "speakers": "Muhtemelen Celestion Vintage 30 / G12T-75 veya Electro-Voice (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "Cap ile kenar arası",
+      "distance": "1–2 in"
+     },
+     {
+      "model": "Oda mikrofonları",
+      "position": "Uzak, ambiyans",
+      "distance": "Birkaç feet"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Randy Staub, perdelerle kapatılmış küçük bir odada 9 ya da 11 kabin kullandıklarını söylüyor. Bazıları üst üste, bazıları yerde ve birbirinden izole. Uzak mikrofonlar oda ambiyansını alıyor. Mikrofon modelleri kaynaklarda yok."
+   },
+   "pedals": [
+    {
+     "model": "Dunlop Cry Baby wah (veya rack wah)",
+     "purpose": "Kirk'ün solosu",
+     "settings": [],
+     "certainty": "likely"
+    },
+    {
+     "model": "Chorus (stüdyo/rack, model bilinmiyor)",
+     "purpose": "Temiz dizelerde hafif genişlik",
+     "settings": [
+      {
+       "name": "Mix",
+       "value": "%25",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    },
+    {
+     "model": "Delay/reverb (stüdyo, model bilinmiyor)",
+     "purpose": "Solo ve temiz kısımlarda ambiyans",
+     "settings": [
+      {
+       "name": "Time",
+       "value": "430 ms",
+       "note": "tahmin; 70 BPM'de yaklaşık 1/8 noktalı"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Albüm Ekim 1990 ile Haziran 1991 arasında One on One Studios'ta (North Hollywood) kaydedildi. Prodüktör Bob Rock, mühendis Randy Staub. Ritim gitarlar farklı amfi ve kabinlerden birçok katman halinde kaydedildi: stereoda sol, sağ ve orta olmak üzere üç gitar kanalı. Miksajda bateri ve basa kompresör uygulandı, gitarlar kompresörsüz bırakıldı. Giriş Bob Rock'ın ekledi. Western temasına gönderme yapan oynanmış bir korno, İspanyol tarzı gitar ve perküsyondan oluşuyor. Kirk'ün solosu albümde stüdyoda doğaçlanan birkaç solodan biri ve Bob Rock'ın koçluğuyla, tonunu ayarlamasıyla şekillendi."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "Temiz arpejlerde tellerin dengeli çalınması",
+    "Nakarat riffinde palm mute ile açık akorlar arasında geçiş",
+    "Yavaş groove'da sıkı sağ el zamanlaması",
+    "Solo: wah ile ifadeli bendingler, vibrato, legato (soloda zorluk 4)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş",
+    "description": "Oynanmış korno dokusu, İspanyol tarzı gitar ve perküsyon. Elektro gitar temiz tonda ve odalı."
+   },
+   {
+    "name": "Dizeler (temiz arpej)",
+    "description": "Temiz kanal, gain yok, muhtemelen hafif chorus ve oda ambiyansı. Ana tondan farkı: distorsiyon kapalı, tiz biraz daha açık."
+   },
+   {
+    "name": "Nakarat / ana riff",
+    "description": "Mesa Mark II-C+ lead kanalı, köprü manyetiği, katmanlı çoklu kabin. Bu raporun referans distorsiyonlu tonu."
+   },
+   {
+    "name": "Solo (Kirk Hammett)",
+    "description": "EMG'li ESP veya Les Paul, Bradshaw preamp ve Marshall. Ritimden daha doygun, daha az alt, daha çok tiz ve sustain. Wah ve hafif delay/reverb."
+   },
+   {
+    "name": "Outro",
+    "description": "Nakarat tonu geri dönüyor, temiz kısımlarla dönüşümlü olarak fade-out ile bitiyor."
+   }
+  ],
+  "warnings": [
+   "Hetfield'in amfisi için kaynaklar Mark II, Simul-Class Mark II ve Mark II-C+ adlarını kullanıyor. Hepsi aynı aile ama tam revizyon net değil.",
+   "Amfi ayarları, mikrofon modelleri ve kabin/hoparlör tipleri kaynaklarda geçmiyor, tahmin.",
+   "Vintage King mühendisi 'Michael Staub' diye yazmış. Doğrusu Randy Staub.",
+   "BPM kaynaklarda 120–140 arasında gösteriliyor. Hissedilen tempo yaklaşık 70 BPM (140'ın yarısı). Delay senkronu için 70/140'ı kontrol edin.",
+   "Bu şarkı için chorus/delay kullanımına dair doğrudan kaynak yok, tahmin.",
+   "Hangi gitar katmanını kimin çaldığı (Hetfield mi Hammett mi) tam belgelenmemiş."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World 1991 interview - Hetfield & Hammett gear",
+    "url": "https://www.guitarworld.com/gw-archive/metallicas-james-hetfield-and-kirk-hammett-talk-guitar-solos-and-gear-1991-guitar-world-interview"
+   },
+   {
+    "title": "Guitar World - The Unforgiven solo",
+    "url": "https://www.guitarworld.com/news/kirk-hammett-how-the-unforgiven-changed-his-approach-to-solos"
+   },
+   {
+    "title": "Vintage King - Making of the Black Album",
+    "url": "https://vintageking.com/blogs/making-of/metallica-the-black-album"
+   },
+   {
+    "title": "Reverb - Bob Rock Black Album",
+    "url": "https://reverb.com/news/producer-bob-rock-looks-back-on-recording-metallicas-black-album"
+   },
+   {
+    "title": "Guitar.com - The genius of the Black Album",
+    "url": "https://guitar.com/reviews/album/the-genius-of-the-black-album-by-metallica/"
+   },
+   {
+    "title": "Musicnotes - The Unforgiven",
+    "url": "https://apps.musicnotes.com/sheetmusic/metallica/the-unforgiven/MN0077280"
+   },
+   {
+    "title": "Klang.io - The Unforgiven",
+    "url": "https://songs.klang.io/en/s/Metallica/The%20Unforgiven/Ckom3gf57Yw"
+   },
+   {
+    "title": "Ultimate Classic Rock - Black Album French horn",
+    "url": "https://ultimateclassicrock.com/metallica-black-album-french-horn/"
+   }
+  ]
+ }
+}

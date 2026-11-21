@@ -1,0 +1,179 @@
+{
+ "rank": 70,
+ "part": "rhythm",
+ "researchedAt": 1795280978131,
+ "original": {
+  "song": {
+   "title": "American Idiot",
+   "artist": "Green Day",
+   "album_or_year": "American Idiot (2004)",
+   "tone_character": "Orta-yüksek gainli, Marshall tarzı hırıltılı bir punk-rock ritim tonu. P-90 manyetiğin kalın ve biraz kaba orta frekanslarıyla geliyor, solda ve sağda çift kayıtlı power chord duvarı yapıyor. Gain aşırı değil, akorlar okunuyor. Alt sıkı, ortalar öne çıkık, Chris Lord-Alge miksi kompresli ve parlak.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "Marshall crunch / yüksek gain",
+    "P-90 kalınlığı",
+    "sıkı alt",
+    "çift kayıt sol-sağ",
+    "kompresli",
+    "kuru (reverb az)"
+   ],
+   "bpm": "186 BPM",
+   "key": "A♭ majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson Les Paul Junior (1956, lakabı \"Floyd\")",
+    "pickup": "Köprü konumunda tek P-90 (stok Gibson P-90)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959SLP / Super Lead 100W (Dookie mod veya SE Lead mod; lakapları \"Pete\" ve \"Meat\")",
+     "channel": "Tek kanal (High Treble girişi, modlu ön kat gain'i)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin; alt sıkı kalsın"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin; orta frekans öne çıkık karakter için"
+      },
+      {
+       "name": "Treble",
+       "value": "6.5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume",
+       "value": "7",
+       "note": "tahmin; modlu amfide gain yüksek, kabaca 8 civarı"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "O dönemin forum ve gear sitelerinde ana ritim amfisi olarak modlu Marshall Super Lead geçiyor. Hangi kafanın bu şarkıda kullanıldığını belgeleyen birincil kaynak bulamadım. Ayarların hepsi tahmin."
+    },
+    {
+     "model": "Park 75 (50W, Dookie tarzı modlu)",
+     "channel": "Tek kanal",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "Guitar World'e atfedilen bir alıntıda albümün 'ikinci ana amfisi' olarak geçiyor (Ground Guitar aktarıyor). Marshall ile birlikte, ayrı bir çift kayıt olarak kullanılmış olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion G12T-75 veya Greenback (bilinmiyor)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Kapağın kenarına yakın, hafif açılı",
+      "distance": "1-2 in"
+     },
+     {
+      "model": "Royer R-121 veya kondansatör (tahmin)",
+      "position": "Merkez dışı",
+      "distance": "6-12 in"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Kabin ve mikrofon için bir kaynak bulamadım. Bunlar o dönemin büyük bütçeli LA rock prodüksiyonlarında standart olan kurulum."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Kayıtlar Oakland'daki Studio 880 ve Hollywood'daki Ocean Way'de yapıldı. Prodüktör Rob Cavallo ve Green Day, kayıt mühendisi Doug McKean. Miks Chris Lord-Alge (Image Recording), mastering Ted Jensen (Sterling Sound). Gitar teknisyeni Bill Schneider (doğrulandı, Discogs). Forumlara göre ritim gitarları Les Paul Junior ile çift kaydedilmiş ve sol-sağa açılmış (likely). Distorsiyon pedalı değil, doğrudan amfi gain'i kullanılmış olması muhtemel (likely). Miksteki yoğun kompresyon ve parlaklık CLA'nın tipik imzası."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Hızlı ve sürekli aşağı vuruşlu sekizlik power chord'lar (~186 BPM)",
+    "Akor geçişlerinde hafif palm mute ve susturma",
+    "Dayanıklılık: şarkı boyunca kesintisiz aşağı vuruş"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş riffi (tek gitar)",
+    "description": "Ana riff önce tek gitarla, bant girmeden çalınıyor. Ton aynı distorsiyonlu karakterde ama tek kayıt ve biraz daha ince/dar. Reverb listesine göre albümdeki temiz/giriş tonları Victoria 35210 \"Little Vicky\" ile kaydedilmiş. Bu kaynak American Idiot girişini de sayıyor, yani giriş farklı bir amfiyle kaydedilmiş olabilir: daha az gain, tweed karakteri, biraz daha az alt."
+   },
+   {
+    "name": "Kıta / nakarat",
+    "description": "Ritim tonunun kendisi. Çift kayıtlı power chord duvarı, tam gain."
+   },
+   {
+    "name": "Solo / ara bölüm",
+    "description": "Kısa ve melodik tek nota lead. Muhtemelen aynı amfi, belki biraz daha fazla gain ve köprü manyetiği. Forumlara göre lead'lerde '59 Les Paul reissue kullanılmış olabilir (zayıf kaynak). Hafif bend ve vibrato var."
+   },
+   {
+    "name": "Breakdown / kapanış",
+    "description": "Bant kısa süre seyreliyor ve daha az gitar katmanı kalıyor. Ton değişmiyor, sadece yoğunluk azalıyor."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıya özel amfi ve kabin bilgisi veren birincil bir röportaj bulamadım. Amfi bilgileri fan veritabanlarından ve forumlardan geliyor.",
+   "Ground Guitar'daki Butch Vig'in 'Park amfi sol-sağ, ağır kısımlar Marshall' alıntısı büyük ihtimalle 21st Century Breakdown (2009) dönemine ait. Vig American Idiot'un prodüktörü değil.",
+   "Temiz amfi konusunda kaynaklar ayrılıyor: bir yanda Victoria 35210 \"Little Vicky\", 80212'ler, öbür yanda 1965 Fender Deluxe Reverb.",
+   "BPM 93 veya 186 olarak listeleniyor (yarım ya da çift zaman). Ton A♭ majör olarak verilmiş, bazı kaynaklar G#m veya C# diyor.",
+   "Akort: stüdyo kaydı standart akortta. Bazı canlı tablar yarım ses pes (Eb) veriyor.",
+   "Kabin, hoparlör, mikrofon ve amfi ayarlarının hepsi tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Seymour Duncan Forum - American Idiot tone",
+    "url": "https://forum.seymourduncan.com/threads/american-idiot-tone.23469/"
+   },
+   {
+    "title": "Ground Guitar - Billie Joe Armstrong Guitars & Gear",
+    "url": "https://www.groundguitar.com/billie-joe-armstrong-guitars-and-gear/"
+   },
+   {
+    "title": "Ground Guitar - Billie Joe Armstrong's Park 75",
+    "url": "https://www.groundguitar.com/billie-joe-armstrong-guitars-and-gear/billie-joe-armstrongs-park-75/"
+   },
+   {
+    "title": "Guitar World - The real story behind Green Day's Dookie tone",
+    "url": "https://www.guitarworld.com/gear/guitar-amp-heads/the-real-story-behind-green-days-iconic-dookie-tone"
+   },
+   {
+    "title": "Equipboard - Billie Joe Armstrong amplifiers",
+    "url": "https://equipboard.com/pros/billie-joe-armstrong?gear=amplifiers"
+   },
+   {
+    "title": "Equipboard - American Idiot (Deluxe)",
+    "url": "https://equipboard.com/albums/green-day-american-idiot-deluxe"
+   },
+   {
+    "title": "Guitar Gangsters - Billie Joe Armstrong Guitars & Gear",
+    "url": "https://guitargangsters.net/billie-joe-armstrong-guitars-gear/"
+   },
+   {
+    "title": "Wikipedia - American Idiot",
+    "url": "https://en.wikipedia.org/wiki/American_Idiot"
+   },
+   {
+    "title": "Discogs - Green Day American Idiot",
+    "url": "https://www.discogs.com/release/393121-Green-Day-American-Idiot"
+   },
+   {
+    "title": "Mixgraph - Green Day",
+    "url": "https://www.mixgraph.io/artists/green-day"
+   },
+   {
+    "title": "Musicnotes - American Idiot",
+    "url": "https://www.musicnotes.com/l/TMjhw"
+   },
+   {
+    "title": "Chords-and-Tabs - American Idiot",
+    "url": "https://www.chords-and-tabs.net/song/name/green-day-american-idiot-53"
+   }
+  ]
+ }
+}

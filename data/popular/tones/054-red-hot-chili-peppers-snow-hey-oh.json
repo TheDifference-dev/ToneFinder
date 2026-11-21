@@ -1,0 +1,143 @@
+{
+ "rank": 54,
+ "part": "clean",
+ "researchedAt": 1795280297335,
+ "original": {
+  "song": {
+   "title": "Snow (Hey Oh)",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "Stadium Arcadium (2006)",
+   "tone_character": "Stratocaster'dan çıkan, Marshall'a düşük kazançla giren parlak, cam gibi temiz ton. Hızlı 16'lık arpejlerde notalar birbirinden ayrık duyuluyor; sert vuruşta hafifçe kırılmaya yaklaşıyor ve bant kaydının doğal kompresyonu hissediliyor.",
+   "tone_tags": [
+    "temiz",
+    "Strat parlaklığı",
+    "hafif kırılma eşiği",
+    "ayrık notalar",
+    "doğal tüp/bant kompresyonu",
+    "kuru (belirgin delay/reverb yok)"
+   ],
+   "bpm": "105 BPM",
+   "key": "G# minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Fender Stratocaster (1962, muhtemelen)",
+    "pickup": "Stok single-coil; sap manyetiği ya da sap+orta ara konumu (kesin kaynak yok)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall Silver Jubilee 25/50 (ya da Marshall Major 200W)",
+     "channel": "Düşük kazanç / temiz ayar",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "3",
+       "note": "Tahmin: temiz ama vuruşta hafif kırılan ton için düşük"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Albüm genelinde Major ve Silver Jubilee kafaları kullanıldığı doğrulanmış durumda. Snow'un temiz bölümünde hangisinin çalındığını söyleyen bir kaynak yok. Ayarların hepsi tahmin."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 4x12",
+    "speakers": "Stok Celestion",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "On-axis, kon üzerine",
+      "distance": "Birkaç inç (~2 in)"
+     },
+     {
+      "model": "Royer R-121",
+      "position": "Oda mikrofonu (bazı parçalarda)",
+      "distance": "~15 ft"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Kabin ve mikrofon bilgisi albümün genel kayıt yöntemi için doğrulanmış (Guitar Player, Kasım 2006). Snow için ayrıca belirtilmemiş."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Yapımcı Rick Rubin, kayıt mühendisi Ryan Hewitt. Kayıt ağırlıklı olarak Laurel Canyon'daki The Mansion'da yapıldı: Neve 8068 konsol, Neve 1057/1073 preamp'ler ve senkronize çalışan üç adet 2 inç 24 kanallı bant makinesi. Grup aynı odada canlı çaldı; amfiler davula yakın durduğu için sızmalar kayıtta kaldı. Temiz ana riff büyük olasılıkla pedalsız, doğrudan amfiye çalındı. Final bölümünde Electro-Harmonix POG ile org benzeri katman eklendi. Sondaki arpej ise distorsiyonlu üç ayrı gitarla kaydedildi; her gitar tek bir notayı çalıyor. Aynı arpej bir synth ile de çalındı ve miksin çok altında tutuldu (doğrulanmış)."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "hızlı 16'lık alternate picking ile arpej",
+    "tel atlama",
+    "hammer-on ve pull-off'lar",
+    "sol elle susturma ve parmak yatırma (barre) geçişleri",
+    "105 BPM'de uzun süre dayanıklılık ve zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Nakarat (Hey Oh)",
+    "description": "Daha dolu akor çalımı ve üst üste kaydedilmiş katmanlar. Ton büyük olasılıkla temiz bölüme benziyor, belki biraz daha sert vuruşla hafif kırılıyor."
+   },
+   {
+    "name": "Köprü/ara bölüm",
+    "description": "Daha yoğun, hafif overdrive'lı akorlar. Kazanç veya vuruş gücü artıyor."
+   },
+   {
+    "name": "Final (outro)",
+    "description": "Electro-Harmonix POG ile oktav katmanları eklenerek org benzeri bir ton elde edilmiş (doğrulanmış)."
+   },
+   {
+    "name": "Son arpej",
+    "description": "Distorsiyonlu üç ayrı gitar kanalı var, her biri tek bir nota çalıyor. Altında çok kısık bir synth katmanı bulunuyor (doğrulanmış). Temiz tona göre kazanç belirgin biçimde yüksek."
+   }
+  ],
+  "warnings": [
+   "Bu şarkıda 1962 Strat kullanıldığını yalnızca ikincil bir kaynak 'muhtemelen' diye belirtiyor.",
+   "Hangi manyetiğin kullanıldığını gösteren bir kaynak yok. Sap manyetiği veya sap+orta konumu tahmin.",
+   "Amfi modeli (Silver Jubilee mi, Major mı) ve tüm ayarlar şarkı özelinde doğrulanmadı.",
+   "Tonalite kaynaklarda farklı: Wikipedia G# minör diyor, diğerleri B majör (relatif) diyor. BPM tahminleri 103 ile 108 arasında değişiyor. Tunebat sayfasına ulaşılamadı.",
+   "Mikrofon bilgisi şarkıya değil albümün geneline ait."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar Player 2006-11 – Murgs, Muff'ns, and Modular Synths",
+    "url": "https://invisible-movement.net/press/2006-11-guitarplayer"
+   },
+   {
+    "title": "GroundGuitar – Frusciante Stadium Arcadium gear",
+    "url": "https://www.groundguitar.com/tone-breakdown/john-frusciantes-gear-on-stadium-arcadium-guitars-amps-pedals-and-effects-explained/"
+   },
+   {
+    "title": "JustinGuitar – Snow (Hey Oh)",
+    "url": "https://justinguitar.com/songs/red-hot-chili-peppers-snow-hey-oh-chords-tabs-guitar-lesson-rf-020"
+   },
+   {
+    "title": "Wikipedia – Snow (Hey Oh)",
+    "url": "https://en.wikipedia.org/wiki/Snow_(Hey_Oh)"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/ea42a36a-ced7-4326-a7d3-c91456b49d0b?n=3"
+   },
+   {
+    "title": "Equipboard – John Frusciante",
+    "url": "https://equipboard.com/john-frusciante"
+   }
+  ]
+ }
+}

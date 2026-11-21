@@ -1,0 +1,270 @@
+{
+ "rank": 6,
+ "part": "rhythm",
+ "researchedAt": 1795278622937,
+ "original": {
+  "song": {
+   "title": "Smells Like Teen Spirit",
+   "artist": "Nirvana",
+   "album_or_year": "Nevermind (1991)",
+   "tone_character": "Ritim kısmı, temiz kanaldaki amfiye giren Boss DS-1'in verdiği kaba, vızıltılı ama orta frekansları dolu bir distorsiyon; iki kez çalınıp sağ-sol panlanarak geniş, duvar gibi bir ses elde edilmiş. Tiz-orta bölgede ısırgan, alt frekansta dolgun ama aşırı gain'siz bir grunge tonu.",
+   "tone_tags": [
+    "distorted",
+    "pedal distorsiyonu (DS-1)",
+    "orta frekans dolgun",
+    "üst-orta ısırgan",
+    "çift kayıt, sağ-sol pan",
+    "orta seviye gain",
+    "kaba/ham"
+   ],
+   "bpm": "116–117 BPM",
+   "key": "F minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Erken 90'lar Japon yapımı Fender Stratocaster, gül ağacı klavye (kaynaklara göre; Fender Mustang ve Mosrite de anılıyor)",
+    "pickup": "Köprü manyetiği: Seymour Duncan JB (TB-4) humbucker, volume 10",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Mesa/Boogie Studio Preamp (→ Crown Power Base 2 güç amfisi)",
+     "channel": "Rhythm (temiz) kanal; distorsiyon DS-1 pedalından geliyor",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "6",
+       "note": "Rhythm kanalı"
+      },
+      {
+       "name": "Master",
+       "value": "5",
+       "note": ""
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": ""
+      },
+      {
+       "name": "Middle",
+       "value": "8",
+       "note": "Orta frekanslar yüksek"
+      },
+      {
+       "name": "Bass",
+       "value": "3",
+       "note": ""
+      },
+      {
+       "name": "Reverb",
+       "value": "0",
+       "note": ""
+      },
+      {
+       "name": "Rhythm Bright",
+       "value": "On",
+       "note": ""
+      },
+      {
+       "name": "EQ",
+       "value": "In",
+       "note": "Grafik EQ devrede"
+      },
+      {
+       "name": "80 Hz",
+       "value": "+3 dB",
+       "note": ""
+      },
+      {
+       "name": "240 Hz",
+       "value": "-2 dB",
+       "note": ""
+      },
+      {
+       "name": "750 Hz",
+       "value": "0 dB",
+       "note": ""
+      },
+      {
+       "name": "2.2 kHz",
+       "value": "+5 dB",
+       "note": ""
+      },
+      {
+       "name": "6.6 kHz",
+       "value": "+3 dB",
+       "note": ""
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Guitar World makalesi bu ayarları veriyor ama ayarların kaynağı belirtilmiyor; değerler bir yeniden yaratma olabilir. Mesa'nın kaydın ana amfisi olduğu birçok kaynakta geçiyor."
+    },
+    {
+     "model": "Fender Bassman",
+     "channel": "Bilinmiyor",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "LiveNirvana oturum tarihçesi Teen Spirit için Fender Bassman'ı listeliyor; Butch Vig albümde Bassman ve Vox AC30'u katmanlama ve temiz tonlar için kullandığını söylemiş. Ana distorted ritimde hangisinin kullanıldığı tartışmalı."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960B 4x12",
+    "speakers": "Celestion G12T-75",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "AKG C414",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "Sennheiser MD 421",
+      "position": "Bilinmiyor",
+      "distance": "Bilinmiyor"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Marshall 4x12 kabin Guitar World'de geçiyor. Mikrofon listesi ikincil kaynaktan (Medium) ve albüm geneline ait: amfiler aynı anda bu dört mikrofonla alınmış, Vig en beğendiğini seçmiş. Teen Spirit'e özgü pozisyon/mesafe bilinmiyor."
+   },
+   "pedals": [
+    {
+     "model": "Boss DS-1 Distortion",
+     "purpose": "Ana distorsiyon kaynağı (amfinin temiz kanalına giriyor) – nakarat ve ana riff",
+     "settings": [
+      {
+       "name": "Tone",
+       "value": "4",
+       "note": ""
+      },
+      {
+       "name": "Level",
+       "value": "10",
+       "note": ""
+      },
+      {
+       "name": "Dist",
+       "value": "7",
+       "note": ""
+      }
+     ],
+     "certainty": "likely"
+    },
+    {
+     "model": "Electro-Harmonix Small Clone",
+     "purpose": "Chorus – verse temiz riffi ve pre-chorus",
+     "settings": [
+      {
+       "name": "Rate",
+       "value": "5",
+       "note": "Saat 12 civarı"
+      },
+      {
+       "name": "Depth",
+       "value": "Up",
+       "note": "Derin mod"
+      }
+     ],
+     "certainty": "confirmed"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Sound City Studios (Studio A, Van Nuys), Mayıs 1991; prodüktör/kayıt mühendisi Butch Vig, Neve 8028 konsol, 2 inç 24 kanal analog bant. Miks: Andy Wallace (Guitar World'e göre gitarlarda ~2.5–3 kHz boost, ~500 Hz–1 kHz cut). Vig'in ısrarıyla Cobain ritim gitarı iki kez çaldı ('Kurt did two passes on it'); iki ritim gitar sola ve sağa panlandı. Vig şarkıda bazı küçük drop-in'ler yaptığını söylüyor. Teller .010–.052 Dean Markley, pena Dunlop Tortex 0.60 mm (Guitar World)."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "Dört akorluk power chord riffi (F5–Bb5–Ab5–Db5) ve akorlar arasında susturulmuş ölü tellerle 16'lık strumming",
+    "Sürekli güçlü aşağı-yukarı pena hareketi, sol elle susturma kontrolü",
+    "Clean verse'te iki notalık riffi temiz ve tutarlı çalmak",
+    "Dinamik geçişler (sessiz verse / yüksek nakarat)"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş (tek gitar riff)",
+    "description": "Ana riff önce tek gitarla hafif crunch tonda çalınır; davul girişiyle aynı riff tam DS-1 distorsiyonuna geçer. Girişte distorsiyonu kapatmak ya da gain'i düşürmek yeterli."
+   },
+   {
+    "name": "Verse (temiz iki nota riffi)",
+    "description": "DS-1 kapalı, Mesa rhythm kanalı temiz, Small Clone açık (Rate ~5, Depth up). İki notalık riff, sulu chorus tonu."
+   },
+   {
+    "name": "Pre-chorus ('Hello, hello')",
+    "description": "Small Clone açık kalır; kaynağa göre DS-1 ile birlikte veya hafif crunch ile çalınır; nakarattan biraz daha az yoğun."
+   },
+   {
+    "name": "Solo",
+    "description": "Vokal melodisini takip eden basit solo; DS-1 + Small Clone birlikte, köprü manyetiği."
+   },
+   {
+    "name": "Outro ('A denial')",
+    "description": "Ritim tonuyla aynı tam distorsiyon; tekrar eden riff ve feedback/gürültü."
+   }
+  ],
+  "warnings": [
+   "Kayıt gitarı tartışmalı: Guitar World köprüde Seymour Duncan JB olan Japon Stratocaster diyor; Christie's iki Stratocaster'dan söz ediyor; Vig bir Mustang hatırlıyor; Medium albüm geneli için Mosrite diyor. Videodaki Competition Mustang kayıt gitarı değil.",
+   "Amfi tartışmalı: Mesa/Boogie Studio Preamp + Crown Power Base 2 + Marshall 4x12 yaygın kabul görüyor, ancak LiveNirvana Teen Spirit için Fender Bassman listeliyor; Vig albümde Bassman ve Vox AC30 da kullanıldığını söylüyor.",
+   "Guitar World'ün Mesa ve DS-1 ayarları büyük olasılıkla yeniden yaratma, belgelenmiş stüdyo ayarı değil.",
+   "Albümde bazı şarkılarda ProCo RAT kullanıldığı söyleniyor; Teen Spirit için ana distorsiyon genelde DS-1 kabul ediliyor.",
+   "Mikrofon listesi ikincil kaynaktan ve albüm geneline ait.",
+   "BPM/tonalite (≈116–117 BPM, F minör) Tunebat'ta doğrudan kontrol edilmedi; genel bilgiye dayanıyor."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Guitar World – The secrets behind Kurt Cobain's guitar tone on Smells Like Teen Spirit",
+    "url": "https://www.guitarworld.com/features/the-secrets-behind-kurt-cobains-guitar-tone-on-nirvanas-smells-like-teen-spirit"
+   },
+   {
+    "title": "LiveNirvana Sessions History – May 1991 Sound City",
+    "url": "https://www.livenirvana.com/sessions/studio/may-june-1991.php"
+   },
+   {
+    "title": "Guitar.com – Eight myths about Kurt Cobain's gear",
+    "url": "https://www.guitar.com/features/opinion-analysis/kurt-cobain-nirvana-guitar-gear-myths/"
+   },
+   {
+    "title": "Ask.Audio – Nirvana's Gear in the Nevermind Era",
+    "url": "https://ask.audio/articles/nirvana-s-gear-in-the-nevermind-era"
+   },
+   {
+    "title": "Bonedo – Smells Like Teen Spirit",
+    "url": "https://www.bonedo.de/artikel/einzelansicht/die-besten-gitarrenriffs-in-noten-und-tabs-nirvana-smells-like-teen-spirit.html"
+   },
+   {
+    "title": "Christie's lot",
+    "url": "https://www.christies.com.cn/en/lot/lot-6573410"
+   },
+   {
+    "title": "Medium – An analysis of Nirvana's Nevermind",
+    "url": "https://medium.com/@mattzoppa/an-analysis-of-nirvanas-nevermind-3f1afe624463"
+   },
+   {
+    "title": "Ground Guitar – Mesa/Boogie Studio Preamp",
+    "url": "https://www.groundguitar.com/kurt-cobain-gear/kurt-cobains-mesa-boogie-studio-22-preamp/"
+   },
+   {
+    "title": "Ground Guitar – Crown Power Base 2",
+    "url": "https://www.groundguitar.com/kurt-cobain-gear/kurt-cobains-crown-power-base-2-amplifier/"
+   },
+   {
+    "title": "Waves – Behind the music with Butch Vig",
+    "url": "https://www.waves.com/behind-the-music-with-butch-vig"
+   },
+   {
+    "title": "Equipboard – Kurt Cobain amplifiers",
+    "url": "https://equipboard.com/pros/kurt-cobain/gear/amplifiers"
+   }
+  ]
+ }
+}

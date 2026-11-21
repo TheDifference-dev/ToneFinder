@@ -1,0 +1,181 @@
+{
+ "rank": 11,
+ "part": "clean",
+ "researchedAt": 1795278729949,
+ "original": {
+  "song": {
+   "title": "Californication",
+   "artist": "Red Hot Chili Peppers",
+   "album_or_year": "Californication (1999)",
+   "tone_character": "Neredeyse tamamen temiz, sıcak ve biraz 'havalı' (hollow-body karakterli) bir ton; arpej riffi yumuşak ataklı, hafif kompresli ve oda/plate hissiyle hafifçe derinleştirilmiş. Gain amfinin temiz bölgesinde, sert çalındığında çok hafif kırılma eşiğine dokunuyor.",
+   "tone_tags": [
+    "temiz",
+    "sıcak",
+    "yuvarlak orta frekans",
+    "hafif kompresli",
+    "hollow-body rezonansı",
+    "yumuşak tiz",
+    "hafif ambiyans"
+   ],
+   "bpm": "96–97 BPM",
+   "key": "A minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1955 Gretsch White Falcon (alternatif iddia: 1955 Fender Stratocaster)",
+    "pickup": "Gretsch Filter'Tron çift bobinli manyetikler (muhtemelen sap ya da iki manyetik birlikte; kaynakta belirtilmiyor). Strat varsayımında sap/orta manyetik.",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Fender Showman (Blackface)",
+     "channel": "Normal/Vibrato temiz kanal",
+     "settings": [
+      {
+       "name": "Volume",
+       "value": "4",
+       "note": "tahmin; temiz bölgede, sert atakta çok hafif sıkışma"
+      },
+      {
+       "name": "Treble",
+       "value": "5",
+       "note": "tahmin; Falcon'un parlaklığını dengelemek için orta"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin; hollow-body'de çamurlaşmayı önlemek için"
+      },
+      {
+       "name": "Bright",
+       "value": "Off",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Frusciante, Guitar Player 1999'da White Falcon'u 'Otherside'da Showman'a bağladığını ve Marshall'ın yeterince temiz olmadığı yerlerde Showman kullandığını söylüyor; Californication için Showman kullanımı Ground Guitar tarafından çıkarım olarak veriliyor. Mixdown canlıda Falcon'un neredeyse hep Showman ile eşleştiğini yazıyor."
+    },
+    {
+     "model": "Marshall JTM-45 / Marshall Super Bass (alternatif)",
+     "channel": "Tek kanal, düşük volume",
+     "settings": [],
+     "certainty": "guess",
+     "notes": "Albümün genel ana amfileri; bazı kaynaklar Boss CE-1 stereo çıkışıyla bir temiz bir kirli amfiye ayrıldığını söylüyor. Bu şarkının temiz bölümünde rolü belgelenmemiş."
+    }
+   ],
+   "cab": {
+    "model": "Fender Showman 2x15 (veya 2x12) kabin; Marshall kullanılmışsa 4x12",
+    "speakers": "Showman için JBL D130F/D140F veya Fender orijinal hoparlörler (tahmin); Marshall 4x12'de Celestion G12 (tahmin)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "hoparlör kenarına yakın, on-axis (tahmin)",
+      "distance": "1–3 cm (tahmin)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "merkeze yakın (tahmin)",
+      "distance": "15–30 cm (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Ground Guitar, Jim Scott'a atfen kabin başına SM57 + U87 kullanıldığını yazıyor; Sound on Sound röportajı ise tüplü Neumann U47 bahsediyor. Kabin modeli şarkı bazında belgelenmemiş."
+   },
+   "pedals": [
+    {
+     "model": "Boss CE-1 Chorus Ensemble",
+     "purpose": "Preamp/tampon ve stereo bölme; temiz partilerde hafif chorus derinliği olası",
+     "settings": [
+      {
+       "name": "Mode",
+       "value": "Chorus",
+       "note": "kullanıldıysa çok hafif; kayıtta belirgin chorus duyulmuyor"
+      },
+      {
+       "name": "Intensity",
+       "value": "3",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Standart E",
+   "recording_notes": "Prodüktör Rick Rubin, mühendis/mikser Jim Scott; kayıt 1998, Cello Studios (Los Angeles). Frusciante'ye göre ~3 hafta kayıt, büyük ihtimalle click track yok, canlı grup kaydı tabanlı. Jim Scott miksinde Universal Audio 1176 kompresör kullanımı bildiriliyor. Ground Guitar ağır tel (.012–.054) kullanıldığını yazıyor (White Falcon için). Temiz partide hafif oda/plate reverb mikste eklenmiş gibi duyuluyor (tahmin). Bazı bölümlerde ikinci gitar katmanı (overdub) var."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "temiz ve eşit arpej (Am–F) – parmak/pena kontrolü",
+    "notaları birbirine taşırarak çalma (let ring)",
+    "dinamik kontrol: yumuşak atak",
+    "nakaratta akıcı akor geçişleri"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / kıta arpej riffi",
+    "description": "Bu araştırmanın temel tonu: temiz amfi, hollow-body (veya Strat sap) manyetik, efekt minimal; hafif kompres ve ambiyans."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı temiz ton, daha dolu akor çalımı; daha sert pena ile amfi hafif kırılma eşiğine yaklaşıyor. Gain yaklaşık aynı, volume/atak biraz artmış."
+   },
+   {
+    "name": "Köprü / ara bölüm ve solo",
+    "description": "Belirgin şekilde overdrive/fuzz'lı ton: kaynaklara göre Frusciante'nin olası zinciri Boss DS-2 veya Big Muff tarzı distorsiyon + Marshall; köprü manyetiği ya da Falcon'un köprü manyetiği, uzun sustain, geniş bending ve vibrato. Şarkıya özgü pedal belgelenmemiş (tahmin)."
+   },
+   {
+    "name": "Çıkış (outro)",
+    "description": "Temiz arpej temasına geri dönüş; solo melodisinin üst katmanları hafif kirli tonla devam edebilir."
+   }
+  ],
+  "warnings": [
+   "Gitar tartışmalı: Mixdown ve Ground Guitar şarkının White Falcon ile kaydedildiğini söylüyor, ancak Frusciante'nin 1999 Guitar Player röportajı Falcon'u yalnızca 'Otherside' için açıkça anıyor; diğer kaynaklar albümdeki temiz partiler için '55 Strat'ı öne sürüyor.",
+   "Falcon yılı kaynaklar arasında 1955/1957/1958 olarak değişiyor.",
+   "Amfi (Fender Showman) Ground Guitar'da çıkarım olarak geçiyor, doğrudan doğrulanmamış.",
+   "Mikrofon bilgisi çelişkili: SM57 + U87 (Ground Guitar) vs Neumann U47 (Sound on Sound).",
+   "Boss CE-1 chorus'un bu şarkıda devrede olduğuna dair kaynak yok; amfi ayarları tamamen tahmin.",
+   "Tonalite otomatik araçlarda A minör / F majör arasında değişiyor; akor yapısı (Am–F kıta) A minörü destekliyor. Tunebat sayfasına doğrudan ulaşılamadı."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Ground Guitar – John Frusciante's Gear on Californication",
+    "url": "https://www.groundguitar.com/tone-breakdown/john-frusciante-californication-rig/"
+   },
+   {
+    "title": "Mixdown – Gear Rundown: RHCP Californication",
+    "url": "https://mixdownmag.com.au/features/rig-rundown-red-hot-chili-peppers-californication/"
+   },
+   {
+    "title": "Guitar Player 1999 – Return Of The Prodigal Son (invisible-movement arşivi)",
+    "url": "https://invisible-movement.net/press/1999-09-guitarplayer"
+   },
+   {
+    "title": "PMT – John Frusciante gear guide",
+    "url": "https://www.pmtonline.co.uk/blog/john-frusciante-gear-guide-guitars-amps-pedals/"
+   },
+   {
+    "title": "Sound on Sound – Jim Scott",
+    "url": "https://www.soundonsound.com/node/4924033"
+   },
+   {
+    "title": "Equipboard – John Frusciante",
+    "url": "https://equipboard.com/pros/john-frusciante"
+   },
+   {
+    "title": "Audiokeychain – Californication",
+    "url": "https://www.audiokeychain.com/track/YbE/red-hot-chili-peppers-californication"
+   },
+   {
+    "title": "AcousticBrainz – Californication",
+    "url": "https://acousticbrainz.org/084a24a9-b289-4584-9fb5-1ca0f7500eb3"
+   },
+   {
+    "title": "Reverb – Nailing it: John Frusciante tones",
+    "url": "https://reverb.com/news/nailing-it-achieving-the-tones-of-red-hot-chili-peppers-john-frusciante"
+   }
+  ]
+ }
+}

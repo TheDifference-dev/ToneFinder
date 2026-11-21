@@ -1,0 +1,145 @@
+{
+ "rank": 30,
+ "part": "intro",
+ "researchedAt": 1795279460528,
+ "original": {
+  "song": {
+   "title": "Thunderstruck",
+   "artist": "AC/DC",
+   "album_or_year": "The Razors Edge (1990)",
+   "tone_character": "Az gain'li, power amp'ten gelen sıcak Marshall crunch'ı. SG köprü manyetiğiyle parlak ve orta frekansları öne çıkan, notaları net ayrılan, efektsiz ve kuru bir ton.",
+   "tone_tags": [
+    "orta frekans öne çıkık",
+    "orta seviye crunch",
+    "parlak",
+    "nota ayrımı net",
+    "efektsiz",
+    "power amp doygunluğu"
+   ],
+   "bpm": "133 BPM",
+   "key": "B miksolidyen"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson SG (Angus Young'ın SG'lerinden biri)",
+    "pickup": "Köprü humbucker (stok Gibson)",
+    "certainty": "likely"
+   },
+   "amps": [
+    {
+     "model": "Marshall 1959 Super Lead 100W",
+     "channel": "High Treble (Channel I)",
+     "settings": [
+      {
+       "name": "Presence",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Bass",
+       "value": "4",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "7",
+       "note": "tahmin"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      },
+      {
+       "name": "Volume I",
+       "value": "7",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "Angus 1991'de stüdyoda 100W ve 50W Marshall kafalarla, sade bir düzenle çaldıklarını söylüyor. Bu şarkıda hangi kafanın kullanıldığı belgelenmemiş. MusicRadar bu albüm için JTM45 dahil vintage Plexi'lerden söz ediyor."
+    }
+   ],
+   "cab": {
+    "model": "Marshall 1960 4x12",
+    "speakers": "Celestion (model belgelenmemiş)",
+    "mics": [
+     {
+      "model": "Shure SM57 (tahmin)",
+      "position": "cap-edge arası",
+      "distance": "1-2 in (tahmin)"
+     }
+    ],
+    "certainty": "guess",
+    "notes": "Angus doğru mikrofon yerleşimini ve ham sesi önemsediğini söylüyor. Mikrofon detayları belgelenmemiş."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Little Mountain Sound (Vancouver). Prodüktör Bruce Fairbairn, kayıt ve miks Mike Fraser (confirmed). Riff, Angus'un evde akustik gitarla yaptığı bir ısınma lick'inden doğdu. Malcolm, intro'daki 'thunder' koro vokallerini ekledi (confirmed). Intro tek gitarla açık B teli üzerinde hammer-on/pull-off ile çalınıyor (confirmed). Pedal ya da efekt kullanılmamış (likely)."
+  },
+  "difficulty": {
+   "score": 4,
+   "factors": [
+    "Hızlı, kesintisiz legato (hammer-on/pull-off)",
+    "Açık B teli pedal nota olarak",
+    "Tek telde hızlı pozisyon kaydırma",
+    "Diğer telleri sağ elle susturma",
+    "Uzun pasajda ritim ve dinamiği sabit tutma"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Ritim gitarı (Malcolm)",
+    "description": "Gretsch Jet Firebird ile Marshall Super Bass amfi: Bass 1, Middle 5, Treble 6, Volume I 7. Angus'tan daha temiz, daha az gain'li bir crunch."
+   },
+   {
+    "name": "Solo",
+    "description": "Angus'un aynı rig'i, muhtemelen biraz daha yüksek ses ve gain. Geniş bend'ler ve hızlı vibrato."
+   }
+  ],
+  "warnings": [
+   "Intro'nun yalnız sol elle mi yoksa pena ile mi çalındığı tartışmalı: videoda tek el görünüyor ama kayıt pena ile çalınmış gibi duyuluyor.",
+   "Tonalite kaynaklara göre B miksolidyen, B ya da E olarak geçiyor.",
+   "Amfi modeli, amfi ayarları ve mikrofonlar bu şarkı için belgelenmemiş; tahmin."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Louder - AC/DC 90s albums",
+    "url": "https://www.loudersound.com/bands-artists/ac-dc-razors-edge-ballbreaker-stiff-upper-lip-90s"
+   },
+   {
+    "title": "Guitar World - Thunderstruck origin",
+    "url": "https://www.guitarworld.com/news/acdcs-iconic-thunderstruck-originated-as-one-of-angus-youngs-acoustic-guitar-warmup-licks"
+   },
+   {
+    "title": "Guitar World - Malcolm Thunderstruck tone",
+    "url": "https://guitarworld.com/artists/acdc-thunderstruck-secrets-behind-malcolm-young-guitar-sound-tonal-recall"
+   },
+   {
+    "title": "Guitar World 1991 Angus interview",
+    "url": "https://www.guitarworld.com/gw-archive/angus-young-acdc-discusses-guitar-riffs-and-brown-gibson-sgs-1991-guitar-world-interview"
+   },
+   {
+    "title": "Cool Parts 24 - Thunderstruck",
+    "url": "https://lsaguitarshop.substack.com/p/cool-parts-24-angus-thunderstruck"
+   },
+   {
+    "title": "Wikipedia - The Razors Edge",
+    "url": "https://en.wikipedia.org/wiki/The_Razors_Edge_(AC/DC_album)"
+   },
+   {
+    "title": "MusicRadar - 13 reasons AC/DC rock",
+    "url": "https://www.musicradar.com/news/guitars/13-reasons-why-ac-dc-rock-for-guitarists-599892"
+   },
+   {
+    "title": "Hooktheory - Thunderstruck",
+    "url": "https://hooktheory.com/theorytab/view/ac-dc/thunderstruck"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/6d19aaa7-1eb5-4488-a54d-fe07d0621a7f?n=0"
+   }
+  ]
+ }
+}

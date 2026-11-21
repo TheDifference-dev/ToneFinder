@@ -1,0 +1,154 @@
+{
+ "rank": 23,
+ "part": "full",
+ "researchedAt": 1795279073443,
+ "original": {
+  "song": {
+   "title": "Where Is My Mind?",
+   "artist": "Pixies",
+   "album_or_year": "Surfer Rosa (1988)",
+   "tone_character": "Les Paul Goldtop doğrudan amfiye bağlanmış, orta kazançlı, ham bir crunch tonu. Ses kompresyonsuz ve odalı (Albini'nin ambiyans mikrofonlaması, yankılı banyo). Altında akustik ritim gitarı var. Joey'nin melodik iki notalı hatları ve kısa solosu, stüdyo cilası olmadan kuru ama odalı bir karakterle duyuluyor.",
+   "tone_tags": [
+    "orta kazançlı crunch",
+    "odalı/ambiyans",
+    "ham, cilasız",
+    "orta frekans öne çıkık",
+    "humbucker kalınlığı",
+    "az kompresyon"
+   ],
+   "bpm": "81–82 BPM",
+   "key": "E majör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "1970'ler Gibson Les Paul Goldtop (Kim Deal'e ait olduğu bildiriliyor; MusicRadar 'stock '70s re-issue' diyor), manyetik kapakları sökülmüş",
+    "pickup": "Köprü humbucker (stok Gibson humbucker, kapaksız). Bu parçada köprü manyetiği kullanıldığı tahmin; doğrudan teyit eden bir kaynak bulunamadı.",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Peavey ya da Marshall (kesin model bilinmiyor)",
+     "channel": "Overdrive/kazanç kanalı (amfinin kendi kazancıyla)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "5",
+       "note": "Tahmin: orta crunch; ton tamamen amfiden geliyor"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "Tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6",
+       "note": "Tahmin: orta frekanslar öne çıkık"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "Tahmin"
+      }
+     ],
+     "certainty": "likely",
+     "notes": "MusicRadar'a göre Joey başlangıçta pedal kullanmadan doğrudan amfiye (Peavey ya da Marshall) bağlanıyor, tonu amfinin kazancı, Goldtop'un potları ve manyetik seçiciyle ayarlıyordu. Santiago bir röportajında erken dönemden 'küçük bir Peavey amfi' diye söz ediyor. Surfer Rosa için belirli bir model teyit edilmemiş. Reunion döneminde Marshall JCM900 kullandığı biliniyor, ama bu sonraki bir dönem."
+    },
+    {
+     "model": "Akustik gitar (Black Francis)",
+     "channel": "Yok",
+     "settings": [],
+     "certainty": "confirmed",
+     "notes": "Black Francis Japon yapımı Telecaster'ını kullanmadı, kayıtta akustik gitar çaldı. Akustiğin modeli bilinmiyor."
+    }
+   ],
+   "cab": {
+    "model": "Bilinmiyor (amfiye bağlı kabin ya da kombo)",
+    "speakers": "Bilinmiyor",
+    "mics": [
+     {
+      "model": "Bilinmiyor",
+      "position": "Yakın mikrofon (tahmin)",
+      "distance": "Bilinmiyor"
+     },
+     {
+      "model": "Bilinmiyor (oda/ambiyans mikrofonu)",
+      "position": "Oda; bazı amfiler Q Division'ın büyük, yankılı banyosuna konmuş",
+      "distance": "Mesafeli"
+     }
+    ],
+    "certainty": "likely",
+    "notes": "Albini'nin bazı amfileri stüdyonun yankılı banyosunda kaydettiği ve amfilerle davulun çevresinde ambiyans mikrofonlaması kullandığı teyitli (MusicRadar). Mikrofon modelleri ve pozisyonları belgelenmemiş."
+   },
+   "pedals": [],
+   "tuning": "Standart E",
+   "recording_notes": "Aralık 1987'de Boston'daki Q Division Studios'ta kaydedildi; prodüksiyon ve mühendislik Steve Albini'de. Albini, Joey'ye ve Kim'e punk sertliği için metal pena verdi. Odalı ambiyans mikrofonları ve banyo yankısı kullanıldı. Prodüksiyon minimal ve ham; belirgin bir stüdyo efekti ya da yoğun double-tracking belgelenmemiş. Black Francis akustik çaldı, elektrik partisyonlarının tamamı Joey Santiago'nun."
+  },
+  "difficulty": {
+   "score": 2,
+   "factors": [
+    "İki notalı melodik arpej/lead hatları",
+    "Temiz ve tutarlı pena vuruşu (metal pena)",
+    "Kısa B minör pentatonik solo: basit bend ve kaydırmalar",
+    "Akustik ritimle uyumlu zamanlama"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş / kıta lead hattı",
+    "description": "Joey'nin akılda kalan iki notalı arpeji. Aynı Goldtop + crunch tonu, akustik ritmin üstünde. Ana referans ton bu."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Kim Deal'in 'ooh' vokalinin altında sürdürülen notalar ve akorlar. Kazanç biraz daha dolgun duyuluyor ama aynı ton; ekstra efekt belgelenmemiş."
+   },
+   {
+    "name": "Solo",
+    "description": "Kısa B minör pentatonik solo; E majörle bilinçli bir çatışma yaratıyor. Aynı ton, pedal yok. Kayıtta kazancın ya da volümün biraz daha açık olduğu tahmin ediliyor."
+   },
+   {
+    "name": "Akustik ritim (Black Francis)",
+    "description": "Elektrik değil, akustik gitar. Kendi gitarına uyarlamak istersen temiz ve parlak bir ton kullan, düşük kazançla akor çal."
+   }
+  ],
+  "warnings": [
+   "Surfer Rosa'da kullanılan amfi modeli teyitli değil: kaynaklar 'Peavey ya da Marshall' diyor; amfi ayarları tamamen tahmin.",
+   "Goldtop'un sahibi ve yılı konusunda kaynaklar ayrışıyor: Guitar.com Kim Deal'in 70'ler Goldtop'u diyor, MusicRadar 'stock 70s re-issue' diyor.",
+   "Köprü manyetiği kullanımı tahmin.",
+   "BPM kaynaklara göre 81–82, çift zamanlı sayımda yaklaşık 162. Tonalite çoğunlukla E majör, bir kaynak C# minör veriyor.",
+   "Mikrofon modelleri ve kabin bilgisi belgelenmemiş.",
+   "Tunebat sayfasına erişilemedi."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "MusicRadar - The story of Pixies' Where Is My Mind",
+    "url": "https://www.musicradar.com/news/the-story-of-pixies-where-is-my-mind"
+   },
+   {
+    "title": "Guitar.com - The genius of Pixies' Surfer Rosa",
+    "url": "https://guitar.com/review/album/the-genius-of-pixies-surfer-rosa/"
+   },
+   {
+    "title": "Wikipedia - Where Is My Mind?",
+    "url": "https://en.wikipedia.org/wiki/Where_Is_My_Mind%3F"
+   },
+   {
+    "title": "Wikipedia - Surfer Rosa",
+    "url": "https://en.wikipedia.org/wiki/Surfer_Rosa"
+   },
+   {
+    "title": "Hooktheory - Where is my Mind",
+    "url": "https://hooktheory.com/theorytab/view/pixies/where-is-my-mind"
+   },
+   {
+    "title": "Karaoke Version - Where Is My Mind?",
+    "url": "https://www.karaoke-version.com/custombackingtrack/pixies/where-is-my-mind.html"
+   },
+   {
+    "title": "AcousticBrainz",
+    "url": "https://acousticbrainz.org/9323c16c-470c-4cee-adf2-ed4cc2ab7fdf"
+   }
+  ]
+ }
+}

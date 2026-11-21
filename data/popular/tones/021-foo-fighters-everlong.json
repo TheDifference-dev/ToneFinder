@@ -1,0 +1,171 @@
+{
+ "rank": 21,
+ "part": "rhythm",
+ "researchedAt": 1795279112360,
+ "original": {
+  "song": {
+   "title": "Everlong",
+   "artist": "Foo Fighters",
+   "album_or_year": "The Colour and the Shape (1997)",
+   "tone_character": "Orta gain'li, kalın ve orta frekansları dolu bir humbucker distorsiyonu. Drop D boş D telinin sürekli çınlaması ve tüm vuruşların aşağı yönde olması duvar gibi, dalgalanan bir ritim tabakası yaratıyor. Aşırı yüksek gain yok; akorlar (Dmaj7, Bsus2, Gsus2) ayrışacak kadar net.",
+   "tone_tags": [
+    "orta gain distorsiyon",
+    "dolgun orta frekans",
+    "humbucker kalınlığı",
+    "açık teller çınlıyor",
+    "katmanlı / duvar gibi ritim",
+    "hafif parlak üst"
+   ],
+   "bpm": "158 BPM",
+   "key": "B minör"
+  },
+  "original_rig": {
+   "guitar": {
+    "model": "Gibson RD Standard",
+    "pickup": "Köprü humbucker (RD Standard'ın orijinal Gibson humbucker'ı; manyetik modeli belgelenmemiş)",
+    "certainty": "confirmed"
+   },
+   "amps": [
+    {
+     "model": "Fender Custom Shop Tone Master (Zinky tasarımı, Blonde, 100 W head)",
+     "channel": "Drive kanalı (tahmini)",
+     "settings": [
+      {
+       "name": "Gain",
+       "value": "5",
+       "note": "tahmin; orta seviye crunch-distorsiyon"
+      },
+      {
+       "name": "Bass",
+       "value": "5",
+       "note": "tahmin"
+      },
+      {
+       "name": "Middle",
+       "value": "6.5",
+       "note": "tahmin; orta frekanslar dolu"
+      },
+      {
+       "name": "Treble",
+       "value": "6",
+       "note": "tahmin"
+      }
+     ],
+     "certainty": "confirmed",
+     "notes": "Gearnews, MusicRadar ve Equipboard'a (PLAP Everlong videosu, 5:01) göre Grohl'ün RD Standard'ı blonde Fender Tone Master head'e bağlıydı. Equipboard bu amfiyi bazen yanlışlıkla 'Deluxe Reverb' diye listeliyor. Ayarlar hiçbir kaynakta yok. Bazı ikincil kaynaklar (Ground Guitar) Mesa/Boogie Dual Rectifier amfi diyor ama bu birincil kaynaklarla desteklenmiyor."
+    },
+    {
+     "model": "Mesa/Boogie Studio .22 preamp + Crest 4801 power amp (Pat Smear rig'i)",
+     "channel": "Lead/Drive (tahmin)",
+     "settings": [],
+     "certainty": "likely",
+     "notes": "MusicRadar'a göre Pat Smear albümde Hagstrom HiiN ile bu rig'i (Kurt Cobain'in In Utero turne rig'i) Marshall kabin üzerinden çaldı. Everlong'da çalıp çalmadığı açıkça yazmıyor; ikinci ritim katmanı olabilir."
+    }
+   ],
+   "cab": {
+    "model": "Mesa/Boogie Rectifier 4x12",
+    "speakers": "Celestion Vintage 30 (Rectifier 4x12 standardı; tahmini)",
+    "mics": [
+     {
+      "model": "Shure SM57",
+      "position": "Yakın, hoparlöre (konum belgelenmemiş; büyük olasılıkla cap ile kenar arası)",
+      "distance": "1–2 in (tahmin)"
+     },
+     {
+      "model": "Neumann U87",
+      "position": "Kabine yakın, SM57 ile kombinasyon; ayrıca oda mikrofonu olarak",
+      "distance": "6–12 in (tahmin)"
+     }
+    ],
+    "certainty": "confirmed",
+    "notes": "Kabin ve 57/87 kombinasyonu Gearnews'ta ve Equipboard'da (PLAP videosu, 5:04–5:15) var. Hoparlör ve mikrofon mesafeleri tahmin. Smear'ın Marshall kabini sürekli hoparlör patlatıyordu (Bradley Cook)."
+   },
+   "pedals": [
+    {
+     "model": "ProCo Turbo Rat / ProCo Rat 2",
+     "purpose": "Ek distorsiyon (albüm oturumlarında kullanıldı; Everlong'da kullanıldığı belirsiz)",
+     "settings": [],
+     "certainty": "guess"
+    },
+    {
+     "model": "MXR M133 Micro Amp",
+     "purpose": "Boost (ikinci albüm döneminde eklendi; Earnie Bailey)",
+     "settings": [],
+     "certainty": "guess"
+    }
+   ],
+   "tuning": "Drop D",
+   "recording_notes": "Grandmaster Recorders (Los Angeles). Prodüktör Gil Norton, mühendis Bradley Cook. Studer A827 24 kanal ile Ampex 456 banda kaydedildi. Albüm önce Bear Creek'te kaydedilmiş, sonra Grandmaster'da tamamen yeniden kaydedilmişti; Everlong'da davulu Grohl çaldı. Girişteki gitar (ve bazı vokal armonileri) Astatic JT-40 armonika mikrofonuyla kaydedildi (Gearnews), bu yüzden giriş lo-fi ve orta frekanslı. Grup gitarları olabildiğince sıkı üst üste katmanlamaya çalıştı (Guitar Player 1999). Bunun birden fazla ritim katmanı/double-track olması muhtemel. Miksajda dbx 160 ve LA-2A kullanıldı."
+  },
+  "difficulty": {
+   "score": 3,
+   "factors": [
+    "sürekli hızlı aşağı vuruş (158 BPM'de sekizlikler)",
+    "Drop D'de boş D telini çınlatırken akor kaydırma (Bsus2–Gsus2 slide)",
+    "uzun süre dayanıklılık ve sağ el tutarlılığı",
+    "istenmeyen telleri susturma"
+   ]
+  },
+  "sections": [
+   {
+    "name": "Giriş",
+    "description": "Aynı riff tek gitarla çalınıyor. Astatic JT-40 armonika mikrofonu yüzünden dar bantlı, lo-fi ve orta frekanslı, daha ince bir ses var; diğer enstrümanlar girince tam distorsiyonlu ritim tabakasına geçiliyor. Uyarlama: aynı ton, low/high cut ile bant daraltılmış ve seviye düşük."
+   },
+   {
+    "name": "Sakin ara bölüm (fısıltılı vokal)",
+    "description": "Gitar daha yumuşak ve seyrek: gain belirgin şekilde düşük, kenar crunch ile temiz arası, daha hafif vuruş. Ardından tam gain'e kademeli yükseliş."
+   },
+   {
+    "name": "Nakarat",
+    "description": "Aynı distorsiyonlu ton; katmanlar daha yoğun ve seviye daha yüksek. Gain değişikliği belgelenmemiş."
+   }
+  ],
+  "warnings": [
+   "Amfi ayarları hiçbir kaynakta yok; verilen değerler tahmin.",
+   "Bazı ikincil rehberler (Ground Guitar, Guitar Chalk) Mesa/Boogie Dual Rectifier amfi ve ES-335 diyor. Birincil kaynaklara daha yakın olanlar (PLAP videosu, Gearnews, MusicRadar) Fender Tone Master + Mesa 4x12 + Gibson RD Standard diyor. ES-335/Trini Lopez sonraki dönemin gitarları.",
+   "Pat Smear'ın Everlong'da çalıp çalmadığı ve hangi katmanların onun rig'inden geldiği belirsiz.",
+   "Pedallar albüm geneline ait; Everlong'a özgü pedal belgelenmemiş.",
+   "Tonalite tartışmalı: kıta B minör olarak analiz ediliyor, nakarat/pre-chorus D majör. Tunebat sayfası doğrulanamadı.",
+   "Mikrofon konumları ve mesafeleri belgelenmemiş."
+  ],
+  "research_confidence": "medium",
+  "sources": [
+   {
+    "title": "Gearnews – How To Sound Like Foo Fighters",
+    "url": "https://www.gearnews.com/roswell-incidentals-how-to-sound-like-foo-fighters/"
+   },
+   {
+    "title": "Equipboard – The Colour and the Shape",
+    "url": "https://equipboard.com/albums/foo-fighters-the-colour-and-the-shape"
+   },
+   {
+    "title": "MusicRadar – How Dave Grohl created Everlong",
+    "url": "https://musicradar.com/artists/every-time-i-sing-if-everything-could-feel-this-real-forever-and-everyone-else-is-singing-it-in-time-thats-pretty-powerful-how-dave-grohl-created-the-cathartic-rock-anthem-that-became-the-foo-fighters-signature-song"
+   },
+   {
+    "title": "Guitar.com – Gear used on The Colour and the Shape",
+    "url": "https://guitar.com/features/artist-rigs/the-guitar-gear-used-on-the-foo-fighters-the-colour-and-the-shape"
+   },
+   {
+    "title": "Produce Like A Pro – Everlong",
+    "url": "https://producelikeapro.com/blog/foo-fighters-everlong/"
+   },
+   {
+    "title": "Guitar Player – Dave Grohl 1999",
+    "url": "https://guitarplayer.com/player/dave-grohl-there-is-nothing-left-to-lose-1999"
+   },
+   {
+    "title": "Ground Guitar – Dave Grohl's Mesa/Boogie Dual Rectifier",
+    "url": "https://www.groundguitar.com/dave-grohl-gear/dave-grohls-mesa-boogie-dual-rectifier/"
+   },
+   {
+    "title": "Hooktheory – Everlong",
+    "url": "https://www.hooktheory.com/theorytab/view/foo-fighters/everlong"
+   },
+   {
+    "title": "Klang – Everlong",
+    "url": "https://songs.klang.io/en/s/Foo%20Fighters/Everlong/eBG7P-K-r1Y"
+   }
+  ]
+ }
+}
