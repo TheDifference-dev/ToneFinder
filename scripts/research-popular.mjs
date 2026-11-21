@@ -65,6 +65,13 @@ async function worker() {
         break;
       } catch (err) {
         log(`✗ ${s.rank}. ${s.artist} - ${s.title} (deneme ${attempt}): ${err.message}`);
+        if (/limit/i.test(err.message)) {
+          // Claude kullanım limiti: denemeyi sayma, 20 dk bekleyip bu şarkıyı yeniden dene
+          log("Kullanım limiti; 20 dk bekleniyor…");
+          await new Promise((r) => setTimeout(r, 20 * 60_000));
+          attempt--;
+          continue;
+        }
         if (attempt === 2) failed++;
         else await new Promise((r) => setTimeout(r, 20_000));
       }
