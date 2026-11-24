@@ -1,15 +1,18 @@
 // Gitar sinyal zinciri sırası. Hem orijinal stüdyo ekipmanını hem kullanıcıya uyarlanmış zinciri
 // aynı kurala göre sıralar; yapay zekâ pedalları yanlış sırada yazsa bile ekranda doğru görünür.
 //
-// Temel kural (gitardan hoparlöre):
-//   Gitar → Tuner → Wah / filtre → Kompresör → Pitch / octave → Boost / Overdrive / Distortion / Fuzz
-//   → EQ → Noise gate → Modülasyon (chorus, phaser, flanger, vibe, tremolo)
-//   → AMFİ (preamp) → [efekt döngüsü / stüdyo] → Kabin → Mikrofon
-//   → Amfi sonrası modülasyon / harmonizer (rack) → Delay → Reverb
-// Delay ve reverb HER ZAMAN amfiden sonra gelir (efekt döngüsünde ya da stüdyoda kayıttan sonra).
+// Temel kural (gitardan hoparlöre), Sweetwater / Guitar Player / Hughes & Kettner rehberlerine göre:
+//   Gitar → (vintage fuzz: Fuzz Face, Tone Bender — gitarın manyetiğini görmek ister, en başa)
+//   → Tuner → Wah / filtre → Kompresör → Pitch / octave / synth → Boost / Overdrive / Distortion / Fuzz
+//   → EQ → Noise gate → Volume pedalı → Modülasyon (chorus, phaser, flanger, vibe, tremolo)
+//   → AMFİ (preamp) → [efekt döngüsü: modülasyon, delay, reverb] → Kabin → Mikrofon
+//   → Amfi sonrası modülasyon / harmonizer (rack) → Delay → Reverb → Looper
+// Delay ve reverb HER ZAMAN amfiden sonra gelir (efekt döngüsünde, prosesörde amfi/kabin bloğundan sonra
+// ya da stüdyoda kayıttan sonra). Distorsiyonu amfiden alan tonlarda modülasyon da efekt döngüsüne gider.
 
 export type Stage =
   | "guitar"
+  | "fuzzfirst"
   | "tuner"
   | "filter"
   | "comp"
@@ -17,23 +20,28 @@ export type Stage =
   | "drive"
   | "eq"
   | "gate"
+  | "volume"
   | "mod"
   | "amp"
   | "cab"
   | "mic"
   | "post"
   | "delay"
-  | "reverb";
+  | "reverb"
+  | "looper";
 
-export const STAGE_ORDER: Stage[] = ["guitar", "tuner", "filter", "comp", "pitch", "drive", "eq", "gate", "mod", "amp", "cab", "mic", "post", "delay", "reverb"];
+export const STAGE_ORDER: Stage[] = ["guitar", "fuzzfirst", "tuner", "filter", "comp", "pitch", "drive", "eq", "gate", "volume", "mod", "amp", "cab", "mic", "post", "delay", "reverb", "looper"];
 
 /** Amfiden sonra gelen aşamalar */
-export const POST_AMP: ReadonlySet<Stage> = new Set(["cab", "mic", "post", "delay", "reverb"]);
+export const POST_AMP: ReadonlySet<Stage> = new Set(["cab", "mic", "post", "delay", "reverb", "looper"]);
 
 /** Açıklamada efekt döngüsü/stüdyo sonrası geçiyorsa modülasyon, EQ ve kompresör de amfiden sonraya gider */
 const POST_HINT = /\b(effects? loop|fx loop|loop|send|return|post[- ]?(amp|production|processing)?|mix(ing|down)?|studio|console|desk|rack|plug-?in|mastering)\b|efekt döngü|döngü|stüdyo|miks|kayıttan sonra|amfi sonrası/i;
 
 function matchStage(t: string, post: boolean): Stage | null {
+  if (/looper|ditto|rc-?\d0/.test(t)) return "looper";
+  if (/fuzz face|tone ?bender|germanium|fuzz factory|maestro fz|fz-1|supa ?fuzz/.test(t)) return "fuzzfirst";
+  if (/volume pedal|expression|ev-?30|fv-?\d|ernie ball vp|swell/.test(t)) return "volume";
   if (/wireless|kablosuz|schaffer|switch(ing|er)|anahtarlama/.test(t)) return "tuner";
   if (/leslie|rotary|dönen hoparlör/.test(t)) return post ? "post" : "mod";
   if (/\bwah\b|cry ?baby|envelope|auto-?wah|talk ?box|mu-?tron/.test(t)) return "filter";
@@ -85,8 +93,8 @@ export function sortChain<T>(items: T[], stage: (item: T) => Stage): T[] {
 
 /** Yapay zekâ talimatlarına eklenen sinyal zinciri kuralları */
 export const SIGNAL_CHAIN_RULES = `Signal chain order (follow it strictly, from guitar to speaker):
-1. Guitar → tuner → wah / envelope filter → compressor → pitch/octave (Whammy, octave) → boost / overdrive / distortion / fuzz → EQ pedal → noise gate → modulation in front of the amp (chorus, phaser, flanger, Uni-Vibe, tremolo; with a high-gain amp tone these go in the effects loop instead).
-2. Amp (preamp). If the amp has an effects loop, time-based effects go in the loop (between preamp and power amp); with a processor/amp-sim, they go after the amp and cab blocks.
+1. Guitar → vintage fuzz (Fuzz Face, Tone Bender, germanium fuzz: first, so it sees the pickups; with a wah in front it needs a buffer) → tuner → wah / envelope filter → compressor → pitch/octave/synth (Whammy, octaver: they track best on a clean signal) → boost / overdrive / distortion / fuzz → EQ pedal → noise gate → volume pedal → modulation in front of the amp (chorus, phaser, flanger, Uni-Vibe, tremolo).
+2. Amp (preamp). If the distortion comes from the amp itself (high gain channel), modulation, delay and reverb go in the amp's effects loop (FX send → effects → FX return, between preamp and power amp). With a processor/amp-sim (AmpliTube, Helix, HeadRush) they go after the amp and cab blocks; the four-cable method puts drives before the amp input and time effects in the loop.
 3. Cab → microphone(s).
-4. After the amp only: rack/studio processing (harmonizer such as Eventide H3000, studio compression), then DELAY, then REVERB. Delay and reverb ALWAYS come after the amp (in the effects loop, after the amp/cab block in a modeler, or added in the studio after recording) — never in front of the amp's preamp, even if a vintage echo unit was historically placed there; if so, mention that only as a note.
+4. After the amp only: rack/studio processing (harmonizer such as Eventide H3000, studio compression), then DELAY, then REVERB, then looper. Delay and reverb ALWAYS come after the amp and after any distortion (in the effects loop, after the amp/cab block in a modeler, or added in the studio after recording) — never in front of the amp's preamp or a drive pedal, even if a vintage echo unit was historically placed there; if so, mention that only as a note.
 List pedals and effects in this order and say for each whether it sits in front of the amp, in the effects loop, or was added in the studio/mix.`;

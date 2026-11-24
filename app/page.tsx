@@ -7,7 +7,7 @@ import { SettingsPanel, type KeyStatus } from "@/components/SettingsPanel";
 import { SongSearch } from "@/components/SongSearch";
 import { ToneCard } from "@/components/ToneCard";
 import { ArtistTiles, PopularGrid, PopularPromo, PopularRail } from "@/components/Popular";
-import { BandPage, LibraryShelf, normArtist, ResolvePanel, type ShelfArtist } from "@/components/Band";
+import { BandPage, LibraryJobCard, LibraryShelf, normArtist, ResolvePanel, SongParts, type ShelfArtist } from "@/components/Band";
 import type { ArtistHit, SongHit } from "@/app/api/songs/route";
 import { AppMark, Artwork, PageBand, Pill, Segmented } from "@/components/ui";
 import type { PopularEntry } from "@/lib/popular";
@@ -558,7 +558,23 @@ export default function Home() {
 
         {view === "band" && band && (
           <>
-            <BandPage band={band} popular={popular} part={part} onPart={setPart} onSong={pickSong} onPopular={openPopular} onBack={goHome} />
+            <BandPage
+              band={band}
+              popular={popular}
+              part={part}
+              onPart={setPart}
+              onSong={pickSong}
+              onSheetPart={(s, p) => {
+                setView("research");
+                setSong(s.title);
+                setArtist(s.artist);
+                setArtwork(s.artwork);
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                void research({ song: s.title, artist: s.artist, part: p.part, partDetail: p.label, instrument: "guitar", toneType: "auto" }, { artwork: s.artwork });
+              }}
+              onPopular={openPopular}
+              onBack={goHome}
+            />
           </>
         )}
 
@@ -581,6 +597,7 @@ export default function Home() {
                 <PopularPromo entries={popular} onBrowse={() => browsePopular("")} />
                 <PopularRail title="En çok çalınanlar" subtitle="Songsterr listesinin ilk 12 şarkısı" entries={popular.slice(0, 12)} onOpen={openPopular} />
                 {shelf.length > 0 && <LibraryShelf artists={shelf} onOpen={(a) => openBand({ id: a.id, name: a.name, picture: a.picture, fans: a.fans, inLibrary: true })} />}
+                <LibraryJobCard canResearch={canResearch} />
                 <ArtistTiles entries={popular} onPick={(a) => openBand({ id: 0, name: a, picture: "", fans: 0 })} />
                 {history.length > 0 && (
                   <section>
@@ -616,7 +633,7 @@ export default function Home() {
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="hud-label mr-auto">
                     {current.part}
-                    {current.meta?.bundled ? " · hazır popüler kayıt" : current.meta?.cached ? " · kayıttan" : ""}
+                    {current.meta?.bundled ? " · kütüphanedeki hazır kayıt" : current.meta?.cached ? " · kayıttan" : ""}
                   </span>
                   <Pill type="button" onClick={() => toggleSave(current)}>
                     {isSaved ? "★ Kayıtlı" : "☆ Kaydet"}
@@ -635,6 +652,15 @@ export default function Home() {
                   )}
                 </div>
 
+                {current.query && (
+                  <SongParts
+                    song={current.query.song}
+                    artist={current.query.artist}
+                    part={current.query.part}
+                    partDetail={current.query.partDetail}
+                    onPick={(p) => current.query && research({ ...current.query, part: p.part, partDetail: p.label }, { artwork: current.artwork })}
+                  />
+                )}
                 <OriginalCard key={`o-${current.id}`} tone={current.result} artwork={current.artwork} />
 
                 <section className="hud-panel flex flex-wrap items-center gap-4 p-5">

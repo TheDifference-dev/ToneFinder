@@ -105,6 +105,20 @@ export const OriginalToneSchema = z.object({
 
 export type OriginalTone = z.infer<typeof OriginalToneSchema>;
 
+/** Bir şarkının bütün gitar bölümleri tek araştırmada (kütüphane için): riff, ritim, temiz/caz, solo… */
+export const SongSheetSchema = z.object({
+  parts: z
+    .array(
+      z.object({
+        part: z.enum(["intro", "rhythm", "clean", "lead", "full"]).describe("intro: ana riff/giriş; rhythm: ritim; clean: temiz, akustik ya da caz bölümü; lead: solo/lead; full: şarkı boyunca tek ton"),
+        label: z.string().describe("Bölümün Türkçe kısa adı, ör. 'Ana riff', '1. solo', 'Temiz arpej', 'Akustik giriş'"),
+        original: OriginalToneSchema,
+      }),
+    )
+    .describe("Kayıttaki belirgin gitar bölümleri, şarkıdaki sırasıyla (1–5 bölüm)"),
+});
+export type SongSheet = z.infer<typeof SongSheetSchema>;
+
 // 2. adım: kullanıcının ekipmanına uyarlama
 export const AdaptedToneSchema = z.object({
   chain: z

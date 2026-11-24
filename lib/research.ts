@@ -3,6 +3,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { betaZodOutputFormat } from "@anthropic-ai/sdk/helpers/beta/zod";
 import { readResearch, researchKey, writeResearch, type OriginalResearch } from "./cache";
 import { bundledOriginal } from "./popular";
+import { sheetOriginal } from "./song-library";
 import { findClaudeCli, runClaudeCli, type ClaudeCli } from "./claude-cli";
 import { getApiKey } from "./settings";
 import { deviceReference } from "./devices";
@@ -17,6 +18,8 @@ import {
   AdaptedToneSchema,
   mergeTone,
   OriginalToneSchema,
+  SongSheetSchema,
+  type SongSheet,
   gearProfileText,
   GearProfileSchema,
   type GearProfile,
@@ -261,7 +264,8 @@ export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) 
   let bundled = false;
   if (!req.fresh && !original?.structured) {
     // Songsterr'in popüler 500 şarkısından biri: uygulamayla gelen hazır araştırmayı kullan
-    const seed = bundledOriginal(req);
+    // Önce popüler 500'ün hazır araştırması, sonra şarkı kütüphanesi (bütün bölümleri araştırılmış şarkılar)
+    const seed = bundledOriginal(req) ?? sheetOriginal(req);
     if (seed) {
       original = { report: "", sources: seed.original.sources.map((s) => [s.url, s.title]), researchedAt: seed.researchedAt, structured: seed.original };
       bundled = true;
@@ -270,7 +274,7 @@ export async function getOriginal(engine: Engine, req: ToneRequest, emit: Emit) 
   const cached = Boolean(original?.structured);
 
   if (original?.structured) {
-    emit({ type: "status", message: bundled ? "Popüler şarkı: hazır araştırma kullanılıyor…" : "Bu şarkının araştırması kayıtlı, yeniden kullanılıyor…" });
+    emit({ type: "status", message: bundled ? "Kütüphanedeki hazır araştırma kullanılıyor…" : "Bu şarkının araştırması kayıtlı, yeniden kullanılıyor…" });
   } else if (engine.kind === "cli") {
     emit({ type: "status", message: "Stüdyo kaydındaki ekipman araştırılıyor…" });
     const { output, fetched } = await runClaudeCli(engine.cli, {
@@ -447,4 +451,47 @@ export async function identifyQuery(engine: Engine, q: string): Promise<z.infer<
   }
   const { report } = await researchReport(engine.client, IDENTIFY_PROMPT, prompt, { searches: 3, fetches: 1 }, () => {});
   return structured(engine.client, IdentifySchema, "Turn the report into the structured list. Use only names the report supports.", `${prompt}\n\n<report>\n${report}\n</report>`);
+}
+
+
+const SONG_SHEET_PROMPT = `You are a meticulous guitar tone researcher and studio engineer building a reference library. Research the ORIGINAL studio recording of the song below on the web and identify every distinct guitar part a guitarist would want to recreate: the main riff or intro, verse/chorus rhythm, clean, arpeggiated, acoustic or jazz parts, and each guitar solo or lead line. Return 1 to 5 parts in song order; skip parts whose tone is identical to another (mention them in that part instead). Use part ids: intro for riffs and intros, rhythm for rhythm parts, clean for clean/acoustic/jazz parts, lead for solos and lead lines, full when the whole song uses one guitar tone. Give each part a short Turkish label.
+
+For each part research: the instrument and pickup used, tuning; amp(s) with channel and known settings; cabinet and speakers; microphones and placement; pedals and rack effects with settings; recording context; tempo, key and tone character; techniques and difficulty. Label each claim confirmed / likely / guess and list the source URLs.
+Check these preferred sites first, then widen to interviews, rig rundowns, magazine articles and forums:
+${PREFERRED_SOURCES.map((s) => `- ${s.name} (${s.url}): ${s.use}`).join("\n")}
+
+${SIGNAL_CHAIN_RULES}
+
+Write all prose fields in Turkish (keep gear names in their original form). Put disputed or weakly sourced points in warnings.`;
+
+/** Kütüphane: bir şarkının bütün gitar bölümlerini tek seferde araştırır */
+export async function researchSongSheet(engine: Engine, song: string, artist: string, emit: Emit = () => {}): Promise<SongSheet> {
+  const prompt = `Song: ${song}\nArtist: ${artist}\nInstrument: electric guitar (include acoustic/clean guitar parts too)`;
+  if (engine.kind === "cli") {
+    const { output, fetched } = await runClaudeCli(engine.cli, {
+      system: `${SONG_SHEET_PROMPT}\n\nWhen you finish, return the result with the structured output tool.`,
+      prompt,
+      schema: z.toJSONSchema(SongSheetSchema),
+      timeoutMs: 15 * 60_000,
+      onSearch: (query) => emit({ type: "search", query }),
+      onFetch: (url) => emit({ type: "fetch", url }),
+    });
+    const parsed = SongSheetSchema.safeParse(output);
+    if (!parsed.success || parsed.data.parts.length === 0) {
+      console.error("song sheet parse failed", parsed.success ? "empty" : parsed.error.issues.slice(0, 5));
+      throw new ToneError("Şarkı araştırması okunamadı.");
+    }
+    for (const p of parsed.data.parts) {
+      const known = new Set(p.original.sources.map((x) => x.url));
+      for (const url of fetched.slice(0, 12)) if (!known.has(url)) p.original.sources.push({ title: url, url });
+    }
+    return parsed.data;
+  }
+  const { report, sources } = await researchReport(engine.client, SONG_SHEET_PROMPT, prompt, { searches: 14, fetches: 8 }, emit);
+  return structured(
+    engine.client,
+    SongSheetSchema,
+    "Turn the research report into the structured song sheet. One entry per distinct guitar part, in song order. Write prose fields in Turkish.",
+    `${prompt}\n\n<research_report>\n${report}\n</research_report>\n\n<sources_consulted>\n${sourceList(sources)}\n</sources_consulted>`,
+  );
 }

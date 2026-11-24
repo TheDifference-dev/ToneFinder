@@ -52,6 +52,7 @@ export function BandPage({
   part,
   onPart,
   onSong,
+  onSheetPart,
   onPopular,
   onBack,
 }: {
@@ -60,6 +61,8 @@ export function BandPage({
   part: string;
   onPart: (p: string) => void;
   onSong: (s: SongHit) => void;
+  /** Kütüphanede bölümleri hazır şarkının bir bölümünü aç */
+  onSheetPart: (s: SongHit, p: { part: string; label: string }) => void;
   onPopular: (e: PopularEntry) => void;
   onBack: () => void;
 }) {
@@ -108,7 +111,7 @@ export function BandPage({
             <div className="text-[12px] font-bold uppercase tracking-[0.14em] text-white/60">Grup / sanatçı</div>
             <h1 className="headline mt-1 break-words text-[52px] leading-[1.02]">{artist.name}</h1>
             <p className="mt-2 text-[15px] text-white/70">
-              {[fansText(artist.fans), page ? `${page.songs.length} popüler şarkı` : "", ready.length ? `${ready.length} hazır ton` : ""].filter(Boolean).join(" · ")}
+              {[fansText(artist.fans), page ? `${page.songs.length} popüler şarkı` : "", page && Object.keys(page.ready ?? {}).length ? `${Object.keys(page.ready).length} şarkının tüm bölümleri hazır` : ready.length ? `${ready.length} hazır ton` : ""].filter(Boolean).join(" · ")}
               {page?.artist.inLibrary && <span className="ml-3 rounded-full bg-petrol px-2.5 py-0.5 text-[12px] font-bold text-white">Kütüphanede</span>}
             </p>
           </div>
@@ -142,10 +145,12 @@ export function BandPage({
           <ol className="grid gap-x-6 gap-y-1 md:grid-cols-2">
             {songs.map((s, i) => {
               const hit = readyBy.get(normTitle(s.title));
+              const sheet = page.ready?.[normTitle(s.title)] ?? [];
+              const first = sheet.find((p) => p.part === part) ?? sheet[0];
               return (
                 <li key={`${s.title}-${i}`}>
                   <button
-                    onClick={() => (hit ? onPopular(hit) : onSong(s))}
+                    onClick={() => (first ? onSheetPart(s, first) : hit ? onPopular(hit) : onSong(s))}
                     className="group flex w-full items-center gap-4 rounded-2xl px-3 py-2.5 text-left hover:bg-panel"
                   >
                     <span className="w-6 shrink-0 text-right text-[15px] font-bold text-ink-mute">{i + 1}</span>
@@ -154,7 +159,11 @@ export function BandPage({
                       <span className="block truncate text-[15px] font-bold text-ink group-hover:underline">{s.title}</span>
                       <span className="block truncate text-[13px] text-ink-mute">{s.album || artist.name}</span>
                     </span>
-                    {hit ? (
+                    {sheet.length > 0 ? (
+                      <span className="shrink-0 rounded-full bg-petrol px-3 py-1.5 text-xs font-bold text-white" title={sheet.map((p) => p.label).join(" · ")}>
+                        Hazır · {sheet.length} bölüm
+                      </span>
+                    ) : hit ? (
                       <span className="shrink-0 rounded-full bg-petrol px-3 py-1.5 text-xs font-bold text-white">Hazır ton · {PART_SHORT[hit.part]}</span>
                     ) : (
                       <span className="shrink-0 rounded-full bg-panel px-3 py-1.5 text-xs font-bold text-ink-soft group-hover:bg-ink group-hover:text-white">
@@ -322,6 +331,151 @@ export function ResolvePanel({
             </button>
           </div>
         </div>
+      )}
+    </section>
+  );
+}
+
+const PART_NAMES: Record<string, string> = { lead: "Solo", rhythm: "Ritim", intro: "Riff", clean: "Temiz", full: "Genel" };
+
+/** Sonuç ekranı: şarkının kütüphanede hazır olan bütün gitar bölümleri (tıklayınca o bölüm açılır) */
+export function SongParts({
+  song,
+  artist,
+  part,
+  partDetail,
+  onPick,
+}: {
+  song: string;
+  artist: string;
+  part: string;
+  partDetail: string;
+  onPick: (p: { part: string; label: string }) => void;
+}) {
+  const [parts, setParts] = useState<{ part: string; label: string }[]>([]);
+  useEffect(() => {
+    let alive = true;
+    if (!song || !artist) return setParts([]);
+    fetch(`/api/library/song?title=${encodeURIComponent(song)}&artist=${encodeURIComponent(artist)}`)
+      .then((r) => r.json() as Promise<{ parts?: { part: string; label: string }[] }>)
+      .then((d) => alive && setParts(d.parts ?? []))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [song, artist]);
+  if (parts.length < 2) return null;
+  const activeIdx = Math.max(
+    0,
+    parts.findIndex((p) => (partDetail ? normArtist(p.label) === normArtist(partDetail) : p.part === part)),
+  );
+  return (
+    <section className="flex flex-wrap items-center gap-2 rounded-2xl bg-panel px-4 py-3">
+      <span className="hud-label mr-2">Bu şarkıdaki gitar bölümleri</span>
+      {parts.map((p, i) => (
+        <button
+          key={`${p.part}-${p.label}`}
+          onClick={() => onPick(p)}
+          aria-pressed={i === activeIdx}
+          className={`rounded-full px-3.5 py-1.5 text-[13px] font-semibold ${i === activeIdx ? "bg-ink text-white" : "bg-paper text-ink-soft hover:text-ink"}`}
+        >
+          {p.label} <span className="opacity-60">· {PART_NAMES[p.part] ?? p.part}</span>
+        </button>
+      ))}
+    </section>
+  );
+}
+
+interface JobStatusView {
+  enabled: boolean;
+  running: boolean;
+  total: number;
+  ready: number;
+  current: string[];
+  waitingUntil: number | null;
+  lastError: string | null;
+  doneThisRun: number;
+  failed: number;
+}
+
+/**
+ * Kütüphane araştırması: kütüphanedeki bütün şarkıların bütün gitar bölümleri Claude Code ile bir kez
+ * araştırılıp bu bilgisayara kaydedilir; sonra limit dolsa da hepsi anında açılır.
+ */
+export function LibraryJobCard({ canResearch }: { canResearch: boolean }) {
+  const [st, setSt] = useState<JobStatusView | null>(null);
+  const [busy, setBusy] = useState(false);
+
+  useEffect(() => {
+    let alive = true;
+    const load = () =>
+      fetch("/api/library/job")
+        .then((r) => r.json() as Promise<JobStatusView>)
+        .then((d) => alive && setSt(d))
+        .catch(() => {});
+    load();
+    const t = setInterval(load, 15000);
+    return () => {
+      alive = false;
+      clearInterval(t);
+    };
+  }, []);
+
+  const act = async (action: "start" | "stop") => {
+    setBusy(true);
+    try {
+      const r = await fetch("/api/library/job", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action }) });
+      setSt((await r.json()) as JobStatusView);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  if (!st) return null;
+  const pct = st.total ? Math.round((st.ready / st.total) * 100) : 0;
+  const waiting = st.waitingUntil && st.waitingUntil > Date.now();
+  return (
+    <section className="rounded-[22px] border border-line bg-paper p-6">
+      <div className="flex flex-wrap items-start gap-4">
+        <div className="min-w-0 flex-1">
+          <h2 className="headline text-[22px] text-ink">Kütüphane araştırması</h2>
+          <p className="mt-1 max-w-2xl text-sm text-ink-mute">
+            Kütüphanedeki her şarkının bütün gitar bölümleri (riff, ritim, temiz/caz, solo) Claude Code ile bir kez araştırılıp bu
+            bilgisayara kaydedilir. Sonra Claude limitin dolsa da hepsi anında açılır. Uygulama açık kaldıkça çalışır; limit dolunca bekler ve
+            kendiliğinden devam eder.
+          </p>
+        </div>
+        {st.enabled ? (
+          <button disabled={busy} onClick={() => void act("stop")} className="pill pill-dark">
+            Durdur
+          </button>
+        ) : (
+          <button disabled={busy || !canResearch || st.ready >= st.total} onClick={() => void act("start")} className="pill pill-primary">
+            {st.ready > 0 ? "Devam et" : "Başlat"}
+          </button>
+        )}
+      </div>
+      <div className="mt-5 h-3 overflow-hidden rounded-full bg-panel">
+        <div className="h-full rounded-full bg-petrol transition-all" style={{ width: `${pct}%` }} />
+      </div>
+      <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-[13px] text-ink-soft">
+        <span>
+          <b className="text-ink">{st.ready}</b> / {st.total} şarkı hazır (%{pct})
+        </span>
+        {st.doneThisRun > 0 && <span>bu oturumda {st.doneThisRun} şarkı</span>}
+        {st.failed > 0 && <span>{st.failed} şarkı sonra tekrar denenecek</span>}
+        {!canResearch && <span className="text-warn">Başlatmak için bu bilgisayarda Claude Code gerekli.</span>}
+      </div>
+      {st.enabled && (
+        <p className="mt-2 text-[13px] text-ink-mute">
+          {waiting
+            ? `Claude kullanım limiti doldu; ${new Date(st.waitingUntil!).toLocaleTimeString("tr", { hour: "2-digit", minute: "2-digit" })} civarı yeniden denenecek.`
+            : st.current.length
+              ? `Araştırılıyor: ${st.current.join(" · ")}`
+              : st.running
+                ? "Sıradaki şarkıya geçiliyor…"
+                : "Başlatılıyor…"}
+        </p>
       )}
     </section>
   );

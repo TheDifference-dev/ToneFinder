@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { isSameOrigin } from "@/lib/guard";
 import { findLibraryArtist } from "@/lib/library";
+import { readyForArtist, type SheetPart } from "@/lib/song-library";
 import { artistTop, deezerArtist, dedupeTitles, searchArtists, type ArtistHit, type SongHit } from "@/lib/music-search";
 
 export const runtime = "nodejs";
@@ -8,6 +9,8 @@ export const runtime = "nodejs";
 export interface ArtistPage {
   artist: ArtistHit;
   songs: SongHit[];
+  /** Kütüphanede bütün bölümleri araştırılmış şarkılar: normalize başlık → bölümler */
+  ready: Record<string, SheetPart[]>;
 }
 
 // Grup sayfası: ?name=Duman&id=<deezer kimliği>. Kütüphanedeki gruplar anında açılır;
@@ -24,6 +27,7 @@ export async function GET(request: Request) {
     const page: ArtistPage = {
       artist: { id: lib.deezerId, name: lib.name, picture: lib.picture, fans: lib.fans, inLibrary: true },
       songs: lib.songs.map((s) => ({ title: s.title, artist: lib.name, album: s.album, year: "", artwork: s.artwork })),
+      ready: readyForArtist(lib.name),
     };
     return NextResponse.json(page);
   }
@@ -40,7 +44,7 @@ export async function GET(request: Request) {
     const display = artist?.name ?? name;
     const songs = dedupeTitles(await artistTop(display, artist?.id ?? 0)).slice(0, 30);
     if (!artist && !songs.length) return NextResponse.json({ error: "Bu grup bulunamadı." }, { status: 404 });
-    const page: ArtistPage = { artist: artist ?? { id: 0, name: display, picture: songs[0]?.artwork ?? "", fans: 0 }, songs };
+    const page: ArtistPage = { artist: artist ?? { id: 0, name: display, picture: songs[0]?.artwork ?? "", fans: 0 }, songs, ready: readyForArtist(display) };
     return NextResponse.json(page);
   } catch {
     return NextResponse.json({ error: "Grup bilgisi alınamadı." }, { status: 502 });

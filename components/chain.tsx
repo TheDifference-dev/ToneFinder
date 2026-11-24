@@ -18,6 +18,9 @@ export const CATEGORY: Record<Category, { label: string; color: string }> = {
 
 const STAGE_CATEGORY: Record<Stage, Category> = {
   guitar: "guitar",
+  fuzzfirst: "drive",
+  volume: "dyn",
+  looper: "delay",
   tuner: "dyn",
   comp: "dyn",
   gate: "dyn",

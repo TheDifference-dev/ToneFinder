@@ -22,6 +22,11 @@ Ayrıca:
   açılır, değilse "Bunu mu aradın?" paneli gelir. Hiçbir yerde bulunamazsa Claude Code web'de arar.
 - **Grup kütüphanesi:** 100 ünlü grup (80 dünya, 20 Türkçe rock) ve her birinin en popüler 20 şarkısı
   uygulamayla gelir (`data/library/`, `scripts/build-library.mjs`). Arama önce buraya, sonra Deezer/iTunes'a bakar.
+- **Şarkı kütüphanesi (bütün bölümler):** ana sayfadaki "Kütüphane araştırması" ile kütüphanedeki ~2.160 şarkının
+  her biri için kayıttaki bütün gitar bölümleri (riff, ritim, temiz/akustik/caz, solo) Claude Code ile bir kez
+  araştırılır ve `~/.tonefinder/library/` altına kaydedilir (`lib/library-job.ts`). Uygulama açık kaldıkça çalışır,
+  limit dolunca bekler, kapatılıp açılınca kaldığı yerden sürer. Hazır şarkılar Claude olmadan da anında açılır;
+  sonuç ekranında "Bu şarkıdaki gitar bölümleri" ile bölümler arasında geçilir.
 - **Popüler 500:** Songsterr'in en popüler 500 şarkısının orijinal tonları önceden araştırılıp uygulamayla
   birlikte gelir (`data/popular/`). Karta tıklayınca ton anında açılır; Claude Code ya da API anahtarı
   gerekmez. Liste `scripts/build-popular-from-raw.py`, `scripts/research-popular.mjs` ve

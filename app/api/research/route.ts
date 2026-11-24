@@ -3,6 +3,7 @@ import { NextResponse } from "next/server";
 import { CliError, findClaudeCli } from "@/lib/claude-cli";
 import { isSameOrigin } from "@/lib/guard";
 import { bundledOriginal } from "@/lib/popular";
+import { sheetOriginal } from "@/lib/song-library";
 import { getOriginal, ToneError, type Engine } from "@/lib/research";
 import { ToneRequestSchema, type ToneEvent } from "@/lib/schema";
 import { getApiKey } from "@/lib/settings";
@@ -35,8 +36,8 @@ export async function POST(request: Request) {
     : cli
       ? { kind: "cli", cli }
       : null;
-  // Popüler şarkılardan biriyse hazır araştırma motor gerektirmeden açılır
-  const seed = !parsed.data.fresh && !engine ? bundledOriginal(parsed.data) : null;
+  // Popüler listede ya da şarkı kütüphanesinde hazır araştırması varsa motor gerektirmeden açılır
+  const seed = !parsed.data.fresh && !engine ? (bundledOriginal(parsed.data) ?? sheetOriginal(parsed.data)) : null;
   if (seed) {
     const event: ToneEvent = { type: "original", original: seed.original, meta: { cached: true, bundled: true, researchedAt: seed.researchedAt } };
     return new Response(JSON.stringify(event) + "\n", {
